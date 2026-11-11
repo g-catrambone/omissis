@@ -7,7 +7,7 @@ the pieces and how to tell when each is finished.
 
 ## Step 0 · Foundation · M0 · Wed 11 Nov
 
-- [ ] **B0 · Foundation** — scaffold, `contracts.py`, `config.py`, `vault.py`, boundary stubs
+- [x] **B0 · Foundation** — scaffold, `contracts.py`, `config.py`, `vault.py`, boundary stubs
   - Blocked by: nothing. Every other task of every workstream waits for this one.
   - Do: `pyproject.toml` (Python 3.11, `uv`, dependencies `pyyaml`, dev group
     `pytest` and `ruff`), `uv.lock`, `.python-version`, `.env.example`,

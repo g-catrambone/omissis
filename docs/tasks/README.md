@@ -38,7 +38,7 @@ gate of the current one is ticked.
 
 | Step | Tasks | Gate (ticked by the humans) |
 |---|---|---|
-| 0 · Foundation | B0 | - [ ] **G0** — the three members have read `contracts.py` and the stubs together; `make test` and `make lint` pass on each member's machine |
+| 0 · Foundation | B0 | - [x] **G0** — the three members have read `contracts.py` and the stubs together; `make test` and `make lint` pass on each member's machine |
 | 1 · Skeleton | A1, A2, B1, B2, B3, B4, C1 | - [ ] **G1** — `omissis run --config configs/skeleton.yaml` takes a fixture email through D0 → R1 → `echo` → restore on each member's machine, and again from the cache with `backend: replay`. No real model is needed for this step. `docs/interfaces.md` is frozen from here |
 | 2 · Second detector and pilot | A3, A4, A5, B11, B5, C2, C3, C4, C5, C9 | - [ ] **G2** — pilot go/no-go recorded in `docs/decisions.md`. `docs/evaluation_protocol.md` is frozen from here |
 | 3 · Full system | A6, A7, A8, A9, B6, B7, B8, C6, C7, C8, C10 | - [ ] **G3** — `make eval-dev` produces chart and scorecard on dev; the app runs in replay mode; freeze tag set |

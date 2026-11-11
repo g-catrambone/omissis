@@ -115,9 +115,10 @@ Returns the restored text and one event per vault entry or suspicious token.
 Hit: returns the stored response with `cached=True`. Miss with
 `config.backend == "cloud"`: calls the provider registered for the model,
 appends the exchange to the cache, returns it. Miss with `"replay"`: raises
-`CacheMissError` (a subclass of `RuntimeError`), never touches the network. Refuses a role whose model is
-not pinned. Every LLM call in the project goes through this function,
-including D3, the attacker, the judge and the text generator.
+`CacheMissError` (a subclass of `RuntimeError`), never touches the network.
+Refuses a role whose model is not pinned. Every LLM call in the project goes
+through this function, including D3, the attacker, the judge and the text
+generator.
 
 **`register_provider`** — `ProviderFn = Callable[[ModelSpec, LLMRequest], str]`.
 A provider turns one request into text and does no caching. B registers the
@@ -188,8 +189,8 @@ role). `backend`, `cache_dir` and the `models_file` path are excluded, so a
 run and its replay from the cache share one run id.
 
 `configs/models.yaml` has one entry per role — `cloud`, `attacker`, `judge`,
-`generator`, `d3`, `d2` — each with `provider`, `id`, `revision`, all non-empty strings (quote a numeric
-revision: `revision: "1"`). The literal
+`generator`, `d3`, `d2` — each with `provider`, `id`, `revision`, all
+non-empty strings (quote a numeric revision: `revision: "1"`). The literal
 `TO_BE_PINNED` marks an undecided value. API: `ModelSpec(role, provider, id,
 revision)` with property `pinned`; `load_models(path) -> dict[str, ModelSpec]`;
 `require_pinned(models, role) -> ModelSpec` raising `ConfigError` when unpinned.
