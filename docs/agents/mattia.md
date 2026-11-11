@@ -11,15 +11,16 @@ Write code, comments, commit messages and docs in English.
 `src/omissis/detect/` (`rules.py`, `presidio.py`, `classifier.py`, `llm.py`,
 `hybrid.py`, `merge.py`), `src/omissis/app.py`, `src/omissis/eval/detection.py`.
 
-Your log: `docs/log/ws-a.md` (you are its only writer). Read the other two
-logs at the start of each session.
+**When told to start or continue, work from `docs/tasks/ws-a.md`** as described
+in `docs/tasks/README.md`. The table below is the overview; the task list has
+the order, the blockers and the acceptance criteria.
 
 ## Tasks by milestone
 
 | Milestone | You produce (code + tests) | Mattia verifies or decides |
 |---|---|---|
-| M1 · 13 Nov | **D0** rules: IBAN (mod-97), codice fiscale (check character), partita IVA (check digit), Italian phone formats, email, € amounts; curated valid/invalid test sets. **D1** Presidio with an Italian spaCy pipeline and the Italian recognisers. `merge.py` implementing the overlap rule | Checks two validators by hand against the official algorithm; reads the D1 output on the 5 example emails |
-| M2 · 15 Nov | **D2** ready-made classifier: sliding windows with overlap, span merge, label mapping to our taxonomy. `eval/detection.py`: entity-level precision, recall, F1 (exact and overlap), per class and type, and the text-level leak rate | Approves the label-mapping table; confirms the classifier's licence terms are respected |
+| M1 · 13 Nov | **D0** rules: IBAN (mod-97), codice fiscale (check character), partita IVA (check digit), Italian phone formats, email, € amounts; curated valid/invalid test sets. `merge.py` implementing the overlap rule; `detect()` entry point for D0 | Checks two validators by hand against the official algorithm; reads the D0 output on the fixture emails |
+| M2 · 15 Nov | **D1** Presidio with an Italian spaCy pipeline and the Italian recognisers. **D2** ready-made classifier: sliding windows with overlap, span merge, label mapping to our taxonomy. `eval/detection.py`: the detection metrics of the evaluation protocol | Approves dependencies and the label-mapping table; confirms the classifier's licence terms are respected |
 | M3 · 19 Nov | **D3** local LLM detector; **D4** hybrid (D0 ∪ D2 for direct identifiers, D3 for quasi-identifiers and special categories). Gradio app. Latency per detector (p50, p95) | Reads the D3 prompt and 20 raw D3 outputs; tries to break the app with odd inputs |
 | M5 · 23 Nov | Detection section of the scorecard; categorised examples of missed identifiers | Chooses the examples for the slides |
 
@@ -41,6 +42,9 @@ logs at the start of each session.
   occurs several times, mark every occurrence. If it does not occur at all, drop
   the item and count it as a hallucinated span. Invalid JSON: one retry, then log
   the failure and return an empty list. The pipeline must never crash.
+- **D3 goes through `backends.complete`.** Register the local runtime as a
+  provider with `backends.register_provider`; do not call it directly, so D3
+  outputs are cached and replayable like every other LLM call.
 - **D3 determinism:** temperature 0, fixed seed, one pinned weights file. Official
   D3 runs for the evaluation are executed once on the reference machine agreed at
   M0 and stored in the cache; everyone else replays them.
@@ -71,6 +75,5 @@ logs at the start of each session.
 ## How to hand work back
 
 End every task with: files changed; commands run and their real output; open
-doubts; the three reviewer questions; a proposed commit message; confirmation
-that you appended the entry to `docs/log/ws-a.md`; a proposed line for
-`docs/ai_use.md`. Then wait. Do not stage, commit or push (shared rule 1).
+doubts; the three reviewer questions; a proposed commit message; a proposed line
+for `docs/ai_use.md`. Then wait. Do not stage, commit or push (shared rule 1).

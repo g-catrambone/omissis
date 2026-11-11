@@ -12,16 +12,17 @@ Write code, comments, commit messages and docs in English.
 `restore.py`, `backends/`, `pipeline.py`, `cli.py`, plus the scaffold
 (`pyproject.toml`, `Makefile`, CI workflow, `.gitignore`, `README.md`).
 
-Your log: `docs/log/ws-b.md` (you are its only writer). Read the other two
-logs at the start of each session.
+**When told to start or continue, work from `docs/tasks/ws-b.md`** as described
+in `docs/tasks/README.md`. The table below is the overview; the task list has
+the order, the blockers and the acceptance criteria.
 
 ## Tasks by milestone
 
 | Milestone | You produce (code + tests) | Giuseppe verifies or decides |
 |---|---|---|
-| M0 · 11 Nov | Scaffold, `Makefile` targets, CI running `make test` and `make lint`; empty stubs for `docs/decisions.md`, `docs/ai_use.md` and the three `docs/log/ws-*.md`; `.env.example`; `contracts.py` (dataclasses, enums); `config.py` with run-id hash | Reads `contracts.py` line by line with the team; pins models in `configs/models.yaml` |
-| M1 · 13 Nov | R1 placeholders; in-memory vault; restore (exact + normalised); cloud adapter, JSONL cache, replay backend; `protect_send_restore`; CLI for one text and a batch | Runs the 5 example emails end to end; checks by hand that no original value appears in what is sent |
-| M2 · 15 Nov | `REF-oracle` path (mask from gold spans); batch runner used by the attack pilot | Joins the go/no-go decision on the attack design |
+| M0 · 11 Nov | Task B0: scaffold, `Makefile` targets, CI, `.env.example`, `contracts.py`, `config.py`, `vault.py`, boundary stubs, all as specified in `docs/interfaces.md` | Reads `contracts.py` and the stubs with the team; pins models in `configs/models.yaml` |
+| M1 · 13 Nov | R1 placeholders; restore (exact + normalised); JSONL cache, replay and the `echo` provider; `protect_send_restore`; CLI for one text and a batch | Runs the 5 fixture emails end to end; checks by hand that no original value appears in what is sent |
+| M2 · 15 Nov | Cloud provider; `REF-oracle` path (mask from gold spans); batch runner used by the attack pilot | Creates the API key with a spending cap; joins the go/no-go decision on the attack design |
 | M3 · 19 Nov | Entity resolver; R2 fakes; fuzzy restore; outcome classification; disclosure report | Reads 20 restored replies by hand; decides the fuzzy threshold on dev |
 | M4 · 21 Nov | Freeze checklist; config lock | Tags the freeze; launches `make eval-test` with the team |
 | M5 · 23 Nov | `make reproduce`; README quick start | Clean-clone check on a second machine |
@@ -75,6 +76,5 @@ concrete findings with file and line. You advise; he reviews and approves.
 ## How to hand work back
 
 End every task with: files changed; commands run and their real output; open
-doubts; the three reviewer questions; a proposed commit message; confirmation
-that you appended the entry to `docs/log/ws-b.md`; a proposed line for
-`docs/ai_use.md`. Then wait. Do not stage, commit or push (shared rule 1).
+doubts; the three reviewer questions; a proposed commit message; a proposed line
+for `docs/ai_use.md`. Then wait. Do not stage, commit or push (shared rule 1).

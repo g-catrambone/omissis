@@ -13,8 +13,9 @@ shortcut would weaken the evaluation, say so before taking it.
 `data/` (never `data/test/` after the split), `src/omissis/eval/` except
 `detection.py`, `docs/annotation_guide.md`, `docs/cards.md`.
 
-Your log: `docs/log/ws-c.md` (you are its only writer). Read the other two
-logs at the start of each session.
+**When told to start or continue, work from `docs/tasks/ws-c.md`** as described
+in `docs/tasks/README.md`. The table below is the overview; the task list has
+the order, the blockers and the acceptance criteria.
 
 ## Tasks by milestone
 
@@ -51,7 +52,8 @@ logs at the start of each session.
   seed); output = ranked guess; metrics = top-1 and top-3. Headline privacy
   score = 1 − top-1 at N = 25. Always shown against `REF-none` and chance (1/N).
 - **Attribute inference:** masked text only; guesses for city, profession,
-  employer, age bracket, gender, presence and category of a health condition;
+  employer, age bracket, gender, presence of a health condition, each from a
+  closed answer list;
   accuracy against `REF-none` and the majority baseline. Gender is included
   because the placeholders deliberately reveal it.
 - **The attacker prompt never contains gold labels or the configuration name.**
@@ -87,6 +89,5 @@ logs at the start of each session.
 ## How to hand work back
 
 End every task with: files changed; commands run and their real output; open
-doubts; the three reviewer questions; a proposed commit message; confirmation
-that you appended the entry to `docs/log/ws-c.md`; a proposed line for
-`docs/ai_use.md`. Then wait. Do not stage, commit or push (shared rule 1).
+doubts; the three reviewer questions; a proposed commit message; a proposed line
+for `docs/ai_use.md`. Then wait. Do not stage, commit or push (shared rule 1).

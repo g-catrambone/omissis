@@ -22,13 +22,17 @@ doing anything.
    message. Then wait.
 2. **Never open `data/test/`.** Do not read, list, grep, print or summarise it.
    Only `make eval-test` touches it, and only a human launches that command.
+   `make split` is also launched by a human only.
 3. **No real personal data, anywhere.** Synthetic only: no real names of private
    people, real IBANs, real codici fiscali, in code, fixtures, tests, cache or docs.
 4. **No secrets or weights in the repo.** API keys live in `.env` (gitignored).
    Models are referenced by name and revision in `configs/models.yaml`.
-5. **Do not change `src/omissis/contracts.py`** without your human saying the
-   whole team agreed. Every workstream depends on it. It is created once at M0
-   by workstream B and read together by all three members before other work starts.
+5. **Do not change `src/omissis/contracts.py`, `docs/interfaces.md` or
+   `docs/evaluation_protocol.md`** on your own. Every workstream depends on
+   them. They are drafts until the gate that freezes them (`docs/tasks/README.md`):
+   before it, propose the change and your human agrees it with the team in
+   chat; after it, a change needs an entry in `docs/decisions.md` agreed by all
+   three.
 6. **Stay in your workstream's paths** (see the personal file). If a task needs a
    change in someone else's path, describe the change and stop; the human opens
    an issue for the owner.
@@ -65,8 +69,9 @@ options or files that the plan does not ask for.
 
 ### Fixed design decisions
 
-- **Span contract:** `start`, `end` (character offsets), `text`, `cls`, `type`,
-  `confidence` in [0,1], `source`, optional `reason`. Overlaps: longer span wins,
+- **Span contract:** `start`, `end` (character offsets), `text`, `type`,
+  `confidence` in [0,1], `source`, optional `reason`; `cls` is derived from
+  `type`. Overlaps: longer span wins,
   then higher confidence, then source priority from the config.
 - **Taxonomy:** three classes — direct identifier, quasi-identifier, special
   category — with the types listed in `contracts.py`.
@@ -84,9 +89,11 @@ options or files that the plan does not ask for.
   non-existent bank code. Deterministic for a given seed.
 - **Restoration never guesses.** Unresolved or ambiguous tokens are reported. No
   placeholder may remain silently in the output.
-- **Every LLM call goes through the cache** (`results/cache/*.jsonl`, key = hash
-  of model id + prompt + parameters), temperature 0. Never call a provider SDK
-  directly from evaluation code.
+- **Every LLM call goes through `backends.complete` and its cache**
+  (`results/cache/*.jsonl`, key = hash of model id, revision, system, prompt and
+  parameters), temperature 0, including the local D3 model, the attacker, the
+  judge and the text generator. Only provider functions registered with
+  `backends.register_provider` talk to a model.
 - **One config file defines a run**; the run id is the hash of the resolved config.
 
 ### Evaluated configurations
@@ -107,6 +114,23 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
 
 ## 4. Working method
 
+- **Step by step, from the foundations.** Work is organised in steps closed by
+  gates (`docs/tasks/README.md`). Never start a task of a later step while the
+  gate of the current step is open, even if the task looks unblocked: a later
+  step is built on code that has been run and checked, not on code that is
+  only written.
+- **Starting work.** When your human says "start", "continue" or similar without
+  naming a task, follow `docs/tasks/README.md`: take the first open, unblocked
+  task in your workstream's list, work until its *Done when* lines are true,
+  hand back, and stop at every line marked **Human:**. Do one task per
+  hand-back; do not chain tasks without your human's go-ahead.
+- **Two documents are the specification.** `docs/interfaces.md` fixes the data
+  contracts, the boundary functions (`detect`, `resolve`, `replace`, `restore`,
+  `backends.complete`, `pipeline.mask`, `pipeline.protect_send_restore`), the
+  configuration and every file format. `docs/evaluation_protocol.md` fixes the
+  data and every reported number. Build exactly what they say. If one of them
+  does not fit your task, or disagrees with a task or with the code, do not
+  work around it and do not change it: describe the problem and stop.
 - **One task = one branch = one pull request.** Branch names: `ws-a/…`, `ws-b/…`,
   `ws-c/…`, `shared/…`. The human creates the branch and commits.
 - **Before coding:** restate the task in two or three lines and name the files
@@ -123,26 +147,11 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
 - **Small diffs.** Target under ~300 changed lines per pull request so a human can
   really review it. Split larger work.
 - **Leave a review note** at the end of each task (your human pastes it in the
-  pull request): what changed, how to verify it, what you are unsure about, and
-  three questions a reviewer should be able to answer after reading the code.
-- **Workstream log.** Each workstream has one log that only its own agent
-  writes: `docs/log/ws-a.md`, `docs/log/ws-b.md`, `docs/log/ws-c.md`.
-  - *At the start of every session* read the other two logs, so you know what
-    changed elsewhere. They are only as recent as your human's last `git pull`:
-    treat them as possibly stale, and never pull to refresh them yourself.
-  - *At the end of every task* append one entry to your own log, using the
-    format below. This is a file edit, not a repository operation: write it
-    directly, then mention it in your hand-back so it goes into the human's commit.
-  - Never edit another workstream's log, and never rewrite past entries; correct
-    a mistake with a new entry.
-
-  ```
-  ## 2026-11-12 · short task title · branch ws-b/restore-normalised
-  - Changed: what now behaves differently, in one or two lines
-  - Files: paths touched
-  - Affects other workstreams: none | who must do what
-  - Open points: doubts, known gaps
-  ```
+  pull request): what changed, how to verify it, what it means for the other
+  workstreams, what you are unsure about, and three questions a reviewer should
+  be able to answer after reading the code. Pull-request descriptions are how
+  the other workstreams learn what changed: at the start of a session, read
+  the merged ones your human points you to.
 - **Log AI use.** Propose one line for `docs/ai_use.md`: date, human, task, what
   the agent produced, what the human changed. The human adds it; do not edit
   that file yourself, because all three members append to it.
@@ -159,10 +168,11 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
 
 Each owner's paths also include:
 
-- their own log in `docs/log/`;
+- their own task list in `docs/tasks/`;
 - the tests for their modules, in a matching folder: `tests/detect/` and
   `tests/app/` (A), `tests/core/` (B), `tests/eval/` and `tests/data/` (C).
-  Shared fixtures in `tests/fixtures/` are added to, never rewritten;
+  The example texts used by tests of every workstream live in `data/fixtures/`
+  (workstream C): read them, never edit them;
 - A: nothing else. B: `README.md`, `Makefile`, `pyproject.toml`, `uv.lock`, CI,
   `configs/models.yaml`. C: the other files in `configs/`, `results/`,
   `docs/cards.md`.
@@ -181,7 +191,9 @@ human-verified.
 make setup       # create the environment from uv.lock
 make test        # unit and integration tests
 make lint        # ruff check + ruff format --check
+make format      # apply formatting
 make demo        # Gradio app in replay mode (no network)
+make split       # HUMANS ONLY: write data/dev and data/test, once
 make eval-dev    # full evaluation on the dev split
 make eval-test   # HUMANS ONLY, once, after the freeze
 make reproduce   # regenerate every figure and table from the cache
@@ -191,9 +203,9 @@ make reproduce   # regenerate every figure and table from the cache
 
 | ID | Date | Exit criterion |
 |---|---|---|
-| M0 | Wed 11 Nov | repo, scaffold, `contracts.py` agreed, models pinned |
-| M1 | Fri 13 Nov | D0+D1 → R1 → cloud → restore end to end on 5 emails, replay works |
-| M2 | Sun 15 Nov | attack pilot on 10 texts: go/no-go on the attack design; D2 integrated |
+| M0 | Wed 11 Nov | repo, scaffold, `contracts.py` and boundary stubs agreed, models pinned |
+| M1 | Fri 13 Nov | skeleton: D0 → R1 → `echo` backend → restore end to end on the fixture emails, replay works (gate G1) |
+| M2 | Sun 15 Nov | D1 and D2 integrated; attack pilot on 10 texts: go/no-go on the attack design (gate G2) |
 | M3 | Thu 19 Nov | D3, D4, resolver, R2, full dataset reviewed, app, first chart on dev |
 | M4 | Sat 21 Nov | freeze: tag, configs locked, `make eval-test` run once |
 | M5 | Mon 23 Nov | chart, scorecard, error taxonomy, `make reproduce`, clean-clone check |

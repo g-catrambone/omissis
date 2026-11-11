@@ -1,0 +1,257 @@
+# Evaluation protocol
+
+Exact definitions for the data and for every number the project reports.
+Workstream C implements this document; A and B read the parts that concern
+them. Values here are decisions: changing one needs an entry in
+`docs/decisions.md` agreed by the team. File formats are in
+`docs/interfaces.md`, section 5.
+
+Sections: 1 profiles · 2 texts · 3 annotation and review · 4 split ·
+5 configurations · 6 detection · 7 attacks · 8 utility · 9 judge ·
+10 restoration · 11 cost · 12 statistics · 13 reporting · 14 LLM budget.
+
+## 1. Profiles
+
+- 30 synthetic people, ids `p01`–`p30`, in 6 cohorts of 5 (`c1`–`c6`), fixed seed.
+- Fields: see `docs/interfaces.md`. All values invented. Names, cities and
+  employers come from lists kept in `data/profiles/` and disjoint from the R2
+  fake lists.
+- Cohort rule: all 5 members share at least two of {`role`, `city`,
+  `employer`, `bank`}; which two varies by cohort. Within a cohort no two
+  members share all four.
+- Value pools, so that attribute inference has a closed answer space:
+  6 cities, 8 roles, 6 employers, 4 banks, age from 24 to 67.
+- 10 of the 30 profiles have a `special` fact (8 `SALUTE`, 2 `SINDACATO`).
+- Candidate lists per text for N = 10 and N = 25: the true author, the other
+  4 cohort members, the rest drawn at random without replacement, shuffled;
+  fixed by seed.
+
+## 2. Texts
+
+66 Italian texts, each written from one profile and one scenario by the
+`generator` model, then reviewed by a human (section 3).
+
+| Domain | Scenario (`scenario` = `intent`) | Texts | Allowed `requested_action` |
+|---|---|---|---|
+| bank | `mortgage_suspension` | 6 | `suspend_payment`, `reschedule_payment` |
+| bank | `card_dispute` | 6 | `refund`, `open_investigation` |
+| bank | `iban_change` | 6 | `update_details`, `send_information` |
+| bank | `loan_early_repayment` | 6 | `send_information`, `close_account` |
+| bank | `account_closure` | 6 | `close_account`, `release_funds` |
+| bank | `fee_complaint` | 5 | `refund`, `schedule_meeting` |
+| bank | `inheritance_unblock` | 5 | `release_funds`, `send_information` |
+| hr | `sick_leave` | 5 | `register_absence`, `approve_request` |
+| hr | `remote_work_request` | 5 | `approve_request`, `schedule_meeting` |
+| hr | `harassment_complaint` | 4 | `open_investigation`, `schedule_meeting` |
+| hr | `medical_reimbursement` | 4 | `refund`, `send_information` |
+| hr | `transfer_request` | 4 | `approve_request`, `schedule_meeting` |
+| hr | `union_leave` | 4 | `approve_request`, `register_absence` |
+
+Totals: 40 bank, 26 hr. `has_special` is true in exactly 20 texts: all
+`sick_leave`, `medical_reimbursement` and `union_leave` texts (13) plus 7
+chosen by seed among `mortgage_suspension` and `remote_work_request`; the
+author of a `has_special` text is a profile with a matching `special` fact.
+
+Requirements for every text:
+
+- 120 to 250 words, first person, addressed to the bank or to the HR office.
+- At least one direct identifier and at least four quasi-identifier spans.
+- At least one amount or one date, so the extraction task is not empty.
+- Clues to the author must be spread over several quasi-identifiers; no
+  sentence states a unique fact that identifies the author on its own.
+- Nothing copied from real correspondence or public datasets.
+
+The generator marks sensitive spans inline as `[[TYPE|text]]`; a parser strips
+the tags and computes offsets. The `generator` model is neither the `d3`
+model nor the `attacker` model.
+
+Pilot: 10 texts from 2 cohorts, generated first (task C3), used for the
+go/no-go on the attacks (task C5) and kept in the final set if they pass review.
+
+## 3. Annotation and human review
+
+- **Policy.** Tag every direct identifier, quasi-identifier and
+  special-category span with its type. Do not decide whether a
+  quasi-identifier "should" be masked: that is `mask_quasi`. A span is the
+  shortest stretch that carries the information (the name without the title,
+  the amount with its currency, the date without the weekday).
+- **Review.** Every text is reviewed by one human (22 each). Checklist: reads
+  like real correspondence; nothing real; every span tagged with the right
+  type and boundaries; gold fields correct; text requirements of section 2 met.
+  The reviewer's initials go in the file's `reviewed_by` field. A text without
+  `reviewed_by` cannot enter the split.
+- **Double annotation.** 13 texts, chosen by seed and stratified by domain,
+  are annotated a second time by a different human starting from the raw text
+  with no tags visible. Report span-level F1 between the two annotators (exact
+  and overlap matching, section 6) and Cohen's kappa on class over spans
+  matched by overlap.
+- **Adjudication.** Disagreements are settled by the third member; the outcome
+  is the gold. Each adjudication gets one line in `docs/annotation_guide.md`.
+
+## 4. Split
+
+- 20 dev, 46 test, stratified by `domain` × `has_special`, fixed seed.
+- A human runs `make split`: it writes `data/dev/`, `data/test/`,
+  `data/split.json` with checksums, and empties `data/pool/`.
+- Dev is for every design choice: prompts, thresholds, debugging, judge
+  validation, slide examples. Test is evaluated once, after the freeze, by
+  `make eval-test`, which refuses a second run. Test results are described as
+  "evaluated once", never as "unseen data".
+
+## 5. Configurations
+
+| Name | Detector | Strategy | `mask_quasi` | Role |
+|---|---|---|---|---|
+| `REF-none` | — | — | — | unmasked text: utility ceiling, privacy floor |
+| `REF-oracle` | gold spans | R1 | true | perfect detection |
+| `D1+R1` | D1 | R1 | false | the standard tool |
+| `D2+R1` | D2 | R1 | false | a dedicated classifier |
+| `D4+R1` | D4 | R1 | true | our proposal |
+| `D4+R2` | D4 | R2 | true | same detection, realistic fakes |
+
+Detection alone is also measured for D0 and D3. Chance is analytic: 1/N for
+linkage, the majority class for each attribute.
+
+Primary contrasts, declared before seeing test data:
+
+1. `D4+R1` vs `D1+R1` on linkage top-1 at N = 25.
+2. `D4+R1` vs `REF-none` on the utility score.
+3. `D4+R2` vs `D4+R1` on the full-restoration rate.
+
+Every other comparison is descriptive.
+
+## 6. Detection metrics
+
+- Unit: the span. **Exact** match: same `start`, `end` and `type`.
+  **Overlap** match: at least one shared character and the same class. Each
+  gold span matches at most one predicted span and vice versa (greedy by
+  longest overlap).
+- Precision, recall, F1 under both matchings, micro-averaged, per class and
+  per type, for each detector D0–D4.
+- **Leak rate** (primary safety metric): share of texts in which at least one
+  gold direct-identifier span has no character overlap with any predicted
+  span, whatever its type.
+- Recall is the primary detection metric; precision is always reported next
+  to it.
+
+## 7. Attacks
+
+Both use the `attacker` model through `backends.complete`, temperature 0,
+fixed prompts. Prompts never contain gold labels or configuration names.
+Input is the masked text from `results/masked/<config_name>/`.
+
+**Linkage.** Input: masked text plus the candidate list rendered as numbered
+profiles (all fields except `id` and `cohort`). Output: JSON with the three
+most likely candidates in order. Metrics: top-1 and top-3 accuracy, for
+N = 10 and N = 25. Unparseable output counts as a miss and is counted
+separately. **Privacy score** of a configuration = 1 − top-1 accuracy at N = 25.
+
+**Attribute inference.** Input: masked text only. Output: JSON with one value
+per attribute, chosen from a closed list given in the prompt, or `"unknown"`.
+
+| Attribute | Answer space | Correct when |
+|---|---|---|
+| `city` | the 6 pool cities | equals the profile's `city` |
+| `role` | the 8 pool roles | equals `role` |
+| `employer` | the 6 pool employers | equals `employer` |
+| `age_bracket` | `<30`, `30-44`, `45-59`, `60+` | contains `age` |
+| `gender` | `M`, `F` | equals `gender` |
+| `health` | `none`, `present` | `present` iff `special.category` is `SALUTE` |
+
+`"unknown"` is wrong. Metric: accuracy per attribute, against `REF-none` and
+the majority-class baseline. Gender is included because R1 placeholders
+reveal it on purpose.
+
+## 8. Utility
+
+Each task runs through `protect_send_restore` for every configuration and
+directly through `complete` for `REF-none`. Outputs are scored after
+restoration.
+
+**T3 · extraction.** The model returns JSON with `intent`,
+`requested_action` (closed vocabularies of section 2, listed in the prompt),
+`amounts`, `dates`, `deadline`. Normalisation before comparison: amounts to
+euro floats rounded to 2 decimals; dates and deadline to ISO `YYYY-MM-DD`;
+`amounts` and `dates` compared as sets. A field is correct when equal to
+gold after normalisation. **T3 score** of a text = share of the 5 fields
+correct. Unparseable JSON scores 0.
+
+**T1 · reply draft.** Instruction: "Scrivi una bozza di risposta a questa
+email." Scored by the judge (section 9). **T1 score** of a text = mean of the
+three criteria, mapped to [0, 1] as (score − 1) / 4.
+
+**Utility score** of a text = mean of its T3 and T1 scores; of a
+configuration = mean over texts. Always reported with its two components.
+
+## 9. Judge
+
+- `judge` model through `backends.complete`, temperature 0.
+- Input: the original email, the `REF-none` reply as reference, and the reply
+  under evaluation after restoration. The configuration is never shown.
+- Rubric, each 1–5: **correctness** (addresses the request, no invented
+  facts, right person, amounts and dates), **completeness** (covers what the
+  reference covers), **Italian quality** (grammar, gender agreement, no
+  leftover placeholders or broken tokens). Output: JSON with three integers
+  and a one-sentence justification.
+- **Validation.** Giuseppe and Mattia rate 40 dev items blind: the 20 dev
+  texts under `D4+R1` and `D4+R2`, order shuffled, configuration hidden.
+  Human consensus = mean of the two raters per criterion. The judge is
+  accepted if quadratic-weighted kappa between judge and rounded consensus is
+  at least 0.6, **or** at least 85% of judge scores are within one point of
+  consensus. Report both, plus the score distribution.
+- **Fallback.** If rejected, the three members score T1 on the 46 test texts
+  for `D4+R1` and `REF-none` only (92 ratings); the other configurations
+  report T3 alone, and the judge's failure is reported as a finding.
+
+## 10. Restoration
+
+Computed on the T1 replies of each configuration.
+
+- Share of restore events in each `RestoreOutcome`.
+- **Full-restoration rate**: share of replies with `fully_restored` true.
+- For R2: number of restored fakes per reply.
+- `wrong_mapping` is assigned by comparing the restored reply with gold:
+  a gold value appears where a different entity's value belongs. Counted on
+  dev by manual inspection of up to 20 replies per strategy, reported as a
+  count with examples, not as a rate.
+- Values the model derives from masked values (computed amounts, shifted
+  dates) cannot be restored: collected as examples for the error taxonomy.
+
+## 11. Cost
+
+Added latency per text for each detector, p50 and p95, measured on the dev
+texts on the reference machine named in `docs/decisions.md`. Number of LLM
+calls and estimated spend per configuration.
+
+## 12. Statistics
+
+- All comparisons are paired on the same texts.
+- 95% confidence intervals by paired bootstrap over texts, 10,000 resamples,
+  percentile method, seed from the run configuration.
+- McNemar's exact test for paired binary outcomes (linkage top-1, full
+  restoration); paired bootstrap on the difference for the utility score.
+- Holm correction across the three primary contrasts; alpha 0.05.
+- With 46 texts intervals are wide. A difference is stated as a finding only
+  when its interval excludes zero; otherwise it is stated as "not
+  distinguishable with this sample". Negative results get the same space.
+
+## 13. Reporting
+
+- **Chart**: x = privacy score, y = utility score, one point per
+  configuration of section 5 with 95% intervals on both axes, chance marked.
+- **Scorecard**: one row per configuration; columns: detection recall by
+  class, leak rate, linkage top-1 and top-3 at N = 10 and 25, attribute
+  accuracy, T3, T1, utility, full-restoration rate, latency.
+- **Error taxonomy**: categorised dev examples of missed identifiers, failed
+  restorations, derived values and successful attacks.
+- Every number on a slide comes from a file in `results/metrics/` produced by
+  `make reproduce`. Wording: "pseudonymised", "re-identification risk";
+  never "anonymous".
+
+## 14. LLM budget
+
+Test-split calls with this protocol: utility 46 × 6 × 2 = 552; judge
+46 × 5 = 230; linkage 46 × 6 × 2 = 552; attributes 46 × 6 = 276; about 1,600
+in total, plus dev runs. Team budget: about 10 euro. Before any real batch
+the code prints the number of calls and the estimated cost and waits for a
+human's confirmation.
