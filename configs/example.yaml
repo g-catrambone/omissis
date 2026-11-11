@@ -1,0 +1,11 @@
+# Example run configuration (docs/interfaces.md, section 4). Every key is required;
+# unknown keys are an error. Values here are illustrative, not decisions.
+detector: D0
+strategy: R1
+mask_quasi: false
+backend: replay            # cloud | replay; replay never touches the network
+seed: 13
+fuzzy_threshold: 0.9       # set on dev in task B8
+source_priority: [D0, D1, D2, D3]
+models_file: configs/models.yaml
+cache_dir: results/cache

@@ -1,0 +1,26 @@
+# One entry per role. TO_BE_PINNED marks an undecided value; `complete` refuses
+# a role that is not pinned. Pinning is a human decision (CLAUDE.md, M0).
+cloud:
+  provider: TO_BE_PINNED
+  id: TO_BE_PINNED
+  revision: TO_BE_PINNED
+attacker:
+  provider: TO_BE_PINNED
+  id: TO_BE_PINNED
+  revision: TO_BE_PINNED
+judge:
+  provider: TO_BE_PINNED
+  id: TO_BE_PINNED
+  revision: TO_BE_PINNED
+generator:
+  provider: TO_BE_PINNED
+  id: TO_BE_PINNED
+  revision: TO_BE_PINNED
+d3:
+  provider: TO_BE_PINNED
+  id: TO_BE_PINNED
+  revision: TO_BE_PINNED
+d2:
+  provider: TO_BE_PINNED
+  id: TO_BE_PINNED
+  revision: TO_BE_PINNED
