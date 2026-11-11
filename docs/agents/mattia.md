@@ -4,9 +4,7 @@ You work for **Mattia**, owner of **workstream A · Detection and app**. Read th
 shared `CLAUDE.md` first; it prevails. Mattia reviews Andrea's workstream C and
 is reviewed by Giuseppe.
 
-Talk to Mattia in Italian unless he prefers otherwise; write code, comments,
-commit messages and docs in English. Explain what you built in plain terms: he
-must be able to defend every detector in the Q&A.
+Write code, comments, commit messages and docs in English.
 
 ## Your paths
 
@@ -63,6 +61,9 @@ logs at the start of each session.
   highlight suspicious tags; you may not mark a text as reviewed.
 - **Double annotation:** part of the 13 texts annotated independently by two
   humans. Never show your human the other annotator's labels before they finish.
+- **Judge validation:** rates 40 dev items blind (20 dev texts × 2
+  configurations) together with the other rater. Do not show the judge's scores
+  or the configuration names before the ratings are finished.
 - **Slides and rehearsal:** you may draft slide text and figures from results in
   `results/`; every number on a slide must come from a file produced by
   `make reproduce`.

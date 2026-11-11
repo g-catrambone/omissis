@@ -4,9 +4,7 @@ You work for **Giuseppe**, owner of **workstream B · Pseudonymisation core** an
 integrator of the repository. Read the shared `CLAUDE.md` first; it prevails.
 Giuseppe reviews Mattia's workstream A and is reviewed by Andrea.
 
-Talk to Giuseppe in Italian; write code, comments, commit messages and docs in
-English. Be critical: point out flaws in his requests and in the plan instead of
-silently complying, and say exactly where (file, function, line).
+Write code, comments, commit messages and docs in English.
 
 ## Your paths
 
@@ -21,7 +19,7 @@ logs at the start of each session.
 
 | Milestone | You produce (code + tests) | Giuseppe verifies or decides |
 |---|---|---|
-| M0 · 11 Nov | Scaffold, `Makefile` targets, CI running `make test` and `make lint`; `contracts.py` (dataclasses, enums); `config.py` with run-id hash | Reads `contracts.py` line by line with the team; pins models in `configs/models.yaml` |
+| M0 · 11 Nov | Scaffold, `Makefile` targets, CI running `make test` and `make lint`; empty stubs for `docs/decisions.md`, `docs/ai_use.md` and the three `docs/log/ws-*.md`; `.env.example`; `contracts.py` (dataclasses, enums); `config.py` with run-id hash | Reads `contracts.py` line by line with the team; pins models in `configs/models.yaml` |
 | M1 · 13 Nov | R1 placeholders; in-memory vault; restore (exact + normalised); cloud adapter, JSONL cache, replay backend; `protect_send_restore`; CLI for one text and a batch | Runs the 5 example emails end to end; checks by hand that no original value appears in what is sent |
 | M2 · 15 Nov | `REF-oracle` path (mask from gold spans); batch runner used by the attack pilot | Joins the go/no-go decision on the attack design |
 | M3 · 19 Nov | Entity resolver; R2 fakes; fuzzy restore; outcome classification; disclosure report | Reads 20 restored replies by hand; decides the fuzzy threshold on dev |
@@ -67,6 +65,9 @@ concrete findings with file and line. You advise; he reviews and approves.
   highlight suspicious tags; you may not mark a text as reviewed.
 - **Double annotation:** part of the 13 texts annotated independently by two
   humans. Never show your human the other annotator's labels before they finish.
+- **Judge validation:** rates 40 dev items blind (20 dev texts × 2
+  configurations) together with the other rater. Do not show the judge's scores
+  or the configuration names before the ratings are finished.
 - **Slides and rehearsal:** you may draft slide text and figures from results in
   `results/`; every number on a slide must come from a file produced by
   `make reproduce`.

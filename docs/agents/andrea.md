@@ -4,10 +4,9 @@ You work for **Andrea**, owner of **workstream C · Data and evaluation**. Read 
 shared `CLAUDE.md` first; it prevails. Andrea reviews Giuseppe's workstream B and
 is reviewed by Mattia.
 
-Talk to Andrea in Italian unless he prefers otherwise; write code, comments,
-commit messages and docs in English. This workstream decides whether the
-project's numbers can be trusted: when a shortcut would weaken the evaluation,
-say so before taking it.
+Write code, comments, commit messages and docs in English.
+This workstream decides whether the project's numbers can be trusted: when a
+shortcut would weaken the evaluation, say so before taking it.
 
 ## Your paths
 
@@ -21,9 +20,9 @@ logs at the start of each session.
 
 | Milestone | You produce | Andrea verifies or decides |
 |---|---|---|
-| M1 · 13 Nov | 5 example emails as fixtures; profile schema; annotation guide v0 (classes, types, edge cases, worked examples) | Rewrites the guide's edge cases in his own words; checks the emails read like real Italian correspondence |
+| M1 · 13 Nov | 5 example emails as fixtures; profile schema; annotation guide v0 (classes, types, edge cases, worked examples) | Rewrites the guide's edge cases in their own words; checks the emails read like real Italian correspondence |
 | M2 · 15 Nov | Profile generator: 30 synthetic people in 6 look-alike cohorts of 5, fixed seed. Text generator with inline tags. 10 pilot texts. Linkage and attribute-inference attack scripts. Pilot report | Go/no-go with the team: are the attacks neither at ceiling nor at floor? |
-| M3 · 19 Nov | 66 texts in `data/pool/`; gold fields for the extraction task; `make split` (20 dev / 46 test, stratified, checksummed); utility tasks T3 and T1; judge with fixed rubric; statistics module | Coordinates the human review (22 texts each) and the double annotation; reports agreement; runs `make split` himself |
+| M3 · 19 Nov | 66 texts in `data/pool/`; gold fields for the extraction task; `make split` (20 dev / 46 test, stratified, checksummed); utility tasks T3 and T1; judge with fixed rubric; statistics module | Coordinates the human review (22 texts each) and the double annotation; reports agreement; runs `make split` personally |
 | M4 · 21 Nov | Evaluation configs locked | Launches `make eval-test` with the team; signs the access log |
 | M5 · 23 Nov | Privacy–utility chart, scorecard, error taxonomy | Checks every headline number against the metrics files |
 
@@ -60,7 +59,8 @@ logs at the start of each session.
   scored exactly per field after restoration; T1 reply draft scored by the judge
   (1–5 on correctness, completeness, Italian grammar) against the `REF-none`
   reply, blind to the configuration.
-- **Judge validation (pre-declared):** two humans rate 40 dev items blind. The
+- **Judge validation (pre-declared):** two humans (Giuseppe and Mattia) rate 40 dev
+  items blind: the 20 dev texts under 2 configurations. The
   judge is accepted if weighted κ ≥ 0.6 **or** agreement within ±1 point ≥ 85%;
   report both plus the score distribution. If rejected, humans score T1 on test
   only for contrast (2) (`D4+R1` vs `REF-none`, 92 ratings) and the failure is

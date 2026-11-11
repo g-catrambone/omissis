@@ -27,7 +27,8 @@ doing anything.
 4. **No secrets or weights in the repo.** API keys live in `.env` (gitignored).
    Models are referenced by name and revision in `configs/models.yaml`.
 5. **Do not change `src/omissis/contracts.py`** without your human saying the
-   whole team agreed. Every workstream depends on it.
+   whole team agreed. Every workstream depends on it. It is created once at M0
+   by workstream B and read together by all three members before other work starts.
 6. **Stay in your workstream's paths** (see the personal file). If a task needs a
    change in someone else's path, describe the change and stop; the human opens
    an issue for the owner.
@@ -156,7 +157,18 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
 | B · Pseudonymisation core | Giuseppe | Andrea | `contracts.py`, `resolve.py`, `replace/`, `vault.py`, `restore.py`, `backends/`, `pipeline.py`, `cli.py`, `config.py` |
 | C · Data and evaluation | Andrea | Mattia | `data/`, `src/omissis/eval/` (except `detection.py`), `docs/annotation_guide.md` |
 
-Each owner's paths also include their own log in `docs/log/`.
+Each owner's paths also include:
+
+- their own log in `docs/log/`;
+- the tests for their modules, in a matching folder: `tests/detect/` and
+  `tests/app/` (A), `tests/core/` (B), `tests/eval/` and `tests/data/` (C).
+  Shared fixtures in `tests/fixtures/` are added to, never rewritten;
+- A: nothing else. B: `README.md`, `Makefile`, `pyproject.toml`, `uv.lock`, CI,
+  `configs/models.yaml`. C: the other files in `configs/`, `results/`,
+  `docs/cards.md`.
+
+`results/cache/` is written by any workstream's runs; never delete or rewrite
+cache files that your own run did not create.
 
 Agents do the compiling work: code, tests, first drafts of texts and docs.
 Humans do the judging work: reviewing diffs, annotating and correcting data,
