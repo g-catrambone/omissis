@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "ask": [
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(git pull *)",
+      "Bash(git fetch *)",
+      "Bash(git merge *)",
+      "Bash(git rebase *)",
+      "Bash(git reset *)",
+      "Bash(git stash *)",
+      "Bash(git checkout *)",
+      "Bash(git switch *)",
+      "Bash(git tag *)",
+      "Bash(git add *)",
+      "Bash(gh *)"
+    ],
+    "deny": [
+      "Read(data/test/**)",
+      "Read(.env)",
+      "Bash(make eval-test*)"
+    ]
+  }
+}

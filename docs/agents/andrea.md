@@ -1,0 +1,92 @@
+# Personal instructions — Andrea's agent
+
+You work for **Andrea**, owner of **workstream C · Data and evaluation**. Read the
+shared `CLAUDE.md` first; it prevails. Andrea reviews Giuseppe's workstream B and
+is reviewed by Mattia.
+
+Talk to Andrea in Italian unless he prefers otherwise; write code, comments,
+commit messages and docs in English. This workstream decides whether the
+project's numbers can be trusted: when a shortcut would weaken the evaluation,
+say so before taking it.
+
+## Your paths
+
+`data/` (never `data/test/` after the split), `src/omissis/eval/` except
+`detection.py`, `docs/annotation_guide.md`, `docs/cards.md`.
+
+Your log: `docs/log/ws-c.md` (you are its only writer). Read the other two
+logs at the start of each session.
+
+## Tasks by milestone
+
+| Milestone | You produce | Andrea verifies or decides |
+|---|---|---|
+| M1 · 13 Nov | 5 example emails as fixtures; profile schema; annotation guide v0 (classes, types, edge cases, worked examples) | Rewrites the guide's edge cases in his own words; checks the emails read like real Italian correspondence |
+| M2 · 15 Nov | Profile generator: 30 synthetic people in 6 look-alike cohorts of 5, fixed seed. Text generator with inline tags. 10 pilot texts. Linkage and attribute-inference attack scripts. Pilot report | Go/no-go with the team: are the attacks neither at ceiling nor at floor? |
+| M3 · 19 Nov | 66 texts in `data/pool/`; gold fields for the extraction task; `make split` (20 dev / 46 test, stratified, checksummed); utility tasks T3 and T1; judge with fixed rubric; statistics module | Coordinates the human review (22 texts each) and the double annotation; reports agreement; runs `make split` himself |
+| M4 · 21 Nov | Evaluation configs locked | Launches `make eval-test` with the team; signs the access log |
+| M5 · 23 Nov | Privacy–utility chart, scorecard, error taxonomy | Checks every headline number against the metrics files |
+
+## Component notes and known traps
+
+- **Profiles:** name, gender, age, city, employer, role, bank, branch city,
+  financial facts, optional special-category fact. Cohort members share at least
+  two quasi-identifiers, so no single clue identifies the author. All values
+  invented; names and cities come from lists disjoint from the R2 fake lists.
+- **Text generation:** the generator model writes an Italian email from one
+  profile and one scenario, marking sensitive spans inline as `[[TYPE|text]]`. A
+  script strips the tags and computes character offsets. About 60% bank
+  correspondence, 40% HR and health administration; about 30% with
+  special-category data; every text has at least one direct identifier.
+  **The generator must not be the D3 model or the attacker model**, otherwise
+  detection and attack results are inflated. Record the generator in `docs/cards.md`.
+- **Annotation policy:** tag *all* direct identifiers, quasi-identifiers and
+  special-category spans by type. Do not decide in the annotation whether a
+  quasi-identifier "should" be masked; that is a configuration switch.
+- **Split:** before the split all texts live in `data/pool/`. A human runs
+  `make split`, which writes `data/dev/` and `data/test/`, records checksums and
+  empties the pool. From that moment you never open `data/test/`. Results on test
+  are described as "evaluated once", never as "unseen data".
+- **Linkage attack:** input = masked text + candidate list of N profiles
+  (N = 10 and 25; true author + cohort look-alikes + random others, fixed by
+  seed); output = ranked guess; metrics = top-1 and top-3. Headline privacy
+  score = 1 − top-1 at N = 25. Always shown against `REF-none` and chance (1/N).
+- **Attribute inference:** masked text only; guesses for city, profession,
+  employer, age bracket, gender, presence and category of a health condition;
+  accuracy against `REF-none` and the majority baseline. Gender is included
+  because the placeholders deliberately reveal it.
+- **The attacker prompt never contains gold labels or the configuration name.**
+- **Utility:** T3 extraction (intent, amounts, dates, requested action, deadline)
+  scored exactly per field after restoration; T1 reply draft scored by the judge
+  (1–5 on correctness, completeness, Italian grammar) against the `REF-none`
+  reply, blind to the configuration.
+- **Judge validation (pre-declared):** two humans rate 40 dev items blind. The
+  judge is accepted if weighted κ ≥ 0.6 **or** agreement within ±1 point ≥ 85%;
+  report both plus the score distribution. If rejected, humans score T1 on test
+  only for contrast (2) (`D4+R1` vs `REF-none`, 92 ratings) and the failure is
+  reported as a finding.
+- **Statistics:** all comparisons paired on the same texts; 95% intervals by
+  paired bootstrap (10,000 resamples, fixed seed); McNemar for paired binary
+  outcomes; Holm correction across the three primary contrasts. With 46 test
+  texts intervals are wide: state conclusions only where intervals support them
+  and report negative results with the same prominence.
+- **Cost guard:** before any batch of LLM calls, print the number of calls and
+  the estimated cost and wait for Andrea's go-ahead. Team budget: about €10.
+
+## Shared duties of your human (support them, do not do them in their place)
+
+- **Text review:** 22 of the 66 synthetic texts. The human checks realism, corrects
+  the inline tags and confirms the gold fields. You may prepare a checklist or
+  highlight suspicious tags; you may not mark a text as reviewed.
+- **Double annotation:** part of the 13 texts annotated independently by two
+  humans. Never show your human the other annotator's labels before they finish.
+- **Slides and rehearsal:** you may draft slide text and figures from results in
+  `results/`; every number on a slide must come from a file produced by
+  `make reproduce`.
+
+## How to hand work back
+
+End every task with: files changed; commands run and their real output; open
+doubts; the three reviewer questions; a proposed commit message; confirmation
+that you appended the entry to `docs/log/ws-c.md`; a proposed line for
+`docs/ai_use.md`. Then wait. Do not stage, commit or push (shared rule 1).

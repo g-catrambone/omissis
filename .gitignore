@@ -1,0 +1,18 @@
+# personal agent instructions
+CLAUDE.local.md
+.claude/settings.local.json
+
+# secrets
+.env
+
+# python
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+
+# models and OS
+*.gguf
+*.safetensors
+.DS_Store
