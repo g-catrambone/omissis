@@ -33,8 +33,8 @@ single place that maps each type to its class. `GOLD_SOURCE = "GOLD"` is the
 
 | Type | Fields | Validation and notes |
 |---|---|---|
-| `Span` | `start:int`, `end:int`, `text:str`, `type:SpanType`, `confidence:float`, `source:str`, `reason:str\|None=None` | `0 <= start < end`; `len(text) == end-start`; `0 <= confidence <= 1`. Offsets are character offsets, `end` exclusive. Property `cls` = `TYPE_CLASS[type]` (derived, never stored). Method `matches(source_text)` is true when `source_text[start:end] == text`. `source` is a `DetectorId` value or `GOLD_SOURCE`. `reason` is required for D3. |
-| `Entity` | `entity_id:str`, `type:SpanType`, `canonical:str`, `mentions:tuple[Span,...]`, `gender:Gender=UNKNOWN` | At least one mention; all mentions have the entity's type. `entity_id` is `<TYPE>_<n>`, numbered per type by first appearance. Property `cls`. |
+| `Span` | `start:int`, `end:int`, `text:str`, `type:SpanType`, `confidence:float`, `source:str`, `reason:str\|None=None` | `0 <= start < end`; `len(text) == end-start`; `0 <= confidence <= 1`; `source` is a `DetectorId` value or `GOLD_SOURCE`; when `source` is `"D3"`, `reason` is non-empty. Offsets are character offsets, `end` exclusive. Property `cls` = `TYPE_CLASS[type]` (derived, never stored). Method `matches(source_text)` is true when `source_text[start:end] == text`. |
+| `Entity` | `entity_id:str`, `type:SpanType`, `canonical:str`, `mentions:tuple[Span,...]`, `gender:Gender=UNKNOWN` | At least one mention; all mentions have the entity's type. `entity_id` is `<TYPE>_<n>` with `n >= 1` and no leading zeros, numbered per type by first appearance. Property `cls`. |
 | `VaultEntry` | `surrogate:str`, `original:str`, `type:SpanType`, `entity_id:str`, `original_variants:tuple[str,...]=()`, `surrogate_variants:tuple[str,...]=()` | `repr` never shows `original` or the variants. `surrogate` is the placeholder (R1) or the fake value (R2). `surrogate_variants` is for R2 (for example the fake surname alone). |
 | `RestoreEvent` | `surrogate:str`, `outcome:RestoreOutcome`, `found_as:str\|None=None` | One restoration decision. |
 | `DisclosureItem` | `surrogate:str`, `type:SpanType`, `source:str`, `reason:str\|None=None` | One line of the disclosure panel. Never contains the original value. Property `cls`. |
@@ -60,9 +60,10 @@ No persistence, no encryption.
 - Regular expression: `\[([A-Z]+(?:_[A-Z]+)*)_(\d+)(?:_([MF]))?\]`
   (`PLACEHOLDER_RE`).
 - `make_placeholder(type, n, gender=UNKNOWN) -> str`; raises `ValueError` for
-  `n < 1`.
+  `n < 1` or for a known gender on a non-person type.
 - `parse_placeholder(token) -> (SpanType, int, Gender) | None`; `None` for an
-  unknown type, a malformed token, or a gender suffix on a non-person type.
+  unknown type, a malformed token, a number with leading zeros (`[IBAN_01]`),
+  or a gender suffix on a non-person type.
 
 ## 3. Boundary functions
 
@@ -114,7 +115,7 @@ Returns the restored text and one event per vault entry or suspicious token.
 Hit: returns the stored response with `cached=True`. Miss with
 `config.backend == "cloud"`: calls the provider registered for the model,
 appends the exchange to the cache, returns it. Miss with `"replay"`: raises
-`CacheMissError`, never touches the network. Refuses a role whose model is
+`CacheMissError` (a subclass of `RuntimeError`), never touches the network. Refuses a role whose model is
 not pinned. Every LLM call in the project goes through this function,
 including D3, the attacker, the judge and the text generator.
 
@@ -160,7 +161,8 @@ digest of the JSON (sorted keys, `ensure_ascii=False`) of
 
 ## 4. Configuration — `src/omissis/config.py`
 
-One YAML file defines one run. Unknown keys are an error.
+One YAML file defines one run. Every key is required; a missing or unknown key
+is an error.
 
 | Key | Type | Meaning |
 |---|---|---|
@@ -176,11 +178,18 @@ One YAML file defines one run. Unknown keys are an error.
 
 API: `RunConfig` (frozen dataclass with these fields), `load_config(path,
 overrides=None) -> RunConfig`, `with_overrides(config, **changes)`,
-`run_id(config) -> str` (first 12 hex characters of the SHA-256 of the
-resolved configuration as sorted JSON), `ConfigError(ValueError)`.
+`run_id(config) -> str`, `ConfigError(ValueError)`.
+
+`run_id` identifies what a run computes, not where its responses come from:
+the first 12 hex characters of the SHA-256 of the sorted JSON of `detector`,
+`strategy`, `mask_quasi`, `seed`, `fuzzy_threshold`, `source_priority` and the
+resolved content of the models file (`provider`, `id`, `revision` for each
+role). `backend`, `cache_dir` and the `models_file` path are excluded, so a
+run and its replay from the cache share one run id.
 
 `configs/models.yaml` has one entry per role — `cloud`, `attacker`, `judge`,
-`generator`, `d3`, `d2` — each with `provider`, `id`, `revision`. The literal
+`generator`, `d3`, `d2` — each with `provider`, `id`, `revision`, all non-empty strings (quote a numeric
+revision: `revision: "1"`). The literal
 `TO_BE_PINNED` marks an undecided value. API: `ModelSpec(role, provider, id,
 revision)` with property `pinned`; `load_models(path) -> dict[str, ModelSpec]`;
 `require_pinned(models, role) -> ModelSpec` raising `ConfigError` when unpinned.
