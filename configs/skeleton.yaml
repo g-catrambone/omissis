@@ -1,0 +1,11 @@
+# Skeleton run (gate G1): D0 -> R1 -> echo -> restore. No real model is involved.
+# Run it once with backend: cloud to fill the cache, then with backend: replay.
+detector: D0
+strategy: R1
+mask_quasi: false
+backend: cloud             # misses go to the provider, here the built-in echo
+seed: 13
+fuzzy_threshold: 0.9       # unused until fuzzy restore (task B8)
+source_priority: [D0, D1, D2, D3]
+models_file: configs/models.echo.yaml
+cache_dir: results/cache
