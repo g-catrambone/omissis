@@ -2,6 +2,9 @@
 
 **Omissis** (formerly "Privacy Shield") is the team project for *AI Frontiers: Large Language Models* (LUISS, fall 2026).
 Three members: Giuseppe, Mattia, Andrea. Each works with their own Claude agent.
+The work is a relay of blocks: one member owns each block and works on it alone,
+then hands it over frozen to the next; the detectors are a block of their own
+that runs beside the others (`docs/tasks/README.md`).
 The human-readable plan is `docs/Linee_Guida_Progetto.pdf` (Italian). Where this file
 and the PDF disagree, stop and ask your human.
 
@@ -28,14 +31,18 @@ doing anything.
 4. **No secrets or weights in the repo.** API keys live in `.env` (gitignored).
    Models are referenced by name and revision in `configs/models.yaml`.
 5. **Do not change `src/omissis/contracts.py`, `docs/interfaces.md` or
-   `docs/evaluation_protocol.md`** on your own. Every workstream depends on
+   `docs/evaluation_protocol.md`** on your own. Every block depends on
    them. They are drafts until the gate that freezes them (`docs/tasks/README.md`):
    before it, propose the change and your human agrees it with the team in
    chat; after it, a change needs an entry in `docs/decisions.md` agreed by all
    three.
-6. **Stay in your workstream's paths** (see the personal file). If a task needs a
-   change in someone else's path, describe the change and stop; the human opens
-   an issue for the owner.
+6. **Work only on your own block, and only during its turn.** Your personal
+   file says which block is yours, which gate it waits for and which paths it
+   owns. Before that gate is ticked, or after your own gate is ticked, you
+   change nothing. If a
+   task needs a change in another block's paths, describe the change and stop:
+   the owner of that block writes the fix (`docs/tasks/README.md`, "A bug in
+   another block").
 7. **Never claim legal anonymity.** The tool pseudonymises. Wording in code, docs
    and UI: "pseudonymised", "re-identification risk", never "anonymous".
 
@@ -57,13 +64,14 @@ options or files that the plan does not ask for.
 | Stage | Module | Core content |
 |---|---|---|
 | Contracts | `src/omissis/contracts.py` | `Span`, `Entity`, `VaultEntry`, taxonomy enums |
+| Data files | `src/omissis/eval/datasets.py` | loaders for annotated texts and profiles |
 | Detect | `src/omissis/detect/` | D0 rules, D1 Presidio, D2 ready-made classifier, D3 local LLM, D4 hybrid, span merging |
 | Resolve | `src/omissis/resolve.py` | group mentions of the same entity, infer grammatical gender (rules only) |
 | Replace | `src/omissis/replace/` | R1 typed placeholders, R2 realistic fakes |
 | Vault | `src/omissis/vault.py` | in-memory session mapping, never logged in clear |
 | Backends | `src/omissis/backends/` | cloud adapter, JSONL cache, replay |
 | Restore | `src/omissis/restore.py` | exact → normalised → fuzzy; outcome classes |
-| Pipeline | `src/omissis/pipeline.py`, `cli.py` | `protect_send_restore`, single text and batch runs |
+| Pipeline | `src/omissis/pipeline.py`, `cli.py` | `mask`, `protect_send_restore`; the `omissis` command |
 | App | `src/omissis/app.py` | Gradio demo with replay mode |
 | Evaluation | `src/omissis/eval/` | detection, attacks, utility, judge, statistics, report |
 
@@ -94,13 +102,22 @@ options or files that the plan does not ask for.
   parameters), temperature 0, including the local D3 model, the attacker, the
   judge and the text generator. Only provider functions registered with
   `backends.register_provider` talk to a model.
-- **One config file defines a run**; the run id is the hash of the resolved config.
+- **One config file defines a run**; the run id is the hash of what the run
+  computes. The key `detector` is `D0`–`D4`, or `GOLD` (mask the human
+  annotation) or `NONE` (mask nothing): the three references are ordinary
+  configurations and run through the same pipeline as the others. The named
+  configurations to evaluate are listed in `configs/eval.yaml`.
+- **Results are committed.** `results/cache/`, `results/masked/`,
+  `results/detected/`, `results/metrics/` and `results/figures/` go in the
+  repository; `make reproduce` rebuilds tables and figures from them alone.
 
 ### Evaluated configurations
 
 Detection metrics: D0, D1, D2, D3, D4 (no LLM calls beyond D3).
-Privacy and utility: `D1+R1`, `D2+R1`, `D4+R1`, `D4+R2`, plus `REF-none`
-(unmasked), `REF-oracle` (gold spans masked with R1) and analytic chance.
+Privacy and utility: `D1+R1`, `D2+R1`, `D4+R1`, `D4+R2`, plus three references
+that need no detector — `REF-none` (unmasked), `REF-oracle-direct` (gold spans,
+quasi-identifiers left visible) and `REF-oracle` (all gold spans masked) — and
+analytic chance.
 Pre-declared primary contrasts: (1) `D4+R1` vs `D1+R1` on linkage top-1;
 (2) `D4+R1` vs `REF-none` on utility; (3) `D4+R2` vs `D4+R1` on full restoration.
 Do not add configurations, metrics or contrasts on your own initiative.
@@ -114,16 +131,19 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
 
 ## 4. Working method
 
-- **Step by step, from the foundations.** Work is organised in steps closed by
-  gates (`docs/tasks/README.md`). Never start a task of a later step while the
-  gate of the current step is open, even if the task looks unblocked: a later
-  step is built on code that has been run and checked, not on code that is
-  only written.
+- **A relay of blocks.** Block 1 skeleton (Mattia, written) → block 2 core
+  completion (Giuseppe) → block 3 data and evaluation (Andrea) → block 5
+  closing (Giuseppe) → presentation (all). Block 4, the detectors (Mattia),
+  runs beside blocks 2 and 3 because it touches only `src/omissis/detect/`,
+  and joins the evaluation after block 3. Each block ends with a gate ticked by
+  the humans and a git tag; what comes next builds on code that has been run
+  and checked, not on code that is only written.
 - **Starting work.** When your human says "start", "continue" or similar without
-  naming a task, follow `docs/tasks/README.md`: take the first open, unblocked
-  task in your workstream's list, work until its *Done when* lines are true,
-  hand back, and stop at every line marked **Human:**. Do one task per
-  hand-back; do not chain tasks without your human's go-ahead.
+  naming a task, follow `docs/tasks/README.md`: check that it is your block's
+  turn, read the hand-over notes of the earlier blocks, take the first
+  unticked task of your block, work until its *Done when* lines are true, hand
+  back, and stop at every line marked **Human:**. Do one task per hand-back; do
+  not chain tasks without your human's go-ahead.
 - **Two documents are the specification.** `docs/interfaces.md` fixes the data
   contracts, the boundary functions (`detect`, `resolve`, `replace`, `restore`,
   `backends.complete`, `pipeline.mask`, `pipeline.protect_send_restore`), the
@@ -131,8 +151,9 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
   data and every reported number. Build exactly what they say. If one of them
   does not fit your task, or disagrees with a task or with the code, do not
   work around it and do not change it: describe the problem and stop.
-- **One task = one branch = one pull request.** Branch names: `ws-a/…`, `ws-b/…`,
-  `ws-c/…`, `shared/…`. The human creates the branch and commits.
+- **One task = one branch = one pull request.** Branch names: `b1/…` to `b5/…`, and
+  `fix/…`. The human creates the branch, commits, and merges
+  once CI is green; the next block's owner reviews the whole block at the gate.
 - **Before coding:** restate the task in two or three lines and name the files
   you will touch. If the task is ambiguous or conflicts with this file, ask.
 - **Tests come with the code.** Every module has unit tests in `tests/`; a task
@@ -147,11 +168,10 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
 - **Small diffs.** Target under ~300 changed lines per pull request so a human can
   really review it. Split larger work.
 - **Leave a review note** at the end of each task (your human pastes it in the
-  pull request): what changed, how to verify it, what it means for the other
-  workstreams, what you are unsure about, and three questions a reviewer should
-  be able to answer after reading the code. Pull-request descriptions are how
-  the other workstreams learn what changed: at the start of a session, read
-  the merged ones your human points you to.
+  pull request): what changed, how to verify it, what you are unsure about, and three
+  questions a reviewer should be able to answer after reading the code. The
+  last task of a block is its hand-over note in `docs/handoff/`: that is how
+  the next owner learns what exists.
 - **Log AI use.** Propose one line for `docs/ai_use.md`: date, human, task, what
   the agent produced, what the human changed. The human adds it; do not edit
   that file yourself, because all three members append to it.
@@ -160,24 +180,36 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
 
 ## 5. Who does what
 
-| Workstream | Owner | Reviewer | Paths |
+| Block | Owner | Reviewed at the gate by | Paths |
 |---|---|---|---|
-| A · Detection and app | Mattia | Giuseppe | `src/omissis/detect/`, `src/omissis/app.py`, `src/omissis/eval/detection.py` |
-| B · Pseudonymisation core | Giuseppe | Andrea | `contracts.py`, `resolve.py`, `replace/`, `vault.py`, `restore.py`, `backends/`, `pipeline.py`, `cli.py`, `config.py` |
-| C · Data and evaluation | Andrea | Mattia | `data/`, `src/omissis/eval/` (except `detection.py`), `docs/annotation_guide.md` |
+| 1 · Skeleton | Mattia | Giuseppe and Andrea | everything in the pull request of `Step1`: `src/omissis/detect/` (`rules.py`, `merge.py`), `replace/placeholders.py`, `restore.py`, `backends/`, `resolve.py`, `pipeline.py`, `cli.py`, `eval/datasets.py`, `data/fixtures/`, `configs/skeleton.yaml`, `configs/models.echo.yaml`, `docs/annotation_guide.md`, their tests |
+| 2 · Core completion | Giuseppe | Andrea | `src/omissis/contracts.py`, `config.py`, `vault.py`, `resolve.py`, `replace/`, `restore.py`, `backends/`, `pipeline.py`, `cli.py`, `app.py`; `configs/`; `.env.example`; `tests/core/`, `tests/app/` |
+| 3 · Data and evaluation | Andrea | Mattia | `data/` except `fixtures/`; `src/omissis/eval/` (all of it, `datasets.py` included); `docs/annotation_guide.md`; `tests/eval/`, `tests/data/` |
+| 4 · Detectors | Mattia | Giuseppe | `src/omissis/detect/`; `tests/detect/`; in `configs/eval.yaml`, only the two edits allowed by `docs/interfaces.md` section 4 |
+| 5 · Closing | Giuseppe | Andrea and Mattia | `README.md`, `LICENSE`, `docs/cards.md` |
 
-Each owner's paths also include:
+Once block 1 is merged, its files belong to the block that lists them above:
+the core modules to block 2, `eval/datasets.py` and the guide to block 3, the
+detection modules to block 4. `data/fixtures/` belongs to nobody after G1.
 
-- their own task list in `docs/tasks/`;
-- the tests for their modules, in a matching folder: `tests/detect/` and
-  `tests/app/` (A), `tests/core/` (B), `tests/eval/` and `tests/data/` (C).
-  The example texts used by tests of every workstream live in `data/fixtures/`
-  (workstream C): read them, never edit them;
-- A: nothing else. B: `README.md`, `Makefile`, `pyproject.toml`, `uv.lock`, CI,
-  `configs/models.yaml`. C: the other files in `configs/`, `results/`,
-  `docs/cards.md`.
+Also:
 
-`results/cache/` is written by any workstream's runs; never delete or rewrite
+- Every block owns its task list in `docs/tasks/` and its hand-over note in
+  `docs/handoff/`. After G5 each member owns `docs/slides/<name>.md`.
+- `results/` is written by blocks 2 to 5: each writes only the files its
+  tasks name, and never deletes another block's files.
+- `Makefile`: a block fills in its own targets (`demo` in block 2, `split` and
+  `eval-*` in block 3, `reproduce` in block 5) and touches no other target.
+- `pyproject.toml` and `uv.lock` change only when a human approves a new
+  dependency, in the block that needs it. Blocks working in the same days may
+  conflict on `uv.lock`: keep both dependencies in `pyproject.toml` and run
+  `uv lock` again; never edit the lock by hand.
+- `configs/models.yaml` is edited by humans only: pinning a model is a human
+  commit to `main` with a line in `docs/decisions.md`, allowed until `freeze`.
+- The example texts in `data/fixtures/` are read by every block's tests and
+  edited by none after G1.
+
+`results/cache/` is written by every block's runs; never delete or rewrite
 cache files that your own run did not create.
 
 Agents do the compiling work: code, tests, first drafts of texts and docs.
@@ -196,19 +228,21 @@ make demo        # Gradio app in replay mode (no network)
 make split       # HUMANS ONLY: write data/dev and data/test, once
 make eval-dev    # full evaluation on the dev split
 make eval-test   # HUMANS ONLY, once, after the freeze
-make reproduce   # regenerate every figure and table from the cache
+make reproduce   # rebuild every table and figure from the committed results
 ```
 
-## 7. Milestones (worst case: presentation on Thu 26 Nov 2026)
+## 7. Calendar (worst case: presentation on Thu 26 Nov 2026)
 
-| ID | Date | Exit criterion |
-|---|---|---|
-| M0 | Wed 11 Nov | repo, scaffold, `contracts.py` and boundary stubs agreed, models pinned |
-| M1 | Fri 13 Nov | skeleton: D0 → R1 → `echo` backend → restore end to end on the fixture emails, replay works (gate G1) |
-| M2 | Sun 15 Nov | D1 and D2 integrated; attack pilot on 10 texts: go/no-go on the attack design (gate G2) |
-| M3 | Thu 19 Nov | D3, D4, resolver, R2, full dataset reviewed, app, first chart on dev |
-| M4 | Sat 21 Nov | freeze: tag, configs locked, `make eval-test` run once |
-| M5 | Mon 23 Nov | chart, scorecard, error taxonomy, `make reproduce`, clean-clone check |
-| M6 | Wed 25 Nov | slides, two rehearsals, README final |
+| Block | Owner | Dates | Gate and tag |
+|---|---|---|---|
+| 0 · Foundation | Giuseppe | Wed 11 Nov | G0, done |
+| 1 · Skeleton | Mattia | written; merged Mon 16 Nov | G1, `block-1`: reviewed, human checks done, merged |
+| 2 · Core completion | Giuseppe | Mon 16 – Wed 18 Nov | G2, `block-2`: references from gold spans, real cloud model; interfaces frozen |
+| 3 · Data and evaluation | Andrea | Thu 19 – Sun 22 Nov | G3, `block-3`: pilot decided, 66 texts split, chart for the references; protocol frozen |
+| 4 · Detectors | Mattia | Tue 17 – Sun 22 Nov, beside 2 and 3; joined Mon 23 morning | G4, `freeze`: chart for every configuration on dev |
+| 5 · Closing | Giuseppe | Mon 23 – Tue 24 Nov | G5, `v1.0`: `make eval-test` once; `make reproduce` from a clean clone |
+| Presentation | all | Tue 24 – Wed 25 Nov | two timed rehearsals |
 
-After M4 only bug fixes that do not change evaluated behaviour are allowed.
+Workshop with the teaching team: Thu 19 Nov. The presentation date is not
+known yet; the plan assumes the earliest one. After the `freeze`
+tag only bug fixes that do not change evaluated behaviour are allowed.

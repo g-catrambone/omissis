@@ -1,31 +1,49 @@
 # Personal instructions — Andrea's agent
 
-You work for **Andrea**, owner of **workstream C · Data and evaluation**. Read the
-shared `CLAUDE.md` first; it prevails. Andrea reviews Giuseppe's workstream B and
-is reviewed by Mattia.
+You work for **Andrea**, owner of **block 3 · Data and evaluation**. Read the
+shared `CLAUDE.md` first; it prevails. At the gates Andrea reviews block 1
+(with Giuseppe), block 2 and, with Mattia, block 5; Mattia reviews block 3.
 
 Write code, comments, commit messages and docs in English.
-This workstream decides whether the project's numbers can be trusted: when a
+This block decides whether the project's numbers can be trusted: when a
 shortcut would weaken the evaluation, say so before taking it.
+
+**When told to start or continue, work from `docs/tasks/block-3.md`** as described
+in `docs/tasks/README.md`. Before gate G2 is ticked and after gate G3 is ticked
+it is not your turn: change nothing, except a `fix/…` branch for a defect in
+block 3's code that Andrea explicitly asks for. After gate G5, task P.2 is yours.
 
 ## Your paths
 
-`data/` (never `data/test/` after the split), `src/omissis/eval/` except
-`detection.py`, `docs/annotation_guide.md`, `docs/cards.md`.
+`data/` except `fixtures/` (and never `data/test/` after the split);
+`src/omissis/eval/` (`datasets.py`, written in block 1, is yours from gate G1);
+`docs/annotation_guide.md`; `tests/eval/`, `tests/data/`; the `split` and
+`eval-*` targets of the `Makefile`; the files your tasks write in `results/`;
+`docs/handoff/block-3.md`. After G5: `docs/slides/andrea.md`. You read
+`configs/eval.yaml` and never edit it.
 
-**When told to start or continue, work from `docs/tasks/ws-c.md`** as described
-in `docs/tasks/README.md`. The table below is the overview; the task list has
-the order, the blockers and the acceptance criteria.
+## What the block delivers
 
-## Tasks by milestone
-
-| Milestone | You produce | Andrea verifies or decides |
+| Block | You produce | Andrea verifies or decides |
 |---|---|---|
-| M1 · 13 Nov | 5 example emails as fixtures; profile schema; annotation guide v0 (classes, types, edge cases, worked examples) | Rewrites the guide's edge cases in their own words; checks the emails read like real Italian correspondence |
-| M2 · 15 Nov | Profile generator: 30 synthetic people in 6 look-alike cohorts of 5, fixed seed. Text generator with inline tags. 10 pilot texts. Linkage and attribute-inference attack scripts. Pilot report | Go/no-go with the team: are the attacks neither at ceiling nor at floor? |
-| M3 · 19 Nov | 66 texts in `data/pool/`; gold fields for the extraction task; `make split` (20 dev / 46 test, stratified, checksummed); utility tasks T3 and T1; judge with fixed rubric; statistics module | Coordinates the human review (22 texts each) and the double annotation; reports agreement; runs `make split` personally |
-| M4 · 21 Nov | Evaluation configs locked | Launches `make eval-test` with the team; signs the access log |
-| M5 · 23 Nov | Privacy–utility chart, scorecard, error taxonomy | Checks every headline number against the metrics files |
+| 3 · Data and evaluation · Thu 19 – Sun 22 Nov | Revised annotation guide; 30 profiles in 6 look-alike cohorts and the candidate lists; text generator and 66 texts; the two attacks and the pilot; utility tasks; judge and its validation sheets; statistics; detection metrics and latency; evaluation runner, chart and scorecard for the three reference configurations; hand-over note | Rewrites the guide's edge cases; approves every prompt; calls the pilot go/no-go with the team; coordinates the review of the texts and the double annotation; runs `make split`; records the judge's outcome; tags `block-3` |
+
+The privacy and utility evaluation of this block runs **without any detector**:
+the three reference configurations come from gold spans and are already listed
+in `configs/eval.yaml` (block 2). The detection metrics measure whatever
+detectors `detect` supports when they run: D0 from the start, and D1 to D4 as
+block 4 merges them in these same days. Block 4 then appends the four
+configurations with detectors; the runner and the report must accept them
+without code changes.
+
+## Reviewing blocks 1, 2 and 5
+
+When Andrea asks you to help review: at G1, `eval/datasets.py`, the fixtures and
+the guide of block 1; at G2, `docs/handoff/block-2.md` and the code of block 2
+against `docs/interfaces.md`; at G5, every headline number of the README and of
+`results/scorecard.md` against `results/metrics/`, and `make reproduce`. Run
+the tests and give concrete findings with file and line. You advise; Andrea
+reviews.
 
 ## Component notes and known traps
 
@@ -39,7 +57,9 @@ the order, the blockers and the acceptance criteria.
   correspondence, 40% HR and health administration; about 30% with
   special-category data; every text has at least one direct identifier.
   **The generator must not be the D3 model or the attacker model**, otherwise
-  detection and attack results are inflated. Record the generator in `docs/cards.md`.
+  detection and attack results are inflated. In the hand-over
+  note, propose the `docs/cards.md` lines for the generator, the attacker and
+  the judge: block 4 writes that file.
 - **Annotation policy:** tag *all* direct identifiers, quasi-identifiers and
   special-category spans by type. Do not decide in the annotation whether a
   quasi-identifier "should" be masked; that is a configuration switch.
@@ -62,7 +82,7 @@ the order, the blockers and the acceptance criteria.
   (1–5 on correctness, completeness, Italian grammar) against the `REF-none`
   reply, blind to the configuration.
 - **Judge validation (pre-declared):** two humans (Giuseppe and Mattia) rate 40 dev
-  items blind: the 20 dev texts under 2 configurations. The
+  items blind: the 20 dev texts masked from gold spans with R1 and with R2. The
   judge is accepted if weighted κ ≥ 0.6 **or** agreement within ±1 point ≥ 85%;
   report both plus the score distribution. If rejected, humans score T1 on test
   only for contrast (2) (`D4+R1` vs `REF-none`, 92 ratings) and the failure is
@@ -75,16 +95,22 @@ the order, the blockers and the acceptance criteria.
 - **Cost guard:** before any batch of LLM calls, print the number of calls and
   the estimated cost and wait for Andrea's go-ahead. Team budget: about €10.
 
+
+
 ## Shared duties of your human (support them, do not do them in their place)
 
-- **Text review:** 22 of the 66 synthetic texts. The human checks realism, corrects
-  the inline tags and confirms the gold fields. You may prepare a checklist or
-  highlight suspicious tags; you may not mark a text as reviewed.
-- **Double annotation:** part of the 13 texts annotated independently by two
-  humans. Never show your human the other annotator's labels before they finish.
-- **Slides and rehearsal:** you may draft slide text and figures from results in
-  `results/`; every number on a slide must come from a file produced by
-  `make reproduce`.
+- **Text review (during block 3):** 22 of the 66 synthetic texts, on a branch
+  `b3/review-<initials>`. The human checks realism, corrects the inline tags
+  and confirms the gold fields. You may prepare a checklist or highlight
+  suspicious tags; you may not mark a text as reviewed.
+- **Double annotation (during block 3):** part of the 13 texts annotated
+  independently by two humans. Never show your human the other annotator's
+  labels before they finish.
+- **Final evaluation (block 5):** the three members launch `make eval-test`
+  together, once.
+- **Slides and rehearsal:** task P.2 of `docs/tasks/block-5.md`. You draft
+  content in your member's file under `docs/slides/`; every number must come
+  from a file in `results/metrics/`.
 
 ## How to hand work back
 

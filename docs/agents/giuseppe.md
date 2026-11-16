@@ -1,31 +1,40 @@
 # Personal instructions — Giuseppe's agent
 
-You work for **Giuseppe**, owner of **workstream B · Pseudonymisation core** and
-integrator of the repository. Read the shared `CLAUDE.md` first; it prevails.
-Giuseppe reviews Mattia's workstream A and is reviewed by Andrea.
+You work for **Giuseppe**, owner of **block 2 · Core completion** and of
+**block 5 · Closing**. Read the shared `CLAUDE.md` first; it prevails. At the
+gates Giuseppe reviews block 1 (with Andrea) and block 4, both Mattia's; Andrea
+reviews block 2; Andrea and Mattia review block 5.
 
 Write code, comments, commit messages and docs in English.
 
+**When told to start or continue, work from `docs/tasks/block-2.md`** after gate
+G1, and from `docs/tasks/block-5.md` after gates G3 and G4, as described in
+`docs/tasks/README.md`. Between gate G2 and those two it is not your turn:
+change nothing, except a `fix/…` branch for a defect in block 2's code that
+Giuseppe explicitly asks for. After gate G5, task P.1 is yours.
+
 ## Your paths
 
-`src/omissis/contracts.py`, `config.py`, `resolve.py`, `replace/`, `vault.py`,
-`restore.py`, `backends/`, `pipeline.py`, `cli.py`, plus the scaffold
-(`pyproject.toml`, `Makefile`, CI workflow, `.gitignore`, `README.md`).
+Block 2: `src/omissis/contracts.py`, `config.py`, `vault.py`, `resolve.py`,
+`replace/`, `restore.py`, `backends/`, `pipeline.py`, `cli.py`, `app.py`;
+`configs/`; `.env.example`; `tests/core/`, `tests/app/`; the `demo` target of
+the `Makefile`; `docs/handoff/block-2.md`. The core modules were written in
+block 1 by Mattia's agent and are yours from gate G1. You never change the
+entries of `configs/models.yaml`: pinning a model is Giuseppe's own edit.
+Block 5: `README.md`, `LICENSE`, `docs/cards.md`, the `reproduce` target of the
+`Makefile`, the final files in `results/`. After G5: `docs/slides/giuseppe.md`.
 
-**When told to start or continue, work from `docs/tasks/ws-b.md`** as described
-in `docs/tasks/README.md`. The table below is the overview; the task list has
-the order, the blockers and the acceptance criteria.
+## What the blocks deliver
 
-## Tasks by milestone
-
-| Milestone | You produce (code + tests) | Giuseppe verifies or decides |
+| Block | You produce (code + tests) | Giuseppe verifies or decides |
 |---|---|---|
-| M0 · 11 Nov | Task B0: scaffold, `Makefile` targets, CI, `.env.example`, `contracts.py`, `config.py`, `vault.py`, boundary stubs, all as specified in `docs/interfaces.md` | Reads `contracts.py` and the stubs with the team; pins models in `configs/models.yaml` |
-| M1 · 13 Nov | R1 placeholders; restore (exact + normalised); JSONL cache, replay and the `echo` provider; `protect_send_restore`; CLI for one text and a batch | Runs the 5 fixture emails end to end; checks by hand that no original value appears in what is sent |
-| M2 · 15 Nov | Cloud provider; `REF-oracle` path (mask from gold spans); batch runner used by the attack pilot | Creates the API key with a spending cap; joins the go/no-go decision on the attack design |
-| M3 · 19 Nov | Entity resolver; R2 fakes; fuzzy restore; outcome classification; disclosure report | Reads 20 restored replies by hand; decides the fuzzy threshold on dev |
-| M4 · 21 Nov | Freeze checklist; config lock | Tags the freeze; launches `make eval-test` with the team |
-| M5 · 23 Nov | `make reproduce`; README quick start | Clean-clone check on a second machine |
+| 2 · Core completion · Mon 16 – Wed 18 Nov | Clean-up of old task ids; detector values `GOLD` and `NONE`, `gold_spans`, named configurations and `omissis mask`; entity resolver; cloud provider; R2 fakes; fuzzy restore; Gradio app; hand-over note | Chooses the cloud-side models with the team and creates the key; approves the name and fake-value lists and the dependencies; reads the ten real restored replies; tags `block-2` |
+| 5 · Closing · Mon 23 – Tue 24 Nov | Results, error taxonomy, model and data cards; `make reproduce`; README; licences | Launches `make eval-test` with the team; checks every headline number; clean-clone check; tags `v1.0` |
+
+Block 1 left a pipeline that works with the D0 rules and an interim resolver.
+Block 2 makes the three references possible: with detector `GOLD` the pipeline
+masks the human annotation, with `NONE` it masks nothing. Nothing in block 2
+depends on the detectors D1–D4, which arrive from block 4 in the same days.
 
 ## Component notes and known traps
 
@@ -53,25 +62,40 @@ the order, the blockers and the acceptance criteria.
   decoding parameters. Replay must fail loudly on a cache miss, never fall back
   to the network.
 
-## Integrator duties
+- **Fake-value lists** live in `src/omissis/replace/data/`. Block 3 builds its
+  profile pool to be disjoint from them, so do not change them after G2.
+- **Hand-over note:** block 3 starts from it. Include one worked call for
+  `mask` with gold spans (with and without `mask_quasi`), `protect_send_restore`
+  with gold spans, `complete` on each pinned role, `load_eval_configs` and
+  `omissis mask`.
+- **The app** calls `pipeline.protect_send_restore` and nothing else. Its
+  detector selector lists what `detect` supports, so detectors merged later by
+  block 4 appear without a change.
 
-When Giuseppe asks you to check an incoming pull request from workstream A, read
-the diff against the shared contract, run the tests, and give him a list of
-concrete findings with file and line. You advise; he reviews and approves.
+## Reviewing blocks 1 and 4
+
+When Giuseppe asks you to help him review Mattia's code (the core modules of
+block 1 at gate G1, the detectors at gate G4), read the hand-over note and the
+code against `docs/interfaces.md`, run the tests, and give him concrete
+findings with file and line. You advise; he reviews.
 
 ## Shared duties of your human (support them, do not do them in their place)
 
-- **Text review:** 22 of the 66 synthetic texts. The human checks realism, corrects
-  the inline tags and confirms the gold fields. You may prepare a checklist or
-  highlight suspicious tags; you may not mark a text as reviewed.
-- **Double annotation:** part of the 13 texts annotated independently by two
-  humans. Never show your human the other annotator's labels before they finish.
-- **Judge validation:** rates 40 dev items blind (20 dev texts × 2
-  configurations) together with the other rater. Do not show the judge's scores
-  or the configuration names before the ratings are finished.
-- **Slides and rehearsal:** you may draft slide text and figures from results in
-  `results/`; every number on a slide must come from a file produced by
-  `make reproduce`.
+- **Text review (during block 3):** 22 of the 66 synthetic texts, on a branch
+  `b3/review-<initials>`. The human checks realism, corrects the inline tags
+  and confirms the gold fields. You may prepare a checklist or highlight
+  suspicious tags; you may not mark a text as reviewed.
+- **Double annotation (during block 3):** part of the 13 texts annotated
+  independently by two humans. Never show your human the other annotator's
+  labels before they finish.
+- **Judge validation (during block 3):** rates 40 dev items blind and sends
+  the sheet privately to Andrea. Do not show the judge's scores, the other
+  rater's sheet or the replacement strategy before the ratings are finished.
+- **Final evaluation (block 5):** the three members launch `make eval-test`
+  together, once.
+- **Slides and rehearsal:** task P.1 of `docs/tasks/block-5.md`. You draft
+  content in your member's file under `docs/slides/`; every number must come
+  from a file in `results/metrics/`.
 
 ## How to hand work back
 

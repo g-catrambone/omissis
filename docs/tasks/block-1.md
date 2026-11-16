@@ -1,0 +1,43 @@
+# Block 1 · Skeleton — review and merge
+
+Owner: Mattia · Reviewed by: Giuseppe and Andrea · Mon 16 Nov
+How to use this file: `docs/tasks/README.md`.
+
+The code of this block is already written, on the branch `Step1` (one commit,
+about 3,000 lines): D0 rules, span merging and `detect` for D0, R1
+placeholders, restore (exact and normalised), JSONL cache with replay and the
+`echo` provider, an interim entity resolver, `mask` and `protect_send_restore`,
+the `omissis` command line, five fixture emails, the loaders in
+`src/omissis/eval/datasets.py`, the annotation guide v0. It was written under
+the earlier plan and is accepted as it is: one large pull request is a declared
+exception to the 300-line rule (`docs/decisions.md`).
+
+What remains is checking and merging.
+
+- [ ] **1.1 · Pull request**
+  - **Human (Mattia):** open the pull request from `Step1` to `main`; CI must
+    be green.
+
+- [ ] **1.2 · Human checks left open by the commit**
+  - **Human (Mattia):** check two D0 validators by hand against the official
+    algorithm; confirm that bank code `00000` is not assigned to a real bank.
+  - **Human (Giuseppe):** run the five fixtures and read what is sent to the
+    provider: no detected value may appear in it.
+  - **Human (Andrea):** confirm the five emails read like real correspondence
+    and contain nothing real; read the annotation guide and note what to
+    change (it is revised in task 3.1).
+
+- [ ] **1.3 · Reading**
+  - **Human (Giuseppe):** read `replace/placeholders.py`, `restore.py`,
+    `backends/__init__.py`, `pipeline.py`, `cli.py`: block 2 builds on them.
+  - **Human (Andrea):** read `eval/datasets.py` and the fixtures: block 3
+    builds on them.
+  - Each agent may help its human by answering questions on the code. It
+    changes nothing.
+
+- [ ] **1.4 · Hand-over note** — `docs/handoff/block-1.md`
+  - Do (Mattia's agent, on a branch `b1/handover`): the note described in
+    `docs/tasks/README.md`, with one worked call for `detect`, `mask`,
+    `protect_send_restore`, `complete`, `load_texts`, and the two commands.
+  - **Human (Mattia):** merge the pull request of the block, then the note;
+    set the tag `block-1`; G1 is ticked.

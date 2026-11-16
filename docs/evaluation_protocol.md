@@ -1,8 +1,8 @@
 # Evaluation protocol
 
 Exact definitions for the data and for every number the project reports.
-Workstream C implements this document; A and B read the parts that concern
-them. Values here are decisions: changing one needs an entry in
+Block 3 implements this document; the other blocks read the parts that
+concern them. Values here are decisions: changing one needs an entry in
 `docs/decisions.md` agreed by the team. File formats are in
 `docs/interfaces.md`, section 5.
 
@@ -65,11 +65,25 @@ The generator marks sensitive spans inline as `[[TYPE|text]]`; a parser strips
 the tags and computes offsets. The `generator` model is neither the `d3`
 model nor the `attacker` model.
 
-Pilot: 10 texts from 2 cohorts, generated first (task C3), used for the
-go/no-go on the attacks (task C5) and kept in the final set if they pass review.
+Pilot: 10 texts from 2 cohorts, generated first, used for the go/no-go on the
+attacks and kept in the final set if they pass review. The pilot compares
+`REF-none`, `REF-oracle-direct` and `REF-oracle` (section 5): it needs no
+detector, and it shows whether masking quasi-identifiers changes what the
+attacker can do.
+
+Pilot rule, on linkage top-1 at N = 10 over the 10 texts: **go** when the
+attacker identifies the author of at least 6 unmasked texts (`REF-none`) and
+of at least 3 fewer under `REF-oracle`. `REF-oracle-direct` is reported and
+discussed, not a condition. On **no-go** the humans change profiles or
+scenarios (subtler clues, tighter cohorts) and the pilot is repeated on new
+texts before the dataset is written; after two failed pilots the attacks are
+kept as designed and their result is reported as it is.
 
 ## 3. Annotation and human review
 
+- **Fixtures.** The 5 fixture emails of block 1 are annotated by this same
+  policy, before the annotation guide exists; the guide must not contradict
+  them.
 - **Policy.** Tag every direct identifier, quasi-identifier and
   special-category span with its type. Do not decide whether a
   quasi-identifier "should" be masked: that is `mask_quasi`. A span is the
@@ -80,9 +94,15 @@ go/no-go on the attacks (task C5) and kept in the final set if they pass review.
   type and boundaries; gold fields correct; text requirements of section 2 met.
   The reviewer's initials go in the file's `reviewed_by` field. A text without
   `reviewed_by` cannot enter the split.
+- **How the review is done.** Each reviewer edits their 22 files in
+  `data/pool/` on a branch `b3/review-<initials>` and opens one pull request;
+  the owner of block 3 merges it. Which 22 belong to whom is fixed by seed and
+  listed in `data/pool/REVIEWERS.md`.
 - **Double annotation.** 13 texts, chosen by seed and stratified by domain,
   are annotated a second time by a different human starting from the raw text
-  with no tags visible. Report span-level F1 between the two annotators (exact
+  with no tags visible: the second annotator receives
+  `data/annotation/<text_id>.txt` (plain text) and returns
+  `data/annotation/<text_id>.<initials>.txt` with `[[TYPE|text]]` tags added. Report span-level F1 between the two annotators (exact
   and overlap matching, section 6) and Cohen's kappa on class over spans
   matched by overlap.
 - **Adjudication.** Disagreements are settled by the third member; the outcome
@@ -103,7 +123,8 @@ go/no-go on the attacks (task C5) and kept in the final set if they pass review.
 | Name | Detector | Strategy | `mask_quasi` | Role |
 |---|---|---|---|---|
 | `REF-none` | — | — | — | unmasked text: utility ceiling, privacy floor |
-| `REF-oracle` | gold spans | R1 | true | perfect detection |
+| `REF-oracle-direct` | gold spans | R1 | false | perfect detection of direct identifiers and special categories; quasi-identifiers left visible |
+| `REF-oracle` | gold spans | R1 | true | perfect detection of everything |
 | `D1+R1` | D1 | R1 | false | the standard tool |
 | `D2+R1` | D2 | R1 | false | a dedicated classifier |
 | `D4+R1` | D4 | R1 | true | our proposal |
@@ -180,6 +201,9 @@ correct. Unparseable JSON scores 0.
 email." Scored by the judge (section 9). **T1 score** of a text = mean of the
 three criteria, mapped to [0, 1] as (score − 1) / 4.
 
+`REF-none` is the reference of the judge, so its T1 score is 1 by definition
+and it is not judged. Its T3 score is measured like any other.
+
 **Utility score** of a text = mean of its T3 and T1 scores; of a
 configuration = mean over texts. Always reported with its two components.
 
@@ -194,14 +218,23 @@ configuration = mean over texts. Always reported with its two components.
   leftover placeholders or broken tokens). Output: JSON with three integers
   and a one-sentence justification.
 - **Validation.** Giuseppe and Mattia rate 40 dev items blind: the 20 dev
-  texts under `D4+R1` and `D4+R2`, order shuffled, configuration hidden.
+  texts masked from gold spans (`mask_quasi` true) with R1 and with R2, order
+  shuffled, strategy hidden. No detector is needed. Each rater fills their own
+  sheet `results/judge_validation/sheet_<initials>.csv` and sends it privately
+  to the owner of block 3, who commits both together, so neither rater sees the
+  other's scores. The outcome (accepted or rejected, with the numbers) goes in
+  `docs/decisions.md`.
+- **Limit to declare.** The judge is validated on replies produced from
+  gold-span masking, not on replies from the detector configurations.
   Human consensus = mean of the two raters per criterion. The judge is
   accepted if quadratic-weighted kappa between judge and rounded consensus is
   at least 0.6, **or** at least 85% of judge scores are within one point of
   consensus. Report both, plus the score distribution.
 - **Fallback.** If rejected, the three members score T1 on the 46 test texts
   for `D4+R1` and `REF-none` only (92 ratings); the other configurations
-  report T3 alone, and the judge's failure is reported as a finding.
+  report T3 alone, and the judge's failure is reported as a finding. The
+  ratings are done on the day of the final evaluation, with the same sheet
+  tool, before any result is reported.
 
 ## 10. Restoration
 
@@ -250,8 +283,8 @@ calls and estimated spend per configuration.
 
 ## 14. LLM budget
 
-Test-split calls with this protocol: utility 46 × 6 × 2 = 552; judge
-46 × 5 = 230; linkage 46 × 6 × 2 = 552; attributes 46 × 6 = 276; about 1,600
+Test-split calls with this protocol: utility 46 × 7 × 2 = 644; judge
+46 × 6 = 276; linkage 46 × 7 × 2 = 644; attributes 46 × 7 = 322; about 1,900
 in total, plus dev runs. Team budget: about 10 euro. Before any real batch
 the code prints the number of calls and the estimated cost and waits for a
 human's confirmation.

@@ -1,6 +1,6 @@
 # Interface specification
 
-How the three workstreams connect. This document is the contract: the code in
+How the blocks of the project connect. This document is the contract: the code in
 `src/omissis/contracts.py` and the boundary functions must match it exactly.
 If something here does not fit a task, do not work around it and do not change
 it: describe the problem and stop (CLAUDE.md, rule 5).
@@ -69,16 +69,16 @@ No persistence, no encryption.
 
 Signatures are fixed, including parameter names.
 
-| Function | Module | Owner |
+| Function | Module | Built in block |
 |---|---|---|
-| `detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]` | `omissis.detect` | A |
-| `resolve(spans: Sequence[Span], text: str) -> list[Entity]` | `omissis.resolve` | B |
-| `replace(text: str, entities: Sequence[Entity], strategy: Strategy, seed: int, vault: Vault \| None = None) -> tuple[str, Vault]` | `omissis.replace` | B |
-| `restore(reply: str, vault: Vault, fuzzy_threshold: float) -> tuple[str, list[RestoreEvent]]` | `omissis.restore` | B |
-| `complete(request: LLMRequest, config: RunConfig) -> LLMResponse` | `omissis.backends` | B |
-| `register_provider(name: str, fn: ProviderFn) -> None` | `omissis.backends` | B |
-| `mask(text: str, config: RunConfig, gold_spans: Sequence[Span] \| None = None, vault: Vault \| None = None) -> tuple[MaskResult, Vault]` | `omissis.pipeline` | B |
-| `protect_send_restore(text: str, task: str, config: RunConfig) -> PipelineResult` | `omissis.pipeline` | B |
+| `detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]` | `omissis.detect` | 1 (D0), 4 (D1–D4) |
+| `resolve(spans: Sequence[Span], text: str) -> list[Entity]` | `omissis.resolve` | 1 (interim), 2 |
+| `replace(text: str, entities: Sequence[Entity], strategy: Strategy, seed: int, vault: Vault \| None = None) -> tuple[str, Vault]` | `omissis.replace` | 1 (R1), 2 (R2) |
+| `restore(reply: str, vault: Vault, fuzzy_threshold: float) -> tuple[str, list[RestoreEvent]]` | `omissis.restore` | 1, 2 (fuzzy) |
+| `complete(request: LLMRequest, config: RunConfig) -> LLMResponse` | `omissis.backends` | 1 |
+| `register_provider(name: str, fn: ProviderFn) -> None` | `omissis.backends` | 1 |
+| `mask(text: str, config: RunConfig, gold_spans: Sequence[Span] \| None = None, vault: Vault \| None = None) -> tuple[MaskResult, Vault]` | `omissis.pipeline` | 1, 2 (gold spans) |
+| `protect_send_restore(text: str, task: str, config: RunConfig, gold_spans: Sequence[Span] \| None = None) -> PipelineResult` | `omissis.pipeline` | 1, 2 (gold spans) |
 
 ### Behaviour
 
@@ -121,8 +121,8 @@ through this function, including D3, the attacker, the judge and the text
 generator.
 
 **`register_provider`** — `ProviderFn = Callable[[ModelSpec, LLMRequest], str]`.
-A provider turns one request into text and does no caching. B registers the
-cloud provider; A registers the local runtime used by D3. Registering a name
+A provider turns one request into text and does no caching. Block 2 registers
+the cloud provider; block 4 registers the local runtime used by D3. Registering a name
 twice raises `ValueError`.
 
 **Built-in provider `echo`** — registered by `backends` itself. It returns
@@ -134,15 +134,26 @@ pinned. `configs/models.echo.yaml` pins every role this way and
 `backend: cloud`). `echo` is for the skeleton, tests and debugging only; no
 reported number may come from it.
 
-**`mask`** — detect → resolve → replace, no LLM call. With `gold_spans` the
-detector is skipped and those spans are masked (REF-oracle). Quasi-identifier
-spans are masked only when `config.mask_quasi` is true; direct and
-special-category spans always.
+**`mask`** — detect → resolve → replace, no LLM call. What it masks depends on
+`config.detector` (section 4):
 
-**`protect_send_restore`** — Masks `text`, sends `task` followed by the masked
+- `D0`–`D4`: the spans come from `detect`; passing `gold_spans` is an error.
+- `GOLD`: the spans are `gold_spans`, which is then required (the references
+  `REF-oracle` and `REF-oracle-direct`).
+- `NONE`: nothing is masked; the text is returned unchanged with no spans, no
+  entities and an empty vault (the reference `REF-none`).
+
+Quasi-identifier spans are masked only when `config.mask_quasi` is true;
+direct and special-category spans always. A wrong combination of detector and
+`gold_spans` raises `ValueError`.
+
+**`protect_send_restore`** — Masks `text` exactly as `mask` does, with the
+same rules for `config.detector` and `gold_spans`, sends `task` followed by the masked
 text to the role `cloud` with `KEEP_PLACEHOLDERS_INSTRUCTION` as system
 message, restores the reply. `task` is the user's instruction in Italian. The
-vault is created for the call and erased before returning.
+vault is created for the call and erased before returning. With detector
+`NONE` the text is sent as it is and restoration finds nothing to do, so every
+configuration, references included, runs through this one function.
 `KEEP_PLACEHOLDERS_INSTRUCTION` is defined once, in `pipeline.py`:
 
 > Il testo contiene segnaposto tra parentesi quadre, come [PERSONA_1_M] o
@@ -167,7 +178,7 @@ is an error.
 
 | Key | Type | Meaning |
 |---|---|---|
-| `detector` | `D0`–`D4` | detector configuration |
+| `detector` | `D0`–`D4`, `GOLD`, `NONE` | where the spans come from: a detector, the human annotation, or nothing (no masking) |
 | `strategy` | `R1` \| `R2` | replacement strategy |
 | `mask_quasi` | bool | mask quasi-identifiers (true for D3 and D4 runs) |
 | `backend` | `cloud` \| `replay` | where cache misses go |
@@ -181,12 +192,65 @@ API: `RunConfig` (frozen dataclass with these fields), `load_config(path,
 overrides=None) -> RunConfig`, `with_overrides(config, **changes)`,
 `run_id(config) -> str`, `ConfigError(ValueError)`.
 
+`GOLD` and `NONE` are values of the configuration key only: they are not
+members of `DetectorId`, and `detect` is never called with them. `strategy`
+and `mask_quasi` are still required when the detector is `NONE`; by convention
+they are `R1` and `false`.
+
 `run_id` identifies what a run computes, not where its responses come from:
 the first 12 hex characters of the SHA-256 of the sorted JSON of `detector`,
 `strategy`, `mask_quasi`, `seed`, `fuzzy_threshold`, `source_priority` and the
 resolved content of the models file (`provider`, `id`, `revision` for each
 role). `backend`, `cache_dir` and the `models_file` path are excluded, so a
 run and its replay from the cache share one run id.
+
+**Named configurations — `configs/eval.yaml`.** The evaluation and the batch
+command read the configurations to run from this file:
+
+```yaml
+base:                      # keys shared by every configuration
+  backend: cloud
+  seed: 20261111
+  fuzzy_threshold: 0.9
+  source_priority: [D0, D2, D1, D3]
+  models_file: configs/models.yaml
+  cache_dir: results/cache
+configurations:
+  - {name: REF-none,          detector: NONE, strategy: R1, mask_quasi: false}
+  - {name: REF-oracle-direct, detector: GOLD, strategy: R1, mask_quasi: false}
+  - {name: REF-oracle,        detector: GOLD, strategy: R1, mask_quasi: true}
+  # added in block 4:
+  # - {name: D1+R1, detector: D1, strategy: R1, mask_quasi: false}
+  # - {name: D2+R1, detector: D2, strategy: R1, mask_quasi: false}
+  # - {name: D4+R1, detector: D4, strategy: R1, mask_quasi: true}
+  # - {name: D4+R2, detector: D4, strategy: R2, mask_quasi: true}
+```
+
+`load_eval_configs(path) -> dict[str, RunConfig]` (in `config.py`) merges
+`base` into each entry and returns the configurations by name, in file order.
+Names are unique; an unknown key is an error. The file is created in block 2
+with the three references. Block 4 makes exactly two kinds of edit: it appends
+the four configurations with detectors, and it may change
+`base.fuzzy_threshold` after a human decision recorded in `docs/decisions.md`.
+
+**Command line — `omissis`** (run through `uv run`):
+
+```
+omissis run   --config <run config .yaml> --input <text record .json or text file> [--task "<instruction>"] [--backend cloud|replay]
+omissis batch --config <run config .yaml> --input-dir <dir of text records> [--task "<instruction>"] [--backend cloud|replay]
+omissis mask  --eval-config configs/eval.yaml [--names A,B,...] --input-dir <dir of text records> --output results/masked
+```
+
+`run` prints the masked text, the raw and the restored reply, the disclosure
+report and the restoration events. `batch` prints one JSON line per record
+with the whole result. Both outputs contain the restored reply, which holds
+the original values: they go to standard output only and are never saved
+under `results/`. With detector `GOLD` both take the gold spans from the JSON
+record, so the input must be a text record. `mask` (block 2) calls no LLM: it
+masks every record under each named configuration (all of them when `--names`
+is omitted) and writes the masked-batch format of section 5. Every command
+exits with status 2 and a one-line message on a `ConfigError`, a `DataError`,
+a `CacheMissError` or a detector that is not built yet.
 
 `configs/models.yaml` has one entry per role — `cloud`, `attacker`, `judge`,
 `generator`, `d3`, `d2` — each with `provider`, `id`, `revision`, all
@@ -227,6 +291,21 @@ reviewer and is absent until the review is done. Loaded spans get `confidence=1.
 `source="GOLD"`. Vocabularies for `scenario`, `intent` and `requested_action`
 are in `docs/evaluation_protocol.md`.
 
+**Loaders** — `src/omissis/eval/datasets.py` (block 1). Frozen dataclasses:
+`TextRecord` (`id`, `domain`, `scenario`, `profile_id`, `has_special`, `text`,
+`spans: tuple[Span, ...]`, `gold: Gold`, `reviewed_by: str | None`), `Gold`
+(`intent`, `amounts`, `dates`, `requested_action`, `deadline`) and `Profile`
+(the fields of the profile format below, with `gender: Gender`).
+`load_text(path) -> TextRecord`; `load_texts(folder) -> list[TextRecord]`;
+`load_profiles(path) -> list[Profile]`. `SCENARIOS` holds the scenario
+vocabulary of the protocol. A file that breaks the format, or a span that does
+not match the text, raises `DataError` (a `ValueError`) naming the file. These
+are the only functions that read text and profile files. The loader does not
+check that `profile_id` exists among the profiles. The fixtures are
+`data/fixtures/fx-bank-01.json` … `fx-hr-02.json`, with their own five
+profiles `fx01`–`fx05` in `data/fixtures/profiles.json`; these are not part
+of the 30 profiles of the evaluation.
+
 **Profiles** — `data/profiles/profiles.json`: a list of objects with `id`,
 `cohort`, `name`, `gender` (`M`/`F`), `age`, `city`, `employer`, `role`,
 `bank`, `branch_city`, `financial` (object), `special` (`null` or
@@ -246,8 +325,19 @@ per run of `make eval-test`.
 
 **Masked batch** — `results/masked/<config_name>/<text_id>.json`:
 `{"text_id", "config_name", "run_id", "masked_text", "disclosure": [{"surrogate",
-"type", "class", "source", "reason"}]}`. `config_name` is one of `REF-none`,
+"type", "class", "source", "reason"}]}`. `config_name` is one of `REF-none`, `REF-oracle-direct`,
 `REF-oracle`, `D1+R1`, `D2+R1`, `D4+R1`, `D4+R2`.
+
+**Detected spans** — `results/detected/<detector>/<text_id>.json`:
+`{"text_id", "detector", "spans": [{"start", "end", "text", "type",
+"confidence", "source", "reason"}], "seconds": 0.0}`. Written by the detection
+evaluation for every detector, so that detection metrics and latency can be
+recomputed without running any model.
+
+**What is committed.** `results/cache/`, `results/masked/`,
+`results/detected/`, `results/metrics/` and `results/figures/` are committed:
+all data are synthetic, and `make reproduce` rebuilds every metric, table and
+figure from the first three with no network, no model and no detector.
 
 **Metrics** — `results/metrics/<name>.json`, where `<name>` is `detection`,
 `linkage`, `attributes`, `utility`, `restoration`, `latency`, `contrasts`.
@@ -261,10 +351,14 @@ relevant) holding the estimate and, where the protocol asks for it,
 
 ## 6. Who calls what
 
-- The app (A) calls `pipeline.protect_send_restore` only.
-- The evaluation (C) calls `pipeline.mask`, `pipeline.protect_send_restore`
-  and `backends.complete`, nothing below them.
-- D3 (A) calls `backends.complete` with role `d3` and registers its local
+- The app (block 2) calls `pipeline.protect_send_restore` only.
+- The evaluation (block 3) calls `omissis.eval.datasets`, `pipeline.mask`,
+  `pipeline.protect_send_restore`, `backends.complete` and, for the detection
+  metrics, `detect`; nothing below them. `omissis.eval.detection.run(split)`
+  measures every detector that `detect` supports at that moment and skips the
+  ones that raise `NotImplementedError`, so detectors merged later are picked
+  up with no code change.
+- D3 (block 4) calls `backends.complete` with role `d3` and registers its local
   runtime with `backends.register_provider`.
 - Nothing outside `backends/` and the registered providers imports a provider
   SDK or a model runtime.

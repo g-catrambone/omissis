@@ -1,28 +1,56 @@
 # Personal instructions — Mattia's agent
 
-You work for **Mattia**, owner of **workstream A · Detection and app**. Read the
-shared `CLAUDE.md` first; it prevails. Mattia reviews Andrea's workstream C and
-is reviewed by Giuseppe.
+You work for **Mattia**, owner of **block 1 · Skeleton** (already written, to be
+merged) and of **block 4 · Detectors**. Read the shared `CLAUDE.md` first; it
+prevails. At the gates Giuseppe and Andrea review block 1 and Giuseppe reviews
+block 4; Mattia reviews Andrea's block 3 and, with Andrea, block 5.
 
 Write code, comments, commit messages and docs in English.
 
+**When told to start or continue, work from `docs/tasks/block-1.md`** until gate
+G1 is ticked, then from `docs/tasks/block-4.md`, as described in
+`docs/tasks/README.md`. Block 4 runs beside blocks 2 and 3: it does not wait
+for their gates, except its task 4.5, which needs gate G3. After gate G4 it is
+not your turn: change nothing, except a `fix/…` branch for a defect in block
+4's code that Mattia explicitly asks for. After gate G5, task P.3 is yours.
+
 ## Your paths
 
-`src/omissis/detect/` (`rules.py`, `presidio.py`, `classifier.py`, `llm.py`,
-`hybrid.py`, `merge.py`), `src/omissis/app.py`, `src/omissis/eval/detection.py`.
+Block 4: `src/omissis/detect/` (`rules.py` and `merge.py` from block 1, then
+`presidio.py`, `classifier.py`, `llm.py`, `local_runtime.py`, `hybrid.py`);
+`tests/detect/`; in `configs/eval.yaml` only the two edits allowed by
+`docs/interfaces.md` section 4 (append the four configurations; change
+`base.fuzzy_threshold` after Mattia's decision); the files task 4.5 writes in
+`results/`; `docs/handoff/block-1.md` and `block-4.md`. After G5:
+`docs/slides/mattia.md`.
 
-**When told to start or continue, work from `docs/tasks/ws-a.md`** as described
-in `docs/tasks/README.md`. The table below is the overview; the task list has
-the order, the blockers and the acceptance criteria.
+The rest of what block 1 wrote passes to others at gate G1: the core modules
+(`pipeline.py`, `resolve.py`, `replace/`, `restore.py`, `backends/`, `cli.py`)
+to Giuseppe's block 2, `eval/datasets.py` and the annotation guide to Andrea's
+block 3. From then on you do not change them: Giuseppe and Andrea are editing
+them in the same days. If a detector needs something from them, describe it
+and stop.
 
-## Tasks by milestone
+## What the blocks deliver
 
-| Milestone | You produce (code + tests) | Mattia verifies or decides |
+| Block | You produce (code + tests) | Mattia verifies or decides |
 |---|---|---|
-| M1 · 13 Nov | **D0** rules: IBAN (mod-97), codice fiscale (check character), partita IVA (check digit), Italian phone formats, email, € amounts; curated valid/invalid test sets. `merge.py` implementing the overlap rule; `detect()` entry point for D0 | Checks two validators by hand against the official algorithm; reads the D0 output on the fixture emails |
-| M2 · 15 Nov | **D1** Presidio with an Italian spaCy pipeline and the Italian recognisers. **D2** ready-made classifier: sliding windows with overlap, span merge, label mapping to our taxonomy. `eval/detection.py`: the detection metrics of the evaluation protocol | Approves dependencies and the label-mapping table; confirms the classifier's licence terms are respected |
-| M3 · 19 Nov | **D3** local LLM detector; **D4** hybrid (D0 ∪ D2 for direct identifiers, D3 for quasi-identifiers and special categories). Gradio app. Latency per detector (p50, p95) | Reads the D3 prompt and 20 raw D3 outputs; tries to break the app with odd inputs |
-| M5 · 23 Nov | Detection section of the scorecard; categorised examples of missed identifiers | Chooses the examples for the slides |
+| 1 · Skeleton · merged Mon 16 Nov | Already written. Now: answers on the code for the reviewers, the hand-over note | Opens the pull request; checks two validators by hand and the bank code `00000`; merges; tags `block-1` |
+| 4 · Detectors · Tue 17 – Sun 22 Nov, then Mon 23 morning | D1 Presidio; D2 ready-made classifier; D3 local LLM; D4 hybrid; on Monday 23 the four configurations in `configs/eval.yaml` and the full evaluation on dev; hand-over note | Approves dependencies and the label mapping; confirms the classifier's licence; pins `d2` and `d3` with the team; reads the D3 prompt and 20 raw outputs; confirms the fuzzy threshold on dev; tags `freeze` |
+
+Develop each detector against the five fixtures (`data/fixtures/`, gold spans
+loaded with `omissis.eval.datasets.load_texts`). The dev texts exist only
+after gate G3: until then do not wait for them. Before every task:
+`git switch main && git pull`, because blocks 2 and 3 are merging too; you
+share with them only `pyproject.toml` and `uv.lock`.
+
+## Reviewing blocks 3 and 5
+
+When Mattia asks you to help review: at G3, `docs/handoff/block-3.md` and the
+code of block 3 against `docs/evaluation_protocol.md`; at G5, the detection and
+latency columns of `results/scorecard.md` against `results/metrics/`, and
+`make reproduce`. Run the tests and give concrete findings with file and line.
+You advise; Mattia reviews.
 
 ## Component notes and known traps
 
@@ -46,31 +74,28 @@ the order, the blockers and the acceptance criteria.
   provider with `backends.register_provider`; do not call it directly, so D3
   outputs are cached and replayable like every other LLM call.
 - **D3 determinism:** temperature 0, fixed seed, one pinned weights file. Official
-  D3 runs for the evaluation are executed once on the reference machine agreed at
-  M0 and stored in the cache; everyone else replays them.
+  D3 runs for the evaluation are executed once on the reference machine recorded in
+  `docs/decisions.md` before task 4.3, and stored in the cache; everyone else replays them.
 - **D4** is composition only: no new detection logic, just routing by class and
   `merge.py`.
-- **App:** input box with ready-made examples; masked text exactly as sent, with
-  highlighted placeholders; restored reply; disclosure panel (what was hidden,
-  class, detector, D3 reason, restoration failures); selectors for detector,
-  strategy and backend; replay mode that runs with no network and no GPU. The app
-  calls `pipeline.py` and contains no pipeline logic of its own.
-- **Leak rate** is the primary safety metric: share of texts with at least one
-  direct identifier missed. Recall matters more than precision; report both.
 
 ## Shared duties of your human (support them, do not do them in their place)
 
-- **Text review:** 22 of the 66 synthetic texts. The human checks realism, corrects
-  the inline tags and confirms the gold fields. You may prepare a checklist or
-  highlight suspicious tags; you may not mark a text as reviewed.
-- **Double annotation:** part of the 13 texts annotated independently by two
-  humans. Never show your human the other annotator's labels before they finish.
-- **Judge validation:** rates 40 dev items blind (20 dev texts × 2
-  configurations) together with the other rater. Do not show the judge's scores
-  or the configuration names before the ratings are finished.
-- **Slides and rehearsal:** you may draft slide text and figures from results in
-  `results/`; every number on a slide must come from a file produced by
-  `make reproduce`.
+- **Text review (during block 3):** 22 of the 66 synthetic texts, on a branch
+  `b3/review-<initials>`. The human checks realism, corrects the inline tags
+  and confirms the gold fields. You may prepare a checklist or highlight
+  suspicious tags; you may not mark a text as reviewed.
+- **Double annotation (during block 3):** part of the 13 texts annotated
+  independently by two humans. Never show your human the other annotator's
+  labels before they finish.
+- **Judge validation (during block 3):** rates 40 dev items blind and sends
+  the sheet privately to Andrea. Do not show the judge's scores, the other
+  rater's sheet or the replacement strategy before the ratings are finished.
+- **Final evaluation (block 5):** the three members launch `make eval-test`
+  together, once.
+- **Slides and rehearsal:** task P.3 of `docs/tasks/block-5.md`. You draft
+  content in your member's file under `docs/slides/`; every number must come
+  from a file in `results/metrics/`.
 
 ## How to hand work back
 
