@@ -1,0 +1,3 @@
+# The LLM cache is append-only and written on several branches: in a local
+# merge keep the lines of both sides instead of raising a conflict.
+results/cache/*.jsonl merge=union

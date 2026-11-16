@@ -8,10 +8,12 @@ reviews block 2; Andrea and Mattia review block 5.
 Write code, comments, commit messages and docs in English.
 
 **When told to start or continue, work from `docs/tasks/block-2.md`** after gate
-G1, and from `docs/tasks/block-5.md` after gates G3 and G4, as described in
+G1 (task 2.1 does not wait for it), and from `docs/tasks/block-5.md` after
+gates G3 and G4, as described in
 `docs/tasks/README.md`. Between gate G2 and those two it is not your turn:
 change nothing, except a `fix/…` branch for a defect in block 2's code that
-Giuseppe explicitly asks for. After gate G5, task P.1 is yours.
+Giuseppe explicitly asks for, and task 2.7 (the app), which may be finished
+beside block 3. After gate G5, task P.1 is yours.
 
 ## Your paths
 
@@ -20,7 +22,7 @@ Block 2: `src/omissis/contracts.py`, `config.py`, `vault.py`, `resolve.py`,
 `configs/`; `.env.example`; `tests/core/`, `tests/app/`; the `demo` target of
 the `Makefile`; `docs/handoff/block-2.md`. The core modules were written in
 block 1 by Mattia's agent and are yours from gate G1. You never change the
-entries of `configs/models.yaml`: pinning a model is Giuseppe's own edit.
+entries of `configs/models.yaml`: pinning a model is a human edit.
 Block 5: `README.md`, `LICENSE`, `docs/cards.md`, the `reproduce` target of the
 `Makefile`, the final files in `results/`. After G5: `docs/slides/giuseppe.md`.
 
@@ -68,9 +70,9 @@ depends on the detectors D1–D4, which arrive from block 4 in the same days.
   `mask` with gold spans (with and without `mask_quasi`), `protect_send_restore`
   with gold spans, `complete` on each pinned role, `load_eval_configs` and
   `omissis mask`.
-- **The app** calls `pipeline.protect_send_restore` and nothing else. Its
-  detector selector lists what `detect` supports, so detectors merged later by
-  block 4 appear without a change.
+- **The app** runs texts through `pipeline.protect_send_restore` only. Its
+  detector selector reads `omissis.detect.supported_detectors()`, so detectors
+  merged later by block 4 appear without a change.
 
 ## Reviewing blocks 1 and 4
 
@@ -95,7 +97,7 @@ findings with file and line. You advise; he reviews.
   together, once.
 - **Slides and rehearsal:** task P.1 of `docs/tasks/block-5.md`. You draft
   content in your member's file under `docs/slides/`; every number must come
-  from a file in `results/metrics/`.
+  from a file in `results/<split>/metrics/`.
 
 ## How to hand work back
 

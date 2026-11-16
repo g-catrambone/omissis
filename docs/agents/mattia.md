@@ -39,8 +39,9 @@ and stop.
 | 4 · Detectors · Tue 17 – Sun 22 Nov, then Mon 23 morning | D1 Presidio; D2 ready-made classifier; D3 local LLM; D4 hybrid; on Monday 23 the four configurations in `configs/eval.yaml` and the full evaluation on dev; hand-over note | Approves dependencies and the label mapping; confirms the classifier's licence; pins `d2` and `d3` with the team; reads the D3 prompt and 20 raw outputs; confirms the fuzzy threshold on dev; tags `freeze` |
 
 Develop each detector against the five fixtures (`data/fixtures/`, gold spans
-loaded with `omissis.eval.datasets.load_texts`). The dev texts exist only
-after gate G3: until then do not wait for them. Before every task:
+loaded with `omissis.eval.datasets.load_texts`). The dev texts exist from the
+day `make split` has run (task 3.5): from then you may run `detect` on them;
+until then do not wait for them. Before every task Mattia runs
 `git switch main && git pull`, because blocks 2 and 3 are merging too; you
 share with them only `pyproject.toml` and `uv.lock`.
 
@@ -48,7 +49,7 @@ share with them only `pyproject.toml` and `uv.lock`.
 
 When Mattia asks you to help review: at G3, `docs/handoff/block-3.md` and the
 code of block 3 against `docs/evaluation_protocol.md`; at G5, the detection and
-latency columns of `results/scorecard.md` against `results/metrics/`, and
+latency columns of `results/<split>/scorecard.md` against `results/<split>/metrics/`, and
 `make reproduce`. Run the tests and give concrete findings with file and line.
 You advise; Mattia reviews.
 
@@ -68,8 +69,10 @@ You advise; Mattia reviews.
 - **D3 returns text, not offsets.** Ask for JSON items `{text, type, reason}`,
   validate against a schema, then locate each `text` in the source. If the text
   occurs several times, mark every occurrence. If it does not occur at all, drop
-  the item and count it as a hallucinated span. Invalid JSON: one retry, then log
-  the failure and return an empty list. The pipeline must never crash.
+  the item and count it as a hallucinated span. Invalid JSON: one retry with a
+  different prompt (the cache answers an identical one), then log the failure
+  and return an empty list. A missing model or cache entry is not a failure of
+  this kind: `CacheMissError` and `ConfigError` propagate.
 - **D3 goes through `backends.complete`.** Register the local runtime as a
   provider with `backends.register_provider`; do not call it directly, so D3
   outputs are cached and replayable like every other LLM call.
@@ -95,7 +98,7 @@ You advise; Mattia reviews.
   together, once.
 - **Slides and rehearsal:** task P.3 of `docs/tasks/block-5.md`. You draft
   content in your member's file under `docs/slides/`; every number must come
-  from a file in `results/metrics/`.
+  from a file in `results/<split>/metrics/`.
 
 ## How to hand work back
 

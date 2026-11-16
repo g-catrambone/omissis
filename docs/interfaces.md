@@ -72,6 +72,7 @@ Signatures are fixed, including parameter names.
 | Function | Module | Built in block |
 |---|---|---|
 | `detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]` | `omissis.detect` | 1 (D0), 4 (D1–D4) |
+| `supported_detectors() -> tuple[DetectorId, ...]` | `omissis.detect` | 4 |
 | `resolve(spans: Sequence[Span], text: str) -> list[Entity]` | `omissis.resolve` | 1 (interim), 2 |
 | `replace(text: str, entities: Sequence[Entity], strategy: Strategy, seed: int, vault: Vault \| None = None) -> tuple[str, Vault]` | `omissis.replace` | 1 (R1), 2 (R2) |
 | `restore(reply: str, vault: Vault, fuzzy_threshold: float) -> tuple[str, list[RestoreEvent]]` | `omissis.restore` | 1, 2 (fuzzy) |
@@ -84,11 +85,24 @@ Signatures are fixed, including parameter names.
 
 **`detect`** — Returns spans sorted by `start`, non-overlapping. Overlaps are
 resolved inside: longer span wins, then higher confidence, then earlier
-position in `config.source_priority`. Every span satisfies `span.matches(text)`.
+position in `config.source_priority`. A longer quasi-identifier span can
+therefore absorb a direct identifier it overlaps: the stretch is still masked
+when `config.mask_quasi` is true, under the longer span's type. Every span
+satisfies `span.matches(text)`.
 Quasi-identifier spans are returned even when `config.mask_quasi` is false:
 the caller decides whether to mask them. Never raises on bad input or on a
-failing model; a failing detector logs and contributes no spans. A detector
-not built yet raises `NotImplementedError` with a clear message.
+failing model: a failing detector logs and contributes no spans, and inside D4
+a failing sub-detector does not remove the spans of the others. Two errors are
+not failures of a model and do propagate, `CacheMissError` and `ConfigError`
+(a cache miss in replay, a model that is not pinned, a library or a weights
+file missing on this machine): returning no spans would send the text
+unmasked. A detector not built yet raises `NotImplementedError`
+with a clear message.
+
+**`supported_detectors`** — Lists the detectors that can run on this machine:
+built, and with their libraries installed. It is an import check only: no
+model is loaded and none is called. Callers use it instead of probing
+`detect`.
 
 **`resolve`** — Every input span ends up in exactly one entity. Person
 mentions merge when one contains the other's surname; two people with one
@@ -101,7 +115,9 @@ normalised equality (case and whitespace). Gender from titles first
 values, deterministic for `seed`, from lists disjoint from the profile pool
 and never already present in `text`. The same entity always gets the same
 surrogate; a passed-in vault is reused so surrogates stay consistent across
-texts of one session. Substitution runs from the end of the text to the start.
+texts of one session (across texts the same entity means the same type and the
+same canonical value after normalisation; entity ids restart in every text).
+Substitution runs from the end of the text to the start.
 
 **`restore`** — Order: exact match; normalised match (case, spacing, missing
 brackets, underscores as spaces); fuzzy match accepted only at or above
@@ -123,7 +139,8 @@ generator.
 **`register_provider`** — `ProviderFn = Callable[[ModelSpec, LLMRequest], str]`.
 A provider turns one request into text and does no caching. Block 2 registers
 the cloud provider; block 4 registers the local runtime used by D3. Registering a name
-twice raises `ValueError`.
+twice raises `ValueError`. A provider that cannot run on this machine (key,
+library or weights missing) raises `ConfigError`.
 
 **Built-in provider `echo`** — registered by `backends` itself. It returns
 `request.prompt` unchanged and needs no network, key or model. It exists so
@@ -134,8 +151,9 @@ pinned. `configs/models.echo.yaml` pins every role this way and
 `backend: cloud`). `echo` is for the skeleton, tests and debugging only; no
 reported number may come from it.
 
-**`mask`** — detect → resolve → replace, no LLM call. What it masks depends on
-`config.detector` (section 4):
+**`mask`** — detect → resolve → replace. It never calls the role `cloud`; with
+D3 or D4 the detector calls the role `d3` through `complete`. What it masks
+depends on `config.detector` (section 4):
 
 - `D0`–`D4`: the spans come from `detect`; passing `gold_spans` is an error.
 - `GOLD`: the spans are `gold_spans`, which is then required (the references
@@ -147,10 +165,16 @@ Quasi-identifier spans are masked only when `config.mask_quasi` is true;
 direct and special-category spans always. A wrong combination of detector and
 `gold_spans` raises `ValueError`.
 
+`MaskResult.spans` holds every span found (every gold span with `GOLD`);
+`entities` and `disclosure` hold only what was masked, one disclosure item per
+entity. Without a `vault` argument each call starts from an empty vault: the
+evaluation and `omissis mask` do so for every text, and the masked text is then
+identical to the one `protect_send_restore` sends.
+
 **`protect_send_restore`** — Masks `text` exactly as `mask` does, with the
-same rules for `config.detector` and `gold_spans`, sends `task` followed by the masked
-text to the role `cloud` with `KEEP_PLACEHOLDERS_INSTRUCTION` as system
-message, restores the reply. `task` is the user's instruction in Italian. The
+same rules for `config.detector` and `gold_spans`, sends the prompt
+`f"{task}\n\n{masked_text}"` to the role `cloud` with
+`KEEP_PLACEHOLDERS_INSTRUCTION` as system message, restores the reply. `task` is the user's instruction in Italian. The
 vault is created for the call and erased before returning. With detector
 `NONE` the text is sent as it is and restoration finds nothing to do, so every
 configuration, references included, runs through this one function.
@@ -169,7 +193,8 @@ configuration, references included, runs through this one function.
 
 `cache_key(model: ModelSpec, request: LLMRequest) -> str` is the SHA-256 hex
 digest of the JSON (sorted keys, `ensure_ascii=False`) of
-`{id, revision, system, prompt, params}`.
+`{id, revision, system, prompt, params}`. `temperature: 0` is always part of
+`params`: what a caller passes is merged over it.
 
 ## 4. Configuration — `src/omissis/config.py`
 
@@ -180,7 +205,7 @@ is an error.
 |---|---|---|
 | `detector` | `D0`–`D4`, `GOLD`, `NONE` | where the spans come from: a detector, the human annotation, or nothing (no masking) |
 | `strategy` | `R1` \| `R2` | replacement strategy |
-| `mask_quasi` | bool | mask quasi-identifiers (true for D3 and D4 runs) |
+| `mask_quasi` | bool | mask quasi-identifiers (true in every evaluated configuration that has a detector) |
 | `backend` | `cloud` \| `replay` | where cache misses go |
 | `seed` | int | seed for fakes and resampling |
 | `fuzzy_threshold` | float in [0,1] | acceptance threshold of fuzzy restore |
@@ -194,15 +219,18 @@ overrides=None) -> RunConfig`, `with_overrides(config, **changes)`,
 
 `GOLD` and `NONE` are values of the configuration key only: they are not
 members of `DetectorId`, and `detect` is never called with them. `strategy`
-and `mask_quasi` are still required when the detector is `NONE`; by convention
-they are `R1` and `false`.
+and `mask_quasi` are still required when the detector is `NONE`, and must be
+`R1` and `false` (validated), so that `REF-none` has a single run id.
 
 `run_id` identifies what a run computes, not where its responses come from:
 the first 12 hex characters of the SHA-256 of the sorted JSON of `detector`,
 `strategy`, `mask_quasi`, `seed`, `fuzzy_threshold`, `source_priority` and the
 resolved content of the models file (`provider`, `id`, `revision` for each
 role). `backend`, `cache_dir` and the `models_file` path are excluded, so a
-run and its replay from the cache share one run id.
+run and its replay from the cache share one run id. Since every role enters
+the hash, pinning any model changes the run id of every configuration: what
+was written before the last pin is regenerated (the LLM calls come from the
+cache).
 
 **Named configurations — `configs/eval.yaml`.** The evaluation and the batch
 command read the configurations to run from this file:
@@ -220,15 +248,17 @@ configurations:
   - {name: REF-oracle-direct, detector: GOLD, strategy: R1, mask_quasi: false}
   - {name: REF-oracle,        detector: GOLD, strategy: R1, mask_quasi: true}
   # added in block 4:
-  # - {name: D1+R1, detector: D1, strategy: R1, mask_quasi: false}
-  # - {name: D2+R1, detector: D2, strategy: R1, mask_quasi: false}
+  # - {name: D1+R1, detector: D1, strategy: R1, mask_quasi: true}
+  # - {name: D2+R1, detector: D2, strategy: R1, mask_quasi: true}
   # - {name: D4+R1, detector: D4, strategy: R1, mask_quasi: true}
   # - {name: D4+R2, detector: D4, strategy: R2, mask_quasi: true}
 ```
 
-`load_eval_configs(path) -> dict[str, RunConfig]` (in `config.py`) merges
-`base` into each entry and returns the configurations by name, in file order.
-Names are unique; an unknown key is an error. The file is created in block 2
+`load_eval_configs(path, overrides=None) -> dict[str, RunConfig]` (in
+`config.py`) merges `base` into each entry, then applies `overrides` over both
+(this is how a caller forces `backend: replay`), and returns the
+configurations by name, in file order. Names are unique; an unknown key is an
+error. The file is created in block 2
 with the three references. Block 4 makes exactly two kinds of edit: it appends
 the four configurations with detectors, and it may change
 `base.fuzzy_threshold` after a human decision recorded in `docs/decisions.md`.
@@ -238,7 +268,7 @@ the four configurations with detectors, and it may change
 ```
 omissis run   --config <run config .yaml> --input <text record .json or text file> [--task "<instruction>"] [--backend cloud|replay]
 omissis batch --config <run config .yaml> --input-dir <dir of text records> [--task "<instruction>"] [--backend cloud|replay]
-omissis mask  --eval-config configs/eval.yaml [--names A,B,...] --input-dir <dir of text records> --output results/masked
+omissis mask  --eval-config configs/eval.yaml [--names A,B,...] --input-dir <dir of text records> --output results/<split>/masked [--backend cloud|replay]
 ```
 
 `run` prints the masked text, the raw and the restored reply, the disclosure
@@ -246,9 +276,11 @@ report and the restoration events. `batch` prints one JSON line per record
 with the whole result. Both outputs contain the restored reply, which holds
 the original values: they go to standard output only and are never saved
 under `results/`. With detector `GOLD` both take the gold spans from the JSON
-record, so the input must be a text record. `mask` (block 2) calls no LLM: it
-masks every record under each named configuration (all of them when `--names`
-is omitted) and writes the masked-batch format of section 5. Every command
+record, so the input must be a text record. `mask` (block 2) never calls the
+role `cloud`: it masks every record, each with a fresh vault, under each named
+configuration (all of them when `--names` is omitted) and writes the
+masked-batch format of section 5. It is for synthetic texts only (the
+evaluation texts and the fixtures). Every command
 exits with status 2 and a one-line message on a `ConfigError`, a `DataError`,
 a `CacheMissError` or a detector that is not built yet.
 
@@ -261,8 +293,12 @@ revision)` with property `pinned`; `load_models(path) -> dict[str, ModelSpec]`;
 
 ## 5. File formats
 
-All JSON is UTF-8 with `ensure_ascii=False`. Nothing written under `results/`
-may contain vault contents.
+All JSON is UTF-8 with `ensure_ascii=False`. No serialised `Vault` or
+`VaultEntry` is ever written under `results/`. The evaluation texts are
+synthetic, so the cache, the rating sheets and the outcomes of the evaluation
+hold their original values by design; the texts a user gives to `omissis run`,
+`omissis batch` or the app are never saved there. `<split>` below is `pilot`, `dev` or
+`test`.
 
 **Text with gold** — `data/{fixtures,pool,dev,test}/<text_id>.json`
 
@@ -315,50 +351,72 @@ of the 30 profiles of the evaluation.
 `candidates_N25.json`: `{"<text_id>": ["p07", "p03", …]}`, shuffled by seed,
 always containing the true author.
 
+**Text plan** — `data/profiles/plan.json`: `{"<text_id>": {"profile_id",
+"scenario", "has_special", "requested_action", "pilot"}}`, fixed by seed. The
+generator and the candidate lists work from it; `make split` reads `pilot`
+from it.
+
 **Split manifest** — `data/split.json`: `{"seed": …, "dev": [ids], "test":
 [ids], "sha256": {"<text_id>": "…"}}`. `data/test_access.log` gets one line
-per run of `make eval-test`.
+per launch of `make eval-test`.
 
 **LLM cache** — `results/cache/<role>.jsonl`, one object per line: `key`,
 `role`, `model_id`, `revision`, `system`, `prompt`, `params`, `response`,
 `created_at` (ISO 8601 UTC).
 
-**Masked batch** — `results/masked/<config_name>/<text_id>.json`:
+**Masked batch** — `results/<split>/masked/<config_name>/<text_id>.json`:
 `{"text_id", "config_name", "run_id", "masked_text", "disclosure": [{"surrogate",
 "type", "class", "source", "reason"}]}`. `config_name` is one of `REF-none`, `REF-oracle-direct`,
 `REF-oracle`, `D1+R1`, `D2+R1`, `D4+R1`, `D4+R2`.
 
-**Detected spans** — `results/detected/<detector>/<text_id>.json`:
+**Detected spans** — `results/<split>/detected/<detector>/<text_id>.json`:
 `{"text_id", "detector", "spans": [{"start", "end", "text", "type",
 "confidence", "source", "reason"}], "seconds": 0.0}`. Written by the detection
-evaluation for every detector, so that detection metrics and latency can be
-recomputed without running any model.
+evaluation for every detector, so that detection metrics can be recomputed
+without running any model. `seconds` is the wall time of that run and is
+informative only: the reported latency comes from the timing pass of the
+protocol, section 11.
 
-**What is committed.** `results/cache/`, `results/masked/`,
-`results/detected/`, `results/metrics/` and `results/figures/` are committed:
-all data are synthetic, and `make reproduce` rebuilds every metric, table and
-figure from the first three with no network, no model and no detector.
+**What is committed.** `results/cache/` and, for each split,
+`results/<split>/masked/`, `detected/`, `metrics/` and `figures/` are
+committed: all data are synthetic. `make reproduce` recomputes every estimate,
+interval, table and figure from the per-text outcomes stored in the metrics
+files, with no network, no model, no detector and without reading
+`data/test/`.
 
-**Metrics** — `results/metrics/<name>.json`, where `<name>` is `detection`,
-`linkage`, `attributes`, `utility`, `restoration`, `latency`, `contrasts`.
-Each file: `{"split": "dev"|"test", "generated_from": [run ids], "rows": [...]}`
-with one row per configuration (and per detector, N or attribute where
-relevant) holding the estimate and, where the protocol asks for it,
-`ci_low` and `ci_high`.
+**Metrics** — `results/<split>/metrics/<name>.json`, where `<name>` is
+`detection`, `linkage`, `attributes`, `utility`, `restoration`, `contrasts`,
+`cost` and, under `results/dev/` only, `latency`, `judge_validation` and
+`agreement` (computed once on the pool by the script of task 3.5, before
+`make split`; `make eval-dev` never rewrites it). Each file: `{"split":
+"pilot"|"dev"|"test", "seed": …, "generated_from": [run ids], "rows": [...],
+"per_text": [...]}` with one row per configuration (and per detector, N or
+attribute where relevant) holding the estimate and, where the protocol asks
+for it, `ci_low` and `ci_high`. `per_text` holds one object per text and
+configuration (or detector) with everything the rows are computed from:
+`text_id`, the configuration or detector, the binary outcomes and scores, for
+detection the counts of matched, missed and spurious spans per class and
+type, for the attributes the true value; no text. The rows can be rebuilt
+from `per_text` and `seed` alone.
 
-**Figures and tables** — `results/figures/privacy_utility.png`,
-`results/scorecard.md`, `results/error_taxonomy.md`.
+**Figures and tables** — `results/<split>/figures/privacy_utility.png`,
+`results/<split>/scorecard.md`; on dev only, `results/dev/error_examples.md`
+(task 4.5) and `results/dev/error_taxonomy.md` (task 5.1).
 
 ## 6. Who calls what
 
-- The app (block 2) calls `pipeline.protect_send_restore` only.
+- The app (block 2) runs texts through `pipeline.protect_send_restore` only;
+  it also calls `supported_detectors` for its detector selector and
+  `omissis.eval.datasets` to load its examples.
 - The evaluation (block 3) calls `omissis.eval.datasets`, `pipeline.mask`,
   `pipeline.protect_send_restore`, `backends.complete` and, for the detection
-  metrics, `detect`; nothing below them. `omissis.eval.detection.run(split)`
-  measures every detector that `detect` supports at that moment and skips the
-  ones that raise `NotImplementedError`, so detectors merged later are picked
-  up with no code change.
+  metrics, `detect` and `supported_detectors`; nothing below them.
+  `omissis.eval.detection.run(split, config)` measures every detector that
+  `supported_detectors()` lists, so detectors merged later are picked up with
+  no code change; `config` is any `RunConfig` read from `configs/eval.yaml`,
+  from which `detect` takes the backend, the models file and the cache.
 - D3 (block 4) calls `backends.complete` with role `d3` and registers its local
   runtime with `backends.register_provider`.
-- Nothing outside `backends/` and the registered providers imports a provider
-  SDK or a model runtime.
+- Nothing outside `backends/` and the registered providers imports an LLM
+  provider SDK or an LLM runtime. The libraries of D1 and D2 (Presidio, spaCy,
+  `transformers`) are imported inside `src/omissis/detect/` only.

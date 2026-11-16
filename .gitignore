@@ -5,6 +5,9 @@ CLAUDE.local.md
 # secrets
 .env
 
+# caches of runs that no task asks for (docs/tasks/README.md)
+results/scratch/
+
 # python
 .venv/
 __pycache__/

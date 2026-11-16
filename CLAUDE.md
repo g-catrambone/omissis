@@ -5,8 +5,10 @@ Three members: Giuseppe, Mattia, Andrea. Each works with their own Claude agent.
 The work is a relay of blocks: one member owns each block and works on it alone,
 then hands it over frozen to the next; the detectors are a block of their own
 that runs beside the others (`docs/tasks/README.md`).
-The human-readable plan is `docs/Linee_Guida_Progetto.pdf` (Italian). Where this file
-and the PDF disagree, stop and ask your human.
+`docs/Linee_Guida_Progetto.pdf` (Italian) is the summary for the three humans. Agents
+work from this file and from the markdown files under `docs/`, which prevail: the
+humans update the PDF last, so it may lag behind, and a difference from it is not a
+reason to stop.
 
 Your human's personal instructions are in `docs/agents/<name>.md`, loaded through their
 `CLAUDE.local.md`. If no personal file is loaded, ask who you are working for before
@@ -23,9 +25,12 @@ doing anything.
    `git status`, `git diff`, `git log`, `git branch --show-current`.
    When work is ready, say so, list the changed files, and propose a commit
    message. Then wait.
-2. **Never open `data/test/`.** Do not read, list, grep, print or summarise it.
-   Only `make eval-test` touches it, and only a human launches that command.
-   `make split` is also launched by a human only.
+2. **Never open `data/test/`.** Do not read, list, grep, print or summarise it,
+   with any tool or script. Only `make eval-test` touches it, and only a human
+   launches that command. `make split` is also launched by a human only. After
+   the split the same holds for the other copies of the test texts:
+   `results/cache/generator.jsonl`, `data/annotation/` and the git history of
+   `data/pool/`.
 3. **No real personal data, anywhere.** Synthetic only: no real names of private
    people, real IBANs, real codici fiscali, in code, fixtures, tests, cache or docs.
 4. **No secrets or weights in the repo.** API keys live in `.env` (gitignored).
@@ -39,7 +44,8 @@ doing anything.
 6. **Work only on your own block, and only during its turn.** Your personal
    file says which block is yours, which gate it waits for and which paths it
    owns. Before that gate is ticked, or after your own gate is ticked, you
-   change nothing. If a
+   change nothing, except what the exceptions listed in
+   `docs/tasks/README.md` allow. If a
    task needs a change in another block's paths, describe the change and stop:
    the owner of that block writes the fix (`docs/tasks/README.md`, "A bug in
    another block").
@@ -85,13 +91,15 @@ options or files that the plan does not ask for.
   category — with the types listed in `contracts.py`.
 - **Masking policy:** direct identifiers and special-category spans are always
   masked. Quasi-identifiers are *all* annotated by type; whether they are masked
-  is a configuration switch (on for D3/D4).
+  is a configuration switch, on in every evaluated configuration that has a
+  detector; `REF-oracle-direct` is the reference that leaves them visible.
 - **Placeholder format (R1):** ASCII only, `[TYPE_n]` or `[PERSONA_n_M]` /
   `[PERSONA_n_F]` when gender is known. One counter per type per session. The same
   entity always gets the same placeholder. Role-specific labels are an extension.
 - **D3 never returns offsets.** The local LLM returns span *text* plus type and
   reason as schema-validated JSON; offsets are found by string search in the
-  source. Invalid JSON: retry once, then log a failure and return no spans.
+  source. Invalid JSON: retry once with a different prompt (the cache answers
+  an identical one with the same reply), then log a failure and return no spans.
 - **R2 fakes** come from fixed lists that are disjoint from the profile pool
   (names, cities, employers). Fake IBANs pass the checksum but use a documented
   non-existent bank code. Deterministic for a given seed.
@@ -107,9 +115,10 @@ options or files that the plan does not ask for.
   annotation) or `NONE` (mask nothing): the three references are ordinary
   configurations and run through the same pipeline as the others. The named
   configurations to evaluate are listed in `configs/eval.yaml`.
-- **Results are committed.** `results/cache/`, `results/masked/`,
-  `results/detected/`, `results/metrics/` and `results/figures/` go in the
-  repository; `make reproduce` rebuilds tables and figures from them alone.
+- **Results are committed.** `results/cache/` and, for each split (`pilot`,
+  `dev`, `test`), `results/<split>/masked/`, `detected/`, `metrics/` and
+  `figures/` go in the repository; `make reproduce` rebuilds every estimate,
+  table and figure from the per-text outcomes in the metrics files alone.
 
 ### Evaluated configurations
 
@@ -127,7 +136,9 @@ Do not add configurations, metrics or contrasts on your own initiative.
 Vault encryption or persistence, a local stand-in cloud model, fine-tuning,
 generalisation as a replacement strategy, summary task (T2), role-labelled
 placeholders, embedding-based restoration, public PII datasets, multi-turn
-memory, non-Italian text, attachments, comparisons against third-party proxies. These are listed as extensions in the PDF.
+memory, non-Italian text, attachments, comparisons against third-party proxies.
+The PDF describes some of them as possible extensions: that does not put them
+in scope.
 
 ## 4. Working method
 
@@ -140,9 +151,10 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
   and checked, not on code that is only written.
 - **Starting work.** When your human says "start", "continue" or similar without
   naming a task, follow `docs/tasks/README.md`: check that it is your block's
-  turn, read the hand-over notes of the earlier blocks, take the first
-  unticked task of your block, work until its *Done when* lines are true, hand
-  back, and stop at every line marked **Human:**. Do one task per hand-back; do
+  turn, read the hand-over notes of the earlier blocks, take the task that
+  step 3 of that file selects, work until its *Done when* lines are true, and
+  hand back. Never fill in a line marked **Human:** yourself; it blocks only
+  what depends on it (`docs/tasks/README.md`). Do one task per hand-back; do
   not chain tasks without your human's go-ahead.
 - **Two documents are the specification.** `docs/interfaces.md` fixes the data
   contracts, the boundary functions (`detect`, `resolve`, `replace`, `restore`,
@@ -150,7 +162,11 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
   configuration and every file format. `docs/evaluation_protocol.md` fixes the
   data and every reported number. Build exactly what they say. If one of them
   does not fit your task, or disagrees with a task or with the code, do not
-  work around it and do not change it: describe the problem and stop.
+  work around it and do not change it: describe the problem and stop. Where
+  they are only silent on a detail (a rounding, a tie-break, an error
+  message), choose the simplest option, say so in the hand-back and propose
+  the line to add; stop only on a contradiction, or on a choice that would
+  change what a reported number means.
 - **One task = one branch = one pull request.** Branch names: `b1/…` to `b5/…`, and
   `fix/…`. The human creates the branch, commits, and merges
   once CI is green; the next block's owner reviews the whole block at the gate.
@@ -159,14 +175,16 @@ memory, non-Italian text, attachments, comparisons against third-party proxies. 
 - **Tests come with the code.** Every module has unit tests in `tests/`; a task
   is not done until `make test` and `make lint` pass locally. Report the actual
   output, including failures. Never weaken or delete a test to make it pass.
+  A test that asserts "not built yet" is replaced by the task that builds the
+  feature: that is a change of behaviour, not a weakened test.
 - **When changing a signature, decorator or import, grep for every usage** and
   update callers in the same change (within your paths; report the others).
-- **Environment:** Python 3.11, `uv` with `uv.lock`. Before installing anything
-  run `which python` and `python -m pip --version` and confirm the project
-  environment is active. New dependencies need the human's approval and a pinned
-  version.
+- **Environment:** Python 3.11, `uv` with `uv.lock`. Install only through `uv`,
+  after checking that the project environment is the one in use
+  (`uv run python --version`). New dependencies need the human's approval and a
+  pinned version.
 - **Small diffs.** Target under ~300 changed lines per pull request so a human can
-  really review it. Split larger work.
+  really review it (`uv.lock` and data files do not count). Split larger work.
 - **Leave a review note** at the end of each task (your human pastes it in the
   pull request): what changed, how to verify it, what you are unsure about, and three
   questions a reviewer should be able to answer after reading the code. The
@@ -203,14 +221,23 @@ Also:
 - `pyproject.toml` and `uv.lock` change only when a human approves a new
   dependency, in the block that needs it. Blocks working in the same days may
   conflict on `uv.lock`: keep both dependencies in `pyproject.toml` and run
-  `uv lock` again; never edit the lock by hand.
+  `uv lock` again; never edit the lock by hand. The detectors' libraries go in
+  a dependency group `detect` that `make setup` and CI do not install; the
+  tests that need them use `pytest.importorskip`.
 - `configs/models.yaml` is edited by humans only: pinning a model is a human
   commit to `main` with a line in `docs/decisions.md`, allowed until `freeze`.
 - The example texts in `data/fixtures/` are read by every block's tests and
   edited by none after G1.
 
 `results/cache/` is written by every block's runs; never delete or rewrite
-cache files that your own run did not create.
+cache files that your own run did not create. Only a run that a task asks for
+writes there; every other run (trying the pipeline, the app or a detector)
+uses a configuration whose `cache_dir` is under `results/scratch/`, which is
+gitignored.
+
+What no block lists (`.github/`, `.claude/`, `.gitignore`, `.gitattributes`,
+the `setup`, `test`, `lint` and `format` targets, the pytest and ruff
+settings) is changed by Giuseppe only, on request.
 
 Agents do the compiling work: code, tests, first drafts of texts and docs.
 Humans do the judging work: reviewing diffs, annotating and correcting data,

@@ -11,7 +11,10 @@ shortcut would weaken the evaluation, say so before taking it.
 **When told to start or continue, work from `docs/tasks/block-3.md`** as described
 in `docs/tasks/README.md`. Before gate G2 is ticked and after gate G3 is ticked
 it is not your turn: change nothing, except a `fix/…` branch for a defect in
-block 3's code that Andrea explicitly asks for. After gate G5, task P.2 is yours.
+block 3's code that Andrea explicitly asks for. Three tasks may start as soon
+as G1 is ticked, while block 2 is running, when Andrea names one: 3.8, the
+code and tests of 3.9 (after task 4.0), and the guide half of 3.1
+(`docs/tasks/README.md`). After gate G5, task P.2 is yours.
 
 ## Your paths
 
@@ -30,9 +33,9 @@ block 3's code that Andrea explicitly asks for. After gate G5, task P.2 is yours
 
 The privacy and utility evaluation of this block runs **without any detector**:
 the three reference configurations come from gold spans and are already listed
-in `configs/eval.yaml` (block 2). The detection metrics measure whatever
-detectors `detect` supports when they run: D0 from the start, and D1 to D4 as
-block 4 merges them in these same days. Block 4 then appends the four
+in `configs/eval.yaml` (block 2). The detection metrics run on dev for D0
+only; D1 to D4 are measured in task 4.5 on the reference machine, through the
+same code. Block 4 then appends the four
 configurations with detectors; the runner and the report must accept them
 without code changes.
 
@@ -41,7 +44,7 @@ without code changes.
 When Andrea asks you to help review: at G1, `eval/datasets.py`, the fixtures and
 the guide of block 1; at G2, `docs/handoff/block-2.md` and the code of block 2
 against `docs/interfaces.md`; at G5, every headline number of the README and of
-`results/scorecard.md` against `results/metrics/`, and `make reproduce`. Run
+`results/<split>/scorecard.md` against `results/<split>/metrics/`, and `make reproduce`. Run
 the tests and give concrete findings with file and line. You advise; Andrea
 reviews.
 
@@ -59,7 +62,7 @@ reviews.
   **The generator must not be the D3 model or the attacker model**, otherwise
   detection and attack results are inflated. In the hand-over
   note, propose the `docs/cards.md` lines for the generator, the attacker and
-  the judge: block 4 writes that file.
+  the judge: block 5 writes that file.
 - **Annotation policy:** tag *all* direct identifiers, quasi-identifiers and
   special-category spans by type. Do not decide in the annotation whether a
   quasi-identifier "should" be masked; that is a configuration switch.
@@ -73,7 +76,7 @@ reviews.
   score = 1 − top-1 at N = 25. Always shown against `REF-none` and chance (1/N).
 - **Attribute inference:** masked text only; guesses for city, profession,
   employer, age bracket, gender, presence of a health condition, each from a
-  closed answer list;
+  closed answer list, with no "unknown" option;
   accuracy against `REF-none` and the majority baseline. Gender is included
   because the placeholders deliberately reveal it.
 - **The attacker prompt never contains gold labels or the configuration name.**
@@ -85,13 +88,14 @@ reviews.
   items blind: the 20 dev texts masked from gold spans with R1 and with R2. The
   judge is accepted if weighted κ ≥ 0.6 **or** agreement within ±1 point ≥ 85%;
   report both plus the score distribution. If rejected, humans score T1 on test
-  only for contrast (2) (`D4+R1` vs `REF-none`, 92 ratings) and the failure is
-  reported as a finding.
+  only for contrast (2), as the fallback of the protocol says in section 9, and
+  the failure is reported as a finding.
 - **Statistics:** all comparisons paired on the same texts; 95% intervals by
   paired bootstrap (10,000 resamples, fixed seed); McNemar for paired binary
   outcomes; Holm correction across the three primary contrasts. With 46 test
-  texts intervals are wide: state conclusions only where intervals support them
-  and report negative results with the same prominence.
+  texts intervals are wide: state conclusions only where the decision rule of
+  the protocol, section 12, supports them, and report negative results with
+  the same prominence.
 - **Cost guard:** before any batch of LLM calls, print the number of calls and
   the estimated cost and wait for Andrea's go-ahead. Team budget: about €10.
 
@@ -110,7 +114,7 @@ reviews.
   together, once.
 - **Slides and rehearsal:** task P.2 of `docs/tasks/block-5.md`. You draft
   content in your member's file under `docs/slides/`; every number must come
-  from a file in `results/metrics/`.
+  from a file in `results/<split>/metrics/`.
 
 ## How to hand work back
 
