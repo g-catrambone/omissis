@@ -1,0 +1,97 @@
+{
+  "id": "hr-0013",
+  "domain": "hr",
+  "scenario": "harassment_complaint",
+  "profile_id": "p09",
+  "has_special": false,
+  "text": "Oggetto: Segnalazione fatti e richiesta di indagine - Dario Altobelli\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo Dario Altobelli, matricola GZ-20484, e lavoro come custode presso la sede di Trapani. Vi scrivo per segnalare una situazione di vessazione che sto subendo da parte di un collega, iniziata il 12 novembre 2026.\n\nDa quella data, il mio turno di notte viene sistematicamente modificato senza preavviso, costringendomi a gestire turni di 14 ore consecutive. Inoltre, mi viene negato l'accesso agli strumenti di lavoro necessari per le mie mansioni, con il pretesto di \"mancanza di autorizzazioni\" mai comunicate formalmente. Questa condotta sta compromettendo la mia capacità di svolgere il lavoro in sicurezza e dignità.\n\nNon chiedo soluzioni immediate o sanzioni specifiche, ma vi prego di aprire una pratica di verifica formale per accertare i fatti. Desidero che venga indagata la regolarità delle assegnazioni di turno e delle autorizzazioni operative.\n\nPer i contatti, potete raggiungermi al 399 299 3390 o via dario.altobelli@example.com. I miei dati bancari presso Banca Altopiano, filiale di Trapani, restano invariati, con IBAN IT41G0000015737119260922015.\n\nResto in attesa di un riscontro scritto sull'avvio dell'indagine.\n\nCordiali saluti,\nDario Altobelli\n",
+  "spans": [
+    {
+      "start": 54,
+      "end": 69,
+      "text": "Dario Altobelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 104,
+      "end": 127,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 140,
+      "end": 155,
+      "text": "Dario Altobelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 167,
+      "end": 175,
+      "text": "GZ-20484",
+      "type": "UTENTE"
+    },
+    {
+      "start": 191,
+      "end": 198,
+      "text": "custode",
+      "type": "RUOLO"
+    },
+    {
+      "start": 217,
+      "end": 224,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 331,
+      "end": 347,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1033,
+      "end": 1045,
+      "text": "399 299 3390",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1052,
+      "end": 1079,
+      "text": "dario.altobelli@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1108,
+      "end": 1123,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 1136,
+      "end": 1143,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 1173,
+      "end": 1200,
+      "text": "IT41G0000015737119260922015",
+      "type": "IBAN"
+    },
+    {
+      "start": 1287,
+      "end": 1302,
+      "text": "Dario Altobelli",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "harassment_complaint",
+    "amounts": [],
+    "dates": [
+      "2026-11-12"
+    ],
+    "requested_action": "open_investigation",
+    "deadline": null
+  }
+}

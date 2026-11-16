@@ -1,0 +1,112 @@
+{
+  "id": "bank-0031",
+  "domain": "bank",
+  "scenario": "fee_complaint",
+  "profile_id": "p24",
+  "has_special": false,
+  "text": "Oggetto: Reclamo spese conto corrente e richiesta colloquio\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Vincenzo Gasparotto e sono titolare del conto corrente con IBAN IT81G0000009964197915045590. Scrivo per segnalare la mia forte contrarietà alle commissioni di gestione e alle spese di incasso addebitate sul mio conto negli ultimi mesi. In particolare, ho notato un addebito di € 45,00 a titolo di \"servizio di gestione\" e un altro di € 12,50 per l'incasso di un assegno, operazioni che ritengo non concordate né giustificate dal contratto sottoscritto.\n\nLavoro come responsabile acquisti presso Caseificio Montelupo S.r.l. a Viterbo, e la gestione del mio conto è legata anche a un prestito personale attivo. La situazione economica attuale non mi consente di sostenere costi aggiuntivi non previsti. Il mio codice fiscale è FMZGCF93D55X913J e la matricola aziendale è JY-00410.\n\nNon desidero procedere con una semplice contestazione scritta, ma ritengo fondamentale un confronto diretto per chiarire la situazione e valutare le opzioni disponibili. Vi chiedo pertanto di fissare un incontro o un colloquio presso la filiale di Viterbo entro il 15 dicembre 2026. Sono disponibile a contattarvi al numero 371 808 5550 o via email all'indirizzo vincenzo.gasparotto@example.com per concordare data e ora.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\nVincenzo Gasparotto\n",
+  "spans": [
+    {
+      "start": 69,
+      "end": 97,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 110,
+      "end": 129,
+      "text": "Vincenzo Gasparotto",
+      "type": "PERSONA"
+    },
+    {
+      "start": 174,
+      "end": 201,
+      "text": "IT81G0000009964197915045590",
+      "type": "IBAN"
+    },
+    {
+      "start": 387,
+      "end": 394,
+      "text": "€ 45,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 444,
+      "end": 451,
+      "text": "€ 12,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 576,
+      "end": 597,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 605,
+      "end": 632,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 635,
+      "end": 642,
+      "text": "Viterbo",
+      "type": "CITTA"
+    },
+    {
+      "start": 835,
+      "end": 851,
+      "text": "FMZGCF93D55X913J",
+      "type": "CF"
+    },
+    {
+      "start": 879,
+      "end": 887,
+      "text": "JY-00410",
+      "type": "UTENTE"
+    },
+    {
+      "start": 1138,
+      "end": 1145,
+      "text": "Viterbo",
+      "type": "CITTA"
+    },
+    {
+      "start": 1155,
+      "end": 1171,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1214,
+      "end": 1226,
+      "text": "371 808 5550",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1253,
+      "end": 1284,
+      "text": "vincenzo.gasparotto@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1379,
+      "end": 1398,
+      "text": "Vincenzo Gasparotto",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "fee_complaint",
+    "amounts": [
+      45.0,
+      12.5
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "schedule_meeting",
+    "deadline": "2026-12-15"
+  }
+}

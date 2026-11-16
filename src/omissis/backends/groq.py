@@ -67,7 +67,8 @@ def _post(body: dict[str, Any], keys: list[str]) -> dict[str, Any]:
     """POST `body` to the API and return the decoded reply.
 
     On a rate limit the next key is tried; when every key has been refused in a row,
-    and on a 5xx, the call waits and tries again, `MAX_ATTEMPTS` times at most.
+    on a 5xx and when the API does not answer, the call waits and tries again,
+    `MAX_ATTEMPTS` times at most.
     """
     global _next_key
     data = json.dumps(body, ensure_ascii=False).encode("utf-8")
@@ -103,6 +104,11 @@ def _post(body: dict[str, Any], keys: list[str]) -> dict[str, Any]:
                         continue  # another key may still have room
                 refused = 0
                 time.sleep(wait)
+                break
+            except OSError as exc:  # no answer: a timeout, a dropped connection, no network
+                if attempt == MAX_ATTEMPTS:
+                    raise RuntimeError(f"Groq API did not answer ({type(exc).__name__})") from None
+                time.sleep(DEFAULT_WAIT_SECONDS)
                 break
     raise AssertionError("unreachable")
 

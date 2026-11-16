@@ -218,6 +218,25 @@ def test_all_keys_rate_limited_waits_once_then_goes_round_again(monkeypatch):
     assert used == ["a", "b", "a"] and waits == [4.0]
 
 
+def test_no_answer_is_tried_again_then_reported(monkeypatch):
+    answers = [TimeoutError("timed out"), reply("Dopo.")]
+    waits = []
+
+    def fake_urlopen(request, timeout):
+        answer = answers.pop(0) if answers else TimeoutError("timed out")
+        if isinstance(answer, Exception):
+            raise answer
+        return FakeResponse(json.dumps(answer).encode("utf-8"))
+
+    monkeypatch.setattr(groq.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(groq.time, "sleep", waits.append)
+    monkeypatch.setattr(groq, "_next_key", 0)
+    assert groq._post({"model": "m"}, ["test-key"]) == reply("Dopo.")
+    assert waits == [groq.DEFAULT_WAIT_SECONDS]
+    with pytest.raises(RuntimeError, match="did not answer \\(TimeoutError\\)"):
+        groq._post({"model": "m"}, ["test-key"])
+
+
 def test_other_http_error_raises_with_the_status_only(monkeypatch):
     def fake_urlopen(request, timeout):
         raise http_error(401)

@@ -1,0 +1,119 @@
+{
+  "id": "bank-0019",
+  "domain": "bank",
+  "scenario": "loan_early_repayment",
+  "profile_id": "p22",
+  "has_special": false,
+  "text": "Oggetto: Richiesta estinzione anticipata prestito personale - Michela Rampazzo\n\nGentile Credito Tirrenico,\n\nmi chiamo Michela Rampazzo e sono titolare del conto corrente con IBAN IT35P0000045198541598847685. Vi scrivo per richiedere formalmente la chiusura anticipata del mio prestito personale, contratto presso la filiale di Viterbo.\n\nAttualmente lavoro come responsabile acquisti presso Caseificio Montelupo S.r.l., ma ho deciso di rivedere la mia situazione finanziaria per ridurre i costi a lungo termine. Il prestito in questione, acceso in data 15 marzo 2024, prevede una rata mensile di € 450,00.\n\nVi chiedo di procedere con l'estinzione totale del debito residuo, che al momento ammonta a € 12.500,00, e di inviarmi la relativa quietanza di pagamento. Desidero che l'operazione venga eseguita entro il 30 novembre 2026, così da poter pianificare il trasferimento delle somme necessarie dal mio deposito titoli.\n\nVi prego di confermare la ricezione di questa richiesta e di indicarmi le eventuali penali o interessi di mora applicabili per la chiusura anticipata, come previsto dal contratto. Resto a disposizione per qualsiasi chiarimento al numero 391 565 6198 o tramite l'indirizzo michela.rampazzo@example.com.\n\nCordiali saluti,\n\nMichela Rampazzo\nFCVTDC50S09X752T\nPM-09581\n",
+  "spans": [
+    {
+      "start": 62,
+      "end": 78,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA"
+    },
+    {
+      "start": 88,
+      "end": 105,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 118,
+      "end": 134,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA"
+    },
+    {
+      "start": 179,
+      "end": 206,
+      "text": "IT35P0000045198541598847685",
+      "type": "IBAN"
+    },
+    {
+      "start": 327,
+      "end": 334,
+      "text": "Viterbo",
+      "type": "CITTA"
+    },
+    {
+      "start": 361,
+      "end": 382,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 390,
+      "end": 417,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 552,
+      "end": 565,
+      "text": "15 marzo 2024",
+      "type": "DATA"
+    },
+    {
+      "start": 595,
+      "end": 603,
+      "text": "€ 450,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 698,
+      "end": 709,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 811,
+      "end": 827,
+      "text": "30 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1158,
+      "end": 1170,
+      "text": "391 565 6198",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1193,
+      "end": 1221,
+      "text": "michela.rampazzo@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1242,
+      "end": 1258,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1259,
+      "end": 1275,
+      "text": "FCVTDC50S09X752T",
+      "type": "CF"
+    },
+    {
+      "start": 1276,
+      "end": 1284,
+      "text": "PM-09581",
+      "type": "UTENTE"
+    }
+  ],
+  "gold": {
+    "intent": "loan_early_repayment",
+    "amounts": [
+      450.0,
+      12500.0
+    ],
+    "dates": [
+      "2024-03-15",
+      "2026-11-30"
+    ],
+    "requested_action": "close_account",
+    "deadline": "2026-11-30"
+  }
+}

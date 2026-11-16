@@ -1,0 +1,105 @@
+{
+  "id": "bank-0027",
+  "domain": "bank",
+  "scenario": "account_closure",
+  "profile_id": "p22",
+  "has_special": false,
+  "text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - Michela Rampazzo\n\nGentile Credito Tirrenico,\n\nmi chiamo Michela Rampazzo e sono titolare del conto corrente con IBAN IT35P0000045198541598847685 presso la filiale di Viterbo. Vi scrivo per comunicare la mia volontà di procedere alla chiusura definitiva del rapporto bancario.\n\nAttualmente, sul conto sono presenti fondi derivanti dalla gestione del mio stipendio da responsabile acquisti presso Caseificio Montelupo S.r.l., oltre al saldo residuo del prestito personale in corso di estinzione. Vi chiedo cortesemente di sbloccare le somme disponibili e di trasferire l'intero importo, pari a circa € 4.500,00, sul conto corrente di mia proprietà presso un altro istituto di credito, i cui dati vi fornirò separatamente via PEC o tramite raccomandata A/R.\n\nVi prego di considerare questa richiesta come urgente, poiché necessito di liquidità per coprire alcune spese aziendali impreviste entro il 15 dicembre 2026. Per qualsiasi verifica necessaria, potete contattarmi al numero 391 565 6198 o all'indirizzo michela.rampazzo@example.com. Il mio codice fiscale è FCVTDC50S09X752T e la matricola aziendale di riferimento è PM-09581.\n\nResto in attesa di un vostro cortese riscontro per confermare l'avvenuta esecuzione dell'ordine di trasferimento.\n\nCordiali saluti,\n\nMichela Rampazzo\n",
+  "spans": [
+    {
+      "start": 58,
+      "end": 74,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA"
+    },
+    {
+      "start": 84,
+      "end": 101,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 114,
+      "end": 130,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA"
+    },
+    {
+      "start": 175,
+      "end": 202,
+      "text": "IT35P0000045198541598847685",
+      "type": "IBAN"
+    },
+    {
+      "start": 224,
+      "end": 231,
+      "text": "Viterbo",
+      "type": "CITTA"
+    },
+    {
+      "start": 424,
+      "end": 445,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 453,
+      "end": 480,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 656,
+      "end": 666,
+      "text": "€ 4.500,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 954,
+      "end": 970,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1036,
+      "end": 1048,
+      "text": "391 565 6198",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1065,
+      "end": 1093,
+      "text": "michela.rampazzo@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1119,
+      "end": 1135,
+      "text": "FCVTDC50S09X752T",
+      "type": "CF"
+    },
+    {
+      "start": 1178,
+      "end": 1186,
+      "text": "PM-09581",
+      "type": "UTENTE"
+    },
+    {
+      "start": 1322,
+      "end": 1338,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "account_closure",
+    "amounts": [
+      4500.0
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "release_funds",
+    "deadline": "2026-12-15"
+  }
+}
