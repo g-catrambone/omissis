@@ -10,10 +10,12 @@ import hashlib
 import json
 from collections.abc import Callable, Mapping
 from dataclasses import dataclass, field
+from datetime import UTC, datetime
+from pathlib import Path
 from types import MappingProxyType
 from typing import Any
 
-from omissis.config import ModelSpec, RunConfig
+from omissis.config import ConfigError, ModelSpec, RunConfig, load_models, require_pinned
 
 
 @dataclass(frozen=True)
@@ -75,4 +77,63 @@ def complete(request: LLMRequest, config: RunConfig) -> LLMResponse:
     `CacheMissError` and never touches the network. Refuses a role whose model is
     not pinned.
     """
-    raise NotImplementedError("backends.complete is built by task B3")
+    model = require_pinned(load_models(config.models_file), request.role)
+    key = cache_key(model, request)
+    path = Path(config.cache_dir) / f"{request.role}.jsonl"
+
+    stored = _lookup(path, key)
+    if stored is not None:
+        return LLMResponse(stored["response"], stored["model_id"], stored["revision"], cached=True)
+    if config.backend == "replay":
+        raise CacheMissError(
+            f"no cached response for role {request.role!r} (key {key[:12]}…) in {path}; "
+            "run once with backend: cloud to fill the cache"
+        )
+
+    provider = _PROVIDERS.get(model.provider)
+    if provider is None:
+        raise ConfigError(f"no provider registered under {model.provider!r} (role {model.role!r})")
+    text = provider(model, request)
+    if not isinstance(text, str):
+        raise TypeError(f"provider {model.provider!r} returned {type(text).__name__}, not str")
+
+    record = {
+        "key": key,
+        "role": request.role,
+        "model_id": model.id,
+        "revision": model.revision,
+        "system": request.system,
+        "prompt": request.prompt,
+        "params": dict(request.params),
+        "response": text,
+        "created_at": datetime.now(UTC).isoformat(timespec="seconds"),
+    }
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with open(path, "a", encoding="utf-8", newline="\n") as fh:
+        fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return LLMResponse(text, model.id, model.revision, cached=False)
+
+
+def _lookup(path: Path, key: str) -> dict[str, Any] | None:
+    """The first cache record with `key` in `path`, or None. A corrupt line is an error."""
+    if not path.exists():
+        return None
+    with open(path, encoding="utf-8") as fh:
+        for number, line in enumerate(fh, start=1):
+            if not line.strip():
+                continue
+            try:
+                record = json.loads(line)
+            except json.JSONDecodeError as exc:
+                raise ValueError(f"{path}, line {number}: not valid JSON") from exc
+            if record.get("key") == key:
+                return record
+    return None
+
+
+def _echo(model: ModelSpec, request: LLMRequest) -> str:
+    """Built-in provider: returns the prompt unchanged. For the skeleton, tests, debugging."""
+    return request.prompt
+
+
+register_provider("echo", _echo)

@@ -1,0 +1,27 @@
+# Every role pinned to the built-in `echo` provider, which returns the prompt unchanged.
+# For the skeleton, tests and debugging only: no reported number may come from it
+# (docs/interfaces.md, section 3).
+cloud:
+  provider: echo
+  id: echo
+  revision: "1"
+attacker:
+  provider: echo
+  id: echo
+  revision: "1"
+judge:
+  provider: echo
+  id: echo
+  revision: "1"
+generator:
+  provider: echo
+  id: echo
+  revision: "1"
+d3:
+  provider: echo
+  id: echo
+  revision: "1"
+d2:
+  provider: echo
+  id: echo
+  revision: "1"

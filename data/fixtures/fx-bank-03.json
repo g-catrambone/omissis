@@ -1,0 +1,106 @@
+{
+  "id": "fx-bank-03",
+  "domain": "bank",
+  "scenario": "account_closure",
+  "profile_id": "fx03",
+  "has_special": false,
+  "text": "Oggetto: richiesta di chiusura del conto corrente\n\nSpettabile Credito Valdorsa,\n\nio sottoscritta Marta Zanchetti, nata il 14/02/1961, codice fiscale ZNCMRT61B54X212O, chiedo la chiusura del conto corrente n. 000041227385 aperto presso la filiale di Treviso.\n\nDal 1 gennaio 2027 andrò in pensione dopo trent'anni come insegnante di scuola primaria e mi trasferirò da mia figlia a Padova. Vi chiedo di trasferire il saldo residuo, circa 12.400 euro, sul conto a me intestato presso un'altra banca, IBAN IT56M0000020580414008222453, e di chiudere il rapporto entro il 31 dicembre 2026.\n\nRestituirò in filiale la carta e il libretto degli assegni non utilizzati. Per fissare l'appuntamento potete chiamarmi al 0422 518 207 nelle ore del mattino.\n\nDistinti saluti,\nMarta Zanchetti\n",
+  "spans": [
+    {
+      "start": 62,
+      "end": 78,
+      "text": "Credito Valdorsa",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 97,
+      "end": 112,
+      "text": "Marta Zanchetti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 122,
+      "end": 132,
+      "text": "14/02/1961",
+      "type": "DATA_NASCITA"
+    },
+    {
+      "start": 149,
+      "end": 165,
+      "text": "ZNCMRT61B54X212O",
+      "type": "CF"
+    },
+    {
+      "start": 208,
+      "end": 220,
+      "text": "000041227385",
+      "type": "CONTO"
+    },
+    {
+      "start": 249,
+      "end": 256,
+      "text": "Treviso",
+      "type": "CITTA"
+    },
+    {
+      "start": 263,
+      "end": 277,
+      "text": "1 gennaio 2027",
+      "type": "DATA"
+    },
+    {
+      "start": 317,
+      "end": 346,
+      "text": "insegnante di scuola primaria",
+      "type": "RUOLO"
+    },
+    {
+      "start": 379,
+      "end": 385,
+      "text": "Padova",
+      "type": "CITTA"
+    },
+    {
+      "start": 435,
+      "end": 446,
+      "text": "12.400 euro",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 501,
+      "end": 528,
+      "text": "IT56M0000020580414008222453",
+      "type": "IBAN"
+    },
+    {
+      "start": 565,
+      "end": 581,
+      "text": "31 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 706,
+      "end": 718,
+      "text": "0422 518 207",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 760,
+      "end": 775,
+      "text": "Marta Zanchetti",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "account_closure",
+    "amounts": [
+      12400.0
+    ],
+    "dates": [
+      "2027-01-01",
+      "2026-12-31"
+    ],
+    "requested_action": "close_account",
+    "deadline": "2026-12-31"
+  }
+}

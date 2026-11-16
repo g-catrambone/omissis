@@ -1,0 +1,107 @@
+{
+  "id": "fx-bank-02",
+  "domain": "bank",
+  "scenario": "card_dispute",
+  "profile_id": "fx02",
+  "has_special": false,
+  "text": "Oggetto: contestazione di addebiti non riconosciuti\n\nBuongiorno,\n\nmi chiamo Bruno Ferraguti e sono titolare di una carta di debito collegata al conto IT87L0000085047953541165689. Controllando l'estratto conto ho trovato due addebiti che non ho mai autorizzato: 89,90 euro il 3 novembre 2026 e 245,00 euro il 5 novembre 2026, entrambi da un negozio online che non conosco. In quei giorni ero a Cagliari per lavoro e la carta era con me.\n\nHo già bloccato la carta dall'app. Vi chiedo di stornare i due importi e di aprire la pratica di contestazione. Lavoro come tecnico manutentore per Sardelec Impianti e sono spesso in trasferta, quindi vi prego di scrivermi a b.ferraguti@example.net o di chiamarmi al +39 328 664 1027 dopo le 18.\n\nHo 52 anni e sono cliente della filiale di Oristano da oltre vent'anni: è la prima volta che mi succede una cosa del genere.\n\nGrazie per l'attenzione,\nBruno Ferraguti\n",
+  "spans": [
+    {
+      "start": 76,
+      "end": 91,
+      "text": "Bruno Ferraguti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 150,
+      "end": 177,
+      "text": "IT87L0000085047953541165689",
+      "type": "IBAN"
+    },
+    {
+      "start": 261,
+      "end": 271,
+      "text": "89,90 euro",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 275,
+      "end": 290,
+      "text": "3 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 293,
+      "end": 304,
+      "text": "245,00 euro",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 308,
+      "end": 323,
+      "text": "5 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 393,
+      "end": 401,
+      "text": "Cagliari",
+      "type": "CITTA"
+    },
+    {
+      "start": 561,
+      "end": 580,
+      "text": "tecnico manutentore",
+      "type": "RUOLO"
+    },
+    {
+      "start": 585,
+      "end": 602,
+      "text": "Sardelec Impianti",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 662,
+      "end": 685,
+      "text": "b.ferraguti@example.net",
+      "type": "EMAIL"
+    },
+    {
+      "start": 704,
+      "end": 720,
+      "text": "+39 328 664 1027",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 737,
+      "end": 744,
+      "text": "52 anni",
+      "type": "ETA"
+    },
+    {
+      "start": 777,
+      "end": 785,
+      "text": "Oristano",
+      "type": "CITTA"
+    },
+    {
+      "start": 885,
+      "end": 900,
+      "text": "Bruno Ferraguti",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "card_dispute",
+    "amounts": [
+      89.9,
+      245.0
+    ],
+    "dates": [
+      "2026-11-03",
+      "2026-11-05"
+    ],
+    "requested_action": "refund",
+    "deadline": null
+  }
+}

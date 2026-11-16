@@ -4,8 +4,14 @@ from __future__ import annotations
 
 from collections.abc import Sequence
 
-from omissis.config import RunConfig
-from omissis.contracts import MaskResult, PipelineResult, Span
+from omissis.backends import LLMRequest, complete
+from omissis.config import RunConfig, run_id
+from omissis.contracts import DisclosureItem, MaskResult, PipelineResult, Span, SpanClass
+from omissis.detect import detect
+from omissis.replace import replace
+from omissis.replace.placeholders import find_entry
+from omissis.resolve import resolve
+from omissis.restore import restore
 from omissis.vault import Vault
 
 # The only place this instruction is defined. It is the system message of every cloud call.
@@ -28,7 +34,23 @@ def mask(
     (REF-oracle). Quasi-identifier spans are masked only when `config.mask_quasi`
     is true; direct and special-category spans always.
     """
-    raise NotImplementedError("pipeline.mask is built by task B4 (gold spans in B5)")
+    if gold_spans is not None:
+        raise NotImplementedError("pipeline.mask with gold_spans is built by task B5")
+    spans = detect(text, config.detector, config)
+    to_mask = [s for s in spans if config.mask_quasi or s.cls is not SpanClass.QUASI]
+    entities = resolve(to_mask, text)
+    masked_text, vault = replace(text, entities, config.strategy, config.seed, vault)
+    disclosure = tuple(
+        DisclosureItem(
+            surrogate=find_entry(vault, e.type, e.canonical).surrogate,
+            type=e.type,
+            source=e.mentions[0].source,
+            reason=e.mentions[0].reason,
+        )
+        for e in entities
+    )
+    # `spans` holds every detected span, masked or not; `entities` only the masked ones.
+    return MaskResult(masked_text, tuple(spans), tuple(entities), disclosure), vault
 
 
 def protect_send_restore(text: str, task: str, config: RunConfig) -> PipelineResult:
@@ -38,4 +60,23 @@ def protect_send_restore(text: str, task: str, config: RunConfig) -> PipelineRes
     instruction in Italian. The vault is created for the call and erased before
     returning.
     """
-    raise NotImplementedError("pipeline.protect_send_restore is built by task B4")
+    vault = Vault()
+    try:
+        masked, vault = mask(text, config, vault=vault)
+        request = LLMRequest(
+            role="cloud",
+            prompt=f"{task}\n\n{masked.masked_text}",
+            system=KEEP_PLACEHOLDERS_INSTRUCTION,
+        )
+        response = complete(request, config)
+        restored, events = restore(response.text, vault, config.fuzzy_threshold)
+    finally:
+        vault.clear()
+    return PipelineResult(
+        run_id=run_id(config),
+        masked_text=masked.masked_text,
+        raw_reply=response.text,
+        restored_reply=restored,
+        disclosure=masked.disclosure,
+        restore_events=tuple(events),
+    )

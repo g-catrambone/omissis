@@ -1,0 +1,92 @@
+{
+  "id": "fx-hr-01",
+  "domain": "hr",
+  "scenario": "sick_leave",
+  "profile_id": "fx04",
+  "has_special": true,
+  "text": "Oggetto: comunicazione di assenza per malattia\n\nGentile Ufficio Risorse Umane,\n\nsono Davide Sorrentino, magazziniere del turno di notte nello stabilimento di Nola, matricola NL-20417. Vi informo che da lunedì 16 novembre 2026 sarò assente per malattia: il medico di base mi ha diagnosticato un'ernia del disco lombare e mi ha prescritto riposo fino al 5 dicembre 2026. Il certificato telematico è già stato trasmesso all'INPS.\n\nDurante la convalescenza seguirò un ciclo di fisioterapia presso il poliambulatorio di Pomigliano, tre mattine a settimana. Vi chiedo di registrare l'assenza e di avvisare il capoturno, così da riorganizzare i turni del reparto spedizioni.\n\nPer eventuali visite fiscali sono reperibile al mio domicilio negli orari previsti; per comunicazioni potete chiamarmi al 081 512 3348 o scrivermi a davide.sorrentino@example.org.\n\nGrazie e cordiali saluti,\nDavide Sorrentino\n",
+  "spans": [
+    {
+      "start": 85,
+      "end": 102,
+      "text": "Davide Sorrentino",
+      "type": "PERSONA"
+    },
+    {
+      "start": 104,
+      "end": 116,
+      "text": "magazziniere",
+      "type": "RUOLO"
+    },
+    {
+      "start": 158,
+      "end": 162,
+      "text": "Nola",
+      "type": "CITTA"
+    },
+    {
+      "start": 174,
+      "end": 182,
+      "text": "NL-20417",
+      "type": "UTENTE"
+    },
+    {
+      "start": 209,
+      "end": 225,
+      "text": "16 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 294,
+      "end": 317,
+      "text": "ernia del disco lombare",
+      "type": "SALUTE"
+    },
+    {
+      "start": 352,
+      "end": 367,
+      "text": "5 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 473,
+      "end": 485,
+      "text": "fisioterapia",
+      "type": "SALUTE"
+    },
+    {
+      "start": 496,
+      "end": 525,
+      "text": "poliambulatorio di Pomigliano",
+      "type": "STRUTTURA"
+    },
+    {
+      "start": 791,
+      "end": 803,
+      "text": "081 512 3348",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 818,
+      "end": 847,
+      "text": "davide.sorrentino@example.org",
+      "type": "EMAIL"
+    },
+    {
+      "start": 876,
+      "end": 893,
+      "text": "Davide Sorrentino",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "sick_leave",
+    "amounts": [],
+    "dates": [
+      "2026-11-16",
+      "2026-12-05"
+    ],
+    "requested_action": "register_absence",
+    "deadline": null
+  }
+}

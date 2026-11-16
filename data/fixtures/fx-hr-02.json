@@ -1,0 +1,104 @@
+{
+  "id": "fx-hr-02",
+  "domain": "hr",
+  "scenario": "transfer_request",
+  "profile_id": "fx05",
+  "has_special": false,
+  "text": "Oggetto: richiesta di trasferimento alla sede di Bologna\n\nGentile dott.ssa Paola Ricciardelli,\n\nsono Alessio Mondini, analista contabile dell'ufficio amministrazione di Meridiana Servizi S.p.A. nella sede di Rimini, dove lavoro da cinque anni. Le scrivo per chiedere il trasferimento alla sede di Bologna a partire dal 1 marzo 2027.\n\nMia moglie ha ottenuto un incarico a tempo indeterminato presso l'Ospedale Maggiore di Bologna e vorremmo trasferirci insieme a nostro figlio. Sono disponibile a mantenere le stesse mansioni e lo stesso orario; in alternativa accetterei anche un ruolo da addetto alla contabilità fornitori.\n\nLe sarei grato di una risposta entro il 15 dicembre 2026, così da organizzare per tempo il trasloco. Resto a disposizione per un colloquio al 333 908 1176 o all'indirizzo alessio.mondini@example.org.\n\nCordiali saluti,\nAlessio Mondini\n",
+  "spans": [
+    {
+      "start": 75,
+      "end": 93,
+      "text": "Paola Ricciardelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 101,
+      "end": 116,
+      "text": "Alessio Mondini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 118,
+      "end": 136,
+      "text": "analista contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 169,
+      "end": 193,
+      "text": "Meridiana Servizi S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 208,
+      "end": 214,
+      "text": "Rimini",
+      "type": "CITTA"
+    },
+    {
+      "start": 297,
+      "end": 304,
+      "text": "Bologna",
+      "type": "CITTA"
+    },
+    {
+      "start": 319,
+      "end": 331,
+      "text": "1 marzo 2027",
+      "type": "DATA"
+    },
+    {
+      "start": 400,
+      "end": 417,
+      "text": "Ospedale Maggiore",
+      "type": "STRUTTURA"
+    },
+    {
+      "start": 421,
+      "end": 428,
+      "text": "Bologna",
+      "type": "CITTA"
+    },
+    {
+      "start": 589,
+      "end": 623,
+      "text": "addetto alla contabilità fornitori",
+      "type": "RUOLO"
+    },
+    {
+      "start": 666,
+      "end": 682,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 768,
+      "end": 780,
+      "text": "333 908 1176",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 797,
+      "end": 824,
+      "text": "alessio.mondini@example.org",
+      "type": "EMAIL"
+    },
+    {
+      "start": 844,
+      "end": 859,
+      "text": "Alessio Mondini",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "transfer_request",
+    "amounts": [],
+    "dates": [
+      "2027-03-01",
+      "2026-12-15"
+    ],
+    "requested_action": "approve_request",
+    "deadline": "2026-12-15"
+  }
+}

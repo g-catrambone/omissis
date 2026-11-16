@@ -1,0 +1,106 @@
+{
+  "id": "fx-bank-01",
+  "domain": "bank",
+  "scenario": "iban_change",
+  "profile_id": "fx01",
+  "has_special": false,
+  "text": "Oggetto: variazione IBAN per l'addebito della rata\n\nGentile Banca Corvalli,\n\nsono Lidia Caprioli, cliente della vostra filiale di Bergamo. Dal 1 dicembre 2026 lo stipendio che ricevo come impiegata amministrativa presso Ortelli Logistica S.r.l. sarà accreditato su un nuovo conto. Vi chiedo quindi di aggiornare l'addebito della rata del prestito personale, pari a € 320,00 al mese, sostituendo il vecchio IBAN IT89Y0000025613651127989360 con il nuovo IT77V0000094829785481207069.\n\nPer l'identificazione vi indico il mio codice fiscale, CPRLDI84S52X537Z. Se servisse una firma in originale posso passare in filiale entro il 20 novembre 2026, così da non saltare la rata di dicembre.\n\nPer qualsiasi chiarimento potete contattarmi al 347 215 8890 oppure all'indirizzo lidia.caprioli@example.com.\n\nCordiali saluti,\nLidia Caprioli\n",
+  "spans": [
+    {
+      "start": 60,
+      "end": 74,
+      "text": "Banca Corvalli",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 82,
+      "end": 96,
+      "text": "Lidia Caprioli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 130,
+      "end": 137,
+      "text": "Bergamo",
+      "type": "CITTA"
+    },
+    {
+      "start": 143,
+      "end": 158,
+      "text": "1 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 188,
+      "end": 212,
+      "text": "impiegata amministrativa",
+      "type": "RUOLO"
+    },
+    {
+      "start": 220,
+      "end": 244,
+      "text": "Ortelli Logistica S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 365,
+      "end": 373,
+      "text": "€ 320,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 411,
+      "end": 438,
+      "text": "IT89Y0000025613651127989360",
+      "type": "IBAN"
+    },
+    {
+      "start": 452,
+      "end": 479,
+      "text": "IT77V0000094829785481207069",
+      "type": "IBAN"
+    },
+    {
+      "start": 537,
+      "end": 553,
+      "text": "CPRLDI84S52X537Z",
+      "type": "CF"
+    },
+    {
+      "start": 624,
+      "end": 640,
+      "text": "20 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 732,
+      "end": 744,
+      "text": "347 215 8890",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 766,
+      "end": 792,
+      "text": "lidia.caprioli@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 812,
+      "end": 826,
+      "text": "Lidia Caprioli",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "iban_change",
+    "amounts": [
+      320.0
+    ],
+    "dates": [
+      "2026-12-01",
+      "2026-11-20"
+    ],
+    "requested_action": "update_details",
+    "deadline": "2026-12-01"
+  }
+}

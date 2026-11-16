@@ -1,0 +1,72 @@
+[
+  {
+    "id": "fx01",
+    "cohort": "fx",
+    "name": "Lidia Caprioli",
+    "gender": "F",
+    "age": 42,
+    "city": "Bergamo",
+    "employer": "Ortelli Logistica S.r.l.",
+    "role": "impiegata amministrativa",
+    "bank": "Banca Corvalli",
+    "branch_city": "Bergamo",
+    "financial": {"products": ["conto corrente", "prestito personale"], "monthly_installment": 320.0},
+    "special": null
+  },
+  {
+    "id": "fx02",
+    "cohort": "fx",
+    "name": "Bruno Ferraguti",
+    "gender": "M",
+    "age": 52,
+    "city": "Oristano",
+    "employer": "Sardelec Impianti",
+    "role": "tecnico manutentore",
+    "bank": "Banca Corvalli",
+    "branch_city": "Oristano",
+    "financial": {"products": ["conto corrente", "carta di debito"]},
+    "special": null
+  },
+  {
+    "id": "fx03",
+    "cohort": "fx",
+    "name": "Marta Zanchetti",
+    "gender": "F",
+    "age": 65,
+    "city": "Treviso",
+    "employer": "Istituto comprensivo di Treviso",
+    "role": "insegnante di scuola primaria",
+    "bank": "Credito Valdorsa",
+    "branch_city": "Treviso",
+    "financial": {"products": ["conto corrente"], "balance": 12400.0},
+    "special": null
+  },
+  {
+    "id": "fx04",
+    "cohort": "fx",
+    "name": "Davide Sorrentino",
+    "gender": "M",
+    "age": 38,
+    "city": "Nola",
+    "employer": "Ortelli Logistica S.r.l.",
+    "role": "magazziniere",
+    "bank": "Credito Valdorsa",
+    "branch_city": "Nola",
+    "financial": {"products": ["conto corrente"]},
+    "special": {"category": "SALUTE", "fact": "ernia del disco lombare"}
+  },
+  {
+    "id": "fx05",
+    "cohort": "fx",
+    "name": "Alessio Mondini",
+    "gender": "M",
+    "age": 34,
+    "city": "Rimini",
+    "employer": "Meridiana Servizi S.p.A.",
+    "role": "analista contabile",
+    "bank": "Banca Corvalli",
+    "branch_city": "Rimini",
+    "financial": {"products": ["conto corrente", "mutuo"]},
+    "special": null
+  }
+]
