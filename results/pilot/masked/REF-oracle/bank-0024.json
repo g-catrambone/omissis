@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0024",
+  "config_name": "REF-oracle",
+  "run_id": "ea61d1c68a82",
+  "masked_text": "Oggetto: Richiesta informazioni estinzione anticipata finanziamento - [PERSONA_1_M]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono un cliente della vostra filiale di [CITTA_1]. Vi scrivo per richiedere informazioni dettagliate relative all'estinzione anticipata del finanziamento in corso. Attualmente lavoro come [RUOLO_1] presso la [AZIENDA_2], dove sono impiegato da diversi anni con la matricola aziendale [UTENTE_1].\n\nHo bisogno di sapere quali sono le condizioni economiche per chiudere il contratto prima della scadenza prevista, che è fissata per il [DATA_1]. In particolare, desidero ricevere il prospetto riepilogativo che indichi l'importo residuo del capitale, pari a circa [IMPORTO_1], e le eventuali penali o interessi di mora applicabili in caso di chiusura immediata.\n\nPer facilitare la ricerca della mia pratica, vi fornisco i miei dati identificativi: il mio codice fiscale è [CF_1] e l'IBAN del conto corrente collegato è [IBAN_1]. Posso essere contattato al numero [TELEFONO_1] o tramite l'indirizzo email [EMAIL_1].\n\nVi chiedo cortesemente di inviarmi la documentazione richiesta entro il [DATA_2], in modo da poter valutare la fattibilità dell'operazione e organizzare i pagamenti necessari. Resto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

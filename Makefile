@@ -15,16 +15,16 @@ format:
 	uv run --locked ruff format .
 
 demo:
-	@echo "make demo is not built yet: task A8 (workstream A) builds it." >&2; exit 1
+	uv run --locked python -m omissis.app
 
 split:
-	@echo "make split is not built yet: task C6 (workstream C) builds it. HUMANS ONLY." >&2; exit 1
+	uv run --locked python -m omissis.eval.split
 
 eval-dev:
-	@echo "make eval-dev is not built yet: task C10 (workstream C) builds it." >&2; exit 1
+	@echo "make eval-dev is not built yet: task 3.10 builds it." >&2; exit 1
 
 eval-test:
-	@echo "make eval-test is not built yet: task C10 (workstream C) builds it. HUMANS ONLY." >&2; exit 1
+	@echo "make eval-test is not built yet: task 3.10 builds it. HUMANS ONLY." >&2; exit 1
 
 reproduce:
-	@echo "make reproduce is not built yet: task B9 (workstream B) builds it." >&2; exit 1
+	@echo "make reproduce is not built yet: task 5.2 builds it." >&2; exit 1

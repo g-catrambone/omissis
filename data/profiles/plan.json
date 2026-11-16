@@ -1,0 +1,464 @@
+{
+  "bank-0001": {
+    "profile_id": "p27",
+    "scenario": "mortgage_suspension",
+    "has_special": true,
+    "requested_action": "suspend_payment",
+    "pilot": true
+  },
+  "bank-0002": {
+    "profile_id": "p11",
+    "scenario": "mortgage_suspension",
+    "has_special": true,
+    "requested_action": "reschedule_payment",
+    "pilot": true
+  },
+  "bank-0003": {
+    "profile_id": "p19",
+    "scenario": "mortgage_suspension",
+    "has_special": true,
+    "requested_action": "reschedule_payment",
+    "pilot": false
+  },
+  "bank-0004": {
+    "profile_id": "p01",
+    "scenario": "mortgage_suspension",
+    "has_special": false,
+    "requested_action": "reschedule_payment",
+    "pilot": false
+  },
+  "bank-0005": {
+    "profile_id": "p10",
+    "scenario": "mortgage_suspension",
+    "has_special": false,
+    "requested_action": "suspend_payment",
+    "pilot": false
+  },
+  "bank-0006": {
+    "profile_id": "p23",
+    "scenario": "mortgage_suspension",
+    "has_special": true,
+    "requested_action": "reschedule_payment",
+    "pilot": false
+  },
+  "bank-0007": {
+    "profile_id": "p16",
+    "scenario": "card_dispute",
+    "has_special": false,
+    "requested_action": "open_investigation",
+    "pilot": false
+  },
+  "bank-0008": {
+    "profile_id": "p08",
+    "scenario": "card_dispute",
+    "has_special": false,
+    "requested_action": "open_investigation",
+    "pilot": false
+  },
+  "bank-0009": {
+    "profile_id": "p09",
+    "scenario": "card_dispute",
+    "has_special": false,
+    "requested_action": "refund",
+    "pilot": false
+  },
+  "bank-0010": {
+    "profile_id": "p20",
+    "scenario": "card_dispute",
+    "has_special": false,
+    "requested_action": "refund",
+    "pilot": false
+  },
+  "bank-0011": {
+    "profile_id": "p24",
+    "scenario": "card_dispute",
+    "has_special": false,
+    "requested_action": "refund",
+    "pilot": false
+  },
+  "bank-0012": {
+    "profile_id": "p28",
+    "scenario": "card_dispute",
+    "has_special": false,
+    "requested_action": "open_investigation",
+    "pilot": false
+  },
+  "bank-0013": {
+    "profile_id": "p28",
+    "scenario": "iban_change",
+    "has_special": false,
+    "requested_action": "update_details",
+    "pilot": true
+  },
+  "bank-0014": {
+    "profile_id": "p26",
+    "scenario": "iban_change",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": true
+  },
+  "bank-0015": {
+    "profile_id": "p13",
+    "scenario": "iban_change",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": true
+  },
+  "bank-0016": {
+    "profile_id": "p01",
+    "scenario": "iban_change",
+    "has_special": false,
+    "requested_action": "update_details",
+    "pilot": false
+  },
+  "bank-0017": {
+    "profile_id": "p05",
+    "scenario": "iban_change",
+    "has_special": false,
+    "requested_action": "update_details",
+    "pilot": false
+  },
+  "bank-0018": {
+    "profile_id": "p06",
+    "scenario": "iban_change",
+    "has_special": false,
+    "requested_action": "update_details",
+    "pilot": false
+  },
+  "bank-0019": {
+    "profile_id": "p22",
+    "scenario": "loan_early_repayment",
+    "has_special": false,
+    "requested_action": "close_account",
+    "pilot": false
+  },
+  "bank-0020": {
+    "profile_id": "p18",
+    "scenario": "loan_early_repayment",
+    "has_special": false,
+    "requested_action": "close_account",
+    "pilot": false
+  },
+  "bank-0021": {
+    "profile_id": "p04",
+    "scenario": "loan_early_repayment",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "bank-0022": {
+    "profile_id": "p20",
+    "scenario": "loan_early_repayment",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "bank-0023": {
+    "profile_id": "p12",
+    "scenario": "loan_early_repayment",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "bank-0024": {
+    "profile_id": "p14",
+    "scenario": "loan_early_repayment",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": true
+  },
+  "bank-0025": {
+    "profile_id": "p26",
+    "scenario": "account_closure",
+    "has_special": false,
+    "requested_action": "close_account",
+    "pilot": false
+  },
+  "bank-0026": {
+    "profile_id": "p16",
+    "scenario": "account_closure",
+    "has_special": false,
+    "requested_action": "close_account",
+    "pilot": false
+  },
+  "bank-0027": {
+    "profile_id": "p22",
+    "scenario": "account_closure",
+    "has_special": false,
+    "requested_action": "release_funds",
+    "pilot": false
+  },
+  "bank-0028": {
+    "profile_id": "p18",
+    "scenario": "account_closure",
+    "has_special": false,
+    "requested_action": "release_funds",
+    "pilot": false
+  },
+  "bank-0029": {
+    "profile_id": "p10",
+    "scenario": "account_closure",
+    "has_special": false,
+    "requested_action": "close_account",
+    "pilot": false
+  },
+  "bank-0030": {
+    "profile_id": "p17",
+    "scenario": "account_closure",
+    "has_special": false,
+    "requested_action": "release_funds",
+    "pilot": false
+  },
+  "bank-0031": {
+    "profile_id": "p24",
+    "scenario": "fee_complaint",
+    "has_special": false,
+    "requested_action": "schedule_meeting",
+    "pilot": false
+  },
+  "bank-0032": {
+    "profile_id": "p13",
+    "scenario": "fee_complaint",
+    "has_special": false,
+    "requested_action": "schedule_meeting",
+    "pilot": false
+  },
+  "bank-0033": {
+    "profile_id": "p03",
+    "scenario": "fee_complaint",
+    "has_special": false,
+    "requested_action": "schedule_meeting",
+    "pilot": false
+  },
+  "bank-0034": {
+    "profile_id": "p30",
+    "scenario": "fee_complaint",
+    "has_special": false,
+    "requested_action": "refund",
+    "pilot": true
+  },
+  "bank-0035": {
+    "profile_id": "p22",
+    "scenario": "fee_complaint",
+    "has_special": false,
+    "requested_action": "refund",
+    "pilot": false
+  },
+  "bank-0036": {
+    "profile_id": "p01",
+    "scenario": "inheritance_unblock",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "bank-0037": {
+    "profile_id": "p05",
+    "scenario": "inheritance_unblock",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "bank-0038": {
+    "profile_id": "p17",
+    "scenario": "inheritance_unblock",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "bank-0039": {
+    "profile_id": "p10",
+    "scenario": "inheritance_unblock",
+    "has_special": false,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "bank-0040": {
+    "profile_id": "p04",
+    "scenario": "inheritance_unblock",
+    "has_special": false,
+    "requested_action": "release_funds",
+    "pilot": false
+  },
+  "hr-0001": {
+    "profile_id": "p07",
+    "scenario": "sick_leave",
+    "has_special": true,
+    "requested_action": "register_absence",
+    "pilot": false
+  },
+  "hr-0002": {
+    "profile_id": "p29",
+    "scenario": "sick_leave",
+    "has_special": true,
+    "requested_action": "register_absence",
+    "pilot": true
+  },
+  "hr-0003": {
+    "profile_id": "p23",
+    "scenario": "sick_leave",
+    "has_special": true,
+    "requested_action": "register_absence",
+    "pilot": false
+  },
+  "hr-0004": {
+    "profile_id": "p27",
+    "scenario": "sick_leave",
+    "has_special": true,
+    "requested_action": "register_absence",
+    "pilot": false
+  },
+  "hr-0005": {
+    "profile_id": "p21",
+    "scenario": "sick_leave",
+    "has_special": true,
+    "requested_action": "approve_request",
+    "pilot": false
+  },
+  "hr-0006": {
+    "profile_id": "p12",
+    "scenario": "remote_work_request",
+    "has_special": false,
+    "requested_action": "approve_request",
+    "pilot": false
+  },
+  "hr-0007": {
+    "profile_id": "p07",
+    "scenario": "remote_work_request",
+    "has_special": true,
+    "requested_action": "schedule_meeting",
+    "pilot": false
+  },
+  "hr-0008": {
+    "profile_id": "p11",
+    "scenario": "remote_work_request",
+    "has_special": true,
+    "requested_action": "approve_request",
+    "pilot": false
+  },
+  "hr-0009": {
+    "profile_id": "p25",
+    "scenario": "remote_work_request",
+    "has_special": true,
+    "requested_action": "approve_request",
+    "pilot": false
+  },
+  "hr-0010": {
+    "profile_id": "p06",
+    "scenario": "remote_work_request",
+    "has_special": false,
+    "requested_action": "schedule_meeting",
+    "pilot": false
+  },
+  "hr-0011": {
+    "profile_id": "p04",
+    "scenario": "harassment_complaint",
+    "has_special": false,
+    "requested_action": "schedule_meeting",
+    "pilot": false
+  },
+  "hr-0012": {
+    "profile_id": "p30",
+    "scenario": "harassment_complaint",
+    "has_special": false,
+    "requested_action": "schedule_meeting",
+    "pilot": false
+  },
+  "hr-0013": {
+    "profile_id": "p09",
+    "scenario": "harassment_complaint",
+    "has_special": false,
+    "requested_action": "open_investigation",
+    "pilot": false
+  },
+  "hr-0014": {
+    "profile_id": "p14",
+    "scenario": "harassment_complaint",
+    "has_special": false,
+    "requested_action": "schedule_meeting",
+    "pilot": false
+  },
+  "hr-0015": {
+    "profile_id": "p29",
+    "scenario": "medical_reimbursement",
+    "has_special": true,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "hr-0016": {
+    "profile_id": "p25",
+    "scenario": "medical_reimbursement",
+    "has_special": true,
+    "requested_action": "refund",
+    "pilot": false
+  },
+  "hr-0017": {
+    "profile_id": "p19",
+    "scenario": "medical_reimbursement",
+    "has_special": true,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "hr-0018": {
+    "profile_id": "p21",
+    "scenario": "medical_reimbursement",
+    "has_special": true,
+    "requested_action": "send_information",
+    "pilot": false
+  },
+  "hr-0019": {
+    "profile_id": "p09",
+    "scenario": "transfer_request",
+    "has_special": false,
+    "requested_action": "approve_request",
+    "pilot": false
+  },
+  "hr-0020": {
+    "profile_id": "p12",
+    "scenario": "transfer_request",
+    "has_special": false,
+    "requested_action": "approve_request",
+    "pilot": true
+  },
+  "hr-0021": {
+    "profile_id": "p03",
+    "scenario": "transfer_request",
+    "has_special": false,
+    "requested_action": "approve_request",
+    "pilot": false
+  },
+  "hr-0022": {
+    "profile_id": "p08",
+    "scenario": "transfer_request",
+    "has_special": false,
+    "requested_action": "approve_request",
+    "pilot": false
+  },
+  "hr-0023": {
+    "profile_id": "p15",
+    "scenario": "union_leave",
+    "has_special": true,
+    "requested_action": "register_absence",
+    "pilot": false
+  },
+  "hr-0024": {
+    "profile_id": "p02",
+    "scenario": "union_leave",
+    "has_special": true,
+    "requested_action": "register_absence",
+    "pilot": false
+  },
+  "hr-0025": {
+    "profile_id": "p02",
+    "scenario": "union_leave",
+    "has_special": true,
+    "requested_action": "approve_request",
+    "pilot": false
+  },
+  "hr-0026": {
+    "profile_id": "p15",
+    "scenario": "union_leave",
+    "has_special": true,
+    "requested_action": "approve_request",
+    "pilot": true
+  }
+}

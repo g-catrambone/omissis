@@ -1,4 +1,4 @@
-"""Loaders for texts with gold and for profiles (task C1; formats in docs/interfaces.md, section 5).
+"""Loaders for texts with gold and for profiles (block 1; formats in docs/interfaces.md, section 5).
 
 Every check here is a rule of the file format or of docs/evaluation_protocol.md,
 sections 2 and 3. A file that breaks one raises `DataError` naming the file.
@@ -143,8 +143,16 @@ def load_text(path: str | Path) -> TextRecord:
 
 
 def load_texts(folder: str | Path) -> list[TextRecord]:
-    """Load every `*.json` text in `folder` except `profiles.json`, sorted by id."""
+    """Load every `*.json` text in `folder` except `profiles.json`, sorted by id.
+
+    A folder that is missing or holds no text raises `DataError`: an evaluation on
+    nothing would report numbers.
+    """
+    if not Path(folder).is_dir():
+        raise DataError(f"{folder}: not a folder")
     paths = sorted(p for p in Path(folder).glob("*.json") if p.name != "profiles.json")
+    if not paths:
+        raise DataError(f"{folder}: no text files")
     return [load_text(p) for p in paths]
 
 

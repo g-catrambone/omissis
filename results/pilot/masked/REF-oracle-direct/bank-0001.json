@@ -1,0 +1,57 @@
+{
+  "text_id": "bank-0001",
+  "config_name": "REF-oracle-direct",
+  "run_id": "84e17a5e7ba0",
+  "masked_text": "Oggetto: Richiesta sospensione rate prestito personale - [PERSONA_1_M]\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per richiedere la sospensione temporanea dei pagamenti del mio prestito personale, contratto presso la filiale di Pistoia.\n\nAttualmente lavoro come elettricista presso la Cooperativa Edile Pietrafitta, ma a causa di un aggravamento della mia [SALUTE_1] sono costretto a fermarmi per un periodo di cura. Questa situazione mi impedisce di sostenere l'onere economico della rata mensile di € 450,00 prevista per il 15 dicembre 2026.\n\nVi chiedo pertanto di sospendere le rate fino al 30 marzo 2027, senza ulteriori aggravio di interessi se possibile, o in alternativa di rimodulare il piano di ammortamento per alleggerire la rata attuale. Il mio codice fiscale è [CF_1] e la matricola aziendale è [UTENTE_1].\n\nResto a disposizione per fornire eventuali certificati medici o documentazione aggiuntiva. Potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""R1 placeholders (task B1)."""
+"""R1 placeholders (block 1)."""
 
 import pytest
 
@@ -136,8 +136,3 @@ def test_overlapping_mentions_are_rejected():
     b = entity("PERSONA_2", SpanType.PERSONA, [mention(text, "Caprioli", "PERSONA")])
     with pytest.raises(ValueError):
         replace(text, [a, b], Strategy.R1, seed=1)
-
-
-def test_r2_is_not_built_yet():
-    with pytest.raises(NotImplementedError, match="B7"):
-        replace("x", [], Strategy.R2, seed=1)

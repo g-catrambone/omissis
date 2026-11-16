@@ -55,10 +55,10 @@
       "type": "SALUTE"
     },
     {
-      "start": 496,
+      "start": 515,
       "end": 525,
-      "text": "poliambulatorio di Pomigliano",
-      "type": "STRUTTURA"
+      "text": "Pomigliano",
+      "type": "CITTA"
     },
     {
       "start": 791,

@@ -1,4 +1,4 @@
-"""Interim resolver, pipeline and CLI (task B4). No test needs the network."""
+"""Pipeline and CLI (block 1); the resolver has its own tests. No test needs the network."""
 
 import json
 from pathlib import Path
@@ -39,10 +39,10 @@ def sent(monkeypatch, tmp_path):
     return prompts, path
 
 
-# --- interim resolver --------------------------------------------------------------
+# --- resolver, order and ids --------------------------------------------------------------
 
 
-def test_interim_resolver_one_entity_per_distinct_text():
+def test_resolver_one_entity_per_distinct_text():
     text = "Ada, Bea, Ada, Roma"
     spans = [
         Span(0, 3, "Ada", SpanType.PERSONA, 1.0, GOLD_SOURCE),
@@ -121,11 +121,6 @@ def test_vault_is_erased_before_returning(config, monkeypatch):
     monkeypatch.setattr(pipeline, "Vault", SpyVault)
     pipeline.protect_send_restore(FIXTURES[0].text, TASK, config)
     assert len(created) == 1 and len(created[0]) == 0
-
-
-def test_gold_spans_are_not_built_yet(config):
-    with pytest.raises(NotImplementedError, match="B5"):
-        pipeline.mask("x", config, gold_spans=[])
 
 
 # --- CLI ---------------------------------------------------------------------------

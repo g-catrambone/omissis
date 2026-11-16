@@ -1,26 +1,27 @@
 # One entry per role. TO_BE_PINNED marks an undecided value; `complete` refuses
-# a role that is not pinned. Pinning is a human decision (CLAUDE.md, M0).
+# a role that is not pinned. Pinning is a human decision (docs/decisions.md).
+# GroqCloud publishes no revision of a hosted model: `revision` is the day of the pin.
 cloud:
-  provider: TO_BE_PINNED
-  id: TO_BE_PINNED
-  revision: TO_BE_PINNED
+  provider: groq
+  id: openai/gpt-oss-120b
+  revision: "2026-11-16"
 attacker:
-  provider: TO_BE_PINNED
-  id: TO_BE_PINNED
-  revision: TO_BE_PINNED
+  provider: groq
+  id: openai/gpt-oss-120b
+  revision: "2026-11-16"
 judge:
-  provider: TO_BE_PINNED
-  id: TO_BE_PINNED
-  revision: TO_BE_PINNED
+  provider: groq
+  id: openai/gpt-oss-120b
+  revision: "2026-11-16"
 generator:
-  provider: TO_BE_PINNED
-  id: TO_BE_PINNED
-  revision: TO_BE_PINNED
+  provider: groq
+  id: qwen/qwen3.8-27b
+  revision: "2026-11-16"
 d3:
-  provider: TO_BE_PINNED
-  id: TO_BE_PINNED
-  revision: TO_BE_PINNED
+  provider: groq
+  id: openai/gpt-oss-20b
+  revision: "2026-11-16"
 d2:
-  provider: TO_BE_PINNED
-  id: TO_BE_PINNED
-  revision: TO_BE_PINNED
+  provider: huggingface
+  id: iiiorg/piiranha-v1-detect-personal-information
+  revision: 255acde67a2f34cf452eb42e365b24d2957352fc

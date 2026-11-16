@@ -1,4 +1,4 @@
-"""Data contracts shared by every workstream (docs/interfaces.md, sections 1 and 2).
+"""Data contracts shared by every block (docs/interfaces.md, sections 1 and 2).
 
 Plain data and validation only. All dataclasses are frozen; all enums are StrEnum.
 """

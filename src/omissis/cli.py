@@ -1,7 +1,9 @@
-"""Command line: `omissis run` for one text, `omissis batch` for a folder of texts.
+"""Command line: `omissis run` for one text, `omissis batch` for a folder of texts,
+`omissis mask` to write the masked texts of the named configurations.
 
-Results go to standard output only. They include the restored reply, which holds
-the original values, so never redirect them under `results/`.
+`run` and `batch` print to standard output only: the result includes the restored
+reply, which holds the original values, so never redirect it under `results/`.
+`mask` is for synthetic texts only (the evaluation texts and the fixtures).
 """
 
 from __future__ import annotations
@@ -13,19 +15,34 @@ from dataclasses import asdict
 from pathlib import Path
 
 from omissis.backends import CacheMissError
-from omissis.config import ConfigError, load_config
-from omissis.contracts import PipelineResult
-from omissis.eval.datasets import DataError, load_text, load_texts
-from omissis.pipeline import protect_send_restore
+from omissis.config import (
+    GOLD_DETECTOR,
+    ConfigError,
+    RunConfig,
+    load_config,
+    load_eval_configs,
+    run_id,
+)
+from omissis.contracts import PipelineResult, Span
+from omissis.eval.datasets import DataError, TextRecord, load_text, load_texts
+from omissis.pipeline import mask, protect_send_restore
 
 DEFAULT_TASK = "Scrivi una bozza di risposta a questa email."
 
 
-def _read_input(path: Path) -> str:
-    """The `text` of a JSON text file, or the whole content of any other file."""
+def _gold(record: TextRecord, config: RunConfig) -> tuple[Span, ...] | None:
+    """The gold spans of `record` when the configuration masks the annotation."""
+    return record.spans if config.detector == GOLD_DETECTOR else None
+
+
+def _read_input(path: Path, config: RunConfig) -> tuple[str, tuple[Span, ...] | None]:
+    """The text of a JSON text record (with its gold spans for GOLD), or of any other file."""
     if path.suffix == ".json":
-        return load_text(path).text
-    return path.read_text(encoding="utf-8")
+        record = load_text(path)
+        return record.text, _gold(record, config)
+    if config.detector == GOLD_DETECTOR:
+        raise ConfigError(f"detector GOLD needs a text record (.json) with spans, got {path}")
+    return path.read_text(encoding="utf-8"), None
 
 
 def _as_dict(result: PipelineResult) -> dict:
@@ -53,6 +70,43 @@ def _print_result(result: PipelineResult) -> None:
     print(f"\nfully restored: {result.fully_restored}")
 
 
+def _mask_batch(args: argparse.Namespace, overrides: dict | None) -> None:
+    configs = load_eval_configs(args.eval_config, overrides)
+    names = args.names.split(",") if args.names else list(configs)
+    unknown = [name for name in names if name not in configs]
+    if unknown:
+        raise ConfigError(f"{args.eval_config}: no configuration named {unknown}")
+    write_masked(load_texts(args.input_dir), {name: configs[name] for name in names}, args.output)
+
+
+def write_masked(records: list[TextRecord], configs: dict[str, RunConfig], output: Path) -> None:
+    """Write `<output>/<config_name>/<text_id>.json` for every record and configuration."""
+    for name, config in configs.items():
+        folder = output / name
+        folder.mkdir(parents=True, exist_ok=True)
+        for record in records:
+            result, _ = mask(record.text, config, _gold(record, config))  # a fresh vault
+            data = {
+                "text_id": record.id,
+                "config_name": name,
+                "run_id": run_id(config),
+                "masked_text": result.masked_text,
+                "disclosure": [
+                    {
+                        "surrogate": item.surrogate,
+                        "type": item.type.value,
+                        "class": item.cls.value,
+                        "source": item.source,
+                        "reason": item.reason,
+                    }
+                    for item in result.disclosure
+                ],
+            }
+            path = folder / f"{record.id}.json"
+            path.write_text(json.dumps(data, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+        print(f"{name}: {len(records)} texts written to {folder}")
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="omissis", description=__doc__.splitlines()[0])
     commands = parser.add_subparsers(dest="command", required=True)
@@ -60,28 +114,45 @@ def main(argv: list[str] | None = None) -> int:
         sub = commands.add_parser(name, help=help_text)
         sub.add_argument("--config", required=True, type=Path, help="run configuration (YAML)")
         sub.add_argument("--task", default=DEFAULT_TASK, help="instruction sent before the text")
-        sub.add_argument(
-            "--backend", choices=["cloud", "replay"], help="override the config's backend"
-        )
         if name == "run":
             sub.add_argument("--input", required=True, type=Path, help="a .json text or a file")
         else:
             sub.add_argument("--input-dir", required=True, type=Path, help="folder of .json texts")
+    sub = commands.add_parser("mask", help="write the masked texts of the named configurations")
+    sub.add_argument("--eval-config", required=True, type=Path, help="named configurations")
+    sub.add_argument("--names", help="comma-separated configuration names (default: all)")
+    sub.add_argument("--input-dir", required=True, type=Path, help="folder of .json texts")
+    sub.add_argument("--output", required=True, type=Path, help="results/<split>/masked")
+    for sub in commands.choices.values():
+        sub.add_argument(
+            "--backend", choices=["cloud", "replay"], help="override the config's backend"
+        )
     args = parser.parse_args(argv)
 
     if hasattr(sys.stdout, "reconfigure"):
         sys.stdout.reconfigure(encoding="utf-8")
     try:
         overrides = {"backend": args.backend} if args.backend else None
+        if args.command == "mask":
+            _mask_batch(args, overrides)
+            return 0
         config = load_config(args.config, overrides)
         if args.command == "run":
-            _print_result(protect_send_restore(_read_input(args.input), args.task, config))
+            text, gold = _read_input(args.input, config)
+            _print_result(protect_send_restore(text, args.task, config, gold))
         else:
             for record in load_texts(args.input_dir):
-                result = protect_send_restore(record.text, args.task, config)
+                result = protect_send_restore(record.text, args.task, config, _gold(record, config))
                 line = {"text_id": record.id, **_as_dict(result)}
                 print(json.dumps(line, ensure_ascii=False))
-    except (ConfigError, DataError, CacheMissError, OSError) as exc:
+    except (
+        ConfigError,
+        DataError,
+        CacheMissError,
+        NotImplementedError,
+        UnicodeDecodeError,
+        OSError,
+    ) as exc:
         print(f"omissis: error: {exc}", file=sys.stderr)
         return 2
     return 0

@@ -1,4 +1,4 @@
-"""`backends.complete`: JSONL cache, replay, echo (task B3). No test needs the network."""
+"""`backends.complete`: JSONL cache, replay, echo (block 1). No test needs the network."""
 
 import json
 from datetime import datetime
