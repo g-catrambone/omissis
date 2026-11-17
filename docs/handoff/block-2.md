@@ -1,13 +1,16 @@
 # Hand-over note — block 2 · Core completion
 
-Written by Mattia's agent · 16 Nov 2026 · For: block 3 (data and evaluation).
+Owner: Giuseppe · Written by Mattia's agent on 16 Nov 2026, revised on 17 Nov
+after the review of the core · For: block 3 (data and evaluation).
 Start from `docs/handoff/block-1.md`; this note says what changed since.
 
 Block 2 completes the core: the three references that come from the human
 annotation, the real cloud model, the entity resolver, the second replacement
-strategy, fuzzy restoration and the app. The evaluation can now be built on
-`mask`, `protect_send_restore`, `complete` and `load_eval_configs` alone.
-`make test` runs 720 tests.
+strategy and fuzzy restoration. The evaluation can now be built on `mask`,
+`protect_send_restore`, `complete` and `load_eval_configs` alone. The app (task
+2.7) is not in this pull request: it lists the detectors with
+`supported_detectors()`, so it is merged with block 4, and `make demo` still
+answers "not built yet". `make test` runs 753 tests.
 
 ## 1. What exists
 
@@ -23,7 +26,7 @@ strategy, fuzzy restoration and the app. The evaluation can now be built on
 | 2.5 | `replace/fakes.py`, `replace/data/` | R2 and its lists |
 | 2.6 | `restore.py` | fuzzy step, R2 restoration, one outcome per vault entry |
 | 2.6 | `configs/gold-r1.yaml`, `configs/gold-r2.yaml` | gold spans with R1 and with R2, on the real model |
-| 2.7 | `app.py`, `configs/app.yaml`, `make demo` | the Gradio page |
+| 2.7 | `configs/app.yaml` | the defaults of the Gradio page; `app.py` and `make demo` come with block 4 |
 
 Pinned models (`configs/models.yaml`), all on the free tier of GroqCloud except
 `d2`:
@@ -37,7 +40,8 @@ Pinned models (`configs/models.yaml`), all on the free tier of GroqCloud except
 
 Groq publishes no revision of a hosted model: `revision` is the day of the pin,
 `"2026-11-16"`. The key is read from the environment variable `GROQ_API_KEY`
-(or `API_KEY`); the code never reads `.env`. Every command that calls a model
+(further keys from `GROQ_API_KEY2` to `GROQ_API_KEY9`, and from no other
+name); the code never reads `.env`. Every command that calls a model
 starts with `uv run --env-file .env`.
 
 ## 2. How to call it
@@ -81,7 +85,7 @@ result, vault = mask(record.text, configs["REF-none"])                         #
 other detector with `gold_spans`, raises `ValueError`.
 
 **`protect_send_restore` with gold spans** — the same rules. This call was made
-once on the real model and is now answered from `results/cache/`:
+once on the real model, on 16 Nov, and is now answered from `results/cache/`:
 
 ```python
 from omissis.config import load_config
@@ -112,10 +116,18 @@ for role in ("cloud", "attacker", "judge", "generator", "d3"):
 ```
 
 Each role writes `<cache_dir>/<role>.jsonl`. Only `cloud` has been called so
-far (11 exchanges in `results/cache/cloud.jsonl`). An empty reply, or one cut
-at the token limit, raises `RuntimeError` and is not cached; a missing key
-raises `ConfigError`. On a rate limit the provider waits and tries again, up
-to five times, then raises `RuntimeError("Groq API answered HTTP 429")`.
+far: `results/cache/cloud.jsonl` holds the eleven exchanges of 16 Nov. Seven of
+the ten fixture calls are still answered from it (the five with R1, and
+`fx-bank-02` and `fx-hr-01` with R2); the corrections of 17 Nov changed the R2
+text of `fx-bank-01`, `fx-bank-03` and `fx-hr-02`, which a human sends again
+with `configs/gold-r2.yaml` (three calls). An empty reply, or one cut at the
+token limit, raises `RuntimeError` and is not cached; a missing key raises
+`ConfigError`. On a rate limit the provider tries the next key; when every key
+is refused it waits for the shortest time one of them asks and tries again, up
+to five times, then raises `RuntimeError("Groq API answered HTTP 429")`. A wait
+longer than two minutes is a daily limit: the provider stops at once and says
+so. The command line prints the error on one line and exits with status 2; the
+calls already answered are in the cache.
 
 **`omissis mask`** — the masked-batch files, no call to the role `cloud`:
 
@@ -145,12 +157,28 @@ and writes nothing. The masked text of each file equals
   names, surnames, towns, employers, banks, streets). The lists must not
   change after gate G2.
 - **R2 keeps the R1 placeholder** for RUOLO, STRUTTURA, NAZIONALITA and every
-  special category (`fakes.NO_FAKE`): an R2 vault holds fakes and
-  placeholders together, and `restore` handles both.
+  special category (`fakes.NO_FAKE`), and for any value that has no realistic
+  fake: a date that is not written as `16 novembre 2026`, `16 novembre`,
+  `16/11/2026` or `2026-11-16` (so `a dicembre`, `2019`, `1° dicembre`, `16
+  nov. 2026`, a date with an hour), an age or an amount without a number, a
+  value for which no free fake is left. An R2 vault holds fakes and placeholders together, and
+  `restore` handles both. R2 never raises for lack of a fake.
 - **Restored fakes per reply** (protocol, section 10) is the number of
-  `restored` and `restored_fuzzy` events of an R2 run.
+  `restored` and `restored_fuzzy` events of an R2 run whose surrogate is not a
+  placeholder (`parse_placeholder(e.surrogate) is None`). It counts vault
+  entries, not occurrences.
 - **Entity ids restart in every text.** Across texts that share a vault, the
-  same entity is the same type and the same canonical value.
+  same entity is the same type and the same canonical value and, for a person
+  under R1, the same gender. R2 is meant for one vault per text, as `mask` and
+  `protect_send_restore` use it: a fake reused in a later text of the same
+  vault is not checked against that text.
+- **A text that is not a record** (`omissis run --input lettera.txt`) is
+  refused when the configuration writes to a cache under `results/` outside
+  `results/scratch/`: the cache keeps the prompt that is sent.
+  `configs/example.yaml` and `configs/skeleton.yaml` write to
+  `results/scratch/`.
+- **An input folder that is missing or holds no record** makes `batch` and
+  `mask` exit with status 2.
 
 ## 4. Known limits
 
@@ -169,27 +197,73 @@ and writes nothing. The masked text of each file equals
   `fx-bank-03`) is reported as `hallucinated_token`.
 - **A fake value the reply uses on its own account is restored too.** This
   cannot be told apart, so the full-restoration rate of R2 is an upper bound.
-  Names that are also Italian words were kept out of the lists.
-- **Fake phone numbers** are random digits on the original prefix: one could
-  be a real number.
+  Names that are also Italian words are kept out of the lists: ten of them
+  (Quaranta, Albanesi, Fiorentini, Montanari, Pellegrini, Calderoni, Benedetta,
+  Brando, Valentino, Macerata) were replaced on 17 Nov.
+- **A fake the reply rewrites is not recognised.** Another format ("701 euro"
+  for "701,00 euro"), a shortened name of a company, a misspelt fake of one
+  word: the fake stays in the reply and its entry is `dropped`, with
+  `fully_restored` true. A fake of one word has no fuzzy step on purpose:
+  ordinary words are too close to it ("Biella", "bella"). The protocol counts
+  the fakes left in the text by hand (section 10).
+- **A fake that starts with a digit is not restored after a digit and a point
+  or a comma**, so that "225,00 euro" is never found at the end of "1.225,00
+  euro". A span that starts in the middle of a number (the decimals alone) is
+  therefore not restored under R2; a span that stops before the decimals
+  ("€ 320" in "€ 320,00") is.
+- **The fuzzy step of R2 is strict on short words**: "869,00 EUR" for the
+  fake "869,00 euro", or "Srl" for "S.r.l.", is not close enough word by word,
+  so the fake stays (`dropped`). The whole-string comparison of before also
+  restored "Lavorazioni Meccaniche Sbrana ha" and deleted the verb.
+- **A suffix added to a placeholder without a gender** (`[IBAN_1_X]`,
+  `[PERSONA_1_X]` when the vault holds `[PERSONA_1]`) is read as the
+  placeholder followed by `_X]`: the value is restored and the tail stays. With
+  a gender in the vault the token stays and is `altered_unresolved`. Same as in
+  block 1; no real reply has shown it.
+- **A placeholder is read only when it is written as one**: with an
+  underscore, between two brackets, or with its three parts in upper case
+  (`PERSONA 1 F`). `PERSONA 1` or `IBAN 1` with no bracket and no underscore
+  are ordinary text and stay as they are, with no event: "DOCUMENTO 1" in a
+  list of attachments must never receive a document number.
+- **Fake phone numbers** are random digits after `+39` and the first digit (0
+  or 3): one could be a real number.
+- **A fake date of birth keeps the month and the year**, like any date: under
+  R2 the year of birth is readable. Decision open (section 5).
 - **The resolver** gives a bare surname shared by two people to the first one
   it is compatible with. A name of one word gets a fake surname under R2, even
-  when it is a first name.
+  when it is a first name. Gender follows the title before the first name, as
+  the specification says: "Prof. Maria Rossi" is read as M.
+- **A disclosure reason is dropped** whenever it repeats a word of three
+  letters or two digits of any masked value, common words included ("euro").
+- **With `mask_quasi: false`** a direct identifier that a longer
+  quasi-identifier span absorbed in `merge` stays visible. No evaluated
+  configuration meets it; the rule is in `detect/merge.py` (block 4).
 - **Two people kept apart only by the gender of a title** ("Sig. Ferri",
   "Sig.ra Ferri") get two placeholders under R1 and one shared fake under R2.
 - **The cities of R2 are not matched by size**: the size of the original is
   not known.
-- **The app** replays only what is in `results/cache/` for its own
-  configuration (`configs/app.yaml`: D0, R1, `mask_quasi: true`). Nothing is
-  recorded for it yet: task P.1 records the demo runs.
+- **The app**, when it is merged, replays only what is in `results/cache/`
+  for its own configuration (`configs/app.yaml`: D0, R1, `mask_quasi: true`).
+  Nothing is recorded for it yet: task P.1 records the demo runs.
 
 ## 5. Open points for the humans
 
 - Approve the first-name lists of `resolve.py` and the fake lists of
-  `replace/data/` (written for this project, no external source).
+  `replace/data/` (written for this project, no external source), with the ten
+  replacements of 17 Nov. They are frozen at gate G2.
+- Send `fx-bank-01`, `fx-bank-03` and `fx-hr-02` again with
+  `configs/gold-r2.yaml`, and read the ten restored replies (task 2.6).
+- Decide: whether `DATA_NASCITA` keeps a fake date under R2 or the
+  placeholder; whether a caller may pass a `temperature` other than 0
+  (`docs/interfaces.md` allows it, `CLAUDE.md` fixes 0).
+- Whoever has the key under `API_KEY` in a local `.env` renames it to
+  `GROQ_API_KEY`: the generic names are no longer read, so that a key of
+  another service is never sent to Groq.
 - Record in `docs/decisions.md`: the models pinned and the free tier; D3 on a
   hosted model instead of a local one; R2 keeping placeholders for four kinds
-  of type.
+  of type and for values without a realistic fake; a label and a number with
+  no bracket and no underscore are no longer restored (block 1 restored them
+  in upper case); errors of the command line all exit with status 2.
 - `docs/interfaces.md` still describes D3 as local and does not list the
   choices of task 2.2 (`NONE` with `gold_spans` is an error; `GOLD` with an
   empty list masks nothing; an unknown `--names` and a plain-text input with
