@@ -8,4 +8,4 @@ seed: 13
 fuzzy_threshold: 0.9       # default from task 2.6, re-checked on dev in task 4.5
 source_priority: [D0, D1, D2, D3]
 models_file: configs/models.yaml
-cache_dir: results/cache
+cache_dir: results/scratch/example   # gitignored: results/cache is for the runs of the tasks

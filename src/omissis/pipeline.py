@@ -2,6 +2,7 @@
 
 from __future__ import annotations
 
+import re
 from collections.abc import Sequence
 
 from omissis.backends import LLMRequest, complete
@@ -40,15 +41,39 @@ def _spans(text: str, config: RunConfig, gold_spans: Sequence[Span] | None) -> l
     return detect(text, config.detector, config)
 
 
+# What a reason must not repeat of a masked value: a word of three letters, two digits.
+_PART = re.compile(r"[^\W\d_]{3,}|\d{2,}")
+
+
+def _compact(value: str) -> str:
+    """`value` without case, spaces and punctuation: "IT89 Y000" and "IT89Y000" are one."""
+    return re.sub(r"[\W_]+", "", value).casefold()
+
+
 def _safe_reason(reason: str | None, vault: Vault) -> str | None:
-    """`reason` with every masked value replaced by its surrogate; None if one remains."""
+    """`reason` with every masked value replaced by its surrogate.
+
+    None when what is left still quotes a masked value: in another case or spacing,
+    or a part of it (a word, a run of digits). A reason is worth less than a leak.
+    """
     if reason is None:
         return None
     values = [(v, e.surrogate) for e in vault for v in (e.original, *e.original_variants)]
     for value, surrogate in sorted(values, key=lambda pair: -len(pair[0])):
         reason = reason.replace(value, surrogate)
-    folded = reason.casefold()
-    return None if any(value.casefold() in folded for value, _ in values) else reason
+    left = reason
+    for _, surrogate in values:
+        left = left.replace(surrogate, " ")
+    folded = left.casefold()
+    if any(value.casefold() in folded for value, _ in values):
+        return None
+    parts = {part.casefold() for value, _ in values for part in _PART.findall(value)}
+    if parts & {part.casefold() for part in _PART.findall(left)}:
+        return None
+    squeezed = _compact(left)
+    if any(len(_compact(value)) >= 3 and _compact(value) in squeezed for value, _ in values):
+        return None
+    return reason
 
 
 def mask(

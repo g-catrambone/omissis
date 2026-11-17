@@ -313,3 +313,115 @@ def test_errors_exit_with_status_2(eval_file, tmp_path, capsys, monkeypatch):
     none = str(run_config(tmp_path, eval_file, "REF-none"))
     assert cli.main(["run", "--config", none, "--input", str(binary)]) == 2
     assert capsys.readouterr().err.count("omissis: error:") == 3
+
+
+def test_reason_that_quotes_a_part_of_a_masked_value_is_dropped(configs, monkeypatch):
+    text = "Sono Lidia Caprioli, IBAN IT89Y0000025613651127989360, tel. 347 215 8890, a Nola."
+
+    def span(value, type, reason):
+        start = text.index(value)
+        return Span(start, start + len(value), value, type, 0.8, "D3", reason)
+
+    found = [
+        span("Lidia Caprioli", SpanType.PERSONA, "La signora Caprioli è la mittente"),
+        span(
+            "IT89Y0000025613651127989360", SpanType.IBAN, "IBAN IT89 Y000 0025 6136 5112 7989 360"
+        ),
+        span("347 215 8890", SpanType.TELEFONO, "cellulare 3472158890 della mittente"),
+        span("Nola", SpanType.CITTA, "città di residenza"),
+    ]
+    monkeypatch.setattr(pipeline, "detect", lambda text, detector, config: found)
+    result, _ = pipeline.mask(text, with_overrides(configs["REF-oracle"], detector="D3"))
+    assert [item.reason for item in result.disclosure] == [None, None, None, "città di residenza"]
+
+
+def test_provider_failure_and_broken_cache_exit_with_status_2(
+    eval_file, tmp_path, capsys, monkeypatch
+):
+    fixture = str(FIXTURE_DIR / "fx-bank-01.json")
+    oracle = str(run_config(tmp_path, eval_file, "REF-oracle"))
+    for error in (RuntimeError("Groq API answered HTTP 429"), ValueError("cloud.jsonl, line 1")):
+
+        def fails(*args, error=error):
+            raise error
+
+        with monkeypatch.context() as patch:
+            patch.setattr(cli, "protect_send_restore", fails)
+            assert cli.main(["run", "--config", oracle, "--input", fixture]) == 2
+            folder = str(FIXTURE_DIR)
+            assert cli.main(["batch", "--config", oracle, "--input-dir", folder]) == 2
+    assert capsys.readouterr().err.count("omissis: error:") == 4
+
+
+def test_input_folder_that_is_missing_or_holds_no_text_exits_with_status_2(
+    eval_file, tmp_path, capsys
+):
+    oracle = str(run_config(tmp_path, eval_file, "REF-oracle"))
+    empty = tmp_path / "empty"
+    empty.mkdir()
+    for folder in (tmp_path / "missing", empty, FIXTURE_DIR / "fx-bank-01.json"):
+        assert cli.main(["batch", "--config", oracle, "--input-dir", str(folder)]) == 2
+        out = tmp_path / "out"
+        arguments = ["--eval-config", str(eval_file), "--input-dir", str(folder)]
+        assert cli.main(["mask", *arguments, "--output", str(out)]) == 2
+        assert not out.exists()
+    assert capsys.readouterr().err.count("omissis: error:") == 6
+
+
+def test_plain_text_is_refused_when_the_cache_is_the_committed_one(
+    eval_file, tmp_path, capsys, monkeypatch
+):
+    letter = tmp_path / "lettera.txt"
+    letter.write_text("Buongiorno, sono Ada Finti di Borgo Inventato.", encoding="utf-8")
+    path = run_config(tmp_path, eval_file, "REF-none")
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    data["cache_dir"] = "results/cache"
+    path.write_text(yaml.safe_dump(data), encoding="utf-8")
+    monkeypatch.chdir(tmp_path)
+    assert cli.main(["run", "--config", str(path), "--input", str(letter)]) == 2
+    assert "results/scratch" in capsys.readouterr().err
+    assert not (tmp_path / "results").exists()
+
+
+def test_mask_uses_the_strategy_and_the_seed_of_the_configuration(configs):
+    record = FIXTURES[0]
+    texts = set()
+    for seed in (1, 2):
+        config = with_overrides(configs["REF-oracle"], strategy="R2", seed=seed)
+        result, vault = pipeline.mask(record.text, config, record.spans)
+        assert any(not entry.surrogate.startswith("[") for entry in vault)  # fakes, not R1
+        texts.add(result.masked_text)
+    assert len(texts) == 2
+
+
+def test_reply_goes_to_the_cloud_role_and_is_restored_with_the_threshold_of_the_configuration(
+    configs, monkeypatch
+):
+    roles = []
+
+    def near_miss(model, request):
+        roles.append(request.role)
+        return "Gentile [PERSONNA_1_F], grazie."
+
+    monkeypatch.setitem(backends._PROVIDERS, "fake", near_miss)
+    text = "Sono Lidia Caprioli."
+    span = Span(5, 19, "Lidia Caprioli", SpanType.PERSONA, 1.0, "GOLD")
+    replies = {}
+    for threshold in (0.9, 1.0):
+        config = with_overrides(configs["REF-oracle"], fuzzy_threshold=threshold)
+        replies[threshold] = pipeline.protect_send_restore(
+            text, TASK, config, [span]
+        ).restored_reply
+    assert replies == {
+        0.9: "Gentile Lidia Caprioli, grazie.",
+        1.0: "Gentile [PERSONNA_1_F], grazie.",
+    }
+    assert set(roles) == {"cloud"}
+
+
+def test_reason_that_quotes_a_short_value_in_another_case_is_dropped(configs, monkeypatch):
+    text = "Abito a Bo, in centro."
+    found = [Span(8, 10, "Bo", SpanType.CITTA, 0.8, "D3", "abita a BO")]
+    monkeypatch.setattr(pipeline, "detect", lambda text, detector, config: found)
+    result, _ = pipeline.mask(text, with_overrides(configs["REF-oracle"], detector="D3"))
+    assert [item.reason for item in result.disclosure] == [None]

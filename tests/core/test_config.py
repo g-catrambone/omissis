@@ -204,3 +204,16 @@ def test_run_id_changes_with_models(tmp_path, base):
         pinned_models(cloud={"provider": "echo", "id": "echo", "revision": "2"}),
     )
     assert run_id(with_overrides(config, models_file=other)) != run_id(config)
+
+
+def test_run_id_is_the_formula_the_committed_results_were_named_with(tmp_path):
+    """A change here renames every committed result: it must be a decision."""
+    models = {role: {"provider": "echo", "id": f"{role}-model", "revision": "1"} for role in ROLES}
+    path = write(tmp_path / "m.yaml", models)
+    settings = ("GOLD", "R2", True, "cloud", 20261111, 0.9, ["D0", "D2", "D1", "D3"])
+    config = RunConfig(*settings, path, tmp_path / "cache")
+    assert run_id(config) == "b02f8872b48d"
+    for role in ROLES:  # every pinned role is part of what a run computes
+        other = {**models, role: {"provider": "echo", "id": f"{role}-model", "revision": "2"}}
+        again = RunConfig(*settings, write(tmp_path / f"{role}.yaml", other), tmp_path / "cache")
+        assert run_id(again) != "b02f8872b48d", role
