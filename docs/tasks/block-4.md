@@ -98,7 +98,8 @@ Mattia runs `git switch main && git pull` and creates the branch.
     of the scorecard; collect categorised examples of missed identifiers from
     dev in
     `results/dev/error_examples.md` for the error taxonomy.
-  - **Human:** read 20 restored replies on dev and confirm or change
+  - **Human:** read up to 20 restored replies per strategy on dev (`D4+R1`
+    and `D4+R2`) and confirm or change
     `base.fuzzy_threshold` in `configs/eval.yaml`, recording it in
     `docs/decisions.md`. A change means running `make eval-dev` again; the LLM
     calls come from the cache, so it costs nothing. On the same replies (up to

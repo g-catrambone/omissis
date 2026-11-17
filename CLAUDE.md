@@ -206,7 +206,7 @@ in scope.
 | 4 · Detectors | Mattia | Giuseppe | `src/omissis/detect/`; `tests/detect/`; in `configs/eval.yaml`, only the two edits allowed by `docs/interfaces.md` section 4 |
 | 5 · Closing | Giuseppe | Andrea and Mattia | `README.md`, `LICENSE`, `docs/cards.md` |
 
-Once block 1 is merged, its files belong to the block that lists them above:
+From gate G1, the files of block 1 belong to the block that lists them above:
 the core modules to block 2, `eval/datasets.py` and the guide to block 3, the
 detection modules to block 4. `data/fixtures/` belongs to nobody after G1.
 

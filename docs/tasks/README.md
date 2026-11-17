@@ -60,7 +60,10 @@ which needs G3.
 A few exceptions keep everyone working.
 
 - Task 2.1 does not wait for G1: the pull request of block 1 is merged, and the
-  task changes no behaviour and needs no hand-over note.
+  task changes no behaviour and needs no hand-over note. It also edits the
+  texts that its Do line names outside block 2's paths (the `Makefile`
+  messages, the Status section of `README.md`, the docstring of
+  `contracts.py`).
 - Three tasks of block 3 may start after G1, while block 2 is running, when
   Andrea names one: 3.8 (statistics), the code and tests of 3.9 (detection
   metrics, on the fixtures; after task 4.0 is merged) and the guide half of
@@ -86,7 +89,7 @@ and propose the line to add.
 1. Your personal file says which blocks are yours. If the gate your block
    waits for is not ticked, or your block's own gate is already ticked, there
    is no block task for you, unless one of the exceptions above applies.
-   Otherwise say so and stop, after listing what waits on your human: every
+   If none applies, say so and stop, after listing what waits on your human: every
    **Human** line of an unticked task, in any task list, that names your human
    or the three members; every bare **Human:** line of your own block's list;
    every gate that waits on your human's reading. Do not work on another

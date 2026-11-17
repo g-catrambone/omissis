@@ -38,7 +38,7 @@ What remains is checking and merging.
   - Each agent may help its human by answering questions on the code. It
     changes nothing.
 
-- [ ] **1.4 · Hand-over note and fixture corrections** — `docs/handoff/block-1.md`, `data/fixtures/`
+- [ ] **1.4 · Hand-over note and fixture corrections** — `docs/handoff/block-1.md`, `data/fixtures/`, `docs/annotation_guide.md`
   - Do (Mattia's agent, on a branch `b1/handover`): the note described in
     `docs/tasks/README.md`, with one worked call for `detect`, `mask`,
     `protect_send_restore`, `complete`, `load_texts`, and the two commands.
@@ -46,11 +46,13 @@ What remains is checking and merging.
     the last changes before they are frozen. In `fx-hr-02.json` add the span
     `CITTA` 49–56 ("Bologna" in the subject line). In `fx-hr-01.json` the span
     496–525 `STRUTTURA` "poliambulatorio di Pomigliano" becomes `CITTA` 515–525
-    "Pomigliano", as in the six other "facility of a city" cases, and the two
-    places of `docs/annotation_guide.md` that give that span as a `STRUTTURA`
-    example (the type table and edge case 3) are aligned. In
+    "Pomigliano", as in the six other "facility of a city" cases, and the three
+    places of `docs/annotation_guide.md` that depend on it are aligned: the
+    type table and edge case 3, which give that span as a `STRUTTURA` example,
+    and the pointer "(see 4.3)" in section 1, which would otherwise cite a
+    rule that now says the opposite. In
     `fx-bank-01.json` `gold.deadline` becomes `null`: 1 December 2026 is when
     the salary changes account, not a date by which the bank is asked to act.
     `make test` must pass.
-  - **Human (Mattia):** merge the pull request of the block, then the note;
-    set the tag `block-1`; G1 is ticked.
+  - **Human (Mattia):** merge the pull request of this task; set the tag
+    `block-1`; G1 is ticked.
