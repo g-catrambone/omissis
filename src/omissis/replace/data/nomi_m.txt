@@ -1,6 +1,6 @@
 Achille
 Amedeo
-Brando
+Baldassarre
 Corrado
 Damiano
 Gualtiero
@@ -16,5 +16,5 @@ Edmondo
 Saverio
 Tancredi
 Ubaldo
-Valentino
+Vittore
 Zeno

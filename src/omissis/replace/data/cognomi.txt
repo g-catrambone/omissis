@@ -1,4 +1,4 @@
-Albanesi
+Albertazzi
 Bellandi
 Cortesini
 Dalmasso
@@ -9,7 +9,7 @@ Marangoni
 Nardelli
 Orsolini
 Pagliarini
-Quaranta
+Querzoli
 Rinaldini
 Salvadori
 Tedeschini
@@ -17,8 +17,8 @@ Ubaldini
 Vannucci
 Zambelli
 Brunelleschi
-Calderoni
-Fiorentini
+Camporesi
+Fiorucci
 Guidotti
-Montanari
-Pellegrini
+Montagnani
+Petruzzelli
