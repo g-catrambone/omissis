@@ -147,6 +147,13 @@ Non scrivere nient'altro.
 """
 
 
+RETRY_NOTE = (
+    "\nAttenzione: la risposta precedente non rispettava il formato. Usa solo i tipi "
+    "ammessi, scritti esattamente come nell'elenco (per esempio CF, non CODICE FISCALE), "
+    f"marca anche la firma, e dopo l'email scrivi la riga {SEPARATOR} e poi la riga SCADENZA.\n"
+)
+
+
 # --- tagged text -------------------------------------------------------------------
 
 
@@ -301,11 +308,19 @@ def generate_one(
     text_id: str, entry: dict[str, Any], profile: dict[str, Any], config: RunConfig
 ) -> dict[str, Any]:
     """Ask the generator for one text and return its text-record object."""
-    request = LLMRequest(
-        "generator", build_prompt(profile, entry), SYSTEM, {"max_tokens": MAX_TOKENS}
-    )
-    text, spans, deadline = parse_file(complete(request, config).text)
-    return to_json(text_id, entry, text, spans, deadline)
+    prompt = build_prompt(profile, entry)
+    # A reply that cannot be read is asked again once, with a note: the cache answers an
+    # identical prompt with the same reply.
+    for attempt in (prompt, prompt + RETRY_NOTE):
+        request = LLMRequest("generator", attempt, SYSTEM, {"max_tokens": MAX_TOKENS})
+        try:
+            text, spans, deadline = parse_file(complete(request, config).text)
+        except ValueError:
+            if attempt is not prompt:
+                raise
+            continue
+        return to_json(text_id, entry, text, spans, deadline)
+    raise AssertionError("unreachable")
 
 
 # --- checks ------------------------------------------------------------------------

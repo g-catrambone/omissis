@@ -218,6 +218,20 @@ def test_all_keys_rate_limited_waits_once_then_goes_round_again(monkeypatch):
     assert used == ["a", "b", "a"] and waits == [4.0]
 
 
+def test_daily_limit_stops_at_once_instead_of_sleeping_for_hours(monkeypatch):
+    waits = []
+
+    def fake_urlopen(request, timeout):
+        raise http_error(429, {"retry-after": "5400"})
+
+    monkeypatch.setattr(groq.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(groq.time, "sleep", waits.append)
+    monkeypatch.setattr(groq, "_next_key", 0)
+    with pytest.raises(RuntimeError, match="wait 5400 s"):
+        groq._post({"model": "m"}, ["a", "b"])
+    assert waits == []
+
+
 def test_no_answer_is_tried_again_then_reported(monkeypatch):
     answers = [TimeoutError("timed out"), reply("Dopo.")]
     waits = []

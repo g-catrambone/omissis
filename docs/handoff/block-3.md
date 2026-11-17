@@ -3,6 +3,8 @@
 Written by Mattia's agent · 17 Nov 2026 · For: block 4 (task 4.5) and block 5.
 Start from `docs/handoff/block-2.md`.
 
+**See `docs/STATUS.md` for the situation at the end of the session of 17 Nov.**
+
 **State: the code of the block is complete; the data are not.** The 66 texts are
 generated and not yet reviewed, so there is no dev or test split and
 `make eval-dev` has never run on real data. Everything below that needs the split
@@ -24,7 +26,7 @@ is marked *pending*.
 | 3.9 | `eval/detection.py` | detection metrics from files, the timing pass |
 | 3.10 | `eval/run.py`, `eval/report.py`, `make eval-dev`, `make eval-test` | the runner, the rows, scorecard and chart |
 
-`make test` runs 914 tests; none needs the network or the split.
+`make test` runs 919 tests; none needs the network or the split.
 
 ## 2. How to use it
 
@@ -112,8 +114,7 @@ gender by design and the topic shows the health.
 - **Prompts to approve**: generator (`textgen.PROMPT`), attacks
   (`attacks.LINKAGE_PROMPT`, `ATTRIBUTES_PROMPT`), T3 (`utility.T3_TASK`), judge
   (`judge.PROMPT`).
-- **Plotting dependency**: the chart needs matplotlib, not yet approved; without
-  it the runner writes everything but the figure.
+- **Plotting dependency**: matplotlib 3.11.2, approved and added on 17 Nov.
 - **`make eval-dev` on real data**, and committing `results/cache/` and
   `results/dev/`.
 

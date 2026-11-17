@@ -1,4 +1,8 @@
-"""D3: a local LLM that finds quasi-identifiers and special categories (task 4.3).
+"""D3: an LLM that finds quasi-identifiers and special categories (task 4.3).
+
+It also looks for one direct identifier, UTENTE (employee number, customer code, user
+name): it has no fixed shape, so no rule and no ready-made model finds it. On the
+pilot texts it was the one identifier left in every text.
 
 The model is asked for a JSON array of items `{"text", "type", "reason"}` and never
 for offsets: each `text` is located in the source by string search and every
@@ -24,7 +28,7 @@ import json
 import logging
 from collections import Counter
 
-from omissis.backends import LLMRequest, complete
+from omissis.backends import LLMRequest, TruncatedReplyError, complete
 from omissis.config import RunConfig
 from omissis.contracts import TYPE_CLASS, DetectorId, Span, SpanClass, SpanType
 
@@ -32,7 +36,16 @@ logger = logging.getLogger(__name__)
 
 SOURCE = DetectorId.D3.value
 CONFIDENCE = 0.8
-TYPES = tuple(t for t, cls in TYPE_CLASS.items() if cls is not SpanClass.DIRECT)
+# Room for the model's reasoning and for the list: without a limit a hosted reasoning
+# model stops before it has answered.
+MAX_TOKENS = 4096
+# At its default effort the pinned model (openai/gpt-oss-20b) loops in its reasoning on
+# this task and spends every token without answering; at low effort it answers.
+REASONING = {"reasoning_effort": "low"}
+TYPES = (
+    *(t for t, cls in TYPE_CLASS.items() if cls is not SpanClass.DIRECT),
+    SpanType.UTENTE,
+)
 
 stats: Counter[str] = Counter()
 
@@ -58,6 +71,7 @@ _TYPE_HELP = {
     SpanType.ETNIA: "origine razziale o etnica",
     SpanType.BIOMETRICO: "dato biometrico o genetico",
     SpanType.GIUDIZIARIO: "condanne penali e reati",
+    SpanType.UTENTE: "matricola aziendale, codice cliente, nome utente, numero di badge",
 }
 
 PROMPT = (
@@ -65,8 +79,8 @@ PROMPT = (
     "può aiutare a riconoscere chi scrive o le persone di cui parla, oppure rivela "
     "un dato particolare. Usa solo questi tipi:\n\n"
     + "\n".join(f"- {t.value}: {_TYPE_HELP[t]}" for t in TYPES)
-    + "\n\nNon cercare nomi di persona, numeri di telefono, email, IBAN o codici: "
-    "se ne occupa un altro strumento.\n\n"
+    + "\n\nNon cercare nomi di persona, numeri di telefono, email, IBAN o codici "
+    "fiscali: se ne occupa un altro strumento.\n\n"
     "Rispondi con un array JSON. Ogni elemento ha tre campi:\n"
     '- "text": l\'espressione copiata dal testo carattere per carattere, la più '
     "breve possibile, senza articoli o preposizioni;\n"
@@ -114,13 +128,16 @@ def _occurrences(text: str, value: str) -> list[int]:
 
 def find(text: str, config: RunConfig) -> list[Span]:
     """Spans found by the local LLM in `text`, possibly overlapping; `detect` merges them."""
-    params = {"temperature": 0, "seed": config.seed}
+    params = {"temperature": 0, "seed": config.seed, "max_tokens": MAX_TOKENS, **REASONING}
     items = None
     for attempt, prompt in enumerate((PROMPT + text, PROMPT + text + RETRY_NOTE)):
         stats["calls"] += 1
         if attempt:
             stats["retries"] += 1
-        reply = complete(LLMRequest("d3", prompt, SYSTEM, params), config).text
+        try:
+            reply = complete(LLMRequest("d3", prompt, SYSTEM, params), config).text
+        except TruncatedReplyError:  # cut at the token limit: an invalid reply like any other
+            reply = ""
         items = _valid(reply)
         if items is not None:
             break

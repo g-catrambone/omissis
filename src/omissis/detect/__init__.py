@@ -37,7 +37,7 @@ _DETECTORS: dict[DetectorId, _Detector] = {
     DetectorId.D1: _Detector(presidio.find, presidio.NEEDS),
     DetectorId.D2: _Detector(classifier.find, classifier.NEEDS),
     DetectorId.D3: _Detector(llm.find),
-    DetectorId.D4: _Detector(_d4, classifier.NEEDS),
+    DetectorId.D4: _Detector(_d4, presidio.NEEDS + classifier.NEEDS),
 }
 
 

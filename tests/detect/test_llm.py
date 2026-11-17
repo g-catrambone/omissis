@@ -74,15 +74,21 @@ def test_request_goes_to_role_d3_with_temperature_0_and_the_seed(tmp_path, provi
     assert detect(TEXT, DetectorId.D3, make_config(tmp_path)) == []
     (request,) = provider["requests"]
     assert request.role == "d3"
-    assert dict(request.params) == {"temperature": 0, "seed": 7}
+    assert dict(request.params) == {
+        "temperature": 0,
+        "seed": 7,
+        "max_tokens": llm.MAX_TOKENS,
+        "reasoning_effort": "low",
+    }
     assert request.prompt.endswith(TEXT)
     assert request.system == llm.SYSTEM
 
 
-def test_prompt_asks_for_every_non_direct_type_and_no_direct_one():
+def test_prompt_asks_for_every_non_direct_type_and_for_utente_only_among_the_direct():
     for type in SpanType:
         asked = f"- {type.value}:" in llm.PROMPT
-        assert asked == (TYPE_CLASS[type] is not SpanClass.DIRECT)
+        wanted = TYPE_CLASS[type] is not SpanClass.DIRECT or type is SpanType.UTENTE
+        assert asked == wanted == (type in llm.TYPES)
 
 
 def test_invalid_json_is_asked_again_with_a_different_prompt(tmp_path, provider):
@@ -152,6 +158,12 @@ def test_cache_miss_in_replay_propagates(tmp_path, provider):
 def test_model_not_pinned_propagates(tmp_path, provider):
     with pytest.raises(ConfigError):
         detect(TEXT, DetectorId.D3, make_config(tmp_path, d3_id="TO_BE_PINNED"))
+
+
+def test_reply_cut_at_the_token_limit_is_an_invalid_reply(tmp_path, provider):
+    provider["replies"] = [backends.TruncatedReplyError("cut"), GOOD]
+    assert len(detect(TEXT, DetectorId.D3, make_config(tmp_path))) == 4
+    assert llm.stats == {"calls": 2, "retries": 1}
 
 
 def test_failing_provider_logs_and_returns_nothing(tmp_path, provider, caplog):

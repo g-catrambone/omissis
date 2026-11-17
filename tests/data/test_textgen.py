@@ -229,6 +229,23 @@ def test_generated_text_becomes_a_record_the_loader_accepts(generator, tmp_path)
     assert record.reviewed_by is None and "[[" not in record.text
 
 
+def test_unreadable_reply_is_asked_again_once_with_a_note(generator, monkeypatch):
+    prompts, config = generator
+    replies = ["Sono [[CODICE FISCALE|X]].\nSCADENZA: nessuna", REPLY]
+    monkeypatch.setattr(
+        backends, "_PROVIDERS", {"fake": lambda m, r: prompts.append(r) or replies.pop(0)}
+    )
+    text_id, entry = next((t, e) for t, e in PLAN.items() if e["scenario"] == "iban_change")
+    data = textgen.generate_one(text_id, entry, BY_ID[entry["profile_id"]], config)
+    assert data["gold"]["deadline"] == "2026-12-15" and len(prompts) == 2
+    assert prompts[1].prompt == prompts[0].prompt + textgen.RETRY_NOTE
+
+    replies[:] = ["niente", "ancora niente"]
+    other = next(t for t, e in PLAN.items() if e["scenario"] == "card_dispute")
+    with pytest.raises(ValueError):
+        textgen.generate_one(other, PLAN[other], BY_ID[PLAN[other]["profile_id"]], config)
+
+
 def test_check_reports_what_breaks_the_requirements(generator, tmp_path):
     _, config = generator
     text_id, entry = next((t, e) for t, e in PLAN.items() if e["scenario"] == "iban_change")

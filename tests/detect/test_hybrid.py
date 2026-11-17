@@ -35,6 +35,8 @@ def span(value, type, source, confidence=0.9):
 PHONE = span("347 215 8890", SpanType.TELEFONO, "D0")
 AMOUNT_D0 = span("€ 320,00", SpanType.IMPORTO, "D0")
 NAME = span("Lidia Caprioli", SpanType.PERSONA, "D2")
+SURNAME_D1 = span("Caprioli", SpanType.PERSONA, "D1", 0.85)
+CITY_D1 = span("Nola", SpanType.CITTA, "D1", 0.85)
 CITY_D2 = span("Nola", SpanType.CITTA, "D2")
 ROLE = span("magazziniere", SpanType.RUOLO, "D3", 0.8)
 CITY_D3 = span("Nola", SpanType.CITTA, "D3", 0.8)
@@ -44,6 +46,7 @@ AMOUNT_D3 = span("€ 320,00", SpanType.IMPORTO, "D3", 0.8)
 def fakes(d3=None):
     return {
         DetectorId.D0: lambda text, config: [PHONE, AMOUNT_D0],
+        DetectorId.D1: lambda text, config: [SURNAME_D1, CITY_D1],
         DetectorId.D2: lambda text, config: [NAME, CITY_D2],
         DetectorId.D3: d3 or (lambda text, config: [ROLE, CITY_D3, AMOUNT_D3]),
     }
@@ -56,23 +59,38 @@ def raising(error):
     return find
 
 
-def test_direct_identifiers_come_from_d0_and_d2_the_rest_from_d3():
+def test_direct_identifiers_come_from_d0_d1_and_d2_the_rest_from_d3():
     found = hybrid.find(TEXT, CONFIG, fakes())
-    assert found == [PHONE, NAME, ROLE, CITY_D3, AMOUNT_D3]
-    # The quasi-identifiers of D0 and D2 are dropped, so nothing overlaps here.
+    assert found == [PHONE, SURNAME_D1, NAME, ROLE, CITY_D3, AMOUNT_D3]
+    # The quasi-identifiers of D0, D1 and D2 are dropped. The two readings of the name
+    # overlap: the longer one survives the merge.
     assert merge(found, PRIORITY) == [NAME, ROLE, CITY_D3, PHONE, AMOUNT_D3]
 
 
 def test_direct_identifier_from_d3_is_dropped():
     name_d3 = span("Lidia Caprioli", SpanType.PERSONA, "D3", 0.8)
     found = hybrid.find(TEXT, CONFIG, fakes(lambda text, config: [name_d3, ROLE]))
-    assert found == [PHONE, NAME, ROLE]
+    assert found == [PHONE, SURNAME_D1, NAME, ROLE]
+
+
+def test_name_found_by_d1_alone_is_kept():
+    detectors = fakes() | {DetectorId.D2: lambda text, config: []}
+    assert SURNAME_D1 in merge(hybrid.find(TEXT, CONFIG, detectors), PRIORITY)
+
+
+def test_employee_number_from_d3_is_kept():
+    text = "Matricola KK-50663, Lidia."
+    badge = Span(10, 18, "KK-50663", SpanType.UTENTE, 0.8, "D3", "matricola")
+    name = Span(20, 25, "Lidia", SpanType.PERSONA, 0.8, "D3", "nome")
+    detectors = {d: (lambda t, c: []) for d, _ in hybrid.ROUTES}
+    detectors[DetectorId.D3] = lambda t, c: [badge, name]
+    assert hybrid.find(text, CONFIG, detectors) == [badge]  # other direct types are not D3's
 
 
 def test_failing_d3_keeps_the_spans_of_d0_and_d2(caplog):
     with caplog.at_level(logging.ERROR):
         found = hybrid.find(TEXT, CONFIG, fakes(raising(RuntimeError(f"cannot read {TEXT}"))))
-    assert found == [PHONE, NAME]
+    assert found == [PHONE, SURNAME_D1, NAME]
     assert "D3" in caplog.text and "RuntimeError" in caplog.text
     assert "Caprioli" not in caplog.text  # never log the text
 

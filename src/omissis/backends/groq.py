@@ -47,6 +47,7 @@ MAX_ATTEMPTS = 6  # one call plus five waits
 # Rate limit, and the errors of a service that is briefly down or overloaded.
 RETRY_STATUS = (429, 500, 502, 503, 504)
 DEFAULT_WAIT_SECONDS = 10.0
+MAX_WAIT_SECONDS = 120.0  # a longer wait is a daily limit: stop, do not sleep for hours
 
 _next_key = 0  # index of the key to try first: a key that hit its limit is left behind
 
@@ -103,6 +104,11 @@ def _post(body: dict[str, Any], keys: list[str]) -> dict[str, Any]:
                     if refused < len(keys):
                         continue  # another key may still have room
                 refused = 0
+                if wait > MAX_WAIT_SECONDS:
+                    raise RuntimeError(
+                        f"Groq API rate limit: every key asks to wait {wait:.0f} s; "
+                        "launch the command again later, the calls made are in the cache"
+                    ) from None
                 time.sleep(wait)
                 break
             except OSError as exc:  # no answer: a timeout, a dropped connection, no network
