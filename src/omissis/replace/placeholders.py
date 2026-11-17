@@ -3,8 +3,9 @@
 An entity gets `[TYPE_n]`, or `[PERSONA_n_M]` / `[PERSONA_n_F]` when its gender is
 known. There is one counter per type per session: the session is the vault, so the
 next number for a type is one more than the highest number of that type already in
-the vault. A number whose placeholder already appears in the source text (in any
-gender form) is skipped, so restoration can never confuse it with ours.
+the vault. A number that the source text already writes with the label, in any form
+that restoration reads as a placeholder (`[IBAN_1]`, `IBAN_1`, `[iban 1]`), is
+skipped, so restoration can never confuse it with ours.
 
 "The same entity" means the same entity object within one text and, across texts
 sharing a vault, an entity of the same type whose canonical value is equal after
@@ -19,6 +20,7 @@ from collections.abc import Sequence
 
 from omissis.contracts import Entity, Gender, SpanType, VaultEntry, make_placeholder
 from omissis.contracts import parse_placeholder as _parse
+from omissis.restore import placeholder_numbers
 from omissis.vault import Vault
 
 
@@ -48,14 +50,11 @@ def find_entry(
 def next_number(vault: Vault, type: SpanType, text: str) -> int:
     """The next free placeholder number of `type` in this session."""
     used = [parsed[1] for e in vault if (parsed := _parse(e.surrogate)) and parsed[0] == type]
+    written = {number for label, number in placeholder_numbers(text) if label is type}
     n = max(used, default=0) + 1
-    while any(make_placeholder(type, n, g) in text for g in _forms(type)):
+    while n in written:
         n += 1
     return n
-
-
-def _forms(type: SpanType) -> tuple[Gender, ...]:
-    return (Gender.UNKNOWN, Gender.M, Gender.F) if type is SpanType.PERSONA else (Gender.UNKNOWN,)
 
 
 def check_mentions(text: str, entities: Sequence[Entity]) -> None:

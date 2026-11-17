@@ -4,40 +4,48 @@ Three steps, for R1 placeholders and for R2 fake values: exact match, normalised
 match, fuzzy match at or above the threshold (task 2.6).
 
 R1. A *placeholder-like token* is a known type label followed by a number and,
-optionally, a gender letter. The parts may be joined by underscores, spaces, hyphens
-or non-breaking hyphens, in any case, with or without brackets, and the brackets and
-underscores may be escaped with a backslash, as Markdown does: `[PERSONA_1_M]`,
-`[persona_1_m]`, `[PERSONA 1 M]`, `PERSONA_1_M`, `[PERSONA-1-M]`, `\\[PERSONA\\_1\\_M\\]`.
-Its normalised form is the canonical placeholder. To avoid touching ordinary Italian
-("in data 12 ottobre"), a token counts only when it shows a placeholder signal: a
-bracket, an underscore, or (to be restored, not to be reported) an upper-case label
-such as `PERSONA 1`. A token with the type and number of a vault entry but another
-form (gender suffix, leading zeros) is ours, altered: it stays and is reported.
-Fuzzy step: a bracketed token that is not a well-formed placeholder is restored
-when it is close enough to exactly one placeholder of the vault and carries the same
-digits (`[PERSONNA_1]`); the number is never guessed.
+optionally, a gender letter. The parts may be joined by underscores, white space (a
+line break too), hyphens or dashes, in any case, with or without brackets; the label
+may carry its Italian accent, and the brackets and underscores may be escaped with a
+backslash, as Markdown does: `[PERSONA_1_M]`, `[persona_1_m]`, `[PERSONA 1 M]`,
+`PERSONA_1_M`, `[PERSONA-1-M]`, `[CITTÀ_1]`, `\\[PERSONA\\_1\\_M\\]`. Its normalised form
+is the canonical placeholder. A token counts only when it is written as a
+placeholder: with an underscore, between two brackets, or with its three parts in
+upper case (`PERSONA 1 F`). A label and a number with none of these ("in data 12
+ottobre", "IMPORTO 1.250,00 EURO", "DOCUMENTO 1", the model's own slot "[Numero IBAN
+1]") are ordinary text and are never touched; nor is a number that goes on as a
+decimal or a file name ("documento_1.pdf"). A token with the type and number of a vault entry but
+another form (gender suffix, leading zeros) is ours, altered: it stays and is
+reported. Fuzzy step: a bracketed token in which no label with its number can be
+read is restored when it is close enough to exactly one placeholder of the vault and
+carries the same digits (`[PERSONNA_1]`); the number is never guessed.
 
-R2. A fake value is restored on whole tokens only, so "Lodi" inside "Lodigiano" is
-left alone: first as written, then without regard to case and to the amount of white
-space, then (the whole fake only, not its variants) on runs of as many words that
-are close enough and carry the same digits. Two different runs that are both close
-enough are not a safe match: the entry is reported as `altered_unresolved`. A fake
-value that the reply uses on its own account is restored too: this cannot be told
-apart, and it is why the number of restored fakes per reply is reported.
+R2. A fake value is restored on whole tokens only, so "Lodi" inside "Lodigiano" and
+"225,00" at the end of "1.225,00" are left alone: first as written, then without regard to
+case and to the amount of white space. Then, for a fake of two or more words only
+(the whole fake, not its variants), on runs of as many words in which every word is
+close enough to the word in the same place, and a word with digits is the same. A
+fake of one word has no fuzzy step: ordinary words are too close to it ("Biella",
+"bella"). Two different runs that are both close enough are not a safe match: the
+entry is reported as `altered_unresolved`. A fake value that the reply uses on its
+own account is restored too: this cannot be told apart, and it is why the number of
+restored fakes per reply is reported. A fake that the reply rewrites in another
+format, or shortens, is not recognised: it stays in the text and its entry is
+`dropped` (docs/evaluation_protocol.md, section 10).
 
 Every vault entry gets exactly one event; the worst outcome wins
 (`altered_unresolved`, then `restored_fuzzy`, `restored`, `dropped`). After the
-substitutions every placeholder-shaped token still in the text has an event,
-whatever its label.
+substitutions every bracketed token in placeholder shape still in the text has an
+event, whatever its label and its case.
 """
 
 from __future__ import annotations
 
 import re
+import unicodedata
 from difflib import SequenceMatcher
 
 from omissis.contracts import (
-    PLACEHOLDER_RE,
     RestoreEvent,
     RestoreOutcome,
     SpanType,
@@ -46,16 +54,32 @@ from omissis.contracts import (
 )
 from omissis.vault import Vault
 
-_SEP = r"(?:\\?[ _\-\u2010\u2011])+"
+_SEP = r"(?:\\?[\s_\-\u2010\u2011\u2013])+"
+_ACCENTED = {"A": "AÀÁ", "E": "EÈÉ", "I": "IÌÍ", "O": "OÒÓ", "U": "UÙÚ"}
+
+
+def _label_pattern(label: str) -> str:
+    """`label` with any separator between its words and each vowel also with an accent."""
+    return "".join(
+        _SEP if ch == "_" else f"[{_ACCENTED[ch]}]" if ch in _ACCENTED else ch for ch in label
+    )
+
+
 _LABELS = sorted((t.value for t in SpanType), key=len, reverse=True)
-_LABEL_ALTERNATIVES = "|".join(label.replace("_", _SEP) for label in _LABELS)
+_LABEL_ALTERNATIVES = "|".join(_label_pattern(label) for label in _LABELS)
+# Before the label: no letter or digit, also behind an underscore ("NUMERO_IBAN_1" is
+# not ours, "_IBAN_1_" in Markdown emphasis is). After the number: no letter or digit,
+# and no decimal, date or file name going on ("1.250", "1/12", "documento_1.pdf").
 _TOKEN_RE = re.compile(
-    rf"(?P<open>\\?\[\s*)?(?<![A-Za-z0-9])(?P<label>{_LABEL_ALTERNATIVES}){_SEP}(?P<n>\d+)"
-    rf"(?:{_SEP}(?P<g>[MF]))?(?![A-Za-z0-9])(?P<close>\s*\\?\])?",
+    rf"(?P<open>\\?\[\s*)?(?<![^\W_])(?<![^\W_]_)(?P<label>{_LABEL_ALTERNATIVES}){_SEP}"
+    rf"(?P<n>\d+)(?:{_SEP}(?P<g>[MF]))?(?![^\W_])(?![.,/]\d)(?!(?-i:\.[a-z]))"
+    r"(?P<close>\s*\\?\])?",
     re.IGNORECASE,
 )
 _BRACKETED_RE = re.compile(r"\\?\[[^\[\]\n]{1,40}\]")
-_EDGE_PUNCTUATION = ".,;:!?()«»\"'"
+# A bracketed token in placeholder shape, with any label and in any case.
+_SHAPED_RE = re.compile(r"\[[^\W\d_]+(?:_[^\W\d_]+)*_\d+(?:_[^\W\d_]+)?\]")
+_EDGE_PUNCTUATION = ".,;:!?()«»\"'_*"
 _RANK = {
     RestoreOutcome.DROPPED: 0,
     RestoreOutcome.RESTORED: 1,
@@ -65,12 +89,34 @@ _RANK = {
 
 
 def _label(match: re.Match[str]) -> str:
-    return re.sub(_SEP, "_", match["label"].upper())
+    plain = unicodedata.normalize("NFD", match["label"].upper())
+    plain = "".join(ch for ch in plain if not unicodedata.combining(ch))
+    return re.sub(_SEP, "_", plain)
 
 
 def _normalise(match: re.Match[str]) -> str:
     gender = f"_{match['g'].upper()}" if match["g"] else ""
     return f"[{_label(match)}_{match['n']}{gender}]"
+
+
+def _is_written_as_placeholder(match: re.Match[str]) -> bool:
+    """False for a label and a number that are ordinary text ("DATA 12", "IBAN 1").
+
+    Ours are a token with an underscore, one between two brackets, and the three
+    parts of a person's placeholder in upper case ("PERSONA 1 F").
+    """
+    if "_" in match.group() or (match["open"] and match["close"]):
+        return True
+    return bool(match["g"]) and match["label"].isupper() and match["g"].isupper()
+
+
+def placeholder_numbers(text: str) -> set[tuple[SpanType, int]]:
+    """The type and number of every token of `text` that restoration reads as a placeholder."""
+    return {
+        (SpanType(_label(match)), int(match["n"]))
+        for match in _TOKEN_RE.finditer(text)
+        if _is_written_as_placeholder(match)
+    }
 
 
 def _digits(value: str) -> str:
@@ -111,20 +157,20 @@ def _restore_placeholders(
 
     def substitute(match: re.Match[str]) -> str:
         raw = match.group()
+        if not _is_written_as_placeholder(match):
+            return raw
         token = _normalise(match)
-        has_signal = bool(match["open"] or match["close"] or "_" in raw)
         entry = vault.get(token)
-        if entry is not None and (has_signal or match["label"].isupper()):
+        if entry is not None:
             out.record(entry.surrogate, RestoreOutcome.RESTORED, None if raw == token else raw)
             return entry.original
-        if has_signal:
-            # Same type and number as a vault entry, but a different form (gender suffix,
-            # leading zeros): it is ours, altered, and there is no safe way to map it.
-            near = by_type_number.get((SpanType(_label(match)), int(match["n"])))
-            if near is not None:
-                out.record(near, RestoreOutcome.ALTERED_UNRESOLVED, raw)
-            elif raw not in out.suspicious:
-                out.suspicious[raw] = RestoreEvent(token, RestoreOutcome.HALLUCINATED_TOKEN, raw)
+        # Same type and number as a vault entry, but a different form (gender suffix,
+        # leading zeros): it is ours, altered, and there is no safe way to map it.
+        near = by_type_number.get((SpanType(_label(match)), int(match["n"])))
+        if near is not None:
+            out.record(near, RestoreOutcome.ALTERED_UNRESOLVED, raw)
+        elif raw not in out.suspicious:
+            out.suspicious[raw] = RestoreEvent(token, RestoreOutcome.HALLUCINATED_TOKEN, raw)
         return raw
 
     return _TOKEN_RE.sub(substitute, reply)
@@ -138,8 +184,10 @@ def _restore_placeholders_fuzzy(
     def substitute(match: re.Match[str]) -> str:
         raw = match.group()
         clean = raw.replace("\\", "")
-        if raw in out.suspicious or parse_placeholder(clean) is not None:
-            return raw  # already reported, or well formed: never mapped to another entry
+        if parse_placeholder(clean) is not None or _TOKEN_RE.search(clean):
+            # Well formed, or read by the steps before (and left there as altered or
+            # unknown): never mapped to another entry.
+            return raw
         near = [e for e in entries if _close(clean, e.surrogate, threshold)]
         if len(near) != 1:
             return raw
@@ -149,40 +197,65 @@ def _restore_placeholders_fuzzy(
     return _BRACKETED_RE.sub(substitute, text)
 
 
+def _whole(form: str) -> str:
+    """The pattern of `form` as a whole token: not inside a word, nor the end of a number.
+
+    A letter or a digit next to the form makes it a part of a longer token; an
+    underscore does not (Markdown emphasis). What follows a number is left free: a
+    detector may mark "€ 320" in "€ 320,00", and the fake is then followed by the
+    decimals of the original.
+    """
+    pattern = r"\s+".join(re.escape(word) for word in form.split())
+    before = r"(?<![^\W_])(?<!\d[.,])" if form[:1].isdigit() else r"(?<![^\W_])"
+    return before + pattern + r"(?![^\W_])"
+
+
 def _restore_forms(text: str, forms: list[tuple[str, str, VaultEntry]], out: _Outcomes) -> str:
     """Steps 1 and 2 for R2: each fake form on whole tokens, the longest first."""
     for fake, original, entry in sorted(forms, key=lambda form: -len(form[0])):
-        pattern = r"\s+".join(re.escape(word) for word in fake.split())
 
         def substitute(match: re.Match[str], fake=fake, original=original, entry=entry) -> str:
             raw = match.group()
             out.record(entry.surrogate, RestoreOutcome.RESTORED, None if raw == fake else raw)
             return original
 
-        text = re.sub(rf"(?<!\w){pattern}(?!\w)", substitute, text, flags=re.IGNORECASE)
+        text = re.sub(_whole(fake), substitute, text, flags=re.IGNORECASE)
     return text
+
+
+def _near_miss(words: list[str], fake: list[str], threshold: float) -> bool:
+    """True when every word is close to the word of the fake in the same place.
+
+    A word with digits must be the same: another number is never a misspelling.
+    """
+    for got, want in zip(words, fake, strict=True):
+        if re.search(r"\d", got + want):
+            if got != want:
+                return False
+        elif SequenceMatcher(None, got.casefold(), want.casefold()).ratio() < threshold:
+            return False
+    return True
 
 
 def _restore_fakes(text: str, entries: list[VaultEntry], threshold: float, out: _Outcomes) -> str:
     """Steps 1 to 3 for R2: the whole fakes, their near misses, then their variants."""
     text = _restore_forms(text, [(e.surrogate, e.original, e) for e in entries], out)
     for entry in entries:
-        if out.entries[entry.surrogate][0] is not RestoreOutcome.DROPPED:
-            continue
+        fake = entry.surrogate.split()
+        if len(fake) < 2:
+            continue  # ordinary words are too close to a fake of one word
         words = list(re.finditer(r"\S+", text))
-        size = len(entry.surrogate.split())
-        runs = [(words[i].start(), words[i + size - 1].end()) for i in range(len(words) - size + 1)]
         found: dict[str, None] = {}
-        for start, end in runs:
-            candidate = text[start:end].strip(_EDGE_PUNCTUATION)
-            if candidate and _close(candidate, entry.surrogate, threshold):
+        for i in range(len(words) - len(fake) + 1):
+            run = text[words[i].start() : words[i + len(fake) - 1].end()]
+            candidate = run.strip(_EDGE_PUNCTUATION)
+            got = candidate.split()
+            if len(got) == len(fake) and _near_miss(got, fake, threshold):
                 found[candidate] = None
         if len(found) == 1:
             (candidate,) = found
             out.record(entry.surrogate, RestoreOutcome.RESTORED_FUZZY, candidate)
-            text = re.sub(
-                rf"(?<!\w){re.escape(candidate)}(?!\w)", lambda m, e=entry: e.original, text
-            )
+            text = re.sub(_whole(candidate), lambda m, e=entry: e.original, text)
         elif found:
             out.record(entry.surrogate, RestoreOutcome.ALTERED_UNRESOLVED, next(iter(found)))
     variants = [
@@ -216,10 +289,11 @@ def restore(reply: str, vault: Vault, fuzzy_threshold: float) -> tuple[str, list
     text = _restore_placeholders_fuzzy(text, placeholders, fuzzy_threshold, out)
     text = _restore_fakes(text, fakes, fuzzy_threshold, out)
 
-    # No placeholder may remain silently: whatever is still there has an event.
-    reported = {form for _, form in out.entries.values()} | set(out.suspicious)
-    for match in PLACEHOLDER_RE.finditer(text):
+    # No placeholder may remain silently: whatever is still there has an event. A token
+    # is covered when an event names it, or the part of it that was read ("[PERSONA_1").
+    reported = [form for _, form in out.entries.values() if form] + list(out.suspicious)
+    for match in _SHAPED_RE.finditer(text):
         raw = match.group()
-        if raw not in reported and raw not in out.suspicious:
+        if not any(raw.startswith(form) for form in reported):
             out.suspicious[raw] = RestoreEvent(raw, RestoreOutcome.HALLUCINATED_TOKEN, raw)
     return text, out.events()

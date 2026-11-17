@@ -129,6 +129,11 @@ def test_fake_amounts_keep_the_order_of_magnitude(value, pattern):
         ("16 novembre 2026", "DATA", r"([1-9]|[12]\d) novembre 2026"),
         ("14/02/1961", "DATA_NASCITA", r"[012]\d/02/1961"),
         ("2026-12-01", "DATA", r"2026-12-[012]\d"),
+        ("1 dicembre", "DATA", r"([2-9]|[12]\d) dicembre"),
+        ("dal 16 novembre 2026", "DATA", r"dal ([1-9]|[12]\d) novembre 2026"),
+        ("16.11.2026", "DATA", r"[012]\d\.11\.2026"),
+        ("1/3/2027", "DATA", r"([2-9]|[12]\d)/3/2027"),
+        ("6 anni", "ETA", r"([1-9]|1[01]) anni"),
         ("52 anni", "ETA", r"(4[7-9]|5[0-7]) anni"),
         ("lidia.caprioli@example.com", "EMAIL", r"[a-z]+\.[a-z]+@example\.com"),
         ("via dei Tigli 14", "INDIRIZZO", r"(via|viale|corso|piazza) .+ \d+"),
@@ -160,12 +165,65 @@ def test_types_without_a_fake_keep_the_placeholder():
     assert fakes.NO_FAKE >= {t for t, c in TYPE_CLASS.items() if c is SpanClass.SPECIAL}
     assert fake_of("magazziniere", "RUOLO") == "[RUOLO_1]"
     assert fake_of("ernia del disco lombare", "SALUTE") == "[SALUTE_1]"
-    for type in SpanType:
-        text, entity = one("valore 12", type)
+    dates = {SpanType.DATA: "16 novembre 2026", SpanType.DATA_NASCITA: "14/02/1961"}
+    for type in SpanType:  # "valore 12" has the shape every generator needs, but for a date
+        text, entity = one(dates.get(type, "valore 12"), type)
         _, vault = replace(text, [entity], Strategy.R2, seed=1)
         assert (parse_placeholder(next(iter(vault)).surrogate) is not None) == (
             type in fakes.NO_FAKE
         )
+
+
+@pytest.mark.parametrize(
+    ("value", "type"),
+    [
+        ("lunedì scorso", "DATA"),  # no day to move
+        ("dicembre", "DATA"),
+        ("2019", "DATA"),
+        ("nata nel 1972", "DATA_NASCITA"),
+        ("trentenne", "ETA"),  # no number
+        ("milleduecento euro", "IMPORTO"),
+        ("12/2026", "DATA"),  # a month and a year: the 12 is not a day
+        ("2026-12", "DATA"),
+        ("dicembre 2026", "DATA"),
+        ("il 15 del mese", "DATA"),
+        ("10:30 del 16 novembre", "DATA"),  # another number beside the date
+        ("16-18 novembre", "DATA"),
+    ],
+)
+def test_value_without_the_shape_of_its_fake_keeps_the_placeholder(value, type):
+    for seed in range(5):
+        assert fake_of(value, type, seed) == f"[{type}_1]"
+
+
+def test_two_dates_without_a_day_are_masked_apart_and_restored():
+    text = "Ho scritto lunedì scorso e parto a fine mese, non il 1 gennaio."
+    spans = [
+        Span(text.index(value), text.index(value) + len(value), value, SpanType.DATA, 1.0, "GOLD")
+        for value in ("lunedì scorso", "fine mese")
+    ]
+    masked, vault = replace(text, resolve(spans, text), Strategy.R2, seed=1)
+    assert masked == "Ho scritto [DATA_1] e parto a [DATA_2], non il 1 gennaio."
+    restored, events = restore(masked, vault, 0.9)
+    assert restored == text
+    assert [e.outcome for e in events] == [R.RESTORED, R.RESTORED]
+
+
+def test_no_free_fake_left_keeps_the_placeholder(monkeypatch):
+    # Every draw gives a value that is already in the text.
+    monkeypatch.setitem(fakes._GENERATORS, SpanType.CITTA, lambda rng, value: "Lodi")
+    text, entity = one("Bergamo", "CITTA", text="Da Bergamo a Lodi.")
+    masked, _ = replace(text, [entity], Strategy.R2, seed=1)
+    assert masked == "Da [CITTA_1] a Lodi."
+
+
+def test_person_without_a_free_fake_keeps_a_placeholder_with_the_gender(monkeypatch):
+    monkeypatch.setattr(fakes, "load_list", lambda name: ("Ferri",))
+    text, entity = one("Anna Ferri", "PERSONA", Gender.F, text="Scrive Anna Ferri.")
+    masked, vault = replace(text, [entity], Strategy.R2, seed=1)
+    assert masked == "Scrive [PERSONA_1_F]."
+    again, _ = replace(text, [entity], Strategy.R2, seed=1, vault=vault)  # the same session
+    assert again == masked and len(vault) == 1
 
 
 def test_surname_alone_is_written_as_the_fake_surname():
@@ -298,3 +356,122 @@ def test_fixture_masked_with_r2_is_restored_exactly(record):
     assert text == record.text
     assert {e.outcome for e in events} == {R.RESTORED}
     assert len(events) == len(vault)
+
+
+def test_two_children_get_two_ages_and_none_becomes_an_adult():
+    text = "Ho due figli, di 6 anni e di 9 anni, e lavoro qui da 18 anni."
+    spans = [
+        Span(text.index(v), text.index(v) + len(v), v, SpanType.ETA, 1.0, "GOLD")
+        for v in ("6 anni", "9 anni")
+    ]
+    masked, vault = replace(text, resolve(spans, text), Strategy.R2, seed=1)
+    ages = sorted(int(e.surrogate.split()[0]) for e in vault)
+    assert len(ages) == 2 and all(1 <= age <= 14 for age in ages)
+    assert restore(masked, vault, 0.9)[0] == text
+
+
+@pytest.mark.parametrize(
+    ("written", "surname", "first"),
+    [
+        ("Marco De Luca", "De Luca", "Marco"),
+        ("Anna Di Stefano", "Di Stefano", "Anna"),
+        ("Maria Grazia Bianchi", "Bianchi", "Maria Grazia"),
+        ("Sig. Marco Ferri", "Ferri", "Marco"),  # a title written inside the span
+    ],
+)
+def test_fake_surname_and_first_name_go_back_to_the_real_ones(written, surname, first):
+    text = f"Scrive {written}."
+    span = Span(7, 7 + len(written), written, SpanType.PERSONA, 1.0, "GOLD")
+    _, vault = replace(text, resolve([span], text), Strategy.R2, seed=1)
+    (entry,) = vault
+    fake_first, fake_surname = entry.surrogate.split()
+    assert entry.original_variants[:2] == (surname, first)
+    assert restore(f"Gentile {fake_surname}.", vault, 0.9)[0] == f"Gentile {surname}."
+    assert restore(f"Cara {fake_first},", vault, 0.9)[0] == f"Cara {first},"
+
+
+def fakes_vault(*entries):
+    vault = Vault()
+    for n, (fake, original, type) in enumerate(entries, start=1):
+        vault.add(VaultEntry(fake, original, SpanType(type), f"{type}_{n}"))
+    return vault
+
+
+@pytest.mark.parametrize(
+    ("fake", "reply"),
+    [
+        ("Biella", "Gentile cliente, è una bella notizia."),
+        ("Chieti", "Abbiamo ricevuto i documenti chiesti."),
+        ("Matera", "La normativa in materia di mutui è cambiata."),
+        ("Benevento", "È un prodotto del territorio beneventano."),
+    ],
+)
+def test_ordinary_word_close_to_a_one_word_fake_is_not_restored(fake, reply):
+    text, events = restore(reply, fakes_vault((fake, "Padova", "CITTA")), 0.8)
+    assert text == reply
+    assert outcome(events)[fake] == (R.DROPPED, None)
+
+
+def test_shortened_fake_never_takes_the_word_that_follows():
+    vault = fakes_vault(("Lavorazioni Meccaniche Sbrana S.p.A.", "Sardelec Impianti", "AZIENDA"))
+    reply = "La Lavorazioni Meccaniche Sbrana ha confermato il bonifico."
+    text, _ = restore(reply, vault, 0.9)
+    assert "ha confermato il bonifico." in text
+
+
+@pytest.mark.parametrize(
+    "reply",
+    [
+        "Il plafond della carta resta di 1.225,00 euro.",  # inside a longer number
+        "Un accredito di 22.500 euro.",  # the same digits, another size
+        "Il totale è 225,005 euro.",
+    ],
+)
+def test_fake_amount_is_not_found_in_another_number(reply):
+    text, events = restore(reply, fakes_vault(("225,00 euro", "245,00 euro", "IMPORTO")), 0.8)
+    assert text == reply
+    assert outcome(events)["225,00 euro"] == (R.DROPPED, None)
+
+
+def test_altered_second_copy_of_a_fake_is_restored_whole_and_reported():
+    reply = "Gentile Iris Marangoni, confermiamo. Cordiali saluti a Iris Marangon."
+    text, events = restore(reply, r2_vault(), 0.9)
+    assert text == "Gentile Lidia Caprioli, confermiamo. Cordiali saluti a Lidia Caprioli."
+    assert outcome(events)["Iris Marangoni"] == (R.RESTORED_FUZZY, "Iris Marangon")
+
+
+@pytest.mark.parametrize("marked", ["€ 320", "320", "320,00"])
+def test_amount_marked_without_its_decimals_or_its_currency_is_restored(marked):
+    # A detector may give only a part of "€ 320,00": what follows the fake is not ours.
+    text = "La rata è pari a € 320,00 al mese."
+    start = text.index(marked)
+    span = Span(start, start + len(marked), marked, SpanType.IMPORTO, 0.8, "D3", "rata")
+    for seed in range(5):
+        masked, vault = replace(text, resolve([span], text), Strategy.R2, seed)
+        restored, events = restore(masked, vault, 0.9)
+        assert restored == text, masked
+        assert [e.outcome for e in events] == [R.RESTORED]
+
+
+def test_fake_in_markdown_underscore_emphasis_is_restored():
+    reply = "Gentile _Iris Marangoni_, da _Lodi_: IBAN _IT81O0000010618943216096700_."
+    text, events = restore(reply, r2_vault(), 0.9)
+    assert text == "Gentile _Lidia Caprioli_, da _Bergamo_: IBAN _IT89Y0000025613651127989360_."
+    assert {e.outcome for e in events} == {R.RESTORED, R.DROPPED}  # [RUOLO_1] is not used
+
+
+def test_first_word_of_two_first_names_is_written_as_the_fake_first_name():
+    text = "Cara Maria, la Sig.ra Maria Grazia Ferri conferma."
+    spans = [
+        Span(5, 10, "Maria", SpanType.PERSONA, 1.0, "GOLD"),
+        Span(22, 40, "Maria Grazia Ferri", SpanType.PERSONA, 1.0, "GOLD"),
+    ]
+    masked, vault = replace(text, resolve(spans, text), Strategy.R2, seed=13)
+    (entry,) = vault
+    first, surname = entry.surrogate.split()
+    assert masked == f"Cara {first}, la Sig.ra {first} {surname} conferma."
+    # The fake first name goes back to the two first names, never to the whole name.
+    assert (
+        restore(masked, vault, 0.9)[0]
+        == "Cara Maria Grazia, la Sig.ra Maria Grazia Ferri conferma."
+    )

@@ -16,19 +16,25 @@ in the text or in the vault, so restoration can never mistake a real value for a
 - CF: valid check character, place code starting with X, which no municipality has.
 - PIVA: valid check digit, office code `000`, which is never issued.
 - TELEFONO, DOCUMENTO, CONTO, UTENTE: the same shape with other digits and letters;
-  a phone keeps its prefix.
+  a phone keeps `+39` and its first digit (0 for a landline, 3 for a mobile).
 - IMPORTO: the same number of digits and the same decimals, so the same order of
   magnitude.
-- DATA, DATA_NASCITA: another day of the same month.
+- DATA, DATA_NASCITA: another day of the same month, for a date written with its day
+  (`16 novembre 2026`, `16/11/2026`, `2026-11-16`).
 - ETA: the age moved by one to five years.
 - RUOLO, STRUTTURA, NAZIONALITA and every special category: no fake, the R1
   placeholder.
 
 The last line is a choice: a fake job, clinic or diagnosis would change the meaning
-of the text and read as true. A person of two or more words also records the fake
-surname and the fake first name as `surrogate_variants`, aligned with the original
-surname and first name in `original_variants`: a mention of the surname alone is
-written, and restored, as the surname alone.
+of the text and read as true. The same placeholder is written whenever there is no
+realistic fake to give: a date that is not one of the three shapes above ("a
+dicembre", "2019", "lunedì scorso", a date with an hour), an age or an amount
+without a number ("trentenne"), or a value for which no free fake is left after
+`MAX_DRAWS` draws. A person with a first name also records the fake surname and the
+fake first name as `surrogate_variants`, aligned with the original surname and first
+names in `original_variants`, read as the resolver reads them ("De Luca", "Maria
+Grazia", no title): a mention of the surname alone is written, and restored, as the
+surname alone.
 
 The lists in `data/` were written for this project. The profile pool of the
 evaluation is built to be disjoint from them: do not change them after gate G2.
@@ -55,6 +61,7 @@ from omissis.contracts import (
 )
 from omissis.detect.rules import cf_check_character
 from omissis.replace.placeholders import check_mentions, find_entry, next_number, normalise
+from omissis.resolve import name_parts
 from omissis.vault import Vault
 
 DATA = Path(__file__).parent / "data"
@@ -123,32 +130,48 @@ def _phone(rng: random.Random, value: str) -> str:
     return _shape(rng, value, keep=prefix.end() if prefix else 0)
 
 
-def _amount(rng: random.Random, value: str) -> str:
+def _amount(rng: random.Random, value: str) -> str | None:
     number = re.search(r"\d[\d.]*", value)  # the whole part, with the dots of the thousands
     if number is None:
-        return _shape(rng, value)
+        return None
     digits = [rng.choice("123456789")] + [rng.choice(string.digits) for _ in number.group()[1:]]
     whole = "".join(d if ch.isdigit() else ch for d, ch in zip(digits, number.group(), strict=True))
     return value[: number.start()] + whole + value[number.end() :]
 
 
-def _date(rng: random.Random, value: str) -> str:
-    groups = [m for m in re.finditer(r"\d+", value) if len(m.group()) <= 2]
-    if not groups:
-        return _shape(rng, value) if re.search(r"\d", value) else "1 gennaio"
-    day = groups[-1] if re.match(r"\d{4}", value) else groups[0]  # 2026-12-01 or 1 dicembre
-    new = rng.choice([d for d in range(1, 29) if d != int(day.group())])
-    width = 2 if day.group().startswith("0") or re.search(r"\d[/.-]\d", value) else 1
-    return value[: day.start()] + f"{new:0{width}d}" + value[day.end() :]
+_MONTHS = (
+    "gennaio|febbraio|marzo|aprile|maggio|giugno|luglio|agosto|settembre|ottobre|novembre|dicembre"
+)
+# The three ways of writing a date with its day. Group `day` is what changes.
+_DATE_SHAPES = (
+    re.compile(
+        rf"(?<![\d/.-])(?P<day>\d{{1,2}})\s+(?:{_MONTHS})\b(?:\s+\d{{4}}(?!\d))?", re.IGNORECASE
+    ),
+    re.compile(r"(?<![\d/.-])(?P<day>\d{1,2})[/.-]\d{1,2}[/.-]\d{2,4}(?![\d/.-])"),
+    re.compile(r"(?<![\d/.-])\d{4}-\d{2}-(?P<day>\d{2})(?![\d/.-])"),
+)
 
 
-def _age(rng: random.Random, value: str) -> str:
+def _date(rng: random.Random, value: str) -> str | None:
+    found = [(shape, m) for shape in _DATE_SHAPES for m in shape.finditer(value)]
+    if len(found) != 1:
+        return None  # no day to move, or more than one date
+    shape, date = found[0]
+    if re.search(r"\d", value[: date.start()] + value[date.end() :]):
+        return None  # another number beside the date: an hour, a second day
+    old = date.group("day")
+    new = rng.choice([d for d in range(1, 29) if d != int(old)])
+    # Two digits when the day was written so; a day before a month name only with its zero.
+    padded = old.startswith("0") or (len(old) == 2 and shape is not _DATE_SHAPES[0])
+    return value[: date.start("day")] + f"{new:0{2 if padded else 1}d}" + value[date.end("day") :]
+
+
+def _age(rng: random.Random, value: str) -> str | None:
     number = re.search(r"\d+", value)
     if number is None:
-        return _shape(rng, value)
-    new = max(18, int(number.group()) + rng.choice((-5, -4, -3, -2, -1, 1, 2, 3, 4, 5)))
-    if new == int(number.group()):
-        new += 1
+        return None
+    age, move = int(number.group()), rng.choice((-5, -4, -3, -2, -1, 1, 2, 3, 4, 5))
+    new = age + move if age + move >= 1 else age - move  # a child does not get an age below 1
     return value[: number.start()] + str(new) + value[number.end() :]
 
 
@@ -159,7 +182,8 @@ def _email(rng: random.Random) -> str:
 
 _BANK = re.compile(r"\b(banc[ao]|cassa|credito)\b", re.IGNORECASE)
 
-_GENERATORS: dict[SpanType, Callable[[random.Random, str], str]] = {
+# A generator gives None for a value that has not the shape it knows how to fake.
+_GENERATORS: dict[SpanType, Callable[[random.Random, str], str | None]] = {
     SpanType.AZIENDA: lambda rng, value: rng.choice(
         load_list("banche" if _BANK.search(value) else "aziende")
     ),
@@ -180,37 +204,55 @@ _GENERATORS: dict[SpanType, Callable[[random.Random, str], str]] = {
 }
 
 
-def _draw(rng: random.Random, entity: Entity) -> tuple[str, tuple[str, ...], tuple[str, ...]]:
-    """One candidate: the fake, the original variants and the fake variants, aligned."""
+def _draw(
+    rng: random.Random, entity: Entity
+) -> tuple[str, tuple[str, ...], tuple[str, ...]] | None:
+    """One candidate: the fake, the original variants and the fake variants, aligned.
+
+    None when the value has not the shape its generator knows how to fake.
+    """
     if entity.type is not SpanType.PERSONA:
-        return _GENERATORS[entity.type](rng, entity.canonical), (), ()
-    words = entity.canonical.split()
-    surname = rng.choice(load_list("cognomi"))
-    if len(words) < 2:
-        return surname, (), ()
-    first = _first_name(rng, entity.gender)
-    return f"{first} {surname}", (words[-1], words[0]), (surname, first)
+        fake = _GENERATORS[entity.type](rng, entity.canonical)
+        return None if fake is None else (fake, (), ())
+    first_names, surname = name_parts(entity.canonical)
+    fake_surname = rng.choice(load_list("cognomi"))
+    if not first_names:
+        return fake_surname, (), ()
+    fake_first = _first_name(rng, entity.gender)
+    originals, fakes = (surname, first_names), (fake_surname, fake_first)
+    if " " in first_names:  # the first of two first names is also written alone
+        originals, fakes = (*originals, first_names.split()[0]), (*fakes, fake_first)
+    return f"{fake_first} {fake_surname}", originals, fakes
+
+
+def _gender(entity: Entity) -> Gender:
+    """The gender a placeholder of `entity` carries: only a person has one."""
+    return entity.gender if entity.type is SpanType.PERSONA else Gender.UNKNOWN
 
 
 def _new_entry(text: str, entity: Entity, seed: int, vault: Vault) -> VaultEntry:
-    if entity.type in NO_FAKE:
-        placeholder = make_placeholder(entity.type, next_number(vault, entity.type, text))
-        variants = tuple(
-            dict.fromkeys(m.text for m in entity.mentions if m.text != entity.canonical)
-        )
-        return VaultEntry(placeholder, entity.canonical, entity.type, entity.entity_id, variants)
-
-    rng = random.Random(f"{seed}|{entity.type.value}|{normalise(entity.canonical)}")
-    folded = text.casefold()
-    taken = {normalise(v) for e in vault for v in (e.surrogate, e.original, *e.surrogate_variants)}
-    for _ in range(MAX_DRAWS):
-        fake, originals, fakes = _draw(rng, entity)
-        parts = (fake, *fakes)
-        if all(p.casefold() not in folded and normalise(p) not in taken for p in parts):
-            return VaultEntry(
-                fake, entity.canonical, entity.type, entity.entity_id, originals, fakes
-            )
-    raise RuntimeError(f"no free fake value for an entity of type {entity.type.value}")
+    if entity.type not in NO_FAKE:
+        rng = random.Random(f"{seed}|{entity.type.value}|{normalise(entity.canonical)}")
+        folded = text.casefold()
+        taken = {
+            normalise(v) for e in vault for v in (e.surrogate, e.original, *e.surrogate_variants)
+        }
+        for _ in range(MAX_DRAWS):
+            drawn = _draw(rng, entity)
+            if drawn is None:
+                break
+            fake, originals, fakes = drawn
+            parts = (fake, *fakes)
+            if all(p.casefold() not in folded and normalise(p) not in taken for p in parts):
+                return VaultEntry(
+                    fake, entity.canonical, entity.type, entity.entity_id, originals, fakes
+                )
+    # No realistic fake: the type has none, the value has not the shape of one, or no
+    # free value is left. The entity keeps the R1 placeholder.
+    number = next_number(vault, entity.type, text)
+    placeholder = make_placeholder(entity.type, number, _gender(entity))
+    variants = tuple(dict.fromkeys(m.text for m in entity.mentions if m.text != entity.canonical))
+    return VaultEntry(placeholder, entity.canonical, entity.type, entity.entity_id, variants)
 
 
 def _written(entry: VaultEntry, mention: Span) -> str:
@@ -228,7 +270,7 @@ def replace_r2(text: str, entities: Sequence[Entity], seed: int, vault: Vault) -
     check_mentions(text, entities)
     edits: list[tuple[int, int, str]] = []
     for entity in sorted(entities, key=lambda e: min(m.start for m in e.mentions)):
-        entry = find_entry(vault, entity.type, entity.canonical)
+        entry = find_entry(vault, entity.type, entity.canonical, _gender(entity))
         if entry is None:
             entry = _new_entry(text, entity, seed, vault)
             vault.add(entry)
