@@ -19,7 +19,11 @@ SIGNATURES = [
     (backends.complete, ["request", "config"], []),
     (backends.register_provider, ["name", "fn"], []),
     (pipeline.mask, ["text", "config", "gold_spans", "vault"], ["gold_spans", "vault"]),
-    (pipeline.protect_send_restore, ["text", "task", "config"], []),
+    (
+        pipeline.protect_send_restore,
+        ["text", "task", "config", "gold_spans"],
+        ["gold_spans"],
+    ),
 ]
 
 

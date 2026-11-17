@@ -13,7 +13,7 @@ Team project for *AI Frontiers: Large Language Models* (LUISS, fall 2026).
 
 ## Status
 
-Step 0 (foundation): data contracts, configuration, vault and the boundary
+Block 0 (foundation): data contracts, configuration, vault and the boundary
 functions as stubs. See `docs/tasks/README.md` for the plan.
 
 ## Quick start

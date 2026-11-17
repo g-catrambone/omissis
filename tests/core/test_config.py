@@ -136,7 +136,9 @@ def test_load_models_and_pinning(tmp_path):
 
 
 def test_require_pinned_refuses_unpinned_and_missing(tmp_path):
-    models = load_models(REPO / "configs" / "models.yaml")
+    unpinned = {"provider": "TO_BE_PINNED", "id": "TO_BE_PINNED", "revision": "TO_BE_PINNED"}
+    path = write(tmp_path / "m.yaml", pinned_models(**{role: unpinned for role in ROLES}))
+    models = load_models(path)
     assert not any(m.pinned for m in models.values())
     with pytest.raises(ConfigError, match="not pinned"):
         require_pinned(models, "cloud")

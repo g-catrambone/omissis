@@ -26,8 +26,14 @@ class LLMRequest:
     params: Mapping[str, Any] = field(default_factory=lambda: {"temperature": 0})
 
     def __post_init__(self) -> None:
+        # `temperature: 0` is always there: what the caller passes is merged over it.
+        # Integral floats become integers, so that 0 and 0.0 give one cache key.
+        params = {"temperature": 0, **self.params}
+        for name, value in params.items():
+            if isinstance(value, float) and value.is_integer():
+                params[name] = int(value)
         # Read-only copy, so a request cannot change after its cache key is computed.
-        object.__setattr__(self, "params", MappingProxyType(dict(self.params)))
+        object.__setattr__(self, "params", MappingProxyType(params))
 
 
 @dataclass(frozen=True)
@@ -45,6 +51,10 @@ _PROVIDERS: dict[str, ProviderFn] = {}
 
 class CacheMissError(RuntimeError):
     """A request is not in the cache and the backend is `replay`."""
+
+
+class TruncatedReplyError(RuntimeError):
+    """The model stopped at the token limit: the reply is incomplete and is not cached."""
 
 
 def cache_key(model: ModelSpec, request: LLMRequest) -> str:
@@ -109,8 +119,10 @@ def complete(request: LLMRequest, config: RunConfig) -> LLMResponse:
         "created_at": datetime.now(UTC).isoformat(timespec="seconds"),
     }
     path.parent.mkdir(parents=True, exist_ok=True)
+    # A file that does not end with a newline (a merge, an editor) gets one first.
+    broken = path.exists() and path.stat().st_size > 0 and not path.read_bytes().endswith(b"\n")
     with open(path, "a", encoding="utf-8", newline="\n") as fh:
-        fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+        fh.write(("\n" if broken else "") + json.dumps(record, ensure_ascii=False) + "\n")
     return LLMResponse(text, model.id, model.revision, cached=False)
 
 
@@ -137,3 +149,8 @@ def _echo(model: ModelSpec, request: LLMRequest) -> str:
 
 
 register_provider("echo", _echo)
+
+# Imported here, after the names it needs exist; the provider is registered on import.
+from omissis.backends.groq import groq_provider  # noqa: E402
+
+register_provider("groq", groq_provider)

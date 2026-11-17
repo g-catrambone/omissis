@@ -1,4 +1,4 @@
-"""Restore, exact and normalised steps (task B2)."""
+"""Restore of R1 placeholders: exact and normalised steps (block 1), fuzzy step (task 2.6)."""
 
 import pytest
 
@@ -111,11 +111,10 @@ def test_one_event_per_vault_entry_then_suspicious_tokens():
     reply = "[IBAN_1] [CITTA_9] [CITTA_9] [PERSONA_1]"
     _, events = restore(reply, make_vault(), 0.9)
     assert [(e.surrogate, e.outcome) for e in events] == [
-        ("[PERSONA_1_F]", R.DROPPED),
+        ("[PERSONA_1_F]", R.ALTERED_UNRESOLVED),  # one outcome per entry: no `dropped` too
         ("[IBAN_1]", R.RESTORED),
         ("[DATA_NASCITA_1]", R.DROPPED),
         ("[CITTA_9]", R.HALLUCINATED_TOKEN),
-        ("[PERSONA_1_F]", R.ALTERED_UNRESOLVED),
     ]
 
 
@@ -134,8 +133,64 @@ def test_threshold_out_of_range_is_rejected():
         restore("x", Vault(), 1.5)
 
 
-def test_r2_surrogates_are_not_built_yet():
-    vault = Vault()
-    vault.add(VaultEntry("Bruno Neri", "Lidia Caprioli", SpanType.PERSONA, "PERSONA_1"))
-    with pytest.raises(NotImplementedError, match="B8"):
-        restore("Bruno Neri", vault, 0.9)
+# --- task 2.6: escapes, hyphens, fuzzy step, final scan -------------------------------
+
+
+@pytest.mark.parametrize(
+    "form",
+    [
+        "\\[PERSONA\\_1\\_F\\]",  # Markdown escapes
+        "[PERSONA\\_1\\_F]",
+        "[PERSONA-1-F]",  # hyphens
+        "[PERSONA\u20111\u2011F]",  # non-breaking hyphens
+        "PERSONA-1-F",
+    ],
+)
+def test_escaped_and_hyphenated_placeholders_are_restored(form):
+    text, events = restore(f"Gentile {form}, grazie.", make_vault(), 0.9)
+    assert text == "Gentile Lidia Caprioli, grazie."
+    assert outcomes(events)["[PERSONA_1_F]"] is R.RESTORED
+
+
+@pytest.mark.parametrize(
+    "form", ["[PERSONNA_1_F]", "[PERSON_1_F]", "[IBANN_1]", "[DATA_NASCITTA_1]"]
+)
+def test_near_miss_above_the_threshold_is_restored_fuzzy(form):
+    text, events = restore(f"Ciao {form}.", make_vault(), 0.9)
+    assert form not in text
+    fuzzy = [e for e in events if e.outcome is R.RESTORED_FUZZY]
+    assert [e.found_as for e in fuzzy] == [form]
+    assert_no_silent_placeholder(text, events)
+
+
+@pytest.mark.parametrize("form", ["[PERS_1_F]", "[P_1_F]", "[vedi allegato 1]"])
+def test_near_miss_below_the_threshold_is_left_alone(form):
+    text, events = restore(f"Ciao {form}.", make_vault(), 0.9)
+    assert text == f"Ciao {form}."
+    assert R.RESTORED_FUZZY not in outcomes(events).values()
+    assert_no_silent_placeholder(text, events)
+
+
+def test_fuzzy_never_changes_the_number():
+    vault = make_vault()
+    vault.add(VaultEntry("[IBAN_2]", "IT77V0000094829785481207069", SpanType.IBAN, "IBAN_2"))
+    # One wrong letter is close to both IBAN placeholders; the digit decides.
+    text, events = restore("Vecchio [IBAM_2], nuovo [IBAM_3].", vault, 0.8)
+    assert text == "Vecchio IT77V0000094829785481207069, nuovo [IBAM_3]."
+    assert outcomes(events)["[IBAN_2]"] is R.RESTORED_FUZZY
+    assert outcomes(events)["[IBAN_1]"] is R.DROPPED
+
+
+def test_restored_and_altered_entry_reports_the_worse_outcome():
+    text, events = restore("[PERSONA_1_F] e poi [PERSONA_1_M]", make_vault(), 0.9)
+    assert text == "Lidia Caprioli e poi [PERSONA_1_M]"
+    person = [e for e in events if e.surrogate == "[PERSONA_1_F]"]
+    assert [(e.outcome, e.found_as) for e in person] == [(R.ALTERED_UNRESOLVED, "[PERSONA_1_M]")]
+
+
+def test_placeholder_shaped_token_with_an_unknown_label_has_an_event():
+    text, events = restore("Vedi [ALLEGATO_2] e [IBAN_1].", make_vault(), 0.9)
+    assert text == "Vedi [ALLEGATO_2] e IT89Y0000025613651127989360."
+    unknown = [e for e in events if e.found_as == "[ALLEGATO_2]"]
+    assert [e.outcome for e in unknown] == [R.HALLUCINATED_TOKEN]
+    assert_no_silent_placeholder(text, events)

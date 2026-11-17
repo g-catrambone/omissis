@@ -1,0 +1,12 @@
+# Defaults of the demo app (task 2.7). The app overrides detector, strategy and
+# backend from its selectors. In replay mode it reads results/cache; with backend
+# cloud it reads and writes results/scratch/app instead.
+detector: D0
+strategy: R1
+mask_quasi: true
+backend: replay
+seed: 20261111
+fuzzy_threshold: 0.9
+source_priority: [D0, D2, D1, D3]
+models_file: configs/models.yaml
+cache_dir: results/cache

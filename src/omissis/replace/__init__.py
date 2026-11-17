@@ -5,6 +5,7 @@ from __future__ import annotations
 from collections.abc import Sequence
 
 from omissis.contracts import Entity, Strategy
+from omissis.replace.fakes import replace_r2
 from omissis.replace.placeholders import replace_r1
 from omissis.vault import Vault
 
@@ -25,7 +26,7 @@ def replace(
     session. Substitution runs from the end of the text to the start.
     """
     strategy = Strategy(strategy)
-    if strategy is Strategy.R2:
-        raise NotImplementedError("replace with R2 is built by task B7")
     vault = Vault() if vault is None else vault
+    if strategy is Strategy.R2:
+        return replace_r2(text, entities, seed, vault), vault
     return replace_r1(text, entities, vault), vault
