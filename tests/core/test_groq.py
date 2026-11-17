@@ -1,5 +1,6 @@
 """Provider `groq` and the request rules of task 2.4. The HTTP call is always mocked."""
 
+import http.client
 import io
 import json
 import urllib.error
@@ -78,14 +79,15 @@ def test_no_system_message_when_the_request_has_none(posted):
 
 def test_missing_key_is_a_clear_config_error(posted, monkeypatch):
     monkeypatch.delenv("GROQ_API_KEY")
+    monkeypatch.setenv("API_KEY", "key-of-another-service")  # not ours: never read, never sent
     with pytest.raises(ConfigError, match="GROQ_API_KEY"):
         groq.groq_provider(MODEL, REQUEST)
     assert posted["bodies"] == []  # nothing was sent
-    monkeypatch.setenv("API_KEY", "other-name")
-    monkeypatch.setenv("API_KEY2", "second")
-    monkeypatch.setenv("API_KEY3", "other-name")  # a repeated key counts once
+    monkeypatch.setenv("GROQ_API_KEY", "first")
+    monkeypatch.setenv("GROQ_API_KEY2", "second")
+    monkeypatch.setenv("GROQ_API_KEY3", "first")  # a repeated key counts once
     assert groq.groq_provider(MODEL, REQUEST) == "Fatto."
-    assert posted["keys"] == [["other-name", "second"]]
+    assert posted["keys"] == [["first", "second"]]
 
 
 @pytest.mark.parametrize(
@@ -302,3 +304,86 @@ def test_cache_writer_repairs_a_file_without_a_final_newline(posted, tmp_path):
     lines = path.read_text(encoding="utf-8").splitlines()
     assert [json.loads(line)["response"] for line in lines] == ["Fatto.", "Seconda."]
     assert complete(REQUEST, config).cached
+
+
+# --- more than one key, and answers that cannot be read ------------------------------
+
+
+@pytest.mark.parametrize(
+    ("keys", "used_after"),
+    [
+        (["minute", "day"], ["minute", "day", "minute"]),
+        (["day", "minute"], ["day", "minute", "day", "minute"]),
+    ],
+)
+def test_a_key_at_its_daily_limit_does_not_stop_the_key_that_asks_a_short_wait(
+    monkeypatch, keys, used_after
+):
+    used, waits = [], []
+
+    def fake_urlopen(request, timeout):
+        key = request.get_header("Authorization").removeprefix("Bearer ")
+        used.append(key)
+        if key == "minute" and waits:  # after the short wait this key has room again
+            return FakeResponse(json.dumps(reply("Dopo due secondi.")).encode("utf-8"))
+        raise http_error(429, {"retry-after": "2" if key == "minute" else "5400"})
+
+    monkeypatch.setattr(groq.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(groq.time, "sleep", waits.append)
+    monkeypatch.setattr(groq, "_next_key", 0)
+    assert groq._post({"model": "m"}, keys) == reply("Dopo due secondi.")
+    assert used == used_after and waits == [2.0]
+
+
+def test_rate_limit_on_the_last_attempt_still_tries_the_other_keys(monkeypatch):
+    used = []
+
+    def fake_urlopen(request, timeout):
+        key = request.get_header("Authorization").removeprefix("Bearer ")
+        used.append(key)
+        if len(used) < groq.MAX_ATTEMPTS:
+            raise http_error(503)
+        if key == "a":
+            raise http_error(429, {"retry-after": "1"})
+        return FakeResponse(json.dumps(reply("Con la seconda.")).encode("utf-8"))
+
+    monkeypatch.setattr(groq.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(groq.time, "sleep", lambda seconds: None)
+    monkeypatch.setattr(groq, "_next_key", 0)
+    assert groq._post({"model": "m"}, ["a", "b"]) == reply("Con la seconda.")
+    assert used[-2:] == ["a", "b"]
+
+
+@pytest.mark.parametrize(
+    "failure",
+    [
+        http.client.IncompleteRead(b"met", 900),  # the connection dropped in the body
+        http.client.BadStatusLine("x"),
+        b"<html>Bad gateway</html>",  # an answer that is not JSON
+    ],
+)
+def test_cut_or_unreadable_answer_is_tried_again_then_reported(monkeypatch, failure):
+    answers = [failure, reply("Dopo.")]
+    waits = []
+
+    def fake_urlopen(request, timeout):
+        answer = answers.pop(0) if answers else failure
+        if isinstance(answer, Exception):
+            raise answer
+        body = answer if isinstance(answer, bytes) else json.dumps(answer).encode("utf-8")
+        return FakeResponse(body)
+
+    monkeypatch.setattr(groq.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(groq.time, "sleep", waits.append)
+    monkeypatch.setattr(groq, "_next_key", 0)
+    assert groq._post({"model": "m"}, ["test-key"]) == reply("Dopo.")
+    assert waits == [groq.DEFAULT_WAIT_SECONDS]
+    with pytest.raises(RuntimeError, match="did not answer"):
+        groq._post({"model": "m"}, ["test-key"])
+
+
+def test_params_cannot_replace_the_pinned_model_or_the_prompt(posted):
+    request = LLMRequest("cloud", "Testo.", params={"model": "another/model", "messages": []})
+    groq.groq_provider(MODEL, request)
+    assert posted["bodies"][0]["model"] == MODEL.id
+    assert posted["bodies"][0]["messages"] == [{"role": "user", "content": "Testo."}]

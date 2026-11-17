@@ -6,6 +6,7 @@ Every LLM call in the project goes through `complete`. Only functions registered
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 from collections.abc import Callable, Mapping
@@ -28,11 +29,12 @@ class LLMRequest:
     def __post_init__(self) -> None:
         # `temperature: 0` is always there: what the caller passes is merged over it.
         # Integral floats become integers, so that 0 and 0.0 give one cache key.
-        params = {"temperature": 0, **self.params}
+        params = {"temperature": 0, **copy.deepcopy(dict(self.params))}
         for name, value in params.items():
             if isinstance(value, float) and value.is_integer():
                 params[name] = int(value)
-        # Read-only copy, so a request cannot change after its cache key is computed.
+        # A read-only copy, nested values included, so that a request cannot change
+        # after its cache key is computed.
         object.__setattr__(self, "params", MappingProxyType(params))
 
 
@@ -126,8 +128,15 @@ def complete(request: LLMRequest, config: RunConfig) -> LLMResponse:
     return LLMResponse(text, model.id, model.revision, cached=False)
 
 
+_ANSWER_FIELDS = ("response", "model_id", "revision")  # what a cache hit returns
+
+
 def _lookup(path: Path, key: str) -> dict[str, Any] | None:
-    """The first cache record with `key` in `path`, or None. A corrupt line is an error."""
+    """The first cache record with `key` in `path`, or None.
+
+    A line that is not a record, or the record found without its reply, is an error
+    that names the file and the line.
+    """
     if not path.exists():
         return None
     with open(path, encoding="utf-8") as fh:
@@ -138,7 +147,11 @@ def _lookup(path: Path, key: str) -> dict[str, Any] | None:
                 record = json.loads(line)
             except json.JSONDecodeError as exc:
                 raise ValueError(f"{path}, line {number}: not valid JSON") from exc
+            if not isinstance(record, dict):
+                raise ValueError(f"{path}, line {number}: not a cache record")
             if record.get("key") == key:
+                if not all(isinstance(record.get(f), str) for f in _ANSWER_FIELDS):
+                    raise ValueError(f"{path}, line {number}: cache record without its reply")
                 return record
     return None
 

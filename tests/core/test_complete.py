@@ -158,3 +158,25 @@ def test_skeleton_config():
     config = load_config(REPO / "configs" / "skeleton.yaml")
     assert (config.detector, config.strategy, config.backend) == ("D0", "R1", "cloud")
     assert config.models_file == Path("configs/models.echo.yaml")
+
+
+@pytest.mark.parametrize("line", ["null", "[]", "42", '"testo"'])
+def test_cache_line_that_is_not_a_record_is_reported_with_its_place(tmp_path, calls, line):
+    config = make_config(tmp_path)
+    path = tmp_path / "cache" / "cloud.jsonl"
+    path.parent.mkdir()
+    path.write_text(line + "\n", encoding="utf-8")
+    with pytest.raises(ValueError, match=r"cloud\.jsonl, line 1"):
+        complete(REQUEST, config)
+    assert calls == []
+
+
+def test_cache_record_without_its_reply_is_reported_with_its_place(tmp_path, calls):
+    config = make_config(tmp_path)
+    key = cache_key(load_models(config.models_file)["cloud"], REQUEST)
+    path = tmp_path / "cache" / "cloud.jsonl"
+    path.parent.mkdir()
+    path.write_text(json.dumps({"key": key, "model_id": "cloud-model"}) + "\n", encoding="utf-8")
+    with pytest.raises(ValueError, match=r"cloud\.jsonl, line 1"):
+        complete(REQUEST, config)
+    assert calls == []
