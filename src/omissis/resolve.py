@@ -1,15 +1,20 @@
 """Entity resolution: group span mentions into entities, rules only (task 2.3).
 
-People. A mention is read as name words, after removing a courtesy title written
-inside the span; the last word is taken as the surname. Two mentions are the same
-person when the last word of one is among the words of the other ("Marco Ferri",
-"Ferri", "Marco"), unless both carry first names and these differ ("Marco Ferri",
-"Anna Ferri"), or their titles give different genders ("Sig. Ferri", "Sig.ra
-Ferri"). Mentions of several words are grouped first, in order of appearance;
-a mention of one word then joins the first person it is compatible with.
+People. A mention is read as name words, after removing a title written inside the
+span ("Sig.", "Dott.ssa", "Avv."); the last word is taken as the surname, together
+with the particles before it ("De Luca", "Di Stefano"), and what comes before is the
+first names. Two mentions are the same person when the last word of one is among the
+words of the other ("Marco Ferri", "Ferri", "Marco"), unless both carry first names
+and these differ ("Marco Ferri", "Anna Ferri"), or their genders differ ("Sig.
+Ferri", "Sig.ra Ferri"). The same full name is always one person, whatever a title
+says ("Prof. Maria Rossi"), and so is a name written surname first ("Ferri Marco",
+"De Luca Rosa"); the same words in another order are not ("Rosa De Luca", "Luca De
+Rosa"). Mentions with a
+first name are grouped first, in order of appearance; a surname or a first name
+alone then joins the first person it is compatible with.
 
-Gender comes from a title, written inside the span or just before it, then from the
-first name looked up in the lists below, otherwise it is UNKNOWN.
+Gender comes from a title, written inside the span or just before it on the same
+line, then from the first name looked up in the lists below, otherwise it is UNKNOWN.
 
 Every other type: one entity per value, compared without case and extra spaces.
 
@@ -34,7 +39,12 @@ _TITLES = {
     Gender.M: "sig. sig signor signore dott. dott dottor dottore prof. prof professor professore",
 }
 _TITLE_GENDER = {title: gender for gender, titles in _TITLES.items() for title in titles.split()}
-_TITLE_BEFORE = re.compile(r"(\S+)\s*$")
+# Titles that say nothing about gender, and the articles that may open a mention.
+_NO_GENDER = frozenset("avv. avv ing. ing dr. dr geom. geom rag. rag arch. arch il la".split())
+# Words that open a surname of several words.
+_PARTICLES = frozenset("de di del della dello dei degli da dal dalla dalle lo la li le".split())
+_TITLE_BEFORE = re.compile(r"(\S+)[^\S\n]*$")  # the word before the span, on the same line
+_OPENING = "([{«“‘\"'/"
 
 _FEMALE = frozenset(
     """alessandra alessia alice angela anna annalisa antonella arianna aurora barbara beatrice
@@ -70,6 +80,7 @@ def _name_gender(name: str) -> Gender:
 @dataclass
 class _Person:
     words: set[str]
+    names: tuple[str, ...]  # the name words in the order they are written
     surname: str
     first_names: tuple[str, ...]
     title: Gender
@@ -86,10 +97,18 @@ class _Person:
     def accepts(self, other: _Person) -> bool:
         if not (other.surname in self.words or self.surname in other.words):
             return False
-        if self.first_names and other.first_names and self.first_names != other.first_names:
-            return False
+        if self.first_names and other.first_names:
+            if self.names == other.names:
+                return True  # one full name, whatever a title says
+            swapped = other.names == self._surname_first() or self.names == other._surname_first()
+            if not swapped and self.first_names != other.first_names:
+                return False
         mine, theirs = self.known_gender, other.known_gender
         return Gender.UNKNOWN in (mine, theirs) or mine is theirs
+
+    def _surname_first(self) -> tuple[str, ...]:
+        """The same name written with the surname before the first names."""
+        return self.names[len(self.first_names) :] + self.first_names
 
     def absorb(self, other: _Person) -> None:
         self.words |= other.words
@@ -105,22 +124,51 @@ class _Person:
         return _name_gender(self.surname)  # a lone word may be a first name ("Lidia")
 
 
-def _read_person(span: Span, text: str) -> _Person:
-    words = _normalise(span.text).split()
+def _name_words(value: str) -> tuple[list[str], Gender]:
+    """The name words of a mention as they are written, and the gender of its title."""
+    words = value.split() or [value]  # a blank mention is its own only word
     title = Gender.UNKNOWN
-    while len(words) > 1 and (words[0] in _TITLE_GENDER or words[0] in ("il", "la")):
-        title = _TITLE_GENDER.get(words.pop(0), title)
+    while len(words) > 1 and (
+        words[0].casefold() in _TITLE_GENDER or words[0].casefold() in _NO_GENDER
+    ):
+        title = _TITLE_GENDER.get(words.pop(0).casefold(), title)
+    return words, title
+
+
+def _first_names(words: list[str]) -> list[str]:
+    """The words before the surname: the last word and its particles are the surname."""
+    first = words[:-1]
+    while first and first[-1].casefold() in _PARTICLES:
+        first.pop()
+    return first
+
+
+def name_parts(value: str) -> tuple[str, str]:
+    """The first names and the surname of a person's name, as written, without a title.
+
+    A name of one word, or a surname alone, has no first names: `("", "De Luca")`.
+    """
+    words, _ = _name_words(value)
+    first = _first_names(words)
+    return " ".join(first), " ".join(words[len(first) :])
+
+
+def _read_person(span: Span, text: str) -> _Person:
+    written, title = _name_words(span.text)
     if title is Gender.UNKNOWN:
         before = _TITLE_BEFORE.search(text[: span.start])
         if before:
-            title = _TITLE_GENDER.get(before.group(1).casefold(), Gender.UNKNOWN)
-    return _Person(set(words), words[-1], tuple(words[:-1]), title, [(span, len(words))])
+            word = before.group(1).casefold().lstrip(_OPENING)
+            title = _TITLE_GENDER.get(word, Gender.UNKNOWN)
+    words = [word.casefold() for word in written]
+    first = tuple(_first_names(words))
+    return _Person(set(words), tuple(words), words[-1], first, title, [(span, len(words))])
 
 
 def _people(spans: list[Span], text: str) -> list[tuple[str, list[Span], Gender]]:
     read = [_read_person(span, text) for span in spans]
     people: list[_Person] = []
-    for wanted in (True, False):  # mentions of several words first
+    for wanted in (True, False):  # mentions with a first name first
         for person in read:
             if bool(person.first_names) is not wanted:
                 continue

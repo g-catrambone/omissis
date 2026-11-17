@@ -159,3 +159,84 @@ def test_two_people_kept_apart_never_share_a_placeholder():
     # The same two people in a second text of the session keep their placeholders.
     again, vault = replace(text, resolve(spans, text), Strategy.R1, seed=1, vault=vault)
     assert again == masked and len(vault) == 2
+
+
+# --- names as they are written in Italian letters -----------------------------------
+
+
+def test_surname_with_a_particle_is_one_person():
+    text = "Marco De Luca ha scritto. De Luca chiede un rinvio; la Sig.ra Di Stefano no."
+    spans = spans_of(
+        text, ("Marco De Luca", "PERSONA"), ("De Luca", "PERSONA"), ("Di Stefano", "PERSONA")
+    )
+    assert summary(resolve(spans, text)) == [
+        ("PERSONA_1", "Marco De Luca", ["Marco De Luca", "De Luca"], Gender.M),
+        ("PERSONA_2", "Di Stefano", ["Di Stefano"], Gender.F),
+    ]
+
+
+def test_same_particle_surname_and_different_first_names_are_two_people():
+    text = "Anna De Luca e Paolo De Luca hanno firmato."
+    entities = resolve(
+        spans_of(text, ("Anna De Luca", "PERSONA"), ("Paolo De Luca", "PERSONA")), text
+    )
+    assert [e.canonical for e in entities] == ["Anna De Luca", "Paolo De Luca"]
+
+
+def test_professional_title_inside_the_span_is_not_a_first_name():
+    text = "L'Avv. Ferri ha scritto. Marco Ferri chiede un rinvio. Ing. Marco Ferri conferma."
+    spans = spans_of(
+        text, ("Avv. Ferri", "PERSONA"), ("Marco Ferri", "PERSONA"), ("Ing. Marco Ferri", "PERSONA")
+    )
+    (person,) = resolve(spans, text)
+    assert (person.canonical, person.gender, len(person.mentions)) == ("Marco Ferri", Gender.M, 3)
+
+
+def test_same_full_name_is_one_person_whatever_a_title_says():
+    text = "Gentile Prof. Maria Rossi, confermo. Cordiali saluti a Maria Rossi."
+    spans = spans_of(text, ("Maria Rossi", "PERSONA"), ("Maria Rossi", "PERSONA"))
+    (person,) = resolve(spans, text)
+    assert len(person.mentions) == 2
+
+
+def test_surname_written_first_is_the_same_person():
+    text = "Pratica di Ferri Marco. Scrive Marco Ferri."
+    spans = spans_of(text, ("Ferri Marco", "PERSONA"), ("Marco Ferri", "PERSONA"))
+    (person,) = resolve(spans, text)
+    assert len(person.mentions) == 2
+
+
+def test_title_before_the_span_is_read_through_a_bracket_and_not_across_a_line():
+    text = "(Sig.ra Ferri) e (Sig. Ferri) hanno firmato."
+    entities = resolve(spans_of(text, ("Ferri", "PERSONA"), ("Ferri", "PERSONA")), text)
+    assert [e.gender for e in entities] == [Gender.F, Gender.M]
+    text = "Gentile Signora\n\nMarco Ferri, mio marito, ha firmato."
+    (person,) = resolve(spans_of(text, ("Marco Ferri", "PERSONA")), text)
+    assert person.gender is Gender.M
+
+
+def test_blank_person_span_is_an_entity_like_any_other():
+    text = "Firma:   ."
+    (entity,) = resolve([Span(6, 9, "   ", SpanType.PERSONA, 0.5, "D2")], text)
+    assert entity.mentions[0].text == "   "
+
+
+@pytest.mark.parametrize(
+    "text",
+    [
+        "Rosa De Luca ha scritto a Luca De Rosa ieri.",
+        "Maria Di Stefano e Stefano Di Maria sono colleghi.",
+    ],
+)
+def test_two_people_whose_names_use_the_same_words_stay_apart(text):
+    first, second = text.split(" ha scritto a ") if " ha scritto a " in text else text.split(" e ")
+    second = " ".join(second.split()[:3])
+    entities = resolve(spans_of(text, (first, "PERSONA"), (second, "PERSONA")), text)
+    assert [e.canonical for e in entities] == [first, second]
+
+
+def test_surname_with_a_particle_written_first_is_the_same_person():
+    text = "Pratica di De Luca Rosa. Scrive Rosa De Luca."
+    spans = spans_of(text, ("De Luca Rosa", "PERSONA"), ("Rosa De Luca", "PERSONA"))
+    (person,) = resolve(spans, text)
+    assert len(person.mentions) == 2
