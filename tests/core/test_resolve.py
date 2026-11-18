@@ -5,6 +5,7 @@ import pytest
 from omissis.contracts import Gender, Span, SpanType, Strategy
 from omissis.replace import replace
 from omissis.resolve import resolve
+from omissis.restore import restore
 
 
 def spans_of(text, *wanted):
@@ -240,3 +241,40 @@ def test_surname_with_a_particle_written_first_is_the_same_person():
     spans = spans_of(text, ("De Luca Rosa", "PERSONA"), ("Rosa De Luca", "PERSONA"))
     (person,) = resolve(spans, text)
     assert len(person.mentions) == 2
+
+
+@pytest.mark.parametrize(
+    ("text", "names", "canonical"),
+    [
+        # of the two orders, the one that starts with a known first name
+        ("Pratica di De Luca Rosa. Scrive Rosa De Luca.", ("De Luca Rosa", "Rosa De Luca"), 1),
+        ("Scrive Marco Ferri. Pratica di Ferri Marco.", ("Marco Ferri", "Ferri Marco"), 0),
+        # the longest mention first of all: a first name alone never replaces it
+        ("Pratica di Ferri Marco. Caro Marco, grazie.", ("Ferri Marco", "Marco"), 0),
+        # no known first name in front of either: the first mention, as before
+        ("Pratica di Zanni Iris. Scrive Iris Zanni.", ("Zanni Iris", "Iris Zanni"), 0),
+    ],
+)
+def test_name_written_in_both_orders_keeps_the_order_with_the_first_name_in_front(
+    text, names, canonical
+):
+    (person,) = resolve(spans_of(text, *((name, "PERSONA") for name in names)), text)
+    assert person.canonical == names[canonical]
+
+
+def test_person_written_in_both_orders_gets_surname_and_first_name_back_in_place():
+    text = "De Luca Rosa ha firmato. Rosa De Luca è la titolare. Gentile sig.ra De Luca."
+    last = text.rindex("De Luca")
+    spans = [
+        Span(0, 12, "De Luca Rosa", SpanType.PERSONA, 1.0, "GOLD"),
+        Span(25, 37, "Rosa De Luca", SpanType.PERSONA, 1.0, "GOLD"),
+        Span(last, last + 7, "De Luca", SpanType.PERSONA, 1.0, "GOLD"),
+    ]
+    masked, vault = replace(text, resolve(spans, text), Strategy.R2, seed=5)
+    (entry,) = vault
+    first, surname = entry.surrogate.split()
+    assert masked == (
+        f"{first} {surname} ha firmato. {first} {surname} è la titolare. Gentile sig.ra {surname}."
+    )
+    reply = f"Gentile Sig.ra {surname}, cara {first}."
+    assert restore(reply, vault, 0.9)[0] == "Gentile Sig.ra De Luca, cara Rosa."

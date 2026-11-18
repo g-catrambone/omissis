@@ -153,6 +153,11 @@ def name_parts(value: str) -> tuple[str, str]:
     return " ".join(first), " ".join(words[len(first) :])
 
 
+def _first_name_in_front(mention: str) -> bool:
+    words, _ = _name_words(mention)
+    return _name_gender(words[0].casefold()) is not Gender.UNKNOWN
+
+
 def _read_person(span: Span, text: str) -> _Person:
     written, title = _name_words(span.text)
     if title is Gender.UNKNOWN:
@@ -180,7 +185,9 @@ def _people(spans: list[Span], text: str) -> list[tuple[str, list[Span], Gender]
     out = []
     for person in people:
         mentions = sorted(person.mentions, key=lambda m: (m[0].start, m[0].end))
-        canonical = max(mentions, key=lambda m: m[1])[0].text
+        # The longest mention; of one name in two orders ("De Luca Rosa", "Rosa De
+        # Luca"), the one with a known first name in front, whose last word is the surname.
+        canonical = max(mentions, key=lambda m: (m[1], _first_name_in_front(m[0].text)))[0].text
         out.append((canonical, [span for span, _ in mentions], person.gender))
     return out
 
