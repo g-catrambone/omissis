@@ -1,4 +1,4 @@
-"""Text and profile loaders (task C1) and the fixture emails."""
+"""Text and profile loaders (block 1) and the fixture emails."""
 
 import copy
 import json
