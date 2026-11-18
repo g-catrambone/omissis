@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import re
+import unicodedata
 from collections.abc import Sequence
 
 from omissis.backends import LLMRequest, complete
@@ -45,16 +46,23 @@ def _spans(text: str, config: RunConfig, gold_spans: Sequence[Span] | None) -> l
 _PART = re.compile(r"[^\W\d_]{3,}|\d{2,}")
 
 
+def _fold(value: str) -> str:
+    """`value` without case and accents: "Niccolò" and "niccolo" are one."""
+    plain = unicodedata.normalize("NFD", value.casefold())
+    return "".join(ch for ch in plain if not unicodedata.combining(ch))
+
+
 def _compact(value: str) -> str:
-    """`value` without case, spaces and punctuation: "IT89 Y000" and "IT89Y000" are one."""
-    return re.sub(r"[\W_]+", "", value).casefold()
+    """`value` without case, accents, spaces and punctuation: "IT89 Y000" is "IT89Y000"."""
+    return re.sub(r"[\W_]+", "", _fold(value))
 
 
 def _safe_reason(reason: str | None, vault: Vault) -> str | None:
     """`reason` with every masked value replaced by its surrogate.
 
-    None when what is left still quotes a masked value: in another case or spacing,
-    or a part of it (a word, a run of digits). A reason is worth less than a leak.
+    None when what is left still quotes a masked value: in another case, spacing or
+    accent, or a part of it (a word, a run of digits, three digits in a row of a
+    longer number). A reason is worth less than a leak.
     """
     if reason is None:
         return None
@@ -64,14 +72,17 @@ def _safe_reason(reason: str | None, vault: Vault) -> str | None:
     left = reason
     for _, surrogate in values:
         left = left.replace(surrogate, " ")
-    folded = left.casefold()
-    if any(value.casefold() in folded for value, _ in values):
+    folded = _fold(left)
+    if any(_fold(value) in folded for value, _ in values):
         return None
-    parts = {part.casefold() for value, _ in values for part in _PART.findall(value)}
-    if parts & {part.casefold() for part in _PART.findall(left)}:
+    parts = {_fold(part) for value, _ in values for part in _PART.findall(value)}
+    if parts & {_fold(part) for part in _PART.findall(left)}:
         return None
     squeezed = _compact(left)
     if any(len(_compact(value)) >= 3 and _compact(value) in squeezed for value, _ in values):
+        return None
+    digits = [re.sub(r"\D", "", value) for value, _ in values]
+    if any(run in number for run in re.findall(r"\d{3,}", left) for number in digits):
         return None
     return reason
 

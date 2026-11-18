@@ -419,6 +419,36 @@ def test_reply_goes_to_the_cloud_role_and_is_restored_with_the_threshold_of_the_
     assert set(roles) == {"cloud"}
 
 
+def test_reason_with_digits_or_an_unaccented_form_of_a_masked_value_is_dropped(
+    configs, monkeypatch
+):
+    text = (
+        "Sono Niccolò, rata di € 1.250,00 su IT60X0000011101000000123456 "
+        "e su IT02L0000022202000000654321, a Nola."
+    )
+
+    def span(value, type, reason):
+        start = text.index(value)
+        return Span(start, start + len(value), value, type, 0.8, "D3", reason)
+
+    found = [
+        span("Niccolò", SpanType.PERSONA, "nome proprio Niccolo"),
+        span("€ 1.250,00", SpanType.IMPORTO, "importo di 1250 euro"),
+        span("IT60X0000011101000000123456", SpanType.IBAN, "IBAN che termina con 3456"),
+        span("IT02L0000022202000000654321", SpanType.IBAN, "IBAN con ABI 00000 e CAB 22202"),
+        span("Nola", SpanType.CITTA, "città di residenza, CAP 80035"),
+    ]
+    monkeypatch.setattr(pipeline, "detect", lambda text, detector, config: found)
+    result, _ = pipeline.mask(text, with_overrides(configs["REF-oracle"], detector="D3"))
+    assert [item.reason for item in result.disclosure] == [
+        None,
+        None,
+        None,
+        None,
+        "città di residenza, CAP 80035",
+    ]
+
+
 def test_reason_that_quotes_a_short_value_in_another_case_is_dropped(configs, monkeypatch):
     text = "Abito a Bo, in centro."
     found = [Span(8, 10, "Bo", SpanType.CITTA, 0.8, "D3", "abita a BO")]
