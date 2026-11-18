@@ -1,9 +1,8 @@
 # Evaluation protocol
 
 Exact definitions for the data and for every number the project reports.
-Block 3 implements this document; the other blocks read the parts that
-concern them. Values here are decisions: changing one needs an entry in
-`docs/decisions.md` agreed by the team. File formats are in
+`src/omissis/eval/` implements this document. Values here are decisions:
+changing one needs an entry in `docs/decisions.md`. File formats are in
 `docs/interfaces.md`, section 5.
 
 Sections: 1 profiles · 2 texts · 3 annotation and review · 4 split ·
@@ -93,7 +92,7 @@ result is reported as it is.
 
 ## 3. Annotation and human review
 
-- **Fixtures.** The 5 fixture emails of block 1 are annotated by this same
+- **Fixtures.** The 5 fixture emails are annotated by this same
   policy, before the annotation guide exists; the guide must not contradict
   them. The text requirements of section 2 do not bind them.
 - **Policy.** Tag every direct identifier, quasi-identifier and
@@ -150,7 +149,7 @@ result is reported as it is.
   instead of scoring a text as if nothing had been found. A scoring defect
   found after a completed run is fixed on a `fix/…` branch; the numbers are
   recomputed by a new launch with `backend: replay`, which makes no LLM call,
-  after the fix has removed `results/test/metrics/`; the defect and both sets
+  after a human has removed `results/test/metrics/`; the defect and both sets
   of numbers go in `docs/decisions.md`.
 
 ## 5. Configurations
@@ -206,7 +205,8 @@ fixed prompts. Prompts never contain gold labels or configuration names.
 Input is the masked text from `results/<split>/masked/<config_name>/`.
 
 **Linkage.** Input: masked text plus the candidate list rendered as numbered
-profiles (all fields except `id` and `cohort`). Output: JSON with the three
+profiles (all fields except `id` and `cohort`; of `special` the fact, not
+its category). Output: JSON with the three
 most likely candidates in order. Metrics: top-1 and top-3 accuracy, for
 N = 10 and N = 25. The prompt asks for a ranking in every case; unparseable
 output counts as a miss and is counted separately for each configuration.
@@ -318,7 +318,8 @@ Computed on the T1 replies of each configuration.
 - **Full-restoration rate**: share of replies with `fully_restored` true.
 - For R2: number of restored fakes per reply.
 - For R2 the full-restoration rate is an upper bound: a fake value that the
-  model reformats or abbreviates is neither restored nor flagged. The manual
+  model reformats or abbreviates is neither restored nor flagged, except an
+  amount, which is read as a number next to its currency. The manual
   inspection below also counts the replies where a fake value is left in the
   text.
 - `wrong_mapping` is assigned by comparing the restored reply with gold:

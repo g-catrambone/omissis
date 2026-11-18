@@ -1,9 +1,9 @@
 # Interface specification
 
-How the blocks of the project connect. This document is the contract: the code in
+How the parts of the project connect. This document is the contract: the code in
 `src/omissis/contracts.py` and the boundary functions must match it exactly.
-If something here does not fit a task, do not work around it and do not change
-it: describe the problem and stop (CLAUDE.md, rule 5).
+A change of behaviour changes this document in the same commit and gets a row
+in `docs/decisions.md` (CLAUDE.md, rule 5).
 
 Sections: 1 data contracts · 2 placeholder grammar · 3 boundary functions ·
 4 configuration · 5 file formats · 6 who calls what.
@@ -35,10 +35,10 @@ single place that maps each type to its class. `GOLD_SOURCE = "GOLD"` is the
 |---|---|---|
 | `Span` | `start:int`, `end:int`, `text:str`, `type:SpanType`, `confidence:float`, `source:str`, `reason:str\|None=None` | `0 <= start < end`; `len(text) == end-start`; `0 <= confidence <= 1`; `source` is a `DetectorId` value or `GOLD_SOURCE`; when `source` is `"D3"`, `reason` is non-empty. Offsets are character offsets, `end` exclusive. Property `cls` = `TYPE_CLASS[type]` (derived, never stored). Method `matches(source_text)` is true when `source_text[start:end] == text`. |
 | `Entity` | `entity_id:str`, `type:SpanType`, `canonical:str`, `mentions:tuple[Span,...]`, `gender:Gender=UNKNOWN` | At least one mention; all mentions have the entity's type. `entity_id` is `<TYPE>_<n>` with `n >= 1` and no leading zeros, numbered per type by first appearance. Property `cls`. |
-| `VaultEntry` | `surrogate:str`, `original:str`, `type:SpanType`, `entity_id:str`, `original_variants:tuple[str,...]=()`, `surrogate_variants:tuple[str,...]=()` | `repr` never shows `original` or the variants. `surrogate` is the placeholder (R1) or the fake value (R2). `surrogate_variants` is for R2 (for example the fake surname alone). |
+| `VaultEntry` | `surrogate:str`, `original:str`, `type:SpanType`, `entity_id:str`, `original_variants:tuple[str,...]=()`, `surrogate_variants:tuple[str,...]=()` | `repr` never shows `original` or the variants. `surrogate` is the placeholder (R1, and under R2 a value without a fake) or the fake value (R2). `surrogate_variants` is for R2 (for example the fake surname alone). |
 | `RestoreEvent` | `surrogate:str`, `outcome:RestoreOutcome`, `found_as:str\|None=None` | One restoration decision. |
 | `DisclosureItem` | `surrogate:str`, `type:SpanType`, `source:str`, `reason:str\|None=None` | One line of the disclosure panel. Never contains the original value. Property `cls`. |
-| `MaskResult` | `masked_text:str`, `spans:tuple[Span,...]`, `entities:tuple[Entity,...]`, `disclosure:tuple[DisclosureItem,...]` | Output of masking without any LLM call. |
+| `MaskResult` | `masked_text:str`, `spans:tuple[Span,...]`, `entities:tuple[Entity,...]`, `disclosure:tuple[DisclosureItem,...]` | Output of `mask`. |
 | `PipelineResult` | `run_id:str`, `masked_text:str`, `raw_reply:str`, `restored_reply:str`, `disclosure:tuple[DisclosureItem,...]`, `restore_events:tuple[RestoreEvent,...]` | Property `fully_restored`: no event is `altered_unresolved` or `hallucinated_token`. |
 
 `wrong_mapping` is never produced by `restore`; only evaluation against gold
@@ -69,17 +69,17 @@ No persistence, no encryption.
 
 Signatures are fixed, including parameter names.
 
-| Function | Module | Built in block |
-|---|---|---|
-| `detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]` | `omissis.detect` | 1 (D0), 4 (D1–D4) |
-| `supported_detectors() -> tuple[DetectorId, ...]` | `omissis.detect` | 4 |
-| `resolve(spans: Sequence[Span], text: str) -> list[Entity]` | `omissis.resolve` | 1 (interim), 2 |
-| `replace(text: str, entities: Sequence[Entity], strategy: Strategy, seed: int, vault: Vault \| None = None) -> tuple[str, Vault]` | `omissis.replace` | 1 (R1), 2 (R2) |
-| `restore(reply: str, vault: Vault, fuzzy_threshold: float) -> tuple[str, list[RestoreEvent]]` | `omissis.restore` | 1, 2 (fuzzy) |
-| `complete(request: LLMRequest, config: RunConfig) -> LLMResponse` | `omissis.backends` | 1 |
-| `register_provider(name: str, fn: ProviderFn) -> None` | `omissis.backends` | 1 |
-| `mask(text: str, config: RunConfig, gold_spans: Sequence[Span] \| None = None, vault: Vault \| None = None) -> tuple[MaskResult, Vault]` | `omissis.pipeline` | 1, 2 (gold spans) |
-| `protect_send_restore(text: str, task: str, config: RunConfig, gold_spans: Sequence[Span] \| None = None) -> PipelineResult` | `omissis.pipeline` | 1, 2 (gold spans) |
+| Function | Module |
+|---|---|
+| `detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]` | `omissis.detect` |
+| `supported_detectors() -> tuple[DetectorId, ...]` | `omissis.detect` |
+| `resolve(spans: Sequence[Span], text: str) -> list[Entity]` | `omissis.resolve` |
+| `replace(text: str, entities: Sequence[Entity], strategy: Strategy, seed: int, vault: Vault \| None = None) -> tuple[str, Vault]` | `omissis.replace` |
+| `restore(reply: str, vault: Vault, fuzzy_threshold: float) -> tuple[str, list[RestoreEvent]]` | `omissis.restore` |
+| `complete(request: LLMRequest, config: RunConfig) -> LLMResponse` | `omissis.backends` |
+| `register_provider(name: str, fn: ProviderFn) -> None` | `omissis.backends` |
+| `mask(text: str, config: RunConfig, gold_spans: Sequence[Span] \| None = None, vault: Vault \| None = None) -> tuple[MaskResult, Vault]` | `omissis.pipeline` |
+| `protect_send_restore(text: str, task: str, config: RunConfig, gold_spans: Sequence[Span] \| None = None) -> PipelineResult` | `omissis.pipeline` |
 
 ### Behaviour
 
@@ -112,27 +112,59 @@ model is loaded and none is called. Callers use it instead of probing
 `detect`.
 
 **`resolve`** — Every input span ends up in exactly one entity. Person
-mentions merge when one contains the other's surname; two people with one
-surname and different first names stay separate. Other types merge on
-normalised equality (case and whitespace). Gender from titles first
-(Sig./Sig.ra, Dott./Dott.ssa), then from a first-name list, otherwise
-`UNKNOWN`. Rules only; the same function serves every detector.
+mentions merge when one contains the other's surname or is its first name
+alone; a surname includes its particles (`De Luca`) and a title written inside
+the span is ignored. They stay separate when both carry first names and these
+differ, or when titles or first names give them different genders; the same
+name words are one person, in any order, and the entity keeps the order that
+starts with a first name of the lists. Mentions with a first name are grouped
+first; a surname or a first name alone then joins the first person it is
+compatible with. Other types merge on normalised equality (case and
+whitespace). Gender from titles first (Sig./Sig.ra, Dott./Dott.ssa), then from
+a first-name list, otherwise `UNKNOWN`. Rules only; the same function serves
+every detector.
 
 **`replace`** — R1 writes `make_placeholder` tokens. R2 writes realistic fake
-values, deterministic for `seed`, from lists disjoint from the profile pool
-and never already present in `text`. The same entity always gets the same
-surrogate; a passed-in vault is reused so surrogates stay consistent across
-texts of one session (across texts the same entity means the same type and the
-same canonical value after normalisation; entity ids restart in every text).
-Substitution runs from the end of the text to the start.
+values, deterministic for `seed` and never already present in `text` or in the
+vault: people, employers, banks, towns and streets come from lists disjoint
+from the profile pool; identifiers, phone numbers, amounts, dates and ages are
+generated with the shape of the original. A value that has no realistic fake
+keeps its R1 placeholder: the types `RUOLO`, `STRUTTURA`, `NAZIONALITA`,
+`DATA_NASCITA` (a fake would keep the year, and with it the age) and the
+special categories, a date that is not written with its day, an age or an
+amount without a number, a value for which no free fake is left. An R2 vault
+therefore holds fakes and placeholders together. A fake amount never has a
+number that the text or the vault already holds, whatever the currency and the
+separators around it. R2 is meant for one vault per text. The same entity
+always gets the same surrogate; a passed-in vault is reused so surrogates stay
+consistent across texts of one session (across texts the same entity means the
+same type and the same canonical value after normalisation and, for a person
+under R1, the same gender; entity ids restart in every text). Substitution
+runs from the end of the text to the start.
 
-**`restore`** — Order: exact match; normalised match (case, spacing, missing
-brackets, underscores as spaces); fuzzy match accepted only at or above
-`fuzzy_threshold`. Never guesses. A placeholder-shaped token absent from the
-vault gives `hallucinated_token`; a token that looks like a surrogate but has
-no safe match stays in place and gives `altered_unresolved`; a surrogate the
-reply does not use gives `dropped`. R2 surrogates match on whole tokens only.
-Returns the restored text and one event per vault entry or suspicious token.
+**`restore`** — Order: exact match; normalised match (case, an accent on the
+label, missing brackets, white space, hyphens or dashes for underscores,
+Markdown escapes); fuzzy match accepted only at or above `fuzzy_threshold`:
+for R1 a bracketed token with the same digits, close to exactly one
+placeholder; for R2 a run of as many words as a fake of two or more words,
+each word close to the word in the same place and every number identical.
+Never guesses. A token counts as a placeholder only when it is written as one:
+with an underscore, between two brackets, or with its three parts in upper
+case (`PERSONA 1 F`); a label and a number with none of these are ordinary
+text. A field between brackets with no number (`[Nome Cognome]`,
+`[DATA_RICEVUTA]`) is the model's own text: it is left alone and gives no
+event. A placeholder-shaped token absent from the vault gives
+`hallucinated_token`; a token that looks like a surrogate but has no safe
+match stays in place and gives `altered_unresolved`; a surrogate the reply
+does not use gives `dropped`. R2 surrogates match on whole tokens only. A fake
+amount is read as a number first: a whole number next to its currency (`€`,
+`euro`, `EUR`, before or after), with the digits and the decimals of a fake
+amount, is that fake, however its thousands are separated (a point, a space of
+any kind, nothing); never a number that an original of the vault also holds or
+that two fakes share, with or without decimals. Any other fake that the reply
+reformats or shortens is not recognised and its entry is `dropped`: a declared
+limit. Returns the restored text and one event per vault entry or suspicious
+token.
 
 **`complete`** — Looks the request up in `config.cache_dir` by `cache_key`.
 Hit: returns the stored response with `cached=True`. Miss with
@@ -144,9 +176,10 @@ through this function, including D3, the attacker, the judge and the text
 generator.
 
 **`register_provider`** — `ProviderFn = Callable[[ModelSpec, LLMRequest], str]`.
-A provider turns one request into text and does no caching. Block 2 registers
-the cloud provider; block 4 registers the local runtime used by D3. Registering a name
-twice raises `ValueError`. A provider that cannot run on this machine (key,
+A provider turns one request into text and does no caching. `backends`
+registers `groq` (the hosted models) and `local` (a model served on this
+machine, which D3 uses: the text it reads is not pseudonymised yet and never
+leaves the machine). Registering a name twice raises `ValueError`. A provider that cannot run on this machine (key,
 library or weights missing) raises `ConfigError`.
 
 **Built-in provider `echo`** — registered by `backends` itself. It returns
@@ -201,7 +234,8 @@ configuration, references included, runs through this one function.
 `cache_key(model: ModelSpec, request: LLMRequest) -> str` is the SHA-256 hex
 digest of the JSON (sorted keys, `ensure_ascii=False`) of
 `{id, revision, system, prompt, params}`. `temperature: 0` is always part of
-`params`: what a caller passes is merged over it.
+`params`, and no call of the project passes another value. Integral floats in
+`params` are written as integers first, so `0` and `0.0` give one key.
 
 ## 4. Configuration — `src/omissis/config.py`
 
@@ -239,8 +273,8 @@ the hash, pinning any model changes the run id of every configuration: what
 was written before the last pin is regenerated (the LLM calls come from the
 cache).
 
-**Named configurations — `configs/eval.yaml`.** The evaluation and the batch
-command read the configurations to run from this file:
+**Named configurations — `configs/eval.yaml`.** The evaluation and
+`omissis mask` read the configurations to run from this file:
 
 ```yaml
 base:                      # keys shared by every configuration
@@ -254,21 +288,17 @@ configurations:
   - {name: REF-none,          detector: NONE, strategy: R1, mask_quasi: false}
   - {name: REF-oracle-direct, detector: GOLD, strategy: R1, mask_quasi: false}
   - {name: REF-oracle,        detector: GOLD, strategy: R1, mask_quasi: true}
-  # added in block 4:
-  # - {name: D1+R1, detector: D1, strategy: R1, mask_quasi: true}
-  # - {name: D2+R1, detector: D2, strategy: R1, mask_quasi: true}
-  # - {name: D4+R1, detector: D4, strategy: R1, mask_quasi: true}
-  # - {name: D4+R2, detector: D4, strategy: R2, mask_quasi: true}
+  - {name: D1+R1,             detector: D1,   strategy: R1, mask_quasi: true}
+  - {name: D2+R1,             detector: D2,   strategy: R1, mask_quasi: true}
+  - {name: D4+R1,             detector: D4,   strategy: R1, mask_quasi: true}
+  - {name: D4+R2,             detector: D4,   strategy: R2, mask_quasi: true}
 ```
 
 `load_eval_configs(path, overrides=None) -> dict[str, RunConfig]` (in
 `config.py`) merges `base` into each entry, then applies `overrides` over both
 (this is how a caller forces `backend: replay`), and returns the
 configurations by name, in file order. Names are unique; an unknown key is an
-error. The file is created in block 2
-with the three references. Block 4 makes exactly two kinds of edit: it appends
-the four configurations with detectors, and it may change
-`base.fuzzy_threshold` after a human decision recorded in `docs/decisions.md`.
+error. `base.fuzzy_threshold` changes only with a row in `docs/decisions.md`.
 
 **Command line — `omissis`** (run through `uv run`):
 
@@ -283,13 +313,15 @@ report and the restoration events. `batch` prints one JSON line per record
 with the whole result. Both outputs contain the restored reply, which holds
 the original values: they go to standard output only and are never saved
 under `results/`. With detector `GOLD` both take the gold spans from the JSON
-record, so the input must be a text record. `mask` (block 2) never calls the
+record, so the input must be a text record. `mask` never calls the
 role `cloud`: it masks every record, each with a fresh vault, under each named
 configuration (all of them when `--names` is omitted) and writes the
 masked-batch format of section 5. It is for synthetic texts only (the
-evaluation texts and the fixtures). Every command
-exits with status 2 and a one-line message on a `ConfigError`, a `DataError`,
-a `CacheMissError` or a detector that is not built yet.
+evaluation texts and the fixtures). Every command exits with status 2 and a
+one-line message on any error: a `ConfigError`, a `DataError`, a
+`CacheMissError`, a detector that fails or is not built yet, a provider that
+fails after its retries, a cache line that is not a record, an input folder
+that is missing or holds no text record.
 
 `configs/models.yaml` has one entry per role — `cloud`, `attacker`, `judge`,
 `generator`, `d3`, `d2` — each with `provider`, `id`, `revision`, all
@@ -303,9 +335,15 @@ revision)` with property `pinned`; `load_models(path) -> dict[str, ModelSpec]`;
 All JSON is UTF-8 with `ensure_ascii=False`. No serialised `Vault` or
 `VaultEntry` is ever written under `results/`. The evaluation texts are
 synthetic, so the cache, the rating sheets and the outcomes of the evaluation
-hold their original values by design; the texts a user gives to `omissis run`,
-`omissis batch` or the app are never saved there. `<split>` below is `pilot`, `dev` or
-`test`.
+hold their original values by design. A text a user gives to `omissis run`,
+`omissis batch` or the app is written nowhere except the LLM cache of the
+configuration in use (`cache_dir`): the prompt that was sent, which is the
+masked text with whatever the detector missed in clear, and, with D3 or D4,
+the detector's own prompt, which is the whole text. Such a run uses a
+`cache_dir` under the gitignored `results/scratch/`: `omissis run` refuses a
+plain-text input when the cache is under `results/` outside
+`results/scratch/`. The restored reply is never saved. `<split>` below is
+`pilot`, `dev` or `test`.
 
 **Text with gold** — `data/{fixtures,pool,dev,test}/<text_id>.json`
 
@@ -334,7 +372,7 @@ reviewer and is absent until the review is done. Loaded spans get `confidence=1.
 `source="GOLD"`. Vocabularies for `scenario`, `intent` and `requested_action`
 are in `docs/evaluation_protocol.md`.
 
-**Loaders** — `src/omissis/eval/datasets.py` (block 1). Frozen dataclasses:
+**Loaders** — `src/omissis/eval/datasets.py`. Frozen dataclasses:
 `TextRecord` (`id`, `domain`, `scenario`, `profile_id`, `has_special`, `text`,
 `spans: tuple[Span, ...]`, `gold: Gold`, `reviewed_by: str | None`), `Gold`
 (`intent`, `amounts`, `dates`, `requested_action`, `deadline`) and `Profile`
@@ -342,7 +380,8 @@ are in `docs/evaluation_protocol.md`.
 `load_text(path) -> TextRecord`; `load_texts(folder) -> list[TextRecord]`;
 `load_profiles(path) -> list[Profile]`. `SCENARIOS` holds the scenario
 vocabulary of the protocol. A file that breaks the format, or a span that does
-not match the text, raises `DataError` (a `ValueError`) naming the file. These
+not match the text, raises `DataError` (a `ValueError`) naming the file. So
+does a missing or empty folder passed to `load_texts`. These
 are the only functions that read text and profile files. The loader does not
 check that `profile_id` exists among the profiles. The fixtures are
 `data/fixtures/fx-bank-01.json` … `fx-hr-02.json`, with their own five
@@ -384,9 +423,8 @@ without running any model. `seconds` is the wall time of that run and is
 informative only: the reported latency comes from the timing pass of the
 protocol, section 11.
 
-**What is committed.** `results/cache/` and, for each split,
-`results/<split>/masked/`, `detected/`, `metrics/` and `figures/` are
-committed: all data are synthetic. `make reproduce` recomputes every estimate,
+**What is committed.** Everything under `results/` except `results/scratch/`
+is committed: all data are synthetic. `make reproduce` recomputes every estimate,
 interval, table and figure from the per-text outcomes stored in the metrics
 files, with no network, no model, no detector and without reading
 `data/test/`.
@@ -394,8 +432,9 @@ files, with no network, no model, no detector and without reading
 **Metrics** — `results/<split>/metrics/<name>.json`, where `<name>` is
 `detection`, `linkage`, `attributes`, `utility`, `restoration`, `contrasts`,
 `cost` and, under `results/dev/` only, `latency`, `judge_validation` and
-`agreement` (computed once on the pool by the script of task 3.5, before
-`make split`; `make eval-dev` never rewrites it). Each file: `{"split":
+`agreement` (computed once on the pool by `python -m omissis.eval.review
+agreement`, before the review and before `make split`, with `"split":
+"pool"`; `make eval-dev` never rewrites it). Each file: `{"split":
 "pilot"|"dev"|"test", "seed": …, "generated_from": [run ids], "rows": [...],
 "per_text": [...]}` with one row per configuration (and per detector, N or
 attribute where relevant) holding the estimate and, where the protocol asks
@@ -408,22 +447,21 @@ from `per_text` and `seed` alone.
 
 **Figures and tables** — `results/<split>/figures/privacy_utility.png`,
 `results/<split>/scorecard.md`; on dev only, `results/dev/error_examples.md`
-(task 4.5) and `results/dev/error_taxonomy.md` (task 5.1).
+and `results/dev/error_taxonomy.md`.
 
 ## 6. Who calls what
 
-- The app (block 2) runs texts through `pipeline.protect_send_restore` only;
+- The app runs texts through `pipeline.protect_send_restore` only;
   it also calls `supported_detectors` for its detector selector and
   `omissis.eval.datasets` to load its examples.
-- The evaluation (block 3) calls `omissis.eval.datasets`, `pipeline.mask`,
+- The evaluation calls `omissis.eval.datasets`, `pipeline.mask`,
   `pipeline.protect_send_restore`, `backends.complete` and, for the detection
   metrics, `detect` and `supported_detectors`; nothing below them.
   `omissis.eval.detection.run(split, config)` measures every detector that
-  `supported_detectors()` lists, so detectors merged later are picked up with
-  no code change; `config` is any `RunConfig` read from `configs/eval.yaml`,
+  `supported_detectors()` lists; `config` is any `RunConfig` read from `configs/eval.yaml`,
   from which `detect` takes the backend, the models file and the cache.
-- D3 (block 4) calls `backends.complete` with role `d3` and registers its local
-  runtime with `backends.register_provider`.
+- D3 calls `backends.complete` with role `d3`, which is pinned to the provider
+  `local`.
 - Nothing outside `backends/` and the registered providers imports an LLM
   provider SDK or an LLM runtime. The libraries of D1 and D2 (Presidio, spaCy,
   `transformers`) are imported inside `src/omissis/detect/` only.
