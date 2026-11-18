@@ -27,4 +27,4 @@ eval-test:
 	uv run --locked --env-file .env python -m omissis.eval.run --split test
 
 reproduce:
-	@echo "make reproduce is not built yet: see docs/TODO.md, section 4." >&2; exit 1
+	@echo "make reproduce is not built yet: see docs/TODO.md, step B1." >&2; exit 1

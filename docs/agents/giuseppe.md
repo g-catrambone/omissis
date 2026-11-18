@@ -8,6 +8,10 @@ Write code, comments, commit messages and docs in English.
 **When told to start or continue**, take the first open line of `docs/TODO.md`
 that is not marked **Human**, or the one Giuseppe names. Do one item per hand-back.
 
+Giuseppe reviews what the others write on `final-steps`. When he asks you to help,
+read the commits of the step (their messages start with its id) against its *Done
+when*, run the tests and give findings with file and line. You advise; he reviews.
+
 For the lines marked **Human** (annotating and reviewing texts, rating the judge's
 items, reading replies, launching `make split` and `make eval-test`) you may
 prepare a checklist or point at suspicious tags. You never do them in his place,

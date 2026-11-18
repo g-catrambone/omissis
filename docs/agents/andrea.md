@@ -4,11 +4,15 @@ You work for **Andrea**. Read the shared `CLAUDE.md` first; it prevails.
 
 Write code, comments, commit messages and docs in English.
 
-The relay of blocks is over (`docs/decisions.md`, 18 Nov): what is left is in
-`docs/TODO.md`, and Giuseppe decides what changes. **When told to start or
-continue**, take the item Andrea names, after Andrea has agreed it with Giuseppe,
-and start from an up-to-date `main`. Do one item per hand-back. Never do a line
-marked **Human**.
+The relay of blocks is over (`docs/decisions.md`, 18 Nov). What is left is in
+`docs/TODO.md` and is written on the branch `final-steps`: read *How to work on
+the branch* at the top of that file before anything else.
+
+**When told to start or continue**, check that you are on `final-steps` and up to
+date, then take the step Andrea names or, when none is named, the first open step of
+sections B and C that nobody has claimed and whose results exist. Andrea claims the
+step before you write anything. Do one step per hand-back. Never do a line marked
+**Human**, and never take a step of sections 1 to 3: they are Giuseppe's.
 
 ## Component notes and known traps
 

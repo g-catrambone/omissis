@@ -1,15 +1,44 @@
 # What is left
 
-One list, in order. It replaces the task lists of the blocks. A line marked
-**Human** is never done by an agent. Tick a line when it is done; decisions go in
-`docs/decisions.md`. Specifications: `docs/interfaces.md` and
-`docs/evaluation_protocol.md`. History of the code: `docs/handoff/`.
+One list, in order. A line marked **Human** is never done by an agent. Tick a line
+when its *Done when* is true; decisions go in `docs/decisions.md`. Specifications:
+`docs/interfaces.md` and `docs/evaluation_protocol.md`. History of the code:
+`docs/handoff/`.
 
-Needed on the machine that runs the evaluation: `uv sync --locked --group detect`
-(Presidio, spaCy, `transformers`), the D2 weights, Ollama running with
-`gpt-oss:20b` for D3 (`brew services start ollama`), `GROQ_API_KEY` in `.env`.
+## How to work on the branch `final-steps`
 
-## 1. Data (protocol, section 3)
+Everything below is written on one branch, `final-steps`. Giuseppe reviews each
+step and merges the branch into `main`.
+
+1. **Start from the branch.** `git switch final-steps && git pull`. Nobody pushes
+   to `main`.
+2. **Claim a step before working on it.** Write your name after *Claimed by* in
+   the step, commit that line alone (`B2: claimed by <name>`) and push it. A
+   claimed step is nobody else's. Sections 1 to 3 are Giuseppe's.
+3. **Small commits, one step each.** Every commit message starts with the id of
+   its step (`B1: …`), so that a step can be read on its own. Pull before you push.
+4. **Touch only the files the step names.** If a step needs a change anywhere else
+   (`src/`, a specification, the files of another step), describe the change in the
+   hand-back and stop: Giuseppe decides.
+5. **Before every push** `make test` and `make lint` pass on your machine. CI runs
+   them again on every push to the branch.
+6. **Never**, whatever the step says:
+   - open `data/test/` or any copy of the test texts (`CLAUDE.md`, rule 2);
+   - run `make split`, `make eval-dev`, `make eval-test`, or any command with
+     `--backend cloud`: they spend the API allowance that the evaluation needs,
+     and Giuseppe launches them;
+   - edit `configs/models.yaml`, `results/cache/`, a prompt, the fake lists in
+     `src/omissis/replace/data/`, or anything that changes what the evaluation
+     measures (`CLAUDE.md`, rule 6).
+7. **Hand back** as `CLAUDE.md`, section 4, says. An agent commits and pushes only
+   when its human asks (rule 1).
+
+Needed on the machine that runs the evaluation, not for the steps of section B:
+`uv sync --locked --group detect` (Presidio, spaCy, `transformers`), the D2
+weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`),
+`GROQ_API_KEY` in `.env`.
+
+## 1. Data (Giuseppe; protocol, section 3)
 
 - [ ] **Human — blind annotation of 13 texts, before any review.** It measures how
   far a human agrees with the tags the generator wrote.
@@ -46,7 +75,7 @@ Needed on the machine that runs the evaluation: `uv sync --locked --group detect
   `CLAUDE.md` covers every copy of the test texts; delete
   `results/scratch/pool-txt/`.
 
-## 2. Evaluation on dev
+## 2. Evaluation on dev (Giuseppe)
 
 - [ ] **Human — read the prompts** before the first `make eval-dev`: attacks
   (`attacks.LINKAGE_PROMPT`, `ATTRIBUTES_PROMPT`), T3 (`utility.T3_TASK`), judge
@@ -72,40 +101,102 @@ Needed on the machine that runs the evaluation: `uv sync --locked --group detect
 - [ ] **Human — read up to 20 restored replies per strategy** (`D4+R1`, `D4+R2`):
   confirm or change `base.fuzzy_threshold`; count `wrong_mapping` and the R2 fakes
   left in the text (protocol, section 10); choose the examples of missed
-  identifiers. The agent writes the counts, the D3 failures and the categorised
-  examples in `results/dev/error_examples.md`.
+  identifiers for the slides.
 
-## 3. Evaluation on the held-out split
+## 3. Evaluation on the held-out split (Giuseppe)
 
 - [ ] **Human — `make eval-test`**, once, after `make eval-dev` has reproduced the
   committed dev results on the same machine. A launch that stops half-way is
   resumed as the protocol says in section 4. If the judge was rejected, fill the
   sheet of the fallback before any result is reported.
 
-## 4. Closing
+## B. Open to everyone: can start now
 
-- [ ] Results: chart and scorecard from the metrics files, error taxonomy
-  (`results/dev/error_taxonomy.md`), `docs/cards.md` with one entry per model and
-  dataset (source, revision, licence, how we use it; lines proposed in
-  `docs/handoff/`; D2 is CC BY-NC-ND 4.0). **Human:** check every headline number
-  against `results/<split>/metrics/`.
-- [ ] `make reproduce` (today a stub): it calls
-  `python -m omissis.eval.report --split <split>` for every split, with no network,
-  no model, no detector and without reading `data/test/`.
-- [ ] `README.md`: quick start, architecture, results chart, limitations (threat
-  model, pseudonymisation is not anonymisation, derived values, synthetic data
-  only, one reviewer and one rater), licence. **Human:** confirm the licences
-  (default: MIT for code, CC BY 4.0 for the synthetic data); clean-clone check on a
-  second machine; tag `v1.0`.
+These steps need no result of the evaluation and touch different files.
 
-## 5. Presentation (Thu 26 Nov at the earliest)
+- [ ] **B1 · `make reproduce`** — *Claimed by:* —
+  - Files: the `reproduce` target of `Makefile` (no other target);
+    `src/omissis/eval/report.py` and `tests/eval/test_report.py` only for the
+    point below.
+  - Do: the target runs `uv run --locked python -m omissis.eval.report --split
+    <split>` for each of `pilot`, `dev` and `test` that has a folder
+    `results/<split>/metrics/`, and skips the others with one line that says so.
+    It uses no network, no model, no detector, and reads no text. On the pilot
+    the report has no scorecard rows and today writes a `scorecard.md` with a
+    title alone: make it write no scorecard when there is no row, with a test.
+  - Done when: with the network off, `make reproduce` exits 0 and `git status`
+    shows nothing new or changed under `results/` (today this can be shown on
+    `pilot`; `dev` and `test` do not exist yet).
+- [ ] **B2 · Model and data cards** — *Claimed by:* —
+  - Files: `docs/cards.md` (new).
+  - Do: one entry for every role of `configs/models.yaml` (read it, never edit
+    it), one for what D1 runs on (Presidio and the spaCy model
+    `it_core_news_lg`), one for the dataset of 66 synthetic emails. Each entry:
+    what it is, where it comes from (link), the revision we pin, its licence,
+    how we use it, its limits for us. Start from the lines proposed in
+    `docs/handoff/block-2.md` (section 6) and `docs/handoff/block-3.md`
+    (section 7). Read every licence at its source, today, and give the link
+    where you read it: a licence you could not read there is written "not
+    verified", never from memory. The numbers of the dataset that the split
+    fixes (how many texts per split) stay marked "after the split".
+  - Done when: every role of `configs/models.yaml` has an entry whose model id
+    and revision are the ones in that file; every licence has its link or says
+    "not verified". **Human:** Giuseppe confirms the licences.
+- [ ] **B3 · README, without the results** — *Claimed by:* —
+  - Files: `README.md`.
+  - Do: what Omissis is and is not; quick start (`make setup`, `make test`,
+    `make lint`, `.env` from `.env.example`, the `detect` group, Ollama for D3);
+    how to run one text (`omissis run`) and the demo (`make demo`); the
+    architecture, one line per stage of the pipeline; the evaluation in one
+    paragraph (the seven configurations, the three contrasts), pointing to the
+    protocol; `make reproduce`; limitations (threat model, pseudonymisation is
+    not anonymisation, derived values, synthetic data only, one reviewer and one
+    rater, and the list *Known and not fixed* below). The section *Results* says
+    that no result is reported yet. Keep the section on AI assistance.
+  - Done when: every command written in the README runs as written on a clean
+    clone, and the file holds no number of the evaluation and no claim of
+    anonymity (`CLAUDE.md`, rule 7).
+- [ ] **B4 · Slide drafts, without numbers** — one file per member,
+  `docs/slides/<name>.md`; nothing to claim.
+  - Do: the outline of your part and what you say on each slide. Giuseppe:
+    problem, existing tools, architecture and design choices, the demo (at most
+    90 seconds), conclusions. Andrea: evaluation design, the chart, what did not
+    work, limits; backup slides on annotation agreement, judge validation,
+    attack design, cost. Mattia: the five detectors and what each finds and
+    misses; backup slide with detection per type. Where a number will go, write
+    which file of `results/<split>/metrics/` it comes from.
+  - Done when: the draft covers its part and holds no number. The drafts are a
+    support: the humans write the slides.
 
-- [ ] **Human — record the demo**: run the fixtures of the demo once through
-  `omissis run --backend cloud` on a configuration whose `cache_dir` is
-  `results/cache`, with the task text the app sends, and commit the cache; run the
-  demo offline before each rehearsal.
-- [ ] Drafts in `docs/slides/<name>.md`; every number comes from
-  `results/<split>/metrics/`. **Human:** the final slides; two timed rehearsals.
+## C. Open to everyone: waits for results
+
+- [ ] **C1 · Error examples** — after `make eval-dev` — *Claimed by:* —
+  - Files: `results/dev/error_examples.md` (new).
+  - Do: from `results/dev/detected/` and the `per_text` lists of
+    `results/dev/metrics/`, the identifiers each detector missed, grouped by kind
+    of error, each with `text_id`, detector, type and the span; at the top the
+    number of D3 failures and the counts Giuseppe gives for `wrong_mapping` and
+    the R2 fakes left in the text. No model is called.
+  - Done when: every example can be found again in the files it names.
+- [ ] **C2 · Results and error taxonomy** — after `make eval-test` — *Claimed by:* —
+  - Files: `results/dev/error_taxonomy.md` (new); `docs/cards.md` (the fields left
+    for after the split).
+  - Do: the taxonomy from `results/dev/error_examples.md`; every statement
+    limited to what the decision rule of the protocol, section 12, supports.
+  - **Human:** Giuseppe checks every headline number against
+    `results/<split>/metrics/`.
+- [ ] **C3 · README results, licence, release** (Giuseppe) — after `make eval-test`
+  - Files: `README.md` (section *Results*, with the chart), `LICENSE` (new).
+  - **Human:** confirm the licences (default: MIT for code, CC BY 4.0 for the
+    synthetic data); clean-clone check on a second machine with `make reproduce`;
+    tag `v1.0`.
+- [ ] **C4 · Presentation** (Thu 26 Nov at the earliest)
+  - The numbers go into the slide drafts, each from `results/<split>/metrics/`.
+  - **Human — record the demo** (Giuseppe): run the fixtures of the demo once
+    through `omissis run --backend cloud` on a configuration whose `cache_dir` is
+    `results/cache`, with the task text the app sends, and commit the cache; run
+    the demo offline before each rehearsal.
+  - **Human:** the final slides; two timed rehearsals, all three.
 
 ## Known and not fixed
 

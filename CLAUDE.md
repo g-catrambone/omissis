@@ -5,8 +5,8 @@ Language Models* (LUISS, fall 2026). Three members: Giuseppe, Mattia, Andrea.
 
 The code of every part is on `main` since 18 Nov 2026. The relay of blocks, its gates
 and its path ownership are over (`docs/decisions.md`, 18 Nov): what is left is data,
-evaluation runs and closing, and it is one list, `docs/TODO.md`. Giuseppe decides what
-changes. Your human's personal instructions are in `docs/agents/<name>.md`, loaded
+evaluation runs and closing, and it is one list, `docs/TODO.md`, written on the branch
+`final-steps`. Giuseppe decides what changes, reviews each step and merges. Your human's personal instructions are in `docs/agents/<name>.md`, loaded
 through their `CLAUDE.local.md`; if no personal file is loaded, ask who you are
 working for before doing anything.
 
@@ -148,8 +148,9 @@ non-Italian text, attachments, comparisons against third-party proxies.
   new dependency needs the human's approval and a pinned version. The detectors'
   libraries are in the dependency group `detect`, which `make setup` and CI do not
   install; the tests that need them use `pytest.importorskip`.
-- **Small commits, one concern each**, on a branch (`fix/…` or a name for the
-  item of `docs/TODO.md`); the human merges once CI is green.
+- **Small commits, one step each**, on the branch `final-steps`, by the rules at
+  the top of `docs/TODO.md`. A defect found on `main` is fixed on a `fix/…`
+  branch. Giuseppe reviews and merges once CI is green.
 - **Hand back** with: files changed; commands run and their real output; what you
   are unsure about; a proposed commit message; one line for `docs/ai_use.md`
   (date, human, task, what the agent produced, what the human decided).
