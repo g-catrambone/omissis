@@ -85,10 +85,14 @@ Signatures are fixed, including parameter names.
 
 **`detect`** — Returns spans sorted by `start`, non-overlapping. Overlaps are
 resolved inside: longer span wins, then higher confidence, then earlier
-position in `config.source_priority`. A longer quasi-identifier span can
-therefore absorb a direct identifier it overlaps: the stretch is still masked
-when `config.mask_quasi` is true, under the longer span's type. Every span
-satisfies `span.matches(text)`.
+position in `config.source_priority`. The winner is never cut; of a span that
+overlaps it only in part, the stretch outside the winner is returned as a
+shorter span of the same type and source, so that nothing a detector found
+goes back to clear text. A longer quasi-identifier span can therefore absorb a
+direct identifier inside it: the stretch is still masked when
+`config.mask_quasi` is true, under the longer span's type. With `mask_quasi`
+false the absorbed identifier stays visible: a declared limit, which no
+evaluated configuration meets. Every span satisfies `span.matches(text)`.
 Quasi-identifier spans are returned even when `config.mask_quasi` is false:
 the caller decides whether to mask them. Never raises on bad input: a text
 that is not a string gives no spans. A detector that fails stops the run,
