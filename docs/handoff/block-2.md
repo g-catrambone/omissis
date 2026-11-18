@@ -10,7 +10,7 @@ strategy and fuzzy restoration. The evaluation can now be built on `mask`,
 `protect_send_restore`, `complete` and `load_eval_configs` alone. The app (task
 2.7) is not in this pull request: it lists the detectors with
 `supported_detectors()`, so it is merged with block 4, and `make demo` still
-answers "not built yet". `make test` runs 753 tests.
+answers "not built yet". `make test` runs 785 tests.
 
 ## 1. What exists
 
@@ -116,11 +116,12 @@ for role in ("cloud", "attacker", "judge", "generator", "d3"):
 ```
 
 Each role writes `<cache_dir>/<role>.jsonl`. Only `cloud` has been called so
-far: `results/cache/cloud.jsonl` holds the eleven exchanges of 16 Nov. Seven of
-the ten fixture calls are still answered from it (the five with R1, and
-`fx-bank-02` and `fx-hr-01` with R2); the corrections of 17 Nov changed the R2
-text of `fx-bank-01`, `fx-bank-03` and `fx-hr-02`, which a human sends again
-with `configs/gold-r2.yaml` (three calls). An empty reply, or one cut at the
+far: `results/cache/cloud.jsonl` holds fourteen exchanges, the eleven of 16 Nov
+and three of 18 Nov. The corrections of 17 Nov changed the R2 text of
+`fx-bank-01`, `fx-bank-03` and `fx-hr-02`, which Giuseppe sent again with
+`configs/gold-r2.yaml`: the ten fixture calls (five with R1, five with R2) are
+all answered from the file, and the three R2 replies of 16 Nov stay in it,
+no longer read. An empty reply, or one cut at the
 token limit, raises `RuntimeError` and is not cached; a missing key raises
 `ConfigError`. On a rate limit the provider tries the next key; when every key
 is refused it waits for the shortest time one of them asks and tries again, up
@@ -186,7 +187,13 @@ and writes nothing. The masked text of each file equals
   values from the surrogates, and restoration cannot undo them: with R2 the
   postcode and province of the fake town ("13012 Bergamo (VC)" after
   restoration) and an email address built on the fake bank's name; with R1 an
-  amount written twice with its currency ("€ 320,00 €/mese").
+  amount written twice with its currency ("€ 320,00 €/mese"). A calculation on
+  a masked amount is out of reach for the same reason: with R1 the model has
+  no number, with R2 it computes on the fake and the result stays wrong.
+  Amounts stay masked all the same, because the profiles shown to the attacker
+  carry them (`financial`, the monthly instalment). Future work, not built:
+  the model writes the operation on the placeholders and the tool computes it
+  locally with the real values.
 - **The model confuses whose data is whose.** In `fx-hr-02` the HR manager's
   signature carries the employee's role, phone and email; in `fx-bank-02` the
   bank signs with the customer's phone. Restoration is complete by our
@@ -194,27 +201,40 @@ and writes nothing. The masked text of each file equals
 - **The model's own template slots** (`[Nome Cognome]`, `[NUMERO_TELEFONO]`)
   have no number, are not placeholders of ours and are left alone. A slot
   shaped like one of ours and absent from the vault (`[EMAIL_1]` in
-  `fx-bank-03`) is reported as `hallucinated_token`.
+  `fx-bank-03` with R1; `[PERSONA_1_M]` in `fx-hr-02` with R2, where the text
+  sent holds fakes and placeholders together) is reported as
+  `hallucinated_token`.
 - **A fake value the reply uses on its own account is restored too.** This
   cannot be told apart, so the full-restoration rate of R2 is an upper bound.
   Names that are also Italian words are kept out of the lists: ten of them
   (Quaranta, Albanesi, Fiorentini, Montanari, Pellegrini, Calderoni, Benedetta,
   Brando, Valentino, Macerata) were replaced on 17 Nov.
-- **A fake the reply rewrites is not recognised.** Another format ("701 euro"
-  for "701,00 euro"), a shortened name of a company, a misspelt fake of one
-  word: the fake stays in the reply and its entry is `dropped`, with
-  `fully_restored` true. A fake of one word has no fuzzy step on purpose:
-  ordinary words are too close to it ("Biella", "bella"). The protocol counts
-  the fakes left in the text by hand (section 10).
+- **A fake amount the reply rewrites is read as a number** (18 Nov). On the
+  five real R2 replies the model rewrote three of the four amounts it repeated
+  ("€ 82,90" for "82,90 euro"; "98 937 euro", with narrow no-break spaces, for
+  "98.937 euro"), and two replies with `fully_restored` true showed a fake
+  amount. A whole number next to its currency, with the digits and the
+  decimals of a fake amount, is now that fake, however its thousands are
+  separated; and a fake amount never has the digits of a number of the text
+  or of the vault, with or without decimals, so that two fakes are never one
+  number in two shapes ("€ 98", "98,00 euro"). Still not read: an amount
+  without its decimals ("701 euro" for "701,00 euro"), a number with no
+  currency next to it, thousands separated by a plain space.
+- **Any other fake the reply rewrites is not recognised.** A shortened name of
+  a company, a misspelt fake of one word, a date in another format: the fake
+  stays in the reply and its entry is `dropped`, with `fully_restored` true. A
+  fake of one word has no fuzzy step on purpose: ordinary words are too close
+  to it ("Biella", "bella"). The protocol counts the fakes left in the text by
+  hand (section 10).
 - **A fake that starts with a digit is not restored after a digit and a point
   or a comma**, so that "225,00 euro" is never found at the end of "1.225,00
   euro". A span that starts in the middle of a number (the decimals alone) is
   therefore not restored under R2; a span that stops before the decimals
   ("€ 320" in "€ 320,00") is.
-- **The fuzzy step of R2 is strict on short words**: "869,00 EUR" for the
-  fake "869,00 euro", or "Srl" for "S.r.l.", is not close enough word by word,
-  so the fake stays (`dropped`). The whole-string comparison of before also
-  restored "Lavorazioni Meccaniche Sbrana ha" and deleted the verb.
+- **The fuzzy step of R2 is strict on short words**: "Srl" for "S.r.l." is
+  not close enough word by word, so the fake stays (`dropped`). The
+  whole-string comparison of before also restored "Lavorazioni Meccaniche
+  Sbrana ha" and deleted the verb.
 - **A suffix added to a placeholder without a gender** (`[IBAN_1_X]`,
   `[PERSONA_1_X]` when the vault holds `[PERSONA_1]`) is read as the
   placeholder followed by `_X]`: the value is restored and the tail stays. With
@@ -251,11 +271,16 @@ and writes nothing. The masked text of each file equals
 - Approve the first-name lists of `resolve.py` and the fake lists of
   `replace/data/` (written for this project, no external source), with the ten
   replacements of 17 Nov. They are frozen at gate G2.
-- Send `fx-bank-01`, `fx-bank-03` and `fx-hr-02` again with
-  `configs/gold-r2.yaml`, and read the ten restored replies (task 2.6).
+- Read the ten restored replies (task 2.6); the three R2 calls that the
+  corrections had changed were sent again on 18 Nov.
 - Decide: whether `DATA_NASCITA` keeps a fake date under R2 or the
   placeholder; whether a caller may pass a `temperature` other than 0
   (`docs/interfaces.md` allows it, `CLAUDE.md` fixes 0).
+- Agree with the team that a fake amount is read as a number (section 4):
+  Giuseppe decided it on 18 Nov, after the real replies. For amounts, the
+  sentence of `docs/evaluation_protocol.md`, section 10, "a fake value that
+  the model reformats or abbreviates is neither restored nor flagged" no
+  longer holds in full; the rate stays an upper bound for every other fake.
 - Whoever has the key under `API_KEY` in a local `.env` renames it to
   `GROQ_API_KEY`: the generic names are no longer read, so that a key of
   another service is never sent to Groq.
