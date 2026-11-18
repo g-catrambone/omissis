@@ -23,7 +23,7 @@ from omissis.eval.datasets import load_profiles, load_texts
 from omissis.pipeline import mask
 from omissis.replace import fakes, replace
 from omissis.resolve import resolve
-from omissis.restore import restore
+from omissis.restore import numbers, restore
 from omissis.vault import Vault
 
 REPO = Path(__file__).resolve().parents[2]
@@ -475,3 +475,166 @@ def test_first_word_of_two_first_names_is_written_as_the_fake_first_name():
         restore(masked, vault, 0.9)[0]
         == "Cara Maria Grazia, la Sig.ra Maria Grazia Ferri conferma."
     )
+
+
+# --- an amount the reply writes in another form --------------------------------------
+
+
+@pytest.mark.parametrize(
+    "written",
+    [
+        "€ 225,00",  # the currency moved, as in the real replies of 18 Nov
+        "€ 225,00",  # with the narrow no-break space the model uses
+        "€225,00",
+        "EUR 225,00",
+        "225,00 EUR",
+        "225,00 €",
+    ],
+)
+def test_fake_amount_written_in_another_form_is_restored_by_its_value(written):
+    vault = fakes_vault(("225,00 euro", "245,00 euro", "IMPORTO"))
+    text, events = restore(f"| 5 novembre | {written} |, come richiesto.", vault, 0.9)
+    assert text == "| 5 novembre | 245,00 euro |, come richiesto."
+    assert outcome(events)["225,00 euro"] == (R.RESTORED, written)
+
+
+@pytest.mark.parametrize("written", ["98 937 euro", "98 937 euro", "98937 euro"])
+def test_fake_amount_with_other_thousands_separators_is_restored_by_its_value(written):
+    vault = fakes_vault(("98.937 euro", "12.400 euro", "IMPORTO"))
+    text, events = restore(f"Il saldo residuo (circa {written}) sarà trasferito.", vault, 0.9)
+    assert text == "Il saldo residuo (circa 12.400 euro) sarà trasferito."
+    assert outcome(events)["98.937 euro"] == (R.RESTORED, written)
+
+
+@pytest.mark.parametrize(
+    "reply",
+    [
+        "Il totale è 225.",  # no currency next to the number
+        "Un addebito di € 226.",  # another amount
+        "Un addebito di € 1.225.",  # a longer number
+        "Un addebito di € 225.000.",
+        "Un addebito di € 225,50.",
+        "Un addebito di € 225.00.",  # a point before the decimals is not read
+        "Erano 15 225 EUR.",  # a plain space may be the thousands of a longer number
+        "Circa 225 europei.",
+        "Un addebito di € 225mila.",
+        "Bonifico rif. A225 EUR.",
+    ],
+)
+def test_number_that_is_not_the_fake_amount_is_left_alone(reply):
+    text, events = restore(reply, fakes_vault(("225 euro", "245 euro", "IMPORTO")), 0.9)
+    assert text == reply
+    assert outcome(events)["225 euro"] == (R.DROPPED, None)
+
+
+@pytest.mark.parametrize(
+    ("fake", "reply"),
+    [
+        ("225,00 euro", "Un addebito di € 225."),  # the decimals dropped
+        ("225,00 euro", "Un addebito di 225 EUR."),
+        ("225 euro", "Un addebito di € 225,00."),  # the decimals added
+        ("€ 752,00 al mese", "La rata è di 752,00 € al mese."),  # more than an amount
+    ],
+)
+def test_amount_with_other_decimals_or_inside_a_longer_fake_is_not_read(fake, reply):
+    text, events = restore(reply, fakes_vault((fake, "€ 320,00 al mese", "IMPORTO")), 0.9)
+    assert text == reply
+    assert outcome(events)[fake] == (R.DROPPED, None)
+
+
+def test_fake_amount_as_it_was_sent_is_restored_with_no_other_form_reported():
+    vault = fakes_vault(("225,00 euro", "245,00 euro", "IMPORTO"))
+    text, events = restore("Totale: 225,00 euro, poi € 225,00.", vault, 0.9)
+    assert text == "Totale: 245,00 euro, poi 245,00 euro."
+    assert outcome(events)["225,00 euro"] == (R.RESTORED, "€ 225,00")
+    _, events = restore("Totale: 225,00 euro.", vault, 0.9)
+    assert outcome(events)["225,00 euro"] == (R.RESTORED, None)
+
+
+def test_plain_space_is_not_read_as_the_thousands_of_a_fake_amount():
+    # "il 15 225 euro" may be a day and an amount: the two numbers are never joined.
+    reply = "Erano 15 225 euro."
+    text, events = restore(reply, fakes_vault(("15.225 euro", "12.400 euro", "IMPORTO")), 0.9)
+    assert text == reply
+    assert outcome(events)["15.225 euro"] == (R.DROPPED, None)
+
+
+def test_fake_amount_with_the_number_of_an_original_is_not_read_as_a_number():
+    # The fake of the first amount has the number of the second original. A placeholder
+    # puts that original back before the amounts are read: it must not be taken for the fake.
+    vault = fakes_vault(("€ 37,00", "€ 80,00", "IMPORTO"), ("[IMPORTO_1]", "37,00 euro", "IMPORTO"))
+    text, events = restore("Un bollo di [IMPORTO_1] e una rata di € 37,00.", vault, 0.9)
+    assert text == "Un bollo di 37,00 euro e una rata di € 80,00."
+    assert {o for o, _ in outcome(events).values()} == {R.RESTORED}
+    # Two fakes, each with the number of the other's original, in another shape.
+    vault = fakes_vault(("€ 37,00", "€ 80,00", "IMPORTO"), ("80,00 euro", "37,00 euro", "IMPORTO"))
+    text, _ = restore("Una rata di € 37,00 e un bollo di 80,00 euro.", vault, 0.9)
+    assert text == "Una rata di € 80,00 e un bollo di 37,00 euro."
+
+
+@pytest.mark.parametrize(
+    ("reply", "restored"),
+    [
+        # the longer fake rewritten with the currency in front starts like the shorter one
+        ("Pari a €89.407, poi 89 euro.", "Pari a 74.281 Euro, poi €38."),
+        # with a no-break space it ends like the third
+        ("Saldo di 89\u202f407 Euro e 407 euro.", "Saldo di 74.281 Euro e 120 euro."),
+    ],
+)
+def test_fake_amount_is_never_found_inside_another_fake_amount_rewritten(reply, restored):
+    vault = fakes_vault(
+        ("€89", "€38", "IMPORTO"),
+        ("89.407 Euro", "74.281 Euro", "IMPORTO"),
+        ("407 euro", "120 euro", "IMPORTO"),
+    )
+    assert restore(reply, vault, 0.9)[0] == restored
+
+
+def test_two_fake_amounts_that_differ_in_the_decimals_only_are_not_read_as_numbers():
+    # "€39" may be the first fake, or the second without its decimals.
+    vault = fakes_vault(("€ 39", "€ 59", "IMPORTO"), ("€ 39,00", "€ 64,00", "IMPORTO"))
+    for reply in ("Importo: €39.", "Importo: 39,00 EUR."):
+        text, events = restore(reply, vault, 0.9)
+        assert text == reply
+        assert {o for o, _ in outcome(events).values()} == {R.DROPPED}
+    # As they were sent, both are still restored.
+    assert restore("Prima € 39, poi € 39,00.", vault, 0.9)[0] == "Prima € 59, poi € 64,00."
+
+
+def test_two_fake_amounts_of_one_value_are_not_restored_by_their_value():
+    vault = fakes_vault(("€ 50,00", "€ 80,00", "IMPORTO"), ("50,00 euro", "70,00 euro", "IMPORTO"))
+    reply = "Un totale di 50,00 EUR."
+    text, events = restore(reply, vault, 0.9)
+    assert text == reply
+    assert {o for o, _ in outcome(events).values()} == {R.DROPPED}
+
+
+def test_amounts_rewritten_by_the_model_go_back_to_the_real_ones():
+    text = "Contesto due addebiti: 89,90 euro e 245,00 euro."
+    spans = [
+        Span(text.index(v), text.index(v) + len(v), v, SpanType.IMPORTO, 1.0, "GOLD")
+        for v in ("89,90 euro", "245,00 euro")
+    ]
+    for seed in range(5):
+        masked, vault = replace(text, resolve(spans, text), Strategy.R2, seed)
+        first, second = (entry.surrogate.removesuffix(" euro") for entry in vault)
+        reply = f"| Importo |\n| € {first} |\n| € {second} |"
+        restored, events = restore(reply, vault, 0.9)
+        assert restored == "| Importo |\n| 89,90 euro |\n| 245,00 euro |", masked
+        assert [e.outcome for e in events] == [R.RESTORED, R.RESTORED]
+
+
+def test_fake_amount_never_has_the_number_of_another_amount_or_of_the_text():
+    # "€ 98,00" and "98 Euro" are two strings and one number, with or without the
+    # decimals: a reply that writes the first as "98 euro" could not be restored safely.
+    text = "Il 15 marzo ho versato € 91,00, poi 58 Euro."
+    spans = [
+        Span(text.index(v), text.index(v) + len(v), v, SpanType.IMPORTO, 1.0, "GOLD")
+        for v in ("€ 91,00", "58 Euro")
+    ]
+    in_text = {whole for whole, _ in numbers(text)}
+    for seed in range(400):
+        _, vault = replace(text, resolve(spans, text), Strategy.R2, seed)
+        first, second = ({whole for whole, _ in numbers(e.surrogate)} for e in vault)
+        assert first.isdisjoint(second), seed
+        assert (first | second).isdisjoint(in_text), seed

@@ -29,9 +29,18 @@ fake of one word has no fuzzy step: ordinary words are too close to it ("Biella"
 "bella"). Two different runs that are both close enough are not a safe match: the
 entry is reported as `altered_unresolved`. A fake value that the reply uses on its
 own account is restored too: this cannot be told apart, and it is why the number of
-restored fakes per reply is reported. A fake that the reply rewrites in another
-format, or shortens, is not recognised: it stays in the text and its entry is
-`dropped` (docs/evaluation_protocol.md, section 10).
+restored fakes per reply is reported.
+
+An amount comes first and is read as a number, because the model moves the currency
+and changes the separators: "€ 82,90" for "82,90 euro", "98 937 euro" with no-break
+spaces for "98.937 euro". A whole number next to its currency, with the digits and the
+decimals of a fake amount, is that fake, however its thousands are separated. Never a
+number without its currency, and never a number that an original of the vault also
+holds, or that two fakes share, with or without their decimals: these are not a safe
+match. Any other fake that the
+reply rewrites in another format, or shortens ("225 euro" for "225,00 euro"), is not
+recognised: it stays in the text and its entry is `dropped`
+(docs/evaluation_protocol.md, section 10).
 
 Every vault entry gets exactly one event; the worst outcome wins
 (`altered_unresolved`, then `restored_fuzzy`, `restored`, `dropped`). After the
@@ -80,6 +89,19 @@ _BRACKETED_RE = re.compile(r"\\?\[[^\[\]\n]{1,40}\]")
 # A bracketed token in placeholder shape, with any label and in any case.
 _SHAPED_RE = re.compile(r"\[[^\W\d_]+(?:_[^\W\d_]+)*_\d+(?:_[^\W\d_]+)?\]")
 _EDGE_PUNCTUATION = ".,;:!?()«»\"'_*"
+# A number as Italian writes it: the thousands apart by a point or a no-break space
+# (never a plain space, which may stand between two numbers), a comma before the
+# decimals. "225.00" is not read.
+_THOUSANDS = r"[.   ]"
+_NUMBER = rf"(?:\d{{1,3}}(?:{_THOUSANDS}\d{{3}})+|\d+)(?:,\d{{1,2}})?"
+_NUMBER_RE = re.compile(_NUMBER)
+_CURRENCY = r"(?:€|\b(?:euro|eur)\b)"
+# An amount: a whole number with its currency before or after it, on one line.
+_AMOUNT_RE = re.compile(
+    rf"{_CURRENCY}[^\S\n]?(?P<after>{_NUMBER})(?![.,]?\d)(?![^\W_])"
+    rf"|(?<![^\W_])(?<!\d[.,\s])(?P<before>{_NUMBER})[^\S\n]?{_CURRENCY}",
+    re.IGNORECASE,
+)
 _RANK = {
     RestoreOutcome.DROPPED: 0,
     RestoreOutcome.RESTORED: 1,
@@ -237,8 +259,58 @@ def _near_miss(words: list[str], fake: list[str], threshold: float) -> bool:
     return True
 
 
-def _restore_fakes(text: str, entries: list[VaultEntry], threshold: float, out: _Outcomes) -> str:
-    """Steps 1 to 3 for R2: the whole fakes, their near misses, then their variants."""
+def _number(written: str) -> tuple[str, str]:
+    """The digits of a number, whatever separates its thousands, and its decimals."""
+    whole, _, decimals = written.partition(",")
+    return re.sub(_THOUSANDS, "", whole), decimals
+
+
+def numbers(text: str) -> set[tuple[str, str]]:
+    """Every number of `text`, as restoration compares the number of an amount."""
+    return {_number(written) for written in _NUMBER_RE.findall(text)}
+
+
+def _restore_amounts(text: str, entries: list[VaultEntry], vault: Vault, out: _Outcomes) -> str:
+    """Before step 1 for R2: a fake amount, read as a number next to its currency.
+
+    In one pass over the whole amounts of the text, so that a fake is never found at
+    the start or at the end of a longer number. A number that an original of the vault
+    also holds is left out (a placeholder may have put that original back already).
+    So are two fakes with the same digits before the comma: "€39" may be the fake
+    "€ 39" or the fake "€ 39,00" without its decimals.
+    """
+    originals = {
+        number
+        for entry in vault
+        for value in (entry.original, *entry.original_variants)
+        for number in numbers(value)
+    }
+    amounts = [(_AMOUNT_RE.fullmatch(entry.surrogate), entry) for entry in entries]
+    written = [(_number(m["after"] or m["before"]), entry) for m, entry in amounts if m]
+    wholes = [whole for (whole, _), _ in written]
+    fakes = {
+        number: entry
+        for number, entry in written
+        if number not in originals and wholes.count(number[0]) == 1
+    }
+
+    def substitute(match: re.Match[str]) -> str:
+        raw = match.group()
+        entry = fakes.get(_number(match["after"] or match["before"]))
+        if entry is None:
+            return raw
+        found_as = None if raw == entry.surrogate else raw
+        out.record(entry.surrogate, RestoreOutcome.RESTORED, found_as)
+        return entry.original
+
+    return _AMOUNT_RE.sub(substitute, text)
+
+
+def _restore_fakes(
+    text: str, entries: list[VaultEntry], vault: Vault, threshold: float, out: _Outcomes
+) -> str:
+    """Steps 1 to 3 for R2: the amounts, the whole fakes, the near misses, then the variants."""
+    text = _restore_amounts(text, entries, vault, out)
     text = _restore_forms(text, [(e.surrogate, e.original, e) for e in entries], out)
     for entry in entries:
         fake = entry.surrogate.split()
@@ -287,7 +359,7 @@ def restore(reply: str, vault: Vault, fuzzy_threshold: float) -> tuple[str, list
 
     text = _restore_placeholders(reply, vault, placeholders, out)
     text = _restore_placeholders_fuzzy(text, placeholders, fuzzy_threshold, out)
-    text = _restore_fakes(text, fakes, fuzzy_threshold, out)
+    text = _restore_fakes(text, fakes, vault, fuzzy_threshold, out)
 
     # No placeholder may remain silently: whatever is still there has an event. A token
     # is covered when an event names it, or the part of it that was read ("[PERSONA_1").
