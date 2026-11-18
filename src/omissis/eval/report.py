@@ -94,7 +94,8 @@ def contrast_rows(
     top1 = [r for r in linkage if r["n"] == 25]
     sources = {
         "linkage_top1_n25": (top1, lambda r: r["top1"], True),
-        "utility": (utility, lambda r: r["utility"], False),
+        # T3 alone and the mean of T3 and T1 are two scales: both sides need a T1.
+        "utility": (utility, lambda r: None if r["t1"] is None else r["utility"], False),
         "full_restoration": (restoration, lambda r: r["fully_restored"], True),
     }
     rows = []
@@ -236,6 +237,15 @@ def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str:
     return "\n".join(lines)
 
 
+def chart_metric(rows: list[dict[str, Any]]) -> str:
+    """What the chart plots: the utility score, or T3 when a configuration has no T1.
+
+    Without a judge the configurations report T3 alone, and the chart uses T3 for every
+    one of them (protocol, section 9): the reference would otherwise sit on another scale.
+    """
+    return "t3" if any(row["t1"] is None for row in rows) else "utility"
+
+
 def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
     """Privacy against utility, one point per configuration. False without matplotlib."""
     try:
@@ -247,16 +257,17 @@ def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
         return False
     linkage, utility = metrics["linkage"], metrics["utility"]
     figure, axes = plt.subplots(figsize=(7, 5))
+    metric = chart_metric(utility["rows"])
     for row in utility["rows"]:
-        if row["utility"] is None:
+        if row[metric] is None:
             continue
         link = next(r for r in linkage["rows"] if r["config"] == row["config"] and r["n"] == 25)
-        x, y = 1 - link["top1"], row["utility"]
+        x, y = 1 - link["top1"], row[metric]
         axes.errorbar(
             x,
             y,
             xerr=[[x - (1 - link["top1_ci_high"])], [(1 - link["top1_ci_low"]) - x]],
-            yerr=[[y - row["utility_ci_low"]], [row["utility_ci_high"] - y]],
+            yerr=[[y - row[f"{metric}_ci_low"]], [row[f"{metric}_ci_high"] - y]],
             fmt="o",
             capsize=3,
         )
@@ -264,7 +275,7 @@ def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
     axes.axvline(1 - 1 / 25, linestyle="--", color="grey")
     axes.annotate("chance", (1 - 1 / 25, 0.02), rotation=90, color="grey", ha="right")
     axes.set_xlabel("Privacy score (1 − linkage top-1, N = 25)")
-    axes.set_ylabel("Utility score")
+    axes.set_ylabel("Utility score" if metric == "utility" else "T3 score (judge rejected)")
     axes.set_xlim(-0.05, 1.05)
     axes.set_ylim(0, 1.05)
     path.parent.mkdir(parents=True, exist_ok=True)

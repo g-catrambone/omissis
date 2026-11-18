@@ -74,8 +74,9 @@ def score_t3(reply: str, gold: Gold) -> dict[str, Any]:
         "requested_action": data.get("requested_action") == gold.requested_action,
         "amounts": _as_set(data.get("amounts"), _amount) == {round(a, 2) for a in gold.amounts},
         "dates": _as_set(data.get("dates"), _date) == set(gold.dates),
+        # Only null says "no deadline": an answer that is not a date is never equal to it.
         "deadline": (deadline is None and "deadline" in data and gold.deadline is None)
-        or (deadline is not None and _date(deadline) == gold.deadline),
+        or (gold.deadline is not None and _date(deadline) == gold.deadline),
     }
     return {"parsed": True, "fields": fields, "score": sum(fields.values()) / len(FIELDS)}
 

@@ -229,7 +229,9 @@ def main(argv: list[str] | None = None) -> int:
     args = parser.parse_args(argv)
     try:
         return evaluate(args.split, backend=args.backend, confirm=not args.yes)
-    except (CacheMissError, ConfigError, DataError, NotImplementedError) as exc:
+    except (CacheMissError, ConfigError, DataError, NotImplementedError, RuntimeError) as exc:
+        # RuntimeError: a provider that fails after its retries, a reply cut at the token
+        # limit. Nothing of that reply is cached, so the next launch asks again.
         print(f"evaluation stopped: {exc}", file=sys.stderr)
         return 2
 

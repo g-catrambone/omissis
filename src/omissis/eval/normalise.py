@@ -59,16 +59,20 @@ def extract_json(reply: str):
     """The JSON object written in a model reply, or None.
 
     Reasoning in `<think>` tags, a code fence and words around the object are ignored:
-    the object is what lies between the first `{` and the last `}`.
+    the object is the first one that can be read from a `{` of the reply, so a brace in
+    the words before or after it does not hide it.
     """
     import json
 
     reply = _THINK.sub("", reply)
-    start, end = reply.find("{"), reply.rfind("}")
-    if start == -1 or end < start:
-        return None
-    try:
-        value = json.loads(reply[start : end + 1])
-    except json.JSONDecodeError:
-        return None
-    return value if isinstance(value, dict) else None
+    decoder = json.JSONDecoder()
+    start = reply.find("{")
+    while start != -1:
+        try:
+            value, _ = decoder.raw_decode(reply, start)
+        except json.JSONDecodeError:
+            value = None
+        if isinstance(value, dict):
+            return value
+        start = reply.find("{", start + 1)
+    return None

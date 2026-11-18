@@ -195,6 +195,14 @@ def test_cache_miss_stops_the_command_with_status_2(world, monkeypatch, capsys):
     assert "evaluation stopped" in capsys.readouterr().err
 
 
+def test_reply_cut_at_the_token_limit_stops_the_command_with_status_2(world, monkeypatch, capsys):
+    tmp, _ = world
+    error = backends.TruncatedReplyError("the reply of judge stopped at the token limit")
+    monkeypatch.setattr(run, "evaluate", lambda *a, **k: (_ for _ in ()).throw(error))
+    assert run.main(["--split", "dev", "--yes"]) == 2
+    assert "token limit" in capsys.readouterr().err
+
+
 def test_held_out_split_is_evaluated_once_and_every_launch_is_logged(world, monkeypatch, capsys):
     tmp, evaluate = world
     monkeypatch.setattr(run, "HELD_OUT", "holdout")

@@ -188,3 +188,33 @@ def test_t1_reply_comes_from_the_cache_after_the_run(setup, monkeypatch):
     monkeypatch.setattr(backends, "_PROVIDERS", {})  # no provider: only the cache can answer
     replay = with_overrides(configs["REF-oracle"], backend="replay")
     assert record.text in utility.t1_reply(record, replay)
+
+
+@pytest.mark.parametrize(
+    "answer", ["", "entro fine mese", "15 dicembre", "31/02/2026", 0, "nessuna"]
+)
+def test_answer_that_is_not_a_date_is_wrong_when_the_text_has_no_deadline(answer):
+    # Only null says "no deadline": an answer that cannot be read as a date is not null.
+    no_deadline = Gold("iban_change", (), (), "update_details", None)
+    reply = {
+        "intent": "iban_change",
+        "requested_action": "update_details",
+        "amounts": [],
+        "dates": [],
+        "deadline": answer,
+    }
+    result = utility.score_t3(json.dumps(reply), no_deadline)
+    assert result["fields"]["deadline"] is False
+    assert result["score"] == pytest.approx(0.8)
+
+
+@pytest.mark.parametrize(
+    "reply",
+    [
+        '{"intent": "iban_change"}\nNota: i campi {mancanti} sono omessi.',
+        'Ecco {la risposta}: {"intent": "iban_change"} (vedi sopra).',
+        '```json\n{"intent": "iban_change", "extra": {"a": 1}}\n```\n{fine}',
+    ],
+)
+def test_braces_in_the_words_around_the_object_do_not_hide_it(reply):
+    assert utility.extract_json(reply)["intent"] == "iban_change"
