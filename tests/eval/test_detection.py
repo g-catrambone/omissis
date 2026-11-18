@@ -196,6 +196,23 @@ def test_metrics_are_recomputed_from_the_files_without_a_detector(world, monkeyp
     assert detection.rows(counts, first["seed"]) == first["rows"]
 
 
+def test_stored_spans_that_do_not_match_the_text_are_refused(world):
+    # A file left from an earlier version of a text must not be scored in silence.
+    tmp, config = world
+    detection.run("dev", config, results=tmp / "results", data=tmp / "data")
+    from omissis.eval.datasets import load_texts
+
+    records = load_texts(tmp / "data" / "dev")
+    folder = tmp / "results" / "dev" / "detected"
+    path = sorted((folder / "D0").glob("*.json"))[0]
+    data = json.loads(path.read_text(encoding="utf-8"))
+    data["spans"][0]["start"] += 1
+    data["spans"][0]["end"] += 1
+    path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    with pytest.raises(ValueError, match="does not match the text"):
+        detection.per_text(records, folder)
+
+
 def test_files_of_a_detector_not_run_here_are_kept_and_counted(world, monkeypatch):
     tmp, config = world
     detection.run("dev", config, results=tmp / "results", data=tmp / "data")

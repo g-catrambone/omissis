@@ -221,6 +221,12 @@ def per_text(records: list[TextRecord], folder: Path) -> list[dict[str, Any]]:
         if missing:
             raise FileNotFoundError(f"{folder / detector}: no file for {missing[:3]}")
         for record in records:
+            # A file left from another version of the text would be scored in silence.
+            if not all(span.matches(record.text) for span in by_text[record.id]):
+                raise ValueError(
+                    f"{folder / detector}: a span of {record.id} does not match the text; "
+                    "run the detector again"
+                )
             out.append(
                 {"text_id": record.id, "detector": detector}
                 | text_counts(list(record.spans), by_text[record.id])
