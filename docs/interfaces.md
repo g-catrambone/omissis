@@ -90,13 +90,16 @@ therefore absorb a direct identifier it overlaps: the stretch is still masked
 when `config.mask_quasi` is true, under the longer span's type. Every span
 satisfies `span.matches(text)`.
 Quasi-identifier spans are returned even when `config.mask_quasi` is false:
-the caller decides whether to mask them. Never raises on bad input or on a
-failing model: a failing detector logs and contributes no spans, and inside D4
-a failing sub-detector does not remove the spans of the others. Two errors are
-not failures of a model and do propagate, `CacheMissError` and `ConfigError`
-(a cache miss in replay, a model that is not pinned, a library or a weights
-file missing on this machine): returning no spans would send the text
-unmasked. A detector not built yet raises `NotImplementedError`
+the caller decides whether to mask them. Never raises on bad input: a text
+that is not a string gives no spans. A detector that fails stops the run,
+because returning no spans would send the text unmasked: a `RuntimeError` (a
+cache miss in replay, a provider or a model that fails) and a `ConfigError` (a
+model that is not pinned, a library or a weights file missing on this machine)
+propagate, and any other error is raised as a `RuntimeError` that names the
+detector and the error type only. The same holds inside D4: with one
+sub-detector missing it is not D4. One failure does not stop the run: two
+replies of D3 that are not valid JSON are logged and counted, and D3 returns
+no spans for that text. A detector not built yet raises `NotImplementedError`
 with a clear message.
 
 **`supported_detectors`** — Lists the detectors that can run on this machine:

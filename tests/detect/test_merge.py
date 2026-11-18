@@ -152,12 +152,11 @@ def test_detect_returns_nothing_for_non_text(value, caplog):
         assert detect(value, DetectorId.D0, CONFIG) == []
 
 
-def test_failing_detector_logs_and_returns_nothing(monkeypatch, caplog):
+def test_failing_detector_stops_the_run_without_quoting_the_text(monkeypatch):
     def broken(text):
-        raise RuntimeError(f"cannot handle {text}")
+        raise KeyError(f"cannot handle {text}")
 
     monkeypatch.setattr(rules, "find_all", broken)
-    with caplog.at_level(logging.ERROR):
-        assert detect("Mario 333 1234567", DetectorId.D0, CONFIG) == []
-    assert "RuntimeError" in caplog.text
-    assert "333 1234567" not in caplog.text  # never log the text
+    with pytest.raises(RuntimeError, match=r"detector D0 failed \(KeyError\)") as raised:
+        detect("Mario 333 1234567", DetectorId.D0, CONFIG)
+    assert "333 1234567" not in str(raised.value)

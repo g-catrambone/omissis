@@ -166,8 +166,9 @@ def test_reply_cut_at_the_token_limit_is_an_invalid_reply(tmp_path, provider):
     assert llm.stats == {"calls": 2, "retries": 1}
 
 
-def test_failing_provider_logs_and_returns_nothing(tmp_path, provider, caplog):
+def test_failing_provider_stops_the_run(tmp_path, provider):
+    # No spans would send the text unmasked: the error of the provider propagates.
     provider["replies"] = [RuntimeError("out of memory")]
-    with caplog.at_level(logging.ERROR):
-        assert detect(TEXT, DetectorId.D3, make_config(tmp_path)) == []
-    assert "RuntimeError" in caplog.text
+    with pytest.raises(RuntimeError, match="out of memory"):
+        detect(TEXT, DetectorId.D3, make_config(tmp_path))
+    assert llm.stats == {"calls": 1}

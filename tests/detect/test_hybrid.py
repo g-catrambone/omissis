@@ -1,6 +1,5 @@
 """D4 hybrid (task 4.4), with fake detectors."""
 
-import logging
 from pathlib import Path
 
 import pytest
@@ -87,12 +86,10 @@ def test_employee_number_from_d3_is_kept():
     assert hybrid.find(text, CONFIG, detectors) == [badge]  # other direct types are not D3's
 
 
-def test_failing_d3_keeps_the_spans_of_d0_and_d2(caplog):
-    with caplog.at_level(logging.ERROR):
-        found = hybrid.find(TEXT, CONFIG, fakes(raising(RuntimeError(f"cannot read {TEXT}"))))
-    assert found == [PHONE, SURNAME_D1, NAME]
-    assert "D3" in caplog.text and "RuntimeError" in caplog.text
-    assert "Caprioli" not in caplog.text  # never log the text
+def test_failing_d3_stops_d4():
+    # D4 with the spans of D0, D1 and D2 alone would leave every quasi-identifier visible.
+    with pytest.raises(RuntimeError, match="server answered HTTP 500"):
+        hybrid.find(TEXT, CONFIG, fakes(raising(RuntimeError("server answered HTTP 500"))))
 
 
 @pytest.mark.parametrize("error", [ConfigError("d3 is not pinned"), CacheMissError("no entry")])

@@ -1,6 +1,5 @@
 """The dispatch table of `detect` and `supported_detectors` (task 4.0)."""
 
-import logging
 from pathlib import Path
 
 import pytest
@@ -67,12 +66,18 @@ def test_cache_miss_and_config_error_propagate(monkeypatch, error):
         detect(TEXT, DetectorId.D1, CONFIG)
 
 
-def test_any_other_error_logs_and_returns_nothing(monkeypatch, caplog):
-    fake(monkeypatch, DetectorId.D1, raising(RuntimeError(f"cannot handle {TEXT}")))
-    with caplog.at_level(logging.ERROR):
-        assert detect(TEXT, DetectorId.D1, CONFIG) == []
-    assert "RuntimeError" in caplog.text
-    assert "giulia.verdi" not in caplog.text  # never log the text
+def test_failing_detector_stops_the_run(monkeypatch):
+    # No spans would send the text unmasked.
+    fake(monkeypatch, DetectorId.D1, raising(RuntimeError("model server answered HTTP 500")))
+    with pytest.raises(RuntimeError, match="HTTP 500"):
+        detect(TEXT, DetectorId.D1, CONFIG)
+
+
+def test_any_other_error_is_raised_with_the_error_type_only(monkeypatch):
+    fake(monkeypatch, DetectorId.D1, raising(IndexError(f"cannot handle {TEXT}")))
+    with pytest.raises(RuntimeError, match=r"detector D1 failed \(IndexError\)") as raised:
+        detect(TEXT, DetectorId.D1, CONFIG)
+    assert "giulia.verdi" not in str(raised.value)  # the message never quotes the text
 
 
 def test_missing_library_raises_config_error_and_is_not_supported(monkeypatch):
