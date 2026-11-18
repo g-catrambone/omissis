@@ -21,20 +21,26 @@ PROFILES = {p["id"]: p for p in FILES["profiles.json"]}
 # --- assignment --------------------------------------------------------------------
 
 
-def test_each_member_reviews_22_texts():
+def test_the_members_share_the_66_texts_evenly():
     table = review.assign(PLAN)
     assert set(table) == set(PLAN)
-    assert Counter(row["reviewer"] for row in table.values()) == dict.fromkeys(review.MEMBERS, 22)
+    share = 66 // len(review.MEMBERS)
+    assert Counter(row["reviewer"] for row in table.values()) == dict.fromkeys(
+        review.MEMBERS, share
+    )
     assert review.assign(PLAN) == table and review.assign(PLAN, seed=1) != table
 
 
-def test_thirteen_texts_get_a_second_annotator_who_is_not_the_reviewer():
+def test_thirteen_texts_are_annotated_blind_by_another_member_when_there_is_one(monkeypatch):
     table = review.assign(PLAN)
     double = {t: row for t, row in table.items() if "second" in row}
     assert len(double) == 13
     assert not any(PLAN[t]["pilot"] for t in double)
-    for row in double.values():
-        assert row["second"] in review.MEMBERS and row["second"] != row["reviewer"]
+    assert all(row["second"] in review.MEMBERS for row in double.values())
+    monkeypatch.setattr(review, "MEMBERS", ("Uno", "Due", "Tre"))
+    three = {t: row for t, row in review.assign(PLAN).items() if "second" in row}
+    assert set(three) == set(double)  # the same 13 texts, whoever annotates them
+    assert all(row["second"] != row["reviewer"] for row in three.values())
     eligible = [t for t, e in PLAN.items() if not e["pilot"]]
     bank = sum(t.startswith("bank-") for t in eligible)
     domains = Counter(t.split("-")[0] for t in double)
@@ -43,7 +49,7 @@ def test_thirteen_texts_get_a_second_annotator_who_is_not_the_reviewer():
 
 def test_reviewers_file_lists_every_text():
     text = review.reviewers_md(review.assign(PLAN))
-    assert text.count("\n| ") == 66 + 1 and "| Text | Reviewer | Second annotator |" in text
+    assert text.count("\n| ") == 66 + 1 and "| Text | Reviewer | Blind annotation first |" in text
 
 
 # --- agreement ---------------------------------------------------------------------
@@ -202,7 +208,11 @@ def test_split_refuses_a_folder_left_by_an_earlier_run_and_creates_nothing(pool,
 
 @pytest.fixture
 def exported(pool, monkeypatch):
-    """The temporary pool with the 13 texts of the double annotation exported."""
+    """The temporary pool, not reviewed yet, with the 13 texts of the blind annotation exported."""
+    for path in (pool / "pool").glob("*.json"):
+        data = json.loads(path.read_text(encoding="utf-8"))
+        del data["reviewed_by"]
+        path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     monkeypatch.setattr(review, "POOL", pool / "pool")
     monkeypatch.setattr(review, "ANNOTATION", pool / "annotation")
     monkeypatch.setattr(review, "AGREEMENT", pool / "metrics" / "agreement.json")
@@ -214,18 +224,17 @@ def exported(pool, monkeypatch):
     return pool
 
 
-def test_agreement_is_written_for_thirteen_reviewed_texts(exported):
+def test_agreement_is_written_for_thirteen_texts_before_their_review(exported):
     assert review.main(["agreement"]) == 0
     result = json.loads((exported / "metrics" / "agreement.json").read_text(encoding="utf-8"))
     assert len(result["per_text"]) == 13
 
 
-def test_agreement_refuses_a_text_that_no_human_has_reviewed_yet(exported, capsys):
-    # Before the review the first annotation is the generator's, not a human's.
+def test_agreement_refuses_a_text_that_is_already_reviewed(exported, capsys):
+    # After the review the tags are the reviewer's, who has seen those of the generator.
     first = sorted(p.name.split(".")[0] for p in (exported / "annotation").glob("*.XY.txt"))[0]
     path = exported / "pool" / f"{first}.json"
-    data = json.loads(path.read_text(encoding="utf-8"))
-    del data["reviewed_by"]
+    data = json.loads(path.read_text(encoding="utf-8")) | {"reviewed_by": "GC"}
     path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
     assert review.main(["agreement"]) == 2
     assert first in capsys.readouterr().err

@@ -4,16 +4,19 @@
     python -m omissis.eval.review export       write data/annotation/<text_id>.txt
     python -m omissis.eval.review agreement    write results/dev/metrics/agreement.json
 
-`assign` deals the 66 planned texts to the three members, 22 each, by seed, and picks
-the 13 texts of the double annotation among those that are not pilot texts, in
-proportion to the two domains, each with a second annotator who is not its reviewer.
+One member does the human work (docs/decisions.md, 18 Nov): `assign` gives the 66
+planned texts to the names of `MEMBERS`, in turn by seed, and picks the 13 texts of the
+blind annotation among those that are not pilot texts, in proportion to the two
+domains.
 
-`export` writes those 13 as plain text, with no tag: the second annotator adds
-`[[TYPE|text]]` tags and saves `data/annotation/<text_id>.<initials>.txt`.
+`export` writes those 13 as plain text, with no tag: the annotator adds
+`[[TYPE|text]]` tags without having seen the tags of the generator and saves
+`data/annotation/<text_id>.<initials>.txt`.
 
-`agreement` compares each annotated copy with the spans of the pool, before any
-adjudication: span F1 under exact and overlap matching, and Cohen's kappa on the
-class of the spans paired by character overlap whatever their class.
+`agreement` compares each annotated copy with the tags of the generator, so it runs
+before those 13 texts are reviewed: span F1 under exact and overlap matching, and
+Cohen's kappa on the class of the spans paired by character overlap whatever their
+class. It measures one human against the generator, not two humans.
 """
 
 from __future__ import annotations
@@ -31,7 +34,7 @@ from omissis.eval.datasets import load_texts
 from omissis.eval.detection import _overlap, match
 from omissis.eval.textgen import parse_tagged
 
-MEMBERS = ("Giuseppe", "Mattia", "Andrea")
+MEMBERS = ("Giuseppe",)
 DOUBLE = 13
 POOL = Path("data/pool")
 ANNOTATION = Path("data/annotation")
@@ -39,7 +42,10 @@ AGREEMENT = Path("results/dev/metrics/agreement.json")
 
 
 def assign(plan: dict[str, dict[str, Any]], seed: int = planning.SEED) -> dict[str, dict[str, str]]:
-    """`text_id -> {"reviewer": ..., "second": ...}`; `second` only for the 13 texts."""
+    """`text_id -> {"reviewer": ..., "second": ...}`; `second` only for the 13 texts.
+
+    `second` is who annotates the text blind: another member when there is one.
+    """
     rng = random.Random(f"{seed}|review")
     ids = sorted(plan)
     rng.shuffle(ids)
@@ -51,7 +57,7 @@ def assign(plan: dict[str, dict[str, Any]], seed: int = planning.SEED) -> dict[s
     n_bank = round(DOUBLE * len(bank) / len(eligible))
     for text_id in rng.sample(bank, n_bank) + rng.sample(hr, DOUBLE - n_bank):
         others = [m for m in MEMBERS if m != table[text_id]["reviewer"]]
-        table[text_id]["second"] = rng.choice(others)
+        table[text_id]["second"] = rng.choice(others) if others else table[text_id]["reviewer"]
     return dict(sorted(table.items()))
 
 
@@ -59,13 +65,14 @@ def reviewers_md(table: dict[str, dict[str, str]]) -> str:
     lines = [
         "# Reviewers",
         "",
-        "Fixed by seed (`python -m omissis.eval.review assign`). Each member reviews 22",
-        "texts as tagged text (`python -m omissis.eval.textgen export` and `import`) and",
-        "writes their initials in `reviewed_by` by hand. The 13 texts with a second",
-        "annotator are annotated a second time from plain text, before any review pull",
-        "request is opened (`docs/evaluation_protocol.md`, section 3).",
+        "Fixed by seed (`python -m omissis.eval.review assign`). The reviewer reads each",
+        "text as tagged text (`python -m omissis.eval.textgen export` and `import`) and",
+        "writes their initials in `reviewed_by` by hand. The 13 texts with a name in the",
+        "last column are first annotated from plain text, with no tag visible, and",
+        "`python -m omissis.eval.review agreement` is run before any of them is reviewed",
+        "(`docs/evaluation_protocol.md`, section 3).",
         "",
-        "| Text | Reviewer | Second annotator |",
+        "| Text | Reviewer | Blind annotation first |",
         "|---|---|---|",
     ]
     lines += [f"| {t} | {row['reviewer']} | {row.get('second', '')} |" for t, row in table.items()]
@@ -171,11 +178,15 @@ def main(argv: list[str] | None = None) -> int:
             (ANNOTATION / f"{text_id}.txt").write_text(records[text_id].text, encoding="utf-8")
         print(f"{len(wanted)} plain texts written to {ANNOTATION}")
         return 0
-    # The agreement is between two humans: before its review a text carries the tags
-    # of the generator, not a first annotation.
-    waiting = [t for t in wanted if t not in records or not records[t].reviewed_by]
-    if waiting:
-        print(f"not reviewed yet (no reviewed_by): {waiting}", file=sys.stderr)
+    # The agreement is between the annotator and the generator: once a text is
+    # reviewed its tags are the reviewer's, who has seen those of the generator.
+    absent = [t for t in wanted if t not in records]
+    if absent:
+        print(f"not in the pool: {absent}", file=sys.stderr)
+        return 2
+    reviewed = [t for t in wanted if records[t].reviewed_by]
+    if reviewed:
+        print(f"already reviewed, run the agreement before the review: {reviewed}", file=sys.stderr)
         return 2
     try:
         second = read_second(ANNOTATION)

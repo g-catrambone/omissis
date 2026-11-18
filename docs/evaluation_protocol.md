@@ -101,31 +101,35 @@ result is reported as it is.
   quasi-identifier "should" be masked: that is `mask_quasi`. A span is the
   shortest stretch that carries the information (the name without the title,
   the amount with its currency, the date without the weekday).
-- **Review.** Every text is reviewed by one human (22 each). Checklist: reads
-  like real correspondence; nothing real; every span tagged with the right
-  type and boundaries; gold fields correct; text requirements of section 2 met.
-  The reviewer's initials go in the file's `reviewed_by` field. A text without
+- **Review.** Every text is reviewed by one human; since 18 Nov one member
+  reviews all 66 (`docs/decisions.md`). Checklist: reads like real
+  correspondence; nothing real; every span tagged with the right type and
+  boundaries; gold fields correct; text requirements of section 2 met. The
+  reviewer's initials go in the file's `reviewed_by` field. A text without
   `reviewed_by` cannot enter the split.
-- **How the review is done.** Each reviewer edits their 22 files in
-  `data/pool/` on a branch `b3/review-<initials>` and opens one pull request;
-  the owner of block 3 merges it. Which 22 belong to whom is fixed by seed and
-  listed in `data/pool/REVIEWERS.md`. The review is done on tagged text, not
-  on the JSON: the tool of task 3.2 exports a pool text with its spans as
-  `[[TYPE|text]]` tags and imports the corrected copy, recomputing the offsets.
-- **Double annotation.** 13 texts, chosen by seed among those that are not
-  pilot texts and stratified by domain, are annotated a second time by a
-  different human starting from the raw text with no tags visible: the second
-  annotator, named in `data/pool/REVIEWERS.md`, receives
-  `data/annotation/<text_id>.txt` (plain text) and returns
+- **How the review is done.** The reviewer edits the files in `data/pool/`;
+  `data/pool/REVIEWERS.md` lists the texts. The review is done on tagged text,
+  not on the JSON: `python -m omissis.eval.textgen export` writes a pool text
+  with its spans as `[[TYPE|text]]` tags and `import` reads the corrected
+  copy, recomputing the offsets.
+- **Blind annotation.** 13 texts, chosen by seed among those that are not
+  pilot texts and stratified by domain, are first annotated from the raw text
+  with no tags visible: `python -m omissis.eval.review export` writes
+  `data/annotation/<text_id>.txt` (plain text) and the annotator saves
   `data/annotation/<text_id>.<initials>.txt` with `[[TYPE|text]]` tags added.
-  This is done before the review pull requests are opened, so that the second
-  annotator has seen no tags. Report span-level F1 between the two annotators
-  (exact and overlap matching, section 6) and Cohen's kappa on class over
-  spans paired by character overlap whatever their class (the overlap match of
-  section 6 requires the same class and would make kappa 1 by construction).
-  Agreement is computed on the pool, before the split.
-- **Adjudication.** Disagreements are settled by the third member; the outcome
-  is the gold. Each adjudication gets one line in `docs/annotation_guide.md`.
+  This is done, and `python -m omissis.eval.review agreement` is run, before
+  any of the 13 is reviewed: the command refuses a text that has
+  `reviewed_by`. Report span-level F1 between the annotator and the tags of
+  the generator (exact and overlap matching, section 6) and Cohen's kappa on
+  class over spans paired by character overlap whatever their class (the
+  overlap match of section 6 requires the same class and would make kappa 1 by
+  construction). Agreement is computed on the pool, before the split.
+- **Limit to declare.** The agreement is between one human and the generator,
+  not between two humans, and the gold is the work of one reviewer: nothing
+  measures how far a second person would annotate the same way.
+- **Adjudication.** The review settles the disagreements: the reviewed tags
+  are the gold. A disagreement that shows an unclear rule gets one line in
+  `docs/annotation_guide.md`.
 
 ## 4. Split
 
@@ -271,19 +275,21 @@ configuration = mean over texts. Always reported with its two components.
   leftover placeholders or broken tokens). Output: JSON with three integers
   and a one-sentence justification. An unparseable reply scores 1 on each
   criterion and is counted for each configuration.
-- **Validation.** Giuseppe and Mattia rate 40 dev items blind: the 20 dev
+- **Validation.** One member rates 40 dev items blind: the 20 dev
   texts masked from gold spans (`mask_quasi` true) with R1 and with R2
   (`REF-oracle`, and `REF-oracle` with `strategy` overridden to `R2`: this
   second configuration has no name, is not in `configs/eval.yaml` and is not
   reported), order shuffled, strategy hidden. No detector is needed. The
-  raters see exactly what the judge sees. Each rater fills their own sheet
-  `results/dev/judge_validation/sheet_<initials>.csv` and sends it privately
-  to the owner of block 3, who commits both together, so neither rater sees the
-  other's scores. The outcome (accepted or rejected, with the numbers) goes in
-  `docs/decisions.md`.
+  rater sees exactly what the judge sees and fills
+  `results/dev/judge_validation/sheet_<initials>.csv` without opening
+  `key.json` or the scores of the judge. The outcome (accepted or rejected,
+  with the numbers) goes in `docs/decisions.md`.
 - **Limit to declare.** The judge is validated on replies produced from
-  gold-span masking, not on replies from the detector configurations.
-  Human consensus = mean of the two raters per criterion. The judge is
+  gold-span masking, not on replies from the detector configurations, and
+  against one rater (decided on 18 Nov): the agreement between humans is not
+  measured.
+  Human consensus = the scores of the rater; with more than one sheet, the
+  mean of the raters per criterion. The judge is
   accepted if quadratic-weighted kappa between judge and rounded consensus is
   at least 0.6, **or** at least 85% of judge scores are within one point of
   the rounded consensus. Report both, plus the score distribution. Both are computed over
@@ -292,9 +298,9 @@ configuration = mean over texts. Always reported with its two components.
   sheets are compared and is validated once. With consensus concentrated on 4
   and 5 the validation shows the absence of gross disagreement, not fine
   discrimination: declared.
-- **Fallback.** If rejected, the three members each score T1 on the 46 test
+- **Fallback.** If rejected, the same rater scores T1 on the 46 test
   replies of `D4+R1`, blind, with the `REF-none` reply as reference, exactly
-  as the judge would (46 items, three raters, consensus as above). Contrast 2
+  as the judge would (46 items, consensus as above). Contrast 2
   uses these human scores for `D4+R1`. The other configurations report T3
   alone; the chart uses T3 on the y axis for every configuration; the judge's
   failure is reported as a finding. The runner reads the outcome of the

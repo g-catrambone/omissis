@@ -240,12 +240,12 @@ def test_rejected_judge_on_the_held_out_split_waits_for_the_human_sheets(
     assert "not complete yet" in capsys.readouterr().out
     assert not (out / "metrics" / "contrasts.json").exists()  # the run does not count yet
     sheets = sorted((out / "judge_fallback").glob("sheet_*.csv"))
-    assert len(sheets) == 3
+    assert len(sheets) == len(run.review.MEMBERS)  # one sheet per member
 
     assert evaluate("holdout") == 0  # sheets still empty: still waiting, not refused
     assert not (out / "metrics" / "contrasts.json").exists()
 
-    for path in sheets:  # the three members fill their sheets
+    for path in sheets:  # every member fills a sheet
         with open(path, encoding="utf-8", newline="") as fh:
             rows = list(csv.DictReader(fh))
         with open(path, "w", encoding="utf-8", newline="") as fh:
