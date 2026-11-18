@@ -4,7 +4,8 @@
 seed, stratified by `domain` x `has_special`, so that dev reaches 20. Every text must
 have been reviewed (`reviewed_by`). The command writes the dev and the test folder
 under `data/` and `data/split.json` with the checksum of every file, and empties
-`data/pool/`.
+`data/pool/`. The pool is emptied last: the files are copied and checked first, so a
+failure before that undoes what was written and leaves the pool whole.
 
 After it has run, no agent opens the test folder.
 """
@@ -14,6 +15,7 @@ from __future__ import annotations
 import hashlib
 import json
 import random
+import shutil
 import sys
 from pathlib import Path
 from typing import Any
@@ -50,8 +52,9 @@ def choose_dev(
 
 def split(pool: Path, data: Path, plan: dict[str, dict[str, Any]], seed: int) -> dict[str, Any]:
     """Move the pool into the dev and test folders of `data` and write `split.json`."""
-    if (data / "split.json").exists():
-        raise RuntimeError(f"{data / 'split.json'} exists: the split is made once")
+    for name in ("split.json", "dev", "test"):
+        if (data / name).exists():
+            raise RuntimeError(f"{data / name} exists: the split is made once")
     records = load_texts(pool)
     if len(records) != TOTAL or {r.id for r in records} != set(plan):
         raise RuntimeError(
@@ -62,16 +65,36 @@ def split(pool: Path, data: Path, plan: dict[str, dict[str, Any]], seed: int) ->
         raise RuntimeError(f"texts without reviewed_by cannot enter the split: {unreviewed}")
     dev = choose_dev(records, plan, seed)
     manifest: dict[str, Any] = {"seed": seed, "dev": dev, "test": [], "sha256": {}}
-    for name in ("dev", "test"):
-        (data / name).mkdir(parents=True, exist_ok=False)
+    targets: dict[Path, Path] = {}
     for record in records:
         source = pool / f"{record.id}.json"
         target = "dev" if record.id in dev else "test"
         if target == "test":
             manifest["test"].append(record.id)
         manifest["sha256"][record.id] = hashlib.sha256(source.read_bytes()).hexdigest()
-        source.rename(data / target / source.name)
-    (data / "split.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+        targets[source] = data / target / source.name
+    # Copy and check first, empty the pool last: until then a failure is undone.
+    try:
+        for name in ("dev", "test"):
+            (data / name).mkdir(parents=True)
+        for source, target in targets.items():
+            shutil.copyfile(source, target)
+            if hashlib.sha256(target.read_bytes()).hexdigest() != manifest["sha256"][source.stem]:
+                raise OSError(f"{target} is not the copy of {source}")
+        (data / "split.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+    except OSError as exc:
+        for name in ("dev", "test"):
+            shutil.rmtree(data / name, ignore_errors=True)
+        (data / "split.json").unlink(missing_ok=True)
+        raise RuntimeError(f"the split was undone, {pool} is untouched: {exc}") from exc
+    try:
+        for source in targets:
+            source.unlink()
+    except OSError as exc:
+        raise RuntimeError(
+            f"the split is written, but {pool} could not be emptied: "
+            f"remove by hand the texts left there ({exc})"
+        ) from exc
     return manifest
 
 

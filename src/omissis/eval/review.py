@@ -130,10 +130,19 @@ def agreement(texts: dict[str, tuple[list[Span], list[Span]]]) -> dict[str, Any]
 
 
 def read_second(folder: Path) -> dict[str, tuple[str, list[Span]]]:
-    """`text_id -> (text, spans)` of every annotated copy `<text_id>.<initials>.txt`."""
-    found = {}
+    """`text_id -> (text, spans)` of every annotated copy `<text_id>.<initials>.txt`.
+
+    Two copies of one text raise `ValueError`: which one is the second annotation is
+    not for the code to choose.
+    """
+    found: dict[str, tuple[str, list[Span]]] = {}
+    seen: dict[str, str] = {}
     for path in sorted(folder.glob("*.*.txt")):
-        found[path.name.split(".")[0]] = parse_tagged(path.read_text(encoding="utf-8"))
+        text_id = path.name.split(".")[0]
+        if text_id in seen:
+            raise ValueError(f"two annotated copies of {text_id}: {seen[text_id]}, {path.name}")
+        seen[text_id] = path.name
+        found[text_id] = parse_tagged(path.read_text(encoding="utf-8"))
     return found
 
 
@@ -162,7 +171,17 @@ def main(argv: list[str] | None = None) -> int:
             (ANNOTATION / f"{text_id}.txt").write_text(records[text_id].text, encoding="utf-8")
         print(f"{len(wanted)} plain texts written to {ANNOTATION}")
         return 0
-    second = read_second(ANNOTATION)
+    # The agreement is between two humans: before its review a text carries the tags
+    # of the generator, not a first annotation.
+    waiting = [t for t in wanted if t not in records or not records[t].reviewed_by]
+    if waiting:
+        print(f"not reviewed yet (no reviewed_by): {waiting}", file=sys.stderr)
+        return 2
+    try:
+        second = read_second(ANNOTATION)
+    except ValueError as exc:
+        print(str(exc), file=sys.stderr)
+        return 2
     missing = [t for t in wanted if t not in second]
     if missing:
         print(f"no annotated copy for: {missing}", file=sys.stderr)

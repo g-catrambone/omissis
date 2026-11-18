@@ -129,6 +129,19 @@ BROKEN = {
     "amount": mutate(lambda d: d["gold"].update(amounts=["50"])),
     "date": mutate(lambda d: d["gold"].update(dates=["03/11/2026"])),
     "deadline": mutate(lambda d: d["gold"].update(deadline="2026-02-30")),
+    # ISO has other ten-character dates; the scorer compares YYYY-MM-DD strings only
+    "date as a week": mutate(lambda d: d["gold"].update(dates=["2026-W47-3"])),
+    "deadline as a week": mutate(lambda d: d["gold"].update(deadline="2026-W47-3")),
+    "amount not a number": mutate(lambda d: d["gold"].update(amounts=[float("nan")])),
+    "amount infinite": mutate(lambda d: d["gold"].update(amounts=[float("inf")])),
+    "span offset a float": mutate(lambda d: d["spans"][0].update(start=5.0)),
+    "span offset a bool": mutate(
+        lambda d: d["spans"].__setitem__(
+            0, {"start": True, "end": 4, "text": "ono", "type": "PERSONA"}
+        )
+    ),
+    "span type a list": mutate(lambda d: d["spans"][0].update(type=["PERSONA"])),
+    "span text a number": mutate(lambda d: d["spans"][0].update(text=5)),
 }
 
 

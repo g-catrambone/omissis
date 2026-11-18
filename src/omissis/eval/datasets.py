@@ -8,6 +8,8 @@ Loaded spans get `confidence=1.0` and `source="GOLD"`.
 from __future__ import annotations
 
 import json
+import math
+import re
 from dataclasses import dataclass
 from datetime import date
 from pathlib import Path
@@ -214,8 +216,12 @@ def _load_spans(items: Any, text: str, fail) -> tuple[Span, ...]:
     for i, item in enumerate(items):
         if not isinstance(item, dict) or set(item) != _SPAN_KEYS:
             raise fail(f"span {i} must have exactly {sorted(_SPAN_KEYS)}")
-        if item["type"] not in SpanType.__members__:
+        if not isinstance(item["type"], str) or item["type"] not in SpanType.__members__:
             raise fail(f"span {i} has unknown type {item['type']!r}")
+        if any(isinstance(item[k], bool) or not isinstance(item[k], int) for k in ("start", "end")):
+            raise fail(f"span {i}: start and end must be integers")
+        if not isinstance(item["text"], str):
+            raise fail(f"span {i}: text must be a string")
         try:
             span = Span(item["start"], item["end"], item["text"], item["type"], 1.0, GOLD_SOURCE)
         except (TypeError, ValueError) as exc:
@@ -238,9 +244,10 @@ def _load_gold(item: Any, scenario: str, actions: tuple[str, ...], fail) -> Gold
         raise fail(f"gold.requested_action must be one of {list(actions)}")
     amounts = item["amounts"]
     if not isinstance(amounts, list) or any(
-        isinstance(a, bool) or not isinstance(a, int | float) for a in amounts
+        isinstance(a, bool) or not isinstance(a, int | float) or not math.isfinite(a)
+        for a in amounts
     ):
-        raise fail("gold.amounts must be a list of numbers")
+        raise fail("gold.amounts must be a list of finite numbers")
     dates = item["dates"]
     if not isinstance(dates, list) or not all(_is_iso_date(d) for d in dates):
         raise fail("gold.dates must be a list of YYYY-MM-DD dates")
@@ -256,7 +263,8 @@ def _load_gold(item: Any, scenario: str, actions: tuple[str, ...], fail) -> Gold
 
 
 def _is_iso_date(value: Any) -> bool:
-    if not isinstance(value, str) or len(value) != 10:
+    # `date.fromisoformat` also reads week dates ("2026-W47-3"): only YYYY-MM-DD is ours.
+    if not isinstance(value, str) or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", value):
         return False
     try:
         date.fromisoformat(value)

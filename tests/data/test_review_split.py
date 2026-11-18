@@ -2,6 +2,7 @@
 
 import hashlib
 import json
+import shutil
 from collections import Counter
 from pathlib import Path
 
@@ -157,3 +158,83 @@ def test_split_refuses_unreviewed_texts_a_short_pool_and_a_second_run(pool):
     splitting.split(pool / "pool", pool, PLAN, seed=7)
     with pytest.raises(RuntimeError, match="made once"):
         splitting.split(pool / "pool", pool, PLAN, seed=7)
+
+
+def test_split_that_fails_half_way_leaves_the_pool_whole_and_can_run_again(pool, monkeypatch):
+    before = digests(pool / "pool")
+    calls = []
+
+    def fails_on_the_30th(*args, **kwargs):
+        calls.append(args)
+        if len(calls) >= 30:
+            raise OSError("disk full")
+        raise AssertionError("the real function is called below")
+
+    # Whatever the split uses to put a file in its folder, the 30th file fails.
+    for owner, name in ((Path, "rename"), (shutil, "copyfile")):
+        real = getattr(owner, name)
+
+        def patched(*args, real=real, **kwargs):
+            try:
+                return fails_on_the_30th(*args, **kwargs)
+            except AssertionError:
+                return real(*args, **kwargs)
+
+        monkeypatch.setattr(owner, name, patched)
+    with pytest.raises(RuntimeError, match="undone.*disk full"):
+        splitting.split(pool / "pool", pool, PLAN, seed=7)
+    assert digests(pool / "pool") == before
+    assert sorted(p.name for p in pool.iterdir()) == ["pool"]
+
+    monkeypatch.undo()
+    manifest = splitting.split(pool / "pool", pool, PLAN, seed=7)
+    assert (len(manifest["dev"]), len(manifest["test"])) == (20, 46)
+
+
+@pytest.mark.parametrize("left_over", ["dev", "test"])
+def test_split_refuses_a_folder_left_by_an_earlier_run_and_creates_nothing(pool, left_over):
+    (pool / left_over).mkdir()
+    with pytest.raises(RuntimeError, match="made once"):
+        splitting.split(pool / "pool", pool, PLAN, seed=7)
+    assert sorted(p.name for p in pool.iterdir()) == sorted(["pool", left_over])
+    assert len(digests(pool / "pool")) == 66
+
+
+@pytest.fixture
+def exported(pool, monkeypatch):
+    """The temporary pool with the 13 texts of the double annotation exported."""
+    monkeypatch.setattr(review, "POOL", pool / "pool")
+    monkeypatch.setattr(review, "ANNOTATION", pool / "annotation")
+    monkeypatch.setattr(review, "AGREEMENT", pool / "metrics" / "agreement.json")
+    assert review.main(["export"]) == 0
+    for plain in sorted((pool / "annotation").glob("*.txt")):
+        plain.with_name(f"{plain.stem}.XY.txt").write_text(
+            plain.read_text(encoding="utf-8"), encoding="utf-8"
+        )
+    return pool
+
+
+def test_agreement_is_written_for_thirteen_reviewed_texts(exported):
+    assert review.main(["agreement"]) == 0
+    result = json.loads((exported / "metrics" / "agreement.json").read_text(encoding="utf-8"))
+    assert len(result["per_text"]) == 13
+
+
+def test_agreement_refuses_a_text_that_no_human_has_reviewed_yet(exported, capsys):
+    # Before the review the first annotation is the generator's, not a human's.
+    first = sorted(p.name.split(".")[0] for p in (exported / "annotation").glob("*.XY.txt"))[0]
+    path = exported / "pool" / f"{first}.json"
+    data = json.loads(path.read_text(encoding="utf-8"))
+    del data["reviewed_by"]
+    path.write_text(json.dumps(data, ensure_ascii=False), encoding="utf-8")
+    assert review.main(["agreement"]) == 2
+    assert first in capsys.readouterr().err
+    assert not (exported / "metrics" / "agreement.json").exists()
+
+
+def test_agreement_refuses_two_annotated_copies_of_one_text(exported, capsys):
+    one = sorted((exported / "annotation").glob("*.XY.txt"))[0]
+    shutil.copyfile(one, one.with_name(one.name.replace(".XY.", ".ZZ.")))
+    assert review.main(["agreement"]) == 2
+    assert one.name.split(".")[0] in capsys.readouterr().err
+    assert not (exported / "metrics" / "agreement.json").exists()
