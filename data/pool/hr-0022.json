@@ -1,0 +1,123 @@
+{
+  "id": "hr-0022",
+  "domain": "hr",
+  "scenario": "transfer_request",
+  "profile_id": "p08",
+  "has_special": false,
+  "text": "Oggetto: Richiesta trasferimento sede Palermo - Federica Quattrocchi\n\nGentile Ufficio del Personale di Tessitura Valgrande S.r.l.,\n\nmi chiamo Federica Quattrocchi e sono dipendente con matricola WJ-93942. Lavoro come elettricista presso la sede di Trapani da diversi anni. Con la presente, desidero formalmente richiedere il mio trasferimento alla sede di Palermo, chiedendo cortesemente l'approvazione della pratica.\n\nQuesta decisione è motivata da esigenze familiari e logistiche che rendono difficile la permanenza nella sede attuale. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a gestire la logistica del trasloco a mie spese. Il mio contratto prevede una retribuzione netta mensile di circa 1.850,00 €, che spero venga mantenuta invariata anche nella nuova sede.\n\nPer completezza, allego alla presente la mia documentazione anagrafica. Il mio codice fiscale è PLTSVN21H14X456Y e posso essere contattata al numero 358 044 0921 o tramite l'indirizzo federica.quattrocchi@example.com. Ho anche un conto corrente attivo presso Banca Altopiano, filiale di Trapani, con IBAN IT06R0000052125840795083093, dove vengono accreditati gli stipendi.\n\nChiedo che la richiesta venga presa in considerazione entro il 15 dicembre 2026, in modo da poter pianificare il trasferimento entro la fine dell'anno. Resto a disposizione per eventuali colloqui o chiarimenti.\n\nCordiali saluti,\n\nFederica Quattrocchi\n",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "CITTA"
+    },
+    {
+      "start": 48,
+      "end": 68,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA"
+    },
+    {
+      "start": 103,
+      "end": 129,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 142,
+      "end": 162,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA"
+    },
+    {
+      "start": 195,
+      "end": 203,
+      "text": "WJ-93942",
+      "type": "UTENTE"
+    },
+    {
+      "start": 217,
+      "end": 229,
+      "text": "elettricista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 248,
+      "end": 255,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 356,
+      "end": 363,
+      "text": "Palermo",
+      "type": "CITTA"
+    },
+    {
+      "start": 730,
+      "end": 740,
+      "text": "1.850,00 €",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 899,
+      "end": 915,
+      "text": "PLTSVN21H14X456Y",
+      "type": "CF"
+    },
+    {
+      "start": 952,
+      "end": 964,
+      "text": "358 044 0921",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 987,
+      "end": 1019,
+      "text": "federica.quattrocchi@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1062,
+      "end": 1077,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 1090,
+      "end": 1097,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 1108,
+      "end": 1135,
+      "text": "IT06R0000052125840795083093",
+      "type": "IBAN"
+    },
+    {
+      "start": 1240,
+      "end": 1256,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1407,
+      "end": 1427,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "transfer_request",
+    "amounts": [
+      1850.0
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "approve_request",
+    "deadline": "2026-12-15"
+  }
+}

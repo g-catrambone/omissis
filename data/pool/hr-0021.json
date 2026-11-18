@@ -1,0 +1,122 @@
+{
+  "id": "hr-0021",
+  "domain": "hr",
+  "scenario": "transfer_request",
+  "profile_id": "p03",
+  "has_special": false,
+  "text": "Oggetto: Richiesta trasferimento sede Palermo - Valeria Donadoni\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo Valeria Donadoni e sono impiegata come contabile presso la sede di Trapani. Con la presente, desidero formalmente richiedere il mio trasferimento alla sede di Palermo, chiedendo cortesemente l'approvazione della mia domanda.\n\nLa motivazione principale è legata a esigenze familiari che richiedono una maggiore vicinanza ai miei cari, rendendo la permanenza a Trapani sempre più difficile da gestire. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a trasferirmi entro il 15 gennaio 2027.\n\nPer facilitare le pratiche amministrative, allego i miei dati anagrafici: codice fiscale VZBCFG56R54X246O e matricola aziendale MK-84592. Ricordo che il mio conto corrente è intestato presso Credito Tirrenico, filiale di Trapani, e che la mia carta di credito è attiva.\n\nConfido in una risposta positiva entro il 30 novembre 2026, così da poter organizzare i tempi del trasloco senza intoppi. Resto a disposizione per qualsiasi chiarimento al numero 305 998 4727 o via email all'indirizzo valeria.donadoni@example.com.\n\nGrazie per l'attenzione e per la collaborazione.\n\nCordiali saluti,\nValeria Donadoni\n",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "CITTA"
+    },
+    {
+      "start": 48,
+      "end": 64,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA"
+    },
+    {
+      "start": 99,
+      "end": 122,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 135,
+      "end": 151,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA"
+    },
+    {
+      "start": 174,
+      "end": 183,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 202,
+      "end": 209,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 294,
+      "end": 301,
+      "text": "Palermo",
+      "type": "CITTA"
+    },
+    {
+      "start": 494,
+      "end": 501,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 636,
+      "end": 651,
+      "text": "15 gennaio 2027",
+      "type": "DATA"
+    },
+    {
+      "start": 743,
+      "end": 759,
+      "text": "VZBCFG56R54X246O",
+      "type": "CF"
+    },
+    {
+      "start": 782,
+      "end": 790,
+      "text": "MK-84592",
+      "type": "UTENTE"
+    },
+    {
+      "start": 845,
+      "end": 862,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 875,
+      "end": 882,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 967,
+      "end": 983,
+      "text": "30 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1104,
+      "end": 1116,
+      "text": "305 998 4727",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1143,
+      "end": 1171,
+      "text": "valeria.donadoni@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1241,
+      "end": 1257,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "transfer_request",
+    "amounts": [],
+    "dates": [
+      "2027-01-15",
+      "2026-11-30"
+    ],
+    "requested_action": "approve_request",
+    "deadline": "2026-11-30"
+  }
+}

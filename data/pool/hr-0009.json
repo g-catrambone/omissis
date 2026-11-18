@@ -1,0 +1,85 @@
+{
+  "id": "hr-0009",
+  "domain": "hr",
+  "scenario": "remote_work_request",
+  "profile_id": "p25",
+  "has_special": true,
+  "text": "Oggetto: Richiesta smart working per Alberto Cavallari\n\nGentile Ufficio del Personale di Caseificio Montelupo S.r.l.,\n\nmi chiamo Alberto Cavallari, matricola QA-72135, e vi scrivo per richiedere l'autorizzazione al lavoro da remoto. Come sapete, sono responsabile acquisti e risiedo a Novara.\n\nRecentemente ho dovuto sottopormi a un intervento chirurgico al ginocchio, seguito da un percorso di riabilitazione che richiede tempi di recupero specifici. Per gestire al meglio questa fase di riabilitazione post-operatoria e ridurre gli spostamenti quotidiani, che risultano al momento dolorosi e faticosi, chiedo di poter svolgere le mie attività lavorative da casa.\n\nLa mia posizione mi consente di gestire le trattative con i fornitori e la pianificazione degli ordini anche a distanza, garantendo la stessa efficienza operativa. Ho già predisposto la postazione domestica con connessione stabile.\n\nVi chiedo cortesemente di valutare positivamente questa richiesta, che intendo far partire dal 15 dicembre 2026. Resto a disposizione per qualsiasi chiarimento in merito alle modalità operative.\n\nCordiali saluti,\n\nAlberto Cavallari\nalberto.cavallari@example.com\n383 955 2751\n",
+  "spans": [
+    {
+      "start": 37,
+      "end": 54,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA"
+    },
+    {
+      "start": 89,
+      "end": 116,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 129,
+      "end": 146,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA"
+    },
+    {
+      "start": 158,
+      "end": 166,
+      "text": "QA-72135",
+      "type": "UTENTE"
+    },
+    {
+      "start": 251,
+      "end": 272,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 285,
+      "end": 291,
+      "text": "Novara",
+      "type": "CITTA"
+    },
+    {
+      "start": 489,
+      "end": 519,
+      "text": "riabilitazione post-operatoria",
+      "type": "SALUTE"
+    },
+    {
+      "start": 994,
+      "end": 1010,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1113,
+      "end": 1130,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1131,
+      "end": 1160,
+      "text": "alberto.cavallari@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1161,
+      "end": 1173,
+      "text": "383 955 2751",
+      "type": "TELEFONO"
+    }
+  ],
+  "gold": {
+    "intent": "remote_work_request",
+    "amounts": [],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "approve_request",
+    "deadline": "2026-12-15"
+  }
+}

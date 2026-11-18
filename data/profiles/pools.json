@@ -1,0 +1,12 @@
+{
+  "names_f": ["Alessia", "Beatrice", "Carlotta", "Daniela", "Elena", "Federica", "Giorgia", "Ilaria", "Laura", "Michela", "Noemi", "Roberta", "Sabrina", "Teresa", "Valeria"],
+  "names_m": ["Alberto", "Cesare", "Dario", "Emanuele", "Fabrizio", "Giacomo", "Leonardo", "Massimo", "Nicola", "Pietro", "Raffaele", "Sergio", "Tommaso", "Umberto", "Vincenzo"],
+  "surnames": ["Agostinelli", "Bertolucci", "Cavallari", "Donadoni", "Evangelisti", "Franceschini", "Gasparotto", "Iacobelli", "Lorenzetti", "Mantovani", "Nicoletti", "Occhipinti", "Passalacqua", "Quattrocchi", "Rampazzo", "Scarpellini", "Tagliaferri", "Uccellini", "Valsecchi", "Zamparini", "Altobelli", "Boscolo", "Castellani", "Dellavalle", "Ferrarini", "Giacomelli", "Lombardini", "Marchesini", "Pontiggia", "Sartorelli"],
+  "cities": ["Cremona", "Pistoia", "Viterbo", "Foggia", "Trapani", "Novara"],
+  "roles": ["contabile", "autista", "elettricista", "custode", "agente di commercio", "responsabile acquisti", "progettista", "centralinista"],
+  "employers": ["Tessitura Valgrande S.r.l.", "Cantieri Dorsano S.p.A.", "Caseificio Montelupo S.r.l.", "Farmacie Riunite Altavilla S.p.A.", "Trasporti Bellariva S.r.l.", "Cooperativa Edile Pietrafitta"],
+  "banks": ["Banca Altopiano", "Credito Tirrenico", "Cassa Rurale di Montevago", "Banca Popolare di Rocciaviva"],
+  "products": ["conto corrente", "carta di debito", "carta di credito", "mutuo prima casa", "prestito personale", "deposito titoli"],
+  "special_salute": ["diabete di tipo 2", "emicrania cronica", "asma bronchiale", "celiachia", "ipertensione arteriosa", "artrite reumatoide", "depressione in cura", "intervento al ginocchio con riabilitazione"],
+  "special_sindacato": ["delegato sindacale di reparto", "componente della rappresentanza sindacale unitaria"]
+}

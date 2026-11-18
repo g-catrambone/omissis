@@ -1,0 +1,109 @@
+{
+  "id": "hr-0019",
+  "domain": "hr",
+  "scenario": "transfer_request",
+  "profile_id": "p09",
+  "has_special": false,
+  "text": "Oggetto: Richiesta trasferimento sede Palermo - Dario Altobelli\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo Dario Altobelli e sono un custode presso la vostra azienda. Vi scrivo per formalizzare la mia richiesta di trasferimento alla sede di Palermo, che desidero avvenga a partire dal 15 gennaio 2027.\n\nLa motivazione principale è legata a esigenze familiari che richiedono la mia presenza in quella zona. Attualmente risiedo a Trapani, ma la nuova sede mi permetterebbe di gestire meglio le mie responsabilità personali senza compromettere la mia dedizione al lavoro. Ho sempre svolto il mio incarico con costanza e rispetto delle regole aziendali, come dimostra la mia matricola GZ-20484.\n\nPer completezza amministrativa, vi comunico che il mio codice fiscale è LSMNRC73H03X830X e che posso essere contattato al numero 399 299 3390 o tramite l'indirizzo dario.altobelli@example.com. Ho anche verificato che il mio conto corrente presso Banca Altopiano, filiale di Trapani, è attivo e pronto per eventuali addebiti o accrediti legati alla nuova sede.\n\nVi chiedo cortesemente di valutare positivamente questa istanza e di comunicarmi le eventuali procedure burocratiche da seguire. Resto a disposizione per qualsiasi chiarimento o documentazione aggiuntiva necessaria per completare la pratica.\n\nCordiali saluti,\n\nDario Altobelli\n",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "CITTA"
+    },
+    {
+      "start": 48,
+      "end": 63,
+      "text": "Dario Altobelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 98,
+      "end": 121,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 134,
+      "end": 149,
+      "text": "Dario Altobelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 160,
+      "end": 167,
+      "text": "custode",
+      "type": "RUOLO"
+    },
+    {
+      "start": 268,
+      "end": 275,
+      "text": "Palermo",
+      "type": "CITTA"
+    },
+    {
+      "start": 312,
+      "end": 327,
+      "text": "15 gennaio 2027",
+      "type": "DATA"
+    },
+    {
+      "start": 455,
+      "end": 462,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 708,
+      "end": 716,
+      "text": "GZ-20484",
+      "type": "UTENTE"
+    },
+    {
+      "start": 791,
+      "end": 807,
+      "text": "LSMNRC73H03X830X",
+      "type": "CF"
+    },
+    {
+      "start": 848,
+      "end": 860,
+      "text": "399 299 3390",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 883,
+      "end": 910,
+      "text": "dario.altobelli@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 965,
+      "end": 980,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 993,
+      "end": 1000,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 1341,
+      "end": 1356,
+      "text": "Dario Altobelli",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "transfer_request",
+    "amounts": [],
+    "dates": [
+      "2027-01-15"
+    ],
+    "requested_action": "approve_request",
+    "deadline": "2027-01-15"
+  }
+}

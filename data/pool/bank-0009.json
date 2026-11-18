@@ -1,0 +1,114 @@
+{
+  "id": "bank-0009",
+  "domain": "bank",
+  "scenario": "card_dispute",
+  "profile_id": "p09",
+  "has_special": false,
+  "text": "Oggetto: Contestazione addebiti non autorizzati su carta di debito\n\nGentile Banca Altopiano,\n\nmi chiamo Dario Altobelli e sono titolare di una carta di debito collegata al conto corrente con IBAN IT41G0000015737119260922015. Vi scrivo per contestare formalmente due addebiti che non riconosco e che sono apparsi sul mio estratto conto.\n\nIl primo addebito, pari a € 150,00, è stato effettuato il 12 novembre 2026 presso un esercizio commerciale a Trapani. Il secondo, di € 85,50, risale al 15 novembre 2026 e risulta avvenuto online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come custode presso Cantieri Dorsano S.p.A. e la mia matricola aziendale è GZ-20484. Vi chiedo pertanto di procedere immediatamente allo storno di entrambe le somme, per un totale di € 235,50, e di bloccare la carta per evitare ulteriori movimenti sospetti.\n\nResto in attesa di un vostro riscontro urgente. Per qualsiasi necessità potete contattarmi al numero 399 299 3390 o all'indirizzo dario.altobelli@example.com.\n\nCordiali saluti,\n\nDario Altobelli\n",
+  "spans": [
+    {
+      "start": 76,
+      "end": 91,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 104,
+      "end": 119,
+      "text": "Dario Altobelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 196,
+      "end": 223,
+      "text": "IT41G0000015737119260922015",
+      "type": "IBAN"
+    },
+    {
+      "start": 363,
+      "end": 371,
+      "text": "€ 150,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 395,
+      "end": 411,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 446,
+      "end": 453,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 470,
+      "end": 477,
+      "text": "€ 85,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 489,
+      "end": 505,
+      "text": "15 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 599,
+      "end": 606,
+      "text": "custode",
+      "type": "RUOLO"
+    },
+    {
+      "start": 614,
+      "end": 637,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 669,
+      "end": 677,
+      "text": "GZ-20484",
+      "type": "UTENTE"
+    },
+    {
+      "start": 777,
+      "end": 785,
+      "text": "€ 235,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 954,
+      "end": 966,
+      "text": "399 299 3390",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 983,
+      "end": 1010,
+      "text": "dario.altobelli@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1031,
+      "end": 1046,
+      "text": "Dario Altobelli",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "card_dispute",
+    "amounts": [
+      150.0,
+      85.5,
+      235.5
+    ],
+    "dates": [
+      "2026-11-12",
+      "2026-11-15"
+    ],
+    "requested_action": "refund",
+    "deadline": null
+  }
+}

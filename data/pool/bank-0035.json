@@ -1,0 +1,134 @@
+{
+  "id": "bank-0035",
+  "domain": "bank",
+  "scenario": "fee_complaint",
+  "profile_id": "p22",
+  "has_special": false,
+  "text": "Oggetto: Reclamo per addebiti non autorizzati su conto corrente\n\nGentile Credito Tirrenico,\n\nmi chiamo Michela Rampazzo e sono cliente della Vostra filiale di Viterbo. Vi scrivo per segnalare una grave anomalia riscontrata sul mio estratto conto relativo al mese di novembre 2026.\n\nIn qualità di responsabile acquisti presso Caseificio Montelupo S.r.l., gestisco quotidianamente i flussi finanziari aziendali, motivo per cui noto immediatamente qualsiasi discrepanza. Ho verificato che il giorno 12 novembre 2026 è stato addebitato un importo di € 45,00 a titolo di \"commissione gestione deposito titoli\". Tale servizio non è mai stato richiesto né attivato da me, né risulta presente nel contratto sottoscritto presso la filiale.\n\nInoltre, il giorno 20 novembre 2026 ho subito un ulteriore addebito di € 12,50 per \"invio estratto conto cartaceo\", servizio che avevo disattivato telefonicamente il 15 ottobre 2026 tramite il Vostro servizio clienti.\n\nChiedo pertanto il rimborso immediato della somma totale di € 57,50 e la stornatura delle relative voci dal mio conto corrente, identificato dall'IBAN IT35P0000045198541598847685.\n\nVi prego di considerare questa richiesta urgente, dato che tali addebiti incidono negativamente sulla mia liquidità mensile. Resto in attesa di un Vostro riscontro scritto entro e non oltre il 30 novembre 2026 per confermare l'avvenuta rettifica.\n\nCordiali saluti,\n\nMichela Rampazzo\nmichela.rampazzo@example.com\n391 565 6198\nFCVTDC50S09X752T\nPM-09581\n",
+  "spans": [
+    {
+      "start": 73,
+      "end": 90,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 103,
+      "end": 119,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA"
+    },
+    {
+      "start": 159,
+      "end": 166,
+      "text": "Viterbo",
+      "type": "CITTA"
+    },
+    {
+      "start": 296,
+      "end": 317,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 325,
+      "end": 352,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 496,
+      "end": 512,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 546,
+      "end": 553,
+      "text": "€ 45,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 751,
+      "end": 767,
+      "text": "20 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 803,
+      "end": 810,
+      "text": "€ 12,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 898,
+      "end": 913,
+      "text": "15 ottobre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1011,
+      "end": 1018,
+      "text": "€ 57,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 1102,
+      "end": 1129,
+      "text": "IT35P0000045198541598847685",
+      "type": "IBAN"
+    },
+    {
+      "start": 1325,
+      "end": 1341,
+      "text": "30 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1398,
+      "end": 1414,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1415,
+      "end": 1443,
+      "text": "michela.rampazzo@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1444,
+      "end": 1456,
+      "text": "391 565 6198",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1457,
+      "end": 1473,
+      "text": "FCVTDC50S09X752T",
+      "type": "CF"
+    },
+    {
+      "start": 1474,
+      "end": 1482,
+      "text": "PM-09581",
+      "type": "UTENTE"
+    }
+  ],
+  "gold": {
+    "intent": "fee_complaint",
+    "amounts": [
+      45.0,
+      12.5,
+      57.5
+    ],
+    "dates": [
+      "2026-11-12",
+      "2026-11-20",
+      "2026-10-15",
+      "2026-11-30"
+    ],
+    "requested_action": "refund",
+    "deadline": "2026-11-30"
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "id": "hr-0014",
+  "domain": "hr",
+  "scenario": "harassment_complaint",
+  "profile_id": "p14",
+  "has_special": false,
+  "text": "Oggetto: Richiesta colloquio urgente - Umberto Giacomelli\n\nGentile Ufficio del Personale,\n\nmi chiamo Umberto Giacomelli, sono un autista di 58 anni residente a Novara. Lavoro presso la Cooperativa Edile Pietrafitta da diversi anni, con matricola aziendale TE-06202.\n\nVi scrivo per segnalare una situazione di forte disagio e vessazione che sto subendo da parte di un collega e del mio responsabile diretto. Da quando ho iniziato a lavorare su un nuovo cantiere, il 12 novembre 2026, ho subito ripetute umiliazioni verbali e pressioni indebite per superare i limiti di orario previsti dal contratto. Questa condotta ha creato un ambiente di lavoro ostile che mi impedisce di svolgere le mie mansioni in serenità.\n\nNon intendo entrare nel dettaglio di ogni episodio in questa sede, ma ritengo fondamentale affrontare la questione in modo formale e riservato. La mia unica richiesta è quella di fissare un incontro o un colloquio con un rappresentante dell'ufficio risorse umane per esporre la mia posizione e cercare una soluzione.\n\nSono disponibile a fornire eventuali documentazione o testimonianze se necessario, ma preferisco discutere di persona. Vi chiedo cortesemente di contattarmi al numero 340 996 3902 o all'indirizzo umberto.giacomelli@example.com per concordare una data entro la prossima settimana.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\nUmberto Giacomelli\nAutista\nCooperativa Edile Pietrafitta\nNovara\n",
+  "spans": [
+    {
+      "start": 39,
+      "end": 57,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 101,
+      "end": 119,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 129,
+      "end": 136,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 160,
+      "end": 166,
+      "text": "Novara",
+      "type": "CITTA"
+    },
+    {
+      "start": 185,
+      "end": 214,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 256,
+      "end": 264,
+      "text": "TE-06202",
+      "type": "UTENTE"
+    },
+    {
+      "start": 465,
+      "end": 481,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1198,
+      "end": 1210,
+      "text": "340 996 3902",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1227,
+      "end": 1257,
+      "text": "umberto.giacomelli@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1379,
+      "end": 1397,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1398,
+      "end": 1405,
+      "text": "Autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 1406,
+      "end": 1435,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 1436,
+      "end": 1442,
+      "text": "Novara",
+      "type": "CITTA"
+    }
+  ],
+  "gold": {
+    "intent": "harassment_complaint",
+    "amounts": [],
+    "dates": [
+      "2026-11-12"
+    ],
+    "requested_action": "schedule_meeting",
+    "deadline": "2026-11-19"
+  }
+}
