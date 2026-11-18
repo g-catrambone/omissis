@@ -4,9 +4,9 @@ Every entity gets a fake value of its own type, drawn with a generator seeded by
 run seed, the type and the value: the same value gets the same fake in every text
 and on every machine. A fake is drawn again when it, or a part of it, already occurs
 in the text or in the vault, so restoration can never mistake a real value for a fake.
-An amount is compared as a number: a fake amount never has the digits of a number of
-the text or of the vault, whatever the currency, the separators and the decimals
-around them ("€ 98", "98 Euro", "98,00 euro").
+An amount is compared as a number: the number that is drawn for a fake amount never
+has the digits of a number of the text or of the vault, whatever the currency, the
+separators and the decimals around them ("€ 98", "98 Euro", "98,00 euro").
 
 - PERSONA: a first name of the same gender and a surname, from `data/`; a name of
   one word gets a surname.
@@ -229,11 +229,6 @@ def _draw(
     return f"{fake_first} {fake_surname}", originals, fakes
 
 
-def _whole_numbers(value: str) -> set[str]:
-    """The digits of every number of `value`, before the comma and without separators."""
-    return {whole for whole, _ in numbers(value)}
-
-
 def _gender(entity: Entity) -> Gender:
     """The gender a placeholder of `entity` carries: only a person has one."""
     return entity.gender if entity.type is SpanType.PERSONA else Gender.UNKNOWN
@@ -247,14 +242,15 @@ def _new_entry(text: str, entity: Entity, seed: int, vault: Vault) -> VaultEntry
             normalise(v) for e in vault for v in (e.surrogate, e.original, *e.surrogate_variants)
         }
         values = (text, *(v for e in vault for v in (e.surrogate, e.original)))
-        taken_numbers = set().union(*map(_whole_numbers, values))
+        taken_numbers = {whole for value in values for whole, _ in numbers(value)}
         for _ in range(MAX_DRAWS):
             drawn = _draw(rng, entity)
             if drawn is None:
                 break
             fake, originals, fakes = drawn
             parts = (fake, *fakes)
-            if entity.type is SpanType.IMPORTO and _whole_numbers(fake) & taken_numbers:
+            drawn = numbers(fake)[:1]  # none when restoration does not read it ("€ 19.99")
+            if entity.type is SpanType.IMPORTO and any(w in taken_numbers for w, _ in drawn):
                 continue  # one number in two shapes cannot be restored safely
             if all(p.casefold() not in folded and normalise(p) not in taken for p in parts):
                 return VaultEntry(

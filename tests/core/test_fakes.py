@@ -484,7 +484,7 @@ def test_first_word_of_two_first_names_is_written_as_the_fake_first_name():
     "written",
     [
         "€ 225,00",  # the currency moved, as in the real replies of 18 Nov
-        "€ 225,00",  # with the narrow no-break space the model uses
+        "€\u202f225,00",  # with the narrow no-break space the model uses
         "€225,00",
         "EUR 225,00",
         "225,00 EUR",
@@ -498,7 +498,7 @@ def test_fake_amount_written_in_another_form_is_restored_by_its_value(written):
     assert outcome(events)["225,00 euro"] == (R.RESTORED, written)
 
 
-@pytest.mark.parametrize("written", ["98 937 euro", "98 937 euro", "98937 euro"])
+@pytest.mark.parametrize("written", ["98\u202f937\u202feuro", "98\u00a0937 euro", "98937 euro"])
 def test_fake_amount_with_other_thousands_separators_is_restored_by_its_value(written):
     vault = fakes_vault(("98.937 euro", "12.400 euro", "IMPORTO"))
     text, events = restore(f"Il saldo residuo (circa {written}) sarà trasferito.", vault, 0.9)
@@ -515,10 +515,15 @@ def test_fake_amount_with_other_thousands_separators_is_restored_by_its_value(wr
         "Un addebito di € 225.000.",
         "Un addebito di € 225,50.",
         "Un addebito di € 225.00.",  # a point before the decimals is not read
-        "Erano 15 225 EUR.",  # a plain space may be the thousands of a longer number
+        "Erano 15 225 EUR.",  # read whole, as 15.225: another number
+        "Rif. A1.225 EUR.",
         "Circa 225 europei.",
         "Un addebito di € 225mila.",
         "Bonifico rif. A225 EUR.",
+        "Un debito di € 225 672.",  # read whole again, with the currency in front
+        "| Debito | €225 672,00 |",
+        "Circa € 225 mila.",
+        "Circa € 225 milioni.",
     ],
 )
 def test_number_that_is_not_the_fake_amount_is_left_alone(reply):
@@ -551,12 +556,56 @@ def test_fake_amount_as_it_was_sent_is_restored_with_no_other_form_reported():
     assert outcome(events)["225,00 euro"] == (R.RESTORED, None)
 
 
-def test_plain_space_is_not_read_as_the_thousands_of_a_fake_amount():
-    # "il 15 225 euro" may be a day and an amount: the two numbers are never joined.
-    reply = "Erano 15 225 euro."
-    text, events = restore(reply, fakes_vault(("15.225 euro", "12.400 euro", "IMPORTO")), 0.9)
-    assert text == reply
-    assert outcome(events)["15.225 euro"] == (R.DROPPED, None)
+@pytest.mark.parametrize(
+    ("reply", "restored"),
+    [
+        ("Erano 15 225 euro.", "Erano 12.400 euro."),
+        ("| Debito | € 15 225 |", "| Debito | 12.400 euro |"),
+        # the shorter fake is never taken from the head or the tail of the longer one
+        ("Rata di € 15, debito di € 15 225.", "Rata di 45 euro, debito di 12.400 euro."),
+        ("Debito di 15 225 EUR, più 225 EUR.", "Debito di 12.400 euro, più 80 euro."),
+        # with the decimals added it is not the number that was sent: nothing is touched
+        ("Debito di €15 225,00.", "Debito di €15 225,00."),
+    ],
+)
+def test_fake_amount_with_its_thousands_after_a_plain_space_is_read_whole(reply, restored):
+    vault = fakes_vault(
+        ("15.225 euro", "12.400 euro", "IMPORTO"),
+        ("15 euro", "45 euro", "IMPORTO"),
+        ("225 euro", "80 euro", "IMPORTO"),
+    )
+    assert restore(reply, vault, 0.9)[0] == restored
+
+
+def test_fake_amount_after_a_number_that_is_not_its_thousands_is_restored_as_before():
+    # "il 15 225 euro" is read as 15.225, which is no fake; the step on the whole fakes
+    # then finds "225 euro", as it did before the amounts were read as numbers.
+    vault = fakes_vault(("225 euro", "80 euro", "IMPORTO"))
+    assert restore("Entro il 15 225 euro.", vault, 0.9)[0] == "Entro il 15 80 euro."
+
+
+@pytest.mark.parametrize(
+    ("text", "read"),
+    [
+        ("1.250,00 euro", [("1250", "00")]),
+        ("98 937 euro e 15 rate", [("98937", ""), ("15", "")]),
+        ("il 3 e il 12,5", [("3", ""), ("12", "5")]),
+        ("€ 19.99", []),  # a point before the decimals: not a number as Italian writes it
+        ("1250.00 euro", []),
+    ],
+)
+def test_numbers_are_read_as_italian_writes_them(text, read):
+    assert numbers(text) == read
+
+
+@pytest.mark.parametrize("value", ["€ 19.99", "1250.00 euro", "€ 12,345", "€ 1.2.3"])
+def test_amount_that_is_not_read_as_a_number_still_gets_a_fake_and_comes_back(value):
+    text = f"Importo: {value}, grazie."
+    span = Span(9, 9 + len(value), value, SpanType.IMPORTO, 1.0, "GOLD")
+    for seed in (1, 2, 3):
+        masked, vault = replace(text, resolve([span], text), Strategy.R2, seed)
+        assert masked != text
+        assert restore(masked, vault, 0.9)[0] == text
 
 
 def test_fake_amount_with_the_number_of_an_original_is_not_read_as_a_number():
@@ -618,7 +667,7 @@ def test_amounts_rewritten_by_the_model_go_back_to_the_real_ones():
     for seed in range(5):
         masked, vault = replace(text, resolve(spans, text), Strategy.R2, seed)
         first, second = (entry.surrogate.removesuffix(" euro") for entry in vault)
-        reply = f"| Importo |\n| € {first} |\n| € {second} |"
+        reply = f"| Importo |\n| €\u202f{first} |\n| €\u202f{second} |"
         restored, events = restore(reply, vault, 0.9)
         assert restored == "| Importo |\n| 89,90 euro |\n| 245,00 euro |", masked
         assert [e.outcome for e in events] == [R.RESTORED, R.RESTORED]
@@ -638,3 +687,30 @@ def test_fake_amount_never_has_the_number_of_another_amount_or_of_the_text():
         first, second = ({whole for whole, _ in numbers(e.surrogate)} for e in vault)
         assert first.isdisjoint(second), seed
         assert (first | second).isdisjoint(in_text), seed
+
+
+@pytest.mark.parametrize(
+    ("reply", "restored"),
+    [
+        ("Rate di € 225, 300 e 400.", "Rate di 245 euro, 300 e 400."),
+        ("Rata di € 225 e 12 rate.", "Rata di 245 euro e 12 rate."),
+        ("1. € 225\n2. Secondo punto", "1. 245 euro\n2. Secondo punto"),
+        ("Rata di € 225 1000 volte.", "Rata di 245 euro 1000 volte."),
+    ],
+)
+def test_fake_amount_before_another_number_that_is_not_its_thousands_is_restored(reply, restored):
+    assert restore(reply, fakes_vault(("225 euro", "245 euro", "IMPORTO")), 0.9)[0] == restored
+
+
+@pytest.mark.parametrize(
+    "value", ["98 937 euro", "€ 320,00 al mese per 12 mesi", "1.250,00 euro (rata 3)"]
+)
+def test_amount_with_more_than_one_number_still_gets_a_fake(value):
+    # Only the number that is drawn is compared with the numbers of the text.
+    text = f"Importo: {value}."
+    span = Span(9, 9 + len(value), value, SpanType.IMPORTO, 1.0, "GOLD")
+    for seed in (1, 2, 3):
+        masked, vault = replace(text, resolve([span], text), Strategy.R2, seed)
+        (entry,) = vault
+        assert not entry.surrogate.startswith("["), entry.surrogate
+        assert restore(masked, vault, 0.9)[0] == text

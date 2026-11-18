@@ -34,13 +34,12 @@ restored fakes per reply is reported.
 An amount comes first and is read as a number, because the model moves the currency
 and changes the separators: "€ 82,90" for "82,90 euro", "98 937 euro" with no-break
 spaces for "98.937 euro". A whole number next to its currency, with the digits and the
-decimals of a fake amount, is that fake, however its thousands are separated. Never a
-number without its currency, and never a number that an original of the vault also
-holds, or that two fakes share, with or without their decimals: these are not a safe
-match. Any other fake that the
-reply rewrites in another format, or shortens ("225 euro" for "225,00 euro"), is not
-recognised: it stays in the text and its entry is `dropped`
-(docs/evaluation_protocol.md, section 10).
+decimals of a fake amount, is that fake, however its thousands are separated: a point,
+a space of any kind, nothing. Never a number without its currency, and never a number
+that an original of the vault also holds, or that two fakes share, with or without
+their decimals: these are not a safe match. Any other fake that the reply rewrites in
+another format, or shortens ("225 euro" for "225,00 euro"), is not recognised: it
+stays in the text and its entry is `dropped` (docs/evaluation_protocol.md, section 10).
 
 Every vault entry gets exactly one event; the worst outcome wins
 (`altered_unresolved`, then `restored_fuzzy`, `restored`, `dropped`). After the
@@ -89,17 +88,19 @@ _BRACKETED_RE = re.compile(r"\\?\[[^\[\]\n]{1,40}\]")
 # A bracketed token in placeholder shape, with any label and in any case.
 _SHAPED_RE = re.compile(r"\[[^\W\d_]+(?:_[^\W\d_]+)*_\d+(?:_[^\W\d_]+)?\]")
 _EDGE_PUNCTUATION = ".,;:!?()«»\"'_*"
-# A number as Italian writes it: the thousands apart by a point or a no-break space
-# (never a plain space, which may stand between two numbers), a comma before the
-# decimals. "225.00" is not read.
-_THOUSANDS = r"[.   ]"
+# A number as Italian writes it: the thousands apart by a point or a space of any
+# kind, a comma before the decimals. "225.00" is not read. Three digits after a space
+# are read as thousands, so that "€ 74 672" is never "€ 74" followed by a number.
+_THOUSANDS = r"[. \u00a0\u2009\u202f]"
 _NUMBER = rf"(?:\d{{1,3}}(?:{_THOUSANDS}\d{{3}})+|\d+)(?:,\d{{1,2}})?"
-_NUMBER_RE = re.compile(_NUMBER)
+_NUMBER_RE = re.compile(rf"(?<![\d.,]){_NUMBER}(?![.,]?\d)")
 _CURRENCY = r"(?:€|\b(?:euro|eur)\b)"
-# An amount: a whole number with its currency before or after it, on one line.
+# An amount: a whole number with its currency before or after it, on one line. Whole:
+# no digit, decimal or letter goes on, nor "mila", "milioni", "miliardi" ("€ 74 mila").
 _AMOUNT_RE = re.compile(
     rf"{_CURRENCY}[^\S\n]?(?P<after>{_NUMBER})(?![.,]?\d)(?![^\W_])"
-    rf"|(?<![^\W_])(?<!\d[.,\s])(?P<before>{_NUMBER})[^\S\n]?{_CURRENCY}",
+    r"(?![^\S\n](?:mila|milion|miliard))"
+    rf"|(?<![^\W_])(?<!\d[.,])(?P<before>{_NUMBER})[^\S\n]?{_CURRENCY}",
     re.IGNORECASE,
 )
 _RANK = {
@@ -265,9 +266,9 @@ def _number(written: str) -> tuple[str, str]:
     return re.sub(_THOUSANDS, "", whole), decimals
 
 
-def numbers(text: str) -> set[tuple[str, str]]:
-    """Every number of `text`, as restoration compares the number of an amount."""
-    return {_number(written) for written in _NUMBER_RE.findall(text)}
+def numbers(text: str) -> list[tuple[str, str]]:
+    """The numbers of `text` in their order, as restoration compares the number of an amount."""
+    return [_number(written) for written in _NUMBER_RE.findall(text)]
 
 
 def _restore_amounts(text: str, entries: list[VaultEntry], vault: Vault, out: _Outcomes) -> str:
