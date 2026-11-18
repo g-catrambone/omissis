@@ -1,7 +1,7 @@
 {
   "text_id": "hr-0002",
   "config_name": "REF-oracle-direct",
-  "run_id": "84e17a5e7ba0",
+  "run_id": "d1aa840154d6",
   "masked_text": "Oggetto: Segnalazione assenza per malattia - [PERSONA_1_F]\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Purtroppo, a causa di un acuto di [SALUTE_1], il mio medico curante mi ha prescritto un periodo di riposo obbligatorio di almeno tre giorni. Vi chiedo cortesemente di registrare questa assenza nei vostri sistemi gestionali per le date comprese tra il 12 novembre 2026 e il 14 novembre 2026.\n\nPer facilitare l'identificazione del mio fascicolo, vi fornisco i miei dati anagrafici e professionali. Sono [PERSONA_1_F], impiegata come contabile presso la Cooperativa Edile Pietrafitta, con matricola aziendale [UTENTE_1]. Resiedo a Pistoia e sono titolare di un conto corrente presso la Banca Altopiano, filiale di Pistoia, dove gestisco anche la mia carta di debito. Il mio codice fiscale è [CF_1] e potete raggiungermi al numero [TELEFONO_1] per eventuali chiarimenti urgenti.\n\nVi prego di considerare questa email come formale richiesta di registrazione dell'assenza. Non è necessario che mi contattiate per ulteriori dettagli in questo momento, poiché mi concentrerò sul recupero della salute. Apprezzerò la vostra tempestività nell'aggiornare la mia posizione lavorativa. Resto a disposizione per inviare il certificato medico non appena disponibile, ma per ora vi chiedo solo di procedere con l'annotazione dell'assenza.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[EMAIL_1]\n",
   "disclosure": [
     {
