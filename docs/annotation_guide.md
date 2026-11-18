@@ -12,7 +12,9 @@ with its type. Do not decide whether a quasi-identifier "should" be masked:
 that is the run's `mask_quasi` switch. A span is the **shortest stretch that
 carries the information**: the name without the title, the amount with its
 currency, the date without the weekday. Spans never overlap and are never
-nested: when two readings compete, tag the longer, more specific one (see 4.3).
+nested: when two readings compete, tag the longer, more specific one. The
+exception is a generic facility followed by its city (edge case 3 in section
+4): only the city is tagged.
 
 ## 2. Classes and types
 
