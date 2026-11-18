@@ -117,3 +117,11 @@ def test_page_builds_with_the_supported_detectors(setup, monkeypatch):
     page = app.build()
     dropdowns = [b for b in page.blocks.values() if type(b).__name__ == "Dropdown"]
     assert [choice[0] for choice in dropdowns[0].choices] == ["D0", "D1"]
+
+
+def test_page_says_that_d3_and_d4_read_the_whole_text_before_it_is_masked(setup):
+    # The detector D3, alone or inside D4, is itself a model that receives the original text.
+    pytest.importorskip("gradio")
+    page = app.build()
+    header = next(b for b in page.blocks.values() if type(b).__name__ == "Markdown").value
+    assert "D3 e D4" in header and "non ancora pseudonimizzato" in header

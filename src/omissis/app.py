@@ -107,7 +107,10 @@ def build():
         gr.Markdown(
             "# Omissis\nIl testo viene pseudonimizzato prima di essere inviato al modello; "
             "nella risposta i valori reali vengono ripristinati. La pseudonimizzazione "
-            "riduce il rischio di re-identificazione, non lo elimina."
+            "riduce il rischio di re-identificazione, non lo elimina.\n\n"
+            "Con i detector D3 e D4 il testo intero, non ancora pseudonimizzato, viene prima "
+            "letto dal modello del ruolo `d3`: se quel modello è ospitato da un servizio "
+            "esterno, in quel passaggio il testo lascia questa macchina."
         )
         with gr.Row():
             detector = gr.Dropdown(detectors, value=detectors[0], label="Detector")
