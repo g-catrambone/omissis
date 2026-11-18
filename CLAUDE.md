@@ -37,8 +37,9 @@ working for before doing anything.
 6. **The design is frozen (18 Nov).** From here: data, results, closing, and fixes
    of defects. Nothing that changes evaluated behaviour without a row in
    `docs/decisions.md`; no new configuration, metric or contrast; the fake lists in
-   `src/omissis/replace/data/` and the prompts of generator, attacker, judge and D3
-   do not change (a prompt is part of the cache key).
+   `src/omissis/replace/data/` do not change. A prompt (generator, attacker, T3,
+   judge, D3) is part of the cache key: changing one needs a row in
+   `docs/decisions.md`, and every call of that role is made again.
 7. **Never claim legal anonymity.** The tool pseudonymises. Wording in code, docs
    and UI: "pseudonymised", "re-identification risk", never "anonymous".
 

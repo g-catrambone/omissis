@@ -48,9 +48,10 @@ Needed on the machine that runs the evaluation: `uv sync --locked --group detect
 
 ## 2. Evaluation on dev
 
-- [ ] **Human — approve the prompts** before the first judged result: attacks
+- [ ] **Human — read the prompts** before the first `make eval-dev`: attacks
   (`attacks.LINKAGE_PROMPT`, `ATTRIBUTES_PROMPT`), T3 (`utility.T3_TASK`), judge
-  (`judge.PROMPT`). They are frozen once a result exists.
+  (`judge.PROMPT`). The pilot already used the attack prompts: a change makes its
+  calls again, and after `make eval-dev` a change means running it again.
 - [ ] **Human — models.** `cloud`, `attacker` and `judge` are one hosted model
   (`configs/models.yaml`): one daily allowance of the free tier, and a judge that
   is the judged model, which the protocol asks to declare. Re-pin before the first
@@ -115,6 +116,8 @@ Declared limits are in `docs/handoff/block-2.md` (section 4) and
   "701,00 euro") stays in the reply; its entry is `dropped`.
 - Two replies of D3 that are not valid JSON give no spans for that text: with D4
   the direct identifiers are still masked, the quasi-identifiers are not.
+- An empty reply of the local model is an error and is never cached: D3 stops the
+  run, and at temperature 0 the same text may stop it again at the next launch.
 - Under R2 two people told apart only by a title ("Sig. Ferri", "Sig.ra Ferri")
   share one fake surname and one vault entry.
 - The R2 reply of the fixture `fx-bank-03` in `results/cache/cloud.jsonl` was made
