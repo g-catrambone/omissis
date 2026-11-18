@@ -15,7 +15,7 @@ format:
 	uv run --locked ruff format .
 
 demo:
-	@echo "make demo is not built yet: task 2.7 builds it." >&2; exit 1
+	uv run --locked python -m omissis.app
 
 split:
 	@echo "make split is not built yet: task 3.5 builds it. HUMANS ONLY." >&2; exit 1

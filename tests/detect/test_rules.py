@@ -1,4 +1,4 @@
-"""D0 rules (task A1): curated valid and invalid sets, all synthetic.
+"""D0 rules (block 1): curated valid and invalid sets, all synthetic.
 
 Synthetic by construction:
 - IBANs are Italian, built on bank code (ABI) 00000, which no bank uses; CIN and
@@ -310,3 +310,22 @@ def test_valid_ibans_use_bank_code_00000():
 
 def test_valid_cfs_use_a_non_existent_place_code():
     assert all(cf.upper()[11] == "X" for cf in VALID_CFS)
+
+
+@pytest.mark.parametrize(
+    ("text", "ibans"),
+    [
+        ("Sposti l'addebito da {a} a {b} entro venerdì.", 2),
+        ("I conti sono {a} e {b}.", 2),
+        ("{a}, {b}", 2),
+        ("P.IVA IT01234560017 IBAN {a}", 1),
+        ("Codice AB12 {a}", 1),
+        ("{a} {b}", 2),
+    ],
+)
+def test_iban_right_after_another_candidate_is_found(text, ibans):
+    # The candidate of the first runs into the start of the second: the search goes on
+    # from where the accepted IBAN ends, not from where the candidate ended.
+    a, b = "IT89Y0000025613651127989360", "IT77V0000094829785481207069"
+    found = [s.text for s in rules.find_all(text.format(a=a, b=b)) if s.type is SpanType.IBAN]
+    assert found == [a, b][:ibans]

@@ -5,6 +5,8 @@ description = "Local pseudonymisation layer between a user and a cloud LLM, for 
 readme = "README.md"
 requires-python = ">=3.11,<3.12"
 dependencies = [
+    "gradio==6.32.0",
+    "matplotlib==3.11.2",
     "pyyaml==6.0.2",
 ]
 
@@ -12,6 +14,13 @@ dependencies = [
 omissis = "omissis.cli:main"
 
 [dependency-groups]
+detect = [
+    "it-core-news-lg",
+    "presidio-analyzer==2.2.362",
+    "spacy==3.8.18",
+    "torch==2.15.0",
+    "transformers==5.23.0",
+]
 dev = [
     "pytest==8.3.5",
     "ruff==0.11.13",
@@ -34,3 +43,6 @@ target-version = "py311"
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP", "B"]
+
+[tool.uv.sources]
+it-core-news-lg = { url = "https://github.com/explosion/spacy-models/releases/download/it_core_news_lg-3.8.0/it_core_news_lg-3.8.0-py3-none-any.whl" }

@@ -1,4 +1,4 @@
-"""Span merging and the `detect` entry point (task A2)."""
+"""Span merging and the `detect` entry point (block 1)."""
 
 import logging
 from pathlib import Path
@@ -161,9 +161,3 @@ def test_failing_detector_logs_and_returns_nothing(monkeypatch, caplog):
         assert detect("Mario 333 1234567", DetectorId.D0, CONFIG) == []
     assert "RuntimeError" in caplog.text
     assert "333 1234567" not in caplog.text  # never log the text
-
-
-@pytest.mark.parametrize("detector", ["D1", "D2", "D3", "D4"])
-def test_detectors_not_built_yet_raise_with_a_clear_message(detector):
-    with pytest.raises(NotImplementedError, match=f"{detector} is not built yet"):
-        detect("testo", DetectorId(detector), CONFIG)
