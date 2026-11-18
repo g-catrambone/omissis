@@ -10,7 +10,7 @@ strategy and fuzzy restoration. The evaluation can now be built on `mask`,
 `protect_send_restore`, `complete` and `load_eval_configs` alone. The app (task
 2.7) is not in this pull request: it lists the detectors with
 `supported_detectors()`, so it is merged with block 4, and `make demo` still
-answers "not built yet". `make test` runs 785 tests.
+answers "not built yet". `make test` runs 817 tests.
 
 ## 1. What exists
 
@@ -215,11 +215,12 @@ and writes nothing. The masked text of each file equals
   "98.937 euro"), and two replies with `fully_restored` true showed a fake
   amount. A whole number next to its currency, with the digits and the
   decimals of a fake amount, is now that fake, however its thousands are
-  separated; and a fake amount never has the digits of a number of the text
-  or of the vault, with or without decimals, so that two fakes are never one
-  number in two shapes ("€ 98", "98,00 euro"). Still not read: an amount
-  without its decimals ("701 euro" for "701,00 euro"), a number with no
-  currency next to it, thousands separated by a plain space.
+  separated (a point, a space of any kind, nothing); and a fake amount never
+  has the digits of a number of the text or of the vault, with or without
+  decimals, so that two fakes are never one number in two shapes ("€ 98",
+  "98,00 euro"). Still not read: an amount without its decimals ("701 euro"
+  for "701,00 euro"), a number with no currency next to it, an amount written
+  with a point before the decimals ("€ 19.99").
 - **Any other fake the reply rewrites is not recognised.** A shortened name of
   a company, a misspelt fake of one word, a date in another format: the fake
   stays in the reply and its entry is `dropped`, with `fully_restored` true. A
@@ -253,8 +254,15 @@ and writes nothing. The masked text of each file equals
   it is compatible with. A name of one word gets a fake surname under R2, even
   when it is a first name. Gender follows the title before the first name, as
   the specification says: "Prof. Maria Rossi" is read as M.
+- **A name is read first name first.** Of one name written in both orders
+  ("De Luca Rosa", "Rosa De Luca") the entity keeps the one that starts with a
+  first name of the lists. A name written only surname first ("Ferri Marco")
+  has its parts swapped: under R2 the fake surname alone comes back as "Marco",
+  the fake first name as "Ferri". No fixture and no profile is written so.
 - **A disclosure reason is dropped** whenever it repeats a word of three
-  letters or two digits of any masked value, common words included ("euro").
+  letters or two digits of any masked value, common words included ("euro"),
+  three digits in a row of a masked number ("termina con 3456"), or a value
+  without its accent.
 - **With `mask_quasi: false`** a direct identifier that a longer
   quasi-identifier span absorbed in `merge` stays visible. No evaluated
   configuration meets it; the rule is in `detect/merge.py` (block 4).
