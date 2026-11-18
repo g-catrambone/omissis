@@ -85,8 +85,8 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   (`configs/models.yaml`): one daily allowance of the free tier, and a judge that
   is the judged model, which the protocol asks to declare. Re-pin before the first
   `make eval-dev` or not at all: a pin changes every run id.
-- [ ] **`make eval-dev`**: the seven configurations, about 700 calls. It prints the
-  number of calls and waits for `y`; a run stopped by the daily limit resumes from
+- [ ] **Human — `make eval-dev`**: the seven configurations, about 700 calls. It
+  prints the number of calls and waits for `y`; a run stopped by the daily limit resumes from
   the cache. Then `uv run python -m omissis.eval.detection time --split dev` for
   the latency table. Commit `results/cache/` and `results/dev/`.
 - [ ] **Human — judge validation** (protocol, section 9): rate 40 items blind.
@@ -125,8 +125,10 @@ These steps need no result of the evaluation and touch different files.
     the report has no scorecard rows and today writes a `scorecard.md` with a
     title alone: make it write no scorecard when there is no row, with a test.
   - Done when: with the network off, `make reproduce` exits 0 and `git status`
-    shows nothing new or changed under `results/` (today this can be shown on
-    `pilot`; `dev` and `test` do not exist yet).
+    shows no new or changed file among the metrics files and the scorecards
+    under `results/` (today this can be shown on `pilot`; `dev` and `test` do
+    not exist yet). The chart is an image: say in the hand-back whether its
+    bytes change from one run to the next.
 - [ ] **B2 · Model and data cards** — *Claimed by:* —
   - Files: `docs/cards.md` (new).
   - Do: one entry for every role of `configs/models.yaml` (read it, never edit
@@ -155,7 +157,10 @@ These steps need no result of the evaluation and touch different files.
     that no result is reported yet. Keep the section on AI assistance.
   - Done when: every command written in the README runs as written on a clean
     clone, and the file holds no number of the evaluation and no claim of
-    anonymity (`CLAUDE.md`, rule 7).
+    anonymity (`CLAUDE.md`, rule 7). Two commands are not ready yet, and the
+    README says so until they are: `make reproduce` (step B1), and the demo,
+    which starts but has nothing to replay until its runs are recorded (step
+    C4).
 - [ ] **B4 · Slide drafts, without numbers** — one file per member,
   `docs/slides/<name>.md`; nothing to claim.
   - Do: the outline of your part and what you say on each slide. Giuseppe:
