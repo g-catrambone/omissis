@@ -1,0 +1,99 @@
+{
+  "id": "bank-0022",
+  "domain": "bank",
+  "scenario": "loan_early_repayment",
+  "profile_id": "p20",
+  "has_special": false,
+  "text": "Oggetto: Richiesta informazioni estinzione anticipata finanziamento - Giacomo Passalacqua\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Giacomo Passalacqua e sono un cliente della vostra filiale di Foggia. Lavoro come autista presso la Cooperativa Edile Pietrafitta e desidero richiedere informazioni dettagliate relative all'estinzione anticipata del mio finanziamento in corso.\n\nHo bisogno di ricevere copia del piano di ammortamento aggiornato e della scheda di calcolo delle penali per il saldo e stralcio. In particolare, mi interessa sapere quale sarebbe l'importo esatto da versare per chiudere il contratto entro il 15 marzo 2027, considerando che il saldo residuo attuale è di circa € 12.500,00.\n\nVi chiedo cortesemente di inviarmi tutta la documentazione necessaria all'indirizzo email giacomo.passalacqua@example.com o, in alternativa, di indicarmi le modalità per ritirarla in filiale. Per facilitare la ricerca della mia pratica, vi comunico che il mio codice fiscale è ZLFNCT54D15X978K e la matricola aziendale associata al contratto è PB-80503.\n\nResto in attesa di un vostro cortese riscontro per poter organizzare il pagamento in tempi brevi. Grazie per la collaborazione.\n\nCordiali saluti,\n\nGiacomo Passalacqua\nTel: 350 286 0569\n",
+  "spans": [
+    {
+      "start": 70,
+      "end": 89,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA"
+    },
+    {
+      "start": 99,
+      "end": 127,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 140,
+      "end": 159,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA"
+    },
+    {
+      "start": 202,
+      "end": 208,
+      "text": "Foggia",
+      "type": "CITTA"
+    },
+    {
+      "start": 222,
+      "end": 229,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 240,
+      "end": 269,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 628,
+      "end": 641,
+      "text": "15 marzo 2027",
+      "type": "DATA"
+    },
+    {
+      "start": 696,
+      "end": 707,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 800,
+      "end": 831,
+      "text": "giacomo.passalacqua@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 987,
+      "end": 1003,
+      "text": "ZLFNCT54D15X978K",
+      "type": "CF"
+    },
+    {
+      "start": 1054,
+      "end": 1062,
+      "text": "PB-80503",
+      "type": "UTENTE"
+    },
+    {
+      "start": 1212,
+      "end": 1231,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1237,
+      "end": 1249,
+      "text": "350 286 0569",
+      "type": "TELEFONO"
+    }
+  ],
+  "gold": {
+    "intent": "loan_early_repayment",
+    "amounts": [
+      12500.0
+    ],
+    "dates": [
+      "2027-03-15"
+    ],
+    "requested_action": "send_information",
+    "deadline": "2027-03-15"
+  }
+}

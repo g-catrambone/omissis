@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0034",
+  "config_name": "REF-oracle",
+  "run_id": "ea61d1c68a82",
+  "masked_text": "Oggetto: Reclamo per addebiti non autorizzati su conto corrente\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per segnalare la presenza di commissioni di gestione e spese di bollettino che non risultano autorizzate né previste dal contratto sottoscritto.\n\nLavoro come [RUOLO_1] presso la [AZIENDA_2] a [CITTA_1], e gestisco il mio deposito titoli tramite la vostra filiale locale. Ho notato che dal [DATA_1] al [DATA_2] sono stati addebitati complessivamente [IMPORTO_1] per servizi che non ho mai richiesto esplicitamente.\n\nTali addebiti sono errati e non corrispondono ai servizi effettivamente fruiti. Chiedo pertanto il rimborso immediato della somma di [IMPORTO_1] sul mio conto corrente.\n\nVi prego di considerare questa richiesta urgente e di procedere con la stornatura degli importi entro e non oltre il [DATA_3]. In caso di mancata risoluzione, mi vedrò costretta a rivolgermi all'Arbitro Bancario Finanziario.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[TELEFONO_1]\n[EMAIL_1]\n[CF_1]\n[UTENTE_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_3]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

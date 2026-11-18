@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0020",
+  "config_name": "REF-oracle-direct",
+  "run_id": "84e17a5e7ba0",
+  "masked_text": "Oggetto: Richiesta trasferimento sede [PERSONA_1_M]\n\nGentile Ufficio del Personale,\n\nmi chiamo [PERSONA_1_M] e vi scrivo per formalizzare la mia richiesta di trasferimento presso la sede di Milano. Sono impiegato come centralinista presso la Cooperativa Edile Pietrafitta da diversi anni e la mia matricola aziendale è [UTENTE_1].\n\nHo deciso di fare questa richiesta perché desidero avvicinarmi alla mia famiglia, che risiede in quella zona. Ho 65 anni e penso che questo cambio di sede possa aiutarmi a gestire meglio la mia quotidianità. Attualmente risiedo a Novara, dove ho anche la mia filiale bancaria presso la Banca Altopiano.\n\nPer completezza, vi comunico che il mio codice fiscale è [CF_1] e potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1]. Ho un mutuo in corso e una carta di debito attiva, ma non credo che questi aspetti debbano influenzare la decisione sul trasferimento lavorativo.\n\nVi chiedo cortesemente di approvare la mia richiesta entro il 15 dicembre 2026, in modo da poter organizzare i tempi per il trasloco e la nuova sistemazione. Resto a disposizione per qualsiasi chiarimento in merito.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

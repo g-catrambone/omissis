@@ -1,0 +1,112 @@
+{
+  "id": "bank-0017",
+  "domain": "bank",
+  "scenario": "iban_change",
+  "profile_id": "p05",
+  "has_special": false,
+  "text": "Oggetto: Aggiornamento IBAN per accredito stipendio - Elena Occhipinti\n\nGentile Cassa Rurale di Montevago,\n\nmi chiamo Elena Occhipinti e sono cliente della vostra filiale di Trapani. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per l'accredito del mio stipendio.\n\nAttualmente lavoro come contabile presso la Caseificio Montelupo S.r.l. e, a partire dal 15 dicembre 2026, il mio datore di lavoro effettuerà i bonifici su un nuovo conto corrente. Vi chiedo pertanto di aggiornare i vostri archivi sostituendo il vecchio IBAN con il seguente: IT15I0000054310853969019400.\n\nQuesta modifica è fondamentale per garantire la corretta ricezione delle mie retribuzioni mensili, che ammontano a circa 1.850,00 €. Vi prego di confermare la ricezione di questa richiesta e l'avvenuta registrazione del nuovo codice entro il 10 dicembre 2026, in modo da evitare ritardi o errori nell'accredito del primo mese con le nuove coordinate.\n\nPer vostra comodità, riporto i miei dati anagrafici e di contatto: codice fiscale DGGMRD49A57X058K, telefono 397 280 0598 e email elena.occhipinti@example.com. La mia matricola aziendale interna è WE-48493, che potrebbe essere utile per le verifiche interne.\n\nResto a disposizione per eventuali chiarimenti o per fornire documentazione aggiuntiva se necessaria. Grazie per la vostra collaborazione e per la rapidità con cui gestite questa pratica.\n\nCordiali saluti,\n\nElena Occhipinti\n",
+  "spans": [
+    {
+      "start": 54,
+      "end": 70,
+      "text": "Elena Occhipinti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 80,
+      "end": 105,
+      "text": "Cassa Rurale di Montevago",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 118,
+      "end": 134,
+      "text": "Elena Occhipinti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 174,
+      "end": 181,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 313,
+      "end": 322,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 333,
+      "end": 360,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 378,
+      "end": 394,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 565,
+      "end": 592,
+      "text": "IT15I0000054310853969019400",
+      "type": "IBAN"
+    },
+    {
+      "start": 716,
+      "end": 726,
+      "text": "1.850,00 €",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 837,
+      "end": 853,
+      "text": "10 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1029,
+      "end": 1045,
+      "text": "DGGMRD49A57X058K",
+      "type": "CF"
+    },
+    {
+      "start": 1056,
+      "end": 1068,
+      "text": "397 280 0598",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1077,
+      "end": 1105,
+      "text": "elena.occhipinti@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1144,
+      "end": 1152,
+      "text": "WE-48493",
+      "type": "UTENTE"
+    },
+    {
+      "start": 1414,
+      "end": 1430,
+      "text": "Elena Occhipinti",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "iban_change",
+    "amounts": [
+      1850.0
+    ],
+    "dates": [
+      "2026-12-15",
+      "2026-12-10"
+    ],
+    "requested_action": "update_details",
+    "deadline": "2026-12-10"
+  }
+}

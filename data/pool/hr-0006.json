@@ -1,0 +1,110 @@
+{
+  "id": "hr-0006",
+  "domain": "hr",
+  "scenario": "remote_work_request",
+  "profile_id": "p12",
+  "has_special": false,
+  "text": "Oggetto: Richiesta lavoro da remoto - Raffaele Ferrarini\n\nGentile Ufficio del Personale,\n\nmi chiamo Raffaele Ferrarini e sono un centralinista presso la Cooperativa Edile Pietrafitta. Vi scrivo per sottoporre alla Vostra cortese attenzione una richiesta formale di autorizzazione al lavoro da remoto.\n\nHo 65 anni e risiedo a Novara. Da diversi anni gestisco le comunicazioni telefoniche dell'azienda con dedizione, mantenendo un rapporto costante con i colleghi e i fornitori. Per motivi organizzativi personali, desidererei poter svolgere le mie mansioni da casa a partire dal 15 novembre 2026.\n\nSono pienamente attrezzato con la connessione internet necessaria e dispongo di un ambiente silenzioso adatto alla gestione delle chiamate. La mia matricola aziendale è WT-40350 e il mio codice fiscale è PGBVSC45B42X564O. Per eventuali verifiche amministrative, potete contattarmi al numero 357 736 0613 o tramite l'indirizzo raffaele.ferrarini@example.com.\n\nRicordo che la mia banca di riferimento è la Banca Altopiano, filiale di Novara, dove ho un mutuo per la prima casa e una carta di debito attiva. Non chiedo modifiche al contratto, ma solo l'approvazione di questa modalità operativa per il periodo indicato.\n\nResto in attesa di un Vostro cortese riscontro entro il 20 novembre 2026 per poter organizzare i dettagli tecnici con l'IT.\n\nCordiali saluti,\n\nRaffaele Ferrarini\n",
+  "spans": [
+    {
+      "start": 38,
+      "end": 56,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 100,
+      "end": 118,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 129,
+      "end": 142,
+      "text": "centralinista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 153,
+      "end": 182,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 305,
+      "end": 312,
+      "text": "65 anni",
+      "type": "ETA"
+    },
+    {
+      "start": 325,
+      "end": 331,
+      "text": "Novara",
+      "type": "CITTA"
+    },
+    {
+      "start": 578,
+      "end": 594,
+      "text": "15 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 766,
+      "end": 774,
+      "text": "WT-40350",
+      "type": "UTENTE"
+    },
+    {
+      "start": 801,
+      "end": 817,
+      "text": "PGBVSC45B42X564O",
+      "type": "CF"
+    },
+    {
+      "start": 888,
+      "end": 900,
+      "text": "357 736 0613",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 923,
+      "end": 953,
+      "text": "raffaele.ferrarini@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1001,
+      "end": 1016,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 1029,
+      "end": 1035,
+      "text": "Novara",
+      "type": "CITTA"
+    },
+    {
+      "start": 1271,
+      "end": 1287,
+      "text": "20 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1358,
+      "end": 1376,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "remote_work_request",
+    "amounts": [],
+    "dates": [
+      "2026-11-15",
+      "2026-11-20"
+    ],
+    "requested_action": "approve_request",
+    "deadline": "2026-11-20"
+  }
+}

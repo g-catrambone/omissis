@@ -1,0 +1,612 @@
+[
+  {
+    "id": "p01",
+    "cohort": "c1",
+    "name": "Daniela Marchesini",
+    "gender": "F",
+    "age": 55,
+    "city": "Trapani",
+    "employer": "Trasporti Bellariva S.r.l.",
+    "role": "contabile",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "conto corrente",
+        "mutuo prima casa"
+      ],
+      "monthly_installment": 770.0
+    },
+    "special": null
+  },
+  {
+    "id": "p02",
+    "cohort": "c1",
+    "name": "Noemi Boscolo",
+    "gender": "F",
+    "age": 38,
+    "city": "Trapani",
+    "employer": "Farmacie Riunite Altavilla S.p.A.",
+    "role": "contabile",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "deposito titoli"
+      ]
+    },
+    "special": {
+      "category": "SINDACATO",
+      "fact": "delegato sindacale di reparto"
+    }
+  },
+  {
+    "id": "p03",
+    "cohort": "c1",
+    "name": "Valeria Donadoni",
+    "gender": "F",
+    "age": 41,
+    "city": "Trapani",
+    "employer": "Cantieri Dorsano S.p.A.",
+    "role": "contabile",
+    "bank": "Credito Tirrenico",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "conto corrente"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p04",
+    "cohort": "c1",
+    "name": "Fabrizio Nicoletti",
+    "gender": "M",
+    "age": 42,
+    "city": "Trapani",
+    "employer": "Tessitura Valgrande S.r.l.",
+    "role": "contabile",
+    "bank": "Cassa Rurale di Montevago",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "conto corrente"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p05",
+    "cohort": "c1",
+    "name": "Elena Occhipinti",
+    "gender": "F",
+    "age": 38,
+    "city": "Trapani",
+    "employer": "Caseificio Montelupo S.r.l.",
+    "role": "contabile",
+    "bank": "Cassa Rurale di Montevago",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "prestito personale"
+      ],
+      "monthly_installment": 470.0
+    },
+    "special": null
+  },
+  {
+    "id": "p06",
+    "cohort": "c2",
+    "name": "Sergio Bertolucci",
+    "gender": "M",
+    "age": 28,
+    "city": "Trapani",
+    "employer": "Cantieri Dorsano S.p.A.",
+    "role": "responsabile acquisti",
+    "bank": "Banca Altopiano",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "conto corrente"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p07",
+    "cohort": "c2",
+    "name": "Leonardo Lombardini",
+    "gender": "M",
+    "age": 48,
+    "city": "Trapani",
+    "employer": "Cantieri Dorsano S.p.A.",
+    "role": "elettricista",
+    "bank": "Banca Altopiano",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "deposito titoli"
+      ]
+    },
+    "special": {
+      "category": "SALUTE",
+      "fact": "diabete di tipo 2"
+    }
+  },
+  {
+    "id": "p08",
+    "cohort": "c2",
+    "name": "Federica Quattrocchi",
+    "gender": "F",
+    "age": 43,
+    "city": "Trapani",
+    "employer": "Tessitura Valgrande S.r.l.",
+    "role": "elettricista",
+    "bank": "Banca Altopiano",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "conto corrente",
+        "mutuo prima casa"
+      ],
+      "monthly_installment": 250.0
+    },
+    "special": null
+  },
+  {
+    "id": "p09",
+    "cohort": "c2",
+    "name": "Dario Altobelli",
+    "gender": "M",
+    "age": 48,
+    "city": "Trapani",
+    "employer": "Cantieri Dorsano S.p.A.",
+    "role": "custode",
+    "bank": "Banca Altopiano",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "deposito titoli"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p10",
+    "cohort": "c2",
+    "name": "Cesare Sartorelli",
+    "gender": "M",
+    "age": 47,
+    "city": "Trapani",
+    "employer": "Tessitura Valgrande S.r.l.",
+    "role": "contabile",
+    "bank": "Banca Altopiano",
+    "branch_city": "Trapani",
+    "financial": {
+      "products": [
+        "conto corrente",
+        "deposito titoli"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p11",
+    "cohort": "c3",
+    "name": "Teresa Dellavalle",
+    "gender": "F",
+    "age": 57,
+    "city": "Pistoia",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "contabile",
+    "bank": "Banca Altopiano",
+    "branch_city": "Pistoia",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "deposito titoli"
+      ]
+    },
+    "special": {
+      "category": "SALUTE",
+      "fact": "emicrania cronica"
+    }
+  },
+  {
+    "id": "p12",
+    "cohort": "c3",
+    "name": "Raffaele Ferrarini",
+    "gender": "M",
+    "age": 65,
+    "city": "Novara",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "centralinista",
+    "bank": "Banca Altopiano",
+    "branch_city": "Novara",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "mutuo prima casa"
+      ],
+      "monthly_installment": 220.0
+    },
+    "special": null
+  },
+  {
+    "id": "p13",
+    "cohort": "c3",
+    "name": "Carlotta Castellani",
+    "gender": "F",
+    "age": 58,
+    "city": "Cremona",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "responsabile acquisti",
+    "bank": "Banca Altopiano",
+    "branch_city": "Cremona",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "deposito titoli"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p14",
+    "cohort": "c3",
+    "name": "Umberto Giacomelli",
+    "gender": "M",
+    "age": 58,
+    "city": "Novara",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "autista",
+    "bank": "Banca Altopiano",
+    "branch_city": "Novara",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "carta di debito"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p15",
+    "cohort": "c3",
+    "name": "Tommaso Mantovani",
+    "gender": "M",
+    "age": 57,
+    "city": "Foggia",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "agente di commercio",
+    "bank": "Banca Altopiano",
+    "branch_city": "Foggia",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "deposito titoli"
+      ]
+    },
+    "special": {
+      "category": "SINDACATO",
+      "fact": "componente della rappresentanza sindacale unitaria"
+    }
+  },
+  {
+    "id": "p16",
+    "cohort": "c4",
+    "name": "Emanuele Agostinelli",
+    "gender": "M",
+    "age": 26,
+    "city": "Cremona",
+    "employer": "Farmacie Riunite Altavilla S.p.A.",
+    "role": "autista",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Cremona",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "conto corrente"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p17",
+    "cohort": "c4",
+    "name": "Laura Valsecchi",
+    "gender": "F",
+    "age": 60,
+    "city": "Novara",
+    "employer": "Farmacie Riunite Altavilla S.p.A.",
+    "role": "autista",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Novara",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "conto corrente"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p18",
+    "cohort": "c4",
+    "name": "Ilaria Tagliaferri",
+    "gender": "F",
+    "age": 42,
+    "city": "Viterbo",
+    "employer": "Cantieri Dorsano S.p.A.",
+    "role": "autista",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Viterbo",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "conto corrente"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p19",
+    "cohort": "c4",
+    "name": "Pietro Franceschini",
+    "gender": "M",
+    "age": 25,
+    "city": "Cremona",
+    "employer": "Cantieri Dorsano S.p.A.",
+    "role": "autista",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Cremona",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "deposito titoli"
+      ]
+    },
+    "special": {
+      "category": "SALUTE",
+      "fact": "artrite reumatoide"
+    }
+  },
+  {
+    "id": "p20",
+    "cohort": "c4",
+    "name": "Giacomo Passalacqua",
+    "gender": "M",
+    "age": 52,
+    "city": "Foggia",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "autista",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Foggia",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "conto corrente"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p21",
+    "cohort": "c5",
+    "name": "Beatrice Pontiggia",
+    "gender": "F",
+    "age": 64,
+    "city": "Foggia",
+    "employer": "Caseificio Montelupo S.r.l.",
+    "role": "responsabile acquisti",
+    "bank": "Banca Altopiano",
+    "branch_city": "Foggia",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "deposito titoli"
+      ]
+    },
+    "special": {
+      "category": "SALUTE",
+      "fact": "depressione in cura"
+    }
+  },
+  {
+    "id": "p22",
+    "cohort": "c5",
+    "name": "Michela Rampazzo",
+    "gender": "F",
+    "age": 51,
+    "city": "Viterbo",
+    "employer": "Caseificio Montelupo S.r.l.",
+    "role": "responsabile acquisti",
+    "bank": "Credito Tirrenico",
+    "branch_city": "Viterbo",
+    "financial": {
+      "products": [
+        "deposito titoli",
+        "prestito personale"
+      ],
+      "monthly_installment": 740.0
+    },
+    "special": null
+  },
+  {
+    "id": "p23",
+    "cohort": "c5",
+    "name": "Alessia Iacobelli",
+    "gender": "F",
+    "age": 45,
+    "city": "Cremona",
+    "employer": "Caseificio Montelupo S.r.l.",
+    "role": "responsabile acquisti",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Cremona",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "mutuo prima casa"
+      ],
+      "monthly_installment": 340.0
+    },
+    "special": {
+      "category": "SALUTE",
+      "fact": "celiachia"
+    }
+  },
+  {
+    "id": "p24",
+    "cohort": "c5",
+    "name": "Vincenzo Gasparotto",
+    "gender": "M",
+    "age": 53,
+    "city": "Viterbo",
+    "employer": "Caseificio Montelupo S.r.l.",
+    "role": "responsabile acquisti",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Viterbo",
+    "financial": {
+      "products": [
+        "conto corrente",
+        "prestito personale"
+      ],
+      "monthly_installment": 430.0
+    },
+    "special": null
+  },
+  {
+    "id": "p25",
+    "cohort": "c5",
+    "name": "Alberto Cavallari",
+    "gender": "M",
+    "age": 63,
+    "city": "Novara",
+    "employer": "Caseificio Montelupo S.r.l.",
+    "role": "responsabile acquisti",
+    "bank": "Banca Altopiano",
+    "branch_city": "Novara",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "prestito personale"
+      ],
+      "monthly_installment": 250.0
+    },
+    "special": {
+      "category": "SALUTE",
+      "fact": "intervento al ginocchio con riabilitazione"
+    }
+  },
+  {
+    "id": "p26",
+    "cohort": "c6",
+    "name": "Massimo Evangelisti",
+    "gender": "M",
+    "age": 25,
+    "city": "Pistoia",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "agente di commercio",
+    "bank": "Credito Tirrenico",
+    "branch_city": "Pistoia",
+    "financial": {
+      "products": [
+        "deposito titoli",
+        "prestito personale"
+      ],
+      "monthly_installment": 210.0
+    },
+    "special": null
+  },
+  {
+    "id": "p27",
+    "cohort": "c6",
+    "name": "Nicola Scarpellini",
+    "gender": "M",
+    "age": 45,
+    "city": "Pistoia",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "elettricista",
+    "bank": "Banca Popolare di Rocciaviva",
+    "branch_city": "Pistoia",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "prestito personale"
+      ],
+      "monthly_installment": 940.0
+    },
+    "special": {
+      "category": "SALUTE",
+      "fact": "asma bronchiale"
+    }
+  },
+  {
+    "id": "p28",
+    "cohort": "c6",
+    "name": "Giorgia Zamparini",
+    "gender": "F",
+    "age": 36,
+    "city": "Pistoia",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "custode",
+    "bank": "Banca Altopiano",
+    "branch_city": "Pistoia",
+    "financial": {
+      "products": [
+        "carta di credito",
+        "carta di debito"
+      ]
+    },
+    "special": null
+  },
+  {
+    "id": "p29",
+    "cohort": "c6",
+    "name": "Roberta Uccellini",
+    "gender": "F",
+    "age": 39,
+    "city": "Pistoia",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "contabile",
+    "bank": "Banca Altopiano",
+    "branch_city": "Pistoia",
+    "financial": {
+      "products": [
+        "carta di debito",
+        "conto corrente"
+      ]
+    },
+    "special": {
+      "category": "SALUTE",
+      "fact": "ipertensione arteriosa"
+    }
+  },
+  {
+    "id": "p30",
+    "cohort": "c6",
+    "name": "Sabrina Lorenzetti",
+    "gender": "F",
+    "age": 47,
+    "city": "Pistoia",
+    "employer": "Cooperativa Edile Pietrafitta",
+    "role": "elettricista",
+    "bank": "Cassa Rurale di Montevago",
+    "branch_city": "Pistoia",
+    "financial": {
+      "products": [
+        "conto corrente",
+        "deposito titoli"
+      ]
+    },
+    "special": null
+  }
+]

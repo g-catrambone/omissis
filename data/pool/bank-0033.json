@@ -1,0 +1,99 @@
+{
+  "id": "bank-0033",
+  "domain": "bank",
+  "scenario": "fee_complaint",
+  "profile_id": "p03",
+  "has_special": false,
+  "text": "Oggetto: Reclamo spese conto corrente e richiesta colloquio\n\nGentile Credito Tirrenico,\n\nmi chiamo Valeria Donadoni e sono titolare del conto corrente con IBAN IT80W0000088426714490849799. Vi scrivo per segnalare la mia forte insoddisfazione riguardo alle commissioni addebitate sul mio conto negli ultimi mesi. In particolare, ho notato un prelievo di € 45,00 a titolo di canone mensile, che non risulta coerente con le condizioni contrattuali concordate al momento dell'apertura del rapporto. Inoltre, la carta di credito collegata ha generato spese di gestione che ritengo ingiustificate, considerando il mio storico di utilizzo.\n\nLavoro come contabile presso Cantieri Dorsano S.p.A. a Trapani, e la gestione di queste anomalie mi sta creando non pochi disagi organizzativi. Desidero chiarire che non intendo procedere con la chiusura del rapporto, ma ritengo fondamentale una spiegazione dettagliata da parte vostra.\n\nPertanto, vi chiedo cortesemente di fissare un incontro o un colloquio presso la filiale di Trapani per discutere la questione. Sono disponibile a contattarvi al numero 305 998 4727 o tramite la mia email valeria.donadoni@example.com per concordare data e ora. Resto in attesa di un vostro riscontro entro il 15 dicembre 2026 per poter pianificare l'appuntamento.\n\nCordiali saluti,\n\nValeria Donadoni\nMK-84592\n",
+  "spans": [
+    {
+      "start": 69,
+      "end": 86,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 99,
+      "end": 115,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA"
+    },
+    {
+      "start": 160,
+      "end": 187,
+      "text": "IT80W0000088426714490849799",
+      "type": "IBAN"
+    },
+    {
+      "start": 353,
+      "end": 360,
+      "text": "€ 45,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 646,
+      "end": 655,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 663,
+      "end": 686,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 689,
+      "end": 696,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 1014,
+      "end": 1021,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 1091,
+      "end": 1103,
+      "text": "305 998 4727",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1127,
+      "end": 1155,
+      "text": "valeria.donadoni@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1231,
+      "end": 1247,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1305,
+      "end": 1321,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1322,
+      "end": 1330,
+      "text": "MK-84592",
+      "type": "UTENTE"
+    }
+  ],
+  "gold": {
+    "intent": "fee_complaint",
+    "amounts": [
+      45.0
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "schedule_meeting",
+    "deadline": "2026-12-15"
+  }
+}

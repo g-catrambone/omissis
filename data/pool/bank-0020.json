@@ -1,0 +1,99 @@
+{
+  "id": "bank-0020",
+  "domain": "bank",
+  "scenario": "loan_early_repayment",
+  "profile_id": "p18",
+  "has_special": false,
+  "text": "Oggetto: Richiesta estinzione anticipata finanziamento - Ilaria Tagliaferri\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Ilaria Tagliaferri e sono titolare del conto corrente con IBAN IT60K0000002707830380370892 presso la filiale di Viterbo. Vi scrivo per richiedere formalmente la chiusura anticipata del finanziamento in essere, che ho contratto per esigenze personali.\n\nLavoro come autista presso Cantieri Dorsano S.p.A. e, a causa di un cambio di residenza e di una riorganizzazione dei miei impegni lavorativi, non sono più in grado di sostenere le rate mensili previste dal piano di ammortamento. Desidero pertanto estinguere il debito residuo, che ammonta a € 12.500,00, per porre fine al rapporto contrattuale.\n\nVi chiedo di inviarmi, entro e non oltre il 15 dicembre 2026, le istruzioni dettagliate per il pagamento dell'importo totale, comprensivo di eventuali interessi di mora o penali previste dal contratto per l'estinzione anticipata. Una volta effettuato il bonifico, vi prego di confermare la chiusura definitiva della pratica e la cessazione di ogni addebito automatico sulla mia carta di credito collegata al conto.\n\nResto a disposizione per qualsiasi chiarimento al numero 315 250 0573 o tramite la mia email ilaria.tagliaferri@example.com. Vi ringrazio per la collaborazione e attendo un vostro cortese riscontro.\n\nCordiali saluti,\n\nIlaria Tagliaferri\nPRCBVV34A20X065L\n",
+  "spans": [
+    {
+      "start": 57,
+      "end": 75,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA"
+    },
+    {
+      "start": 85,
+      "end": 113,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 126,
+      "end": 144,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA"
+    },
+    {
+      "start": 189,
+      "end": 216,
+      "text": "IT60K0000002707830380370892",
+      "type": "IBAN"
+    },
+    {
+      "start": 238,
+      "end": 245,
+      "text": "Viterbo",
+      "type": "CITTA"
+    },
+    {
+      "start": 390,
+      "end": 397,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 405,
+      "end": 428,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 670,
+      "end": 681,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 769,
+      "end": 785,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1198,
+      "end": 1210,
+      "text": "315 250 0573",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1234,
+      "end": 1264,
+      "text": "ilaria.tagliaferri@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1359,
+      "end": 1377,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1378,
+      "end": 1394,
+      "text": "PRCBVV34A20X065L",
+      "type": "CF"
+    }
+  ],
+  "gold": {
+    "intent": "loan_early_repayment",
+    "amounts": [
+      12500.0
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "close_account",
+    "deadline": "2026-12-15"
+  }
+}

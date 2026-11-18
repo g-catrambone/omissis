@@ -1,0 +1,112 @@
+{
+  "id": "bank-0028",
+  "domain": "bank",
+  "scenario": "account_closure",
+  "profile_id": "p18",
+  "has_special": false,
+  "text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - Ilaria Tagliaferri\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Ilaria Tagliaferri e sono titolare del conto corrente con IBAN IT60K0000002707830380370892. Vi scrivo per richiedere la chiusura definitiva del rapporto contrattuale e il trasferimento delle somme residue.\n\nAttualmente lavoro come autista presso Cantieri Dorsano S.p.A. a Viterbo, ma per motivi personali ho deciso di recedere dal contratto. Desidero che l'intero saldo disponibile, pari a € 1.200,50, venga trasferito sul conto di mia scelta entro il 15 dicembre 2026.\n\nVi prego di procedere anche alla disattivazione della carta di credito associata al conto. Per qualsiasi necessità, potete contattarmi al numero 315 250 0573 o all'indirizzo ilaria.tagliaferri@example.com. Il mio codice fiscale è PRCBVV34A20X065L e la matricola aziendale è TZ-58390.\n\nResto in attesa di una vostra cortese conferma scritta entro il 10 dicembre 2026 per verificare che l'operazione sia stata correttamente avviata. Grazie per la collaborazione.\n\nCordiali saluti,\nIlaria Tagliaferri\n",
+  "spans": [
+    {
+      "start": 58,
+      "end": 76,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA"
+    },
+    {
+      "start": 86,
+      "end": 114,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 127,
+      "end": 145,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA"
+    },
+    {
+      "start": 190,
+      "end": 217,
+      "text": "IT60K0000002707830380370892",
+      "type": "IBAN"
+    },
+    {
+      "start": 358,
+      "end": 365,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 373,
+      "end": 396,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 399,
+      "end": 406,
+      "text": "Viterbo",
+      "type": "CITTA"
+    },
+    {
+      "start": 517,
+      "end": 527,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 579,
+      "end": 595,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 743,
+      "end": 755,
+      "text": "315 250 0573",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 772,
+      "end": 802,
+      "text": "ilaria.tagliaferri@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 828,
+      "end": 844,
+      "text": "PRCBVV34A20X065L",
+      "type": "CF"
+    },
+    {
+      "start": 872,
+      "end": 880,
+      "text": "TZ-58390",
+      "type": "UTENTE"
+    },
+    {
+      "start": 947,
+      "end": 963,
+      "text": "10 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1077,
+      "end": 1095,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "account_closure",
+    "amounts": [
+      1200.5
+    ],
+    "dates": [
+      "2026-12-15",
+      "2026-12-10"
+    ],
+    "requested_action": "release_funds",
+    "deadline": "2026-12-15"
+  }
+}

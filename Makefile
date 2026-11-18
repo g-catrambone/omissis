@@ -18,13 +18,13 @@ demo:
 	uv run --locked python -m omissis.app
 
 split:
-	@echo "make split is not built yet: task 3.5 builds it. HUMANS ONLY." >&2; exit 1
+	uv run --locked python -m omissis.eval.split
 
 eval-dev:
-	@echo "make eval-dev is not built yet: task 3.10 builds it." >&2; exit 1
+	uv run --locked --env-file .env python -m omissis.eval.run --split dev
 
 eval-test:
-	@echo "make eval-test is not built yet: task 3.10 builds it. HUMANS ONLY." >&2; exit 1
+	uv run --locked --env-file .env python -m omissis.eval.run --split test
 
 reproduce:
 	@echo "make reproduce is not built yet: task 5.2 builds it." >&2; exit 1
