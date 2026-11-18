@@ -88,3 +88,11 @@ def test_supported_detectors_lists_built_detectors_without_calling_them(monkeypa
     assert DetectorId.D0 in supported_detectors()
     fake(monkeypatch, DetectorId.D1, raising(AssertionError("must not be called")), ("json",))
     assert DetectorId.D1 in supported_detectors()
+
+
+def test_library_that_fails_to_import_at_run_time_is_a_config_error(monkeypatch):
+    # Installed, but one of its modules does not load: no spans would send the text unmasked.
+    error = ModuleNotFoundError("No module named 'x'", name="presidio_analyzer.nlp_engine")
+    fake(monkeypatch, DetectorId.D1, raising(error))
+    with pytest.raises(ConfigError, match=r"D1.*presidio_analyzer\.nlp_engine"):
+        detect(TEXT, DetectorId.D1, CONFIG)

@@ -231,15 +231,23 @@ def _find_trimmed(
     type: SpanType,
     confidence: float,
 ) -> list[Span]:
-    """Longest valid prefix of each candidate that ends at a space or at the candidate's end."""
+    """Longest valid prefix of each candidate that ends at a space or at the candidate's end.
+
+    The search goes on from the end of what was accepted, or right after the start of a
+    candidate with no valid prefix: a candidate may run into the start of the next value
+    ("da IT… a IT…"), which must still be found.
+    """
     spans = []
-    for m in pattern.finditer(text):
+    position = 0
+    while (m := pattern.search(text, position)) is not None:
         candidate = m.group()
         cuts = [i for i, ch in enumerate(candidate) if ch == " "] + [len(candidate)]
+        position = m.start() + 1
         for cut in reversed(cuts):
             if m.start() + cut < len(text) and text[m.start() + cut].isalnum():
                 continue  # the candidate runs into a word
             if is_valid(candidate[:cut]):
                 spans.append(_span(m.start(), m.start() + cut, text, type, confidence))
+                position = m.start() + cut
                 break
     return spans

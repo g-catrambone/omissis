@@ -106,3 +106,9 @@ def test_a_missing_sub_detector_is_an_error_not_a_silent_skip():
     del detectors[DetectorId.D2]
     with pytest.raises(KeyError):
         hybrid.find(TEXT, CONFIG, detectors)
+
+
+def test_library_that_fails_to_import_in_a_sub_detector_is_a_config_error():
+    # D4 without D1 or D2 is not D4: it must stop, not go on with fewer detectors.
+    with pytest.raises(ConfigError, match="torch"):
+        hybrid.find(TEXT, CONFIG, fakes(raising(ImportError("broken install", name="torch"))))

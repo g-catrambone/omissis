@@ -43,6 +43,12 @@ def find(text: str, config: RunConfig, detectors: Mapping[DetectorId, Find]) -> 
             found = find_one(text, config)
         except (CacheMissError, ConfigError):
             raise
+        except ImportError as exc:
+            # D4 without one of its detectors is not D4: stop, as for a missing library.
+            raise ConfigError(
+                f"D4: detector {detector.value} cannot load "
+                f"{exc.name or 'one of its libraries'} on this machine"
+            ) from exc
         except Exception as exc:
             # Log the error type only: the message could quote the text.
             logger.error("D4: detector %s failed (%s)", detector, type(exc).__name__)

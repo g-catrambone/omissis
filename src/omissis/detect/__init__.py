@@ -83,6 +83,12 @@ def detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]:
         found = entry.find(text, config)
     except (CacheMissError, ConfigError):
         raise
+    except ImportError as exc:
+        # Installed, but it does not load: as missing, or the text would go out unmasked.
+        raise ConfigError(
+            f"detector {detector.value} cannot load {exc.name or 'one of its libraries'} on "
+            "this machine: run `uv sync --locked --group detect`"
+        ) from exc
     except Exception as exc:  # a failing detector contributes no spans
         # Log the error type only: the message could quote the text.
         logger.error("detector %s failed (%s); returning no spans", detector, type(exc).__name__)
