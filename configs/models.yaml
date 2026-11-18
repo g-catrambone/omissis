@@ -18,9 +18,9 @@ generator:
   id: qwen/qwen3.8-27b
   revision: "2026-11-16"
 d3:
-  provider: groq
-  id: openai/gpt-oss-20b
-  revision: "2026-11-16"
+  provider: local
+  id: "gpt-oss:20b"
+  revision: "f38aa0c53da5"
 d2:
   provider: huggingface
   id: iiiorg/piiranha-v1-detect-personal-information
