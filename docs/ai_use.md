@@ -1,6 +1,6 @@
 # AI-use register
 
-One line per task, added by the human who did the task (agents propose the line).
+One line per task, for the human who did the task.
 Newest last. If two branches both add lines, keep both when merging.
 
 | Date | Human | Task | Produced by the agent | Changed or decided by the human |
@@ -9,3 +9,6 @@ Newest last. If two branches both add lines, keep both when merging.
 | 2026-11-11 | Giuseppe | Specifications and task lists | `docs/interfaces.md`, `docs/evaluation_protocol.md`, `docs/tasks/` | Required planning only (code draft removed); asked for a simpler, stepwise process with gates; kept the AI-use register separate; removed language preferences from personal files; reviewed the specifications and task lists before committing |
 | 2026-11-11 | Giuseppe | B0 Foundation | Scaffold, `contracts.py`, `config.py`, `vault.py`, backends types, boundary stubs, 205 tests, `interfaces.md` edits (run_id scope, Span validation, entity_id format, placeholder rejections, CacheMissError base, required config keys, string model fields) | Decided a single pull request, the run_id scope and the Span validation rules; approved the eight implementation choices; reviewed the diff and committed without AI co-author |
 | 2026-11-16 | Giuseppe | Plan corrections after the reviews of block 1 | Verification of 85 proposed corrections with independent reviewers, triage, edits to `CLAUDE.md`, the task lists, the personal files, `docs/interfaces.md`, `docs/evaluation_protocol.md` and the permissions; dry runs of the three agents | Asked for verified defects only and the fewest changes; decided that the PDF is for the humans and is updated last; approved the recommended options (`mask_quasi` for D1 and D2, pilot rule, attack without "unknown", judge acceptance, fallback) and the decision entries; sent the branch to Mattia for review before the pull request |
+| 2026-11-17 | Giuseppe | Review and corrections of the core before its merge | The agent split the branch of 17 Nov into pull requests, ran four independent reviews and one control review, wrote the fixes and their tests, revised the hand-over note | Scope, the open decisions, reading of the diff |
+| 2026-11-18 | Giuseppe | Merge of every block on `main`; D3 on a local model | Reviews of the evaluation code and of the detectors, their fixes, the provider `local`, the comparison of the hosted and the local model on the pilot texts | The choice of the local model, the pins, the merges |
+| 2026-11-18 | Giuseppe | Main made solid before the last steps | Re-run of the review findings, fixes (a failing detector stops the run, D3 whole tokens, `merge` leaves nothing uncovered, date of birth under R2), protocol for one reviewer and one rater, specifications aligned with the code, `CLAUDE.md` and the task lists in a short version | The choices recorded on 18 Nov in `docs/decisions.md`; the merge |
