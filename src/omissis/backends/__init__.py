@@ -167,3 +167,7 @@ register_provider("echo", _echo)
 from omissis.backends.groq import groq_provider  # noqa: E402
 
 register_provider("groq", groq_provider)
+
+from omissis.backends.local import local_provider  # noqa: E402
+
+register_provider("local", local_provider)
