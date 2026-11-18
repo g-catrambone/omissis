@@ -218,3 +218,16 @@ def test_answer_that_is_not_a_date_is_wrong_when_the_text_has_no_deadline(answer
 )
 def test_braces_in_the_words_around_the_object_do_not_hide_it(reply):
     assert utility.extract_json(reply)["intent"] == "iban_change"
+
+
+@pytest.mark.parametrize(
+    "reply",
+    [
+        '{"intent": "iban_change", "meta": {"k": 1}, oops}',  # broken, with an object inside
+        '{"intent": "iban_change", "meta": {"k": 1}, "deadline": "1',  # cut off
+        '{"amounts": [{"importo": "10"}], "deadline": None}',  # not JSON
+    ],
+)
+def test_object_inside_a_broken_reply_is_not_taken_for_the_reply(reply):
+    assert utility.extract_json(reply) is None
+    assert utility.score_t3(reply, GOLD)["parsed"] is False

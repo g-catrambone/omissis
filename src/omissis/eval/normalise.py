@@ -60,7 +60,8 @@ def extract_json(reply: str):
 
     Reasoning in `<think>` tags, a code fence and words around the object are ignored:
     the object is the first one that can be read from a `{` of the reply, so a brace in
-    the words before or after it does not hide it.
+    the words before or after it does not hide it. A group of braces that is not an
+    object is skipped whole: an object inside a broken reply is not the reply.
     """
     import json
 
@@ -74,5 +75,21 @@ def extract_json(reply: str):
             value = None
         if isinstance(value, dict):
             return value
-        start = reply.find("{", start + 1)
+        end = _closing_brace(reply, start)
+        if end == -1:
+            return None  # cut off: nothing after an open brace is trusted
+        start = reply.find("{", end + 1)
     return None
+
+
+def _closing_brace(text: str, start: int) -> int:
+    """Where the brace opened at `start` is closed, or -1."""
+    depth = 0
+    for index in range(start, len(text)):
+        if text[index] == "{":
+            depth += 1
+        elif text[index] == "}":
+            depth -= 1
+            if depth == 0:
+                return index
+    return -1
