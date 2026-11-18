@@ -49,12 +49,15 @@ def configs(sent):
 # --- configuration -----------------------------------------------------------------
 
 
-def test_eval_file_names_the_three_references_in_order(configs):
-    assert list(configs) == ["REF-none", "REF-oracle-direct", "REF-oracle"]
-    assert [(c.detector, c.mask_quasi) for c in configs.values()] == [
-        ("NONE", False),
-        ("GOLD", False),
-        ("GOLD", True),
+def test_eval_file_names_the_seven_configurations_in_order(configs):
+    assert [(n, c.detector, c.strategy, c.mask_quasi) for n, c in configs.items()] == [
+        ("REF-none", "NONE", "R1", False),
+        ("REF-oracle-direct", "GOLD", "R1", False),
+        ("REF-oracle", "GOLD", "R1", True),
+        ("D1+R1", "D1", "R1", True),
+        ("D2+R1", "D2", "R1", True),
+        ("D4+R1", "D4", "R1", True),
+        ("D4+R2", "D4", "R2", True),
     ]
     assert all(c.seed == 20261111 and c.backend == "cloud" for c in configs.values())
 
@@ -69,7 +72,7 @@ def test_configurations_that_differ_only_in_detector_have_different_run_ids(conf
     gold = configs["REF-oracle-direct"]
     ids = {run_id(with_overrides(gold, detector=d)) for d in ("GOLD", "NONE", "D0", "D4")}
     assert len(ids) == 4
-    assert len({run_id(c) for c in configs.values()}) == 3
+    assert len({run_id(c) for c in configs.values()}) == 7
 
 
 @pytest.mark.parametrize("changes", [{"strategy": "R2"}, {"mask_quasi": True}])
@@ -221,8 +224,10 @@ def test_vault_is_erased_when_the_provider_raises(configs, monkeypatch):
 
 @pytest.fixture
 def eval_file(sent, tmp_path):
+    """The three references of `configs/eval.yaml`: they need no detector library and no model."""
     data = yaml.safe_load(EVAL.read_text(encoding="utf-8"))
     data["base"].update(sent[1])
+    data["configurations"] = [c for c in data["configurations"] if c["name"].startswith("REF-")]
     path = tmp_path / "eval.yaml"
     path.write_text(yaml.safe_dump(data), encoding="utf-8")
     return path

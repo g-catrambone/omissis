@@ -11,8 +11,7 @@ configurations:
   - {name: REF-none,          detector: NONE, strategy: R1, mask_quasi: false}
   - {name: REF-oracle-direct, detector: GOLD, strategy: R1, mask_quasi: false}
   - {name: REF-oracle,        detector: GOLD, strategy: R1, mask_quasi: true}
-  # added in block 4:
-  # - {name: D1+R1, detector: D1, strategy: R1, mask_quasi: true}
-  # - {name: D2+R1, detector: D2, strategy: R1, mask_quasi: true}
-  # - {name: D4+R1, detector: D4, strategy: R1, mask_quasi: true}
-  # - {name: D4+R2, detector: D4, strategy: R2, mask_quasi: true}
+  - {name: D1+R1,             detector: D1,   strategy: R1, mask_quasi: true}
+  - {name: D2+R1,             detector: D2,   strategy: R1, mask_quasi: true}
+  - {name: D4+R1,             detector: D4,   strategy: R1, mask_quasi: true}
+  - {name: D4+R2,             detector: D4,   strategy: R2, mask_quasi: true}

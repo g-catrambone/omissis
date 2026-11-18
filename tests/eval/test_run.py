@@ -77,7 +77,9 @@ def world(monkeypatch, tmp_path):
     )
     settings = yaml.safe_load((REPO / "configs" / "eval.yaml").read_text(encoding="utf-8"))
     settings["base"].update(models_file=str(models), cache_dir=str(tmp_path / "cache"))
-    settings["configurations"] += EXTRA
+    # The references of the file, and the detector configurations played by D0.
+    references = [c for c in settings["configurations"] if c["name"].startswith("REF-")]
+    settings["configurations"] = references + EXTRA
     config = tmp_path / "eval.yaml"
     config.write_text(yaml.safe_dump(settings), encoding="utf-8")
 
