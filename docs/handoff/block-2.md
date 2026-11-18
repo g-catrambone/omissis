@@ -28,14 +28,14 @@ answers "not built yet". `make test` runs 817 tests.
 | 2.6 | `configs/gold-r1.yaml`, `configs/gold-r2.yaml` | gold spans with R1 and with R2, on the real model |
 | 2.7 | `configs/app.yaml` | the defaults of the Gradio page; `app.py` and `make demo` come with block 4 |
 
-Pinned models (`configs/models.yaml`), all on the free tier of GroqCloud except
-`d2`:
+Pinned models (`configs/models.yaml`), on the free tier of GroqCloud except `d2`
+and `d3`, which run on this machine:
 
 | Role | Model |
 |---|---|
 | `cloud`, `attacker`, `judge` | `openai/gpt-oss-120b` |
 | `generator` | `qwen/qwen3.8-27b` (a preview model) |
-| `d3` | `openai/gpt-oss-20b` |
+| `d3` | `gpt-oss:20b` served by Ollama on this machine, provider `local`, digest `f38aa0c5…` (since 18 Nov; before, `openai/gpt-oss-20b` on GroqCloud) |
 | `d2` | `iiiorg/piiranha-v1-detect-personal-information`, revision `255acde6…` |
 
 Groq publishes no revision of a hosted model: `revision` is the day of the pin,
@@ -43,6 +43,30 @@ Groq publishes no revision of a hosted model: `revision` is the day of the pin,
 (further keys from `GROQ_API_KEY2` to `GROQ_API_KEY9`, and from no other
 name); the code never reads `.env`. Every command that calls a model
 starts with `uv run --env-file .env`.
+
+**D3 runs on this machine** (provider `local`, `src/omissis/backends/local.py`), so
+the original text it reads never goes to a service. To run it: install Ollama,
+`ollama pull gpt-oss:20b`, `ollama serve`. The provider posts to
+`http://localhost:11434/v1/chat/completions`; `OMISSIS_LOCAL_URL` may name another
+port, and an address that is not this machine is refused. A server that is down, or
+that has not the model, is a `ConfigError`: D3 and D4 stop instead of going on
+without spans. Who has not the model replays D3 from `results/cache/d3.jsonl`.
+
+Measured on 18 Nov on an Apple M5 with 16 GB, on the ten pilot texts: the model
+takes 14 GB (82% on the GPU), the first text 168 s with the loading, the others 56 s
+on average. Run the D3 pass alone and `ollama stop gpt-oss:20b` before D4 loads
+Presidio and the classifier: together they do not fit. Against the hosted D3 of 17
+Nov, gold spans not fully covered:
+
+| | direct, of 72 | quasi, of 66 | special, of 4 | spans found | touching no gold |
+|---|---|---|---|---|---|
+| D3 hosted | 63 | 5 | 0 | 83 | 8 |
+| D3 local | 63 | 2 | 1 | 86 | 9 |
+| D4, hosted D3 | 1 | 5 | 0 | 143 | 7 |
+| D4, local D3 | 1 | 2 | 1 | 147 | 9 |
+
+The two give 70 identical spans of 86 and 83: the numbers of one are not those of the
+other.
 
 ## 2. How to call it
 
@@ -293,11 +317,12 @@ and writes nothing. The masked text of each file equals
   `GROQ_API_KEY`: the generic names are no longer read, so that a key of
   another service is never sent to Groq.
 - Record in `docs/decisions.md`: the models pinned and the free tier; D3 on a
-  hosted model instead of a local one; R2 keeping placeholders for four kinds
+  hosted model from 16 to 18 Nov and local since then; R2 keeping placeholders for four kinds
   of type and for values without a realistic fake; a label and a number with
   no bracket and no underscore are no longer restored (block 1 restored them
   in upper case); errors of the command line all exit with status 2.
-- `docs/interfaces.md` still describes D3 as local and does not list the
+- `docs/interfaces.md` says that block 4 registers the local runtime of D3: the
+  provider `local` is registered in `backends`, with `groq`. It does not list the
   choices of task 2.2 (`NONE` with `gold_spans` is an error; `GOLD` with an
   empty list masks nothing; an unknown `--names` and a plain-text input with
   `GOLD` exit with status 2).
@@ -307,8 +332,11 @@ and writes nothing. The masked text of each file equals
 - `openai/gpt-oss-120b` — open-weights model by OpenAI (Apache 2.0), served by
   GroqCloud; roles `cloud`, `attacker`, `judge`; pinned 2026-11-16; used
   through the API, temperature 0.
-- `openai/gpt-oss-20b` — same family and licence, served by GroqCloud; role
-  `d3`; the text is sent unmasked to the service for detection.
+- `gpt-oss:20b` — the same family and licence, in the GGUF build that Ollama
+  distributes (digest `f38aa0c5…`), served on this machine; role `d3`. The
+  original text that D3 reads does not leave the machine. Until 18 Nov the role
+  was on `openai/gpt-oss-20b` at GroqCloud: the 26 replies of that model stay in
+  `results/cache/d3.jsonl` and are no longer read.
 - `qwen/qwen3.8-27b` — preview model served by GroqCloud; role `generator`;
   licence to be confirmed on the model card.
 
