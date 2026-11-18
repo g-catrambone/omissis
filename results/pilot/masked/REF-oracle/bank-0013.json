@@ -1,7 +1,7 @@
 {
   "text_id": "bank-0013",
   "config_name": "REF-oracle",
-  "run_id": "ea61d1c68a82",
+  "run_id": "18bdbd066964",
   "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio [PERSONA_1_F]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono cliente della vostra filiale di [CITTA_1]. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per l'accredito del mio stipendio mensile.\n\nAttualmente lavoro come [RUOLO_1] presso la [AZIENDA_2], dove mi occupo della manutenzione dei cantieri. A causa di una riorganizzazione interna della cooperativa, il datore di lavoro ha deciso di centralizzare i pagamenti su un nuovo conto corrente aziendale. Di conseguenza, l'accredito che ricevo regolarmente, pari a circa [IMPORTO_1], non arriverà più sul vecchio conto ma dovrà essere indirizzato al nuovo IBAN che vi fornisco in questa email.\n\nVi chiedo cortesemente di aggiornare i vostri archivi con il seguente codice: [IBAN_1]. Questo cambio è necessario affinché il pagamento relativo alla busta paga del [DATA_1] venga effettuato correttamente sul nuovo conto.\n\nPer facilitare l'identificazione del mio profilo, vi comunico il mio codice fiscale: [CF_1]. Inoltre, la mia matricola aziendale interna è [UTENTE_1], che potrebbe risultare utile per incrociare i dati con quelli forniti dalla cooperativa.\n\nResto a disposizione per eventuali chiarimenti al numero [TELEFONO_1] o tramite la mia email [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
   "disclosure": [
     {

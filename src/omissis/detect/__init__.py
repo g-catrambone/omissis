@@ -7,7 +7,6 @@ from collections.abc import Callable
 from importlib.util import find_spec
 from typing import NamedTuple
 
-from omissis.backends import CacheMissError
 from omissis.config import ConfigError, RunConfig
 from omissis.contracts import DetectorId, Span
 from omissis.detect import classifier, hybrid, llm, presidio, rules
@@ -60,11 +59,13 @@ def detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]:
     longer span wins, then higher confidence, then earlier position in
     `config.source_priority`. Every span satisfies `span.matches(text)`.
     Quasi-identifier spans are returned even when `config.mask_quasi` is false.
-    Never raises on bad input or on a failing model: a failing detector logs and
-    contributes no spans. `CacheMissError` and `ConfigError` (a cache miss in
-    replay, a model that is not pinned, a library or a weights file missing on
-    this machine) do propagate: returning no spans would send the text unmasked.
-    A detector not built yet raises `NotImplementedError`.
+    Never raises on bad input: a text that is not a string gives no spans. A
+    detector that fails stops the run, because returning no spans would send the
+    text unmasked: a `RuntimeError` (a cache miss in replay, a provider or a model
+    that fails) and a `ConfigError` (a model that is not pinned, a library or a
+    weights file missing on this machine) propagate, and any other error is raised
+    as a `RuntimeError` that names the detector and the error type only. A
+    detector not built yet raises `NotImplementedError`.
     """
     detector = DetectorId(detector)
     entry = _DETECTORS.get(detector)
@@ -81,7 +82,7 @@ def detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]:
         return []
     try:
         found = entry.find(text, config)
-    except (CacheMissError, ConfigError):
+    except (RuntimeError, ConfigError):
         raise
     except ImportError as exc:
         # Installed, but it does not load: as missing, or the text would go out unmasked.
@@ -89,8 +90,7 @@ def detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]:
             f"detector {detector.value} cannot load {exc.name or 'one of its libraries'} on "
             "this machine: run `uv sync --locked --group detect`"
         ) from exc
-    except Exception as exc:  # a failing detector contributes no spans
-        # Log the error type only: the message could quote the text.
-        logger.error("detector %s failed (%s); returning no spans", detector, type(exc).__name__)
-        return []
+    except Exception as exc:
+        # The error type only: the message could quote the text.
+        raise RuntimeError(f"detector {detector.value} failed ({type(exc).__name__})") from exc
     return merge(found, config.source_priority)

@@ -6,22 +6,18 @@ the share of its detector is dropped. D1 was added after the first run on
 the pilot texts: D2 alone missed 7 person names of 26, D1 none. The spans keep the source of the
 detector that found them, and `detect` resolves the overlaps with `merge`.
 
-A sub-detector that fails is logged and contributes no spans; the spans of the
-others are still returned. `CacheMissError` and `ConfigError` propagate, as in
+A sub-detector that fails stops D4: with fewer detectors it would not be D4, and the
+text would go out less masked than the configuration says. Its error propagates to
 `detect`.
 """
 
 from __future__ import annotations
 
-import logging
 from collections.abc import Callable, Mapping
 
-from omissis.backends import CacheMissError
 from omissis.config import ConfigError, RunConfig
 from omissis.contracts import DetectorId, Span, SpanClass
 from omissis.detect import llm
-
-logger = logging.getLogger(__name__)
 
 Find = Callable[[str, RunConfig], list[Span]]
 
@@ -41,18 +37,12 @@ def find(text: str, config: RunConfig, detectors: Mapping[DetectorId, Find]) -> 
     for detector, find_one, direct in parts:
         try:
             found = find_one(text, config)
-        except (CacheMissError, ConfigError):
-            raise
         except ImportError as exc:
-            # D4 without one of its detectors is not D4: stop, as for a missing library.
+            # Installed, but it does not load: stop, as for a missing library.
             raise ConfigError(
                 f"D4: detector {detector.value} cannot load "
                 f"{exc.name or 'one of its libraries'} on this machine"
             ) from exc
-        except Exception as exc:
-            # Log the error type only: the message could quote the text.
-            logger.error("D4: detector %s failed (%s)", detector, type(exc).__name__)
-            continue
         if direct:
             spans.extend(s for s in found if s.cls is SpanClass.DIRECT)
         else:

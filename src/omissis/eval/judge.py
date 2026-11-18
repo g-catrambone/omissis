@@ -12,7 +12,7 @@ order and nothing that tells the configuration; the key that ties an item to its
 text and configuration is a separate file, which the raters do not open. `accept`
 compares the judge with the consensus of the raters and writes the outcome.
 
-    python -m omissis.eval.judge sheets --split dev --raters GC MS
+    python -m omissis.eval.judge sheets --split dev --raters GC
     python -m omissis.eval.judge accept --split dev
 """
 
@@ -213,9 +213,12 @@ def agreement(judge: list[int], consensus: list[int]) -> dict[str, Any]:
 def acceptance(
     judge: dict[str, dict[str, int]], sheets: list[dict[str, dict[str, int]]]
 ) -> dict[str, Any]:
-    """Judge against the rounded consensus of the raters, over all item-criterion scores."""
-    if len(sheets) < 2 or any(set(sheet) != set(judge) for sheet in sheets):
-        raise ValueError("two sheets or more, each rating exactly the items the judge scored")
+    """Judge against the rounded consensus of the raters, over all item-criterion scores.
+
+    With one rater the consensus is that rater's scores.
+    """
+    if not sheets or any(set(sheet) != set(judge) for sheet in sheets):
+        raise ValueError("one sheet or more, each rating exactly the items the judge scored")
     pairs = {
         criterion: [
             (

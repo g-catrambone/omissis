@@ -86,11 +86,17 @@ def test_acceptance_by_either_condition():
     assert by_closeness["kappa"] < judge.KAPPA_MIN and by_closeness["accepted"] is True
 
 
-def test_acceptance_needs_two_sheets_on_the_same_items():
+def test_acceptance_needs_a_sheet_on_the_same_items():
     with pytest.raises(ValueError):
-        judge.acceptance(sheet([4, 4]), [sheet([4, 4])])
+        judge.acceptance(sheet([4, 4]), [])
     with pytest.raises(ValueError):
         judge.acceptance(sheet([4, 4]), [sheet([4, 4]), sheet([4])])
+
+
+def test_with_one_rater_the_consensus_is_that_rater():
+    result = judge.acceptance(sheet([5, 4, 3, 2]), [sheet([5, 3, 3, 2])])
+    assert result["n"] == 12 and result["within_one"] == 1.0 and result["accepted"] is True
+    assert result["consensus_distribution"] == {"1": 0, "2": 3, "3": 6, "4": 0, "5": 3}
 
 
 # --- with a provider ---------------------------------------------------------------

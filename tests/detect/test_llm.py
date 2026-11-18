@@ -143,6 +143,20 @@ def test_hallucinated_text_is_dropped_and_counted(tmp_path, provider):
     assert llm.stats == {"calls": 1, "hallucinated": 1}
 
 
+def test_a_value_is_found_as_a_whole_token_only(tmp_path, provider):
+    text = "Ho 34 anni, vivo a Roma in via Romagnosi 12 e pago 1.340 euro, 34,50 di spese."
+    provider["replies"] = [
+        [
+            {"text": "34", "type": "ETA", "reason": "eta di chi scrive"},
+            {"text": "Roma", "type": "CITTA", "reason": "citta"},
+            {"text": "magnosi", "type": "CITTA", "reason": "parte di una parola"},
+        ]
+    ]
+    spans = detect(text, DetectorId.D3, make_config(tmp_path))
+    assert [(s.text, s.start) for s in spans] == [("34", 3), ("Roma", 19)]
+    assert llm.stats == {"calls": 1, "hallucinated": 1}  # found only inside a word
+
+
 def test_identical_text_is_answered_from_the_cache(tmp_path, provider):
     provider["replies"] = [GOOD]
     config = make_config(tmp_path)
@@ -166,8 +180,9 @@ def test_reply_cut_at_the_token_limit_is_an_invalid_reply(tmp_path, provider):
     assert llm.stats == {"calls": 2, "retries": 1}
 
 
-def test_failing_provider_logs_and_returns_nothing(tmp_path, provider, caplog):
+def test_failing_provider_stops_the_run(tmp_path, provider):
+    # No spans would send the text unmasked: the error of the provider propagates.
     provider["replies"] = [RuntimeError("out of memory")]
-    with caplog.at_level(logging.ERROR):
-        assert detect(TEXT, DetectorId.D3, make_config(tmp_path)) == []
-    assert "RuntimeError" in caplog.text
+    with pytest.raises(RuntimeError, match="out of memory"):
+        detect(TEXT, DetectorId.D3, make_config(tmp_path))
+    assert llm.stats == {"calls": 1}

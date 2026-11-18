@@ -77,7 +77,9 @@ def world(monkeypatch, tmp_path):
     )
     settings = yaml.safe_load((REPO / "configs" / "eval.yaml").read_text(encoding="utf-8"))
     settings["base"].update(models_file=str(models), cache_dir=str(tmp_path / "cache"))
-    settings["configurations"] += EXTRA
+    # The references of the file, and the detector configurations played by D0.
+    references = [c for c in settings["configurations"] if c["name"].startswith("REF-")]
+    settings["configurations"] = references + EXTRA
     config = tmp_path / "eval.yaml"
     config.write_text(yaml.safe_dump(settings), encoding="utf-8")
 
@@ -240,12 +242,12 @@ def test_rejected_judge_on_the_held_out_split_waits_for_the_human_sheets(
     assert "not complete yet" in capsys.readouterr().out
     assert not (out / "metrics" / "contrasts.json").exists()  # the run does not count yet
     sheets = sorted((out / "judge_fallback").glob("sheet_*.csv"))
-    assert len(sheets) == 3
+    assert len(sheets) == len(run.review.MEMBERS)  # one sheet per member
 
     assert evaluate("holdout") == 0  # sheets still empty: still waiting, not refused
     assert not (out / "metrics" / "contrasts.json").exists()
 
-    for path in sheets:  # the three members fill their sheets
+    for path in sheets:  # every member fills a sheet
         with open(path, encoding="utf-8", newline="") as fh:
             rows = list(csv.DictReader(fh))
         with open(path, "w", encoding="utf-8", newline="") as fh:

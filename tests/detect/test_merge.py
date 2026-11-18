@@ -40,9 +40,10 @@ def test_nested_span_loses_to_the_longer_one():
     assert spans_of(result) == [(0, 10, "D0")]
 
 
-def test_partial_overlap_longer_wins():
+def test_partial_overlap_longer_wins_and_the_rest_of_the_other_stays():
     result = merge([s(0, 6), s(4, 12)], PRIORITY)
-    assert spans_of(result) == [(4, 12, "D0")]
+    assert spans_of(result) == [(0, 4, "D0"), (4, 12, "D0")]
+    assert all(x.matches(TEXT) for x in result)
 
 
 def test_identical_spans_are_deduplicated():
@@ -51,15 +52,16 @@ def test_identical_spans_are_deduplicated():
 
 def test_tie_on_length_decided_by_confidence():
     result = merge([s(0, 6, "D0", 0.5), s(3, 9, "D1", 0.9)], PRIORITY)
-    assert spans_of(result) == [(3, 9, "D1")]
+    assert spans_of(result) == [(0, 3, "D0"), (3, 9, "D1")]
 
 
 def test_tie_on_length_and_confidence_decided_by_source_priority():
     result = merge([s(3, 9, "D2", 0.9), s(0, 6, "D1", 0.9)], PRIORITY)
-    assert spans_of(result) == [(0, 6, "D1")]
+    assert spans_of(result) == [(0, 6, "D1"), (6, 9, "D2")]
     reversed_priority = [DetectorId.D2, DetectorId.D1]
     assert spans_of(merge([s(3, 9, "D2", 0.9), s(0, 6, "D1", 0.9)], reversed_priority)) == [
-        (3, 9, "D2")
+        (0, 3, "D1"),
+        (3, 9, "D2"),
     ]
 
 
@@ -71,19 +73,53 @@ def test_full_tie_keeps_the_first_in_input_order():
 
 def test_unlisted_source_ranks_last():
     result = merge([s(0, 6, "GOLD"), s(3, 9, "D3")], PRIORITY)
-    assert spans_of(result) == [(3, 9, "D3")]
+    assert spans_of(result) == [(0, 3, "GOLD"), (3, 9, "D3")]
 
 
-def test_a_dropped_span_is_dropped_whole():
-    # The long middle span wins against both neighbours; neither is cut.
+def test_the_winner_is_never_cut_and_what_is_left_of_the_others_stays_masked():
+    # The long middle span wins against both neighbours, which keep what is outside it.
     result = merge([s(0, 5), s(3, 15), s(13, 18)], PRIORITY)
-    assert spans_of(result) == [(3, 15, "D0")]
+    assert spans_of(result) == [(0, 3, "D0"), (3, 15, "D0"), (15, 18, "D0")]
 
 
-def test_result_is_non_overlapping_and_sorted():
+def test_phone_number_that_shares_a_digit_with_a_longer_amount_stays_masked():
+    text = "Chiamate lo 02 123456 7.500,00 euro."
+    phone = Span(12, 23, "02 123456 7", SpanType.TELEFONO, 1.0, "D0")
+    amount = Span(22, 35, "7.500,00 euro", SpanType.IMPORTO, 1.0, "D0")
+    result = merge([phone, amount], PRIORITY)
+    assert [(x.type, x.text) for x in result] == [
+        (SpanType.TELEFONO, "02 123456"),  # without the space before the amount
+        (SpanType.IMPORTO, "7.500,00 euro"),
+    ]
+    assert all(x.matches(text) for x in result)
+
+
+def test_a_stretch_with_no_letter_and_no_digit_leaves_nothing():
+    text = "Mario Rossi - Verona"
+    name = Span(0, 11, "Mario Rossi", SpanType.PERSONA, 1.0, "D1")
+    tail = Span(6, 14, "Rossi - ", SpanType.PERSONA, 1.0, "D2")
+    assert merge([name, tail], PRIORITY) == [name]
+    assert name.matches(text)
+
+
+def test_a_span_is_kept_with_its_reason():
+    result = merge([s(0, 6, "D3"), s(3, 12)], PRIORITY)
+    assert [(x.start, x.end, x.source, x.reason) for x in result] == [
+        (0, 3, "D3", "test"),
+        (3, 12, "D0", None),
+    ]
+
+
+def test_result_is_non_overlapping_sorted_and_covers_what_the_input_covers():
     many = [s(i, i + w) for i in range(0, 30, 3) for w in (2, 4, 5)]
     result = merge(many, PRIORITY)
     assert all(a.end <= b.start for a, b in zip(result, result[1:], strict=False))
+    assert all(x.matches(TEXT) for x in result)
+
+    def covered(spans):
+        return {i for x in spans for i in range(x.start, x.end)}
+
+    assert covered(result) == covered(many)  # TEXT has letters and digits only
 
 
 # --- detect ------------------------------------------------------------------------
@@ -152,12 +188,11 @@ def test_detect_returns_nothing_for_non_text(value, caplog):
         assert detect(value, DetectorId.D0, CONFIG) == []
 
 
-def test_failing_detector_logs_and_returns_nothing(monkeypatch, caplog):
+def test_failing_detector_stops_the_run_without_quoting_the_text(monkeypatch):
     def broken(text):
-        raise RuntimeError(f"cannot handle {text}")
+        raise KeyError(f"cannot handle {text}")
 
     monkeypatch.setattr(rules, "find_all", broken)
-    with caplog.at_level(logging.ERROR):
-        assert detect("Mario 333 1234567", DetectorId.D0, CONFIG) == []
-    assert "RuntimeError" in caplog.text
-    assert "333 1234567" not in caplog.text  # never log the text
+    with pytest.raises(RuntimeError, match=r"detector D0 failed \(KeyError\)") as raised:
+        detect("Mario 333 1234567", DetectorId.D0, CONFIG)
+    assert "333 1234567" not in str(raised.value)
