@@ -143,6 +143,20 @@ def test_hallucinated_text_is_dropped_and_counted(tmp_path, provider):
     assert llm.stats == {"calls": 1, "hallucinated": 1}
 
 
+def test_a_value_is_found_as_a_whole_token_only(tmp_path, provider):
+    text = "Ho 34 anni, vivo a Roma in via Romagnosi 12 e pago 1.340 euro, 34,50 di spese."
+    provider["replies"] = [
+        [
+            {"text": "34", "type": "ETA", "reason": "eta di chi scrive"},
+            {"text": "Roma", "type": "CITTA", "reason": "citta"},
+            {"text": "magnosi", "type": "CITTA", "reason": "parte di una parola"},
+        ]
+    ]
+    spans = detect(text, DetectorId.D3, make_config(tmp_path))
+    assert [(s.text, s.start) for s in spans] == [("34", 3), ("Roma", 19)]
+    assert llm.stats == {"calls": 1, "hallucinated": 1}  # found only inside a word
+
+
 def test_identical_text_is_answered_from_the_cache(tmp_path, provider):
     provider["replies"] = [GOOD]
     config = make_config(tmp_path)

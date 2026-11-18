@@ -6,8 +6,9 @@ pilot texts it was the one identifier left in every text.
 
 The model is asked for a JSON array of items `{"text", "type", "reason"}` and never
 for offsets: each `text` is located in the source by string search and every
-occurrence becomes a span. An item whose text does not occur in the source is
-dropped and counted as hallucinated.
+occurrence as a whole token becomes a span, never a part of a longer word or number
+("Roma" is not in "Romagnosi", nor "34" in "1.340"). An item whose text does not occur
+so in the source is dropped and counted as hallucinated.
 
 The reply must be the JSON array and nothing else, and every item must pass the
 schema (`_valid`): otherwise the whole reply is invalid. An invalid reply is asked
@@ -26,6 +27,7 @@ from __future__ import annotations
 
 import json
 import logging
+import re
 from collections import Counter
 
 from omissis.backends import LLMRequest, TruncatedReplyError, complete
@@ -119,11 +121,10 @@ def _valid(reply: str) -> list[dict[str, str]] | None:
 
 
 def _occurrences(text: str, value: str) -> list[int]:
-    starts, at = [], text.find(value)
-    while at != -1:
-        starts.append(at)
-        at = text.find(value, at + len(value))
-    return starts
+    """Where `value` is in `text` as a whole token: not inside a word or a number."""
+    before = r"(?<![^\W_])" + (r"(?<!\d[.,])" if value[:1].isdigit() else "")
+    after = r"(?![^\W_])" + (r"(?![.,]\d)" if value[-1:].isdigit() else "")
+    return [m.start() for m in re.finditer(before + re.escape(value) + after, text)]
 
 
 def find(text: str, config: RunConfig) -> list[Span]:
