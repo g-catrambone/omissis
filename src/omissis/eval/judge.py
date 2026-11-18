@@ -28,7 +28,7 @@ from pathlib import Path
 from typing import Any
 
 from omissis.backends import LLMRequest, complete
-from omissis.config import RunConfig, load_eval_configs, with_overrides
+from omissis.config import RunConfig, load_eval_configs, run_id, with_overrides
 from omissis.eval.datasets import TextRecord, load_texts
 from omissis.eval.normalise import extract_json
 from omissis.eval.utility import t1_reply
@@ -236,6 +236,40 @@ def acceptance(
     return result
 
 
+def validation_file(
+    split: str,
+    seed: int,
+    run_ids: list[str],
+    key: dict[str, dict[str, str]],
+    judge: dict[str, dict[str, int]],
+    sheets: list[dict[str, dict[str, int]]],
+) -> dict[str, Any]:
+    """`judge_validation.json` as a metrics file (docs/interfaces.md, section 5).
+
+    One row for all the scores and one per criterion; `per_text` holds the scores of
+    the judge and of every rater for each item, so the rows can be rebuilt from it.
+    The outcome stays at the top, where the runner reads it.
+    """
+    result = acceptance(judge, sheets)
+    per_criterion = result.pop("per_criterion")
+    outcome = {name: result.pop(name) for name in ("accepted", "rule")}
+    rows = [{"criterion": "all", **result}]
+    rows += [{"criterion": criterion, **per_criterion[criterion]} for criterion in CRITERIA]
+    per_text = [
+        {
+            "item": item,
+            "text_id": key[item]["text_id"],
+            "config": key[item]["config"],
+            "judge": judge[item],
+            "raters": [sheet[item] for sheet in sheets],
+        }
+        for item in sorted(judge)
+    ]
+    head = {"split": split, "seed": seed, "generated_from": run_ids}
+    counts = {"raters": len(sheets), "items": len(judge)}
+    return head | outcome | counts | {"rows": rows, "per_text": per_text}
+
+
 # --- commands ----------------------------------------------------------------------
 
 
@@ -268,13 +302,15 @@ def _accept(args: argparse.Namespace) -> int:
             record.text, t1_reply(record, reference), t1_reply(record, config), config
         )
         judge[item] = judged["scores"]
-    result = acceptance(judge, sheets) | {"raters": len(sheets), "items": len(key)}
+    run_ids = [run_id(config) for config in (reference, *rated.values())]
+    result = validation_file(args.split, reference.seed, run_ids, key, judge, sheets)
     out = Path("results") / args.split / "metrics" / "judge_validation.json"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(json.dumps(result, indent=2) + "\n", encoding="utf-8")
+    overall = result["rows"][0]
     print(
         f"judge {'accepted' if result['accepted'] else 'rejected'}: kappa "
-        f"{result['kappa']:.2f}, within one point {result['within_one']:.0%}; see {out}"
+        f"{overall['kappa']:.2f}, within one point {overall['within_one']:.0%}; see {out}"
     )
     return 0
 

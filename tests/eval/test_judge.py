@@ -185,3 +185,56 @@ def test_filled_sheet_is_read_and_an_empty_score_is_an_error(tmp_path):
     path.write_text("\n".join([*lines, "item-003,e,r,x,5,7,3"]) + "\n", encoding="utf-8")
     with pytest.raises(ValueError, match="from 1 to 5"):
         judge.read_sheet(path)
+
+
+def test_validation_file_has_the_format_of_a_metrics_file_and_can_be_rebuilt():
+    # docs/interfaces.md, section 5: split, seed, generated_from, rows, per_text; the rows
+    # are rebuilt from per_text alone, so the scores of every item are in the file.
+    judged = sheet([5, 4, 3, 2])
+    sheets = [sheet([5, 4, 3, 2]), sheet([5, 5, 4, 2])]
+    key = {item: {"text_id": f"t{n}", "config": "D4+R1"} for n, item in enumerate(judged)}
+    data = judge.validation_file("dev", 7, ["abc", "def"], key, judged, sheets)
+    assert {"split", "seed", "generated_from", "rows", "per_text"} <= set(data)
+    assert (data["split"], data["seed"], data["generated_from"]) == ("dev", 7, ["abc", "def"])
+    assert data["accepted"] is True and data["raters"] == 2 and data["items"] == 4
+    assert [row["criterion"] for row in data["rows"]] == ["all", *judge.CRITERIA]
+    assert data["rows"][0]["n"] == 12 and data["rows"][1]["n"] == 4
+    first = data["per_text"][0]
+    assert (first["item"], first["text_id"], first["config"]) == ("item-001", "t0", "D4+R1")
+    assert first["judge"] == judged["item-001"] and len(first["raters"]) == 2
+
+    again = judge.acceptance(
+        {row["item"]: row["judge"] for row in data["per_text"]},
+        [{row["item"]: row["raters"][n] for row in data["per_text"]} for n in range(2)],
+    )
+    assert again["kappa"] == data["rows"][0]["kappa"] and again["accepted"] is data["accepted"]
+
+
+def test_accept_command_writes_the_validation_file(monkeypatch, tmp_path):
+    # The command a human runs once: the pieces around the model are faked.
+    from types import SimpleNamespace
+
+    monkeypatch.chdir(tmp_path)
+    key = {
+        "item-001": {"text_id": "t1", "config": "R1"},
+        "item-002": {"text_id": "t1", "config": "R2"},
+    }
+    folder = tmp_path / "results" / "dev" / "judge_validation"
+    folder.mkdir(parents=True)
+    (folder / "key.json").write_text(json.dumps(key), encoding="utf-8")
+    for rater in ("GC", "MS"):
+        (folder / f"sheet_{rater}.csv").write_text("", encoding="utf-8")
+    scores = dict.fromkeys(judge.CRITERIA, 4)
+    config = SimpleNamespace(seed=7)
+    monkeypatch.setattr(judge, "read_sheet", lambda path: {item: scores for item in key})
+    monkeypatch.setattr(judge, "load_eval_configs", lambda *a, **k: {"REF-none": config})
+    monkeypatch.setattr(judge, "validation_configs", lambda configs: {"R1": config, "R2": config})
+    monkeypatch.setattr(judge, "load_texts", lambda path: [SimpleNamespace(id="t1", text="x")])
+    monkeypatch.setattr(judge, "t1_reply", lambda record, config: "reply")
+    monkeypatch.setattr(judge, "judge_one", lambda *args: {"scores": scores})
+    monkeypatch.setattr(judge, "run_id", lambda config: "abc123")
+    assert judge.main(["accept", "--split", "dev"]) == 0
+    written = tmp_path / "results" / "dev" / "metrics" / "judge_validation.json"
+    data = json.loads(written.read_text(encoding="utf-8"))
+    assert (data["split"], data["seed"], data["accepted"]) == ("dev", 7, True)
+    assert data["generated_from"] == ["abc123"] * 3 and len(data["per_text"]) == 2
