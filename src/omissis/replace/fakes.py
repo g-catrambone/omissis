@@ -22,11 +22,12 @@ separators and the decimals around them ("€ 98", "98 Euro", "98,00 euro").
   a phone keeps `+39` and its first digit (0 for a landline, 3 for a mobile).
 - IMPORTO: the same number of digits and the same decimals, so the same order of
   magnitude.
-- DATA, DATA_NASCITA: another day of the same month, for a date written with its day
+- DATA: another day of the same month, for a date written with its day
   (`16 novembre 2026`, `16/11/2026`, `2026-11-16`).
 - ETA: the age moved by one to five years.
-- RUOLO, STRUTTURA, NAZIONALITA and every special category: no fake, the R1
-  placeholder.
+- RUOLO, STRUTTURA, NAZIONALITA, DATA_NASCITA and every special category: no fake,
+  the R1 placeholder. A fake date of birth would keep the month and the year, and
+  with them the age.
 
 The last line is a choice: a fake job, clinic or diagnosis would change the meaning
 of the text and read as true. The same placeholder is written whenever there is no
@@ -72,7 +73,7 @@ DATA = Path(__file__).parent / "data"
 MAX_DRAWS = 200
 # Types that keep the R1 placeholder under R2.
 NO_FAKE = frozenset(
-    {SpanType.RUOLO, SpanType.STRUTTURA, SpanType.NAZIONALITA}
+    {SpanType.RUOLO, SpanType.STRUTTURA, SpanType.NAZIONALITA, SpanType.DATA_NASCITA}
     | {t for t, cls in TYPE_CLASS.items() if cls is SpanClass.SPECIAL}
 )
 
@@ -203,7 +204,6 @@ _GENERATORS: dict[SpanType, Callable[[random.Random, str], str | None]] = {
     SpanType.UTENTE: _shape,
     SpanType.IMPORTO: _amount,
     SpanType.DATA: _date,
-    SpanType.DATA_NASCITA: _date,
     SpanType.ETA: _age,
 }
 

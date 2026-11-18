@@ -127,7 +127,6 @@ def test_fake_amounts_keep_the_order_of_magnitude(value, pattern):
         ("000041227385", "CONTO", r"\d{12}"),
         ("NL-20417", "UTENTE", r"[A-Z]{2}-\d{5}"),
         ("16 novembre 2026", "DATA", r"([1-9]|[12]\d) novembre 2026"),
-        ("14/02/1961", "DATA_NASCITA", r"[012]\d/02/1961"),
         ("2026-12-01", "DATA", r"2026-12-[012]\d"),
         ("1 dicembre", "DATA", r"([2-9]|[12]\d) dicembre"),
         ("dal 16 novembre 2026", "DATA", r"dal ([1-9]|[12]\d) novembre 2026"),
@@ -165,6 +164,8 @@ def test_types_without_a_fake_keep_the_placeholder():
     assert fakes.NO_FAKE >= {t for t, c in TYPE_CLASS.items() if c is SpanClass.SPECIAL}
     assert fake_of("magazziniere", "RUOLO") == "[RUOLO_1]"
     assert fake_of("ernia del disco lombare", "SALUTE") == "[SALUTE_1]"
+    # A fake date of birth would keep the month and the year: the age would stay readable.
+    assert fake_of("14/02/1961", "DATA_NASCITA") == "[DATA_NASCITA_1]"
     dates = {SpanType.DATA: "16 novembre 2026", SpanType.DATA_NASCITA: "14/02/1961"}
     for type in SpanType:  # "valore 12" has the shape every generator needs, but for a date
         text, entity = one(dates.get(type, "valore 12"), type)
