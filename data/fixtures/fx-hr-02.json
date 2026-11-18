@@ -7,6 +7,12 @@
   "text": "Oggetto: richiesta di trasferimento alla sede di Bologna\n\nGentile dott.ssa Paola Ricciardelli,\n\nsono Alessio Mondini, analista contabile dell'ufficio amministrazione di Meridiana Servizi S.p.A. nella sede di Rimini, dove lavoro da cinque anni. Le scrivo per chiedere il trasferimento alla sede di Bologna a partire dal 1 marzo 2027.\n\nMia moglie ha ottenuto un incarico a tempo indeterminato presso l'Ospedale Maggiore di Bologna e vorremmo trasferirci insieme a nostro figlio. Sono disponibile a mantenere le stesse mansioni e lo stesso orario; in alternativa accetterei anche un ruolo da addetto alla contabilità fornitori.\n\nLe sarei grato di una risposta entro il 15 dicembre 2026, così da organizzare per tempo il trasloco. Resto a disposizione per un colloquio al 333 908 1176 o all'indirizzo alessio.mondini@example.org.\n\nCordiali saluti,\nAlessio Mondini\n",
   "spans": [
     {
+      "start": 49,
+      "end": 56,
+      "text": "Bologna",
+      "type": "CITTA"
+    },
+    {
       "start": 75,
       "end": 93,
       "text": "Paola Ricciardelli",

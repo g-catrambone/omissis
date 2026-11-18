@@ -1,9 +1,9 @@
-# Annotation guide (v0)
+# Annotation guide (v1)
 
 How to tag sensitive spans in the Italian texts. The policy is fixed in
 `docs/evaluation_protocol.md`, section 3; this guide applies it. The file
 format is in `docs/interfaces.md`, section 5. Draft written by an agent
-(task C1); the edge cases are to be rewritten by the team.
+(block 1, revised in task 3.1); the edge cases are to be rewritten by the team.
 
 ## 1. Policy in one paragraph
 
@@ -12,7 +12,9 @@ with its type. Do not decide whether a quasi-identifier "should" be masked:
 that is the run's `mask_quasi` switch. A span is the **shortest stretch that
 carries the information**: the name without the title, the amount with its
 currency, the date without the weekday. Spans never overlap and are never
-nested: when two readings compete, tag the longer, more specific one (see 4.3).
+nested: when two readings compete, tag the longer, more specific one. The
+exception is a generic facility followed by its city (edge case 3 in section
+4): only the city is tagged.
 
 ## 2. Classes and types
 
@@ -41,7 +43,7 @@ The type labels are the ASCII values of `SpanType` in `src/omissis/contracts.py`
 | `AZIENDA` | a named organisation: employer, bank, shop, school as an institution | `Banca Corvalli`, `Ortelli Logistica S.r.l.` |
 | `RUOLO` | job title or role | `magazziniere`, `insegnante di scuola primaria` |
 | `CITTA` | city, town or village | `Bergamo`, `Nola` |
-| `STRUTTURA` | a specific site or facility: hospital, clinic, branch, plant, office building | `Ospedale Maggiore`, `poliambulatorio di Pomigliano` |
+| `STRUTTURA` | a specific site or facility: hospital, clinic, branch, plant, office building | `Ospedale Maggiore`, `filiale di via Roma` |
 | `IMPORTO` | an amount of money, with its currency | `€ 320,00`, `12.400 euro` |
 | `DATA` | a calendar date other than a date of birth | `16 novembre 2026`, `1 marzo 2027` |
 | `ETA` | age | `52 anni` |
@@ -80,11 +82,11 @@ The type labels are the ASCII values of `SpanType` in `src/omissis/contracts.py`
    Entrate, "il medico di base", "l'ufficio risorse umane". They do not narrow
    down who the author is. A named local office (`sede INPS di Nola`) is
    `STRUTTURA`.
-3. **A facility named after a place** is one `STRUTTURA` span
-   (`poliambulatorio di Pomigliano`), not `STRUTTURA` + `CITTA`, because spans
-   do not nest. When the city is separated by other words
-   (`Ospedale Maggiore di Bologna`), tag `Ospedale Maggiore` as `STRUTTURA`
-   and `Bologna` as `CITTA`.
+3. **A generic facility followed by its city** (`poliambulatorio di
+   Pomigliano`, `filiale di Bergamo`, `stabilimento di Nola`) is not a
+   `STRUTTURA`: tag only the city, as `CITTA`. When the facility has a name of
+   its own (`Ospedale Maggiore di Bologna`), tag `Ospedale Maggiore` as
+   `STRUTTURA` and `Bologna` as `CITTA`.
 4. **Bank names are `AZIENDA`**, the branch as a place is `STRUTTURA`
    (`filiale di via Roma`), the branch's city alone is `CITTA`.
 5. **Other people** (a manager, a relative, a doctor) are tagged exactly like
@@ -109,8 +111,34 @@ The type labels are the ASCII values of `SpanType` in `src/omissis/contracts.py`
 | `intent` | equals `scenario` |
 | `requested_action` | one of the two actions allowed for the scenario (protocol, section 2) |
 | `amounts` | every `IMPORTO` in the text, as euro floats (`€ 1.200,50` → `1200.5`) |
-| `dates` | every `DATA` in the text as `YYYY-MM-DD`; dates of birth excluded |
-| `deadline` | the date by which the author asks for the action, or `null` |
+| `dates` | every `DATA` written with day, month and year, as `YYYY-MM-DD`; dates of birth excluded |
+| `deadline` | the date by which the recipient is asked to act, or `null` |
+
+Rules for the gold fields:
+
+- **Only full dates go into `dates`.** A `DATA` span without a day or a year
+  (`a dicembre`, `dal 2019`, `il 15 del mese`) is tagged in the text and left
+  out of `dates`: it cannot be written as `YYYY-MM-DD` without guessing.
+- **`deadline` is about the recipient.** It is a date by which the bank or the
+  HR office is asked to do something (`vi chiedo una risposta entro il 15
+  dicembre 2026`). A date on which something happens to the author (`dal 1
+  dicembre 2026 lo stipendio cambia conto`), or by which the author will do
+  something (`posso passare in filiale entro il 20 novembre 2026`), is not a
+  deadline. With no such date, `deadline` is `null`. A deadline is always one
+  of the `dates`.
+- **One requested action.** When an email seems to ask for two things, the
+  requested action is the one the author needs in order to consider the matter
+  closed; the other is a step towards it. `Vi chiedo di stornare i due importi
+  e di aprire la pratica di contestazione`: the author wants the money back, so
+  `refund`; opening the case is how the bank gets there. A text where the two
+  allowed actions of its scenario are asked with equal weight is rewritten in
+  review, not annotated.
+- **Formats allowed in the texts**, which the extraction scorer accepts:
+  amounts as `€ 1.200,50`, `1.200,50 euro`, `1200 euro`, `EUR 1.200`, with a
+  dot for the thousands and a comma for the decimals; dates as `16 novembre
+  2026`, `16/11/2026` or `16.11.2026`. Amounts in words (`milleduecento euro`)
+  and dates relative to today (`lunedì prossimo`) are not used: the reviewer
+  rewrites them.
 
 ## 6. Worked example (fixture `fx-hr-01`, excerpt)
 
