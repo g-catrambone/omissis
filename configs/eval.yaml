@@ -1,0 +1,18 @@
+# Named configurations of the evaluation (docs/interfaces.md, section 4).
+# Read by `load_eval_configs`, `omissis mask` and the evaluation commands.
+base:                      # keys shared by every configuration
+  backend: cloud
+  seed: 20261111
+  fuzzy_threshold: 0.9
+  source_priority: [D0, D2, D1, D3]
+  models_file: configs/models.yaml
+  cache_dir: results/cache
+configurations:
+  - {name: REF-none,          detector: NONE, strategy: R1, mask_quasi: false}
+  - {name: REF-oracle-direct, detector: GOLD, strategy: R1, mask_quasi: false}
+  - {name: REF-oracle,        detector: GOLD, strategy: R1, mask_quasi: true}
+  # added in block 4:
+  # - {name: D1+R1, detector: D1, strategy: R1, mask_quasi: true}
+  # - {name: D2+R1, detector: D2, strategy: R1, mask_quasi: true}
+  # - {name: D4+R1, detector: D4, strategy: R1, mask_quasi: true}
+  # - {name: D4+R2, detector: D4, strategy: R2, mask_quasi: true}

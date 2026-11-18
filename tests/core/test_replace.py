@@ -1,4 +1,4 @@
-"""R1 placeholders (task B1)."""
+"""R1 placeholders (block 1)."""
 
 import pytest
 
@@ -138,6 +138,16 @@ def test_overlapping_mentions_are_rejected():
         replace(text, [a, b], Strategy.R1, seed=1)
 
 
-def test_r2_is_not_built_yet():
-    with pytest.raises(NotImplementedError, match="B7"):
-        replace("x", [], Strategy.R2, seed=1)
+def test_number_written_with_its_label_in_the_source_is_skipped_in_any_form_restore_reads():
+    from omissis.restore import restore
+
+    iban = "IT89Y0000025613651127989360"
+    text = f"Riferimento IBAN_1 del modulo, riga [iban 2]. IBAN 3: {iban}."
+    masked, vault = replace(
+        text, [entity("IBAN_1", SpanType.IBAN, [mention(text, iban, "IBAN")])], Strategy.R1, seed=1
+    )
+    # 1 and 2 are written in the source in a form restore reads; "IBAN 3" is ordinary text.
+    assert masked == "Riferimento IBAN_1 del modulo, riga [iban 2]. IBAN 3: [IBAN_3]."
+    restored, events = restore(masked, vault, 0.9)
+    assert restored == text
+    assert [e.surrogate for e in events if e.outcome.value == "restored"] == ["[IBAN_3]"]

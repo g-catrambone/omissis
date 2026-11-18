@@ -85,3 +85,29 @@ def test_register_provider_twice_is_an_error(registry):
     register_provider("fake", lambda model, request: "a")
     with pytest.raises(ValueError):
         register_provider("fake", lambda model, request: "b")
+
+
+def test_request_params_do_not_follow_later_changes_inside_the_callers_dict():
+    params = {"response_format": {"type": "text"}}
+    request = LLMRequest(role="cloud", prompt="x", params=params)
+    key = cache_key(MODEL, request)
+    params["response_format"]["type"] = "json_object"
+    assert cache_key(MODEL, request) == key
+
+
+def test_cache_key_is_the_formula_the_committed_cache_was_written_with():
+    """A change here makes every committed cache line a miss: it must be a decision."""
+    import hashlib
+    import json
+
+    request = LLMRequest("cloud", "Città: [CITTA_1] è qui", "Sii breve.", {"max_tokens": 50})
+    payload = {
+        "id": "model-a",
+        "revision": "rev-1",
+        "system": "Sii breve.",
+        "prompt": "Città: [CITTA_1] è qui",
+        "params": {"temperature": 0, "max_tokens": 50},
+    }
+    written = json.dumps(payload, sort_keys=True, ensure_ascii=False).encode("utf-8")
+    assert cache_key(MODEL, request) == hashlib.sha256(written).hexdigest()
+    assert cache_key(MODEL, request).startswith("338bf653d71d0c64")

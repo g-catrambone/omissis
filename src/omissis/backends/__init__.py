@@ -6,6 +6,7 @@ Every LLM call in the project goes through `complete`. Only functions registered
 
 from __future__ import annotations
 
+import copy
 import hashlib
 import json
 from collections.abc import Callable, Mapping
@@ -26,8 +27,15 @@ class LLMRequest:
     params: Mapping[str, Any] = field(default_factory=lambda: {"temperature": 0})
 
     def __post_init__(self) -> None:
-        # Read-only copy, so a request cannot change after its cache key is computed.
-        object.__setattr__(self, "params", MappingProxyType(dict(self.params)))
+        # `temperature: 0` is always there: what the caller passes is merged over it.
+        # Integral floats become integers, so that 0 and 0.0 give one cache key.
+        params = {"temperature": 0, **copy.deepcopy(dict(self.params))}
+        for name, value in params.items():
+            if isinstance(value, float) and value.is_integer():
+                params[name] = int(value)
+        # A read-only copy, nested values included, so that a request cannot change
+        # after its cache key is computed.
+        object.__setattr__(self, "params", MappingProxyType(params))
 
 
 @dataclass(frozen=True)
@@ -45,6 +53,10 @@ _PROVIDERS: dict[str, ProviderFn] = {}
 
 class CacheMissError(RuntimeError):
     """A request is not in the cache and the backend is `replay`."""
+
+
+class TruncatedReplyError(RuntimeError):
+    """The model stopped at the token limit: the reply is incomplete and is not cached."""
 
 
 def cache_key(model: ModelSpec, request: LLMRequest) -> str:
@@ -109,13 +121,22 @@ def complete(request: LLMRequest, config: RunConfig) -> LLMResponse:
         "created_at": datetime.now(UTC).isoformat(timespec="seconds"),
     }
     path.parent.mkdir(parents=True, exist_ok=True)
+    # A file that does not end with a newline (a merge, an editor) gets one first.
+    broken = path.exists() and path.stat().st_size > 0 and not path.read_bytes().endswith(b"\n")
     with open(path, "a", encoding="utf-8", newline="\n") as fh:
-        fh.write(json.dumps(record, ensure_ascii=False) + "\n")
+        fh.write(("\n" if broken else "") + json.dumps(record, ensure_ascii=False) + "\n")
     return LLMResponse(text, model.id, model.revision, cached=False)
 
 
+_ANSWER_FIELDS = ("response", "model_id", "revision")  # what a cache hit returns
+
+
 def _lookup(path: Path, key: str) -> dict[str, Any] | None:
-    """The first cache record with `key` in `path`, or None. A corrupt line is an error."""
+    """The first cache record with `key` in `path`, or None.
+
+    A line that is not a record, or the record found without its reply, is an error
+    that names the file and the line.
+    """
     if not path.exists():
         return None
     with open(path, encoding="utf-8") as fh:
@@ -126,7 +147,11 @@ def _lookup(path: Path, key: str) -> dict[str, Any] | None:
                 record = json.loads(line)
             except json.JSONDecodeError as exc:
                 raise ValueError(f"{path}, line {number}: not valid JSON") from exc
+            if not isinstance(record, dict):
+                raise ValueError(f"{path}, line {number}: not a cache record")
             if record.get("key") == key:
+                if not all(isinstance(record.get(f), str) for f in _ANSWER_FIELDS):
+                    raise ValueError(f"{path}, line {number}: cache record without its reply")
                 return record
     return None
 
@@ -137,3 +162,8 @@ def _echo(model: ModelSpec, request: LLMRequest) -> str:
 
 
 register_provider("echo", _echo)
+
+# Imported here, after the names it needs exist; the provider is registered on import.
+from omissis.backends.groq import groq_provider  # noqa: E402
+
+register_provider("groq", groq_provider)
