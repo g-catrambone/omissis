@@ -161,7 +161,7 @@ These steps need no result of the evaluation and touch different files.
     README says so until they are: `make reproduce` (step B1), and the demo,
     which starts but has nothing to replay until its runs are recorded (step
     C4).
-- [ ] **B4 · Slide drafts, without numbers** — one file per member,
+- [x] **B4 · Slide drafts, without numbers** — one file per member,
   `docs/slides/<name>.md`; nothing to claim.
   - Do: the outline of your part and what you say on each slide. Giuseppe:
     problem, existing tools, architecture and design choices, the demo (at most
