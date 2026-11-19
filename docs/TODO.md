@@ -129,7 +129,7 @@ These steps need no result of the evaluation and touch different files.
     under `results/` (today this can be shown on `pilot`; `dev` and `test` do
     not exist yet). The chart is an image: say in the hand-back whether its
     bytes change from one run to the next.
-- [ ] **B2 · Model and data cards** — *Claimed by:* —
+- [x] **B2 · Model and data cards** — *Claimed by:* Andrea
   - Files: `docs/cards.md` (new).
   - Do: one entry for every role of `configs/models.yaml` (read it, never edit
     it), one for what D1 runs on (Presidio and the spaCy model
