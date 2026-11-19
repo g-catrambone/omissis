@@ -144,7 +144,7 @@ These steps need no result of the evaluation and touch different files.
   - Done when: every role of `configs/models.yaml` has an entry whose model id
     and revision are the ones in that file; every licence has its link or says
     "not verified". **Human:** Giuseppe confirms the licences.
-- [ ] **B3 · README, without the results** — *Claimed by:* —
+- [x] **B3 · README, without the results** — *Claimed by:* Andrea
   - Files: `README.md`.
   - Do: what Omissis is and is not; quick start (`make setup`, `make test`,
     `make lint`, `.env` from `.env.example`, the `detect` group, Ollama for D3);
