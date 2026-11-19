@@ -114,7 +114,7 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
 
 These steps need no result of the evaluation and touch different files.
 
-- [ ] **B1 · `make reproduce`** — *Claimed by:* —
+- [x] **B1 · `make reproduce`** — *Claimed by:* Andrea
   - Files: the `reproduce` target of `Makefile` (no other target);
     `src/omissis/eval/report.py` and `tests/eval/test_report.py` only for the
     point below.

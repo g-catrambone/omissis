@@ -150,9 +150,10 @@ def _fmt(value: float | None, low: float | None = None, high: float | None = Non
     return f"{value:.2f} [{low:.2f}, {high:.2f}]"
 
 
-def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str:
-    """The two tables of the protocol, section 13, as Markdown."""
-    lines = [f"# Scorecard — {split}", ""]
+def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str | None:
+    """The two tables of the protocol, section 13, as Markdown; None when there is no row."""
+    title = [f"# Scorecard — {split}", ""]
+    lines = list(title)
     linkage, attributes = metrics["linkage"], metrics["attributes"]
     utility, restoration = metrics["utility"], metrics["restoration"]
     if linkage and attributes and utility and restoration:
@@ -234,7 +235,7 @@ def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str:
                 f"{r['p_holm']:.3f} | {verdict} |"
             )
         lines.append("")
-    return "\n".join(lines)
+    return None if lines == title else "\n".join(lines)
 
 
 def chart_metric(rows: list[dict[str, Any]]) -> str:
@@ -312,7 +313,9 @@ def rebuild(split: str, results: Path = RESULTS) -> dict[str, dict[str, Any] | N
         write(folder, "contrasts", contrasts)
     metrics["contrasts"] = contrasts
     metrics["latency"] = read(folder, "latency")
-    (results / split / "scorecard.md").write_text(scorecard(split, metrics), encoding="utf-8")
+    card = scorecard(split, metrics)
+    if card is not None:  # the pilot has the attacks alone: no row, no scorecard
+        (results / split / "scorecard.md").write_text(card, encoding="utf-8")
     if metrics["linkage"] and metrics["utility"]:
         chart(metrics, results / split / "figures" / "privacy_utility.png")
     return metrics
@@ -322,8 +325,11 @@ def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m omissis.eval.report")
     parser.add_argument("--split", required=True)
     args = parser.parse_args(argv)
-    rebuild(args.split)
-    print(f"written {RESULTS / args.split / 'scorecard.md'}")
+    metrics = rebuild(args.split)
+    if scorecard(args.split, metrics) is None:
+        print(f"{args.split}: no scorecard row, no scorecard written")
+    else:
+        print(f"written {RESULTS / args.split / 'scorecard.md'}")
     return 0
 
 
