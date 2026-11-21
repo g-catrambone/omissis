@@ -33,3 +33,16 @@ def test_utility_contrast_needs_t1_on_both_sides():
     rows = per_text("REF-none", 0.4, 1.0) + per_text("D4+R1", 0.4, 0.5)
     (contrast,) = report.contrast_rows([], rows, [], 1)
     assert contrast["metric"] == "utility" and contrast["difference"] < 0
+
+
+def test_no_scorecard_when_there_is_no_row(tmp_path):
+    # The pilot has the two attacks alone: no table of the scorecard has a row.
+    folder = tmp_path / "pilot" / "metrics"
+    folder.mkdir(parents=True)
+    for name in ("linkage", "attributes"):
+        source = report.RESULTS / "pilot" / "metrics" / f"{name}.json"
+        (folder / f"{name}.json").write_text(source.read_text(encoding="utf-8"), encoding="utf-8")
+    metrics = report.rebuild("pilot", tmp_path)
+    assert metrics["linkage"]["rows"] and metrics["attributes"]["rows"]
+    assert report.scorecard("pilot", metrics) is None
+    assert not (tmp_path / "pilot" / "scorecard.md").exists()

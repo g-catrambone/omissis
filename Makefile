@@ -27,4 +27,10 @@ eval-test:
 	uv run --locked --env-file .env python -m omissis.eval.run --split test
 
 reproduce:
-	@echo "make reproduce is not built yet: see docs/TODO.md, section 4." >&2; exit 1
+	@for split in pilot dev test; do \
+		if [ -d results/$$split/metrics ]; then \
+			uv run --locked python -m omissis.eval.report --split $$split || exit 1; \
+		else \
+			echo "skipped $$split: no results/$$split/metrics/"; \
+		fi; \
+	done
