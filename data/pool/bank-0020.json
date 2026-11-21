@@ -95,5 +95,6 @@
     ],
     "requested_action": "close_account",
     "deadline": "2026-12-15"
-  }
+  },
+  "reviewed_by": "GC"
 }

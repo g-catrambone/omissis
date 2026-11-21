@@ -71,6 +71,10 @@ The type labels are the ASCII values of `SpanType` in `src/omissis/contracts.py`
   `all'Ospedale Maggiore` → `Ospedale Maggiore`; `un'ernia del disco` →
   `ernia del disco`.
 - **Punctuation out**: a trailing full stop or comma is never part of a span.
+- **Organisation names whole**: a company name with a place name inside is one
+  `AZIENDA` with its legal suffix: `Trasporti Bergamo Nord S.r.l.` is one span,
+  with no `CITTA` inside. The full stop of the suffix is part of the name, the
+  one exception to the rule above.
 - **Every mention is tagged**, including repeats and the signature.
 
 ## 4. Edge cases (to be rewritten by the team in their own words)
@@ -86,23 +90,33 @@ The type labels are the ASCII values of `SpanType` in `src/omissis/contracts.py`
    Pomigliano`, `filiale di Bergamo`, `stabilimento di Nola`) is not a
    `STRUTTURA`: tag only the city, as `CITTA`. When the facility has a name of
    its own (`Ospedale Maggiore di Bologna`), tag `Ospedale Maggiore` as
-   `STRUTTURA` and `Bologna` as `CITTA`.
+   `STRUTTURA` and `Bologna` as `CITTA`. A generic facility with neither a name
+   of its own nor a city (`una clinica privata`, `l'ambulatorio della zona`) is
+   not tagged.
 4. **Bank names are `AZIENDA`**, the branch as a place is `STRUTTURA`
    (`filiale di via Roma`), the branch's city alone is `CITTA`.
 5. **Other people** (a manager, a relative, a doctor) are tagged exactly like
    the author: `PERSONA` for names. A job title is `RUOLO` when it describes a
    specific person (`la mia responsabile, capo reparto amministrazione`); a
    function named in passing (`avvisare il capoturno`) and family relations
-   (`mia moglie`) are not tagged.
+   (`mia moglie`) are not tagged. A hierarchical relation is not `RUOLO`
+   either, like a family relation: `il mio superiore` is not tagged. The
+   description of a duty is not `RUOLO`: in `seguo la gestione dei turni del
+   magazzino` nothing is tagged; the job title is.
 6. **Health in passing is still `SALUTE`**: `fisioterapia`, `visita
    cardiologica`, `in gravidanza`. The reason for an absence written only as
-   `malattia` is not tagged: it says nothing specific.
+   `malattia` is not tagged: it says nothing specific. Generic health words
+   are not tagged for the same reason: `controlli medici`, `accertamenti
+   clinici`, `ricetta medica`, `il mio dottore`.
 7. **Account numbers vs IBAN**: a full IBAN is `IBAN`; an account number on its
    own (`conto n. 000041227385`) is `CONTO`; the last four digits of a card
    (`carta che termina con 4821`) are `CONTO`.
 8. **Dates of birth**: `DATA_NASCITA`, never `DATA`, and they do not go into
    the gold `dates` field (see 5).
 9. **Ages written as birth years** (`classe 1972`): `ETA`.
+10. **Union activity is not `SINDACATO`.** Words that describe a union activity
+    (`assemblea sindacale`, `ore di attività sindacale`) are not tagged; the
+    membership and the role are (section 2).
 
 ## 5. Gold fields
 
@@ -126,19 +140,36 @@ Rules for the gold fields:
   something (`posso passare in filiale entro il 20 novembre 2026`), is not a
   deadline. With no such date, `deadline` is `null`. A deadline is always one
   of the `dates`.
+- **Whose act `entro` attaches to.** A date that concerns the author (the start
+  of a change, an instalment, an absence, a date by which the author settles or
+  closes something) is not a deadline, even when it makes the request urgent:
+  `vi chiedo di liberare la somma, perché devo versare un acconto entro il 9
+  marzo 2027` has `deadline` `null`. What counts is whether `entro` attaches to
+  an act of the recipient or of the author.
+- **Two dates asked of the recipient.** When the recipient is asked to act by
+  two different dates, `deadline` is the date of the requested action:
+  `confermatemi la ricezione entro il 3 febbraio 2027 ed eseguite il bonifico
+  entro il 10 febbraio 2027` has `deadline` `2027-02-10` when the requested
+  action is the transfer.
 - **One requested action.** When an email seems to ask for two things, the
   requested action is the one the author needs in order to consider the matter
   closed; the other is a step towards it. `Vi chiedo di stornare i due importi
   e di aprire la pratica di contestazione`: the author wants the money back, so
   `refund`; opening the case is how the bank gets there. A text where the two
   allowed actions of its scenario are asked with equal weight is rewritten in
-  review, not annotated.
+  review, not annotated. The other allowed action offered as a fallback (`in
+  alternativa`) counts as a second action, and the text is rewritten too:
+  `vi chiedo il rimborso dell'addebito oppure, se non è possibile, di aprire
+  un'indagine`.
 - **Formats allowed in the texts**, which the extraction scorer accepts:
-  amounts as `€ 1.200,50`, `1.200,50 euro`, `1200 euro`, `EUR 1.200`, with a
-  dot for the thousands and a comma for the decimals; dates as `16 novembre
+  amounts as `€ 1.200,50`, `1.200,50 €`, `1.200,50 euro`, `1200 euro`,
+  `EUR 1.200`, with a dot for the thousands and a comma for the decimals;
+  dates as `16 novembre
   2026`, `16/11/2026` or `16.11.2026`. Amounts in words (`milleduecento euro`)
   and dates relative to today (`lunedì prossimo`) are not used: the reviewer
-  rewrites them.
+  rewrites them. A relative date is rewritten only when its value is certain;
+  one whose value the text does not fix (`tra qualche settimana`, `a inizio
+  estate`) stays as it is: it is not tagged and it is not a deadline.
 
 ## 6. Worked example (fixture `fx-hr-01`, excerpt)
 
@@ -157,8 +188,19 @@ Gold: `intent` and `scenario` `sick_leave`, `requested_action`
 
 ## 7. Adjudications
 
-One line per disagreement settled by the third member (protocol, section 3):
+One line per disagreement or doubt settled in review (protocol, section 3):
 date, text id, span, decision, who decided.
 
 | Date | Text | Span | Decision | By |
 |---|---|---|---|---|
+| 2026-11-21 | bank-0001, bank-0003, bank-0005, bank-0013, bank-0014, bank-0015, bank-0021, bank-0022, bank-0027, bank-0036, hr-0001, hr-0002, hr-0005, hr-0008, hr-0009, hr-0017, hr-0019, hr-0023, hr-0024 | no span: gold `deadline`, a date that concerns the author (start of a change, instalment, absence, a date by which the author acts) | `deadline` is `null` in all 19 (section 5) | Giuseppe, on the report of the AI review |
+| 2026-11-21 | bank-0014, bank-0015 | no span: the requested action, both allowed actions asked with equal weight | the IBAN sentence rewritten as a notice; `requested_action` stays `send_information` (section 5) | Giuseppe, on the report of the AI review |
+| 2026-11-21 | bank-0001 | no span: the requested action, the other allowed action offered as a fallback | fallback removed; `requested_action` stays `suspend_payment` (section 5) | Giuseppe, on the report of the AI review |
+| 2026-11-21 | bank-0028 | no span: gold `deadline`, two dates asked of the bank | `deadline` is the date of the requested action (section 5) | Giuseppe, on the report of the AI review |
+| 2026-11-21 | hr-0014, bank-0003, bank-0005, bank-0014, bank-0015, bank-0016, bank-0023, hr-0022 | no span: relative dates whose value the text does not fix | left as written, not tagged, not a deadline (section 5) | Giuseppe, on the report of the AI review |
+| 2026-11-21 | hr-0005, hr-0018 | `SALUTE`: a diagnosis followed by words saying it is under treatment | span shortened to the diagnosis, the treatment words left out (section 1); settles the one disagreement between the blind annotation and the generator, in hr-0005 | Giuseppe, on the report of the AI review |
+| 2026-11-21 | hr-0022, bank-0013, bank-0015, bank-0017, bank-0018 | `IMPORTO`: an amount with the euro symbol after the figure | format allowed (section 5); hr-0022 put back as generated | Giuseppe, on the report of the AI review |
+| 2026-11-21 | bank-0006, bank-0021 | `IBAN`: an IBAN one character short, failing the checksum | left as written, tag kept; the limit is declared in `docs/cards.md` | Giuseppe, on the report of the AI review |
+| 2026-11-21 | hr-0005, hr-0011, hr-0012, hr-0014, hr-0015, hr-0017, hr-0018, hr-0023, hr-0024, hr-0025, hr-0026 | no span: generic health words, words of union activity, a hierarchical relation, a generic facility, the description of a duty | not tagged (section 4, cases 3, 5, 6, 10) | Giuseppe, on the report of the AI review |
+| 2026-11-21 | bank-0032 | `DATA`: a year alone that locates an event in the author's life | tag kept, left out of `dates` (section 4, case 1) | Giuseppe, on the report of the AI review |
+| 2026-11-21 | bank-0027, bank-0028, bank-0030 | no span: a subject line that names two things while the body asks for one | left as written; `requested_action` unchanged | Giuseppe, on the report of the AI review |

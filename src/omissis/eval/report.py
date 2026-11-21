@@ -27,6 +27,12 @@ CONTRASTS = (
     ("D4+R1", "REF-none", "utility"),
     ("D4+R2", "D4+R1", "full_restoration"),
 )
+# The texts about a loan or a mortgage whose author holds neither in the profile: the
+# product list of the candidates points away from the author (docs/decisions.md, 21 Nov;
+# protocol, section 7). The linkage rows are computed a second time without them.
+LOAN_MISMATCH = frozenset(
+    {"bank-0002", "bank-0003", "bank-0005", "bank-0020", "bank-0021", "bank-0022", "bank-0024"}
+)
 
 
 def _configs(per_text: list[dict[str, Any]]) -> list[str]:
@@ -128,6 +134,42 @@ def contrast_rows(
 # --- files -------------------------------------------------------------------------
 
 
+def linkage_control(per_text: list[dict[str, Any]], seed: int) -> dict[str, Any]:
+    """The linkage rows without the texts of `LOAN_MISMATCH`, and which texts were left out.
+
+    No row when the split holds none of them: the rows would repeat those of every text.
+    """
+    left_out = sorted(LOAN_MISMATCH & {r["text_id"] for r in per_text})
+    kept = [r for r in per_text if r["text_id"] not in LOAN_MISMATCH]
+    rows = attacks.linkage_rows(kept, seed) if left_out else []
+    return {"control_excluded": left_out, "control_rows": rows}
+
+
+def control_table(linkage: dict[str, Any]) -> list[str]:
+    """The control rows as a table of the scorecard: top-1 at N = 25 beside that of all texts."""
+    control = [r for r in linkage.get("control_rows", []) if r["n"] == 25]
+    if not control:
+        return []
+    full = {r["config"]: r for r in linkage["rows"] if r["n"] == 25}
+    lines = [
+        "## Linkage without the loan texts that contradict the profile",
+        "",
+        f"{len(linkage['control_excluded'])} texts left out: they are about a loan or a mortgage "
+        "that the profile of the author",
+        "does not hold, so the products of the candidates point away from the author (protocol,",
+        "section 7). A control, not a contrast: no test is run on these rows.",
+        "",
+        "| Configuration | texts | top-1 N=25 | top-1 N=25, all texts |",
+        "|---|---|---|---|",
+    ]
+    for r in control:
+        without = _fmt(r["top1"], r["top1_ci_low"], r["top1_ci_high"])
+        lines.append(
+            f"| `{r['config']}` | {r['texts']} | {without} | {_fmt(full[r['config']]['top1'])} |"
+        )
+    return [*lines, ""]
+
+
 def read(folder: Path, name: str) -> dict[str, Any] | None:
     path = folder / f"{name}.json"
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
@@ -186,6 +228,7 @@ def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str | No
             ]
             lines.append(f"| `{name}` | " + " | ".join(cells) + " |")
         lines += ["", "Chance: top-1 0.10 at N = 10 and 0.04 at N = 25; top-3 0.30 and 0.12.", ""]
+        lines += control_table(linkage)
     if metrics["detection"]:
         rows = metrics["detection"]["rows"]
         latency = {r["detector"]: r for r in (metrics["latency"] or {}).get("rows", [])}
@@ -300,6 +343,8 @@ def rebuild(split: str, results: Path = RESULTS) -> dict[str, dict[str, Any] | N
         data = read(folder, name)
         if data is not None:
             data["rows"] = build(data["per_text"], data["seed"])
+            if name == "linkage":
+                data |= linkage_control(data["per_text"], data["seed"])
             write(folder, name, data)
         metrics[name] = data
     contrasts = read(folder, "contrasts")

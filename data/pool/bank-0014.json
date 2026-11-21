@@ -4,7 +4,7 @@
   "scenario": "iban_change",
   "profile_id": "p26",
   "has_special": false,
-  "text": "Oggetto: Aggiornamento IBAN per accredito stipendio e richiesta documentazione\n\nGentile Credito Tirrenico,\n\nmi chiamo Massimo Evangelisti e sono un cliente della Vostra filiale di Pistoia. Vi scrivo per comunicarVi che, a partire dal prossimo mese, il mio datore di lavoro, la Cooperativa Edile Pietrafitta, ha richiesto di variare le coordinate bancarie per l'accredito dello stipendio.\n\nPertanto, Vi chiedo cortesemente di aggiornare il mio IBAN con il seguente nuovo codice: IT57E0000097728495291902297. Vi prego di considerare questa modifica valida a decorrere dal 15 dicembre 2026.\n\nInoltre, in quanto titolare di un deposito titoli e di un prestito personale in corso, avrei bisogno di ricevere una copia aggiornata del contratto di finanziamento e dell'estratto conto relativo al mese di novembre. Potreste inviarmi questi documenti in formato PDF all'indirizzo massimo.evangelisti@example.com?\n\nPer facilitare le Vostre verifiche, Vi fornisco il mio codice fiscale SGTPNL13S51X806Z e la matricola aziendale SM-08022 che utilizzo per le comunicazioni con l'ufficio amministrazione. Resto a disposizione per qualsiasi ulteriore chiarimento al numero 329 001 5516.\n\nVi ringrazio per la collaborazione e porgo cordiali saluti.\n\nMassimo Evangelisti\n",
+  "text": "Oggetto: Aggiornamento IBAN per accredito stipendio e richiesta documentazione\n\nGentile Credito Tirrenico,\n\nmi chiamo Massimo Evangelisti e sono un cliente della Vostra filiale di Pistoia. Vi scrivo per comunicarVi che, a partire dal prossimo mese, il mio datore di lavoro, la Cooperativa Edile Pietrafitta, ha richiesto di variare le coordinate bancarie per l'accredito dello stipendio.\n\nPertanto, Vi comunico il mio nuovo IBAN: IT57E0000097728495291902297, valido a decorrere dal 15 dicembre 2026.\n\nInoltre, in quanto titolare di un deposito titoli e di un prestito personale in corso, avrei bisogno di ricevere una copia aggiornata del contratto di finanziamento e dell'estratto conto relativo al mese di novembre. Potreste inviarmi questi documenti in formato PDF all'indirizzo massimo.evangelisti@example.com?\n\nPer facilitare le Vostre verifiche, Vi fornisco il mio codice fiscale SGTPNL13S51X806Z e la matricola aziendale SM-08022 che utilizzo per le comunicazioni con l'ufficio amministrazione. Resto a disposizione per qualsiasi ulteriore chiarimento al numero 329 001 5516.\n\nVi ringrazio per la collaborazione e porgo cordiali saluti.\n\nMassimo Evangelisti\n",
   "spans": [
     {
       "start": 88,
@@ -31,44 +31,50 @@
       "type": "AZIENDA"
     },
     {
-      "start": 478,
-      "end": 505,
+      "start": 430,
+      "end": 457,
       "text": "IT57E0000097728495291902297",
       "type": "IBAN"
     },
     {
-      "start": 570,
-      "end": 586,
+      "start": 482,
+      "end": 498,
       "text": "15 dicembre 2026",
       "type": "DATA"
     },
     {
-      "start": 870,
-      "end": 901,
+      "start": 708,
+      "end": 716,
+      "text": "novembre",
+      "type": "DATA"
+    },
+    {
+      "start": 782,
+      "end": 813,
       "text": "massimo.evangelisti@example.com",
       "type": "EMAIL"
     },
     {
-      "start": 974,
-      "end": 990,
+      "start": 886,
+      "end": 902,
       "text": "SGTPNL13S51X806Z",
       "type": "CF"
     },
     {
-      "start": 1016,
-      "end": 1024,
+      "start": 928,
+      "end": 936,
       "text": "SM-08022",
       "type": "UTENTE"
     },
     {
-      "start": 1157,
-      "end": 1169,
+      "start": 1069,
+      "end": 1081,
       "text": "329 001 5516",
       "type": "TELEFONO"
     },
     {
-      "start": 1233,
-      "end": 1252,
+      "start": 1145,
+      "end": 1164,
       "text": "Massimo Evangelisti",
       "type": "PERSONA"
     }
@@ -80,6 +86,7 @@
       "2026-12-15"
     ],
     "requested_action": "send_information",
-    "deadline": "2026-12-15"
-  }
+    "deadline": null
+  },
+  "reviewed_by": "GC"
 }

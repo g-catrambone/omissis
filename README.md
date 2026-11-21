@@ -164,6 +164,12 @@ has not run. What is left is in `docs/TODO.md`.
   that only asks to copy a total, or "Dividi la risposta in due paragrafi".
   With detector D0 it sees amounts only. Values the model derives on its own
   are not caught.
+- **Seven loan texts contradict the profile of their author.** They are about a
+  loan or a mortgage that the profile does not hold, and the candidate list of
+  the linkage attack shows the products: on these texts it points away from the
+  author, so the privacy score of a masked configuration is too high by what
+  they add. The scorecard reports linkage without them beside the value on all
+  texts (`docs/decisions.md`, 21 Nov).
 - **Synthetic data only.** The texts were written by a model and are more regular
   than real mail. Texts by one author are not independent, so intervals over
   texts overstate precision.

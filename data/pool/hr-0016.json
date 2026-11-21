@@ -43,6 +43,12 @@
       "type": "CITTA"
     },
     {
+      "start": 362,
+      "end": 375,
+      "text": "dicembre 2026",
+      "type": "DATA"
+    },
+    {
       "start": 402,
       "end": 444,
       "text": "intervento al ginocchio con riabilitazione",
@@ -119,5 +125,6 @@
     ],
     "requested_action": "refund",
     "deadline": "2027-01-15"
-  }
+  },
+  "reviewed_by": "GC"
 }

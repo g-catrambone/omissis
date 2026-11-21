@@ -221,6 +221,15 @@ most likely candidates in order. Metrics: top-1 and top-3 accuracy, for
 N = 10 and N = 25. The prompt asks for a ranking in every case; unparseable
 output counts as a miss and is counted separately for each configuration.
 **Privacy score** of a configuration = 1 − top-1 accuracy at N = 25.
+**Limit to declare, and its control.** Seven bank texts are about a loan or a
+mortgage that the profile of their author does not hold (`docs/decisions.md`,
+21 Nov): the plan gives a scenario to an author without reading the products
+of the profile. The candidate list shows the products, so on these texts it
+points away from the author under every configuration, and the privacy score
+of a masked configuration is too high by what they add. The monthly
+instalment of a profile is never the one a text states. The linkage rows are
+computed a second time without the seven texts: a control, reported beside
+the rows on all texts, with no test and no contrast.
 
 **Attribute inference.** Input: masked text only. Output: JSON with one value
 per attribute, chosen from a closed list given in the prompt: the attacker
@@ -376,8 +385,9 @@ calls and estimated spend per configuration.
   configuration of section 5 with 95% intervals on both axes, chance marked.
 - **Scorecard**: one row per configuration; columns: linkage top-1 and top-3
   at N = 10 and 25, attribute accuracy, T3, T1, utility, full-restoration
-  rate. A second table has one row per detector D0 to D4: recall by class,
-  leak rate, latency.
+  rate. Below it, the control of section 7: linkage top-1 at N = 25 without
+  the seven loan texts, beside the value on all texts. A second table has
+  one row per detector D0 to D4: recall by class, leak rate, latency.
 - **Error taxonomy**: categorised dev examples of missed identifiers, failed
   restorations, derived values and successful attacks.
 - Every number on a slide comes from a file in `results/<split>/metrics/`

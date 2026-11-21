@@ -4,7 +4,7 @@
   "scenario": "iban_change",
   "profile_id": "p13",
   "has_special": false,
-  "text": "Oggetto: Aggiornamento IBAN per accredito stipendio e richiesta documentazione\n\nGentile Banca Altopiano,\n\nmi chiamo Carlotta Castellani e sono cliente della Vostra filiale di Cremona. Le scrivo per comunicare un aggiornamento importante relativo ai miei dati bancari. A partire dal prossimo mese, l'accredito del mio stipendio, che ammonta a circa 1.850,00 €, dovrà essere effettuato sul nuovo conto corrente intestato a me.\n\nIl nuovo IBAN da utilizzare è IT68Y0000068744192844878269. La prego di considerare questa variazione valida a decorrere dal 15 novembre 2026. Per facilitare l'aggiornamento nei Vostri sistemi, Le fornisco anche il mio codice fiscale LVNRFL34A53X567N e la matricola aziendale BJ-27692 che utilizzo presso la Cooperativa Edile Pietrafitta, dove ricopro la posizione di responsabile acquisti.\n\nHo bisogno di una conferma scritta che l'operazione sia stata registrata correttamente. Inoltre, Le chiedo cortesemente di inviarmi via email, all'indirizzo carlotta.castellani@example.com, una copia del contratto di conto corrente aggiornato e l'estratto conto relativo all'ultimo accredito effettuato sul vecchio conto, per i miei archivi personali.\n\nResto a disposizione per qualsiasi chiarimento al numero 366 375 4002. La ringrazio per la collaborazione e per la tempestività nella gestione della pratica.\n\nCordiali saluti,\n\nCarlotta Castellani\n",
+  "text": "Oggetto: Aggiornamento IBAN per accredito stipendio e richiesta documentazione\n\nGentile Banca Altopiano,\n\nmi chiamo Carlotta Castellani e sono cliente della Vostra filiale di Cremona. Le scrivo per comunicare un aggiornamento importante relativo ai miei dati bancari. A partire dal prossimo mese, l'accredito del mio stipendio, che ammonta a circa 1.850,00 €, dovrà essere effettuato sul nuovo conto corrente intestato a me.\n\nIl nuovo IBAN da utilizzare è IT68Y0000068744192844878269, valido a decorrere dal 15 novembre 2026. Per facilitare l'aggiornamento nei Vostri sistemi, Le fornisco anche il mio codice fiscale LVNRFL34A53X567N e la matricola aziendale BJ-27692 che utilizzo presso la Cooperativa Edile Pietrafitta, dove ricopro la posizione di responsabile acquisti.\n\nHo bisogno di una conferma scritta che l'operazione sia stata registrata correttamente. Inoltre, Le chiedo cortesemente di inviarmi via email, all'indirizzo carlotta.castellani@example.com, una copia del contratto di conto corrente aggiornato e l'estratto conto relativo all'ultimo accredito effettuato sul vecchio conto, per i miei archivi personali.\n\nResto a disposizione per qualsiasi chiarimento al numero 366 375 4002. La ringrazio per la collaborazione e per la tempestività nella gestione della pratica.\n\nCordiali saluti,\n\nCarlotta Castellani\n",
   "spans": [
     {
       "start": 88,
@@ -37,50 +37,50 @@
       "type": "IBAN"
     },
     {
-      "start": 550,
-      "end": 566,
+      "start": 508,
+      "end": 524,
       "text": "15 novembre 2026",
       "type": "DATA"
     },
     {
-      "start": 659,
-      "end": 675,
+      "start": 617,
+      "end": 633,
       "text": "LVNRFL34A53X567N",
       "type": "CF"
     },
     {
-      "start": 701,
-      "end": 709,
+      "start": 659,
+      "end": 667,
       "text": "BJ-27692",
       "type": "UTENTE"
     },
     {
-      "start": 733,
-      "end": 762,
+      "start": 691,
+      "end": 720,
       "text": "Cooperativa Edile Pietrafitta",
       "type": "AZIENDA"
     },
     {
-      "start": 793,
-      "end": 814,
+      "start": 751,
+      "end": 772,
       "text": "responsabile acquisti",
       "type": "RUOLO"
     },
     {
-      "start": 974,
-      "end": 1005,
+      "start": 932,
+      "end": 963,
       "text": "carlotta.castellani@example.com",
       "type": "EMAIL"
     },
     {
-      "start": 1227,
-      "end": 1239,
+      "start": 1185,
+      "end": 1197,
       "text": "366 375 4002",
       "type": "TELEFONO"
     },
     {
-      "start": 1347,
-      "end": 1366,
+      "start": 1305,
+      "end": 1324,
       "text": "Carlotta Castellani",
       "type": "PERSONA"
     }
@@ -94,6 +94,7 @@
       "2026-11-15"
     ],
     "requested_action": "send_information",
-    "deadline": "2026-11-15"
-  }
+    "deadline": null
+  },
+  "reviewed_by": "GC"
 }

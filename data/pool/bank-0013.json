@@ -100,6 +100,7 @@
       "2026-12-15"
     ],
     "requested_action": "update_details",
-    "deadline": "2026-12-15"
-  }
+    "deadline": null
+  },
+  "reviewed_by": "GC"
 }

@@ -25,6 +25,12 @@
       "type": "CITTA"
     },
     {
+      "start": 266,
+      "end": 279,
+      "text": "novembre 2026",
+      "type": "DATA"
+    },
+    {
       "start": 296,
       "end": 317,
       "text": "responsabile acquisti",
@@ -130,5 +136,6 @@
     ],
     "requested_action": "refund",
     "deadline": "2026-11-30"
-  }
+  },
+  "reviewed_by": "GC"
 }

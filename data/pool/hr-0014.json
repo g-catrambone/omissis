@@ -25,6 +25,12 @@
       "type": "RUOLO"
     },
     {
+      "start": 140,
+      "end": 147,
+      "text": "58 anni",
+      "type": "ETA"
+    },
+    {
       "start": 160,
       "end": 166,
       "text": "Novara",
@@ -92,6 +98,7 @@
       "2026-11-12"
     ],
     "requested_action": "schedule_meeting",
-    "deadline": "2026-11-19"
-  }
+    "deadline": null
+  },
+  "reviewed_by": "GC"
 }

@@ -43,6 +43,12 @@
       "type": "DATA"
     },
     {
+      "start": 435,
+      "end": 439,
+      "text": "Roma",
+      "type": "CITTA"
+    },
+    {
       "start": 456,
       "end": 464,
       "text": "€ 350,00",
@@ -116,5 +122,6 @@
     ],
     "requested_action": "refund",
     "deadline": null
-  }
+  },
+  "reviewed_by": "GC"
 }

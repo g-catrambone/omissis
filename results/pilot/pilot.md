@@ -9,7 +9,7 @@ Both attacks on the 10 pilot texts under the three references. Written by
 |---|---|---|---|---|
 | `REF-none` | 10 | 10 | 10 | 0 |
 | `REF-oracle-direct` | 10 | 9 | 10 | 0 |
-| `REF-oracle` | 6 | 5 | 9 | 0 |
+| `REF-oracle` | 6 | 5 | 9 | 1 |
 
 Chance: 1 of 10 at N = 10, 0.4 of 10 at N = 25.
 

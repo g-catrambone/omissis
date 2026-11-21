@@ -131,6 +131,12 @@ of the pin. Use of the service is governed by the Groq Services Agreement
 - **Limits for us.** Every person and value is invented; identifiers use codes
   that are never issued (bank code `00000`, place code `X…`). Texts written by a
   model are more regular than real mail. No human reviewed the texts one by one: an AI
-  agent did, and one member approved its report. Texts of the same author are
+  agent did, and one member approved its report. Seven bank texts are about a
+  loan or a mortgage that the profile of their author does not hold, and no
+  text states the monthly instalment of its profile: the linkage attack is
+  reported also without those seven. Two texts (`bank-0006`, `bank-0021`) hold
+  an IBAN one character short of the 27 of an Italian IBAN, as the generator
+  wrote it: it is kept and tagged, and a detector that checks the format can
+  miss it. Texts of the same author are
   not independent, so intervals over texts overstate precision.
   Numbers per split: after the split.

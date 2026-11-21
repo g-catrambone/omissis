@@ -93,5 +93,6 @@
     ],
     "requested_action": "open_investigation",
     "deadline": null
-  }
+  },
+  "reviewed_by": "GC"
 }

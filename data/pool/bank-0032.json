@@ -61,6 +61,12 @@
       "type": "IMPORTO"
     },
     {
+      "start": 752,
+      "end": 756,
+      "text": "2024",
+      "type": "DATA"
+    },
+    {
       "start": 796,
       "end": 804,
       "text": "€ 137,50",
@@ -129,5 +135,6 @@
     ],
     "requested_action": "schedule_meeting",
     "deadline": null
-  }
+  },
+  "reviewed_by": "GC"
 }

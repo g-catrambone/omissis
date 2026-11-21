@@ -38,8 +38,8 @@
     },
     {
       "start": 421,
-      "end": 440,
-      "text": "depressione in cura",
+      "end": 432,
+      "text": "depressione",
       "type": "SALUTE"
     },
     {
@@ -108,5 +108,6 @@
     ],
     "requested_action": "send_information",
     "deadline": null
-  }
+  },
+  "reviewed_by": "GC"
 }

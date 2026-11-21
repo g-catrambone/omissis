@@ -4,7 +4,7 @@
   "scenario": "remote_work_request",
   "profile_id": "p06",
   "has_special": false,
-  "text": "Oggetto: Richiesta colloquio per lavoro da remoto - Sergio Bertolucci\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo Sergio Bertolucci e sono il responsabile acquisti presso la sede di Trapani. Vi scrivo per richiedere formalmente la possibilità di lavorare da remoto a partire dal 15 dicembre 2026.\n\nCome sapete, gestisco quotidianamente le forniture per i cantieri attivi in zona, e ritengo che la mia posizione mi consenta di mantenere la piena produttività anche da casa, senza impatti negativi sui tempi di consegna. Ho già predisposto un piano operativo dettagliato che illustrerò volentieri durante un breve incontro.\n\nPer facilitare l'identificazione della mia posizione interna, vi comunico la mia matricola aziendale ET-65468. Inoltre, per completezza amministrativa, il mio codice fiscale è SRBLMT93H55X288J.\n\nNon chiedo altre informazioni in questa fase, ma desidero solo fissare un colloquio per discutere i dettagli logistici e le eventuali tutele contrattuali. Sarebbe ideale poter parlare entro il 20 novembre 2026, così da poter organizzare la transizione in modo ordinato.\n\nResto a disposizione per qualsiasi chiarimento preliminare.\n\nCordiali saluti,\n\nSergio Bertolucci\nResponsabile Acquisti\nCantieri Dorsano S.p.A.\nTel: 329 892 3519\nEmail: sergio.bertolucci@example.com\n",
+  "text": "Oggetto: Richiesta colloquio per lavoro da remoto - Sergio Bertolucci\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo Sergio Bertolucci e sono il responsabile acquisti presso la sede di Trapani. Vi scrivo per richiedere formalmente un colloquio per discutere la possibilità di lavorare da remoto a partire dal 15 dicembre 2026.\n\nCome sapete, gestisco quotidianamente le forniture per i cantieri attivi in zona, e ritengo che la mia posizione mi consenta di mantenere la piena produttività anche da casa, senza impatti negativi sui tempi di consegna. Ho già predisposto un piano operativo dettagliato che illustrerò volentieri durante un breve incontro.\n\nPer facilitare l'identificazione della mia posizione interna, vi comunico la mia matricola aziendale ET-65468. Inoltre, per completezza amministrativa, il mio codice fiscale è SRBLMT93H55X288J.\n\nNon chiedo altre informazioni in questa fase, ma desidero solo fissare un colloquio per discutere i dettagli logistici e le eventuali tutele contrattuali. Sarebbe ideale poter parlare entro il 20 novembre 2026, così da poter organizzare la transizione in modo ordinato.\n\nResto a disposizione per qualsiasi chiarimento preliminare.\n\nCordiali saluti,\n\nSergio Bertolucci\nResponsabile Acquisti\nCantieri Dorsano S.p.A.\nTel: 329 892 3519\nEmail: sergio.bertolucci@example.com\n",
   "spans": [
     {
       "start": 52,
@@ -37,56 +37,56 @@
       "type": "CITTA"
     },
     {
-      "start": 305,
-      "end": 321,
+      "start": 332,
+      "end": 348,
       "text": "15 dicembre 2026",
       "type": "DATA"
     },
     {
-      "start": 750,
-      "end": 758,
+      "start": 777,
+      "end": 785,
       "text": "ET-65468",
       "type": "UTENTE"
     },
     {
-      "start": 825,
-      "end": 841,
+      "start": 852,
+      "end": 868,
       "text": "SRBLMT93H55X288J",
       "type": "CF"
     },
     {
-      "start": 1037,
-      "end": 1053,
+      "start": 1064,
+      "end": 1080,
       "text": "20 novembre 2026",
       "type": "DATA"
     },
     {
-      "start": 1194,
-      "end": 1211,
+      "start": 1221,
+      "end": 1238,
       "text": "Sergio Bertolucci",
       "type": "PERSONA"
     },
     {
-      "start": 1212,
-      "end": 1233,
+      "start": 1239,
+      "end": 1260,
       "text": "Responsabile Acquisti",
       "type": "RUOLO"
     },
     {
-      "start": 1234,
-      "end": 1257,
+      "start": 1261,
+      "end": 1284,
       "text": "Cantieri Dorsano S.p.A.",
       "type": "AZIENDA"
     },
     {
-      "start": 1263,
-      "end": 1275,
+      "start": 1290,
+      "end": 1302,
       "text": "329 892 3519",
       "type": "TELEFONO"
     },
     {
-      "start": 1283,
-      "end": 1312,
+      "start": 1310,
+      "end": 1339,
       "text": "sergio.bertolucci@example.com",
       "type": "EMAIL"
     }
@@ -100,5 +100,6 @@
     ],
     "requested_action": "schedule_meeting",
     "deadline": "2026-11-20"
-  }
+  },
+  "reviewed_by": "GC"
 }

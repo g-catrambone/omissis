@@ -4,7 +4,7 @@
   "scenario": "account_closure",
   "profile_id": "p17",
   "has_special": false,
-  "text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - Laura Valsecchi\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Laura Valsecchi e sono titolare del conto corrente con IBAN IT82I0000091996603120574215 presso la filiale di Novara. Vi scrivo per comunicare la mia volontà di chiudere definitivamente il rapporto contrattuale, chiedendo esclusivamente il trasferimento delle somme residue.\n\nAttualmente lavoro come autista presso Farmacie Riunite Altavilla S.p.A., dove sono impiegata da diversi anni. A causa di un cambio di residenza e di esigenze organizzative personali, non intendo più mantenere attivo questo conto. Sul saldo attuale risultano presenti circa € 1.200,50, che desidero trasferire integralmente sul mio nuovo conto presso un'altra istituzione bancaria.\n\nVi prego di procedere con le operazioni di chiusura entro il 15 dicembre 2026, trasferendo l'intero importo indicato sul conto che comunicherò successivamente tramite PEC o raccomandata. Vi chiedo cortesemente di disattivare anche la carta di debito associata al conto per evitare eventuali addebiti futuri.\n\nResto a disposizione per qualsiasi chiarimento al numero 337 584 2415 o all'indirizzo laura.valsecchi@example.com.\n\nCordiali saluti,\n\nLaura Valsecchi\nDDDGBF81A26X698C\n",
+  "text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - Laura Valsecchi\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Laura Valsecchi e sono titolare del conto corrente con IBAN IT82I0000091996603120574215 presso la filiale di Novara. Vi scrivo per comunicare la mia volontà di chiudere definitivamente il rapporto contrattuale, chiedendo esclusivamente il trasferimento delle somme residue.\n\nAttualmente lavoro come autista presso Farmacie Riunite Altavilla S.p.A., dove sono impiegata da diversi anni. A causa di un cambio di residenza e di esigenze organizzative personali, non intendo più mantenere attivo questo conto. Sul saldo attuale risultano presenti circa € 1.200,50, che desidero trasferire integralmente sul mio nuovo conto presso un'altra istituzione bancaria.\n\nVi prego di trasferire l'intero importo indicato entro il 15 dicembre 2026 sul conto che comunicherò successivamente tramite PEC o raccomandata. Vi chiedo cortesemente di disattivare anche la carta di debito associata al conto per evitare eventuali addebiti futuri.\n\nResto a disposizione per qualsiasi chiarimento al numero 337 584 2415 o all'indirizzo laura.valsecchi@example.com.\n\nCordiali saluti,\n\nLaura Valsecchi\nDDDGBF81A26X698C\n",
   "spans": [
     {
       "start": 58,
@@ -55,32 +55,32 @@
       "type": "IMPORTO"
     },
     {
-      "start": 843,
-      "end": 859,
+      "start": 840,
+      "end": 856,
       "text": "15 dicembre 2026",
       "type": "DATA"
     },
     {
-      "start": 1148,
-      "end": 1160,
+      "start": 1106,
+      "end": 1118,
       "text": "337 584 2415",
       "type": "TELEFONO"
     },
     {
-      "start": 1177,
-      "end": 1204,
+      "start": 1135,
+      "end": 1162,
       "text": "laura.valsecchi@example.com",
       "type": "EMAIL"
     },
     {
-      "start": 1225,
-      "end": 1240,
+      "start": 1183,
+      "end": 1198,
       "text": "Laura Valsecchi",
       "type": "PERSONA"
     },
     {
-      "start": 1241,
-      "end": 1257,
+      "start": 1199,
+      "end": 1215,
       "text": "DDDGBF81A26X698C",
       "type": "CF"
     }
@@ -95,5 +95,6 @@
     ],
     "requested_action": "release_funds",
     "deadline": "2026-12-15"
-  }
+  },
+  "reviewed_by": "GC"
 }

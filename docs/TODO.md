@@ -44,7 +44,7 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
 
 ## 1. Data (Giuseppe; protocol, section 3)
 
-- [ ] **Human — blind annotation of 13 texts, before any review.** Done by a
+- [x] **Human — blind annotation of 13 texts, before any review.** Done by a
   subagent that sees the raw text and the guide only; Giuseppe approves it. It
   measures how far that annotator agrees with the tags the generator wrote: two
   models, no human.
@@ -57,7 +57,7 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   ```
 
   The last command refuses a text that already has `reviewed_by`.
-- [ ] **Human — review of the 66 texts** (`data/pool/REVIEWERS.md`). The gold tags
+- [x] **Human — review of the 66 texts** (`data/pool/REVIEWERS.md`). The gold tags
   are what every number is measured against. For each text: it reads like real
   correspondence; nothing real; every sensitive span is tagged, with the right type
   and the shortest boundaries; the deadline (`SCADENZA`) and the gold fields are
@@ -74,13 +74,14 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   initials: they record the approval. A disagreement with
   the blind annotation that shows an unclear rule gets one line in
   `docs/annotation_guide.md`.
-- [ ] **Human — pilot: go or no-go**, recorded in `docs/decisions.md`. The numbers
+- [x] **Human — pilot: go or no-go**, recorded in `docs/decisions.md`. The numbers
   are in `results/pilot/pilot.md` and meet the rule, but on texts that were not
   reviewed: if the review changes one of the ten pilot texts, run
   `uv run --env-file .env python -m omissis.eval.pilot` again first.
 - [ ] **Human — `make split`**, once: 20 dev, 46 test. From here rule 2 of
   `CLAUDE.md` covers every copy of the test texts; delete
-  `results/scratch/pool-txt/`.
+  `results/scratch/pool-txt/`, `results/scratch/blind/` and
+  `results/scratch/review/`, which hold copies and excerpts of them.
 
 ## 2. Evaluation on dev (Giuseppe)
 

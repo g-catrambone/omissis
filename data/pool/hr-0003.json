@@ -31,6 +31,12 @@
       "type": "DATA"
     },
     {
+      "start": 271,
+      "end": 298,
+      "text": "infezione intestinale acuta",
+      "type": "SALUTE"
+    },
+    {
       "start": 334,
       "end": 343,
       "text": "celiachia",
@@ -99,5 +105,6 @@
     ],
     "requested_action": "register_absence",
     "deadline": null
-  }
+  },
+  "reviewed_by": "GC"
 }

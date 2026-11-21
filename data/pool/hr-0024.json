@@ -110,6 +110,7 @@
       "2026-11-16"
     ],
     "requested_action": "register_absence",
-    "deadline": "2026-11-16"
-  }
+    "deadline": null
+  },
+  "reviewed_by": "GC"
 }

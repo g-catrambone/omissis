@@ -4,7 +4,7 @@
   "scenario": "mortgage_suspension",
   "profile_id": "p27",
   "has_special": true,
-  "text": "Oggetto: Richiesta sospensione rate prestito personale - Nicola Scarpellini\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Nicola Scarpellini e sono titolare del conto corrente con IBAN IT98T0000058217280776763333. Vi scrivo per richiedere la sospensione temporanea dei pagamenti del mio prestito personale, contratto presso la filiale di Pistoia.\n\nAttualmente lavoro come elettricista presso la Cooperativa Edile Pietrafitta, ma a causa di un aggravamento della mia asma bronchiale sono costretto a fermarmi per un periodo di cura. Questa situazione mi impedisce di sostenere l'onere economico della rata mensile di € 450,00 prevista per il 15 dicembre 2026.\n\nVi chiedo pertanto di sospendere le rate fino al 30 marzo 2027, senza ulteriori aggravio di interessi se possibile, o in alternativa di rimodulare il piano di ammortamento per alleggerire la rata attuale. Il mio codice fiscale è BMDCST55B21X401A e la matricola aziendale è KK-50663.\n\nResto a disposizione per fornire eventuali certificati medici o documentazione aggiuntiva. Potete contattarmi al numero 305 331 7289 o all'indirizzo nicola.scarpellini@example.com.\n\nCordiali saluti,\n\nNicola Scarpellini\n",
+  "text": "Oggetto: Richiesta sospensione rate prestito personale - Nicola Scarpellini\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Nicola Scarpellini e sono titolare del conto corrente con IBAN IT98T0000058217280776763333. Vi scrivo per richiedere la sospensione temporanea dei pagamenti del mio prestito personale, contratto presso la filiale di Pistoia.\n\nAttualmente lavoro come elettricista presso la Cooperativa Edile Pietrafitta, ma a causa di un aggravamento della mia asma bronchiale sono costretto a fermarmi per un periodo di cura. Questa situazione mi impedisce di sostenere l'onere economico della rata mensile di € 450,00 prevista per il 15 dicembre 2026.\n\nVi chiedo pertanto di sospendere le rate fino al 30 marzo 2027, senza ulteriori aggravio di interessi se possibile. Il mio codice fiscale è BMDCST55B21X401A e la matricola aziendale è KK-50663.\n\nResto a disposizione per fornire eventuali certificati medici o documentazione aggiuntiva. Potete contattarmi al numero 305 331 7289 o all'indirizzo nicola.scarpellini@example.com.\n\nCordiali saluti,\n\nNicola Scarpellini\n",
   "spans": [
     {
       "start": 57,
@@ -73,32 +73,32 @@
       "type": "DATA"
     },
     {
-      "start": 893,
-      "end": 909,
+      "start": 804,
+      "end": 820,
       "text": "BMDCST55B21X401A",
       "type": "CF"
     },
     {
-      "start": 937,
-      "end": 945,
+      "start": 848,
+      "end": 856,
       "text": "KK-50663",
       "type": "UTENTE"
     },
     {
-      "start": 1068,
-      "end": 1080,
+      "start": 979,
+      "end": 991,
       "text": "305 331 7289",
       "type": "TELEFONO"
     },
     {
-      "start": 1097,
-      "end": 1127,
+      "start": 1008,
+      "end": 1038,
       "text": "nicola.scarpellini@example.com",
       "type": "EMAIL"
     },
     {
-      "start": 1148,
-      "end": 1166,
+      "start": 1059,
+      "end": 1077,
       "text": "Nicola Scarpellini",
       "type": "PERSONA"
     }
@@ -113,6 +113,7 @@
       "2027-03-30"
     ],
     "requested_action": "suspend_payment",
-    "deadline": "2026-12-15"
-  }
+    "deadline": null
+  },
+  "reviewed_by": "GC"
 }

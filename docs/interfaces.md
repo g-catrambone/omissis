@@ -444,6 +444,11 @@ configuration (or detector) with everything the rows are computed from:
 detection the counts of matched, missed and spurious spans per class and
 type, for the attributes the true value; no text. The rows can be rebuilt
 from `per_text` and `seed` alone.
+`linkage` holds two more keys, written by `make reproduce`: `control_excluded`,
+the ids of the texts of the split that the control of the protocol, section 7,
+leaves out (the seven ids are a constant of `eval/report.py`), and
+`control_rows`, the rows computed without them; both are empty when the split
+holds none of the seven.
 
 **Figures and tables** — `results/<split>/figures/privacy_utility.png`,
 `results/<split>/scorecard.md`; on dev only, `results/dev/error_examples.md`

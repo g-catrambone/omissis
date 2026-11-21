@@ -37,7 +37,8 @@ named; no number is written here.
   one point per configuration with 95% intervals, chance line.
 - Numbers here: the points from `results/test/metrics/linkage.json` (top-1,
   N = 25) and `results/test/metrics/utility.json`; contrasts from
-  `results/test/metrics/contrasts.json`.
+  `results/test/metrics/contrasts.json`; the control without the seven loan
+  texts from `control_rows` in `results/test/metrics/linkage.json`.
 - Say: read the chart from `REF-none` (top left: useful, exposed) towards
   `REF-oracle` (right: masked from gold). Where do the detector configurations
   sit between the two?
@@ -65,6 +66,8 @@ named; no number is written here.
   - The judge is the same model as the cloud model.
   - Texts by the same author are not independent: intervals are optimistic.
   - One attacker model; no external data, no linking across texts.
+  - Seven loan texts contradict the profile of their author, and the candidate
+    list misleads the attacker on them: linkage is shown also without them.
   - Pseudonymisation, not anonymisation: we measure re-identification risk.
 
 ## Backup A. Annotation agreement

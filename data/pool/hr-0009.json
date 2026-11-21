@@ -43,6 +43,18 @@
       "type": "CITTA"
     },
     {
+      "start": 333,
+      "end": 367,
+      "text": "intervento chirurgico al ginocchio",
+      "type": "SALUTE"
+    },
+    {
+      "start": 395,
+      "end": 409,
+      "text": "riabilitazione",
+      "type": "SALUTE"
+    },
+    {
       "start": 489,
       "end": 519,
       "text": "riabilitazione post-operatoria",
@@ -80,6 +92,7 @@
       "2026-12-15"
     ],
     "requested_action": "approve_request",
-    "deadline": "2026-12-15"
-  }
+    "deadline": null
+  },
+  "reviewed_by": "GC"
 }

@@ -7,6 +7,11 @@ last column are first annotated from plain text, with no tag visible, and
 `python -m omissis.eval.review agreement` is run before any of them is reviewed
 (`docs/evaluation_protocol.md`, section 3).
 
+Since 21 Nov the review and the blind annotation are done by the AI agent of the
+member named here, who approves them on its report: his initials in `reviewed_by`
+record the approval, and the annotated copies are `<text_id>.AI.txt`
+(`docs/decisions.md`).
+
 | Text | Reviewer | Blind annotation first |
 |---|---|---|
 | bank-0001 | Giuseppe |  |

@@ -31,6 +31,12 @@
       "type": "CITTA"
     },
     {
+      "start": 386,
+      "end": 394,
+      "text": "€ 850,00",
+      "type": "IMPORTO"
+    },
+    {
       "start": 585,
       "end": 612,
       "text": "IT83X0000066473362061629314",
@@ -93,12 +99,15 @@
   ],
   "gold": {
     "intent": "iban_change",
-    "amounts": [],
+    "amounts": [
+      850.0
+    ],
     "dates": [
       "2026-11-15",
       "2026-11-20"
     ],
     "requested_action": "update_details",
     "deadline": "2026-11-15"
-  }
+  },
+  "reviewed_by": "GC"
 }
