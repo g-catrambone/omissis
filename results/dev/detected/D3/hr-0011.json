@@ -1,0 +1,61 @@
+{
+  "text_id": "hr-0011",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 92,
+      "end": 118,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda"
+    },
+    {
+      "start": 156,
+      "end": 165,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 193,
+      "end": 200,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della sede"
+    },
+    {
+      "start": 293,
+      "end": 309,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio problema"
+    },
+    {
+      "start": 924,
+      "end": 940,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data limite richiesta"
+    },
+    {
+      "start": 1392,
+      "end": 1400,
+      "text": "BR-77464",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    }
+  ],
+  "seconds": 0.0012
+}

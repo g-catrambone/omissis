@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0013",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio Greta PetruzzelliGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Greta Petruzzelli e sono cliente della vostra filiale di Biella. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per l'accredito del mio stipendio mensile.\n\nAttualmente lavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A., dove mi occupo della manutenzione dei cantieri. A causa di una riorganizzazione interna della cooperativa, il datore di lavoro ha deciso di centralizzare i pagamenti su un nuovo conto corrente aziendale. Di conseguenza, l'accredito che ricevo regolarmente, pari a circa 3.056,00 €, non arriverà più sul vecchio conto ma dovrà essere indirizzato al nuovo IBAN che vi fornisco in questa email.\n\nVi chiedo cortesemente di aggiornare i vostri archivi con il seguente codice: IT58L0000053705547624773710. Questo cambio è necessario affinché il pagamento relativo alla busta paga del 27 dicembre 2026 venga effettuato correttamente sul nuovo conto.\n\nPer facilitare l'identificazione del mio profilo, vi comunico il mio codice fiscale: GSNFMG29S53X229P. Inoltre, la mia matricola aziendale interna è CU-39040, che potrebbe risultare utile per incrociare i dati con quelli forniti dalla cooperativa.\n\nResto a disposizione per eventuali chiarimenti al numero 313 047 1894 o tramite la mia email flavia.zambelli@example.com.\n\nCordiali saluti,\n\nGreta Petruzzelli\n",
+  "disclosure": [
+    {
+      "surrogate": "Greta Petruzzelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "surrogate": "Biella",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "3.056,00 €",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro menzionata"
+    },
+    {
+      "surrogate": "IT58L0000053705547624773710",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di pagamento indicata"
+    },
+    {
+      "surrogate": "GSNFMG29S53X229P",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "CU-39040",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale interna"
+    },
+    {
+      "surrogate": "313 047 1894",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "flavia.zambelli@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

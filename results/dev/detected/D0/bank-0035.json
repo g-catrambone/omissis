@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0035",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 546,
+      "end": 553,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 803,
+      "end": 810,
+      "text": "€ 12,50",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1011,
+      "end": 1018,
+      "text": "€ 57,50",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1102,
+      "end": 1129,
+      "text": "IT35P0000045198541598847685",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1415,
+      "end": 1443,
+      "text": "michela.rampazzo@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1444,
+      "end": 1456,
+      "text": "391 565 6198",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1457,
+      "end": 1473,
+      "text": "FCVTDC50S09X752T",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

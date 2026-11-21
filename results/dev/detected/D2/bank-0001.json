@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0001",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 342,
+      "end": 349,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9978173971176147,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 988,
+      "end": 991,
+      "text": "289",
+      "type": "TELEFONO",
+      "confidence": 0.5626187920570374,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1008,
+      "end": 1014,
+      "text": "nicola",
+      "type": "EMAIL",
+      "confidence": 0.44730255007743835,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1015,
+      "end": 1026,
+      "text": "scarpellini",
+      "type": "UTENTE",
+      "confidence": 0.5218216677506765,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1059,
+      "end": 1077,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA",
+      "confidence": 0.8978368639945984,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1337
+}

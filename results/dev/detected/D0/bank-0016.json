@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0016",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 386,
+      "end": 394,
+      "text": "€ 850,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 585,
+      "end": 612,
+      "text": "IT83X0000066473362061629314",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 701,
+      "end": 717,
+      "text": "NDLMTZ55P62X312Q",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1133,
+      "end": 1145,
+      "text": "308 057 6591",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1169,
+      "end": 1199,
+      "text": "daniela.marchesini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

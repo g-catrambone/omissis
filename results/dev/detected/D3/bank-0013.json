@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0013",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 79,
+      "end": 94,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 164,
+      "end": 171,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 311,
+      "end": 318,
+      "text": "custode",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 329,
+      "end": 358,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 630,
+      "end": 640,
+      "text": "1.450,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro menzionata"
+    },
+    {
+      "start": 938,
+      "end": 954,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di pagamento indicata"
+    },
+    {
+      "start": 1153,
+      "end": 1161,
+      "text": "JR-83320",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale interna"
+    }
+  ],
+  "seconds": 0.001
+}

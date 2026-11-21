@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0002",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta rimodulazione finanziamento - [PERSONA_1_F],\n\nmi chiamo [PERSONA_2_F] e sono cliente della Vostra [STRUTTURA_1] di [CITTA_1]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mio finanziamento in essere.\n\nAttualmente lavoro come [RUOLO_1] presso la [AZIENDA_1], ma da alcune settimane sto affrontando una fase critica legata alla mia [SALUTE_1], che mi ha costretta a ridurre drasticamente la mia attività lavorativa e, di conseguenza, il mio reddito mensile. Questa situazione temporanea mi rende difficile sostenere l'attuale rata di [IMPORTO_1] prevista per il [DATA_1].\n\nNon chiedo la sospensione totale, ma una rinegoziazione delle rate per un periodo di sei mesi, in modo da alleggerire il carico economico immediato. I miei dati anagrafici sono: codice fiscale [CF_1] e [UTENTE_1]. Per eventuali verifiche, potete contattarmi al numero [TELEFONO_1] o tramite l'indirizzo [EMAIL_1].\n\nConfido nella Vostra comprensione e Vi chiedo di valutare la fattibilità di questa modifica entro il [DATA_2], così da poter pianificare il budget familiare con maggiore serenità. Resto a disposizione per fornire documentazione medica o certificati del datore di lavoro se necessari.\n\nCordiali saluti,\n\n[PERSONA_2_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della [STRUTTURA_1]"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica menzionata"
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo della rata di finanziamento"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo del mittente"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui richiede la modifica"
+    }
+  ]
+}

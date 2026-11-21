@@ -1,0 +1,133 @@
+{
+  "text_id": "bank-0013",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 52,
+      "end": 71,
+      "text": "Giorgia Zamparini\n\n",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 79,
+      "end": 94,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 107,
+      "end": 124,
+      "text": "Giorgia Zamparini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 164,
+      "end": 171,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 311,
+      "end": 318,
+      "text": "custode",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 329,
+      "end": 358,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 630,
+      "end": 640,
+      "text": "1.450,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro menzionata"
+    },
+    {
+      "start": 831,
+      "end": 858,
+      "text": "IT86U0000021101536355429302",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 938,
+      "end": 954,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di pagamento indicata"
+    },
+    {
+      "start": 1089,
+      "end": 1105,
+      "text": "VGBZNC71L27X275W",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1153,
+      "end": 1161,
+      "text": "JR-83320",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale interna"
+    },
+    {
+      "start": 1310,
+      "end": 1322,
+      "text": "325 979 0891",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1346,
+      "end": 1375,
+      "text": "giorgia.zamparini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1396,
+      "end": 1413,
+      "text": "Giorgia Zamparini",
+      "type": "PERSONA",
+      "confidence": 0.9635710120201111,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1513
+}

@@ -301,7 +301,9 @@ configuration = mean over texts. Always reported with its two components.
   texts masked from gold spans (`mask_quasi` true) with R1 and with R2
   (`REF-oracle`, and `REF-oracle` with `strategy` overridden to `R2`: this
   second configuration has no name, is not in `configs/eval.yaml` and is not
-  reported), order shuffled, strategy hidden. No detector is needed. The
+  reported: the runner never makes its replies, so `judge sheets --backend
+  cloud` makes them, 20 calls to the `cloud` model, when the sheets are
+  written), order shuffled, strategy hidden. No detector is needed. The
   rater sees exactly what the judge sees and fills
   `results/dev/judge_validation/sheet_AI.csv` without opening
   `key.json` or the scores of the judge. The outcome (accepted or rejected,

@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0016",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 136,
+      "end": 153,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA",
+      "confidence": 0.6905575394630432,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 341,
+      "end": 347,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.997832715511322,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 637,
+      "end": 651,
+      "text": "alberto.cavall",
+      "type": "EMAIL",
+      "confidence": 0.8447548151016235,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 831,
+      "end": 837,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.9903583824634552,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1352
+}

@@ -1,0 +1,57 @@
+{
+  "text_id": "hr-0010",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta colloquio per lavoro da remoto - [PERSONA_1_M]Gentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo [PERSONA_1_M] e sono il responsabile acquisti presso la sede di [CITTA_1]. Vi scrivo per richiedere formalmente un colloquio per discutere la possibilità di lavorare da remoto a partire dal 15 dicembre 2026.\n\nCome sapete, gestisco quotidianamente le forniture per i cantieri attivi in zona, e ritengo che la mia posizione mi consenta di mantenere la piena produttività anche da casa, senza impatti negativi sui tempi di consegna. Ho già predisposto un piano operativo dettagliato che illustrerò volentieri durante un breve incontro.\n\nPer facilitare l'identificazione della mia posizione interna, vi comunico la mia matricola aziendale [CITTA_2]. Inoltre, per completezza amministrativa, il mio codice fiscale è [CITTA_3]\n\nNon chiedo altre informazioni in questa fase, ma desidero solo fissare un colloquio per discutere i dettagli logistici e le eventuali tutele contrattuali. Sarebbe ideale poter parlare entro il 20 novembre 2026, così da poter organizzare la transizione in modo ordinato.\n\nResto a disposizione per qualsiasi chiarimento preliminare.\n\nCordiali saluti,\n\n[PERSONA_1_M]Responsabile Acquisti\nCantieri Dorsano S.p.[PERSONA_2]: [TELEFONO_1]\nEmail: [EMAIL_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

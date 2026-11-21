@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0001",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 189,
+      "end": 216,
+      "text": "IT98T0000058217280776763333",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 620,
+      "end": 628,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 804,
+      "end": 820,
+      "text": "BMDCST55B21X401A",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 979,
+      "end": 991,
+      "text": "305 331 7289",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1008,
+      "end": 1038,
+      "text": "nicola.scarpellini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

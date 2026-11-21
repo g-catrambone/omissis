@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0002",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 45,
+      "end": 93,
+      "text": "Roberta Uccellini\n\nGentile Ufficio del Personale",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 614,
+      "end": 631,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 668,
+      "end": 697,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 723,
+      "end": 731,
+      "text": "NT-86613",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 743,
+      "end": 750,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 798,
+      "end": 813,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 826,
+      "end": 833,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 903,
+      "end": 919,
+      "text": "GTTPBB45P16X906A",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 952,
+      "end": 964,
+      "text": "319 776 5806",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1467,
+      "end": 1484,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1485,
+      "end": 1514,
+      "text": "roberta.uccellini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0148
+}

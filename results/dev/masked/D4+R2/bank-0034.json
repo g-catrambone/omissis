@@ -1,0 +1,113 @@
+{
+  "text_id": "bank-0034",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Reclamo per addebiti non autorizzati su conto corrente\n\nGentile Cassa Rurale Valfiorita,\n\nmi chiamo Nicole Pagliarini e sono titolare del conto corrente con IBAN IT46Z0000052572674161888267. Vi scrivo per segnalare la presenza di commissioni di gestione e spese di bollettino che non risultano autorizzate né previste dal contratto sottoscritto.\n\nLavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A. a Biella, e gestisco il mio deposito titoli tramite la vostra [STRUTTURA_1]. Ho notato che dal 10 novembre 2026 al 17 novembre 2026 sono stati addebitati complessivamente € 69,00 per servizi che non ho mai richiesto esplicitamente.\n\nTali addebiti sono errati e non corrispondono ai servizi effettivamente fruiti. Chiedo pertanto il rimborso immediato della somma di € 69,00 sul mio conto corrente.\n\nVi prego di considerare questa richiesta urgente e di procedere con la stornatura degli importi entro e non oltre il 19 novembre 2026. In caso di mancata risoluzione, mi vedrò costretta a rivolgermi all'Consorzio Agrario Terrenove.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\nNicole Pagliarini\n306 129 2713\nflavia.fabbretti@example.com\nNMSFMR99P60X052C\nYO-92505\n",
+  "disclosure": [
+    {
+      "surrogate": "Cassa Rurale Valfiorita",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Nicole Pagliarini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "IT46Z0000052572674161888267",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "organizzazione di lavoro"
+    },
+    {
+      "surrogate": "Biella",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località di lavoro"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "inizio periodo addebiti"
+    },
+    {
+      "surrogate": "17 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "fine periodo addebiti"
+    },
+    {
+      "surrogate": "€ 69,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "surrogate": "19 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza richiesta rimborso"
+    },
+    {
+      "surrogate": "Consorzio Agrario Terrenove",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "ente di risoluzione controversie"
+    },
+    {
+      "surrogate": "306 129 2713",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "flavia.fabbretti@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "NMSFMR99P60X052C",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

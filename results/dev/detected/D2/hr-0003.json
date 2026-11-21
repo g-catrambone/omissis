@@ -1,0 +1,61 @@
+{
+  "text_id": "hr-0003",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 53,
+      "end": 62,
+      "text": "Iacobelli",
+      "type": "PERSONA",
+      "confidence": 0.6988665064175924,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 137,
+      "end": 154,
+      "text": "Alessia Iacobelli",
+      "type": "PERSONA",
+      "confidence": 0.9439780473709106,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 433,
+      "end": 440,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.9982883334159851,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 776,
+      "end": 779,
+      "text": "836",
+      "type": "TELEFONO",
+      "confidence": 0.5764378905296326,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 796,
+      "end": 813,
+      "text": "alessia.iacobelli",
+      "type": "EMAIL",
+      "confidence": 0.7444217205047607,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1072,
+      "end": 1089,
+      "text": "Alessia Iacobelli",
+      "type": "PERSONA",
+      "confidence": 0.9925516247749329,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1353
+}

@@ -1,0 +1,64 @@
+{
+  "text_id": "bank-0008",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - [PERSONA_1_F],\n\nmi chiamo [PERSONA_2_F] e sono titolare del conto corrente con [PERSONA_3]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, pari a € 145,00, è stato registrato il 12 novembre 2026 presso un esercente a [CITTA_1]. Il secondo, di € 320,00, risale al 15 novembre 2026 e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come elettricista presso [CITTA_2]. e risiedo stabilmente a [CITTA_1]. Ho già bloccato la carta tramite l'app, ma necessito di una verifica formale da parte vostra.\n\nVi chiedo cortesemente di aprire una pratica di indagine per verificare l'origine di questi movimenti. Per qualsiasi necessità, potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nResto in attesa di un vostro riscontro.\n\nCordiali saluti,\n[PERSONA_4_F]: WJ-93942\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_3]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_4_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

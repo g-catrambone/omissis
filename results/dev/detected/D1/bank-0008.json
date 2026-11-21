@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0008",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 51,
+      "end": 96,
+      "text": "Federica Quattrocchi\n\nGentile Banca Altopiano",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 109,
+      "end": 129,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 169,
+      "end": 201,
+      "text": "IBAN IT06R0000052125840795083093",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 413,
+      "end": 420,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 589,
+      "end": 614,
+      "text": "Tessitura Valgrande S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 640,
+      "end": 647,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 901,
+      "end": 913,
+      "text": "358 044 0921",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 930,
+      "end": 962,
+      "text": "federica.quattrocchi@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1023,
+      "end": 1053,
+      "text": "Federica Quattrocchi\nMatricola",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0121
+}

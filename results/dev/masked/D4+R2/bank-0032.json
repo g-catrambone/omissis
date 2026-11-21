@@ -1,0 +1,120 @@
+{
+  "text_id": "bank-0032",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Reclamo spese e richiesta colloquio - Agnese QuerzoliGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Agnese Querzoli e sono cliente della vostra [STRUTTURA_1]. Vi scrivo in merito a delle commissioni che ritengo ingiustificate, addebitate sul mio conto corrente e sulla mia carta di credito.\n\nNello specifico, ho notato che il 10 novembre 2026 è stato trattenuto un importo di € 17,00 per gestione conto, mentre il 17 novembre 2026 ho subito un addebito di € 60,50 per utilizzo carta all'estero, servizio che non ho mai attivato esplicitamente. Inoltre, sul deposito titoli gestito presso di voi, compaiono spese di custodia titoli pari a € 49,00 per il trimestre, cifra che non corrisponde a quanto previsto dal contratto sottoscritto nel [DATA_1].\n\nQuesti addebiti, sommati, superano i € 886,50 in pochi giorni, una situazione che trovo inaccettabile data la mia lunga fedeltà alla banca. Non intendo procedere con una semplice contestazione scritta, ma desidero comprendere le motivazioni alla base di tali costi.\n\nPertanto, vi chiedo cortesemente di fissare un incontro o un colloquio presso la [STRUTTURA_1] per discutere la questione di persona. Sono disponibile a fornire tutti i documenti necessari, inclusi il mio codice fiscale RCLCRR72A63X522N e la matricola aziendale GU-32895 per eventuali verifiche interne.\n\nResto in attesa di un vostro riscontro per concordare data e ora.\n\nCordiali saluti,\n\nAgnese Querzoli\n[RUOLO_1] presso Lavorazioni Meccaniche Sbrana S.p.A.\nTel: 376 942 5749\nEmail: rachele.salvadori@example.com\n",
+  "disclosure": [
+    {
+      "surrogate": "Agnese Querzoli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di addebito"
+    },
+    {
+      "surrogate": "€ 17,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata per gestione conto"
+    },
+    {
+      "surrogate": "17 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di addebito"
+    },
+    {
+      "surrogate": "€ 60,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata per utilizzo carta all'estero"
+    },
+    {
+      "surrogate": "€ 49,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "spese di custodia titoli"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "anno di sottoscrizione del contratto"
+    },
+    {
+      "surrogate": "€ 886,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma totale degli addebiti"
+    },
+    {
+      "surrogate": "RCLCRR72A63X522N",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "GU-32895",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale per verifiche interne"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "ruolo professionale indicato"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "376 942 5749",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "rachele.salvadori@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

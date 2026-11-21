@@ -216,6 +216,30 @@ def test_validation_file_has_the_format_of_a_metrics_file_and_can_be_rebuilt():
     assert again["kappa"] == data["rows"][0]["kappa"] and again["accepted"] is data["accepted"]
 
 
+def test_sheets_command_replays_unless_asked_to_call_the_model(monkeypatch, tmp_path):
+    # The R2 items come from a configuration the runner never runs: their replies are
+    # made once with `--backend cloud`; without the option nothing calls a model.
+    from types import SimpleNamespace
+
+    monkeypatch.chdir(tmp_path)
+    seen = []
+    config = SimpleNamespace(seed=7)
+
+    def configs(path, overrides=None):
+        seen.append(overrides)
+        return {"REF-none": config}
+
+    monkeypatch.setattr(judge, "load_eval_configs", configs)
+    monkeypatch.setattr(judge, "validation_configs", lambda configs: {"R1": config, "R2": config})
+    monkeypatch.setattr(judge, "load_texts", lambda path: [SimpleNamespace(id="t1", text="x")])
+    monkeypatch.setattr(judge, "t1_reply", lambda record, config: "reply")
+    assert judge.main(["sheets", "--split", "dev", "--raters", "AI"]) == 0
+    assert judge.main(["sheets", "--split", "dev", "--raters", "AI", "--backend", "cloud"]) == 0
+    assert seen == [{"backend": "replay"}, {"backend": "cloud"}]
+    folder = tmp_path / "results" / "dev" / "judge_validation"
+    assert (folder / "sheet_AI.csv").exists() and (folder / "key.json").exists()
+
+
 def test_accept_command_writes_the_validation_file(monkeypatch, tmp_path):
     # The command a human runs once: the pieces around the model are faked.
     from types import SimpleNamespace

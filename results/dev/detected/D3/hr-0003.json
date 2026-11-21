@@ -1,0 +1,79 @@
+{
+  "text_id": "hr-0003",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 97,
+      "end": 124,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora la persona"
+    },
+    {
+      "start": 227,
+      "end": 243,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio assenza"
+    },
+    {
+      "start": 271,
+      "end": 298,
+      "text": "infezione intestinale acuta",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi di malattia"
+    },
+    {
+      "start": 334,
+      "end": 343,
+      "text": "celiachia",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "condizione medica specifica"
+    },
+    {
+      "start": 393,
+      "end": 414,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere specifico della persona"
+    },
+    {
+      "start": 433,
+      "end": 440,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di lavoro indicato"
+    },
+    {
+      "start": 622,
+      "end": 630,
+      "text": "YT-67363",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 1112,
+      "end": 1139,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora la persona"
+    }
+  ],
+  "seconds": 0.0011
+}

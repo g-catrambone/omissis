@@ -1,0 +1,57 @@
+{
+  "text_id": "hr-0003",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - [PERSONA_1_F]\n\nGentile Ufficio del Personale di Caseificio Montelupo S.r.l.,\n\nmi chiamo [PERSONA_1_F] e vi scrivo per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Purtroppo ho contratto un'[SALUTE_1], aggravata dalla mia condizione di [SALUTE_2], che mi impedisce di svolgere le mie mansioni di responsabile acquisti presso la sede di Cremona.\n\nVi chiedo cortesemente di registrare questa assenza nel sistema aziendale. Per facilitare le operazioni amministrative, vi fornisco i miei dati identificativi: la mia matricola è [UTENTE_1] e il mio codice fiscale è [CF_1]. Resto a disposizione per qualsiasi ulteriore chiarimento tramite il mio recapito telefonico [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nPreciso che non sono in grado di lavorare da remoto per le prossime 48 ore. Vi invierò il certificato medico non appena disponibile, come da prassi aziendale. Vi ringrazio per la comprensione e per la gestione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\nResponsabile Acquisti\nCaseificio Montelupo S.r.l.\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_2]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

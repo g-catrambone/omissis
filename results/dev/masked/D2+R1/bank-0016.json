@@ -1,0 +1,29 @@
+{
+  "text_id": "bank-0016",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Aggiornamento IBAN per addebito mutuo - Daniela Marchesini\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Daniela Marchesini e sono cliente della vostra filiale di [CITTA_1]. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per il corretto funzionamento degli addebiti automatici legati al mio mutuo per la prima casa.\n\nAttualmente, l'addebito mensile di € 850,00 viene effettuato sul conto corrente che sto per disattivare. Per evitare interruzioni nei pagamenti a partire dal prossimo ciclo, vi chiedo di aggiornare i vostri sistemi con il nuovo IBAN: IT83X0000066473362061629314.\n\nPer facilitare l'identificazione del mio fascicolo, vi fornisco il mio codice fiscale NDLMTZ55P62X312Q e la matricola aziendale TE-24747 che utilizzo come riferimento interno presso Trasporti Bellariva S.r.l., dove lavoro come contabile.\n\nVi prego di confermare la ricezione di questa richiesta e l'effettivo aggiornamento dei dati entro il 15 novembre 2026, in modo che l'addebito previsto per il 20 novembre 2026 venga eseguito correttamente sul nuovo conto. Resto a disposizione per eventuali chiarimenti al numero 308 057 6591 o tramite la mia email [EMAIL_1]@example.com.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

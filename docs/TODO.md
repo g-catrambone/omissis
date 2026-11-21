@@ -103,7 +103,8 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   items blind; Giuseppe approves the sheet before `accept` is run.
 
   ```
-  uv run python -m omissis.eval.judge sheets --split dev --raters AI
+  uv run --env-file .env python -m omissis.eval.judge sheets --split dev --raters AI --backend cloud
+  # 20 calls to the cloud model, once: the replies of the R2 items, which `make eval-dev` does not make
   # fill results/dev/judge_validation/sheet_AI.csv; do not open key.json
   uv run --env-file .env python -m omissis.eval.judge accept --split dev
   ```

@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0040",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta sblocco conto corrente defunto\n\nGentile Cassa Rurale di Montevago,\n\nmi chiamo [PERSONA_1_M] e scrivo per richiedere l’apertura della successione e lo sblocco delle somme presenti sul conto corrente intestato a mio padre, deceduto il 12 marzo 2026. Sono l’unico erede e ho già depositato in filiale la dichiarazione di successione e il certificato di morte.\n\nIl conto in questione, identificato dall’IBAN [IBAN_1], risulta attualmente bloccato. Vi chiedo cortesemente di procedere con la liberazione dei fondi o, in alternativa, di trasferire l’intero saldo disponibile, pari a circa € 4.500,00, sul mio conto corrente presso la stessa filiale.\n\nPer facilitare le verifiche, comunico che il mio codice fiscale è [CF_1] e che sono raggiungibile al numero [TELEFONO_1] o all’indirizzo [EMAIL_1]. Lavoro come contabile presso Tessitura Valgrande S.r.l. a Trapani, dove risiedo stabilmente.\n\nVi prego di considerare questa richiesta urgente, poiché ho necessità di coprire alcune spese funerarie residue e tasse pendenti. Resto a disposizione per fornire eventuali documenti aggiuntivi, come la copia del documento d’identità o la procura, se necessaria.\n\nIn attesa di un vostro cortese riscontro, porgo distinti saluti.\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

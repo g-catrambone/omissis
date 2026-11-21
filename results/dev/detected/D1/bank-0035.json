@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0035",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 65,
+      "end": 90,
+      "text": "Gentile Credito Tirrenico",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 103,
+      "end": 119,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 141,
+      "end": 147,
+      "text": "Vostra",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 159,
+      "end": 166,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 325,
+      "end": 351,
+      "text": "Caseificio Montelupo S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 925,
+      "end": 931,
+      "text": "Vostro",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1102,
+      "end": 1129,
+      "text": "IT35P0000045198541598847685",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1279,
+      "end": 1285,
+      "text": "Vostro",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1398,
+      "end": 1414,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1415,
+      "end": 1443,
+      "text": "michela.rampazzo@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1444,
+      "end": 1456,
+      "text": "391 565 6198",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0148
+}

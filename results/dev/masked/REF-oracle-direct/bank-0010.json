@@ -1,0 +1,50 @@
+{
+  "text_id": "bank-0010",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Contestazione addebiti non autorizzati carta di credito\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per contestare formalmente due addebiti presenti sul mio estratto conto che non riconosco in alcun modo.\n\nIl primo addebito, pari a € 1.200,50, è stato effettuato il 16 novembre 2026 presso un esercente a Foggia. Il secondo, di € 350,00, risale al 20 novembre 2026 e risulta avvenuto online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come autista presso la Cooperativa Edile Pietrafitta e la mia carta di credito, identificata dal codice [CONTO_1], è rimasta sempre in mio possesso. Non ho mai comunicato i dati della carta a terzi né ho ricevuto avvisi di sicurezza sospetti.\n\nVi chiedo pertanto di procedere immediatamente con lo storno delle somme indicate e il relativo rimborso sul mio conto corrente. Vi prego di considerare questa comunicazione come formale contestazione ai sensi della normativa vigente.\n\nResto in attesa di un vostro cortese riscontro entro 5 giorni lavorativi.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n[EMAIL_1]\n[TELEFONO_1]\n[CF_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CONTO_1]",
+      "type": "CONTO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

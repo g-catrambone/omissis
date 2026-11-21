@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0026",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 42,
+      "end": 90,
+      "text": "Tommaso Mantovani\n\nGentile Ufficio del Personale",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 140,
+      "end": 146,
+      "text": "Vostra",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 488,
+      "end": 517,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 725,
+      "end": 731,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1048,
+      "end": 1060,
+      "text": "393 719 3080",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1119,
+      "end": 1125,
+      "text": "Vostro",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1193,
+      "end": 1222,
+      "text": "tommaso.mantovani@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1368,
+      "end": 1383,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1404,
+      "end": 1421,
+      "text": "Tommaso Mantovani",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0139
+}

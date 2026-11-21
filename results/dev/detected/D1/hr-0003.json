@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0003",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 45,
+      "end": 79,
+      "text": "Alessia Iacobelli\n\nGentile Ufficio",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 97,
+      "end": 123,
+      "text": "Caseificio Montelupo S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 137,
+      "end": 154,
+      "text": "Alessia Iacobelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 334,
+      "end": 343,
+      "text": "celiachia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 433,
+      "end": 440,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 622,
+      "end": 630,
+      "text": "YT-67363",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 657,
+      "end": 680,
+      "text": "RPSVNZ96D27X748J. Resto",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 767,
+      "end": 779,
+      "text": "372 448 9836",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 796,
+      "end": 825,
+      "text": "alessia.iacobelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1072,
+      "end": 1089,
+      "text": "Alessia Iacobelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1112,
+      "end": 1138,
+      "text": "Caseificio Montelupo S.r.l",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0117
+}

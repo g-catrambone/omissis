@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0016",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 96,
+      "end": 123,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione del datore di lavoro"
+    },
+    {
+      "start": 165,
+      "end": 173,
+      "text": "QA-72135",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo del dipendente"
+    },
+    {
+      "start": 341,
+      "end": 347,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di riferimento"
+    },
+    {
+      "start": 402,
+      "end": 425,
+      "text": "intervento al ginocchio",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi o procedura medica"
+    },
+    {
+      "start": 749,
+      "end": 759,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro richiesta"
+    },
+    {
+      "start": 820,
+      "end": 837,
+      "text": "filiale di Novara",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "start": 1126,
+      "end": 1141,
+      "text": "15 gennaio 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 1322,
+      "end": 1343,
+      "text": "Responsabile Acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere preciso del mittente"
+    },
+    {
+      "start": 1344,
+      "end": 1371,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione del datore di lavoro"
+    }
+  ],
+  "seconds": 0.0012
+}

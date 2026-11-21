@@ -1,0 +1,25 @@
+{
+  "text_id": "hr-0011",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 1125,
+      "end": 1137,
+      "text": "369 461 1173",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1401,
+      "end": 1431,
+      "text": "fabrizio.nicoletti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0001
+}

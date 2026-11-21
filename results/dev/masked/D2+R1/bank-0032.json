@@ -1,0 +1,36 @@
+{
+  "text_id": "bank-0032",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Reclamo spese e richiesta colloquio - Carlotta Castellani\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_F]i e sono cliente della vostra filiale di [CITTA_1]. Vi scrivo in merito a delle commissioni che ritengo ingiustificate, addebitate sul mio conto corrente e sulla mia carta di credito.\n\nNello specifico, ho notato che il 15 novembre 2026 è stato trattenuto un importo di € 45,00 per gestione conto, mentre il 20 novembre 2026 ho subito un addebito di € 12,50 per utilizzo carta all'estero, servizio che non ho mai attivato esplicitamente. Inoltre, sul deposito titoli gestito presso di voi, compaiono spese di custodia titoli pari a € 80,00 per il trimestre, cifra che non corrisponde a quanto previsto dal contratto sottoscritto nel 2024.\n\nQuesti addebiti, sommati, superano i € 137,50 in pochi giorni, una situazione che trovo inaccettabile data la mia lunga fedeltà alla banca. Non intendo procedere con una semplice contestazione scritta, ma desidero comprendere le motivazioni alla base di tali costi.\n\nPertanto, vi chiedo cortesemente di fissare un incontro o un colloquio presso la filiale di [CITTA_1] per discutere la questione di persona. Sono disponibile a fornire tutti i documenti necessari, inclusi il mio codice fiscale LVNRFL34A53X567N e la matricola aziendale BJ-27692 per eventuali verifiche interne.\n\nResto in attesa di un vostro riscontro per concordare data e ora.\n\nCordiali saluti,\n\n[PERSONA_2_F]\nresponsabile acquisti presso Cooperativa Edile Pietrafitta\nTel: 366 375 4002\nEmail: [EMAIL_1]lotta.castellani@example.com\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

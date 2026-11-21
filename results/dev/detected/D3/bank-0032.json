@@ -1,0 +1,124 @@
+{
+  "text_id": "bank-0032",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 76,
+      "end": 91,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 152,
+      "end": 170,
+      "text": "filiale di Cremona",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca"
+    },
+    {
+      "start": 339,
+      "end": 355,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di addebito"
+    },
+    {
+      "start": 389,
+      "end": 396,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata per gestione conto"
+    },
+    {
+      "start": 427,
+      "end": 443,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di addebito"
+    },
+    {
+      "start": 469,
+      "end": 476,
+      "text": "€ 12,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata per utilizzo carta all'estero"
+    },
+    {
+      "start": 651,
+      "end": 658,
+      "text": "€ 80,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "spese di custodia titoli"
+    },
+    {
+      "start": 752,
+      "end": 756,
+      "text": "2024",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "anno di sottoscrizione del contratto"
+    },
+    {
+      "start": 796,
+      "end": 804,
+      "text": "€ 137,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma totale degli addebiti"
+    },
+    {
+      "start": 1107,
+      "end": 1125,
+      "text": "filiale di Cremona",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca"
+    },
+    {
+      "start": 1293,
+      "end": 1301,
+      "text": "BJ-27692",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale per verifiche interne"
+    },
+    {
+      "start": 1441,
+      "end": 1462,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ruolo professionale indicato"
+    },
+    {
+      "start": 1470,
+      "end": 1499,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda di cui è responsabile"
+    }
+  ],
+  "seconds": 0.0013
+}

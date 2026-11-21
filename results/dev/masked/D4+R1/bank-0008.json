@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0008",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - [PERSONA_1_F],\n\nmi chiamo [PERSONA_2_F] e sono titolare del conto corrente con [PERSONA_3]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, pari a [IMPORTO_1], è stato registrato il [DATA_1] presso un esercente a [CITTA_1]. Il secondo, di [IMPORTO_2], risale al [DATA_2] e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come [RUOLO_1] presso [AZIENDA_1] e risiedo stabilmente a [CITTA_1]. Ho già bloccato la carta tramite l'app, ma necessito di una verifica formale da parte vostra.\n\nVi chiedo cortesemente di aprire una pratica di indagine per verificare l'origine di questi movimenti. Per qualsiasi necessità, potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nResto in attesa di un vostro riscontro.\n\nCordiali saluti,\n[PERSONA_4_F]: [UTENTE_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_3]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo della prima transazione"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di una transazione"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo di residenza e transazione"
+    },
+    {
+      "surrogate": "[IMPORTO_2]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo della seconda transazione"
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di un'altra transazione"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_4_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": null
+    }
+  ]
+}

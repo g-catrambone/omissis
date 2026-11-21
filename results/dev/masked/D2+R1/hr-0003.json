@@ -1,0 +1,36 @@
+{
+  "text_id": "hr-0003",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - Alessia [PERSONA_1_F]\n\nGentile Ufficio del Personale di Caseificio Montelupo S.r.l.,\n\nmi chiamo [PERSONA_1_F] e vi scrivo per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Purtroppo ho contratto un'infezione intestinale acuta, aggravata dalla mia condizione di celiachia, che mi impedisce di svolgere le mie mansioni di responsabile acquisti presso la sede di [CITTA_1].\n\nVi chiedo cortesemente di registrare questa assenza nel sistema aziendale. Per facilitare le operazioni amministrative, vi fornisco i miei dati identificativi: la mia matricola è YT-67363 e il mio codice fiscale è RPSVNZ96D27X748J. Resto a disposizione per qualsiasi ulteriore chiarimento tramite il mio recapito telefonico 372 448 9[TELEFONO_1] o all'indirizzo [EMAIL_1]@example.com.\n\nPreciso che non sono in grado di lavorare da remoto per le prossime 48 ore. Vi invierò il certificato medico non appena disponibile, come da prassi aziendale. Vi ringrazio per la comprensione e per la gestione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\nResponsabile Acquisti\nCaseificio Montelupo S.r.l.\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

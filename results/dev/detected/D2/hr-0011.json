@@ -1,0 +1,52 @@
+{
+  "text_id": "hr-0011",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 48,
+      "end": 57,
+      "text": "Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.651809960603714,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 131,
+      "end": 149,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.9376530200242996,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 193,
+      "end": 200,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.998818427324295,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1362,
+      "end": 1380,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.8806093782186508,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1410,
+      "end": 1419,
+      "text": "nicoletti",
+      "type": "UTENTE",
+      "confidence": 0.6525935232639313,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1365
+}

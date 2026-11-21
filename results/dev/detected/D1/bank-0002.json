@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0002",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 49,
+      "end": 91,
+      "text": "Teresa Dellavalle\n\nGentile Banca Altopiano",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 104,
+      "end": 121,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 143,
+      "end": 149,
+      "text": "Vostra",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 161,
+      "end": 168,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 316,
+      "end": 345,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 865,
+      "end": 881,
+      "text": "DTPBGT37E51X984X",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1003,
+      "end": 1032,
+      "text": "teresa.dellavalle@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1049,
+      "end": 1055,
+      "text": "Vostra",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1346,
+      "end": 1363,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0143
+}

@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0008",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 81,
+      "end": 96,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
+    },
+    {
+      "start": 342,
+      "end": 350,
+      "text": "€ 145,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della prima transazione"
+    },
+    {
+      "start": 374,
+      "end": 390,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di una transazione"
+    },
+    {
+      "start": 413,
+      "end": 420,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza e transazione"
+    },
+    {
+      "start": 437,
+      "end": 445,
+      "text": "€ 320,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della seconda transazione"
+    },
+    {
+      "start": 457,
+      "end": 473,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di un'altra transazione"
+    },
+    {
+      "start": 569,
+      "end": 581,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 589,
+      "end": 615,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "start": 640,
+      "end": 647,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza e transazione"
+    },
+    {
+      "start": 1055,
+      "end": 1063,
+      "text": "WJ-93942",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    }
+  ],
+  "seconds": 0.0011
+}

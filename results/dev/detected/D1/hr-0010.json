@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0010",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 52,
+      "end": 71,
+      "text": "Sergio Bertolucci\n\n",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 140,
+      "end": 157,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 208,
+      "end": 215,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 777,
+      "end": 785,
+      "text": "ET-65468",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 852,
+      "end": 869,
+      "text": "SRBLMT93H55X288J.",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1221,
+      "end": 1239,
+      "text": "Sergio Bertolucci\n",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1282,
+      "end": 1288,
+      "text": "A.\nTel",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1290,
+      "end": 1302,
+      "text": "329 892 3519",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1310,
+      "end": 1339,
+      "text": "sergio.bertolucci@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0133
+}

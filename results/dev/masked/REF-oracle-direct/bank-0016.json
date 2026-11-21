@@ -1,0 +1,50 @@
+{
+  "text_id": "bank-0016",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Aggiornamento IBAN per addebito mutuo - [PERSONA_1_F]\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1_F] e sono cliente della vostra filiale di Trapani. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per il corretto funzionamento degli addebiti automatici legati al mio mutuo per la prima casa.\n\nAttualmente, l'addebito mensile di € 850,00 viene effettuato sul conto corrente che sto per disattivare. Per evitare interruzioni nei pagamenti a partire dal prossimo ciclo, vi chiedo di aggiornare i vostri sistemi con il nuovo IBAN: [IBAN_1].\n\nPer facilitare l'identificazione del mio fascicolo, vi fornisco il mio codice fiscale [CF_1] e la matricola aziendale [UTENTE_1] che utilizzo come riferimento interno presso Trasporti Bellariva S.r.l., dove lavoro come contabile.\n\nVi prego di confermare la ricezione di questa richiesta e l'effettivo aggiornamento dei dati entro il 15 novembre 2026, in modo che l'addebito previsto per il 20 novembre 2026 venga eseguito correttamente sul nuovo conto. Resto a disposizione per eventuali chiarimenti al numero [TELEFONO_1] o tramite la mia email [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

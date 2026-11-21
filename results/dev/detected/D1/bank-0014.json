@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0014",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 80,
+      "end": 105,
+      "text": "Gentile Credito Tirrenico",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 118,
+      "end": 137,
+      "text": "Massimo Evangelisti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 162,
+      "end": 168,
+      "text": "Vostra",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 180,
+      "end": 187,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 277,
+      "end": 306,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 424,
+      "end": 428,
+      "text": "IBAN",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 430,
+      "end": 457,
+      "text": "IT57E0000097728495291902297",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 782,
+      "end": 813,
+      "text": "massimo.evangelisti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1069,
+      "end": 1081,
+      "text": "329 001 5516",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1145,
+      "end": 1164,
+      "text": "Massimo Evangelisti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0118
+}

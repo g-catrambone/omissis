@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0002",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta rimodulazione finanziamento - Lavinia Fiorucci,\n\nmi chiamo Rebecca Guidotti e sono cliente della Vostra [STRUTTURA_1] di Biella. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mio finanziamento in essere.\n\nAttualmente lavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A., ma da alcune settimane sto affrontando una fase critica legata alla mia [SALUTE_1], che mi ha costretta a ridurre drasticamente la mia attività lavorativa e, di conseguenza, il mio reddito mensile. Questa situazione temporanea mi rende difficile sostenere l'attuale rata di € 978,00 prevista per il 27 dicembre 2026.\n\nNon chiedo la sospensione totale, ma una rinegoziazione delle rate per un periodo di sei mesi, in modo da alleggerire il carico economico immediato. I miei dati anagrafici sono: codice fiscale VBTCLN08P19X178X e ijiaqsgvb rqgtxsbbo TL-64930. Per eventuali verifiche, potete contattarmi al numero 386 354 0226 o tramite l'indirizzo greta.cortesini@example.com.\n\nConfido nella Vostra comprensione e Vi chiedo di valutare la fattibilità di questa modifica entro il 19 novembre 2026, così da poter pianificare il budget familiare con maggiore serenità. Resto a disposizione per fornire documentazione medica o certificati del datore di lavoro se necessari.\n\nCordiali saluti,\n\nRebecca Guidotti\n",
+  "disclosure": [
+    {
+      "surrogate": "Lavinia Fiorucci",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Rebecca Guidotti",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Biella",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della [STRUTTURA_1]"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica menzionata"
+    },
+    {
+      "surrogate": "€ 978,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo della rata di finanziamento"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "surrogate": "VBTCLN08P19X178X",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ijiaqsgvb rqgtxsbbo TL-64930",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo del mittente"
+    },
+    {
+      "surrogate": "386 354 0226",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "greta.cortesini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "19 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui richiede la modifica"
+    }
+  ]
+}

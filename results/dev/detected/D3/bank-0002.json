@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0002",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 76,
+      "end": 91,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 150,
+      "end": 157,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di una banca"
+    },
+    {
+      "start": 161,
+      "end": 168,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 296,
+      "end": 305,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 316,
+      "end": 345,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda cooperativa"
+    },
+    {
+      "start": 419,
+      "end": 436,
+      "text": "emicrania cronica",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica menzionata"
+    },
+    {
+      "start": 628,
+      "end": 636,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della rata di finanziamento"
+    },
+    {
+      "start": 653,
+      "end": 669,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "start": 884,
+      "end": 912,
+      "text": "matricola aziendale UL-67995",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo del mittente"
+    },
+    {
+      "start": 1136,
+      "end": 1152,
+      "text": "30 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui richiede la modifica"
+    }
+  ],
+  "seconds": 0.0011
+}

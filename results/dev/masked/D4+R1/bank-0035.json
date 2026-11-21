@@ -1,0 +1,113 @@
+{
+  "text_id": "bank-0035",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Reclamo per addebiti non autorizzati su conto corrente\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono cliente della Vostra filiale di [CITTA_1]. Vi scrivo per segnalare una grave anomalia riscontrata sul mio estratto conto relativo al mese di novembre 2026.\n\nIn qualità di [RUOLO_1] presso [AZIENDA_2], gestisco quotidianamente i flussi finanziari aziendali, motivo per cui noto immediatamente qualsiasi discrepanza. Ho verificato che il giorno [DATA_1] è stato addebitato un importo di [IMPORTO_1] a titolo di \"commissione gestione deposito titoli\". Tale servizio non è mai stato richiesto né attivato da me, né risulta presente nel contratto sottoscritto presso la filiale.\n\nInoltre, il giorno [DATA_2] ho subito un ulteriore addebito di [IMPORTO_2] per \"invio estratto conto cartaceo\", servizio che avevo disattivato telefonicamente il 15 ottobre 2026 tramite il Vostro servizio clienti.\n\nChiedo pertanto il rimborso immediato della somma totale di € 57,50 e la stornatura delle relative voci dal mio conto corrente, identificato dall'IBAN [IBAN_1].\n\nVi prego di considerare questa richiesta urgente, dato che tali addebiti incidono negativamente sulla mia liquidità mensile. Resto in attesa di un Vostro riscontro scritto entro e non oltre il [DATA_3] per confermare l'avvenuta rettifica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[EMAIL_1]\n[TELEFONO_1]\n[CF_1]\n[UTENTE_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario destinatario"
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della filiale bancaria"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "posizione lavorativa del mittente"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "azienda per cui lavora la persona"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di un addebito"
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di un altro addebito"
+    },
+    {
+      "surrogate": "[IMPORTO_2]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_3]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza per risposta"
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo del cliente"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "text_id": "hr-0002",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 45,
+      "end": 93,
+      "text": "Roberta Uccellini\n\nGentile Ufficio del Personale",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 183,
+      "end": 199,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di calendario indicata"
+    },
+    {
+      "start": 235,
+      "end": 257,
+      "text": "ipertensione arteriosa",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi di salute"
+    },
+    {
+      "start": 464,
+      "end": 480,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di calendario indicata"
+    },
+    {
+      "start": 614,
+      "end": 631,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 648,
+      "end": 657,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere della persona"
+    },
+    {
+      "start": 668,
+      "end": 697,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione di lavoro"
+    },
+    {
+      "start": 723,
+      "end": 731,
+      "text": "NT-86613",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 743,
+      "end": 750,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di residenza"
+    },
+    {
+      "start": 798,
+      "end": 813,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
+    },
+    {
+      "start": 815,
+      "end": 833,
+      "text": "filiale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della banca"
+    },
+    {
+      "start": 903,
+      "end": 919,
+      "text": "GTTPBB45P16X906A",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 952,
+      "end": 964,
+      "text": "319 776 5806",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1467,
+      "end": 1484,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1485,
+      "end": 1514,
+      "text": "roberta.uccellini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1531
+}

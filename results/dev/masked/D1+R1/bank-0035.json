@@ -1,0 +1,71 @@
+{
+  "text_id": "bank-0035",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Reclamo per addebiti non autorizzati su conto corrente\n\n[CITTA_1],\n\nmi chiamo [PERSONA_1_F] e sono cliente della [CITTA_2] filiale di [CITTA_3]. Vi scrivo per segnalare una grave anomalia riscontrata sul mio estratto conto relativo al mese di novembre 2026.\n\nIn qualità di responsabile acquisti presso [CITTA_4]., gestisco quotidianamente i flussi finanziari aziendali, motivo per cui noto immediatamente qualsiasi discrepanza. Ho verificato che il giorno 12 novembre 2026 è stato addebitato un importo di € 45,00 a titolo di \"commissione gestione deposito titoli\". Tale servizio non è mai stato richiesto né attivato da me, né risulta presente nel contratto sottoscritto presso la filiale.\n\nInoltre, il giorno 20 novembre 2026 ho subito un ulteriore addebito di € 12,50 per \"invio estratto conto cartaceo\", servizio che avevo disattivato telefonicamente il 15 ottobre 2026 tramite il [AZIENDA_1] servizio clienti.\n\nChiedo pertanto il rimborso immediato della somma totale di € 57,50 e la stornatura delle relative voci dal mio conto corrente, identificato dall'IBAN [IBAN_1].\n\nVi prego di considerare questa richiesta urgente, dato che tali addebiti incidono negativamente sulla mia liquidità mensile. Resto in attesa di un [AZIENDA_1] riscontro scritto entro e non oltre il 30 novembre 2026 per confermare l'avvenuta rettifica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[EMAIL_1]\n[TELEFONO_1]\nFCVTDC50S09X752T\nPM-09581\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_4]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

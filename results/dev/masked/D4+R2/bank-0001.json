@@ -1,0 +1,113 @@
+{
+  "text_id": "bank-0001",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta sospensione rate prestito personale - Manfredi Gardini Banco di Roccalta,\n\nmi chiamo Gioele Salvadori e sono titolare del conto corrente con Agnese Fabbretti. Vi scrivo per richiedere la sospensione temporanea dei pagamenti del mio prestito personale, contratto presso la [STRUTTURA_1].\n\nAttualmente lavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A., ma a causa di un aggravamento della mia [SALUTE_1] sono costretto a fermarmi per un periodo di cura. Questa situazione mi impedisce di sostenere l'onere economico della rata mensile di € 978,00 prevista per il 27 dicembre 2026.\n\nVi chiedo pertanto di sospendere le rate fino al 14 marzo 2027, senza ulteriori aggravio di interessi se possibile. Il mio codice fiscale è SVPLLN52H54X878W e la matricola aziendale è TF-33651.\n\nResto a disposizione per fornire eventuali certificati medici o documentazione aggiuntiva. Potete contattarmi al numero 366 137 7472 o all'indirizzo priscilla.fiorucci@example.com.\n\nCordiali saluti,\n\nGioele Salvadori\n",
+  "disclosure": [
+    {
+      "surrogate": "Manfredi Gardini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "surrogate": "Gioele Salvadori",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Agnese Fabbretti",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede di un istituto bancario"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un'azienda di cui lavora il mittente"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica del mittente"
+    },
+    {
+      "surrogate": "€ 978,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo della rata del prestito"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "surrogate": "14 marzo 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di sospensione richiesta"
+    },
+    {
+      "surrogate": "SVPLLN52H54X878W",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "TF-33651",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "366 137 7472",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "priscilla.fiorucci@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

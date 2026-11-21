@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0010",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 74,
+      "end": 102,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 350,
+      "end": 360,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro addebitata"
+    },
+    {
+      "start": 384,
+      "end": 400,
+      "text": "16 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di una transazione"
+    },
+    {
+      "start": 423,
+      "end": 429,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località di un addebito"
+    },
+    {
+      "start": 446,
+      "end": 454,
+      "text": "€ 350,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro addebitata"
+    },
+    {
+      "start": 466,
+      "end": 482,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di una transazione"
+    },
+    {
+      "start": 576,
+      "end": 583,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 594,
+      "end": 623,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'organizzazione di lavoro"
+    },
+    {
+      "start": 668,
+      "end": 683,
+      "text": "codice PB-80503",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "identificativo della carta di credito"
+    }
+  ],
+  "seconds": 0.0011
+}

@@ -1,0 +1,85 @@
+{
+  "text_id": "hr-0011",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta colloquio urgente - [PERSONA_1_M] del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_2_M], sono [RUOLO_1] e lavoro presso la sede di [CITTA_1]. Vi scrivo per segnalare una situazione di disagio che sto vivendo da alcune settimane. Dal [DATA_1], il mio responsabile diretto ha iniziato a ignorare le mie comunicazioni e a assegnarmi compiti fuori dalla mia competenza, creando un clima di tensione insostenibile. Questa dinamica sta compromettendo la mia serenità e la mia capacità di lavorare con la solita efficienza.\n\nNon intendo entrare nel merito di ogni singolo episodio in questa sede, ma ritengo fondamentale affrontare la questione in modo formale e riservato. La mia richiesta è esclusivamente quella di fissare un incontro o un colloquio con un rappresentante dell'HR per discutere di quanto accaduto. Desidero che questo incontro avvenga entro il [DATA_2], per poter chiarire la situazione e trovare una soluzione adeguata.\n\nResto a disposizione per concordare data e ora. Per qualsiasi necessità di contatto, potete raggiungermi al numero [TELEFONO_1] o tramite la mia email aziendale. Vi chiedo cortesemente di trattare questa segnalazione con la massima riservatezza, come previsto dalle procedure interne.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\n[PERSONA_3_M]: [UTENTE_1]\n[EMAIL_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda"
+    },
+    {
+      "surrogate": "[PERSONA_2_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città della sede"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio problema"
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data limite richiesta"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_3_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

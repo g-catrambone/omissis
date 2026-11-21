@@ -1,0 +1,160 @@
+{
+  "text_id": "bank-0034",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 73,
+      "end": 98,
+      "text": "Cassa Rurale di Montevago",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "istituto bancario menzionato"
+    },
+    {
+      "start": 111,
+      "end": 129,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 174,
+      "end": 201,
+      "text": "IT50N0000061021618288042279",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 371,
+      "end": 383,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 394,
+      "end": 423,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "organizzazione di lavoro"
+    },
+    {
+      "start": 426,
+      "end": 433,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località di lavoro"
+    },
+    {
+      "start": 487,
+      "end": 501,
+      "text": "filiale locale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "start": 521,
+      "end": 537,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "inizio periodo addebiti"
+    },
+    {
+      "start": 541,
+      "end": 557,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "fine periodo addebiti"
+    },
+    {
+      "start": 597,
+      "end": 604,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "start": 792,
+      "end": 799,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "start": 942,
+      "end": 958,
+      "text": "30 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza richiesta rimborso"
+    },
+    {
+      "start": 1028,
+      "end": 1056,
+      "text": "Arbitro Bancario Finanziario",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ente di risoluzione controversie"
+    },
+    {
+      "start": 1126,
+      "end": 1144,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1145,
+      "end": 1157,
+      "text": "349 318 3143",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1158,
+      "end": 1188,
+      "text": "sabrina.lorenzetti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1189,
+      "end": 1205,
+      "text": "RNMPVP96S08X914J",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1513
+}
