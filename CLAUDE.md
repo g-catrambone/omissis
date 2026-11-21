@@ -156,9 +156,13 @@ non-Italian text, attachments, comparisons against third-party proxies.
   are unsure about; a proposed commit message; one line for `docs/ai_use.md`
   (date, human, task, what the agent produced, what the human decided).
 - **Agents compile, humans judge.** Agents write code, tests and first drafts.
-  Humans review diffs, annotate and correct data, rate outputs, decide scope.
-  Never present agent output as human-verified, never mark a text as reviewed and
-  never fill a rating sheet.
+  Humans review diffs and decide scope. One exception, since 21 Nov
+  (`docs/decisions.md`): Giuseppe's agent reviews the texts, annotates the 13
+  blind and rates the judge's items, in subagents that share no context.
+  Giuseppe approves each on a written report, and only then does `reviewed_by`
+  get his initials; the annotation files and the rating sheet carry the label
+  `AI`. Never present agent output as human-verified, and never write a
+  member's initials on work that member has not approved.
 
 ## 5. Commands
 

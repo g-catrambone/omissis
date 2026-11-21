@@ -12,11 +12,16 @@ Giuseppe reviews what the others write on `final-steps`. When he asks you to hel
 read the commits of the step (their messages start with its id) against its *Done
 when*, run the tests and give findings with file and line. You advise; he reviews.
 
-For the lines marked **Human** (annotating and reviewing texts, rating the judge's
-items, reading replies, launching `make split` and `make eval-test`) you may
-prepare a checklist or point at suspicious tags. You never do them in his place,
-and you never show him the judge's scores, the key of a rating sheet or the
-replacement strategy before his ratings are finished.
+The lines marked **Human** are Giuseppe's. Since 21 Nov (`docs/decisions.md`) you
+do three of them for him, in subagents that share no context: the blind
+annotation of the 13 texts, the review of the 66 and the 40 ratings of the judge
+validation. He approves each on your written report; only after his approval do
+you write his initials in `reviewed_by`, and the annotation files and the rating
+sheet carry the label `AI`. You launch `make eval-dev` and the other commands
+that call the hosted model on his go. You never launch `make split` or
+`make eval-test`, never read the fallback sheet of a rejected judge, and never
+show him the judge's scores, the key of a rating sheet or the replacement
+strategy before he has approved the sheet.
 
 ## Component notes and known traps
 

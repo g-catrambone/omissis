@@ -119,8 +119,9 @@ of the pin. Use of the service is governed by the Groq Services Agreement
   taxonomy in `src/omissis/contracts.py`, plus 30 invented profiles in 6 cohorts
   (`data/profiles/`).
 - **Where it comes from.** Written for this project by the `generator` model from
-  the profiles and one fixed prompt; tagged by the generator; each text to be
-  reviewed by one team member (`data/pool/REVIEWERS.md`).
+  the profiles and one fixed prompt; tagged by the generator; each text is
+  reviewed by an AI agent (Claude Opus 5.5), and one team member approves its
+  report (`docs/decisions.md`, 21 Nov).
 - **Revision.** The files of `data/dev/`, `data/test/` (checksums in
   `data/split.json`) and `data/profiles/` at the tag `v1.0`.
   Split: after the split (texts in dev and in test).
@@ -129,6 +130,7 @@ of the pin. Use of the service is governed by the Groq Services Agreement
   spans and gold fields; the profiles are the candidates of the linkage attack.
 - **Limits for us.** Every person and value is invented; identifiers use codes
   that are never issued (bank code `00000`, place code `X…`). Texts written by a
-  model are more regular than real mail. One reviewer per text, and texts of the
-  same author are not independent, so intervals over texts overstate precision.
+  model are more regular than real mail. No human reviewed the texts one by one: an AI
+  agent did, and one member approved its report. Texts of the same author are
+  not independent, so intervals over texts overstate precision.
   Numbers per split: after the split.

@@ -60,7 +60,8 @@ named; no number is written here.
 
 - On screen: a list, one line each.
   - Synthetic data, written by one model: more regular than real mail.
-  - One reviewer of the gold and one rater of the judge.
+  - No human annotated or rated: an AI agent reviewed the gold and rated the
+    judge's items, and one member approved its reports.
   - The judge is the same model as the cloud model.
   - Texts by the same author are not independent: intervals are optimistic.
   - One attacker model; no external data, no linking across texts.
@@ -70,8 +71,8 @@ named; no number is written here.
 
 - Numbers here: span F1 (exact and overlap) and Cohen's kappa on class, from
   `results/dev/metrics/agreement.json`.
-- Say: it is agreement between one human and the generator's tags, before review,
-  not between two humans.
+- Say: it is agreement between an AI annotator and the generator's tags, before
+  review: two models, no human.
 
 ## Backup B. Judge validation
 
@@ -79,6 +80,8 @@ named; no number is written here.
   criterion and overall, from `results/dev/metrics/judge_validation.json`.
 - Say: the rule (kappa or within-one-point) was fixed before the sheets were
   compared; the items come from gold-span masking, under R1 and R2.
+- Say: the judge is compared with the ratings of another model, approved by one
+  member, not with a person's.
 
 ## Backup C. Attack design
 

@@ -1,6 +1,9 @@
 # What is left
 
-One list, in order. A line marked **Human** is never done by an agent. Tick a line
+One list, in order. A line marked **Human** is Giuseppe's. Since 21 Nov his agent
+does the annotation, the review and the ratings, and he approves each on its
+report (`docs/decisions.md`); `make split` and `make eval-test` he launches
+himself. Tick a line
 when its *Done when* is true; decisions go in `docs/decisions.md`. Specifications:
 `docs/interfaces.md` and `docs/evaluation_protocol.md`. History of the code:
 `docs/handoff/`.
@@ -25,8 +28,9 @@ step and merges the branch into `main`.
 6. **Never**, whatever the step says:
    - open `data/test/` or any copy of the test texts (`CLAUDE.md`, rule 2);
    - run `make split`, `make eval-dev`, `make eval-test`, or any command with
-     `--backend cloud`: they spend the API allowance that the evaluation needs,
-     and Giuseppe launches them;
+     `--backend cloud`: they spend the API allowance that the evaluation needs.
+     Giuseppe launches `make split` and `make eval-test`; his agent launches the
+     others, on his go;
    - edit `configs/models.yaml`, `results/cache/`, a prompt, the fake lists in
      `src/omissis/replace/data/`, or anything that changes what the evaluation
      measures (`CLAUDE.md`, rule 6).
@@ -40,13 +44,15 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
 
 ## 1. Data (Giuseppe; protocol, section 3)
 
-- [ ] **Human — blind annotation of 13 texts, before any review.** It measures how
-  far a human agrees with the tags the generator wrote.
+- [ ] **Human — blind annotation of 13 texts, before any review.** Done by a
+  subagent that sees the raw text and the guide only; Giuseppe approves it. It
+  measures how far that annotator agrees with the tags the generator wrote: two
+  models, no human.
 
   ```
   uv run python -m omissis.eval.review export       # 13 plain texts in data/annotation/
   # add [[TYPE|text]] tags by the annotation guide, with no other file open;
-  # save each as data/annotation/<text_id>.<initials>.txt
+  # save each as data/annotation/<text_id>.AI.txt
   uv run python -m omissis.eval.review agreement    # results/dev/metrics/agreement.json
   ```
 
@@ -64,7 +70,8 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   uv run python -m omissis.eval.textgen check data/pool
   ```
 
-  Then add `"reviewed_by": "<initials>"` to the JSON by hand. A disagreement with
+  After Giuseppe has approved the agent's report, `"reviewed_by"` gets his
+  initials: they record the approval. A disagreement with
   the blind annotation that shows an unclear rule gets one line in
   `docs/annotation_guide.md`.
 - [ ] **Human — pilot: go or no-go**, recorded in `docs/decisions.md`. The numbers
@@ -85,21 +92,24 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   (`configs/models.yaml`): one daily allowance of the free tier, and a judge that
   is the judged model, which the protocol asks to declare. Re-pin before the first
   `make eval-dev` or not at all: a pin changes every run id.
-- [ ] **Human — `make eval-dev`**: the seven configurations, about 700 calls. It
-  prints the number of calls and waits for `y`; a run stopped by the daily limit resumes from
-  the cache. Then `uv run python -m omissis.eval.detection time --split dev` for
-  the latency table. Commit `results/cache/` and `results/dev/`.
-- [ ] **Human — judge validation** (protocol, section 9): rate 40 items blind.
+- [ ] **Human — `make eval-dev`**, launched by Giuseppe's agent on his go: the
+  seven configurations, 820 calls. It prints the number of calls and waits for
+  `y`; a run that stops resumes from the cache. Then
+  `uv run python -m omissis.eval.detection time --split dev` for the latency
+  table, then `make reproduce`, so that the scorecard holds it. Commit
+  `results/cache/` and `results/dev/`.
+- [ ] **Human — judge validation** (protocol, section 9): a subagent rates 40
+  items blind; Giuseppe approves the sheet before `accept` is run.
 
   ```
-  uv run python -m omissis.eval.judge sheets --split dev --raters <initials>
-  # fill results/dev/judge_validation/sheet_<initials>.csv; do not open key.json
+  uv run python -m omissis.eval.judge sheets --split dev --raters AI
+  # fill results/dev/judge_validation/sheet_AI.csv; do not open key.json
   uv run --env-file .env python -m omissis.eval.judge accept --split dev
   ```
 
   Record the outcome in `docs/decisions.md`.
-- [ ] **Human — read up to 20 restored replies per strategy** (`D4+R1`, `D4+R2`):
-  confirm or change `base.fuzzy_threshold`; count `wrong_mapping` and the R2 fakes
+- [ ] **Human — read up to 20 restored replies per strategy** (`D4+R1`, `D4+R2`),
+  by the agent, with the counts approved by Giuseppe: confirm or change `base.fuzzy_threshold`; count `wrong_mapping` and the R2 fakes
   left in the text (protocol, section 10); choose the examples of missed
   identifiers for the slides.
 
@@ -152,8 +162,8 @@ These steps need no result of the evaluation and touch different files.
     architecture, one line per stage of the pipeline; the evaluation in one
     paragraph (the seven configurations, the three contrasts), pointing to the
     protocol; `make reproduce`; limitations (threat model, pseudonymisation is
-    not anonymisation, derived values, synthetic data only, one reviewer and one
-    rater, and the list *Known and not fixed* below). The section *Results* says
+    not anonymisation, derived values, synthetic data only, no human annotator
+    or rater since 21 Nov, and the list *Known and not fixed* below). The section *Results* says
     that no result is reported yet. Keep the section on AI assistance.
   - Done when: every command written in the README runs as written on a clean
     clone, and the file holds no number of the evaluation and no claim of
@@ -214,8 +224,9 @@ These steps need no result of the evaluation and touch different files.
   - Do: from `results/dev/detected/` and the `per_text` lists of
     `results/dev/metrics/`, the identifiers each detector missed, grouped by kind
     of error, each with `text_id`, detector, type and the span; at the top the
-    number of D3 failures and the counts Giuseppe gives for `wrong_mapping` and
-    the R2 fakes left in the text. No model is called.
+    counts approved by Giuseppe for `wrong_mapping` and the R2 fakes left in the
+    text. The failures of D3 are written to no results file: they are not
+    counted. No model is called.
   - Done when: every example can be found again in the files it names.
 - [ ] **C2 · Results and error taxonomy** — after `make eval-test` — *Claimed by:* —
   - Files: `results/dev/error_taxonomy.md` (new); `docs/cards.md` (the fields left

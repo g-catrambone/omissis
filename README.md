@@ -167,8 +167,12 @@ has not run. What is left is in `docs/TODO.md`.
 - **Synthetic data only.** The texts were written by a model and are more regular
   than real mail. Texts by one author are not independent, so intervals over
   texts overstate precision.
-- **One reviewer per text and one rater** of the judge. The judge is the same
-  model as the cloud model.
+- **No human annotates the texts or rates the replies.** An AI agent reviews
+  the gold tags, annotates the 13 texts of the agreement and rates the 40 items
+  of the judge validation; one team member approves each on the agent's report
+  (`docs/decisions.md`, 21 Nov). So the agreement is between two models, the
+  judge is validated against a model, and the gold is reviewed by an LLM while
+  D3 and D4 are LLM detectors. The judge is the same model as the cloud model.
 - **Known and not fixed:**
   - An R2 amount that the reply writes without its decimals ("701 euro" for
     "701,00 euro") stays in the reply.
