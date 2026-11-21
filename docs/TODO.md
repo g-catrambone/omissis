@@ -78,7 +78,7 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   are in `results/pilot/pilot.md` and meet the rule, but on texts that were not
   reviewed: if the review changes one of the ten pilot texts, run
   `uv run --env-file .env python -m omissis.eval.pilot` again first.
-- [ ] **Human — `make split`**, once: 20 dev, 46 test. From here rule 2 of
+- [x] **Human — `make split`**, once: 20 dev, 46 test. From here rule 2 of
   `CLAUDE.md` covers every copy of the test texts; delete
   `results/scratch/pool-txt/`, `results/scratch/blind/` and
   `results/scratch/review/`, which hold copies and excerpts of them.
