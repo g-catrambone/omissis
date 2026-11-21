@@ -211,7 +211,8 @@ Declared limits are in `docs/handoff/block-2.md` (section 4) and
 - An R2 amount that the reply writes without its decimals ("701 euro" for
   "701,00 euro") stays in the reply; its entry is `dropped`.
 - Two replies of D3 that are not valid JSON give no spans for that text: with D4
-  the direct identifiers are still masked, the quasi-identifiers are not.
+  the direct identifiers found by D0, D1 and D2 are still masked; the
+  quasi-identifiers, the special categories and the `UTENTE` codes are not.
 - An empty reply of the local model is an error and is never cached: D3 stops the
   run, and at temperature 0 the same text may stop it again at the next launch.
 - Under R2 two people told apart only by a title ("Sig. Ferri", "Sig.ra Ferri")

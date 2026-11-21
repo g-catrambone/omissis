@@ -12,10 +12,11 @@ named; no number is written here.
   restoration).
 - Say: every person is invented. The profiles come in cohorts that share job,
   town or employer, so that the attacker has look-alike candidates to confuse.
-- Say: the split is fixed once, and the test texts were never opened while the
-  system was built; the whole protocol was frozen before the held-out run.
+- Say: the split is fixed once, and the test split is evaluated once, after the
+  protocol was frozen.
 - Say: the three references bound the space: nothing masked, direct identifiers
-  masked from the gold annotation, everything masked from the gold annotation.
+  and special categories masked from the gold annotation, everything masked from
+  the gold annotation.
 
 ## 2. How we measure privacy and utility
 
@@ -47,7 +48,7 @@ named; no number is written here.
 
 - On screen: three or four error examples from `results/dev/error_examples.md`
   and the taxonomy in `results/dev/error_taxonomy.md`.
-- Numbers here: D3 failures and leak rate from `results/dev/metrics/detection.json`;
+- Numbers here: leak rate from `results/dev/metrics/detection.json`;
   counts of `wrong_mapping` and of R2 fakes left in the text, given by the human
   inspection (protocol, section 10).
 - Say: derived values (a postcode computed for a fake town, a sum of masked

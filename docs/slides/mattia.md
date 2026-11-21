@@ -9,8 +9,8 @@ the file it comes from is named; no number is written here.
 - On screen: five boxes, D0 to D4, all returning the same span (offsets, type,
   confidence, source) into one merge rule: longer span wins, then confidence,
   then source priority.
-- Say: they go from cheap and predictable to slow and general. Each is used as
-  it ships: nothing is tuned to our texts.
+- Say: they go from cheap and predictable to slow and general. D1 and D2 are
+  used as they ship, with no tuning to our texts.
 
 ## 2. D0 — rules
 
@@ -33,8 +33,9 @@ the file it comes from is named; no number is written here.
 
 - Finds: names, emails, phones, tax and account numbers, from a multilingual
   token classifier (piiranha).
-- Misses: no label for quasi-identifiers or special categories; it covers only
-  part of an email or a codice fiscale; long texts are read in windows.
+- Misses: its only quasi-identifier label is the town, and it has none for
+  special categories; it covers only part of an email or a codice fiscale; long
+  texts are read in windows.
 - Say: licence is non-commercial: fine for a course project, a limit for reuse.
 
 ## 5. D3 — a local LLM

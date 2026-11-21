@@ -41,7 +41,8 @@ comes from is named; no number is written here.
 
 - On screen: four short claims, each with its reason.
   - **Taxonomy in three classes** (direct, quasi, special): masking policy is
-    per class, and the reference configurations isolate each class.
+    per class, and two reference configurations isolate the effect of masking
+    quasi-identifiers.
   - **The local LLM never returns offsets**: it returns text, we find it by
     string search. A model that invents a span cannot place it.
   - **Placeholders carry gender** (`[PERSONA_1_F]`): Italian agreement in the

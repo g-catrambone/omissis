@@ -3,7 +3,8 @@
 One entry per model role of `configs/models.yaml`, one for what D1 runs on, one for
 the dataset. Model ids and revisions are copied from `configs/models.yaml`, which
 prevails if the two ever differ. Every licence was read at the link given, on
-19 Nov 2026; **Human:** Giuseppe confirms them.
+19 Nov 2026, except where an entry says it was not read; **Human:** Giuseppe
+confirms them.
 
 ## Hosted models (GroqCloud)
 
@@ -79,10 +80,10 @@ of the pin. Use of the service is governed by the Groq Services Agreement
   the local Hugging Face cache and never stored in the repository. Its labels are
   mapped to our types (`src/omissis/detect/classifier.py`).
 - **Limits for us.** Non-commercial and no derivatives: usable for this course
-  project, not for a product built on Omissis. It has no label for
-  quasi-identifiers or special categories, and it covers only part of an email
-  or a codice fiscale. Its window is 256 tokens, so longer texts are read in
-  overlapping windows.
+  project, not for a product built on Omissis. Its only quasi-identifier
+  label is the town (`CITY`) and it has none for special categories; it covers
+  only part of an email or a codice fiscale. Its window is 256 tokens, so
+  longer texts are read in overlapping windows.
 
 ## What D1 runs on — Presidio and `it_core_news_lg`
 
@@ -120,7 +121,8 @@ of the pin. Use of the service is governed by the Groq Services Agreement
 - **Where it comes from.** Written for this project by the `generator` model from
   the profiles and one fixed prompt; tagged by the generator; each text to be
   reviewed by one team member (`data/pool/REVIEWERS.md`).
-- **Revision.** The files of `data/pool/` and `data/profiles/` at the tag `v1.0`.
+- **Revision.** The files of `data/dev/`, `data/test/` (checksums in
+  `data/split.json`) and `data/profiles/` at the tag `v1.0`.
   Split: after the split (texts in dev and in test).
 - **Licence.** Proposed: CC BY 4.0. Not decided (step C3 of `docs/TODO.md`).
 - **How we use it.** Every number of the evaluation is measured against its gold

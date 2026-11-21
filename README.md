@@ -102,8 +102,9 @@ Taxonomy: direct identifiers, quasi-identifiers and special categories
 
 66 synthetic emails, written from 30 invented profiles, are split once into dev
 and a held-out test set. Seven configurations are measured. Three are references:
-`REF-none` (nothing masked), `REF-oracle-direct` (gold direct identifiers masked)
-and `REF-oracle` (every gold span masked). Four use detectors and replacements:
+`REF-none` (nothing masked), `REF-oracle-direct` (gold direct identifiers and
+special categories masked, quasi-identifiers left visible) and `REF-oracle` (every
+gold span masked). Four use detectors and replacements:
 `D1+R1`, `D2+R1`, `D4+R1` and `D4+R2`. The privacy measures are an attacker LLM's
 linkage and attribute attacks against the profiles. The utility measures are a
 structured extraction task and a judged reply. Restoration is measured by
@@ -154,7 +155,8 @@ has not run. What is left is in `docs/TODO.md`.
   - An R2 amount that the reply writes without its decimals ("701 euro" for
     "701,00 euro") stays in the reply.
   - Two invalid JSON replies of D3 give no spans for that text. With D4 the
-    direct identifiers are still masked, but the quasi-identifiers are not.
+    direct identifiers found by D0, D1 and D2 are still masked; the
+    quasi-identifiers, the special categories and the `UTENTE` codes are not.
   - An empty reply of the local model stops the run and is never cached. At
     temperature 0 the same text may stop the next launch too.
   - Under R2, two people told apart only by a title ("Sig. Ferri",
