@@ -68,6 +68,7 @@ files that nothing asks for.
 | Backends | `src/omissis/backends/` | providers `groq` (hosted) and `local` (this machine), JSONL cache, replay |
 | Restore | `src/omissis/restore.py` | exact → normalised → fuzzy; outcome classes |
 | Pipeline | `src/omissis/pipeline.py`, `cli.py` | `mask`, `protect_send_restore`; the `omissis` command |
+| Feasibility check | `src/omissis/feasibility.py` | before sending, the app and `omissis run` refuse a calculation on masked amounts, dates or ages; a heuristic, not evaluated |
 | App | `src/omissis/app.py` | Gradio demo with replay mode |
 | Evaluation | `src/omissis/eval/` | data files, text generation, review, split, pilot, detection, attacks, utility, judge, statistics, report, runner |
 

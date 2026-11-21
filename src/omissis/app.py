@@ -5,6 +5,10 @@ highlighted, the restored reply and the disclosure list with any restoration
 problem. It starts in replay mode: no network, answers from `results/cache`. With
 backend `cloud` it reads and writes `results/scratch/app`, never `results/cache`.
 
+The request sent before the text is the field *Richiesta*, the default task unless the
+user writes another. A request for a calculation on masked amounts, dates or ages is not
+sent: `feasibility.check_text` stops it and the page says why.
+
 Run it with `make demo`. For backend `cloud` the key must be in the environment:
 `uv run --env-file .env python -m omissis.app`.
 """
@@ -18,9 +22,10 @@ from pathlib import Path
 from omissis.backends import CacheMissError
 from omissis.cli import DEFAULT_TASK
 from omissis.config import ConfigError, load_config
-from omissis.contracts import PipelineResult, RestoreOutcome
+from omissis.contracts import PipelineResult, RestoreOutcome, SpanType
 from omissis.detect import supported_detectors
 from omissis.eval.datasets import load_texts
+from omissis.feasibility import check_text
 from omissis.pipeline import protect_send_restore
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -28,6 +33,8 @@ CONFIG_FILE = ROOT / "configs" / "app.yaml"
 EXAMPLES_DIR = ROOT / "data" / "fixtures"
 SCRATCH_CACHE = Path("results/scratch/app")
 HEADERS = ["Surrogate", "Class", "Type", "Detector", "Reason", "Restoration"]
+# The requests offered under the field: the default task, and one the check stops.
+REQUESTS = [[DEFAULT_TASK], ["Calcola il totale degli importi indicati nell'email."]]
 
 Segments = list[tuple[str, str | None]]
 
@@ -63,18 +70,34 @@ def rows(result: PipelineResult) -> list[list[str]]:
     return table
 
 
+def refusal(blocked: dict[SpanType, int]) -> str:
+    """Why a request is not sent: the masked types and their counts, never a value."""
+    kinds = ", ".join(f"{count} {kind.value}" for kind, count in blocked.items())
+    return (
+        "Richiesta non inviata: chiede un calcolo, ma nel testo sono mascherati valori "
+        f"che il modello cloud non vede ({kinds}). Con i segnaposto non avrebbe numeri; "
+        "con i valori fittizi calcolerebbe un risultato sbagliato, che non si può "
+        "ripristinare. Questa richiesta si può soddisfare solo in locale."
+    )
+
+
 def process(
-    text: str, detector: str, strategy: str, backend: str
+    text: str, detector: str, strategy: str, backend: str, task: str = DEFAULT_TASK
 ) -> tuple[Segments, str, list[list[str]], str]:
-    """Run one text: masked pieces, restored reply, disclosure rows, a message."""
+    """Run one text with the request `task`: masked pieces, restored reply, disclosure
+    rows, a message. A request that the feasibility check stops is not sent."""
     if not text or not text.strip():
         return [], "", [], "Scrivi o scegli un testo."
+    task = task.strip() if task and task.strip() else DEFAULT_TASK
     cache = {"cache_dir": str(SCRATCH_CACHE)} if backend == "cloud" else {}
     try:
         config = load_config(
             CONFIG_FILE, {"detector": detector, "strategy": strategy, "backend": backend, **cache}
         )
-        result = protect_send_restore(text, DEFAULT_TASK, config)
+        blocked = check_text(text, task, config)
+        if blocked:
+            return [], "", [], refusal(blocked)
+        result = protect_send_restore(text, task, config)
     except CacheMissError:
         return (
             [],
@@ -110,7 +133,9 @@ def build():
             "riduce il rischio di re-identificazione, non lo elimina.\n\n"
             "Con i detector D3 e D4 il testo intero, non ancora pseudonimizzato, viene prima "
             "letto dal modello del ruolo `d3`: se quel modello è ospitato da un servizio "
-            "esterno, in quel passaggio il testo lascia questa macchina."
+            "esterno, in quel passaggio il testo lascia questa macchina.\n\n"
+            "Una richiesta di calcolo su importi, date o età mascherati non viene inviata: "
+            "il modello non vedrebbe i valori reali."
         )
         with gr.Row():
             detector = gr.Dropdown(detectors, value=detectors[0], label="Detector")
@@ -118,12 +143,18 @@ def build():
             backend = gr.Dropdown(["replay", "cloud"], value="replay", label="Backend")
         text = gr.Textbox(lines=12, label="Testo")
         gr.Examples(examples, inputs=text, label="Esempi (testi sintetici)")
+        task = gr.Textbox(lines=2, value=DEFAULT_TASK, label="Richiesta")
+        gr.Examples(REQUESTS, inputs=task, label="Richieste di esempio")
         button = gr.Button("Proteggi e invia", variant="primary")
         message = gr.Markdown()
         masked = gr.HighlightedText(label="Testo inviato al modello", combine_adjacent=False)
         reply = gr.Textbox(lines=12, label="Risposta con i valori ripristinati")
         table = gr.Dataframe(headers=HEADERS, label="Che cosa è stato sostituito", wrap=True)
-        button.click(process, [text, detector, strategy, backend], [masked, reply, table, message])
+        button.click(
+            process,
+            [text, detector, strategy, backend, task],
+            [masked, reply, table, message],
+        )
     return page
 
 

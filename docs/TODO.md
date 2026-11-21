@@ -172,6 +172,40 @@ These steps need no result of the evaluation and touch different files.
     which file of `results/<split>/metrics/` it comes from.
   - Done when: the draft covers its part and holds no number. The drafts are a
     support: the humans write the slides.
+- [x] **B5 · Feasibility check before sending** — *Claimed by:* Giuseppe
+  - Branch: `feasibility-check`, from `main`, with its own pull request
+    (`docs/decisions.md`, 21 Nov). The other steps stay on `final-steps`.
+  - Files: `src/omissis/feasibility.py` and `tests/core/test_feasibility.py` (new);
+    `src/omissis/app.py` and `tests/app/test_app.py` (new tests only);
+    `src/omissis/cli.py`; `docs/interfaces.md` (section 6), `docs/decisions.md`,
+    `README.md` (Run one text, Demo, Limitations), `CLAUDE.md` (one row of the
+    components table), `docs/slides/giuseppe.md`. Not `pipeline.py`, `config.py`,
+    `contracts.py`, `eval/`, `backends/`, `configs/`, `results/`.
+  - Do: `feasibility.check(task, entities)` returns the masked types that block
+    the request, each with its number of entities, or nothing. A request is
+    blocked when it holds a calculation cue (a fixed list of Italian stems, read
+    without case and accents: calcola, somma, totale, differenza, percentuale,
+    media, "in tutto", "quanti giorni" and the like) and at least one masked
+    entity is an amount, a date, an age or a date of birth. It reads the request
+    alone, never the text. No model, no configuration key, no new dataclass in
+    `contracts.py`. `feasibility.check_text(text, task, config, gold_spans)`
+    masks the text with `pipeline.mask`, erases that vault in every case, also
+    on an error, and calls `check`. The app and `omissis run` call it, and call
+    `protect_send_restore` only when nothing blocks. A blocked request is not
+    sent: the app shows the reason in its message, `omissis run` prints one line
+    on standard error and exits with status 2. The reason names types and
+    counts, never a value. The app gains a field for the request: `process`
+    takes `task` as its last argument, `DEFAULT_TASK` by default. `batch` and
+    `mask` do not change.
+  - Done when: the tests of the app and of the command line that exist today
+    pass unedited; a blocked request makes no call to the role `cloud`, in the
+    app and on the command line, and its message holds no original value (with
+    D3 or D4 the check itself calls the role `d3`, as any run does); with detector
+    D0 on `fx-bank-02` the request "Calcola il totale dei due importi" is
+    blocked, and the default request is sent as before; `git diff main --stat`
+    shows nothing under the excluded paths; `make reproduce` leaves `results/`
+    unchanged; README and slides call it a heuristic that is not evaluated and
+    say what it does not see.
 
 ## C. Open to everyone: waits for results
 

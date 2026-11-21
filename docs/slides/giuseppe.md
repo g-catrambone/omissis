@@ -39,7 +39,7 @@ comes from is named; no number is written here.
 
 ## 4. Design choices
 
-- On screen: four short claims, each with its reason.
+- On screen: five short claims, each with its reason.
   - **Taxonomy in three classes** (direct, quasi, special): masking policy is
     per class, and two reference configurations isolate the effect of masking
     quasi-identifiers.
@@ -49,6 +49,12 @@ comes from is named; no number is written here.
     reply stays right. We measure what that costs in privacy (attribute `gender`).
   - **Restoration never guesses**: an unresolved token is reported, never
     silently filled.
+  - **A request that masking makes impossible is refused, not answered wrong**:
+    a calculation on masked amounts is stopped before it is sent. With
+    placeholders the model has no number; with fakes it would return a
+    plausible, wrong one. The check is a heuristic and is not evaluated: it
+    reads the request alone, by a fixed list of Italian cues, so it misses a
+    calculation asked inside the text or worded outside the list.
 - Say: the text is pseudonymised, and what we measure is its re-identification
   risk.
 
@@ -58,6 +64,9 @@ comes from is named; no number is written here.
 - Do: pick one fixture; show the masked text as it is sent, with surrogates
   highlighted; show the reply restored; scroll the disclosure list.
 - Say: what you see on the left is exactly what left the machine.
+- Do: on a bank fixture, pick the second example request (a total of the
+  amounts): the page does not send it and says why. This step needs no
+  recording.
 - Fallback: a screen recording of the same steps, in case the laptop fails.
 
 ## 6. Conclusions
