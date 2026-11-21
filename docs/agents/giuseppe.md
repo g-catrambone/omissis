@@ -43,9 +43,11 @@ replacement strategy before his ratings are finished.
 - **Cache key** includes the model id *and revision*, the full prompt and the
   decoding parameters. Replay must fail loudly on a cache miss, never fall back
   to the network.
-- **The app** runs texts through `pipeline.protect_send_restore` only. Its
-  detector selector reads `omissis.detect.supported_detectors()`: it shows the
-  detectors that can run on the machine.
+- **The app** asks `feasibility.check_text` first and runs a text through
+  `pipeline.protect_send_restore` only when nothing blocks (step B5). The check
+  stays outside the pipeline: the evaluation never calls it. The detector
+  selector reads `omissis.detect.supported_detectors()`: it shows the detectors
+  that can run on the machine.
 - **Fake-value lists** live in `src/omissis/replace/data/` and are frozen: the
   profile pool is disjoint from them.
 
