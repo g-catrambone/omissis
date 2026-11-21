@@ -451,8 +451,18 @@ and `results/dev/error_taxonomy.md`.
 
 ## 6. Who calls what
 
-- The app runs texts through `pipeline.protect_send_restore` only;
-  it also calls `supported_detectors` for its detector selector and
+- The app and `omissis run` first ask
+  `feasibility.check_text(text, task, config, gold_spans=None) -> dict[SpanType, int]`.
+  A request without a calculation cue returns an empty dict at once, with no
+  masking: an ordinary request is handled as before. With a cue, it masks the text
+  with `pipeline.mask`, erases that vault, and returns the masked types that block
+  the request, each with its number of entities: amounts, dates, ages and dates of
+  birth. It returns an empty dict when nothing blocks, and never a value of the text. Only then, and only
+  when nothing blocks, they run the text through `pipeline.protect_send_restore`. A
+  blocked request is not sent: the app shows the reason, `omissis run` prints one
+  line on standard error and exits with status 2. `omissis batch`, `omissis mask`
+  and the evaluation never call the check.
+- The app also calls `supported_detectors` for its detector selector and
   `omissis.eval.datasets` to load its examples.
 - The evaluation calls `omissis.eval.datasets`, `pipeline.mask`,
   `pipeline.protect_send_restore`, `backends.complete` and, for the detection

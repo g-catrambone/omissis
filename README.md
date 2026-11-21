@@ -60,6 +60,12 @@ redirect it under `results/`. A run configuration (`docs/interfaces.md`,
 section 4) chooses the detector, the strategy and the backend: `cloud` calls the
 model, and `replay` answers from the cache only.
 
+`--task` sets the request sent before the text (the default asks for a draft
+reply). Before sending, `run` checks it: a request for a calculation (a total, a
+difference, a percentage) on a text where amounts, dates or ages were masked is
+not sent, and the command ends with one line on standard error and status 2.
+With `configs/skeleton.yaml` amounts stay visible, so nothing is stopped.
+
 ## Demo
 
 ```
@@ -71,6 +77,11 @@ time, the masked text as it is sent, the restored reply and the disclosure list.
 **Not ready yet:** the page starts, but its runs have not been recorded in
 `results/cache/` (step C4 of `docs/TODO.md`), so every fixture ends in a cache
 miss.
+
+The field *Richiesta* holds the request sent before the text. A request for a
+calculation on masked amounts is not sent, and the page says why. This needs no
+cache, so it works today: pick one of the bank fixtures and the second example
+request.
 
 ## Architecture
 
@@ -145,7 +156,14 @@ has not run. What is left is in `docs/TODO.md`.
   risk; they do not prove it is low.
 - **Derived values.** The model can compute values from the surrogates (a
   postcode for a fake town, a sum of masked amounts), and restoration cannot
-  undo them.
+  undo them. The app and `omissis run` refuse a request that asks for a
+  calculation on masked amounts, dates or ages (`src/omissis/feasibility.py`).
+  This check is a heuristic and is not evaluated. It reads the request alone, by
+  a fixed list of Italian cues: it misses a calculation asked inside the text
+  or worded outside the list. It also stops requests that compute nothing: one
+  that only asks to copy a total, or "Dividi la risposta in due paragrafi".
+  With detector D0 it sees amounts only. Values the model derives on its own
+  are not caught.
 - **Synthetic data only.** The texts were written by a model and are more regular
   than real mail. Texts by one author are not independent, so intervals over
   texts overstate precision.

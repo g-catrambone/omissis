@@ -8,6 +8,9 @@ reply, which holds the original values, so never redirect it under `results/`.
 Every error ends the command with one line on standard error and status 2: a wrong
 configuration or input, a cache miss in replay, a provider that fails after its
 retries, a broken cache line. The calls already answered stay in the cache.
+
+`run` asks `feasibility.check_text` before it sends: a request for a calculation on
+masked amounts, dates or ages is not sent, and ends the command in the same way.
 """
 
 from __future__ import annotations
@@ -28,6 +31,7 @@ from omissis.config import (
 )
 from omissis.contracts import PipelineResult, Span
 from omissis.eval.datasets import TextRecord, load_text, load_texts
+from omissis.feasibility import check_text
 from omissis.pipeline import mask, protect_send_restore
 
 DEFAULT_TASK = "Scrivi una bozza di risposta a questa email."
@@ -166,6 +170,14 @@ def main(argv: list[str] | None = None) -> int:
         config = load_config(args.config, overrides)
         if args.command == "run":
             text, gold = _read_input(args.input, config)
+            blocked = check_text(text, args.task, config, gold)
+            if blocked:
+                kinds = ", ".join(f"{kind.value}: {count}" for kind, count in blocked.items())
+                raise RuntimeError(
+                    "request not sent: it asks for a calculation on masked values "
+                    f"({kinds}). The cloud model has no number behind a placeholder and "
+                    "computes on the fake under R2: the result could not be restored"
+                )
             _print_result(protect_send_restore(text, args.task, config, gold))
         else:
             for record in _records(args.input_dir):
@@ -174,7 +186,8 @@ def main(argv: list[str] | None = None) -> int:
                 print(json.dumps(line, ensure_ascii=False))
     except (RuntimeError, ValueError, OSError) as exc:
         # ConfigError, DataError and a text that is not UTF-8 are ValueErrors; a cache
-        # miss, a detector not built and a provider that fails are RuntimeErrors.
+        # miss, a detector not built, a provider that fails and a request that the
+        # feasibility check stops are RuntimeErrors.
         print(f"omissis: error: {exc}", file=sys.stderr)
         return 2
     return 0

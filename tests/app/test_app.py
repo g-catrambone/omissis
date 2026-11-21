@@ -125,3 +125,47 @@ def test_page_says_that_d3_and_d4_read_the_whole_text_before_it_is_masked(setup)
     page = app.build()
     header = next(b for b in page.blocks.values() if type(b).__name__ == "Markdown").value
     assert "D3 e D4" in header and "non ancora pseudonimizzato" in header
+
+
+# --- the request and its feasibility check (step B5) ---------------------------------------
+
+SUM = "Calcola il totale degli importi indicati"
+
+
+def test_a_calculation_on_masked_amounts_is_not_sent(setup):
+    prompts, tmp_path = setup
+    masked, reply, table, message = app.process(RECORD.text, "D0", "R1", "cloud", SUM)
+    assert (masked, reply, table) == ([], "", [])
+    assert prompts == [] and not (tmp_path / "scratch").exists()  # nothing left the machine
+    assert "non inviata" in message and "1 IMPORTO" in message
+    assert "320,00" not in message  # the reason names types and counts, never a value
+
+
+def test_a_request_without_a_calculation_is_sent_as_written(setup):
+    prompts, _ = setup
+    task = "Riassumi questa email in tre punti."
+    masked, _, _, message = app.process(RECORD.text, "D0", "R1", "cloud", task)
+    sent = "".join(piece for piece, _ in masked)
+    assert prompts == [f"{task}\n\n{sent}"] and "Ripristino completo" in message
+
+
+def test_an_empty_request_is_the_default_one(setup):
+    prompts, _ = setup
+    app.process(RECORD.text, "D0", "R1", "cloud", "  ")
+    assert len(prompts) == 1 and prompts[0].startswith(f"{app.DEFAULT_TASK}\n\n")
+
+
+def test_a_detector_that_fails_during_the_check_shows_its_message(setup, monkeypatch):
+    def not_built(text, detector, config):
+        raise NotImplementedError("detector D9 is not built yet")
+
+    monkeypatch.setattr("omissis.pipeline.detect", not_built)
+    _, _, _, message = app.process(RECORD.text, "D0", "R1", "cloud", SUM)
+    assert message == "Non ancora disponibile: detector D9 is not built yet"
+
+
+def test_page_has_a_field_for_the_request_with_the_default_task(setup):
+    pytest.importorskip("gradio")
+    page = app.build()
+    boxes = [b for b in page.blocks.values() if type(b).__name__ == "Textbox"]
+    assert [b.value for b in boxes if b.label == "Richiesta"] == [app.DEFAULT_TASK]
