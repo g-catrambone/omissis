@@ -1,4 +1,4 @@
-"""The dispatch table of `detect` and `supported_detectors` (task 4.0)."""
+"""The dispatch table of `detect` and `supported_detectors`."""
 
 from pathlib import Path
 from types import SimpleNamespace

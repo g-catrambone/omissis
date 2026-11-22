@@ -5,12 +5,15 @@ human work that is left. Read the shared `CLAUDE.md` first; it prevails.
 
 Write code, comments, commit messages and docs in English.
 
-**When told to start or continue**, take the first open line of `docs/TODO.md`
-that is not marked **Human**, or the one Giuseppe names. Do one item per hand-back.
+The project is closed: the test split was evaluated once on 22 Nov 2026 and code,
+data and results are frozen (`CLAUDE.md`, rule 6).
 
-Giuseppe reviews what the others write on `final-steps`. When he asks you to help,
-read the commits of the step (their messages start with its id) against its *Done
-when*, run the tests and give findings with file and line. You advise; he reviews.
+**When told to start or continue**, take the line of *What is left* in
+`docs/process/TODO.md` that Giuseppe names. Do one item per hand-back.
+
+Giuseppe reviews what the others write. When he asks you to help, read their commits
+against what the line asks, run the tests and give findings with file and line. You
+advise; he reviews.
 
 The lines marked **Human** are Giuseppe's. Since 21 Nov (`docs/decisions.md`) you
 do three of them for him, in subagents that share no context: the blind

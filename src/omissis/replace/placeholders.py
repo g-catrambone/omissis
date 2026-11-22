@@ -1,4 +1,4 @@
-"""R1: typed placeholders (block 1; grammar in docs/interfaces.md, section 2).
+"""R1: typed placeholders (grammar in docs/interfaces.md, section 2).
 
 An entity gets `[TYPE_n]`, or `[PERSONA_n_M]` / `[PERSONA_n_F]` when its gender is
 known. There is one counter per type per session: the session is the vault, so the

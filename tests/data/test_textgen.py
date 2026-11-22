@@ -1,4 +1,4 @@
-"""Tagged text, generator and review tools (task 3.2). No test needs the network."""
+"""Tagged text, generator and review tools. No test needs the network."""
 
 import json
 from pathlib import Path

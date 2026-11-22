@@ -1,4 +1,4 @@
-"""Loaders for texts with gold and for profiles (block 1; formats in docs/interfaces.md, section 5).
+"""Loaders for texts with gold and for profiles (formats in docs/interfaces.md, section 5).
 
 Every check here is a rule of the file format or of docs/evaluation_protocol.md,
 sections 2 and 3. A file that breaks one raises `DataError` naming the file.

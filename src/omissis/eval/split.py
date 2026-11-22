@@ -1,4 +1,4 @@
-"""`make split` (task 3.5; protocol, section 4). HUMANS ONLY: it is run once.
+"""`make split` (protocol, section 4). HUMANS ONLY: it is run once.
 
 20 texts go to dev and 46 to test. The pilot texts go to dev; the others are split by
 seed, stratified by `domain` x `has_special`, so that dev reaches 20. Every text must

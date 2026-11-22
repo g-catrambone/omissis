@@ -1,4 +1,4 @@
-"""Feasibility check before sending (step B5; docs/decisions.md, 21 Nov 2026).
+"""Feasibility check before sending (docs/decisions.md, 21 Nov 2026).
 
 A calculation on a masked value cannot come back right. With R1 the cloud model has no
 number; with R2 it computes on the fake, and restoration cannot undo the result

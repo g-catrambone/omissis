@@ -1,4 +1,4 @@
-"""Provider `groq` and the request rules of task 2.4. The HTTP call is always mocked."""
+"""Provider `groq` and its request rules. The HTTP call is always mocked."""
 
 import http.client
 import io

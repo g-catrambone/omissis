@@ -1,4 +1,4 @@
-"""Span merging and the `detect` entry point (block 1)."""
+"""Span merging and the `detect` entry point."""
 
 import logging
 from pathlib import Path

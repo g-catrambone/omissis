@@ -5,7 +5,7 @@ CLAUDE.local.md
 # secrets
 .env
 
-# caches of runs that docs/TODO.md does not ask for (CLAUDE.md)
+# caches of runs that docs/process/TODO.md does not ask for (CLAUDE.md)
 results/scratch/
 
 # python

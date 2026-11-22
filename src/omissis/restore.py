@@ -1,7 +1,7 @@
 """Restoration of original values in the cloud model's reply. Never guesses.
 
 Three steps, for R1 placeholders and for R2 fake values: exact match, normalised
-match, fuzzy match at or above the threshold (task 2.6).
+match, fuzzy match at or above the threshold.
 
 R1. A *placeholder-like token* is a known type label followed by a number and,
 optionally, a gender letter. The parts may be joined by underscores, white space (a

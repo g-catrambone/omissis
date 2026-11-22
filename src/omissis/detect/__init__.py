@@ -1,4 +1,4 @@
-"""Detection entry point (block 4): one dispatch table from detector id to detector."""
+"""Detection entry point: one dispatch table from detector id to detector."""
 
 from __future__ import annotations
 
@@ -29,8 +29,8 @@ def _d4(text: str, config: RunConfig) -> list[Span]:
     return hybrid.find(text, config, {d: entry.find for d, entry in _DETECTORS.items()})
 
 
-# The only place a detector id is tied to code. A detector is built when it is here:
-# each task of block 4 added its line. An id with no line never falls through to D0.
+# The only place a detector id is tied to code. A detector is built when it is here.
+# An id with no line never falls through to D0.
 _DETECTORS: dict[DetectorId, _Detector] = {
     DetectorId.D0: _Detector(_d0),
     DetectorId.D1: _Detector(presidio.find, presidio.NEEDS),
@@ -70,7 +70,7 @@ def detect(text: str, detector: DetectorId, config: RunConfig) -> list[Span]:
     detector = DetectorId(detector)
     entry = _DETECTORS.get(detector)
     if entry is None:
-        raise NotImplementedError(f"detector {detector.value} is not built yet (block 4)")
+        raise NotImplementedError(f"detector {detector.value} is not built yet")
     missing = _missing(entry)
     if missing:
         raise ConfigError(

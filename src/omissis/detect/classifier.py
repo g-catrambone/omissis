@@ -1,4 +1,4 @@
-"""D2: a ready-made token classifier for personal data (task 4.2).
+"""D2: a ready-made token classifier for personal data.
 
 The model is the one pinned under role `d2` in the models file (id and revision on
 the Hugging Face hub). It is used as it is: no fine-tuning, and the weights are

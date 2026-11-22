@@ -1,4 +1,4 @@
-"""Rows, scorecard and chart from the per-text outcomes (task 3.10; protocol, 10 to 13).
+"""Rows, scorecard and chart from the per-text outcomes (protocol, 10 to 13).
 
 Every estimate, interval and test is a function of the `per_text` lists and of the
 seed stored in the metrics files. `rebuild(split)` recomputes the rows of every file

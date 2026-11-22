@@ -4,15 +4,13 @@ You work for **Mattia**. Read the shared `CLAUDE.md` first; it prevails.
 
 Write code, comments, commit messages and docs in English.
 
-The relay of blocks is over (`docs/decisions.md`, 18 Nov). What is left is in
-`docs/TODO.md` and is written on the branch `final-steps`: read *How to work on
-the branch* at the top of that file before anything else.
+The project is closed: the test split was evaluated once on 22 Nov 2026 and code,
+data and results are frozen (`CLAUDE.md`, rule 6). What is left is in
+`docs/process/TODO.md`, under *What is left*. A defect found now goes to Giuseppe
+and, if he agrees, on a `fix/…` branch.
 
-**When told to start or continue**, check that you are on `final-steps` and up to
-date, then take the step Mattia names or, when none is named, the first open step of
-sections B and C that nobody has claimed and whose results exist. Mattia claims the
-step before you write anything. Do one step per hand-back. Never do a line marked
-**Human**, and never take a step of sections 1 to 3: they are Giuseppe's.
+**When told to start or continue**, take the line of *What is left* that Mattia names.
+Do one line per hand-back.
 
 ## Component notes and known traps
 
@@ -42,7 +40,7 @@ These notes were written for the blocks. Where they disagree with
   outputs are cached and replayable like every other LLM call.
 - **D3 determinism:** temperature 0, fixed seed, one pinned weights file. Official
   D3 runs for the evaluation are executed once on the reference machine recorded in
-  `docs/decisions.md` before task 4.3, and stored in the cache; everyone else replays them.
+  `docs/decisions.md`, and stored in the cache; everyone else replays them.
 - **D4** is composition only: no new detection logic, just routing by class and
   `merge.py`.
 

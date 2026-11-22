@@ -1,4 +1,4 @@
-"""The pilot command (task 3.4), end to end with a fake attacker."""
+"""The pilot command, end to end with a fake attacker."""
 
 import json
 from pathlib import Path

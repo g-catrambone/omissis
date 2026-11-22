@@ -1,4 +1,4 @@
-"""The feasibility check before sending (step B5): the cues, the masked types that block a
+"""The feasibility check before sending: the cues, the masked types that block a
 request, and what `omissis run` does with a blocked one. No test needs the network."""
 
 from pathlib import Path

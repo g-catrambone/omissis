@@ -1,4 +1,4 @@
-"""D3 local LLM (task 4.3), with a fake provider: no test needs a model."""
+"""D3 local LLM, with a fake provider: no test needs a model."""
 
 import json
 import logging

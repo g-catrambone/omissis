@@ -1,4 +1,4 @@
-"""R2: realistic fake values (task 2.5).
+"""R2: realistic fake values.
 
 Every entity gets a fake value of its own type, drawn with a generator seeded by the
 run seed, the type and the value: the same value gets the same fake in every text
@@ -41,7 +41,7 @@ Grazia", no title): a mention of the surname alone is written, and restored, as 
 surname alone.
 
 The lists in `data/` were written for this project. The profile pool of the
-evaluation is built to be disjoint from them: do not change them after gate G2.
+evaluation is built to be disjoint from them: they are frozen: do not change them.
 """
 
 from __future__ import annotations

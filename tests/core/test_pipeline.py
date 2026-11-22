@@ -1,4 +1,4 @@
-"""Pipeline and CLI (block 1); the resolver has its own tests. No test needs the network."""
+"""Pipeline and CLI; the resolver has its own tests. No test needs the network."""
 
 import json
 from pathlib import Path

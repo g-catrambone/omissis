@@ -1,4 +1,4 @@
-"""Entity resolver (task 2.3): rules only."""
+"""Entity resolver: rules only."""
 
 import pytest
 

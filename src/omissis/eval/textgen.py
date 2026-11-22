@@ -1,4 +1,4 @@
-"""Text generator, tagged-text format and review tools (task 3.2; protocol, section 2).
+"""Text generator, tagged-text format and review tools (protocol, section 2).
 
 A text is written by the `generator` model from one profile and one line of the plan,
 with every sensitive span marked inline as `[[TYPE|text]]`. After the email the model

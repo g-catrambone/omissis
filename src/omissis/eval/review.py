@@ -1,4 +1,4 @@
-"""Review assignment, double annotation and agreement (task 3.5; protocol, section 3).
+"""Review assignment, double annotation and agreement (protocol, section 3).
 
     python -m omissis.eval.review assign       write data/pool/REVIEWERS.md
     python -m omissis.eval.review export       write data/annotation/<text_id>.txt

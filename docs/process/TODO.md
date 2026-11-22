@@ -1,17 +1,31 @@
-# What is left
+# Closing steps
 
-One list, in order. A line marked **Human** is Giuseppe's. Since 21 Nov his agent
-does the annotation, the review and the ratings, and he approves each on its
-report (`docs/decisions.md`); `make split` and `make eval-test` he launches
-himself. Tick a line
-when its *Done when* is true; decisions go in `docs/decisions.md`. Specifications:
-`docs/interfaces.md` and `docs/evaluation_protocol.md`. History of the code:
-`docs/handoff/`.
+The list the team worked from between 18 and 22 Nov 2026, kept as a record. Every
+step below is done except the ones under *What is left*. Decisions are in
+`docs/decisions.md`; specifications in `docs/interfaces.md` and
+`docs/evaluation_protocol.md`; the history of the code in `docs/process/handoff/`.
 
-## How to work on the branch `final-steps`
+## What is left
 
-Everything below is written on one branch, `final-steps`. Giuseppe reviews each
-step and merges the branch into `main`.
+- [ ] **Clean-clone check on a second machine** (a member other than Giuseppe):
+  `make setup`, `make test`, `make lint`, `make reproduce`, then `make demo` with
+  the network off. `git status` must show no change.
+- [ ] **Tag `v1.0`** on `main`, after the check above (Giuseppe).
+- [ ] **Mattia and Andrea:** their lines in `docs/ai_use.md`; the entries of
+  `docs/decisions.md` marked "to be confirmed"; the numbers in their slide drafts
+  (`docs/slides/`), each from `results/<split>/metrics/`.
+- [ ] **Presentation:** the final slides; two timed rehearsals, all three; the demo
+  run offline before each rehearsal.
+
+## How the branch `final-steps` worked
+
+These rules applied while the branch was open (18–22 Nov); they are kept as a
+record. A line marked **Human** was Giuseppe's. Since 21 Nov his agent did the
+annotation, the review and the ratings, and he approved each on its report
+(`docs/decisions.md`); `make split` and `make eval-test` he launched himself.
+
+Everything below was written on one branch, `final-steps`. Giuseppe reviewed each
+step and merged the branch into `main`.
 
 1. **Start from the branch.** `git switch final-steps && git pull`. Nobody pushes
    to `main`.
@@ -162,7 +176,7 @@ These steps need no result of the evaluation and touch different files.
     `it_core_news_lg`), one for the dataset of 66 synthetic emails. Each entry:
     what it is, where it comes from (link), the revision we pin, its licence,
     how we use it, its limits for us. Start from the lines proposed in
-    `docs/handoff/block-2.md` (section 6) and `docs/handoff/block-3.md`
+    `docs/process/handoff/block-2.md` (section 6) and `docs/process/handoff/block-3.md`
     (section 7). Read every licence at its source, today, and give the link
     where you read it: a licence you could not read there is written "not
     verified", never from memory. The numbers of the dataset that the split
@@ -251,23 +265,20 @@ These steps need no result of the evaluation and touch different files.
     limited to what the decision rule of the protocol, section 12, supports.
   - **Human:** Giuseppe checks every headline number against
     `results/<split>/metrics/`.
-- [ ] **C3 · README results, licence, release** (Giuseppe) — after `make eval-test`
-  - Files: `README.md` (section *Results*, with the chart), `LICENSE` (new).
-  - **Human:** confirm the licences (default: MIT for code, CC BY 4.0 for the
-    synthetic data); clean-clone check on a second machine with `make reproduce`;
-    tag `v1.0`.
-- [ ] **C4 · Presentation** (Thu 26 Nov at the earliest)
-  - The numbers go into the slide drafts, each from `results/<split>/metrics/`.
-  - **Human — record the demo** (Giuseppe): run the fixtures of the demo once
-    through `omissis run --backend cloud` on a configuration whose `cache_dir` is
-    `results/cache`, with the task text the app sends, and commit the cache; run
-    the demo offline before each rehearsal.
-  - **Human:** the final slides; two timed rehearsals, all three.
+- [x] **C3 · README results, licence** (Giuseppe) — after `make eval-test`
+  - Files: `README.md` (section *Results*, with the chart), `LICENSE`.
+  - Done on 22 Nov: the licences are MIT for the code and CC BY 4.0 for the
+    synthetic data and the results (`docs/decisions.md`). The clean-clone check on
+    a second machine and the tag `v1.0` are under *What is left*.
+- [x] **C4 · Demo recorded** (22 Nov)
+  - The replies of the five fixtures for every detector and both strategies, with
+    the two example requests, are in `results/cache/` (`docs/decisions.md`): the
+    demo answers offline. The slides and the rehearsals are under *What is left*.
 
 ## Known and not fixed
 
-Declared limits are in `docs/handoff/block-2.md` (section 4) and
-`docs/handoff/block-3.md` (section 5). Added on 18 Nov:
+Declared limits are in `docs/process/handoff/block-2.md` (section 4) and
+`docs/process/handoff/block-3.md` (section 5). Added on 18 Nov:
 
 - An R2 amount that the reply writes without its decimals ("701 euro" for
   "701,00 euro") stays in the reply; its entry is `dropped`.

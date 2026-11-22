@@ -1,4 +1,4 @@
-"""The two utility tasks of the protocol, section 8 (task 3.6).
+"""The two utility tasks of the protocol, section 8.
 
 Both run through `pipeline.protect_send_restore` for every configuration, `REF-none`
 included, and are scored after restoration.
