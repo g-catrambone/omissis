@@ -118,7 +118,8 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
 ## 3. Evaluation on the held-out split (Giuseppe)
 
 - [ ] **Human — `make eval-test`**, once, after `make eval-dev` has reproduced the
-  committed dev results on the same machine. A launch that stops half-way is
+  committed dev results on the same machine, but for the attacker's replies cut
+  at the token limit (protocol, section 7). A launch that stops half-way is
   resumed as the protocol says in section 4. If the judge was rejected, fill the
   sheet of the fallback before any result is reported.
 

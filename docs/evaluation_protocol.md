@@ -220,6 +220,10 @@ its category). Output: JSON with the three
 most likely candidates in order. Metrics: top-1 and top-3 accuracy, for
 N = 10 and N = 25. The prompt asks for a ranking in every case; unparseable
 output counts as a miss and is counted separately for each configuration.
+A reply that the model cuts at the token limit is unparseable and is not
+written to the cache: it is asked again at the next launch, so the count, and
+with it the top-1 of a configuration, can differ between two launches by
+those texts. The scorecard shows the count beside the rows.
 **Privacy score** of a configuration = 1 − top-1 accuracy at N = 25.
 **Limit to declare, and its control.** Seven bank texts are about a loan or a
 mortgage that the profile of their author does not hold (`docs/decisions.md`,
@@ -392,8 +396,10 @@ calls and estimated spend per configuration.
 - **Chart**: x = privacy score, y = utility score, one point per
   configuration of section 5 with 95% intervals on both axes, chance marked.
 - **Scorecard**: one row per configuration; columns: linkage top-1 and top-3
-  at N = 10 and 25, attribute accuracy, T3, T1, utility, full-restoration
-  rate. Below it, the control of section 7: linkage top-1 at N = 25 without
+  at N = 10 and 25, the linkage replies not parsed at each N, attribute
+  accuracy, T3, T1, utility, full-restoration rate. The utility cell is empty
+  where T1 is not reported: T3 alone is not the utility score of section 8.
+  Below it, the control of section 7: linkage top-1 at N = 25 without
   the seven loan texts, beside the value on all texts. A second table has
   one row per detector D0 to D4: recall by class, leak rate, latency.
 - **Error taxonomy**: categorised dev examples of missed identifiers, failed

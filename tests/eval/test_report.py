@@ -49,6 +49,56 @@ def test_no_scorecard_when_there_is_no_row(tmp_path):
     assert not (tmp_path / "pilot" / "scorecard.md").exists()
 
 
+def test_scorecard_has_no_utility_without_t1_and_counts_the_replies_not_parsed():
+    # Protocol, sections 7 and 8: T3 alone is not the utility score, and an attacker's
+    # reply that cannot be read (one cut at the token limit) is a miss counted apart.
+    names, ids = ("REF-none", "D4+R1"), [f"t{i}" for i in range(6)]
+    cut = ("D4+R1", 25, "t0")
+    attack = [
+        {"config": c, "n": n, "text_id": t, "parsed": (c, n, t) != cut}
+        | dict.fromkeys(("top1", "top3"), (c, n, t) != cut)
+        for c in names
+        for n in (10, 25)
+        for t in ids
+    ]
+    answers = dict.fromkeys(report.attacks.ATTRIBUTES, "x")
+    guessed = [
+        {"config": c, "text_id": t, "invalid": [], "truth": answers}
+        | {"correct": dict.fromkeys(answers, True)}
+        for c in names
+        for t in ids
+    ]
+    restored = [
+        {"config": c, "text_id": t, "fully_restored": True, "outcomes": {}, "restored_fakes": 0}
+        for c in names
+        for t in ids
+    ]
+    useful = per_text("REF-none", 0.4, 1.0) + per_text("D4+R1", 0.4, None)
+    card = report.scorecard(
+        "dev",
+        {
+            "linkage": {"per_text": attack, "rows": report.attacks.linkage_rows(attack, 1)},
+            "attributes": {"rows": report.attacks.attribute_rows(guessed, 1)},
+            "utility": {"rows": report.utility_rows(useful, 1)},
+            "restoration": {"rows": report.restoration_rows(restored, 1)},
+            "detection": None,
+            "contrasts": None,
+            "latency": None,
+        },
+    )
+    table = [
+        [cell.strip() for cell in line.strip("|").split("|")]
+        for line in card.splitlines()
+        if line.startswith(("| Configuration", "| `"))
+    ]
+    rows = {cells[0]: dict(zip(table[0], cells, strict=True)) for cells in table[1:]}
+    assert rows["`REF-none`"]["not parsed"] == "0, 0"
+    assert rows["`D4+R1`"]["not parsed"] == "0, 1"
+    assert rows["`REF-none`"]["utility"] == "0.70 (no variation)"
+    assert rows["`D4+R1`"]["T3"] == "0.40 (no variation)"
+    assert rows["`D4+R1`"]["T1"] == rows["`D4+R1`"]["utility"] == "—"
+
+
 def linkage(text_ids, hit):
     return [
         {"config": "D4+R1", "n": n, "text_id": t, "parsed": True, "top1": hit(t), "top3": True}

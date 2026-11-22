@@ -204,11 +204,15 @@ def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str | No
         lines += [
             f"{texts} texts. Estimates with 95% intervals (paired bootstrap over texts).",
             "Privacy score = 1 − linkage top-1 at N = 25.",
+            "Not parsed: the replies of the linkage attack that could not be read, at N = 10 and",
+            "at N = 25. Each is counted as a miss; a reply cut at the token limit is one, and it",
+            "is asked again at the next launch (protocol, section 7).",
+            "Utility = mean of T3 and T1: none where T1 is not reported.",
             "",
-            "| Configuration | top-1 N=10 | top-3 N=10 | top-1 N=25 | top-3 N=25 | "
+            "| Configuration | top-1 N=10 | top-3 N=10 | top-1 N=25 | top-3 N=25 | not parsed | "
             + " | ".join(attacks.ATTRIBUTES)
             + " | T3 | T1 | utility | full restoration |",
-            "|---|" + "---|" * (8 + len(attacks.ATTRIBUTES)),
+            "|---|" + "---|" * (9 + len(attacks.ATTRIBUTES)),
         ]
         for name in names:
             link = {r["n"]: r for r in linkage["rows"] if r["config"] == name}
@@ -220,10 +224,14 @@ def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str | No
                 _fmt(link[10]["top3"]),
                 _fmt(link[25]["top1"], link[25]["top1_ci_low"], link[25]["top1_ci_high"]),
                 _fmt(link[25]["top3"]),
+                f"{link[10]['unparseable']}, {link[25]['unparseable']}",
                 *(_fmt(attr[a]["accuracy"]) for a in attacks.ATTRIBUTES),
-                _fmt(util["t3"]),
+                _fmt(util["t3"], util["t3_ci_low"], util["t3_ci_high"]),
                 _fmt(util["t1"]),
-                _fmt(util["utility"], util["utility_ci_low"], util["utility_ci_high"]),
+                # T3 alone is not the utility score: the cell stays empty without a T1.
+                "—"
+                if util["t1"] is None
+                else _fmt(util["utility"], util["utility_ci_low"], util["utility_ci_high"]),
                 _fmt(rest["full_restoration"], rest["ci_low"], rest["ci_high"]),
             ]
             lines.append(f"| `{name}` | " + " | ".join(cells) + " |")
