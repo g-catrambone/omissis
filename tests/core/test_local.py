@@ -30,7 +30,11 @@ def opened(monkeypatch):
     """Replace the HTTP call: record the requests, answer with the queued replies."""
     state = {"requests": [], "replies": [reply()]}
 
-    def fake_urlopen(request, timeout=None):
+    class FakeOpener:
+        def open(self, request, timeout=None):
+            return fake_open(request, timeout)
+
+    def fake_open(request, timeout=None):
         state["requests"].append(request)
         answer = state["replies"].pop(0)
         if isinstance(answer, Exception):
@@ -38,13 +42,29 @@ def opened(monkeypatch):
         data = answer if isinstance(answer, bytes) else json.dumps(answer).encode("utf-8")
         return io.BytesIO(data)
 
-    monkeypatch.setattr(local.urllib.request, "urlopen", fake_urlopen)
+    monkeypatch.setattr(local, "_opener", lambda: FakeOpener())
     monkeypatch.delenv(local.URL_VARIABLE, raising=False)
     return state
 
 
 def test_local_is_registered_on_import():
     assert backends._PROVIDERS["local"] is local.local_provider
+
+
+def test_opener_never_uses_a_proxy_even_when_the_environment_sets_one(monkeypatch):
+    # urlopen would route the not yet pseudonymised text to the proxy: _url() checks
+    # the address, not the route.
+    for name in ("http_proxy", "HTTP_PROXY", "https_proxy", "HTTPS_PROXY"):
+        monkeypatch.setenv(name, "http://proxy.example.com:3128")
+    monkeypatch.delenv("no_proxy", raising=False)
+    monkeypatch.delenv("NO_PROXY", raising=False)
+    request = local.urllib.request
+
+    def proxies(opener):
+        return [h.proxies for h in opener.handlers if isinstance(h, request.ProxyHandler)]
+
+    assert proxies(request.build_opener()) != []  # the default opener would use the proxy
+    assert proxies(local._opener()) == []  # an empty ProxyHandler registers nothing
 
 
 def test_request_goes_to_this_machine_with_the_pinned_model_and_no_key(opened):

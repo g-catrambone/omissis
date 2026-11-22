@@ -233,11 +233,33 @@ def test_sheets_command_replays_unless_asked_to_call_the_model(monkeypatch, tmp_
     monkeypatch.setattr(judge, "validation_configs", lambda configs: {"R1": config, "R2": config})
     monkeypatch.setattr(judge, "load_texts", lambda path: [SimpleNamespace(id="t1", text="x")])
     monkeypatch.setattr(judge, "t1_reply", lambda record, config: "reply")
+    folder = tmp_path / "results" / "dev" / "judge_validation"
     assert judge.main(["sheets", "--split", "dev", "--raters", "AI"]) == 0
+    (folder / "key.json").unlink()  # a second run is refused while the key is there
     assert judge.main(["sheets", "--split", "dev", "--raters", "AI", "--backend", "cloud"]) == 0
     assert seen == [{"backend": "replay"}, {"backend": "cloud"}]
     folder = tmp_path / "results" / "dev" / "judge_validation"
     assert (folder / "sheet_AI.csv").exists() and (folder / "key.json").exists()
+
+
+def test_sheets_command_refuses_to_overwrite_sheets_that_exist(monkeypatch, tmp_path, capsys):
+    # Running `sheets` again would blank the approved, committed sheet.
+    monkeypatch.chdir(tmp_path)
+    folder = tmp_path / "results" / "dev" / "judge_validation"
+    folder.mkdir(parents=True)
+    (folder / "key.json").write_text("{}", encoding="utf-8")
+    (folder / "sheet_AI.csv").write_text("approved", encoding="utf-8")
+
+    def not_reached(*args, **kwargs):
+        raise AssertionError("nothing may be read or built")
+
+    monkeypatch.setattr(judge, "load_eval_configs", not_reached)
+    monkeypatch.setattr(judge, "load_texts", not_reached)
+    assert judge.main(["sheets", "--split", "dev", "--raters", "AI"]) == 2
+    err = capsys.readouterr().err
+    assert err.count("\n") == 1 and "refused" in err
+    assert (folder / "sheet_AI.csv").read_text(encoding="utf-8") == "approved"
+    assert (folder / "key.json").read_text(encoding="utf-8") == "{}"
 
 
 def test_accept_command_writes_the_validation_file(monkeypatch, tmp_path):
