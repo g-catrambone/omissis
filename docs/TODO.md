@@ -110,7 +110,7 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   ```
 
   Record the outcome in `docs/decisions.md`.
-- [ ] **Human — read up to 20 restored replies per strategy** (`D4+R1`, `D4+R2`),
+- [x] **Human — read up to 20 restored replies per strategy** (`D4+R1`, `D4+R2`),
   by the agent, with the counts approved by Giuseppe: confirm or change `base.fuzzy_threshold`; count `wrong_mapping` and the R2 fakes
   left in the text (protocol, section 10); choose the examples of missed
   identifiers for the slides.
@@ -221,7 +221,7 @@ These steps need no result of the evaluation and touch different files.
 
 ## C. Open to everyone: waits for results
 
-- [ ] **C1 · Error examples** — after `make eval-dev` — *Claimed by:* —
+- [x] **C1 · Error examples** — after `make eval-dev` — *Claimed by:* Giuseppe
   - Files: `results/dev/error_examples.md` (new).
   - Do: from `results/dev/detected/` and the `per_text` lists of
     `results/dev/metrics/`, the identifiers each detector missed, grouped by kind

@@ -350,7 +350,13 @@ Computed on the T1 replies of each configuration.
 - `wrong_mapping` is assigned by comparing the restored reply with gold:
   a gold value appears where a different entity's value belongs. Counted on
   dev by manual inspection of up to 20 replies per strategy, reported as a
-  count with examples, not as a rate.
+  count with examples, not as a rate. The sentence is applied as it is
+  written, and each occurrence is reported with its cause: the model gave the
+  value to the wrong party, or the substitute held a wrong value. The
+  inspection is made by Giuseppe's AI agent (two subagents on Claude Opus 5.5
+  that share no context, one per strategy; every finding carries a quotation
+  that is checked in the text), and Giuseppe approves the counts on the
+  agent's written report (`docs/decisions.md`, 22 Nov).
 - Values the model derives from masked values (computed amounts, shifted
   dates) cannot be restored: collected as examples for the error taxonomy.
 

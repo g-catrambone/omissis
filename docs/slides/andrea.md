@@ -50,8 +50,8 @@ named; no number is written here.
 - On screen: three or four error examples from `results/dev/error_examples.md`
   and the taxonomy in `results/dev/error_taxonomy.md`.
 - Numbers here: leak rate from `results/dev/metrics/detection.json`;
-  counts of `wrong_mapping` and of R2 fakes left in the text, given by the human
-  inspection (protocol, section 10).
+  counts of `wrong_mapping` and of R2 fakes left in the text, given by the
+  inspection of the AI agent that Giuseppe approved (protocol, section 10).
 - Say: derived values (a postcode computed for a fake town, a sum of masked
   amounts) cannot be restored; the model sometimes swaps whose data is whose.
 - Say: R2's full-restoration rate is an upper bound, because a fake the model
