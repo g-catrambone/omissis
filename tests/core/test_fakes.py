@@ -1,4 +1,4 @@
-"""R2 realistic fakes (task 2.5) and their restoration (task 2.6)."""
+"""R2 realistic fakes and their restoration."""
 
 import re
 from pathlib import Path

@@ -1,4 +1,4 @@
-# The five fixtures on gold spans with R1, sent once to the real cloud model (task 2.6):
+# The five fixtures on gold spans with R1, sent once to the real cloud model:
 #   uv run --env-file .env omissis batch --config configs/gold-r1.yaml --input-dir data/fixtures
 # The output holds the original values: read it on screen, do not save it under results/.
 detector: GOLD

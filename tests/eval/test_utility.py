@@ -1,4 +1,4 @@
-"""Utility tasks (task 3.6): T3 scoring and the restoration record, with a fake provider."""
+"""Utility tasks: T3 scoring and the restoration record, with a fake provider."""
 
 import json
 from pathlib import Path

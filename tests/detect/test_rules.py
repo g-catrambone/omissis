@@ -1,4 +1,4 @@
-"""D0 rules (block 1): curated valid and invalid sets, all synthetic.
+"""D0 rules: curated valid and invalid sets, all synthetic.
 
 Synthetic by construction:
 - IBANs are Italian, built on bank code (ABI) 00000, which no bank uses; CIN and

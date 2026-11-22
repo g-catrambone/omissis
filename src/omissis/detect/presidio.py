@@ -1,4 +1,4 @@
-"""D1: Microsoft Presidio with an Italian spaCy pipeline (task 4.1).
+"""D1: Microsoft Presidio with an Italian spaCy pipeline.
 
 Presidio runs as it ships: the spaCy model `it_core_news_lg` for names, places and
 organisations, plus Presidio's predefined pattern recognisers loaded for Italian.

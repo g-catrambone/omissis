@@ -1,4 +1,4 @@
-"""Profiles, text plan and candidate lists (task 3.1; protocol, sections 1 and 2)."""
+"""Profiles, text plan and candidate lists (protocol, sections 1 and 2)."""
 
 import itertools
 import json

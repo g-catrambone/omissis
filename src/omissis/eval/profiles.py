@@ -1,4 +1,4 @@
-"""Profiles, text plan and candidate lists (task 3.1; protocol, sections 1 and 2).
+"""Profiles, text plan and candidate lists (protocol, sections 1 and 2).
 
 Everything is drawn with one seed from the value pools in `data/profiles/pools.json`,
 which are disjoint from the R2 fake lists. `python -m omissis.eval.profiles` writes

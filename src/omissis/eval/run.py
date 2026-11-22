@@ -1,4 +1,4 @@
-"""The evaluation runner (task 3.10): every configuration of `configs/eval.yaml` on a split.
+"""The evaluation runner: every configuration of `configs/eval.yaml` on a split.
 
     uv run --env-file .env python -m omissis.eval.run --split dev      (make eval-dev)
 

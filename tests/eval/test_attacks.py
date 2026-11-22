@@ -1,4 +1,4 @@
-"""The two attacks (task 3.3): prompts and scoring, with a fake provider."""
+"""The two attacks: prompts and scoring, with a fake provider."""
 
 import json
 from pathlib import Path

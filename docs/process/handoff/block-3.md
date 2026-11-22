@@ -1,12 +1,10 @@
 # Hand-over note — block 3 · Data and evaluation
 
 > History: this note describes the code as its block left it. Later changes are
-> in `docs/decisions.md`, what is left is in `docs/TODO.md`.
+> in `docs/decisions.md`, what is left is in `docs/process/TODO.md`.
 
 Written by Mattia's agent · 17 Nov 2026 · For: block 4 (task 4.5) and block 5.
-Start from `docs/handoff/block-2.md`.
-
-**See `docs/STATUS.md` for the situation at the end of the session of 17 Nov.**
+Start from `docs/process/handoff/block-2.md`.
 
 **State: the code of the block is complete; the data are not.** The 66 texts are
 generated and not yet reviewed, so there is no dev or test split and

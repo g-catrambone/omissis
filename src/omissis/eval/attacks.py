@@ -1,4 +1,4 @@
-"""The two attacks of the protocol, section 7 (task 3.3).
+"""The two attacks of the protocol, section 7.
 
 Both read the masked texts written by `omissis mask` and ask the `attacker` model,
 through `backends.complete`, at temperature 0. The prompts hold the masked text and

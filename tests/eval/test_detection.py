@@ -246,3 +246,38 @@ def test_timing_pass_uses_an_empty_cache_under_scratch(world, monkeypatch):
 def test_percentiles():
     assert detection.percentile([1.0], 95) == 1.0
     assert detection.percentile([1.0, 2.0, 3.0, 4.0, 5.0], 50) == 3.0
+
+
+@pytest.mark.parametrize("command", ["run", "time"])
+def test_held_out_split_is_refused_once_it_was_evaluated(command, tmp_path, monkeypatch, capsys):
+    # As the runner: the test texts are read once; a second run is refused, nothing is read.
+    metrics = tmp_path / "results" / "test" / "metrics"
+    metrics.mkdir(parents=True)
+    (metrics / "contrasts.json").write_text("{}", encoding="utf-8")
+    monkeypatch.setattr(detection, "RESULTS", tmp_path / "results")
+
+    def not_reached(*args, **kwargs):
+        raise AssertionError("no text may be read")
+
+    for name in ("load_texts", "run", "time_detectors", "load_eval_configs"):
+        monkeypatch.setattr(detection, name, not_reached)
+    assert detection.main([command, "--split", "test"]) == 2
+    err = capsys.readouterr().err
+    assert err == "test was already evaluated: a second run is refused.\n"
+    assert sorted(p.name for p in (tmp_path / "results" / "test").rglob("*")) == [
+        "contrasts.json",
+        "metrics",
+    ]
+
+
+@pytest.mark.parametrize("command", ["run", "time"])
+def test_held_out_split_works_before_it_is_evaluated(command, tmp_path, monkeypatch, capsys):
+    monkeypatch.setattr(detection, "RESULTS", tmp_path / "results")
+    calls = []
+    monkeypatch.setattr(detection, "run", lambda *a, **k: calls.append(("run", a, k)) or Path("r"))
+    monkeypatch.setattr(
+        detection, "time_detectors", lambda *a, **k: calls.append(("time", a, k)) or Path("t")
+    )
+    assert detection.main([command, "--split", "test"]) == 0
+    assert calls[0][0] == command and calls[0][1][0] == "test"
+    assert calls[0][2]["results"] == tmp_path / "results"

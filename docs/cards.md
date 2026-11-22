@@ -130,6 +130,9 @@ of the pin. Use of the service is governed by the Groq Services Agreement
 - **Licence.** CC BY 4.0 (`LICENSE`; `docs/decisions.md`, 22 Nov 2026).
 - **How we use it.** Every number of the evaluation is measured against its gold
   spans and gold fields; the profiles are the candidates of the linkage attack.
+  Four more synthetic texts, in `data/attacks/`, are the two attack cases and
+  their clean twins: they are not part of the evaluation
+  (`results/attacks/attacks.md`).
 - **Limits for us.** Every person and value is invented; identifiers use codes
   that are never issued (bank code `00000`, place code `X…`). Texts written by a
   model are more regular than real mail. No human reviewed the texts one by one: an AI

@@ -1,4 +1,4 @@
-"""Provider `groq`: the chat-completions API of GroqCloud, over plain HTTPS (task 2.4).
+"""Provider `groq`: the chat-completions API of GroqCloud, over plain HTTPS.
 
 It serves every role pinned with `provider: groq`; the model id of the role is the
 Groq model id (for example `openai/gpt-oss-120b`). No SDK is used: the request is

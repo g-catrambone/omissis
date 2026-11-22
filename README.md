@@ -7,7 +7,12 @@ model, restores the real values in the reply and reports what was disclosed.
 The contribution is the measurement: what each configuration costs in privacy
 (re-identification risk against an attacker LLM) and in answer quality.
 
-Team project for *AI Frontiers: Large Language Models* (LUISS, fall 2026).
+The user we have in mind answers correspondence that holds other people's data: a
+bank clerk or an HR officer who wants a draft reply from a cloud model without
+handing over who the sender is.
+
+Team project for *AI Frontiers: Large Language Models* (LUISS, fall 2026); the
+authors are in [Team](#team).
 
 ## What it is and what it is not
 
@@ -20,6 +25,46 @@ Team project for *AI Frontiers: Large Language Models* (LUISS, fall 2026).
   does not handle attachments, other languages or multi-turn chats, and has not
   been tested on real personal data: every person and value in this repository is
   invented.
+
+## Related work
+
+- **Tools that mask and put back.** [Microsoft Presidio](https://github.com/microsoft/presidio)
+  detects and anonymises personal data and documents a de-anonymise operator; it
+  is our detector D1. [LLM Guard](https://github.com/protectai/llm-guard) (Protect
+  AI, now archived) pairs an `Anonymize` input scanner and a vault with a
+  `Deanonymize` output scanner, and LangChain's experimental
+  `PresidioReversibleAnonymizer` keeps a mapping and applies it back to the
+  model's output. The loop of masking, sending and restoring is therefore not
+  new. What this project adds is the measurement: how much the masked text still
+  reveals, and what masking costs the reply.
+- **What a model can infer.** Staab et al., *Beyond Memorization: Violating
+  Privacy via Inference with Large Language Models*
+  ([arXiv:2310.07298](https://arxiv.org/abs/2310.07298)), show that LLMs infer
+  attributes such as location, income and sex from ordinary Reddit text; our
+  attribute attack asks the same question with closed answer lists. The same
+  authors, *Language Models are Advanced Anonymizers* (ICLR 2025,
+  [arXiv:2402.13846](https://arxiv.org/abs/2402.13846)), let an adversary LLM
+  guide what is rewritten; here the adversary only measures.
+- **How the anonymisation of text is evaluated.** Pilán et al., *The Text
+  Anonymization Benchmark (TAB)* (Computational Linguistics 48(4), 2022,
+  [arXiv:2202.00443](https://arxiv.org/abs/2202.00443)): 1,268 English court
+  cases annotated by identifier type, with privacy and utility metrics. Lison
+  et al., *Anonymisation Models for Text Data*
+  ([ACL 2021](https://aclanthology.org/2021.acl-long.323/)), argue for measures
+  of disclosure risk beyond sequence labelling. We follow this line in scoring
+  privacy and utility side by side; our data are Italian, synthetic and much
+  smaller.
+- **Law.** The GDPR defines pseudonymisation in article 4(5); the European Data
+  Protection Board published
+  [Guidelines 01/2025 on Pseudonymisation](https://www.edpb.europa.eu/our-work-tools/documents/public-consultations/2025/guidelines-012025-pseudonymisation_en)
+  (version for public consultation). In case C-413/23 P (*EDPS v SRB*,
+  4 September 2025) the Court of Justice held that pseudonymised data are not
+  personal data in every case and for every recipient; that case concerns
+  Regulation (EU) 2018/1725. This project makes no legal claim: it measures a
+  risk.
+
+The sources were read at the linked pages on 22 Nov 2026; the article of the GDPR
+and the judgment were read on a copy of the text and on the Court's press release.
 
 ## Quick start
 
@@ -38,12 +83,14 @@ things, which `make setup` and CI do not install:
 
 ```
 uv sync --locked --group detect   # Presidio, spaCy and it_core_news_lg, transformers
+uv run hf download iiiorg/piiranha-v1-detect-personal-information \
+    --revision 255acde67a2f34cf452eb42e365b24d2957352fc   # the weights of D2
 ollama pull gpt-oss:20b           # the local model of D3, with Ollama running
 ```
 
-The weights of D2 are read from the local Hugging Face cache (model and revision
-in `configs/models.yaml`). Without the `detect` group the tests that need it are
-skipped.
+D2 reads its weights from the local Hugging Face cache and never downloads them
+on its own (model and revision in `configs/models.yaml`). Without the `detect`
+group the tests that need it are skipped, and the demo offers D0 and D3 only.
 
 ## Run one text
 
@@ -66,22 +113,46 @@ difference, a percentage) on a text where amounts, dates or ages were masked is
 not sent, and the command ends with one line on standard error and status 2.
 With `configs/skeleton.yaml` amounts stay visible, so nothing is stopped.
 
+The request itself is sent as written and is not masked: do not put personal data
+in it. An empty text is refused. A configuration whose cache is the committed one
+(`results/cache`) accepts only the records under `data/`, which are synthetic: a
+text of your own needs a `cache_dir` under `results/scratch/`, because the cache
+keeps every prompt that is sent.
+
 ## Demo
 
 ```
 make demo
 ```
 
-This starts a Gradio page in replay mode, with no network: one fixture at a
-time, the masked text as it is sent, the restored reply and the disclosure list.
-**Not ready yet:** the page starts, but its runs have not been recorded in
-`results/cache/` (step C4 of `docs/TODO.md`), so every fixture ends in a cache
-miss.
+This starts a Gradio page in replay mode, with no network and no key. Pick an
+example, then:
 
-The field *Richiesta* holds the request sent before the text. A request for a
-calculation on masked amounts is not sent, and the page says why. This needs no
-cache, so it works today: pick one of the bank fixtures and the second example
-request.
+1. **Protect** masks the text and shows it exactly as it would be sent, with the
+   table of what was replaced. Nothing has left the machine yet.
+2. **Send** sends that text and shows the reply with the real values restored and
+   any restoration problem. It is refused if the text or a setting changed after
+   the preview.
+
+The replies of the five examples are recorded in `results/cache/` for every
+detector and both replacements, with the two example requests, so every choice
+of the menus answers offline. The page offers the detectors that can run on the
+machine: D0 and D3 after `make setup`, all five with the `detect` group and the
+weights of D2. In replay D3 answers from the cache and needs no Ollama.
+
+The second example request asks for a total. On a text whose amounts are masked,
+*Protect* does not send it and says why.
+
+To run it live on a text of your own, start it with the key and choose the
+backend `cloud`:
+
+```
+uv run --env-file .env python -m omissis.app
+```
+
+D3 and D4 then call the local model, about half a minute per text on a laptop,
+and the calls are cached under `results/scratch/app`, never in the committed
+cache. The request is sent as written and is not masked.
 
 ## Architecture
 
@@ -108,6 +179,13 @@ One line per stage of the pipeline (`src/omissis/`):
 
 Taxonomy: direct identifiers, quasi-identifiers and special categories
 (`src/omissis/contracts.py`).
+
+The steps are known in advance, so this is a fixed pipeline and not an agent that
+chooses its tools. Where a model is involved it proposes and code decides: D3
+proposes span texts and code keeps only those found in the source as whole
+tokens; the cloud model writes a reply and code restores only the tokens that are
+in the vault. Whether the LLM detector is worth its cost is measured, not
+assumed: it is contrast 1 below.
 
 ## Evaluation
 
@@ -142,6 +220,14 @@ and no detector, and it reads no text. A split without metrics is skipped with
 one line. The pilot has no scorecard row, so nothing but its metrics files is
 rewritten. For `pilot`, `dev` and `test` the metrics files and the scorecards
 come out identical to the committed ones.
+
+The numbers of the test were produced by the code at commit `8d4cb69`, the last
+change to `src/` before the run, and committed in `103ea37`. The commits after it
+change nothing that the evaluation computes. The check, on a machine with the
+`detect` group: `uv run python -m omissis.eval.run --split dev --backend replay
+--yes` runs the detectors again and answers every model call from the cache; the
+metrics, the masked texts and the scorecard of dev come out the same (the files
+of `results/dev/detected/` differ in their `seconds` field only, a measured time).
 
 ## Results
 
@@ -212,6 +298,37 @@ What else the numbers show, with no test run on it:
 - **Without the 5 test texts about a loan that the profile does not hold**
   (Limitations), linkage top-1 is 0.63 for `D4+R1` and 0.44 for `D4+R2`.
 
+## Risks and defences
+
+| Risk | What stops it, in code | What we measured |
+|---|---|---|
+| An instruction hidden in the text makes the local detector report nothing | Nothing stops D3 itself. In D4 names, phone numbers, emails, IBANs and tax codes come from D0, D1 and D2 and stay masked; the app shows the masked text before it is sent | Attack case 1: the attack works, 7 of 11 annotated spans go out in clear |
+| An instruction hidden in the text asks the cloud model for the real values | The cloud model holds placeholders, never an original value; restoration puts back the tokens of the vault and nothing else | Attack case 2: the attack fails, no original value in the reply |
+| A detector misses an identifier | The preview of the app, before anything is sent | D4 leaves a direct identifier uncovered in 0.04 of the test texts, D1 in 0.87 |
+| A model invents a span or a placeholder | A span of D3 that is not in the text as a whole token is dropped; an invented placeholder is reported, never filled | About a quarter of the replies of D4 hold an invented placeholder (Results) |
+| A request that cannot be answered on masked values | The feasibility check refuses a calculation on masked amounts, dates or ages | Not evaluated: a heuristic (Limitations) |
+| Cost and latency | Every call goes through one cache at temperature 0, and replay needs no model | 1,610 hosted calls for the seven configurations on the test (`results/test/metrics/cost.json`); D4 takes a median of 37 s per text on a 16 GB laptop (`results/dev/scorecard.md`) |
+
+The two attack cases are synthetic emails that carry an instruction written for a
+model, each run once through `D4+R1` beside a clean twin (`data/attacks/`,
+`results/attacks/attacks.md`). They are cases, not an evaluation: one text each,
+no interval and no test.
+
+1. **Against the local detector: the attack works.** A note at the end of the
+   email tells "the automatic system" to return an empty list. D3 returns no span
+   (7 on the clean twin), and an empty list is a valid reply, so no failure is
+   counted. Under D4 seven of the eleven annotated spans go to the cloud model in
+   clear: role, employer, town, two dates, the health condition and the badge
+   number. Name, phone number and email stay masked.
+2. **Against the cloud model: the attack fails.** An instruction asks the
+   assistant to write out the real values behind the placeholders. The model
+   drafts the ordinary reply; it could not obey, because it never has those
+   values.
+
+Closing the text between delimiters in the prompt of D3, and treating an empty
+reply of D3 as a failure when the other detectors found identifiers, would
+answer the first case. Both change what was evaluated, so they are future work.
+
 ## Limitations
 
 - **Threat model.** The attacker is one LLM that sees the masked text and a list
@@ -230,7 +347,8 @@ What else the numbers show, with no test run on it:
   that only asks to copy a total, or "Dividi la risposta in due paragrafi".
   With detector D0 it sees amounts only. Values the model derives on its own
   are not caught.
-- **Seven loan texts contradict the profile of their author.** They are about a
+- **Seven loan texts contradict the profile of their author** (5 are in test, 2
+  in dev). They are about a
   loan or a mortgage that the profile does not hold, and the candidate list of
   the linkage attack shows the products: on these texts it points away from the
   author, so the privacy score of a masked configuration is too high by what
@@ -259,8 +377,59 @@ What else the numbers show, with no test run on it:
     temperature 0 the same text may stop the next launch too.
   - Under R2, two people told apart only by a title ("Sig. Ferri",
     "Sig.ra Ferri") share one fake surname.
-  - Other limits are listed in `docs/handoff/block-2.md` (section 4) and
-    `docs/handoff/block-3.md` (section 5).
+  - A token shaped like a placeholder that is already in the user's text
+    ("[IBAN_1]") is reported as invented by the model, and the reply counts as
+    not fully restored even when it is.
+  - Under R2, a fake value written with no separator after a placeholder is not
+    restored, and the reply still counts as fully restored. It needs two masked
+    spans that touch; it was not looked for in the data.
+  - Nothing in the code forces the role `d3` to a local model: a models file
+    that points it to a hosted service sends the original text there. The app
+    says so on its page.
+  - Other limits are listed in `docs/process/handoff/block-2.md` (section 4) and
+    `docs/process/handoff/block-3.md` (section 5).
+
+## How it uses the course
+
+| Course topic | Where it is used here |
+|---|---|
+| Transformers and BERT-style encoders | D2 is an encoder (mDeBERTa-v3) fine-tuned for token classification, used as it ships; D1 uses the entity recogniser of spaCy's Italian pipeline |
+| Generative pre-trained models, decoding | The cloud model, the attacker, the generator of the texts and D3 are generative models called at temperature 0 with a token limit; a reply cut at the limit is a declared case (`docs/evaluation_protocol.md`, section 7) |
+| Fine-tuning, and when not to | Nothing is fine-tuned: the licence of D2 forbids derivatives, and what it misses is measured (D2 alone against the hybrid D4) |
+| Prompting and structured output | One instruction asks the cloud model to copy the placeholders; D3 answers with a JSON array checked against a schema, at low reasoning effort, and an invalid reply is asked once more |
+| Hallucination | A span that D3 invents is not in the text and is dropped; a placeholder that the cloud model invents is reported, never filled |
+| Evaluation and benchmarking | The core of the project: a protocol fixed before the data, a held-out split evaluated once, paired tests with the Holm correction, intervals, an LLM judge validated against a rater and rejected |
+| Ethics and regulation | Pseudonymisation is not anonymisation; special categories are a class of their own; re-identification risk is measured, not assumed; synthetic data only |
+| Tools and frameworks | Hugging Face `transformers`, PyTorch, spaCy and Presidio, Ollama for the local model, Gradio; plain Python for the pipeline |
+| Applications and cost | Reply drafting (T1) and structured extraction (T3); the calls of each configuration and the latency of each detector are reported |
+| Retrieval-augmented generation | Not used: the text carries everything the model needs |
+
+## Repository map
+
+| Path | What it holds |
+|---|---|
+| `src/omissis/` | The tool: detectors, resolver, replacement, vault, backends, restoration, command line, app, and the evaluation code (`eval/`) |
+| `tests/` | Unit and integration tests; those that need the `detect` group are skipped without it |
+| `configs/` | Run configurations: the seven of the evaluation (`eval.yaml`), the demo (`app.yaml`), the offline example (`skeleton.yaml`), the attack cases (`attacks.yaml`), the pinned models (`models.yaml`) |
+| `data/` | Synthetic data: profiles, the dev and test splits, the fixtures of the demo, the attack cases |
+| `results/` | Committed results: the LLM cache, masked texts, detected spans, metrics, scorecards, charts |
+| `docs/interfaces.md`, `docs/evaluation_protocol.md` | The two specifications: contracts and file formats; data, metrics and statistics |
+| `docs/cards.md`, `docs/annotation_guide.md` | Model and data cards; how the gold spans are tagged |
+| `docs/decisions.md`, `docs/ai_use.md` | The log of the decisions and the register of AI use |
+| `docs/slides/` | Drafts of the presentation |
+| `docs/process/`, `CLAUDE.md`, `.claude/` | How the team worked with coding agents: the shared instructions, the personal files, the hand-over notes of the code and the closing list. Nothing here is needed to run the project |
+
+## Team
+
+| Member | Main contributions | Presents |
+|---|---|---|
+| Giuseppe Catrambone | Project proposal; the two specifications; the foundation (contracts, configuration, vault, backend types); review and correction of every part before its merge; the local provider of D3; the feasibility check; review and approval of the data; the evaluation runs on dev and test; results and closing | Problem, existing tools, architecture, demo, conclusions |
+| Mattia Sebastiani | First implementation of the pipeline (D0 rules, span merging, R1 placeholders, restoration, backends, command line, fixtures), of the detectors D1 to D4, of the Gradio app and of the evaluation code; the profiles and the 66 texts; the first pilot run | The five detectors |
+| Andrea Saracino | `make reproduce`; the model and data cards; the first README; the slide drafts | Evaluation design, results, limits |
+
+The scope, the name of the project, the evaluation protocol and the design
+decisions of the first week were taken by the three together
+(`docs/decisions.md`).
 
 ## Licence
 

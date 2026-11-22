@@ -1,4 +1,4 @@
-"""The judge of the reply drafts and its validation (task 3.7; protocol, section 9).
+"""The judge of the reply drafts and its validation (protocol, section 9).
 
 The `judge` model sees the original email, the `REF-none` reply as reference and the
 reply under evaluation after restoration, never the configuration. It gives three
@@ -285,13 +285,21 @@ def _folder(split: str) -> Path:
 
 
 def _sheets(args: argparse.Namespace) -> int:
+    folder = _folder(args.split)
+    if (folder / "key.json").exists():
+        print(
+            f"{folder} already holds the rating sheets: a second run is refused. "
+            "Move the folder away to make them again.",
+            file=sys.stderr,
+        )
+        return 2
     configs = load_eval_configs(EVAL_CONFIG, {"backend": args.backend or "replay"})
     rated = validation_configs(configs)
     records = load_texts(Path("data") / args.split)
     seed = configs["REF-none"].seed
     items, key = build_items(records, rated, configs["REF-none"], seed)
-    write_sheets(items, key, _folder(args.split), args.raters)
-    print(f"{len(items)} items written for {', '.join(args.raters)} in {_folder(args.split)}")
+    write_sheets(items, key, folder, args.raters)
+    print(f"{len(items)} items written for {', '.join(args.raters)} in {folder}")
     return 0
 
 

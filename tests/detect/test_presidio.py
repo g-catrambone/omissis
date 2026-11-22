@@ -1,4 +1,4 @@
-"""D1 Presidio (task 4.1). Skipped where the dependency group `detect` is not installed."""
+"""D1 Presidio. Skipped where the dependency group `detect` is not installed."""
 
 from pathlib import Path
 

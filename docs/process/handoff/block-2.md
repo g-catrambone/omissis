@@ -1,11 +1,11 @@
 # Hand-over note — block 2 · Core completion
 
 > History: this note describes the code as its block left it. Later changes are
-> in `docs/decisions.md`, what is left is in `docs/TODO.md`.
+> in `docs/decisions.md`, what is left is in `docs/process/TODO.md`.
 
 Owner: Giuseppe · Written by Mattia's agent on 16 Nov 2026, revised on 17 Nov
 after the review of the core · For: block 3 (data and evaluation).
-Start from `docs/handoff/block-1.md`; this note says what changed since.
+Start from `docs/process/handoff/block-1.md`; this note says what changed since.
 
 Block 2 completes the core: the three references that come from the human
 annotation, the real cloud model, the entity resolver, the second replacement

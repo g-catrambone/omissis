@@ -3,12 +3,13 @@
 **Omissis** (formerly "Privacy Shield") is the team project for *AI Frontiers: Large
 Language Models* (LUISS, fall 2026). Three members: Giuseppe, Mattia, Andrea.
 
-The code of every part is on `main` since 18 Nov 2026. The relay of blocks, its gates
-and its path ownership are over (`docs/decisions.md`, 18 Nov): what is left is data,
-evaluation runs and closing, and it is one list, `docs/TODO.md`, written on the branch
-`final-steps`. Giuseppe decides what changes, reviews each step and merges. Your human's personal instructions are in `docs/agents/<name>.md`, loaded
+The evaluation is done: the test split was evaluated once, on 22 Nov 2026, and its
+results are committed. Code, data and results are frozen (rule 6); what is left is the
+presentation, in `docs/process/TODO.md`. Giuseppe decides what changes and merges.
+Your human's personal instructions are in `docs/process/agents/<name>.md`, loaded
 through their `CLAUDE.local.md`; if no personal file is loaded, ask who you are
-working for before doing anything.
+working for before doing anything. `docs/process/` holds the record of how the team
+worked: the closing list, the hand-over notes of the code, the personal files.
 
 ## 1. Hard rules
 
@@ -35,7 +36,9 @@ working for before doing anything.
    `docs/decisions.md` that names who decided it. Never write that someone agreed
    who did not.
 6. **The design is frozen (18 Nov).** From here: data, results, closing, and fixes
-   of defects. Nothing that changes evaluated behaviour without a row in
+   of defects. Since the test split was evaluated (22 Nov), a defect that would move
+   a reported number is declared in the README, not fixed: the split cannot be
+   evaluated again. Nothing that changes evaluated behaviour without a row in
    `docs/decisions.md`; no new configuration, metric or contrast; the fake lists in
    `src/omissis/replace/data/` do not change. A prompt (generator, attacker, T3,
    judge, D3) is part of the cache key: changing one needs a row in
@@ -69,7 +72,7 @@ files that nothing asks for.
 | Restore | `src/omissis/restore.py` | exact → normalised → fuzzy; outcome classes |
 | Pipeline | `src/omissis/pipeline.py`, `cli.py` | `mask`, `protect_send_restore`; the `omissis` command |
 | Feasibility check | `src/omissis/feasibility.py` | before sending, the app and `omissis run` refuse a calculation on masked amounts, dates or ages; a heuristic, not evaluated |
-| App | `src/omissis/app.py` | Gradio demo with replay mode |
+| App | `src/omissis/app.py` | Gradio demo in two steps (preview, then send), in English, with replay mode |
 | Evaluation | `src/omissis/eval/` | data files, text generation, review, split, pilot, detection, attacks, utility, judge, statistics, report, runner |
 
 ### Fixed design decisions
@@ -114,7 +117,7 @@ files that nothing asks for.
 - **Results are committed.** Everything under `results/` except the gitignored
   `results/scratch/`; `make reproduce` rebuilds every estimate, table and figure
   from the per-text outcomes in the metrics files alone.
-- **The cache is append-only.** Only a run that `docs/TODO.md` asks for writes to
+- **The cache is append-only.** Only a run that `docs/process/TODO.md` asks for writes to
   `results/cache/`; every other run uses a `cache_dir` under `results/scratch/`.
   Never delete or rewrite cache records.
 
@@ -149,9 +152,8 @@ non-Italian text, attachments, comparisons against third-party proxies.
   new dependency needs the human's approval and a pinned version. The detectors'
   libraries are in the dependency group `detect`, which `make setup` and CI do not
   install; the tests that need them use `pytest.importorskip`.
-- **Small commits, one step each**, on the branch `final-steps`, by the rules at
-  the top of `docs/TODO.md`. A defect found on `main` is fixed on a `fix/…`
-  branch. Giuseppe reviews and merges once CI is green.
+- **Small commits, one step each.** A defect found on `main` is fixed on a `fix/…`
+  branch; Giuseppe reviews and merges once CI is green.
 - **Hand back** with: files changed; commands run and their real output; what you
   are unsure about; a proposed commit message; one line for `docs/ai_use.md`
   (date, human, task, what the agent produced, what the human decided).
@@ -178,5 +180,5 @@ make eval-test   # HUMANS ONLY, once
 make reproduce   # rebuild every table and figure from the committed results
 ```
 
-The presentation is on Thu 26 Nov 2026 at the earliest; the order of what is left
-is in `docs/TODO.md`.
+The presentation is on Thu 26 Nov 2026 at the earliest; what is left is in
+`docs/process/TODO.md`.

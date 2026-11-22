@@ -1,4 +1,4 @@
-"""The pilot (task 3.4; protocol, section 2): both attacks on the 10 pilot texts.
+"""The pilot (protocol, section 2): both attacks on the 10 pilot texts.
 
     uv run --env-file .env python -m omissis.eval.pilot
 

@@ -1,7 +1,7 @@
 # Hand-over note — block 1 · Skeleton
 
 > History: this note describes the code as its block left it. Later changes are
-> in `docs/decisions.md`, what is left is in `docs/TODO.md`.
+> in `docs/decisions.md`, what is left is in `docs/process/TODO.md`.
 
 Owner: Mattia · Written with his agent · 16 Nov 2026
 For: Giuseppe (block 2), Andrea (block 3), and block 4.
