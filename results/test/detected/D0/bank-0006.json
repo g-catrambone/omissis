@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0006",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 787,
+      "end": 797,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1060,
+      "end": 1068,
+      "text": "€ 950,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1105,
+      "end": 1117,
+      "text": "372 448 9836",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1134,
+      "end": 1163,
+      "text": "alessia.iacobelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1215,
+      "end": 1231,
+      "text": "RPSVNZ96D27X748J",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

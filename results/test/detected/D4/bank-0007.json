@@ -1,0 +1,133 @@
+{
+  "text_id": "bank-0007",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 51,
+      "end": 71,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 81,
+      "end": 109,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 122,
+      "end": 142,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 187,
+      "end": 214,
+      "text": "IT25L0000032615142863898422",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 398,
+      "end": 414,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data della prima transazione"
+    },
+    {
+      "start": 437,
+      "end": 444,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo dell'addebito"
+    },
+    {
+      "start": 480,
+      "end": 496,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data della seconda transazione"
+    },
+    {
+      "start": 592,
+      "end": 599,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 607,
+      "end": 640,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "datore di lavoro del mittente"
+    },
+    {
+      "start": 672,
+      "end": 680,
+      "text": "YB-22250",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 735,
+      "end": 751,
+      "text": "MPMSLS77B67X322T",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 788,
+      "end": 800,
+      "text": "337 642 7680",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 817,
+      "end": 849,
+      "text": "emanuele.agostinelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1148,
+      "end": 1168,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1487
+}

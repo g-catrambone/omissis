@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0009",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Contestazione addebiti non autorizzati su carta di debito\n\nGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Ruggero Lanzoni e sono titolare di una carta di debito collegata al conto corrente con IBAN IT75J0000070777712804253346. Vi scrivo per contestare formalmente due addebiti che non riconosco e che sono apparsi sul mio estratto conto.\n\nIl primo addebito, pari a € 224,00, è stato effettuato il 21 novembre 2026 presso un esercizio commerciale a Nuoro. Il secondo, di € 99,50, risale al 10 novembre 2026 e risulta avvenuto online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come [RUOLO_1] presso Autolinee Brentari S.r.l. e la mia matricola aziendale è CW-18913. Vi chiedo pertanto di procedere immediatamente allo storno di entrambe le somme, per un totale di € 181,50, e di bloccare la carta per evitare ulteriori movimenti sospetti.\n\nResto in attesa di un vostro riscontro urgente. Per qualsiasi necessità potete contattarmi al numero 396 108 0114 o all'indirizzo mafalda.dalmasso@example.com.\n\nCordiali saluti,\n\nRuggero Lanzoni\n",
+  "disclosure": [
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Ruggero Lanzoni",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "IT75J0000070777712804253346",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "€ 224,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebito"
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data transazione"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo transazione"
+    },
+    {
+      "surrogate": "€ 99,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebito"
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data transazione"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere"
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome azienda"
+    },
+    {
+      "surrogate": "CW-18913",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "€ 181,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma totale"
+    },
+    {
+      "surrogate": "396 108 0114",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "mafalda.dalmasso@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

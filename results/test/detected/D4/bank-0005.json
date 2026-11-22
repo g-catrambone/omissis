@@ -1,0 +1,151 @@
+{
+  "text_id": "bank-0005",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 52,
+      "end": 69,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 79,
+      "end": 94,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 107,
+      "end": 124,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.9022810459136963,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 169,
+      "end": 196,
+      "text": "IT21G0000049496757180948574",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 207,
+      "end": 214,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di una banca"
+    },
+    {
+      "start": 218,
+      "end": 225,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 354,
+      "end": 363,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 371,
+      "end": 397,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda"
+    },
+    {
+      "start": 430,
+      "end": 438,
+      "text": "UJ-61496",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 580,
+      "end": 590,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della rata mensile"
+    },
+    {
+      "start": 675,
+      "end": 691,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio sospensione"
+    },
+    {
+      "start": 700,
+      "end": 715,
+      "text": "31 gennaio 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di fine sospensione"
+    },
+    {
+      "start": 846,
+      "end": 862,
+      "text": "GTVNTV11E14X258I",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 896,
+      "end": 908,
+      "text": "363 896 3303",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 935,
+      "end": 964,
+      "text": "cesare.sartorelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1118,
+      "end": 1135,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.9866869926452637,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1478
+}

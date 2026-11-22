@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0015",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 165,
+      "end": 174,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere della persona che scrive"
+    },
+    {
+      "start": 185,
+      "end": 214,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "start": 386,
+      "end": 408,
+      "text": "ipertensione arteriosa",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "condizione medica di cui la persona è sottoposta"
+    },
+    {
+      "start": 459,
+      "end": 478,
+      "text": "ospedale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede dove è stata effettuata la visita medica"
+    },
+    {
+      "start": 482,
+      "end": 495,
+      "text": "12 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data della visita specialistica"
+    },
+    {
+      "start": 529,
+      "end": 537,
+      "text": "€ 150,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma spesa per la prestazione medica"
+    },
+    {
+      "start": 672,
+      "end": 687,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "istituto bancario di riferimento per il rimborso"
+    },
+    {
+      "start": 689,
+      "end": 707,
+      "text": "filiale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca menzionata"
+    },
+    {
+      "start": 1086,
+      "end": 1094,
+      "text": "NT-86613",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale della persona"
+    }
+  ],
+  "seconds": 0.0017
+}

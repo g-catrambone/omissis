@@ -1,0 +1,115 @@
+{
+  "text_id": "bank-0038",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 51,
+      "end": 69,
+      "text": "Giuseppe Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 79,
+      "end": 93,
+      "text": "Banca Popolare",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 97,
+      "end": 107,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 120,
+      "end": 135,
+      "text": "Laura Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 262,
+      "end": 280,
+      "text": "Giuseppe Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 341,
+      "end": 347,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 422,
+      "end": 454,
+      "text": "IBAN IT82I0000091996603120574215",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 547,
+      "end": 573,
+      "text": "Farmacie Riunite Altavilla",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 725,
+      "end": 752,
+      "text": "laura.valsecchi@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 821,
+      "end": 827,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1044,
+      "end": 1056,
+      "text": "337 584 2415",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1077,
+      "end": 1092,
+      "text": "Laura Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.011
+}

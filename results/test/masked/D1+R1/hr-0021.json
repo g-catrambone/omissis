@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0021",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta trasferimento sede [CITTA_1] - [PERSONA_1_F]\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo [PERSONA_1_F] e sono impiegata come contabile presso la sede di [CITTA_2]. Con la presente, desidero formalmente richiedere il mio trasferimento alla sede di [CITTA_1], chiedendo cortesemente l'approvazione della mia domanda.\n\nLa motivazione principale è legata a esigenze familiari che richiedono una maggiore vicinanza ai miei cari, rendendo la permanenza a [CITTA_2] sempre più difficile da gestire. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a trasferirmi entro il 15 gennaio 2027.\n\nPer facilitare le pratiche amministrative, allego i miei dati anagrafici: codice fiscale VZBCFG56R54X246O e matricola aziendale MK-84592. Ricordo che il mio conto corrente è intestato presso [CITTA_3], filiale di [CITTA_2], e che la mia carta di credito è attiva.\n\nConfido in una risposta positiva entro il 30 novembre 2026, così da poter organizzare i tempi del trasloco senza intoppi. Resto a disposizione per qualsiasi chiarimento al numero 305 998 4727 o via email all'indirizzo [EMAIL_1].\n\nGrazie per l'attenzione e per la collaborazione.\n\nCordiali saluti,\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "text_id": "bank-0020",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 57,
+      "end": 75,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 85,
+      "end": 113,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 126,
+      "end": 144,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 189,
+      "end": 216,
+      "text": "IT60K0000002707830380370892",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 227,
+      "end": 245,
+      "text": "filiale di Viterbo",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica di un istituto bancario"
+    },
+    {
+      "start": 390,
+      "end": 397,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 405,
+      "end": 428,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda di costruzioni"
+    },
+    {
+      "start": 670,
+      "end": 681,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "start": 769,
+      "end": 785,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 1198,
+      "end": 1210,
+      "text": "315 250 0573",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1234,
+      "end": 1264,
+      "text": "ilaria.tagliaferri@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1359,
+      "end": 1377,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1378,
+      "end": 1394,
+      "text": "PRCBVV34A20X065L",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1517
+}

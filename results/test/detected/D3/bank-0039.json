@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0039",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 69,
+      "end": 84,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 119,
+      "end": 126,
+      "text": "47 anni",
+      "type": "ETA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "età del mittente"
+    },
+    {
+      "start": 139,
+      "end": 146,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza"
+    },
+    {
+      "start": 160,
+      "end": 169,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 180,
+      "end": 206,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "azienda dove lavora il mittente"
+    },
+    {
+      "start": 240,
+      "end": 248,
+      "text": "UJ-61496",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola interna del mittente"
+    },
+    {
+      "start": 345,
+      "end": 358,
+      "text": "12 marzo 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data del decesso"
+    },
+    {
+      "start": 523,
+      "end": 533,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "saldo del conto corrente"
+    },
+    {
+      "start": 591,
+      "end": 601,
+      "text": "€ 5.400,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "valore stimato dei titoli"
+    }
+  ],
+  "seconds": 0.0015
+}

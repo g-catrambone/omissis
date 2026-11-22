@@ -1,0 +1,151 @@
+{
+  "text_id": "bank-0031",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 69,
+      "end": 97,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 110,
+      "end": 129,
+      "text": "Vincenzo Gasparotto",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 169,
+      "end": 201,
+      "text": "IBAN IT81G0000009964197915045590",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 387,
+      "end": 394,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "start": 444,
+      "end": 451,
+      "text": "€ 12,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "start": 564,
+      "end": 570,
+      "text": "Lavoro",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 576,
+      "end": 597,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ruolo professionale"
+    },
+    {
+      "start": 605,
+      "end": 632,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "start": 635,
+      "end": 642,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città menzionata"
+    },
+    {
+      "start": 835,
+      "end": 851,
+      "text": "FMZGCF93D55X913J",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 857,
+      "end": 887,
+      "text": "matricola aziendale è JY-00410",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo aziendale"
+    },
+    {
+      "start": 1127,
+      "end": 1145,
+      "text": "filiale di Viterbo",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "start": 1155,
+      "end": 1171,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di incontro"
+    },
+    {
+      "start": 1214,
+      "end": 1226,
+      "text": "371 808 5550",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1253,
+      "end": 1284,
+      "text": "vincenzo.gasparotto@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1379,
+      "end": 1398,
+      "text": "Vincenzo Gasparotto",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1494
+}

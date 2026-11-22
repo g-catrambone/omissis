@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0033",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 69,
+      "end": 86,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 353,
+      "end": 360,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "start": 646,
+      "end": 655,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 663,
+      "end": 686,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "start": 689,
+      "end": 696,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località menzionata"
+    },
+    {
+      "start": 1003,
+      "end": 1021,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica"
+    },
+    {
+      "start": 1231,
+      "end": 1247,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 1322,
+      "end": 1330,
+      "text": "MK-84592",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice badge o identificativo"
+    }
+  ],
+  "seconds": 0.0015
+}

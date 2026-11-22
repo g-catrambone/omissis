@@ -1,0 +1,79 @@
+{
+  "text_id": "hr-0001",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 45,
+      "end": 64,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 135,
+      "end": 154,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 294,
+      "end": 301,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 853,
+      "end": 865,
+      "text": "377 465 1124",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 882,
+      "end": 913,
+      "text": "leonardo.lombardini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 962,
+      "end": 977,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 990,
+      "end": 997,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1285,
+      "end": 1304,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.013
+}

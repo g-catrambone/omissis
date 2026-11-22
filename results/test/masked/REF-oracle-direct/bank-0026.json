@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0026",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta chiusura conto corrente [PERSONA_1_M]\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1]. Con la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale e di tutti i servizi collegati, inclusa la carta di debito associata.\n\nHo deciso di procedere con questa operazione perché sto trasferendo la mia residenza e la mia attività lavorativa in un'altra zona, rendendo scomoda la gestione della filiale di Cremona. Attualmente lavoro come autista presso Farmacie Riunite Altavilla S.p.A., ma i miei spostamenti quotidiani non mi permettono più di recarmi facilmente presso i vostri sportelli per le operazioni ordinarie.\n\nVi prego di procedere con le operazioni di chiusura entro il 15 dicembre 2026. Al momento della richiesta, sul conto è presente un saldo di € 450,00, che vi chiedo di trasferire sul mio nuovo conto presso un'altra istituzione bancaria, i cui dati vi comunicherò separatamente via PEC o tramite raccomandata. Vi fornisco il mio codice fiscale [CF_1] per le verifiche di rito.\n\nResto a disposizione per qualsiasi ulteriore adempimento necessario per completare la procedura.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n[TELEFONO_1]\n[EMAIL_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

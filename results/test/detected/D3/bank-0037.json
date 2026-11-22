@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0037",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 71,
+      "end": 96,
+      "text": "Cassa Rurale di Montevago",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 285,
+      "end": 298,
+      "text": "12 marzo 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di morte del padre"
+    },
+    {
+      "start": 389,
+      "end": 407,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica di un istituto bancario"
+    },
+    {
+      "start": 927,
+      "end": 936,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere della richiedente"
+    },
+    {
+      "start": 944,
+      "end": 971,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la richiedente"
+    },
+    {
+      "start": 1003,
+      "end": 1011,
+      "text": "WE-48493",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale della richiedente"
+    },
+    {
+      "start": 1085,
+      "end": 1101,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    }
+  ],
+  "seconds": 0.0015
+}

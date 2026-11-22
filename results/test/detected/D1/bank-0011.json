@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0011",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 54,
+      "end": 81,
+      "text": "IT81G0000009964197915045590",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 109,
+      "end": 119,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 132,
+      "end": 151,
+      "text": "Vincenzo Gasparotto",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 219,
+      "end": 226,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 435,
+      "end": 439,
+      "text": "Roma",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1162,
+      "end": 1181,
+      "text": "Vincenzo Gasparotto",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1211,
+      "end": 1237,
+      "text": "Caseificio Montelupo S.r.l",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1239,
+      "end": 1242,
+      "text": "Tel",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1244,
+      "end": 1256,
+      "text": "371 808 5550",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1264,
+      "end": 1295,
+      "text": "vincenzo.gasparotto@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1316,
+      "end": 1318,
+      "text": "CF",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0136
+}

@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0017",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 117,
+      "end": 140,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda del datore di lavoro"
+    },
+    {
+      "start": 174,
+      "end": 192,
+      "text": "matricola DT-68827",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "identificativo del dipendente"
+    },
+    {
+      "start": 208,
+      "end": 215,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 234,
+      "end": 241,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della sede e della filiale"
+    },
+    {
+      "start": 375,
+      "end": 393,
+      "text": "artrite reumatoide",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica del mittente"
+    },
+    {
+      "start": 438,
+      "end": 453,
+      "text": "12 gennaio 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data della visita specialistica"
+    },
+    {
+      "start": 463,
+      "end": 478,
+      "text": "ospedale locale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede dove è stata effettuata la visita"
+    },
+    {
+      "start": 503,
+      "end": 511,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "costo sostenuto per la visita"
+    },
+    {
+      "start": 575,
+      "end": 603,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "banca destinataria del rimborso"
+    },
+    {
+      "start": 605,
+      "end": 623,
+      "text": "filiale di Cremona",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della banca"
+    },
+    {
+      "start": 1158,
+      "end": 1173,
+      "text": "30 gennaio 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza per la pratica"
+    }
+  ],
+  "seconds": 0.0017
+}

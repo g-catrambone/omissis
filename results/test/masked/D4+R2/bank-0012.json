@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0012",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - Greta Petruzzelli\n\nGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Greta Petruzzelli e sono cliente della vostra [STRUTTURA_1]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, di importo pari a € 297,00, è stato registrato il 21 novembre 2026. Il secondo, per € 60,50, risale al 10 novembre 2026. Non ho effettuato acquisti in quelle date né autorizzato transazioni a terzi.\n\nLavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A. e la mia matricola aziendale è CU-39040. Per facilitare le verifiche, vi fornisco i miei dati anagrafici: codice fiscale GSNFMG29S53X229P, telefono 313 047 1894 e email flavia.zambelli@example.com. Il mio IBAN è IT58L0000053705547624773710.\n\nVi chiedo cortesemente di aprire una pratica di verifica o un'indagine formale per accertare l'origine di queste transazioni sospette. Non richiedo altre azioni al momento, ma desidero che la questione venga esaminata con priorità.\n\nResto in attesa di un vostro riscontro.\n\nCordiali saluti,\nGreta Petruzzelli\n",
+  "disclosure": [
+    {
+      "surrogate": "Greta Petruzzelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "€ 297,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata sul conto"
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data dell'addebito"
+    },
+    {
+      "surrogate": "€ 60,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "seconda somma addebitata sul conto"
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data del secondo addebito"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione svolta dal mittente"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "organizzazione dove lavora la persona"
+    },
+    {
+      "surrogate": "CU-39040",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "GSNFMG29S53X229P",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "313 047 1894",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "flavia.zambelli@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "IT58L0000053705547624773710",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

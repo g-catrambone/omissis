@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0029",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 63,
+      "end": 80,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 118,
+      "end": 135,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 175,
+      "end": 207,
+      "text": "IBAN IT21G0000049496757180948574",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 229,
+      "end": 236,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 813,
+      "end": 817,
+      "text": "IBAN",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 975,
+      "end": 992,
+      "text": "GTVNTV11E14X258I.",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1018,
+      "end": 1043,
+      "text": "Tessitura Valgrande S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1069,
+      "end": 1076,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1136,
+      "end": 1148,
+      "text": "363 896 3303",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1165,
+      "end": 1194,
+      "text": "cesare.sartorelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1215,
+      "end": 1232,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0117
+}

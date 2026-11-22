@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0007",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 81,
+      "end": 109,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 398,
+      "end": 414,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data della prima transazione"
+    },
+    {
+      "start": 437,
+      "end": 444,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo dell'addebito"
+    },
+    {
+      "start": 480,
+      "end": 496,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data della seconda transazione"
+    },
+    {
+      "start": 592,
+      "end": 599,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 607,
+      "end": 640,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "datore di lavoro del mittente"
+    },
+    {
+      "start": 672,
+      "end": 680,
+      "text": "YB-22250",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    }
+  ],
+  "seconds": 0.0013
+}

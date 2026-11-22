@@ -1,0 +1,186 @@
+{
+  "item-001": {
+    "text_id": "bank-0036",
+    "config": "D4+R1"
+  },
+  "item-002": {
+    "text_id": "bank-0025",
+    "config": "D4+R1"
+  },
+  "item-003": {
+    "text_id": "hr-0014",
+    "config": "D4+R1"
+  },
+  "item-004": {
+    "text_id": "hr-0012",
+    "config": "D4+R1"
+  },
+  "item-005": {
+    "text_id": "hr-0008",
+    "config": "D4+R1"
+  },
+  "item-006": {
+    "text_id": "bank-0004",
+    "config": "D4+R1"
+  },
+  "item-007": {
+    "text_id": "bank-0019",
+    "config": "D4+R1"
+  },
+  "item-008": {
+    "text_id": "hr-0004",
+    "config": "D4+R1"
+  },
+  "item-009": {
+    "text_id": "bank-0022",
+    "config": "D4+R1"
+  },
+  "item-010": {
+    "text_id": "hr-0017",
+    "config": "D4+R1"
+  },
+  "item-011": {
+    "text_id": "bank-0029",
+    "config": "D4+R1"
+  },
+  "item-012": {
+    "text_id": "bank-0003",
+    "config": "D4+R1"
+  },
+  "item-013": {
+    "text_id": "hr-0007",
+    "config": "D4+R1"
+  },
+  "item-014": {
+    "text_id": "hr-0022",
+    "config": "D4+R1"
+  },
+  "item-015": {
+    "text_id": "bank-0017",
+    "config": "D4+R1"
+  },
+  "item-016": {
+    "text_id": "hr-0005",
+    "config": "D4+R1"
+  },
+  "item-017": {
+    "text_id": "bank-0011",
+    "config": "D4+R1"
+  },
+  "item-018": {
+    "text_id": "hr-0009",
+    "config": "D4+R1"
+  },
+  "item-019": {
+    "text_id": "hr-0018",
+    "config": "D4+R1"
+  },
+  "item-020": {
+    "text_id": "bank-0005",
+    "config": "D4+R1"
+  },
+  "item-021": {
+    "text_id": "hr-0013",
+    "config": "D4+R1"
+  },
+  "item-022": {
+    "text_id": "hr-0024",
+    "config": "D4+R1"
+  },
+  "item-023": {
+    "text_id": "bank-0009",
+    "config": "D4+R1"
+  },
+  "item-024": {
+    "text_id": "hr-0025",
+    "config": "D4+R1"
+  },
+  "item-025": {
+    "text_id": "hr-0023",
+    "config": "D4+R1"
+  },
+  "item-026": {
+    "text_id": "bank-0026",
+    "config": "D4+R1"
+  },
+  "item-027": {
+    "text_id": "hr-0001",
+    "config": "D4+R1"
+  },
+  "item-028": {
+    "text_id": "bank-0020",
+    "config": "D4+R1"
+  },
+  "item-029": {
+    "text_id": "bank-0018",
+    "config": "D4+R1"
+  },
+  "item-030": {
+    "text_id": "bank-0037",
+    "config": "D4+R1"
+  },
+  "item-031": {
+    "text_id": "bank-0027",
+    "config": "D4+R1"
+  },
+  "item-032": {
+    "text_id": "bank-0023",
+    "config": "D4+R1"
+  },
+  "item-033": {
+    "text_id": "hr-0019",
+    "config": "D4+R1"
+  },
+  "item-034": {
+    "text_id": "bank-0030",
+    "config": "D4+R1"
+  },
+  "item-035": {
+    "text_id": "bank-0031",
+    "config": "D4+R1"
+  },
+  "item-036": {
+    "text_id": "bank-0028",
+    "config": "D4+R1"
+  },
+  "item-037": {
+    "text_id": "hr-0015",
+    "config": "D4+R1"
+  },
+  "item-038": {
+    "text_id": "bank-0021",
+    "config": "D4+R1"
+  },
+  "item-039": {
+    "text_id": "bank-0012",
+    "config": "D4+R1"
+  },
+  "item-040": {
+    "text_id": "bank-0033",
+    "config": "D4+R1"
+  },
+  "item-041": {
+    "text_id": "bank-0007",
+    "config": "D4+R1"
+  },
+  "item-042": {
+    "text_id": "bank-0038",
+    "config": "D4+R1"
+  },
+  "item-043": {
+    "text_id": "bank-0006",
+    "config": "D4+R1"
+  },
+  "item-044": {
+    "text_id": "hr-0006",
+    "config": "D4+R1"
+  },
+  "item-045": {
+    "text_id": "hr-0021",
+    "config": "D4+R1"
+  },
+  "item-046": {
+    "text_id": "bank-0039",
+    "config": "D4+R1"
+  }
+}

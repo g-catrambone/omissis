@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0031",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 110,
+      "end": 116,
+      "text": "Vincen",
+      "type": "PERSONA",
+      "confidence": 0.7315458655357361,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 119,
+      "end": 129,
+      "text": "Gasparotto",
+      "type": "PERSONA",
+      "confidence": 0.7705003619194031,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 635,
+      "end": 642,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.9988671243190765,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 835,
+      "end": 844,
+      "text": "FMZGCF93D",
+      "type": "DOCUMENTO",
+      "confidence": 0.5848396182060241,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1138,
+      "end": 1145,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.9980615079402924,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1253,
+      "end": 1272,
+      "text": "vincenzo.gasparotto",
+      "type": "EMAIL",
+      "confidence": 0.9010492265224457,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1379,
+      "end": 1385,
+      "text": "Vincen",
+      "type": "PERSONA",
+      "confidence": 0.7370260953903198,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1388,
+      "end": 1398,
+      "text": "Gasparotto",
+      "type": "PERSONA",
+      "confidence": 0.9971291621526083,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1333
+}

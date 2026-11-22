@@ -1,0 +1,70 @@
+{
+  "text_id": "hr-0022",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 38,
+      "end": 68,
+      "text": "Palermo - Federica Quattrocchi",
+      "type": "INDIRIZZO",
+      "confidence": 0.7527632057666779,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 142,
+      "end": 162,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.7242634693781534,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 248,
+      "end": 255,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9948838651180267,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 356,
+      "end": 363,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.9919110834598541,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 987,
+      "end": 1007,
+      "text": "federica.quattrocchi",
+      "type": "EMAIL",
+      "confidence": 0.8064860939979553,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1090,
+      "end": 1097,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9938267469406128,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1407,
+      "end": 1427,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.8284988303979238,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1333
+}

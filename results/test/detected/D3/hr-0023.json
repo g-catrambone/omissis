@@ -1,0 +1,61 @@
+{
+  "text_id": "hr-0023",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 33,
+      "end": 50,
+      "text": "assenza sindacale",
+      "type": "SINDACATO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "motivo dell'assenza legato alla rappresentanza sindacale"
+    },
+    {
+      "start": 247,
+      "end": 266,
+      "text": "agente di commercio",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 277,
+      "end": 306,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora il mittente"
+    },
+    {
+      "start": 385,
+      "end": 401,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data dell'assenza registrata"
+    },
+    {
+      "start": 858,
+      "end": 866,
+      "text": "JE-94575",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 1101,
+      "end": 1107,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di residenza o sede operativa"
+    }
+  ],
+  "seconds": 0.0016
+}

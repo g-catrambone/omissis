@@ -1,0 +1,78 @@
+{
+  "text_id": "hr-0023",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta registrazione assenza sindacale - [PERSONA_1_M]\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per formalizzare la richiesta di registrazione di un'assenza per motivi sindacali. Come sapete, ricopro il ruolo di [RUOLO_1] presso la [AZIENDA_1] e sono [SINDACATO_1].\n\nNella giornata di [DATA_1] ho dovuto assentarmi dal lavoro per partecipare a un incontro urgente con i verti sindacali regionali. L'assenza ha riguardato l'intera giornata lavorativa, dalle ore 8:00 alle ore 17:00. Vi chiedo cortesemente di annotare tale periodo come permesso sindacale retribuito, in conformità con il contratto collettivo applicato.\n\nPer facilitare le vostre verifiche amministrative, vi fornisco i miei dati anagrafici e di contatto. La mia matricola aziendale è [UTENTE_1]. Il mio codice fiscale è [CF_1]. Per eventuali chiarimenti, potete raggiungermi al numero [TELEFONO_1] o tramite la mia email aziendale [EMAIL_1].\n\nRicordo che la mia sede operativa principale si trova a [CITTA_1], dove svolgo la maggior parte delle mie attività commerciali. Non ho altre richieste specifiche al momento, mi limito a chiedere la corretta registrazione dell'evento per evitare eventuali addebiti ingiustificati sulla mia busta paga del mese corrente.\n\nResto a disposizione per fornire eventuali documentazione aggiuntiva se necessaria per la chiusura della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SINDACATO_1]",
+      "type": "SINDACATO",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

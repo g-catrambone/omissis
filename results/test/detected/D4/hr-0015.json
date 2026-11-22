@@ -1,0 +1,142 @@
+{
+  "text_id": "hr-0015",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 63,
+      "end": 80,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 124,
+      "end": 141,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 165,
+      "end": 174,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere della persona che scrive"
+    },
+    {
+      "start": 185,
+      "end": 214,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "start": 386,
+      "end": 408,
+      "text": "ipertensione arteriosa",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "condizione medica di cui la persona è sottoposta"
+    },
+    {
+      "start": 459,
+      "end": 478,
+      "text": "ospedale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede dove è stata effettuata la visita medica"
+    },
+    {
+      "start": 482,
+      "end": 495,
+      "text": "12 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data della visita specialistica"
+    },
+    {
+      "start": 529,
+      "end": 537,
+      "text": "€ 150,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma spesa per la prestazione medica"
+    },
+    {
+      "start": 672,
+      "end": 687,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "istituto bancario di riferimento per il rimborso"
+    },
+    {
+      "start": 689,
+      "end": 707,
+      "text": "filiale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca menzionata"
+    },
+    {
+      "start": 920,
+      "end": 949,
+      "text": "roberta.uccellini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1086,
+      "end": 1094,
+      "text": "NT-86613",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale della persona"
+    },
+    {
+      "start": 1119,
+      "end": 1142,
+      "text": "GTTPBB45P16X906A. Resto",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1194,
+      "end": 1206,
+      "text": "319 776 5806",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1331,
+      "end": 1348,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1496
+}

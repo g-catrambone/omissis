@@ -1,0 +1,142 @@
+{
+  "text_id": "bank-0009",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 76,
+      "end": 91,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome banca"
+    },
+    {
+      "start": 104,
+      "end": 119,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9787729829549789,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 196,
+      "end": 223,
+      "text": "IT41G0000015737119260922015",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 363,
+      "end": 371,
+      "text": "€ 150,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebito"
+    },
+    {
+      "start": 395,
+      "end": 411,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data transazione"
+    },
+    {
+      "start": 446,
+      "end": 453,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo transazione"
+    },
+    {
+      "start": 470,
+      "end": 477,
+      "text": "€ 85,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebito"
+    },
+    {
+      "start": 489,
+      "end": 505,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data transazione"
+    },
+    {
+      "start": 599,
+      "end": 606,
+      "text": "custode",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere"
+    },
+    {
+      "start": 614,
+      "end": 637,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome azienda"
+    },
+    {
+      "start": 669,
+      "end": 677,
+      "text": "GZ-20484",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 777,
+      "end": 785,
+      "text": "€ 235,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma totale"
+    },
+    {
+      "start": 954,
+      "end": 966,
+      "text": "399 299 3390",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 983,
+      "end": 1010,
+      "text": "dario.altobelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1031,
+      "end": 1046,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9927060008049011,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1494
+}

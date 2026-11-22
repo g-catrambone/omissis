@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0017",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio - [PERSONA_1_F]\n\nGentile [AZIENDA_1] di [CITTA_1],\n\nmi chiamo [PERSONA_1_F] e sono cliente della vostra filiale di [CITTA_2]. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per l'accredito del mio stipendio.\n\nAttualmente lavoro come [RUOLO_1] presso la [AZIENDA_2] S.r.l. e, a partire dal [DATA_1], il mio datore di lavoro effettuerà i bonifici su un nuovo conto corrente. Vi chiedo pertanto di aggiornare i vostri archivi sostituendo il vecchio IBAN con il seguente: [IBAN_1].\n\nQuesta modifica è fondamentale per garantire la corretta ricezione delle mie retribuzioni mensili, che ammontano a circa [IMPORTO_1]. Vi prego di confermare la ricezione di questa richiesta e l'avvenuta registrazione del nuovo codice entro il [DATA_2], in modo da evitare ritardi o errori nell'accredito del primo mese con le nuove coordinate.\n\nPer vostra comodità, riporto i miei dati anagrafici e di contatto: codice fiscale [CF_1], telefono [TELEFONO_1] e email [EMAIL_1]. La mia matricola aziendale interna è [UTENTE_1], che potrebbe essere utile per le verifiche interne.\n\nResto a disposizione per eventuali chiarimenti o per fornire documentazione aggiuntiva se necessaria. Grazie per la vostra collaborazione e per la rapidità con cui gestite questa pratica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della banca"
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città della filiale"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio del nuovo conto"
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo mensile dello stipendio"
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza per la registrazione del nuovo IBAN"
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale interna"
+    }
+  ]
+}

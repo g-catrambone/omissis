@@ -1,0 +1,85 @@
+{
+  "text_id": "hr-0013",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Segnalazione fatti e richiesta di indagine - Ruggero Lanzoni\n\nGentile Ufficio del Personale di Autolinee Brentari S.r.l.,\n\nmi chiamo Ruggero Lanzoni, matricola CW-18913, e lavoro come [RUOLO_1] presso la [STRUTTURA_1]. Vi scrivo per segnalare una situazione di vessazione che sto subendo da parte di un collega, iniziata il 21 novembre 2026.\n\nDa quella data, il mio turno di notte viene sistematicamente modificato senza preavviso, costringendomi a gestire turni di 14 ore consecutive. Inoltre, mi viene negato l'accesso agli strumenti di lavoro necessari per le mie mansioni, con il pretesto di \"mancanza di autorizzazioni\" mai comunicate formalmente. Questa condotta sta compromettendo la mia capacità di svolgere il lavoro in sicurezza e dignità.\n\nNon chiedo soluzioni immediate o sanzioni specifiche, ma vi prego di aprire una pratica di verifica formale per accertare i fatti. Desidero che venga indagata la regolarità delle assegnazioni di turno e delle autorizzazioni operative.\n\nPer i contatti, potete raggiungermi al 396 108 0114 o via mafalda.dalmasso@example.com. I miei dati bancari presso Cassa di Risparmio di Montalfiore, [STRUTTURA_2], restano invariati, con Tecla Gardini.\n\nResto in attesa di un riscontro scritto sull'avvio dell'indagine.\n\nCordiali saluti,\nRuggero Lanzoni\n",
+  "disclosure": [
+    {
+      "surrogate": "Ruggero Lanzoni",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora il mittente"
+    },
+    {
+      "surrogate": "CW-18913",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio della vessazione"
+    },
+    {
+      "surrogate": "396 108 0114",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "mafalda.dalmasso@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_2]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Tecla Gardini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

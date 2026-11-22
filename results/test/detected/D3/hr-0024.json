@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0024",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 101,
+      "end": 134,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda del mittente"
+    },
+    {
+      "start": 168,
+      "end": 177,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 196,
+      "end": 203,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città indicata come sede"
+    },
+    {
+      "start": 292,
+      "end": 310,
+      "text": "delegato sindacale",
+      "type": "SINDACATO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ruolo sindacale del mittente"
+    },
+    {
+      "start": 494,
+      "end": 510,
+      "text": "16 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di assenza indicata"
+    },
+    {
+      "start": 880,
+      "end": 888,
+      "text": "WT-01641",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 1063,
+      "end": 1091,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca di riferimento"
+    },
+    {
+      "start": 1093,
+      "end": 1111,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della filiale bancaria"
+    },
+    {
+      "start": 1374,
+      "end": 1407,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda del mittente"
+    }
+  ],
+  "seconds": 0.0017
+}

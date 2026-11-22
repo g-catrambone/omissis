@@ -1,0 +1,25 @@
+{
+  "text_id": "hr-0009",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 1131,
+      "end": 1160,
+      "text": "alberto.cavallari@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1161,
+      "end": 1173,
+      "text": "383 955 2751",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0001
+}

@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0003",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 78,
+      "end": 106,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 167,
+      "end": 185,
+      "text": "filiale di Cremona",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della banca"
+    },
+    {
+      "start": 312,
+      "end": 319,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 327,
+      "end": 350,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 409,
+      "end": 427,
+      "text": "artrite reumatoide",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica"
+    },
+    {
+      "start": 609,
+      "end": 617,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della rata attuale"
+    },
+    {
+      "start": 634,
+      "end": 650,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "start": 883,
+      "end": 891,
+      "text": "€ 300,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo richiesto della nuova rata"
+    },
+    {
+      "start": 1067,
+      "end": 1095,
+      "text": "matricola aziendale DT-68827",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo aziendale"
+    }
+  ],
+  "seconds": 0.0015
+}

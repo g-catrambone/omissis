@@ -1,0 +1,34 @@
+{
+  "text_id": "hr-0023",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 892,
+      "end": 908,
+      "text": "FRLPZT57B05X430E",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 967,
+      "end": 979,
+      "text": "393 719 3080",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1013,
+      "end": 1042,
+      "text": "tommaso.mantovani@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

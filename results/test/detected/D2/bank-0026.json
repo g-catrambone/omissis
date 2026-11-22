@@ -1,0 +1,34 @@
+{
+  "text_id": "bank-0026",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 545,
+      "end": 552,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.995256096124649,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1263,
+      "end": 1283,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA",
+      "confidence": 0.765732983748118,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1297,
+      "end": 1317,
+      "text": "emanuele.agostinelli",
+      "type": "EMAIL",
+      "confidence": 0.7250462174415588,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1336
+}

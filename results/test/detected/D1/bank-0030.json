@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0030",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 58,
+      "end": 73,
+      "text": "Laura Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 83,
+      "end": 97,
+      "text": "Banca Popolare",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 101,
+      "end": 111,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 124,
+      "end": 139,
+      "text": "Laura Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 179,
+      "end": 211,
+      "text": "IBAN IT82I0000091996603120574215",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 233,
+      "end": 239,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 438,
+      "end": 464,
+      "text": "Farmacie Riunite Altavilla",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1106,
+      "end": 1118,
+      "text": "337 584 2415",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1135,
+      "end": 1162,
+      "text": "laura.valsecchi@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1183,
+      "end": 1198,
+      "text": "Laura Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0112
+}

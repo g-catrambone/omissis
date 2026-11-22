@@ -1,0 +1,50 @@
+{
+  "text_id": "hr-0004",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - [PERSONA_1_M]\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Purtroppo, a causa di un acuto di [SALUTE_1], non sono in grado di svolgere le mie mansioni di elettricista presso la Cooperativa Edile Pietrafitta.\n\nVi chiedo cortesemente di registrare questa assenza nei vostri sistemi. Per facilitare l'identificazione del mio fascicolo, vi fornisco la mia matricola aziendale [UTENTE_1] e il mio codice fiscale [CF_1]. Resido a Pistoia e sono solitamente reperibile al numero [TELEFONO_1] per eventuali chiarimenti, anche se al momento preferisco riposare.\n\nRicordo che ho un prestito personale attivo presso la Banca Popolare di Rocciaviva, filiale di Pistoia, con un importo residuo di circa € 1.200,50, ma questo dettaglio è solo a titolo informativo e non richiede azioni da parte vostra in questa fase. La mia priorità è recuperare le forze per tornare al più presto operativo.\n\nVi prego di confermare la ricezione di questa comunicazione tramite una risposta all'indirizzo [EMAIL_1]. Non è necessaria alcuna altra documentazione in questo momento, salvo che non venga richiesta successivamente dal medico curante.\n\nGrazie per la comprensione e per la gestione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

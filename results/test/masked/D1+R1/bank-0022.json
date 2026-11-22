@@ -1,0 +1,64 @@
+{
+  "text_id": "bank-0022",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta informazioni estinzione anticipata finanziamento - [PERSONA_1_M]\n\nGentile [AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_M] e sono un cliente della vostra filiale di [CITTA_1]. Lavoro come autista presso la [AZIENDA_3] e desidero richiedere informazioni dettagliate relative all'estinzione anticipata del mio finanziamento in corso.\n\nHo bisogno di ricevere copia del piano di ammortamento aggiornato e della scheda di calcolo delle penali per il saldo e stralcio. In particolare, mi interessa sapere quale sarebbe l'importo esatto da versare per chiudere il contratto entro il 15 marzo 2027, considerando che il saldo residuo attuale è di circa € 12.500,00.\n\nVi chiedo cortesemente di inviarmi tutta la documentazione necessaria all'indirizzo email [EMAIL_1] o, in alternativa, di indicarmi le modalità per ritirarla in filiale. Per facilitare la ricerca della mia pratica, vi comunico che il mio codice fiscale è ZLFNCT54D15X978K e la matricola aziendale associata al contratto è [AZIENDA_4].\n\nResto in attesa di un vostro cortese riscontro per poter organizzare il pagamento in tempi brevi. Grazie per la collaborazione.\n\nCordiali saluti,\n\n[PERSONA_1_M]\nTel: [TELEFONO_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_3]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_4]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

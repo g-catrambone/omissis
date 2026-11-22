@@ -1,0 +1,120 @@
+{
+  "text_id": "bank-0011",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Contestazione addebiti non autorizzati conto IT30P0000089249536643508423\n\nGentile Banco di Roccalta,\n\nmi chiamo Leandro Vannucci e sono titolare del conto corrente in oggetto presso la [STRUTTURA_1]. Vi scrivo per contestare formalmente due addebiti che non riconosco e che sono apparsi sul mio estratto conto.\n\nIl primo addebito, di € 5.199,50, è stato effettuato il 28 novembre 2026 presso un esercente a Isernia. Il secondo, di € 728,00, risale al 5 novembre 2026 e riguarda un acquisto online che non ho mai effettuato. Non ho autorizzato queste transazioni e la mia carta era in mio possesso.\n\nVi chiedo pertanto di procedere immediatamente allo storno di entrambe le somme, per un totale di € 6.622,50, e di rimborsare l'importo sul mio conto corrente. Vi prego di considerare questa richiesta urgente, dato che gestisco anche un prestito personale con la vostra banca e non desidero che questa situazione influisca sulla mia affidabilità creditizia.\n\nResto a disposizione per fornire eventuali documenti aggiuntivi, ma la mia richiesta si limita esclusivamente al rimborso delle somme indebitamente prelevate.\n\nCordiali saluti,\n\nLeandro Vannucci\n[RUOLO_1] presso Edilnova Tarsia S.r.l.\nTel: 340 093 0346\nEmail: lavinia.guidotti@example.com\nMatricola: ES-86562\nCF: NRTDMZ83A62X205Q\n",
+  "disclosure": [
+    {
+      "surrogate": "IT30P0000089249536643508423",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Leandro Vannucci",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede bancaria"
+    },
+    {
+      "surrogate": "€ 5.199,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "surrogate": "28 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data transazione"
+    },
+    {
+      "surrogate": "Isernia",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di transazione"
+    },
+    {
+      "surrogate": "€ 728,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "surrogate": "5 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data transazione"
+    },
+    {
+      "surrogate": "€ 6.622,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "totale richiesto"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "ruolo professionale"
+    },
+    {
+      "surrogate": "Edilnova Tarsia S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "azienda di lavoro"
+    },
+    {
+      "surrogate": "340 093 0346",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "lavinia.guidotti@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ES-86562",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "NRTDMZ83A62X205Q",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

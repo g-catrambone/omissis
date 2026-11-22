@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0029",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta chiusura conto corrente e deposito titoli - [PERSONA_1_M]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1] presso la [STRUTTURA_1].\n\nCon la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale, sia per il conto corrente che per il deposito titoli associato. Ho deciso di recedere dal servizio per motivi personali e professionali, non avendo più necessità di gestire la mia liquidità presso la vostra istituzione.\n\nVi prego di procedere con le operazioni di chiusura entro il [DATA_1]. Vi comunico che sul conto è attualmente presente un saldo di [IMPORTO_1], che desidero venga trasferito sul mio nuovo conto presso un'altra banca, oppure restituito tramite bonifico all'IBAN che vi comunicherò separatamente.\n\nPer facilitare le procedure amministrative, allego copia del mio documento d'identità e vi fornisco il mio [BIOMETRICO_1]. Sono un [RUOLO_1] presso [AZIENDA_2] e risiedo stabilmente a [CITTA_1].\n\nResto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di chiusura richiesta"
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro sul conto"
+    },
+    {
+      "surrogate": "[BIOMETRICO_1]",
+      "type": "BIOMETRICO",
+      "class": "special",
+      "source": "D3",
+      "reason": "identificativo personale"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

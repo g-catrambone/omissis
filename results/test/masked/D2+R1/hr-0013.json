@@ -1,0 +1,29 @@
+{
+  "text_id": "hr-0013",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Segnalazione fatti e richiesta di indagine - [PERSONA_1_M]\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo [PERSONA_1_M], matricola GZ-20484, e lavoro come custode presso la sede di [CITTA_1]. Vi scrivo per segnalare una situazione di vessazione che sto subendo da parte di un collega, iniziata il 12 novembre 2026.\n\nDa quella data, il mio turno di notte viene sistematicamente modificato senza preavviso, costringendomi a gestire turni di 14 ore consecutive. Inoltre, mi viene negato l'accesso agli strumenti di lavoro necessari per le mie mansioni, con il pretesto di \"mancanza di autorizzazioni\" mai comunicate formalmente. Questa condotta sta compromettendo la mia capacità di svolgere il lavoro in sicurezza e dignità.\n\nNon chiedo soluzioni immediate o sanzioni specifiche, ma vi prego di aprire una pratica di verifica formale per accertare i fatti. Desidero che venga indagata la regolarità delle assegnazioni di turno e delle autorizzazioni operative.\n\nPer i contatti, potete raggiungermi al 399 299 3390 o via [EMAIL_1]@example.com. I miei dati bancari presso Banca Altopiano, filiale di [CITTA_1], restano invariati, con IBAN IT41G0000015737119260922015.\n\nResto in attesa di un riscontro scritto sull'avvio dell'indagine.\n\nCordiali saluti,\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

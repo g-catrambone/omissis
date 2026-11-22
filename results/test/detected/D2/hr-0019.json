@@ -1,0 +1,79 @@
+{
+  "text_id": "hr-0019",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.41430044174194336,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 48,
+      "end": 63,
+      "text": "Dario Altobelli",
+      "type": "CITTA",
+      "confidence": 0.6595227792859077,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 134,
+      "end": 149,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9972599744796753,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 268,
+      "end": 275,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.9173916876316071,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 455,
+      "end": 462,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9905101954936981,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 883,
+      "end": 898,
+      "text": "dario.altobelli",
+      "type": "EMAIL",
+      "confidence": 0.7960568070411682,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 993,
+      "end": 1000,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9964505434036255,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1341,
+      "end": 1356,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9800286144018173,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1339
+}

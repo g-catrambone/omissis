@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0038",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 271,
+      "end": 280,
+      "text": "Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.953437070051829,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 341,
+      "end": 347,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.999510258436203,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 725,
+      "end": 740,
+      "text": "laura.valsecchi",
+      "type": "EMAIL",
+      "confidence": 0.9085785349210104,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 821,
+      "end": 827,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.9961144328117371,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1083,
+      "end": 1092,
+      "text": "Valsecchi",
+      "type": "PERSONA",
+      "confidence": 0.9894939064979553,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1341
+}

@@ -1,0 +1,57 @@
+{
+  "text_id": "hr-0017",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta documentazione per rimborso spese mediche - [PERSONA_1_M]\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo [PERSONA_1_M], matricola [UTENTE_1], e lavoro come autista presso la sede di Cremona. Vi scrivo per richiedere la documentazione necessaria per procedere con il rimborso delle spese mediche sostenute a causa della mia [SALUTE_1].\n\nHo effettuato una visita specialistica il 12 gennaio 2027 presso l'ospedale locale, sostenendo un costo di € 450,00. Per poter presentare la richiesta di rimborso alla mia banca, Banca Popolare di Rocciaviva, filiale di Cremona, ho bisogno che mi vengano inviati i moduli ufficiali e le istruzioni dettagliate per la compilazione.\n\nVi prego di inviarmi tali documenti alla mia email [EMAIL_1] o, in alternativa, di indicarmi dove posso ritirarli fisicamente. Per qualsiasi necessità di verifica, potete contattarmi al numero [TELEFONO_1]. Il mio codice fiscale è [CF_1] e l'IBAN per eventuali rimborsi diretti è [IBAN_1].\n\nResto in attesa di un vostro cortese riscontro per poter completare la pratica entro il 30 gennaio 2027.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

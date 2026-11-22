@@ -1,0 +1,61 @@
+{
+  "text_id": "hr-0006",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 38,
+      "end": 46,
+      "text": "Raffaele",
+      "type": "PERSONA",
+      "confidence": 0.5423055291175842,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 100,
+      "end": 118,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.8272425413131714,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 325,
+      "end": 331,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.9994114339351654,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 923,
+      "end": 941,
+      "text": "raffaele.ferrarini",
+      "type": "EMAIL",
+      "confidence": 0.9498374760150909,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1029,
+      "end": 1035,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.9959740042686462,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1358,
+      "end": 1376,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.9911072969436645,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1329
+}

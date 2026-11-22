@@ -1,0 +1,64 @@
+{
+  "text_id": "hr-0024",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta registrazione assenza sindacale - [PERSONA_1_F]\n\nGentile Ufficio del Personale di Farmacie Riunite Altavilla S.p.A.,\n\nmi chiamo [PERSONA_1_F] e sono contabile presso la sede di [CITTA_1]. Vi scrivo per comunicare la mia assenza dal lavoro per motivi sindacali. In qualità di delegato sindacale di reparto, devo partecipare a un incontro urgente con la rappresentanza aziendale per discutere le condizioni contrattuali del prossimo triennio.\n\nL'assenza è prevista per il giorno 16 novembre 2026. Vi chiedo cortesemente di registrare questa giornata come permesso sindacale retribuito, così da garantire la corretta gestione della mia presenza in busta paga. Per facilitare le operazioni amministrative, allego alla presente la documentazione firmata dalla segreteria sindacale.\n\nI miei dati anagrafici e di contatto restano invariati: la mia matricola aziendale è WT-01641, il codice fiscale è [PERSONA_2] e posso essere raggiunta al numero [TELEFONO_1] o all'indirizzo [EMAIL_1]. Ricordo che la mia banca di riferimento è la [AZIENDA_1] di [AZIENDA_2], filiale di [CITTA_1], dove ho attivo un deposito titoli e una carta di credito.\n\nConfido nella Vostra sollecita presa in carico della richiesta per evitare disagi nella contabilità aziendale. Resto a disposizione per eventuali chiarimenti.\n\nCordiali saluti,\n\n[PERSONA_1_F]\nContabile\n[AZIENDA_3] S.p.A.\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_3]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

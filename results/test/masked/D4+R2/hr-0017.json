@@ -1,0 +1,120 @@
+{
+  "text_id": "hr-0017",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta documentazione per rimborso spese mediche - Ruggero Montagnani\n\nGentile Ufficio del Personale di Autolinee Brentari S.r.l.,\n\nmi chiamo Ruggero Montagnani, vauqitrik WS-79895, e lavoro come [RUOLO_1] presso la sede di Nuoro. Vi scrivo per richiedere la documentazione necessaria per procedere con il rimborso delle spese mediche sostenute a causa della mia [SALUTE_1].\n\nHo effettuato una visita specialistica il 25 gennaio 2027 presso l'[STRUTTURA_1], sostenendo un costo di € 978,00. Per poter presentare la richiesta di rimborso alla mia banca, Banco di Roccalta, [STRUTTURA_2], ho bisogno che mi vengano inviati i moduli ufficiali e le istruzioni dettagliate per la compilazione.\n\nVi prego di inviarmi tali documenti alla mia email nevio.querzoli@example.com o, in alternativa, di indicarmi dove posso ritirarli fisicamente. Per qualsiasi necessità di verifica, potete contattarmi al numero 396 427 1022. Il mio codice fiscale è TDNZFD84D54X484P e l'IBAN per eventuali rimborsi diretti è IT56A0000061950377904534494.\n\nResto in attesa di un vostro cortese riscontro per poter completare la pratica entro il 10 gennaio 2027.\n\nCordiali saluti,\n\nRuggero Montagnani\n",
+  "disclosure": [
+    {
+      "surrogate": "Ruggero Montagnani",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda del datore di lavoro"
+    },
+    {
+      "surrogate": "vauqitrik WS-79895",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "identificativo del dipendente"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica del mittente"
+    },
+    {
+      "surrogate": "25 gennaio 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data della visita specialistica"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede dove è stata effettuata la visita"
+    },
+    {
+      "surrogate": "€ 978,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "costo sostenuto per la visita"
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_2]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "nevio.querzoli@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "396 427 1022",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "TDNZFD84D54X484P",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "IT56A0000061950377904534494",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "10 gennaio 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza per la pratica"
+    }
+  ]
+}

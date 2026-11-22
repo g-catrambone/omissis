@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0006",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 68,
+      "end": 96,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 208,
+      "end": 226,
+      "text": "filiale di Cremona",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di filiale bancaria"
+    },
+    {
+      "start": 398,
+      "end": 419,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 427,
+      "end": 454,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 487,
+      "end": 495,
+      "text": "YT-67363",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 543,
+      "end": 552,
+      "text": "celiachia",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica"
+    },
+    {
+      "start": 787,
+      "end": 797,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "rata attuale del mutuo"
+    },
+    {
+      "start": 1060,
+      "end": 1068,
+      "text": "€ 950,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "rata desiderata"
+    },
+    {
+      "start": 1290,
+      "end": 1306,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    }
+  ],
+  "seconds": 0.0014
+}

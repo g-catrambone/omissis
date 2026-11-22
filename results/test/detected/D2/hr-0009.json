@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0009",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 285,
+      "end": 291,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.9996389150619507,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1121,
+      "end": 1130,
+      "text": "Cavallari",
+      "type": "PERSONA",
+      "confidence": 0.8543778955936432,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1131,
+      "end": 1148,
+      "text": "alberto.cavallari",
+      "type": "UTENTE",
+      "confidence": 0.7170548558235168,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1161,
+      "end": 1173,
+      "text": "383 955 2751",
+      "type": "DOCUMENTO",
+      "confidence": 0.6860565394163132,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1342
+}

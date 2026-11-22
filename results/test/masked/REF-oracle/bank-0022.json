@@ -1,0 +1,85 @@
+{
+  "text_id": "bank-0022",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta informazioni estinzione anticipata finanziamento - [PERSONA_1_M]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono un cliente della vostra filiale di [CITTA_1]. Lavoro come [RUOLO_1] presso la [AZIENDA_2] e desidero richiedere informazioni dettagliate relative all'estinzione anticipata del mio finanziamento in corso.\n\nHo bisogno di ricevere copia del piano di ammortamento aggiornato e della scheda di calcolo delle penali per il saldo e stralcio. In particolare, mi interessa sapere quale sarebbe l'importo esatto da versare per chiudere il contratto entro il [DATA_1], considerando che il saldo residuo attuale è di circa [IMPORTO_1].\n\nVi chiedo cortesemente di inviarmi tutta la documentazione necessaria all'indirizzo email [EMAIL_1] o, in alternativa, di indicarmi le modalità per ritirarla in filiale. Per facilitare la ricerca della mia pratica, vi comunico che il mio codice fiscale è [CF_1] e la matricola aziendale associata al contratto è [UTENTE_1].\n\nResto in attesa di un vostro cortese riscontro per poter organizzare il pagamento in tempi brevi. Grazie per la collaborazione.\n\nCordiali saluti,\n\n[PERSONA_1_M]\nTel: [TELEFONO_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

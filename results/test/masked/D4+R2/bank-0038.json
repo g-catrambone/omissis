@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0038",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta documenti per conto corrente di Baldassarre Zambelli\n\nGentile Banco di Roccalta,\n\nmi chiamo Nicole Salvadori e scrivo per richiedere le informazioni necessarie per procedere con la successione del conto corrente intestato a mio padre, Baldassarre Zambelli, deceduto il 16 marzo 2026.\n\nSono l'unica erede e risiedo a Imperia. Per facilitare le operazioni, vi comunico che il conto in questione ha l'IBAN IT48A0000016802680848511799 e che il saldo al momento del decesso era di circa € 76.312,00.\n\nLavoro come autista presso Dorigatti Alimentari S.p.A. e la mia matricola aziendale è BT-17448. Il mio codice fiscale è STDGZS05A02X283K.\n\nVi chiedo cortesemente di inviarmi via email, all'indirizzo ottavio.orsolini@example.com, l'elenco dei documenti ufficiali richiesti dalla vostra filiale di Imperia per sbloccare il conto e procedere con il trasferimento dei fondi. Non ho bisogno di altre comunicazioni al momento, solo la lista dei requisiti documentali.\n\nResto a disposizione per qualsiasi chiarimento al numero 334 841 1584.\n\nCordiali saluti,\n\nNicole Salvadori\n",
+  "disclosure": [
+    {
+      "surrogate": "Baldassarre Zambelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "Nicole Salvadori",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "16 marzo 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data del decesso"
+    },
+    {
+      "surrogate": "Imperia",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "surrogate": "IT48A0000016802680848511799",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "€ 76.312,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "saldo del conto al momento del decesso"
+    },
+    {
+      "surrogate": "Dorigatti Alimentari S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "surrogate": "BT-17448",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "STDGZS05A02X283K",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ottavio.orsolini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "334 841 1584",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

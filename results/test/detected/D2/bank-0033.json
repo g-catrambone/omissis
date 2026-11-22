@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0033",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 99,
+      "end": 115,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA",
+      "confidence": 0.7820644080638885,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 689,
+      "end": 696,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9991813004016876,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1014,
+      "end": 1021,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9983585178852081,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1127,
+      "end": 1144,
+      "text": "valeria.donadoni@",
+      "type": "EMAIL",
+      "confidence": 0.8938633402188619,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1305,
+      "end": 1311,
+      "text": "Valeri",
+      "type": "PERSONA",
+      "confidence": 0.6425188779830933,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1313,
+      "end": 1321,
+      "text": "Donadoni",
+      "type": "PERSONA",
+      "confidence": 0.9699119925498962,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1336
+}

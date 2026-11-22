@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0021",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 98,
+      "end": 110,
+      "text": "Cassa Rurale",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di istituto bancario"
+    },
+    {
+      "start": 114,
+      "end": 123,
+      "text": "Montevago",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località menzionata"
+    },
+    {
+      "start": 371,
+      "end": 378,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di un istituto"
+    },
+    {
+      "start": 382,
+      "end": 389,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 416,
+      "end": 425,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 436,
+      "end": 455,
+      "text": "Tessitura Valgrande",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda di lavoro"
+    },
+    {
+      "start": 590,
+      "end": 603,
+      "text": "15 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza menzionata"
+    },
+    {
+      "start": 687,
+      "end": 698,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    }
+  ],
+  "seconds": 0.0014
+}

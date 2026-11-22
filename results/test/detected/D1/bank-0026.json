@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0026",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 43,
+      "end": 63,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 73,
+      "end": 87,
+      "text": "Banca Popolare",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 91,
+      "end": 101,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 114,
+      "end": 134,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 174,
+      "end": 206,
+      "text": "IBAN IT25L0000032615142863898422",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 545,
+      "end": 552,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 593,
+      "end": 619,
+      "text": "Farmacie Riunite Altavilla",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1263,
+      "end": 1283,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1284,
+      "end": 1296,
+      "text": "337 642 7680",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1297,
+      "end": 1329,
+      "text": "emanuele.agostinelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.013
+}

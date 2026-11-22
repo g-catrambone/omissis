@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0015",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta documentazione per rimborso spese mediche - [PERSONA_1_F]\n\nGentile Ufficio del Personale,\n\nmi chiamo [PERSONA_1_F] e sono dipendente come [RUOLO_1] presso la [AZIENDA_1]. Vi scrivo per richiedere la documentazione necessaria per procedere con il rimborso delle spese mediche sostenute di recente.\n\nCome sapete, seguo un percorso di cura per [SALUTE_1] e ho effettuato una visita specialistica presso l'ospedale di [CITTA_1] il [DATA_1]. Ho sostenuto un costo totale di [IMPORTO_1] per la prestazione medica e gli esami del sangue correlati.\n\nPer poter presentare la domanda di rimborso al mio istituto bancario, la [AZIENDA_2], filiale di [CITTA_1], ho bisogno che mi vengano inviati la ricevuta fiscale dettagliata e il certificato medico attestante la diagnosi e le cure effettuate. Vi prego di trasmettermi questi documenti in formato digitale all'indirizzo [EMAIL_1] oppure di indicarmi dove posso ritirarli in sede.\n\nPer facilitare la ricerca dei miei fascicoli, vi comunico la mia matricola aziendale [UTENTE_1] e il mio codice fiscale [CF_1]. Resto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1].\n\nVi ringrazio anticipatamente per la collaborazione e per la tempestività nella gestione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

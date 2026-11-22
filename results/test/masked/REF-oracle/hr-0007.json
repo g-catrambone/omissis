@@ -1,0 +1,85 @@
+{
+  "text_id": "hr-0007",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta colloquio per lavoro da remoto - [PERSONA_1_M]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M], matricola [UTENTE_1], e lavoro come [RUOLO_1] presso la sede di [CITTA_1]. Vi scrivo per richiedere formalmente la possibilità di fissare un incontro o un colloquio per discutere la fattibilità di un regime di lavoro da remoto parziale.\n\nCome sapete, gestisco la mia contabilità presso la filiale di [CITTA_1] di [AZIENDA_2], dove ho attivo un deposito titoli e una carta di debito. Recentemente, a causa della diagnosi di [SALUTE_1], i miei medici mi hanno sconsigliato spostamenti frequenti e stressanti, rendendo difficile la presenza quotidiana in cantiere.\n\nSarebbe fondamentale per me poter organizzare questa conversazione entro il [DATA_1], in modo da poter pianificare eventuali turni alternativi per il periodo successivo. Il mio codice fiscale è [CF_1] e sono raggiungibile al numero [TELEFONO_1] o via email all'indirizzo [EMAIL_1].\n\nConfido nella vostra comprensione e nella disponibilità a valutare questa richiesta, che mi permetterebbe di mantenere un buon equilibrio tra salute e produttività lavorativa. Resto in attesa di un vostro cortese riscontro per concordare data e ora del colloquio.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

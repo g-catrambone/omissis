@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0007",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta colloquio per lavoro da remoto - Baldassarre Fabbretti\n\nGentile Ufficio del Personale di Autolinee Brentari S.r.l.,\n\nmi chiamo Baldassarre Fabbretti, matricola OY-67802, e lavoro come [RUOLO_1] presso la sede di Nuoro. Vi scrivo per richiedere formalmente la possibilità di fissare un incontro o un colloquio per discutere la fattibilità di un regime di lavoro da remoto parziale.\n\nCome sapete, gestisco la mia contabilità presso la [STRUTTURA_1] di Cassa di Risparmio di Montalfiore, dove ho attivo un deposito titoli e una carta di debito. Recentemente, a causa della diagnosi [SALUTE_1], i miei medici mi hanno sconsigliato spostamenti frequenti e stressanti, rendendo difficile la presenza quotidiana in cantiere.\n\nSarebbe fondamentale per me poter organizzare questa conversazione entro il 27 dicembre 2026, in modo da poter pianificare eventuali turni alternativi per il periodo successivo. Il mio codice fiscale è MNMGVG59M28X807J e sono raggiungibile al numero 384 535 4929 o via email all'indirizzo nevio.pagliarini@example.com.\n\nConfido nella vostra comprensione e nella disponibilità a valutare questa richiesta, che mi permetterebbe di mantenere un buon equilibrio tra salute e produttività lavorativa. Resto in attesa di un vostro cortese riscontro per concordare data e ora del colloquio.\n\nCordiali saluti,\n\nBaldassarre Fabbretti\n",
+  "disclosure": [
+    {
+      "surrogate": "Baldassarre Fabbretti",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda per cui lavora l'autore"
+    },
+    {
+      "surrogate": "OY-67802",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale dell'autore"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere indicato dall'autore"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica che influisce sulla sua disponibilità lavorativa"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui l'autore vuole fissare il colloquio"
+    },
+    {
+      "surrogate": "MNMGVG59M28X807J",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "384 535 4929",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "nevio.pagliarini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0022",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 70,
+      "end": 89,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.9125380516052246,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 140,
+      "end": 159,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.9980682830015818,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 202,
+      "end": 208,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.9968414902687073,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 800,
+      "end": 819,
+      "text": "giacomo.passalacqua",
+      "type": "EMAIL",
+      "confidence": 0.9151903646332877,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1212,
+      "end": 1231,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.9945488075415293,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1241,
+      "end": 1249,
+      "text": "286 0569",
+      "type": "TELEFONO",
+      "confidence": 0.5383610924084982,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1341
+}

@@ -1,0 +1,36 @@
+{
+  "text_id": "hr-0001",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - Leonardo Lombardini\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo Leonardo Lombardini e vi scrivo per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Sono un elettricista impiegato presso la sede di [CITTA_1] e la mia matricola aziendale è UK-83144.\n\nPurtroppo, a causa di un peggioramento del mio diabete di tipo 2, non sono in grado di svolgere le mie mansioni in sicurezza. Il mio medico curante mi ha prescritto un periodo di riposo di almeno tre giorni, quindi prevedo di rientrare in servizio il 15 novembre 2026. Vi chiedo cortesemente di registrare questa assenza nei vostri sistemi.\n\nPer facilitare le eventuali verifiche amministrative, vi fornisco i miei dati anagrafici: il mio codice fiscale è LPVFZP94B15X164T e posso essere contattato al numero 377 465 1124 o all'indirizzo [EMAIL_1].[UTENTE_1]ini@example.com. Ricordo che la mia carta di debito è emessa da Banca Altopiano, filiale di [CITTA_1], e che ho un deposito titoli attivo presso la stessa istituzione.\n\nNon necessito di ulteriori chiarimenti in questo momento, mi limito a richiedere la presa in carico della mia situazione. Resto a disposizione per inviare il certificato medico non appena disponibile.\n\nCordiali saluti,\n\nLeonardo [PERSONA_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

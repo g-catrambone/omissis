@@ -1,0 +1,52 @@
+{
+  "text_id": "hr-0008",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 47,
+      "end": 52,
+      "text": "Della",
+      "type": "PERSONA",
+      "confidence": 0.5121796429157257,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 101,
+      "end": 118,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.9509937167167664,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 668,
+      "end": 675,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9945334792137146,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 854,
+      "end": 871,
+      "text": "teresa.dellavalle",
+      "type": "EMAIL",
+      "confidence": 0.7893048326174418,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1127,
+      "end": 1144,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.9750001072883606,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.134
+}

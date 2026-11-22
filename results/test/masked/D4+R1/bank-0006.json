@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0006",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta rimodulazione mutuo - [PERSONA_1_F]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN IT31A000082978482223406184 presso la [STRUTTURA_1]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mutuo ipotecario per la prima casa, contratto in essere da diversi anni.\n\nAttualmente lavoro come [RUOLO_1] presso [AZIENDA_2], dove ho la matricola aziendale [UTENTE_1]. Purtroppo, a causa di una recente diagnosi di [SALUTE_1], ho dovuto modificare drasticamente la mia alimentazione e i miei ritmi di vita, il che ha comportato un aumento delle spese sanitarie e una temporanea riduzione della mia capacità di gestione finanziaria mensile.\n\nLa rata attuale di [IMPORTO_1] si è rivelata onerosa rispetto al mio reddito attuale. Vi chiedo pertanto di valutare la possibilità di allungare la durata del mutuo o di applicare un tasso variabile più favorevole, al fine di ridurre l'importo mensile. Desidero che la nuova rata non superi i [IMPORTO_2].\n\nVi prego di contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1] per concordare i dettagli. Il mio codice fiscale è [PERSONA_2]\n\nResto in attesa di un vostro cortese riscontro entro il [DATA_1].\n\nCordiali saluti,\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica"
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "rata attuale del mutuo"
+    },
+    {
+      "surrogate": "[IMPORTO_2]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "rata desiderata"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    }
+  ]
+}

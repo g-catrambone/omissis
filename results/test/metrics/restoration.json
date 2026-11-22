@@ -1,0 +1,3221 @@
+{
+  "split": "test",
+  "seed": 20261111,
+  "generated_from": [
+    "b07665f0c252",
+    "d1aa840154d6",
+    "18bdbd066964",
+    "49f599e17121",
+    "bd5400e9b707",
+    "933a73c866b3",
+    "65b4d39c07a9"
+  ],
+  "rows": [
+    {
+      "config": "REF-none",
+      "texts": 46,
+      "full_restoration": 0.9782608695652174,
+      "ci_low": 0.9347826086956522,
+      "ci_high": 1.0,
+      "events": 1,
+      "outcome_shares": {
+        "restored": 0.0,
+        "restored_fuzzy": 0.0,
+        "dropped": 0.0,
+        "altered_unresolved": 0.0,
+        "hallucinated_token": 1.0
+      },
+      "restored_fakes_per_reply": 0.0
+    },
+    {
+      "config": "REF-oracle-direct",
+      "texts": 46,
+      "full_restoration": 0.8695652173913043,
+      "ci_low": 0.7608695652173914,
+      "ci_high": 0.9565217391304348,
+      "events": 276,
+      "outcome_shares": {
+        "restored": 0.6630434782608695,
+        "restored_fuzzy": 0.0,
+        "dropped": 0.3007246376811594,
+        "altered_unresolved": 0.0,
+        "hallucinated_token": 0.036231884057971016
+      },
+      "restored_fakes_per_reply": 0.0
+    },
+    {
+      "config": "REF-oracle",
+      "texts": 46,
+      "full_restoration": 0.8260869565217391,
+      "ci_low": 0.717391304347826,
+      "ci_high": 0.9347826086956522,
+      "events": 580,
+      "outcome_shares": {
+        "restored": 0.6258620689655172,
+        "restored_fuzzy": 0.0,
+        "dropped": 0.33275862068965517,
+        "altered_unresolved": 0.0,
+        "hallucinated_token": 0.041379310344827586
+      },
+      "restored_fakes_per_reply": 0.0
+    },
+    {
+      "config": "D1+R1",
+      "texts": 46,
+      "full_restoration": 0.8695652173913043,
+      "ci_low": 0.7608695652173914,
+      "ci_high": 0.9565217391304348,
+      "events": 341,
+      "outcome_shares": {
+        "restored": 0.6715542521994134,
+        "restored_fuzzy": 0.0,
+        "dropped": 0.3020527859237537,
+        "altered_unresolved": 0.0,
+        "hallucinated_token": 0.026392961876832845
+      },
+      "restored_fakes_per_reply": 0.0
+    },
+    {
+      "config": "D2+R1",
+      "texts": 46,
+      "full_restoration": 0.8695652173913043,
+      "ci_low": 0.7608695652173914,
+      "ci_high": 0.9565217391304348,
+      "events": 185,
+      "outcome_shares": {
+        "restored": 0.7837837837837838,
+        "restored_fuzzy": 0.0,
+        "dropped": 0.17297297297297298,
+        "altered_unresolved": 0.0,
+        "hallucinated_token": 0.043243243243243246
+      },
+      "restored_fakes_per_reply": 0.0
+    },
+    {
+      "config": "D4+R1",
+      "texts": 46,
+      "full_restoration": 0.7391304347826086,
+      "ci_low": 0.6086956521739131,
+      "ci_high": 0.8483695652173834,
+      "events": 615,
+      "outcome_shares": {
+        "restored": 0.5934959349593496,
+        "restored_fuzzy": 0.0,
+        "dropped": 0.3463414634146341,
+        "altered_unresolved": 0.0,
+        "hallucinated_token": 0.06016260162601626
+      },
+      "restored_fakes_per_reply": 0.0
+    },
+    {
+      "config": "D4+R2",
+      "texts": 46,
+      "full_restoration": 0.717391304347826,
+      "ci_low": 0.5869565217391305,
+      "ci_high": 0.8478260869565217,
+      "events": 594,
+      "outcome_shares": {
+        "restored": 0.5538720538720538,
+        "restored_fuzzy": 0.0,
+        "dropped": 0.41919191919191917,
+        "altered_unresolved": 0.0,
+        "hallucinated_token": 0.026936026936026935
+      },
+      "restored_fakes_per_reply": 5.869565217391305
+    }
+  ],
+  "per_text": [
+    {
+      "text_id": "bank-0003",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-none",
+      "fully_restored": false,
+      "outcomes": {
+        "hallucinated_token": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-none",
+      "fully_restored": true,
+      "outcomes": {},
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-oracle-direct",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 2,
+        "hallucinated_token": 1,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-oracle-direct",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-oracle-direct",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 1,
+        "hallucinated_token": 1,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-oracle-direct",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 3,
+        "hallucinated_token": 3,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-oracle-direct",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 3,
+        "hallucinated_token": 3,
+        "restored": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-oracle-direct",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 3,
+        "hallucinated_token": 1,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-oracle-direct",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 10
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 11
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 14
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 13
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 11
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-oracle",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 7,
+        "hallucinated_token": 1,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-oracle",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 2,
+        "hallucinated_token": 1,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-oracle",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-oracle",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 3,
+        "hallucinated_token": 5,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 10
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-oracle",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 2,
+        "hallucinated_token": 6,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 11
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 7,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 10
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-oracle",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 5,
+        "hallucinated_token": 6,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-oracle",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 2,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 10,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-oracle",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 5,
+        "hallucinated_token": 2,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-oracle",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D1+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 2,
+        "hallucinated_token": 1,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D1+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 1,
+        "hallucinated_token": 1,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D1+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 7,
+        "restored": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D1+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D1+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "hallucinated_token": 3,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D1+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 3,
+        "hallucinated_token": 2,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D1+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D2+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 2,
+        "hallucinated_token": 1,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D2+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 1,
+        "hallucinated_token": 1,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D2+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 1,
+        "hallucinated_token": 1,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D2+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 3,
+        "hallucinated_token": 3,
+        "restored": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D2+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "hallucinated_token": 1,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D2+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "hallucinated_token": 1,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 3
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D2+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 1
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 7,
+        "hallucinated_token": 4,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 11
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 6,
+        "hallucinated_token": 1,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 11
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 13
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 6,
+        "hallucinated_token": 1,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 2,
+        "hallucinated_token": 1,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 10
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 3,
+        "hallucinated_token": 1,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 11
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 3,
+        "hallucinated_token": 10,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 10
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 10
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 3,
+        "restored": 10
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 7,
+        "hallucinated_token": 7,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 6,
+        "hallucinated_token": 5,
+        "restored": 5
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 7
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 7,
+        "restored": 2
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D4+R1",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 12,
+        "hallucinated_token": 2,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 10,
+        "restored": 4
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 10
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 9
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 6
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D4+R1",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 8
+      },
+      "restored_fakes": 0
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 10
+      },
+      "restored_fakes": 8
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 6
+      },
+      "restored_fakes": 5
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 7,
+        "restored": 7
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 8
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 6,
+        "hallucinated_token": 1,
+        "restored": 6
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 6
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 8,
+        "hallucinated_token": 1,
+        "restored": 8
+      },
+      "restored_fakes": 7
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 7,
+        "hallucinated_token": 2,
+        "restored": 7
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 6
+      },
+      "restored_fakes": 5
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 1,
+        "restored": 11
+      },
+      "restored_fakes": 9
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 6,
+        "hallucinated_token": 1,
+        "restored": 8
+      },
+      "restored_fakes": 7
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 5,
+        "hallucinated_token": 1,
+        "restored": 6
+      },
+      "restored_fakes": 5
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 8
+      },
+      "restored_fakes": 7
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 7
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 8
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 4
+      },
+      "restored_fakes": 4
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 6
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 4,
+        "restored": 8
+      },
+      "restored_fakes": 8
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "restored": 12
+      },
+      "restored_fakes": 11
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 5,
+        "hallucinated_token": 1,
+        "restored": 7
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 6
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 7
+      },
+      "restored_fakes": 5
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 10
+      },
+      "restored_fakes": 8
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 10
+      },
+      "restored_fakes": 8
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 8,
+        "restored": 5
+      },
+      "restored_fakes": 4
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 7
+      },
+      "restored_fakes": 7
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 10,
+        "restored": 5
+      },
+      "restored_fakes": 5
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 9,
+        "restored": 4
+      },
+      "restored_fakes": 4
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 11
+      },
+      "restored_fakes": 9
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 7,
+        "restored": 5
+      },
+      "restored_fakes": 5
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 6
+      },
+      "restored_fakes": 5
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 9
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 5
+      },
+      "restored_fakes": 4
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 7
+      },
+      "restored_fakes": 3
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 4
+      },
+      "restored_fakes": 4
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 2,
+        "restored": 9
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 6,
+        "hallucinated_token": 1,
+        "restored": 3
+      },
+      "restored_fakes": 3
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 5,
+        "restored": 8
+      },
+      "restored_fakes": 5
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 8,
+        "hallucinated_token": 2,
+        "restored": 8
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 11,
+        "restored": 3
+      },
+      "restored_fakes": 3
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 5,
+        "hallucinated_token": 1,
+        "restored": 7
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 4,
+        "hallucinated_token": 1,
+        "restored": 10
+      },
+      "restored_fakes": 7
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 12
+      },
+      "restored_fakes": 9
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 6,
+        "restored": 4
+      },
+      "restored_fakes": 3
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D4+R2",
+      "fully_restored": true,
+      "outcomes": {
+        "dropped": 3,
+        "restored": 9
+      },
+      "restored_fakes": 6
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D4+R2",
+      "fully_restored": false,
+      "outcomes": {
+        "dropped": 6,
+        "hallucinated_token": 2,
+        "restored": 6
+      },
+      "restored_fakes": 3
+    }
+  ]
+}

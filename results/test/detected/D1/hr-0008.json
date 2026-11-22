@@ -1,0 +1,79 @@
+{
+  "text_id": "hr-0008",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 40,
+      "end": 57,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 101,
+      "end": 118,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 146,
+      "end": 175,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 640,
+      "end": 655,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 668,
+      "end": 675,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 761,
+      "end": 777,
+      "text": "DTPBGT37E51X984X",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 854,
+      "end": 883,
+      "text": "teresa.dellavalle@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1127,
+      "end": 1144,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0109
+}

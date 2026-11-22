@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0012",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 106,
+      "end": 123,
+      "text": "Giorgia Zamparini",
+      "type": "PERSONA",
+      "confidence": 0.7305199106534322,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 163,
+      "end": 170,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9988248944282532,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 733,
+      "end": 750,
+      "text": "giorgia.zamparini",
+      "type": "EMAIL",
+      "confidence": 0.9801901578903198,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1099,
+      "end": 1116,
+      "text": "Giorgia Zamparini",
+      "type": "PERSONA",
+      "confidence": 0.9405336141586303,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1341
+}

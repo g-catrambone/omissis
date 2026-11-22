@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0028",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 373,
+      "end": 380,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione"
+    },
+    {
+      "start": 388,
+      "end": 411,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "start": 414,
+      "end": 421,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di lavoro"
+    },
+    {
+      "start": 532,
+      "end": 542,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma da trasferire"
+    },
+    {
+      "start": 594,
+      "end": 610,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza trasferimento"
+    },
+    {
+      "start": 887,
+      "end": 895,
+      "text": "TZ-58390",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 962,
+      "end": 978,
+      "text": "10 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza conferma"
+    }
+  ],
+  "seconds": 0.0014
+}

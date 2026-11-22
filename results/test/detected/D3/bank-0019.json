@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0019",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 88,
+      "end": 105,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "istituto bancario destinatario della richiesta"
+    },
+    {
+      "start": 316,
+      "end": 334,
+      "text": "filiale di Viterbo",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di un istituto bancario"
+    },
+    {
+      "start": 361,
+      "end": 382,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "posizione lavorativa del mittente"
+    },
+    {
+      "start": 390,
+      "end": 417,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "datore di lavoro del mittente"
+    },
+    {
+      "start": 552,
+      "end": 565,
+      "text": "15 marzo 2024",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di apertura del prestito"
+    },
+    {
+      "start": 595,
+      "end": 603,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "rata mensile del prestito"
+    },
+    {
+      "start": 698,
+      "end": 709,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "debito residuo da estinguere"
+    },
+    {
+      "start": 811,
+      "end": 827,
+      "text": "30 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta di estinzione"
+    },
+    {
+      "start": 1259,
+      "end": 1275,
+      "text": "FCVTDC50S09X752T",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice fiscale del mittente"
+    },
+    {
+      "start": 1276,
+      "end": 1284,
+      "text": "PM-09581",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo interno del mittente"
+    }
+  ],
+  "seconds": 0.0014
+}

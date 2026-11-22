@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0003",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 609,
+      "end": 617,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 883,
+      "end": 891,
+      "text": "€ 300,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1014,
+      "end": 1030,
+      "text": "PTNCTL45T52X669Q",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1037,
+      "end": 1064,
+      "text": "IT75I0000051990227457633088",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1123,
+      "end": 1135,
+      "text": "321 343 3899",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1158,
+      "end": 1189,
+      "text": "pietro.franceschini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

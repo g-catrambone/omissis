@@ -1,0 +1,85 @@
+{
+  "text_id": "hr-0025",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta permesso sindacale per [PERSONA_1_F]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e lavoro come [RUOLO_1] presso la sede di [CITTA_1]. Vi scrivo per richiedere formalmente l'approvazione di un permesso sindacale. In qualità di [SINDACATO_1], devo partecipare a un incontro urgente con la segreteria regionale previsto per il [DATA_1].\n\nL'assenza durerà l'intera giornata lavorativa, dalle ore 08:30 alle ore 17:00. Vi chiedo cortesemente di autorizzare questa assenza, che è prevista dal contratto collettivo nazionale di lavoro per le attività sindacali. Per completezza amministrativa, vi comunico che la mia matricola aziendale è [UTENTE_1] e il mio codice fiscale è [CF_1].\n\nResto a disposizione per qualsiasi chiarimento in merito a questa richiesta. Vi prego di confermare la ricezione e l'approvazione entro il [DATA_2], così da poter organizzare al meglio le attività contabili della settimana.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[EMAIL_1]\n[TELEFONO_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SINDACATO_1]",
+      "type": "SINDACATO",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

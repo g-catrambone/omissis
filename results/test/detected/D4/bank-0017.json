@@ -1,0 +1,151 @@
+{
+  "text_id": "bank-0017",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 54,
+      "end": 70,
+      "text": "Elena Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 80,
+      "end": 92,
+      "text": "Cassa Rurale",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 96,
+      "end": 105,
+      "text": "Montevago",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della banca"
+    },
+    {
+      "start": 118,
+      "end": 134,
+      "text": "Elena Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 174,
+      "end": 181,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della filiale"
+    },
+    {
+      "start": 313,
+      "end": 322,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 333,
+      "end": 353,
+      "text": "Caseificio Montelupo",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 378,
+      "end": 394,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio del nuovo conto"
+    },
+    {
+      "start": 565,
+      "end": 592,
+      "text": "IT15I0000054310853969019400",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 716,
+      "end": 726,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo mensile dello stipendio"
+    },
+    {
+      "start": 837,
+      "end": 853,
+      "text": "10 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza per la registrazione del nuovo IBAN"
+    },
+    {
+      "start": 1029,
+      "end": 1045,
+      "text": "DGGMRD49A57X058K",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1056,
+      "end": 1068,
+      "text": "397 280 0598",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1077,
+      "end": 1105,
+      "text": "elena.occhipinti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1144,
+      "end": 1152,
+      "text": "WE-48493",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale interna"
+    },
+    {
+      "start": 1414,
+      "end": 1430,
+      "text": "Elena Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1493
+}

@@ -1,0 +1,50 @@
+{
+  "text_id": "bank-0025",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta chiusura conto corrente e prodotti collegati - [PERSONA_1_M]\n\nGentile Credito Tirrenico,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1]. Con la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale, inclusa la dismissione del deposito titoli e la estinzione del prestito personale in corso.\n\nSono residente a Pistoia e lavoro come agente di commercio presso la Cooperativa Edile Pietrafitta. Per motivi professionali e personali, ho deciso di trasferire la mia gestione finanziaria altrove. Vi prego di procedere con le operazioni necessarie per saldare eventuali residui e chiudere tutte le posizioni aperte entro il 15 dicembre 2026.\n\nIl mio codice fiscale è [CF_1] e la mia matricola aziendale è [UTENTE_1]. Per qualsiasi comunicazione urgente, potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nVi chiedo di inviarmi la conferma scritta della chiusura e del saldo finale entro la data indicata. Resto a disposizione per firmare eventuali documenti necessari alla procedura.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

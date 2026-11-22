@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0031",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 69,
+      "end": 97,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 387,
+      "end": 394,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "start": 444,
+      "end": 451,
+      "text": "€ 12,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "start": 576,
+      "end": 597,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ruolo professionale"
+    },
+    {
+      "start": 605,
+      "end": 632,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "start": 635,
+      "end": 642,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città menzionata"
+    },
+    {
+      "start": 857,
+      "end": 887,
+      "text": "matricola aziendale è JY-00410",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo aziendale"
+    },
+    {
+      "start": 1127,
+      "end": 1145,
+      "text": "filiale di Viterbo",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "start": 1155,
+      "end": 1171,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di incontro"
+    }
+  ],
+  "seconds": 0.0015
+}

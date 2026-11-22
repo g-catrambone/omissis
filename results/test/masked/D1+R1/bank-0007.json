@@ -1,0 +1,64 @@
+{
+  "text_id": "bank-0007",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - [PERSONA_1_M]\n\nGentile [AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con [AZIENDA_3]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, di importo pari a € 145,00, è stato registrato il 12 novembre 2026 presso un esercente a [CITTA_1]. Il secondo, di € 89,50, risale al 15 novembre 2026 e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come autista presso [AZIENDA_4] S.p.A. e la mia matricola aziendale è YB-22250. Per facilitare le verifiche, il mio codice fiscale è MPMSLS77B67X322T e posso essere contattato al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nVi chiedo cortesemente di aprire una pratica di verifica o un'indagine formale per accertare la natura di questi movimenti e bloccare eventuali ulteriori utilizzi fraudolenti della carta. Resto in attesa di un vostro riscontro in merito all'avvio delle procedure di controllo.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_3]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_4]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

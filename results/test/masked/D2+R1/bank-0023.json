@@ -1,0 +1,36 @@
+{
+  "text_id": "bank-0023",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta estinzione anticipata mutuo - [PERSONA_1_M] Ferrarini\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_M] e sono un cliente della vostra filiale di [CITTA_1]. Vi scrivo per richiedere informazioni dettagliate relative all'estinzione anticipata del mutuo ipotecario che ho in corso per l'acquisto della mia prima casa.\n\nSono un centralinista presso la Cooperativa Edile Pietrafitta e, avendo raggiunto l'età di 65 anni, sto valutando la possibilità di saldare il debito residuo per alleggerire le mie spese mensili. Il mio codice fiscale è [CF_1] e l'IBAN del conto corrente collegato al mutuo è IT42B0000028200268376451697.\n\nVi chiedo cortesemente di inviarmi, tramite la mia email [EMAIL_1]@example.com, il prospetto aggiornato con l'importo esatto del capitale residuo, comprensivo di eventuali interessi maturati fino alla data odierna. In particolare, mi interessa sapere se ci sono penali per l'estinzione anticipata e quali documenti sono necessari per procedere con il pagamento unico.\n\nSpero di poter ricevere una risposta entro il 15 dicembre 2026, in modo da poter organizzare il trasferimento dei fondi in tempo utile. Resto a disposizione per qualsiasi chiarimento al numero 357 736 0613.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

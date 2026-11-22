@@ -1,0 +1,57 @@
+{
+  "text_id": "bank-0039",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta documenti per conto di [PERSONA_1_F]\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_2_M], ho 47 anni e risiedo a [CITTA_1]. Lavoro come contabile presso la [CITTA_2]., dove la mia matricola interna è UJ-61496.\n\nVi scrivo in merito al conto corrente intestato a mia sorella, [PERSONA_1_F], deceduta il 12 marzo 2026. Il conto, identificato dall'[CITTA_3], era collegato a un deposito titoli. Al momento del decesso, il saldo del conto corrente era di circa € 1.200,50, mentre il portafoglio titoli aveva un valore stimato di € 5.400,00.\n\nEssendo io l'unico erede, ho bisogno di procedere con la successione. Vi chiedo cortesemente di inviarmi, tramite la mia email [EMAIL_1], la documentazione necessaria per lo sblocco e la liquidazione del conto. In particolare, mi servirebbero i moduli per la dichiarazione di successione e l'elenco dei titoli detenuti alla data del decesso.\n\nIl mio codice fiscale è GTVNTV11E14X258I e sono raggiungibile al numero [TELEFONO_1] per eventuali chiarimenti.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_2_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

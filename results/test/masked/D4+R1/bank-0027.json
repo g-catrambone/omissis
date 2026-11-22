@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0027",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - [PERSONA_1_F]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN [IBAN_1] presso la filiale di [CITTA_1]. Vi scrivo per comunicare la mia volontà di procedere alla chiusura definitiva del rapporto bancario.\n\nAttualmente, sul conto sono presenti fondi derivanti dalla gestione del mio stipendio da [RUOLO_1] presso [AZIENDA_2], oltre al saldo residuo del prestito personale in corso di estinzione. Vi chiedo cortesemente di sbloccare le somme disponibili e di trasferire l'intero importo, pari a circa [IMPORTO_1], sul conto corrente di mia proprietà presso un altro istituto di credito, i cui dati vi fornirò separatamente via PEC o tramite raccomandata A/R.\n\nVi prego di considerare questa richiesta come urgente, poiché necessito di liquidità per coprire alcune spese aziendali impreviste entro il [DATA_1]. Per qualsiasi verifica necessaria, potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1]. Il mio codice fiscale è [CF_1] e la matricola aziendale di riferimento è [UTENTE_1].\n\nResto in attesa di un vostro cortese riscontro per confermare l'avvenuta esecuzione dell'ordine di trasferimento.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di filiale"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "posizione lavorativa"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma da trasferire"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza spese"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    }
+  ]
+}

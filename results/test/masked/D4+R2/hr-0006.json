@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0006",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta lavoro da remoto - Zeno Cortesini\n\nGentile Ufficio del Personale,\n\nmi chiamo Zeno Cortesini e sono un [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A.. Vi scrivo per sottoporre alla Vostra cortese attenzione una richiesta formale di autorizzazione al lavoro da remoto.\n\nHo 67 anni e risiedo a Imperia. Da diversi anni gestisco le comunicazioni telefoniche dell'azienda con dedizione, mantenendo un rapporto costante con i colleghi e i fornitori. Per motivi organizzativi personali, desidererei poter svolgere le mie mansioni da casa a partire dal 10 novembre 2026.\n\nSono pienamente attrezzato con la connessione internet necessaria e dispongo di un ambiente silenzioso adatto alla gestione delle chiamate. La mia matricola aziendale è PJ-65764 e il mio codice fiscale è FCNMFG34S58X129D. Per eventuali verifiche amministrative, potete contattarmi al numero 359 646 8069 o tramite l'indirizzo achille.gardini@example.com.\n\nRicordo che la mia banca di riferimento è la Cassa di Risparmio di Montalfiore, [STRUTTURA_1], dove ho un mutuo per la prima casa e una carta di debito attiva. Non chiedo modifiche al contratto, ma solo l'approvazione di questa modalità operativa per il periodo indicato.\n\nResto in attesa di un Vostro cortese riscontro entro il 20 novembre 2026 per poter organizzare i dettagli tecnici con l'IT.\n\nCordiali saluti,\n\nZeno Cortesini\n",
+  "disclosure": [
+    {
+      "surrogate": "Zeno Cortesini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "67 anni",
+      "type": "ETA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "età del richiedente"
+    },
+    {
+      "surrogate": "Imperia",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo di residenza"
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio lavoro da remoto"
+    },
+    {
+      "surrogate": "PJ-65764",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "FCNMFG34S58X129D",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "359 646 8069",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "achille.gardini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    }
+  ]
+}

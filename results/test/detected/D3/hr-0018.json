@@ -1,0 +1,97 @@
+{
+  "text_id": "hr-0018",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 116,
+      "end": 143,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda del datore di lavoro"
+    },
+    {
+      "start": 185,
+      "end": 206,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere della persona che scrive"
+    },
+    {
+      "start": 232,
+      "end": 238,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della sede aziendale"
+    },
+    {
+      "start": 421,
+      "end": 432,
+      "text": "depressione",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi di salute del mittente"
+    },
+    {
+      "start": 510,
+      "end": 532,
+      "text": "terapie farmacologiche",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "tipo di trattamento medico"
+    },
+    {
+      "start": 861,
+      "end": 869,
+      "text": "EZ-85669",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 976,
+      "end": 986,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma delle spese mediche"
+    },
+    {
+      "start": 1029,
+      "end": 1045,
+      "text": "16 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di una prestazione medica"
+    },
+    {
+      "start": 1051,
+      "end": 1067,
+      "text": "10 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di una prestazione medica"
+    },
+    {
+      "start": 1284,
+      "end": 1299,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca citata"
+    }
+  ],
+  "seconds": 0.0017
+}

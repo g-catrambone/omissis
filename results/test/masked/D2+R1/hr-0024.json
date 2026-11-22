@@ -1,0 +1,29 @@
+{
+  "text_id": "hr-0024",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta registrazione assenza sindacale - [PERSONA_1_F]\n\nGentile Ufficio del Personale di Farmacie Riunite Altavilla S.p.A.,\n\nmi chiamo [PERSONA_1_F] e sono contabile presso la sede di [CITTA_1]. Vi scrivo per comunicare la mia assenza dal lavoro per motivi sindacali. In qualità di delegato sindacale di reparto, devo partecipare a un incontro urgente con la rappresentanza aziendale per discutere le condizioni contrattuali del prossimo triennio.\n\nL'assenza è prevista per il giorno 16 novembre 2026. Vi chiedo cortesemente di registrare questa giornata come permesso sindacale retribuito, così da garantire la corretta gestione della mia presenza in busta paga. Per facilitare le operazioni amministrative, allego alla presente la documentazione firmata dalla segreteria sindacale.\n\nI miei dati anagrafici e di contatto restano invariati: la mia matricola aziendale è WT-01641, il codice fiscale è GLPBMV68M53X619A e posso essere raggiunta al numero [TELEFONO_1] o all'indirizzo noemi.boscolo@example.com. Ricordo che la mia banca di riferimento è la Banca Popolare di Rocciaviva, filiale di [CITTA_1], dove ho attivo un deposito titoli e una carta di credito.\n\nConfido nella Vostra sollecita presa in carico della richiesta per evitare disagi nella contabilità aziendale. Resto a disposizione per eventuali chiarimenti.\n\nCordiali saluti,\n\n[PERSONA_1_F] Boscolo\nContabile\nFarmacie Riunite Altavilla S.p.A.\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "text_id": "bank-0012",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - [PERSONA_1_F]\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_F] e sono cliente della vostra filiale di [CITTA_1]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, di importo pari a € 145,00, è stato registrato il 12 novembre 2026. Il secondo, per € 89,50, risale al 15 novembre 2026. Non ho effettuato acquisti in quelle date né autorizzato transazioni a terzi.\n\nLavoro come custode presso la [AZIENDA_1] e la mia matricola aziendale è JR-83320. Per facilitare le verifiche, vi fornisco i miei dati anagrafici: codice fiscale VGBZNC71L27X275W, telefono [TELEFONO_1] e email [EMAIL_1]. Il mio [CITTA_2] è [IBAN_1].\n\nVi chiedo cortesemente di aprire una pratica di verifica o un'indagine formale per accertare l'origine di queste transazioni sospette. Non richiedo altre azioni al momento, ma desidero che la questione venga esaminata con priorità.\n\nResto in attesa di un vostro riscontro.\n\nCordiali saluti,\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

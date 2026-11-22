@@ -1,0 +1,57 @@
+{
+  "text_id": "hr-0009",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta smart working per [PERSONA_1_M]\n\nGentile Ufficio del Personale di Caseificio Montelupo S.r.l.,\n\nmi chiamo [PERSONA_1_M], matricola [UTENTE_1], e vi scrivo per richiedere l'autorizzazione al lavoro da remoto. Come sapete, sono responsabile acquisti e risiedo a Novara.\n\nRecentemente ho dovuto sottopormi a un [SALUTE_1], seguito da un percorso di [SALUTE_2] che richiede tempi di recupero specifici. Per gestire al meglio questa fase di [SALUTE_3] e ridurre gli spostamenti quotidiani, che risultano al momento dolorosi e faticosi, chiedo di poter svolgere le mie attività lavorative da casa.\n\nLa mia posizione mi consente di gestire le trattative con i fornitori e la pianificazione degli ordini anche a distanza, garantendo la stessa efficienza operativa. Ho già predisposto la postazione domestica con connessione stabile.\n\nVi chiedo cortesemente di valutare positivamente questa richiesta, che intendo far partire dal 15 dicembre 2026. Resto a disposizione per qualsiasi chiarimento in merito alle modalità operative.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n[EMAIL_1]\n[TELEFONO_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_2]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_3]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

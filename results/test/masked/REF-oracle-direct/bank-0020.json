@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0020",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta estinzione anticipata finanziamento - [PERSONA_1_F]\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN [IBAN_1] presso la filiale di Viterbo. Vi scrivo per richiedere formalmente la chiusura anticipata del finanziamento in essere, che ho contratto per esigenze personali.\n\nLavoro come autista presso Cantieri Dorsano S.p.A. e, a causa di un cambio di residenza e di una riorganizzazione dei miei impegni lavorativi, non sono più in grado di sostenere le rate mensili previste dal piano di ammortamento. Desidero pertanto estinguere il debito residuo, che ammonta a € 12.500,00, per porre fine al rapporto contrattuale.\n\nVi chiedo di inviarmi, entro e non oltre il 15 dicembre 2026, le istruzioni dettagliate per il pagamento dell'importo totale, comprensivo di eventuali interessi di mora o penali previste dal contratto per l'estinzione anticipata. Una volta effettuato il bonifico, vi prego di confermare la chiusura definitiva della pratica e la cessazione di ogni addebito automatico sulla mia carta di credito collegata al conto.\n\nResto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o tramite la mia email [EMAIL_1]. Vi ringrazio per la collaborazione e attendo un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[CF_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

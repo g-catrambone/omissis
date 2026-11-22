@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0026",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 73,
+      "end": 101,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 545,
+      "end": 552,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della filiale bancaria"
+    },
+    {
+      "start": 578,
+      "end": 585,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 593,
+      "end": 626,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora il mittente"
+    },
+    {
+      "start": 822,
+      "end": 838,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di chiusura richiesta"
+    },
+    {
+      "start": 901,
+      "end": 909,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "saldo presente sul conto"
+    },
+    {
+      "start": 1088,
+      "end": 1119,
+      "text": "codice fiscale MPMSLS77B67X322T",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "identificativo personale del mittente"
+    }
+  ],
+  "seconds": 0.0014
+}

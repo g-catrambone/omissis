@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0001",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 99,
+      "end": 122,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda del datore di lavoro"
+    },
+    {
+      "start": 227,
+      "end": 243,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio assenza"
+    },
+    {
+      "start": 253,
+      "end": 265,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 286,
+      "end": 301,
+      "text": "sede di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica dell'azienda"
+    },
+    {
+      "start": 333,
+      "end": 341,
+      "text": "UK-83144",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 391,
+      "end": 408,
+      "text": "diabete di tipo 2",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica del mittente"
+    },
+    {
+      "start": 595,
+      "end": 611,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di ritorno al lavoro"
+    },
+    {
+      "start": 962,
+      "end": 977,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
+    },
+    {
+      "start": 979,
+      "end": 997,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "filiale bancaria specifica"
+    }
+  ],
+  "seconds": 0.0015
+}

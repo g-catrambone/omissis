@@ -1,0 +1,70 @@
+{
+  "text_id": "hr-0013",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 104,
+      "end": 127,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora il mittente"
+    },
+    {
+      "start": 167,
+      "end": 175,
+      "text": "GZ-20484",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 191,
+      "end": 198,
+      "text": "custode",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 209,
+      "end": 224,
+      "text": "sede di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di lavoro del mittente"
+    },
+    {
+      "start": 331,
+      "end": 347,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio della vessazione"
+    },
+    {
+      "start": 1108,
+      "end": 1123,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
+    },
+    {
+      "start": 1125,
+      "end": 1143,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "filiale bancaria del mittente"
+    }
+  ],
+  "seconds": 0.0016
+}

@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0012",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 78,
+      "end": 93,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 152,
+      "end": 170,
+      "text": "filiale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della banca dove è aperto il conto"
+    },
+    {
+      "start": 322,
+      "end": 330,
+      "text": "€ 145,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata sul conto"
+    },
+    {
+      "start": 354,
+      "end": 370,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data dell'addebito"
+    },
+    {
+      "start": 388,
+      "end": 395,
+      "text": "€ 89,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "seconda somma addebitata sul conto"
+    },
+    {
+      "start": 407,
+      "end": 423,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data del secondo addebito"
+    },
+    {
+      "start": 516,
+      "end": 523,
+      "text": "custode",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione svolta dal mittente"
+    },
+    {
+      "start": 534,
+      "end": 563,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "organizzazione dove lavora la persona"
+    },
+    {
+      "start": 595,
+      "end": 603,
+      "text": "JR-83320",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    }
+  ],
+  "seconds": 0.0013
+}

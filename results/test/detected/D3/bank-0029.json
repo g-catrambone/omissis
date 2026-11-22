@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0029",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 90,
+      "end": 105,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 218,
+      "end": 236,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca"
+    },
+    {
+      "start": 610,
+      "end": 626,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di chiusura richiesta"
+    },
+    {
+      "start": 689,
+      "end": 699,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro sul conto"
+    },
+    {
+      "start": 960,
+      "end": 991,
+      "text": "codice fiscale GTVNTV11E14X258I",
+      "type": "BIOMETRICO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "identificativo personale"
+    },
+    {
+      "start": 1001,
+      "end": 1010,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 1018,
+      "end": 1044,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "start": 1069,
+      "end": 1076,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza e filiale"
+    }
+  ],
+  "seconds": 0.0014
+}

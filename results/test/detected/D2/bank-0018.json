@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0018",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 61,
+      "end": 71,
+      "text": "Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.9558812578519186,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 109,
+      "end": 126,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.930327045917511,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 185,
+      "end": 192,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9938745498657227,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1241,
+      "end": 1258,
+      "text": "sergio.bertolucci",
+      "type": "EMAIL",
+      "confidence": 0.9338116943836212,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1451,
+      "end": 1468,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.8666895553469658,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.134
+}

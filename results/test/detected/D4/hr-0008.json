@@ -1,0 +1,115 @@
+{
+  "text_id": "hr-0008",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 40,
+      "end": 57,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 101,
+      "end": 118,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.9509937167167664,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 146,
+      "end": 175,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora la persona"
+    },
+    {
+      "start": 264,
+      "end": 280,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio lavoro da remoto"
+    },
+    {
+      "start": 327,
+      "end": 344,
+      "text": "emicrania cronica",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "condizione di salute che giustifica il lavoro da remoto"
+    },
+    {
+      "start": 585,
+      "end": 593,
+      "text": "UL-67995",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 640,
+      "end": 655,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca di riferimento"
+    },
+    {
+      "start": 668,
+      "end": 675,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della filiale bancaria"
+    },
+    {
+      "start": 761,
+      "end": 777,
+      "text": "DTPBGT37E51X984X",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 815,
+      "end": 827,
+      "text": "300 108 4408",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 854,
+      "end": 883,
+      "text": "teresa.dellavalle@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1127,
+      "end": 1144,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.9750001072883606,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1487
+}

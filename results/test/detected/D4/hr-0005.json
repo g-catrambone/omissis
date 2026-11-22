@@ -1,0 +1,133 @@
+{
+  "text_id": "hr-0005",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 55,
+      "end": 73,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.9328189015388488,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 108,
+      "end": 135,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda datore di lavoro"
+    },
+    {
+      "start": 148,
+      "end": 166,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.9934332251548768,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 177,
+      "end": 198,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere della persona che scrive"
+    },
+    {
+      "start": 209,
+      "end": 213,
+      "text": "sede",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede dell'azienda"
+    },
+    {
+      "start": 217,
+      "end": 223,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città dove si trova la sede"
+    },
+    {
+      "start": 290,
+      "end": 306,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio assenza"
+    },
+    {
+      "start": 315,
+      "end": 331,
+      "text": "19 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di fine assenza"
+    },
+    {
+      "start": 371,
+      "end": 382,
+      "text": "depressione",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi di malattia"
+    },
+    {
+      "start": 847,
+      "end": 855,
+      "text": "EZ-85669",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 877,
+      "end": 893,
+      "text": "ZLBRVN07D06X885L",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 925,
+      "end": 937,
+      "text": "367 789 1628",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 954,
+      "end": 984,
+      "text": "beatrice.pontiggia@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1253,
+      "end": 1271,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.9813916921615601,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1504
+}

@@ -117,7 +117,7 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
 
 ## 3. Evaluation on the held-out split (Giuseppe)
 
-- [ ] **Human — `make eval-test`**, once, after `make eval-dev` has reproduced the
+- [x] **Human — `make eval-test`**, once, after `make eval-dev` has reproduced the
   committed dev results on the same machine, but for the attacker's replies cut
   at the token limit (protocol, section 7). A launch that stops half-way is
   resumed as the protocol says in section 4. If the judge was rejected, fill the
@@ -130,6 +130,11 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
      nothing else of `results/test/`.
   3. Fill `sheet_Giuseppe.csv`, the same day, without opening the scorecard.
   4. `make eval-test` a last time: it completes the run.
+
+  Done on 22 Nov: after the first launch no reply of the attacker was left not
+  parsed (linkage 0, attributes 0), so step 2 asked for no launch; Giuseppe filled
+  the sheet the same day and the last launch wrote `contrasts.json`. `make
+  reproduce` rebuilds the same files.
 
 ## B. Open to everyone: can start now
 

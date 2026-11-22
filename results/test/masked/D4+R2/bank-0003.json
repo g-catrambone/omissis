@@ -1,0 +1,113 @@
+{
+  "text_id": "bank-0003",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta rimodulazione finanziamento - Ruggero Montagnani\n\nGentile Banco di Roccalta,\n\nmi chiamo Ruggero Montagnani e sono cliente della Vostra [STRUTTURA_1]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mio finanziamento in corso.\n\nAttualmente lavoro come [RUOLO_1] presso Autolinee Brentari S.r.l., ma da alcune settimane sto affrontando una fase acuta di [SALUTE_1] che mi ha costretto a ridurre drasticamente le mie ore lavorative. Questa situazione ha inciso negativamente sul mio reddito mensile, rendendo difficile sostenere l'attuale rata di € 978,00 prevista per il 27 dicembre 2026.\n\nNon chiedo la sospensione del debito, ma una rinegoziazione delle condizioni per allungare la durata del prestito e abbassare l'importo mensile. Sarebbe fondamentale per me poter contare su una rata più sostenibile, ad esempio di € 635,00, a partire dal prossimo mese.\n\nPer facilitare le Vostre verifiche, Vi fornisco i miei dati identificativi: codice fiscale TDNZFD84D54X484P, IBAN IT56A0000061950377904534494 e pauktzugd bstxernpw PC-25928. Sono reperibile al numero 396 427 1022 o tramite l'indirizzo nevio.querzoli@example.com.\n\nResto in attesa di un Vostro cortese riscontro per concordare i dettagli della nuova proposta.\n\nFiorucci saluti,\nRuggero Montagnani\n",
+  "disclosure": [
+    {
+      "surrogate": "Ruggero Montagnani",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica"
+    },
+    {
+      "surrogate": "€ 978,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo della rata attuale"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "surrogate": "€ 635,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo richiesto della nuova rata"
+    },
+    {
+      "surrogate": "TDNZFD84D54X484P",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "IT56A0000061950377904534494",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "pauktzugd bstxernpw PC-25928",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "396 427 1022",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "nevio.querzoli@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Fiorucci",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

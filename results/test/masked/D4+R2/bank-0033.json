@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0033",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Reclamo spese conto corrente e richiesta colloquio\n\nGentile Credito Cooperativo Valdarda,\n\nmi chiamo Ludovica Montagnani e sono titolare del conto corrente con IBAN IT54D0000057271794149324823. Vi scrivo per segnalare la mia forte insoddisfazione riguardo alle commissioni addebitate sul mio conto negli ultimi mesi. In particolare, ho notato un prelievo di € 17,00 a titolo di canone mensile, che non risulta coerente con le condizioni contrattuali concordate al momento dell'apertura del rapporto. Inoltre, la carta di credito collegata ha generato spese di gestione che ritengo ingiustificate, considerando il mio storico di utilizzo.\n\nLavoro come [RUOLO_1] presso Autolinee Brentari S.r.l. a Nuoro, e la gestione di queste anomalie mi sta creando non pochi disagi organizzativi. Desidero chiarire che non intendo procedere con la chiusura del rapporto, ma ritengo fondamentale una spiegazione dettagliata da parte vostra.\n\nPertanto, vi chiedo cortesemente di fissare un incontro o un colloquio presso la [STRUTTURA_1] per discutere la questione. Sono disponibile a contattarvi al numero 376 446 0565 o tramite la mia email selene.marangoni@example.com per concordare data e ora. Resto in attesa di un vostro riscontro entro il 27 dicembre 2026 per poter pianificare l'appuntamento.\n\nCordiali saluti,\n\nLudovica Montagnani\nTL-80819\n",
+  "disclosure": [
+    {
+      "surrogate": "Credito Cooperativo Valdarda",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "surrogate": "Ludovica Montagnani",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "IT54D0000057271794149324823",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "€ 17,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località menzionata"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede specifica"
+    },
+    {
+      "surrogate": "376 446 0565",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "selene.marangoni@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "surrogate": "TL-80819",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice badge o identificativo"
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0021",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta informazioni estinzione anticipata finanziamento - Edmondo Bellandi\n\nGentile Banca Monteforte di Vercelli,\n\nmi chiamo Edmondo Bellandi e sono titolare del conto corrente associato all'IBAN IT11E000023582267657498114. Vi scrivo per richiedere informazioni dettagliate relative all'estinzione anticipata del finanziamento in essere, contratto presso la [STRUTTURA_1] di Nuoro.\n\nAttualmente lavoro come [RUOLO_1] presso la Alberani Costruzioni S.r.l. S.r.l., dove mi occupo della gestione amministrativa. Ho preso in considerazione la possibilità di saldare il debito residuo entro il 27 marzo 2027, poiché ho ottenuto un bonus straordinario che mi consente di coprire l'importo di € 29.792,00 senza intaccare la liquidità operativa del conto.\n\nVi chiedo cortesemente di inviarmi, tramite la mia email oreste.bellandi@example.com, il piano di ammortamento aggiornato e la simulazione delle penali o interessi passivi che dovrebbero essere applicati in caso di chiusura anticipata alla data indicata. È fondamentale per me avere questi documenti scritti per poter pianificare il trasferimento dei fondi con precisione.\n\nPer qualsiasi necessità di verifica, potete contattarmi al numero 353 802 9082 o fare riferimento al mio codice fiscale ZLSZCT41A23X975X. Resto in attesa di un vostro cortese riscontro per procedere con la valutazione finale.\n\nCordiali saluti,\n\nEdmondo Bellandi\n",
+  "disclosure": [
+    {
+      "surrogate": "Edmondo Bellandi",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banca Monteforte",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di istituto bancario"
+    },
+    {
+      "surrogate": "Vercelli",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località menzionata"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede di un istituto"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della [STRUTTURA_1]"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Alberani Costruzioni S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda di lavoro"
+    },
+    {
+      "surrogate": "27 marzo 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza menzionata"
+    },
+    {
+      "surrogate": "€ 29.792,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "surrogate": "oreste.bellandi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "353 802 9082",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ZLSZCT41A23X975X",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

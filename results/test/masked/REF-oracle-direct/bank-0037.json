@@ -1,0 +1,57 @@
+{
+  "text_id": "bank-0037",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta documenti per conto di [PERSONA_1_M]\n\nGentile Cassa Rurale di Montevago,\n\nmi chiamo [PERSONA_2_F] e scrivo per richiedere le informazioni necessarie per procedere con la successione del conto corrente intestato a mio padre, [PERSONA_1_M], deceduto il 12 marzo 2026.\n\nSono la sua erede e ho bisogno di sapere quali documenti specifici devo presentare alla filiale di Trapani per sbloccare le operazioni sul conto. In particolare, desidero ricevere copia dell'estratto conto aggiornato al momento del decesso e l'elenco dei prodotti attivi, tra cui la carta di debito e il prestito personale in corso.\n\nPer facilitare la verifica della mia identità, allego copia del mio documento d'identità e fornisco i miei dati anagrafici: codice fiscale [CF_1], telefono [TELEFONO_1] e email [EMAIL_1]. L'IBAN del conto del defunto era [IBAN_1].\n\nLavoro come contabile presso Caseificio Montelupo S.r.l. e la mia matricola aziendale è [UTENTE_1]. Vi chiedo cortesemente di inviarmi la documentazione richiesta entro il 15 novembre 2026, in quanto devo gestire alcune scadenze fiscali relative all'eredità.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_2_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

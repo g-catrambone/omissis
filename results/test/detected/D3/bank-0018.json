@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0018",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 81,
+      "end": 96,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 174,
+      "end": 192,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "start": 332,
+      "end": 353,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "posizione lavorativa specifica"
+    },
+    {
+      "start": 361,
+      "end": 384,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda"
+    },
+    {
+      "start": 826,
+      "end": 842,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di pagamento prevista"
+    },
+    {
+      "start": 931,
+      "end": 941,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo mensile indicato"
+    },
+    {
+      "start": 1374,
+      "end": 1390,
+      "text": "10 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    }
+  ],
+  "seconds": 0.0014
+}

@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0025",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 417,
+      "end": 424,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza del mittente"
+    },
+    {
+      "start": 439,
+      "end": 458,
+      "text": "agente di commercio",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 469,
+      "end": 498,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora il mittente"
+    },
+    {
+      "start": 726,
+      "end": 742,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 817,
+      "end": 825,
+      "text": "SM-08022",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    }
+  ],
+  "seconds": 0.0013
+}

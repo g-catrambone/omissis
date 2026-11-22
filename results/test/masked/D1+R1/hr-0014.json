@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0014",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta colloquio urgente - [PERSONA_1_M]\n\nGentile Ufficio del Personale,\n\nmi chiamo [PERSONA_1_M], sono un autista di 58 anni residente a [CITTA_1]. Lavoro presso la [AZIENDA_1] da diversi anni, con matricola aziendale TE-06202.\n\nVi scrivo per segnalare una situazione di forte disagio e vessazione che sto subendo da parte di un collega e del mio responsabile diretto. Da quando ho iniziato a lavorare su un nuovo cantiere, il 12 novembre 2026, ho subito ripetute umiliazioni verbali e pressioni indebite per superare i limiti di orario previsti dal contratto. Questa condotta ha creato un ambiente di lavoro ostile che mi impedisce di svolgere le mie mansioni in serenità.\n\nNon intendo entrare nel dettaglio di ogni episodio in questa sede, ma ritengo fondamentale affrontare la questione in modo formale e riservato. La mia unica richiesta è quella di fissare un incontro o un colloquio con un rappresentante dell'ufficio risorse umane per esporre la mia posizione e cercare una soluzione.\n\nSono disponibile a fornire eventuali documentazione o testimonianze se necessario, ma preferisco discutere di persona. Vi chiedo cortesemente di contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1] per concordare una data entro la prossima settimana.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_1_M]\nAutista\nCooperativa Edile Pietrafitta\n[CITTA_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

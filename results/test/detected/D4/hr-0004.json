@@ -1,0 +1,142 @@
+{
+  "text_id": "hr-0004",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 45,
+      "end": 63,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 73,
+      "end": 94,
+      "text": "Ufficio del Personale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "dipartimento interno dell’azienda"
+    },
+    {
+      "start": 184,
+      "end": 200,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di assenza"
+    },
+    {
+      "start": 236,
+      "end": 251,
+      "text": "asma bronchiale",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica"
+    },
+    {
+      "start": 302,
+      "end": 314,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 325,
+      "end": 354,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "start": 500,
+      "end": 528,
+      "text": "matricola aziendale KK-50663",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    },
+    {
+      "start": 553,
+      "end": 569,
+      "text": "BMDCST55B21X401A",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 580,
+      "end": 587,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza"
+    },
+    {
+      "start": 628,
+      "end": 640,
+      "text": "305 331 7289",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 764,
+      "end": 792,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "istituto bancario"
+    },
+    {
+      "start": 794,
+      "end": 812,
+      "text": "filiale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria"
+    },
+    {
+      "start": 846,
+      "end": 856,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo residuo del prestito"
+    },
+    {
+      "start": 1131,
+      "end": 1161,
+      "text": "nicola.scarpellini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1373,
+      "end": 1391,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA",
+      "confidence": 0.9415923953056335,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1531
+}

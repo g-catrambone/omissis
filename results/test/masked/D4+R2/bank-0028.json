@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0028",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - Marianna Gardini\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Marianna Gardini e sono titolare del conto corrente con IBAN IT86O0000099394348391849041. Vi scrivo per comunicare la chiusura definitiva del rapporto contrattuale e per richiedere il trasferimento delle somme residue.\n\nAttualmente lavoro come [RUOLO_1] presso Autolinee Brentari S.r.l. a Teramo, ma per motivi personali ho deciso di recedere dal contratto. Desidero che l'intero saldo disponibile, pari a € 5.199,50, venga trasferito sul conto di mia scelta entro il 27 dicembre 2026.\n\nVi prego di procedere anche alla disattivazione della carta di credito associata al conto. Per qualsiasi necessità, potete contattarmi al numero 320 128 7634 o all'indirizzo selene.fabbretti@example.com. Il mio codice fiscale è FRFLVR25A50X732Q e la matricola aziendale è AY-15866.\n\nResto in attesa di una vostra cortese conferma scritta entro il 11 dicembre 2026 per verificare che l'operazione sia stata correttamente avviata. Grazie per la collaborazione.\n\nCordiali saluti,\nMarianna Gardini\n",
+  "disclosure": [
+    {
+      "surrogate": "Marianna Gardini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "IT86O0000099394348391849041",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione"
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "surrogate": "Teramo",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo di lavoro"
+    },
+    {
+      "surrogate": "€ 5.199,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma da trasferire"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza trasferimento"
+    },
+    {
+      "surrogate": "320 128 7634",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "selene.fabbretti@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "FRFLVR25A50X732Q",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "AY-15866",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "11 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza conferma"
+    }
+  ]
+}

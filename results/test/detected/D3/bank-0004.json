@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0004",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 69,
+      "end": 97,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
+    },
+    {
+      "start": 211,
+      "end": 229,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della banca"
+    },
+    {
+      "start": 412,
+      "end": 421,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 440,
+      "end": 466,
+      "text": "Trasporti Bellariva S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "start": 495,
+      "end": 523,
+      "text": "matricola aziendale TE-24747",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    },
+    {
+      "start": 719,
+      "end": 729,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della rata mensile"
+    },
+    {
+      "start": 1103,
+      "end": 1119,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui la richiesta deve essere presa in considerazione"
+    }
+  ],
+  "seconds": 0.0014
+}

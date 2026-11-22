@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0030",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 184,
+      "end": 211,
+      "text": "IT82I0000091996603120574215",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 673,
+      "end": 683,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1106,
+      "end": 1118,
+      "text": "337 584 2415",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1135,
+      "end": 1162,
+      "text": "laura.valsecchi@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1199,
+      "end": 1215,
+      "text": "DDDGBF81A26X698C",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

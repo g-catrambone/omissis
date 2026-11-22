@@ -1,0 +1,52 @@
+{
+  "text_id": "hr-0001",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 294,
+      "end": 301,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9987086355686188,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 882,
+      "end": 890,
+      "text": "leonardo",
+      "type": "EMAIL",
+      "confidence": 0.5999229351679484,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 891,
+      "end": 898,
+      "text": "lombard",
+      "type": "UTENTE",
+      "confidence": 0.4261403977870941,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 990,
+      "end": 997,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9967355728149414,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1294,
+      "end": 1304,
+      "text": "Lombardini",
+      "type": "PERSONA",
+      "confidence": 0.9032979905605316,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1334
+}

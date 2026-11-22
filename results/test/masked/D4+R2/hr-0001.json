@@ -1,0 +1,99 @@
+{
+  "text_id": "hr-0001",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - Baldassarre Fabbretti\n\nGentile Ufficio del Personale di Autolinee Brentari S.r.l.,\n\nmi chiamo Baldassarre Fabbretti e vi scrivo per comunicare la mia assenza dal lavoro a partire da oggi, 21 novembre 2026. Sono un [RUOLO_1] impiegato presso la [STRUTTURA_1] e la mia matricola aziendale è OY-67802.\n\nPurtroppo, a causa di un peggioramento del mio [SALUTE_1], non sono in grado di svolgere le mie mansioni in sicurezza. Il mio medico curante mi ha prescritto un periodo di riposo di almeno tre giorni, quindi prevedo di rientrare in servizio il 10 novembre 2026. Vi chiedo cortesemente di registrare questa assenza nei vostri sistemi.\n\nPer facilitare le eventuali verifiche amministrative, vi fornisco i miei dati anagrafici: il mio codice fiscale è MNMGVG59M28X807J e posso essere contattato al numero 384 535 4929 o all'indirizzo nevio.pagliarini@example.com. Ricordo che la mia carta di debito è emessa da Cassa di Risparmio di Montalfiore, [STRUTTURA_2], e che ho un deposito titoli attivo presso la stessa istituzione.\n\nNon necessito di ulteriori chiarimenti in questo momento, mi limito a richiedere la presa in carico della mia situazione. Resto a disposizione per inviare il certificato medico non appena disponibile.\n\nCordiali saluti,\n\nBaldassarre Fabbretti\n",
+  "disclosure": [
+    {
+      "surrogate": "Baldassarre Fabbretti",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda del datore di lavoro"
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio assenza"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "OY-67802",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica del mittente"
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di ritorno al lavoro"
+    },
+    {
+      "surrogate": "MNMGVG59M28X807J",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "384 535 4929",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "nevio.pagliarini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_2]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    }
+  ]
+}

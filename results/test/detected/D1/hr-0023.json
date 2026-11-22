@@ -1,0 +1,61 @@
+{
+  "text_id": "hr-0023",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 53,
+      "end": 70,
+      "text": "Tommaso Mantovani",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 277,
+      "end": 306,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 967,
+      "end": 979,
+      "text": "393 719 3080",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1013,
+      "end": 1042,
+      "text": "tommaso.mantovani@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1101,
+      "end": 1107,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1495,
+      "end": 1512,
+      "text": "Tommaso Mantovani",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0125
+}

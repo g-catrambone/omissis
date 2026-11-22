@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0004",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 110,
+      "end": 117,
+      "text": "Daniela",
+      "type": "PERSONA",
+      "confidence": 0.7411629259586334,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 123,
+      "end": 128,
+      "text": "esini",
+      "type": "PERSONA",
+      "confidence": 0.6468042731285095,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 222,
+      "end": 229,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9944701492786407,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 998,
+      "end": 1016,
+      "text": "daniela.marchesini",
+      "type": "EMAIL",
+      "confidence": 0.7199497580528259,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1331,
+      "end": 1349,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.733676865696907,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.129
+}

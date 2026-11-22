@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0023",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 49,
+      "end": 57,
+      "text": "Raffaele",
+      "type": "PERSONA",
+      "confidence": 0.640163779258728,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 105,
+      "end": 123,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.9550535559654236,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 166,
+      "end": 172,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.995751142501831,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 554,
+      "end": 570,
+      "text": "PGBVSC45B42X564O",
+      "type": "CF",
+      "confidence": 0.5111193988058302,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 707,
+      "end": 725,
+      "text": "raffaele.ferrarini",
+      "type": "EMAIL",
+      "confidence": 0.930567721525828,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1254,
+      "end": 1272,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.9941264033317566,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1344
+}

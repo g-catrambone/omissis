@@ -1,0 +1,50 @@
+{
+  "text_id": "hr-0004",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - [PERSONA_1_M]\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Purtroppo, a causa di un acuto di asma bronchiale, non sono in grado di svolgere le mie mansioni di elettricista presso la [AZIENDA_1].\n\nVi chiedo cortesemente di registrare questa assenza nei vostri sistemi. Per facilitare l'identificazione del mio fascicolo, vi fornisco la mia matricola aziendale KK-50663 e il mio codice fiscale BMDCST55B21X401A. Resido a [CITTA_1] e sono solitamente reperibile al numero 305 331 7289 per eventuali chiarimenti, anche se al momento preferisco riposare.\n\nRicordo che ho un prestito personale attivo presso la [AZIENDA_2] di [AZIENDA_3], filiale di [CITTA_1], con un importo residuo di circa € 1.200,50, ma questo dettaglio è solo a titolo informativo e non richiede azioni da parte vostra in questa fase. La mia priorità è recuperare le forze per tornare al più presto operativo.\n\nVi prego di confermare la ricezione di questa comunicazione tramite una risposta all'indirizzo [EMAIL_1]. Non è necessaria alcuna altra documentazione in questo momento, salvo che non venga richiesta successivamente dal medico curante.\n\nGrazie per la comprensione e per la gestione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_3]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

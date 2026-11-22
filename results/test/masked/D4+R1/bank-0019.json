@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0019",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta estinzione anticipata prestito personale - [PERSONA_1_F]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per richiedere formalmente la chiusura anticipata del mio prestito personale, contratto presso la [STRUTTURA_1].\n\nAttualmente lavoro come [RUOLO_1] presso [AZIENDA_2], ma ho deciso di rivedere la mia situazione finanziaria per ridurre i costi a lungo termine. Il prestito in questione, acceso in data [DATA_1], prevede una rata mensile di [IMPORTO_1].\n\nVi chiedo di procedere con l'estinzione totale del debito residuo, che al momento ammonta a [IMPORTO_2], e di inviarmi la relativa quietanza di pagamento. Desidero che l'operazione venga eseguita entro il [DATA_2], così da poter pianificare il trasferimento delle somme necessarie dal mio deposito titoli.\n\nVi prego di confermare la ricezione di questa richiesta e di indicarmi le eventuali penali o interessi di mora applicabili per la chiusura anticipata, come previsto dal contratto. Resto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o tramite l'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[CF_1]\n[UTENTE_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "istituto bancario destinatario della richiesta"
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede di un istituto bancario"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "posizione lavorativa del mittente"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "datore di lavoro del mittente"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di apertura del prestito"
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "rata mensile del prestito"
+    },
+    {
+      "surrogate": "[IMPORTO_2]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "debito residuo da estinguere"
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta di estinzione"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo interno del mittente"
+    }
+  ]
+}

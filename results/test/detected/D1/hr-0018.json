@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0018",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 63,
+      "end": 81,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 116,
+      "end": 142,
+      "text": "Caseificio Montelupo S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 156,
+      "end": 174,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 232,
+      "end": 238,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 896,
+      "end": 913,
+      "text": "ZLBRVN07D06X885L.",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1130,
+      "end": 1160,
+      "text": "beatrice.pontiggia@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1284,
+      "end": 1299,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1411,
+      "end": 1423,
+      "text": "367 789 1628",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1575,
+      "end": 1593,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0134
+}

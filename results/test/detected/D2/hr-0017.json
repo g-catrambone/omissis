@@ -1,0 +1,70 @@
+{
+  "text_id": "hr-0017",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 70,
+      "end": 82,
+      "text": "Franceschini",
+      "type": "PERSONA",
+      "confidence": 0.5198472440242767,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 153,
+      "end": 172,
+      "text": "Pietro Franceschini",
+      "type": "PERSONA",
+      "confidence": 0.9377174824476242,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 234,
+      "end": 241,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.9983563125133514,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 616,
+      "end": 623,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.9446150958538055,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 779,
+      "end": 792,
+      "text": "pietro.france",
+      "type": "EMAIL",
+      "confidence": 0.8533249795436859,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 793,
+      "end": 798,
+      "text": "chini",
+      "type": "EMAIL",
+      "confidence": 0.5548399686813354,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1194,
+      "end": 1213,
+      "text": "Pietro Franceschini",
+      "type": "PERSONA",
+      "confidence": 0.7467914819717407,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1342
+}

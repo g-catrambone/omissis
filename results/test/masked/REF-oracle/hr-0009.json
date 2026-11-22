@@ -1,0 +1,85 @@
+{
+  "text_id": "hr-0009",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta smart working per [PERSONA_1_M]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M], matricola [UTENTE_1], e vi scrivo per richiedere l'autorizzazione al lavoro da remoto. Come sapete, sono [RUOLO_1] e risiedo a [CITTA_1].\n\nRecentemente ho dovuto sottopormi a un [SALUTE_1], seguito da un percorso di [SALUTE_2] che richiede tempi di recupero specifici. Per gestire al meglio questa fase di [SALUTE_3] e ridurre gli spostamenti quotidiani, che risultano al momento dolorosi e faticosi, chiedo di poter svolgere le mie attività lavorative da casa.\n\nLa mia posizione mi consente di gestire le trattative con i fornitori e la pianificazione degli ordini anche a distanza, garantendo la stessa efficienza operativa. Ho già predisposto la postazione domestica con connessione stabile.\n\nVi chiedo cortesemente di valutare positivamente questa richiesta, che intendo far partire dal [DATA_1]. Resto a disposizione per qualsiasi chiarimento in merito alle modalità operative.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n[EMAIL_1]\n[TELEFONO_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_2]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_3]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

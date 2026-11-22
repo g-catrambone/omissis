@@ -1,0 +1,50 @@
+{
+  "text_id": "hr-0013",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Segnalazione fatti e richiesta di indagine - [PERSONA_1_M]\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo [PERSONA_1_M], matricola GZ-20484, e lavoro come custode presso la sede di [CITTA_1]. Vi scrivo per segnalare una situazione di vessazione che sto subendo da parte di un collega, iniziata il 12 novembre 2026.\n\nDa quella data, il mio turno di notte viene sistematicamente modificato senza preavviso, costringendomi a gestire turni di 14 ore consecutive. Inoltre, mi viene negato l'accesso agli strumenti di lavoro necessari per le mie mansioni, con il pretesto di \"mancanza di autorizzazioni\" mai comunicate formalmente. Questa condotta sta compromettendo la mia capacità di svolgere il lavoro in sicurezza e dignità.\n\nNon chiedo soluzioni immediate o sanzioni specifiche, ma vi prego di aprire una pratica di verifica formale per accertare i fatti. Desidero che venga indagata la regolarità delle assegnazioni di turno e delle autorizzazioni operative.\n\nPer i contatti, potete raggiungermi al [TELEFONO_1] o via [EMAIL_1]. I miei dati bancari presso [AZIENDA_1], filiale di [CITTA_1], restano invariati, con [PERSONA_2].\n\nResto in attesa di un riscontro scritto sull'avvio dell'indagine.\n\nCordiali saluti,\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

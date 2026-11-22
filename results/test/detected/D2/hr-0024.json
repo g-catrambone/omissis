@@ -1,0 +1,61 @@
+{
+  "text_id": "hr-0024",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 53,
+      "end": 66,
+      "text": "Noemi Boscolo",
+      "type": "PERSONA",
+      "confidence": 0.86146380007267,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 147,
+      "end": 160,
+      "text": "Noemi Boscolo",
+      "type": "PERSONA",
+      "confidence": 0.9815631061792374,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 196,
+      "end": 203,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9987993240356445,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 962,
+      "end": 974,
+      "text": "316 881 0196",
+      "type": "TELEFONO",
+      "confidence": 0.761482298374176,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1104,
+      "end": 1111,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.975366473197937,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1350,
+      "end": 1355,
+      "text": "Noemi",
+      "type": "PERSONA",
+      "confidence": 0.8494220972061157,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1337
+}

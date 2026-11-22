@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0022",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 70,
+      "end": 89,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 99,
+      "end": 113,
+      "text": "Banca Popolare",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 117,
+      "end": 127,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 140,
+      "end": 159,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 202,
+      "end": 208,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 240,
+      "end": 269,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 800,
+      "end": 831,
+      "text": "giacomo.passalacqua@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1054,
+      "end": 1062,
+      "text": "PB-80503",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1212,
+      "end": 1231,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1237,
+      "end": 1249,
+      "text": "350 286 0569",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0121
+}

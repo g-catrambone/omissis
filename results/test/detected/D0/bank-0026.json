@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0026",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 179,
+      "end": 206,
+      "text": "IT25L0000032615142863898422",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 901,
+      "end": 909,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1103,
+      "end": 1119,
+      "text": "MPMSLS77B67X322T",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1284,
+      "end": 1296,
+      "text": "337 642 7680",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1297,
+      "end": 1329,
+      "text": "emanuele.agostinelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

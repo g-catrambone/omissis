@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0023",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 554,
+      "end": 570,
+      "text": "PGBVSC45B42X564O",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 620,
+      "end": 647,
+      "text": "IT42B0000028200268376451697",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 707,
+      "end": 737,
+      "text": "raffaele.ferrarini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1221,
+      "end": 1233,
+      "text": "357 736 0613",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0001
+}

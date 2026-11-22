@@ -1,0 +1,133 @@
+{
+  "text_id": "hr-0025",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 42,
+      "end": 55,
+      "text": "Noemi Boscolo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 65,
+      "end": 86,
+      "text": "Ufficio del Personale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di gestione del personale"
+    },
+    {
+      "start": 90,
+      "end": 123,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda del datore di lavoro"
+    },
+    {
+      "start": 136,
+      "end": 149,
+      "text": "Noemi Boscolo",
+      "type": "PERSONA",
+      "confidence": 0.9747248291969299,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 164,
+      "end": 173,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "start": 184,
+      "end": 199,
+      "text": "sede di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede precisa dell'azienda"
+    },
+    {
+      "start": 293,
+      "end": 322,
+      "text": "delegato sindacale di reparto",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ruolo specifico di chi scrive"
+    },
+    {
+      "start": 407,
+      "end": 423,
+      "text": "14 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data dell'incontro"
+    },
+    {
+      "start": 723,
+      "end": 731,
+      "text": "WT-01641",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 758,
+      "end": 774,
+      "text": "GLPBMV68M53X619A",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 916,
+      "end": 932,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 1028,
+      "end": 1041,
+      "text": "Noemi Boscolo",
+      "type": "PERSONA",
+      "confidence": 0.9621883183717728,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1042,
+      "end": 1067,
+      "text": "noemi.boscolo@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1068,
+      "end": 1080,
+      "text": "316 881 0196",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1488
+}

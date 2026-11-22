@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0017",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 60,
+      "end": 70,
+      "text": "Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.8430581092834473,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 124,
+      "end": 134,
+      "text": "Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.8720221519470215,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 174,
+      "end": 181,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9907815754413605,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1077,
+      "end": 1093,
+      "text": "elena.occhipinti",
+      "type": "EMAIL",
+      "confidence": 0.9535647034645081,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1420,
+      "end": 1430,
+      "text": "Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.9969567855199178,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1339
+}

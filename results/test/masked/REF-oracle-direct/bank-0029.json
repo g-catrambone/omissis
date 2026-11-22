@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0029",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta chiusura conto corrente e deposito titoli - [PERSONA_1_M]\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1] presso la filiale di Trapani.\n\nCon la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale, sia per il conto corrente che per il deposito titoli associato. Ho deciso di recedere dal servizio per motivi personali e professionali, non avendo più necessità di gestire la mia liquidità presso la vostra istituzione.\n\nVi prego di procedere con le operazioni di chiusura entro il 15 dicembre 2026. Vi comunico che sul conto è attualmente presente un saldo di € 1.200,50, che desidero venga trasferito sul mio nuovo conto presso un'altra banca, oppure restituito tramite bonifico all'IBAN che vi comunicherò separatamente.\n\nPer facilitare le procedure amministrative, allego copia del mio documento d'identità e vi fornisco il mio codice fiscale [CF_1]. Sono un contabile presso Tessitura Valgrande S.r.l. e risiedo stabilmente a Trapani.\n\nResto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

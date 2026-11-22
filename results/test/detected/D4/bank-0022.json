@@ -1,0 +1,124 @@
+{
+  "text_id": "bank-0022",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 70,
+      "end": 89,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.9125380516052246,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 99,
+      "end": 127,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 140,
+      "end": 159,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.9980682830015818,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 191,
+      "end": 208,
+      "text": "filiale di Foggia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di banca"
+    },
+    {
+      "start": 222,
+      "end": 229,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "start": 240,
+      "end": 269,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "start": 628,
+      "end": 641,
+      "text": "15 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza"
+    },
+    {
+      "start": 696,
+      "end": 707,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "start": 800,
+      "end": 831,
+      "text": "giacomo.passalacqua@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 987,
+      "end": 1003,
+      "text": "ZLFNCT54D15X978K",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1054,
+      "end": 1062,
+      "text": "PB-80503",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice cliente/matricola"
+    },
+    {
+      "start": 1212,
+      "end": 1231,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.9945488075415293,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1237,
+      "end": 1249,
+      "text": "350 286 0569",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.147
+}

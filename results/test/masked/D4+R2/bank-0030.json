@@ -1,0 +1,85 @@
+{
+  "text_id": "bank-0030",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - Nicole Salvadori\n\nGentile Banco di Roccalta,\n\nmi chiamo Nicole Salvadori e sono titolare del conto corrente con IBAN IT48A0000016802680848511799 presso la filiale di Imperia. Vi scrivo per comunicare la mia volontà di chiudere definitivamente il rapporto contrattuale, chiedendo esclusivamente il trasferimento delle somme residue.\n\nAttualmente lavoro come [RUOLO_1] presso Dorigatti Alimentari S.p.A., dove sono impiegata da diversi anni. A causa di un cambio di residenza e di esigenze organizzative personali, non intendo più mantenere attivo questo conto. Sul saldo attuale risultano presenti circa € 5.199,50, che desidero trasferire integralmente sul mio nuovo conto presso un'altra istituzione bancaria.\n\nVi prego di trasferire l'intero importo indicato entro il 27 dicembre 2026 sul conto che comunicherò successivamente tramite PEC o raccomandata. Vi chiedo cortesemente di disattivare anche la carta di debito associata al conto per evitare eventuali addebiti futuri.\n\nResto a disposizione per qualsiasi chiarimento al numero 334 841 1584 o all'indirizzo ottavio.orsolini@example.com.\n\nCordiali saluti,\n\nNicole Salvadori\nSTDGZS05A02X283K\n",
+  "disclosure": [
+    {
+      "surrogate": "Nicole Salvadori",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "IT48A0000016802680848511799",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Imperia",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città della filiale"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere di Nicole Salvadori"
+    },
+    {
+      "surrogate": "Dorigatti Alimentari S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "€ 5.199,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma da trasferire"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui trasferire l'importo"
+    },
+    {
+      "surrogate": "334 841 1584",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ottavio.orsolini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "STDGZS05A02X283K",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}
