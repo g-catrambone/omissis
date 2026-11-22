@@ -127,7 +127,7 @@ of the pin. Use of the service is governed by the Groq Services Agreement
 - **Revision.** The files of `data/dev/`, `data/test/` (checksums in
   `data/split.json`) and `data/profiles/` at the tag `v1.0`.
   Split: 20 texts in dev (13 bank, 7 HR) and 46 in test (27 bank, 19 HR).
-- **Licence.** Proposed: CC BY 4.0. Not decided (step C3 of `docs/TODO.md`).
+- **Licence.** CC BY 4.0 (`LICENSE`; `docs/decisions.md`, 22 Nov 2026).
 - **How we use it.** Every number of the evaluation is measured against its gold
   spans and gold fields; the profiles are the candidates of the linkage attack.
 - **Limits for us.** Every person and value is invented; identifiers use codes
