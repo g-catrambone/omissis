@@ -301,18 +301,34 @@ def chart_metric(rows: list[dict[str, Any]]) -> str:
     return "t3" if any(row["t1"] is None for row in rows) else "utility"
 
 
-def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
-    """Privacy against utility, one point per configuration. False without matplotlib."""
+MARKERS = "os^DvPX"  # one per configuration: the chart is read without colour too
+
+
+def _pyplot():
+    """`matplotlib.pyplot` on the Agg backend, or None when matplotlib is not installed."""
     try:
         import matplotlib
 
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
     except ImportError:
-        return False
+        return None
+    return plt
+
+
+def draw(metrics: dict[str, dict[str, Any] | None]):
+    """The chart as a figure, or None without matplotlib.
+
+    Privacy against utility, one point per configuration. The names are in a legend:
+    written beside the points they cover each other where the configurations are close.
+    """
+    plt = _pyplot()
+    if plt is None:
+        return None
     linkage, utility = metrics["linkage"], metrics["utility"]
     figure, axes = plt.subplots(figsize=(7, 5))
     metric = chart_metric(utility["rows"])
+    drawn = 0
     for row in utility["rows"]:
         if row[metric] is None:
             continue
@@ -323,19 +339,30 @@ def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
             y,
             xerr=[[x - (1 - link["top1_ci_high"])], [(1 - link["top1_ci_low"]) - x]],
             yerr=[[y - row[f"{metric}_ci_low"]], [row[f"{metric}_ci_high"] - y]],
-            fmt="o",
+            fmt=MARKERS[drawn % len(MARKERS)],
             capsize=3,
+            label=row["config"],
         )
-        axes.annotate(row["config"], (x, y), textcoords="offset points", xytext=(6, 6))
+        drawn += 1
     axes.axvline(1 - 1 / 25, linestyle="--", color="grey")
     axes.annotate("chance", (1 - 1 / 25, 0.02), rotation=90, color="grey", ha="right")
     axes.set_xlabel("Privacy score (1 − linkage top-1, N = 25)")
     axes.set_ylabel("Utility score" if metric == "utility" else "T3 score (judge rejected)")
     axes.set_xlim(-0.05, 1.05)
     axes.set_ylim(0, 1.05)
+    if drawn:
+        axes.legend(title="Configuration", loc="lower left")
+    return figure
+
+
+def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
+    """Write the chart of `draw` to `path`. False without matplotlib."""
+    figure = draw(metrics)
+    if figure is None:
+        return False
     path.parent.mkdir(parents=True, exist_ok=True)
     figure.savefig(path, dpi=150, bbox_inches="tight")
-    plt.close(figure)
+    _pyplot().close(figure)
     return True
 
 

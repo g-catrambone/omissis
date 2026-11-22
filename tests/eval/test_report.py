@@ -1,5 +1,7 @@
 """Report: what the chart plots and which contrasts are computed without a judge."""
 
+import pytest
+
 from omissis.eval import profiles as planning
 from omissis.eval import report
 
@@ -25,6 +27,31 @@ def test_chart_plots_t3_for_every_configuration_when_one_has_no_t1():
     assert report.chart_metric(judged) == "utility"
     rejected = report.utility_rows(per_text("REF-none", 0.4, 1.0) + per_text("D4+R1", 0.4, None), 1)
     assert report.chart_metric(rejected) == "t3"
+
+
+def test_chart_names_the_configurations_in_a_legend_not_beside_the_points():
+    # On the test split four configurations sit in one corner: names written beside
+    # the points covered each other (docs/decisions.md, 22 Nov).
+    pytest.importorskip("matplotlib")
+    names = ("REF-none", "D1+R1", "D4+R1")
+    attack = [
+        {"config": c, "n": n, "text_id": f"t{i}", "parsed": True, "top1": i < 3, "top3": True}
+        for c in names
+        for n in (10, 25)
+        for i in range(6)
+    ]
+    useful = [row for c in names for row in per_text(c, 0.4, None)]
+    figure = report.draw(
+        {
+            "linkage": {"rows": report.attacks.linkage_rows(attack, 1)},
+            "utility": {"rows": report.utility_rows(useful, 1)},
+        }
+    )
+    (axes,) = figure.axes
+    assert [text.get_text() for text in axes.get_legend().get_texts()] == list(names)
+    assert [text.get_text() for text in axes.texts] == ["chance"]
+    # One marker per configuration: the chart is read without colour too.
+    assert [c.lines[0].get_marker() for c in axes.containers] == list(report.MARKERS[:3])
 
 
 def test_utility_contrast_needs_t1_on_both_sides():
