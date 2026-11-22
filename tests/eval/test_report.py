@@ -99,6 +99,23 @@ def test_scorecard_has_no_utility_without_t1_and_counts_the_replies_not_parsed()
     assert rows["`D4+R1`"]["T1"] == rows["`D4+R1`"]["utility"] == "—"
 
 
+def test_not_parsed_counts_the_replies_and_refuses_a_split_with_no_results(tmp_path, capsys):
+    # Protocol, section 7: a split is launched again while this count is above zero.
+    folder = tmp_path / "dev" / "metrics"
+    answers = dict.fromkeys(report.attacks.ATTRIBUTES, "x")
+    rows = [{"parsed": True}, {"parsed": False}, {"parsed": False}]
+    report.write(folder, "linkage", {"per_text": rows})
+    guessed = [{"invalid": []}, {"invalid": ["city"]}, {"invalid": list(answers)}]
+    report.write(folder, "attributes", {"per_text": guessed})
+    before = {p.name: p.read_bytes() for p in folder.iterdir()}
+    assert report.not_parsed("dev", tmp_path) == {"linkage": 2, "attributes": 1}
+    assert {p.name: p.read_bytes() for p in folder.iterdir()} == before  # nothing is written
+    # The command, on the committed pilot and on a split that has no results yet.
+    assert report.main(["--split", "pilot", "--not-parsed"]) == 0
+    assert "pilot: replies of the attacker not parsed: linkage" in capsys.readouterr().out
+    assert report.main(["--split", "no-such-split", "--not-parsed"]) == 2
+
+
 def linkage(text_ids, hit):
     return [
         {"config": "D4+R1", "n": n, "text_id": t, "parsed": True, "top1": hit(t), "top3": True}

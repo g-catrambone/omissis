@@ -6,6 +6,9 @@ from them, then writes the scorecard and the chart: no model, no detector, no te
 It is the command `make reproduce` calls.
 
     python -m omissis.eval.report --split dev
+
+With `--not-parsed` it writes nothing and prints how many replies of the attacker
+were not parsed: what the protocol, section 7, reads before a split is launched again.
 """
 
 from __future__ import annotations
@@ -374,10 +377,43 @@ def rebuild(split: str, results: Path = RESULTS) -> dict[str, dict[str, Any] | N
     return metrics
 
 
+def not_parsed(split: str, results: Path = RESULTS) -> dict[str, int]:
+    """The replies of the attacker that were not parsed, by attack; no outcome is read.
+
+    A linkage reply with no ranking; an attribute reply with no valid answer at all. A
+    reply cut at the token limit is one of them, and only that one is asked again
+    (protocol, section 7).
+    """
+    folder = results / split / "metrics"
+    linkage, attributes = read(folder, "linkage"), read(folder, "attributes")
+    if linkage is None or attributes is None:
+        raise FileNotFoundError(f"{folder}: no linkage.json or no attributes.json yet")
+    return {
+        "linkage": sum(not r["parsed"] for r in linkage["per_text"]),
+        "attributes": sum(
+            len(r["invalid"]) == len(attacks.ATTRIBUTES) for r in attributes["per_text"]
+        ),
+    }
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m omissis.eval.report")
     parser.add_argument("--split", required=True)
+    parser.add_argument(
+        "--not-parsed", action="store_true", help="print the count and write nothing"
+    )
     args = parser.parse_args(argv)
+    if args.not_parsed:
+        try:
+            count = not_parsed(args.split)
+        except FileNotFoundError as exc:
+            print(exc, file=sys.stderr)
+            return 2
+        print(
+            f"{args.split}: replies of the attacker not parsed: "
+            f"linkage {count['linkage']}, attributes {count['attributes']}"
+        )
+        return 0
     metrics = rebuild(args.split)
     if scorecard(args.split, metrics) is None:
         print(f"{args.split}: no scorecard row, no scorecard written")

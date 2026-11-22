@@ -121,7 +121,15 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
   committed dev results on the same machine, but for the attacker's replies cut
   at the token limit (protocol, section 7). A launch that stops half-way is
   resumed as the protocol says in section 4. If the judge was rejected, fill the
-  sheet of the fallback before any result is reported.
+  sheet of the fallback before any result is reported. The judge was rejected
+  on 22 Nov, so the order is:
+  1. `make eval-test`: it writes `results/test/judge_fallback/` and stops.
+  2. While a reply of the attacker is not parsed, `make eval-test` again, at
+     most three times (protocol, section 7). The agent reads the count with
+     `uv run python -m omissis.eval.report --split test --not-parsed` and
+     nothing else of `results/test/`.
+  3. Fill `sheet_Giuseppe.csv`, the same day, without opening the scorecard.
+  4. `make eval-test` a last time: it completes the run.
 
 ## B. Open to everyone: can start now
 

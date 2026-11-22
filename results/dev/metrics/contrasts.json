@@ -16,15 +16,15 @@
       "b": "D1+R1",
       "metric": "linkage_top1_n25",
       "texts": 20,
-      "difference": -0.3,
-      "low": -0.5,
-      "high": -0.1,
+      "difference": -0.35,
+      "low": -0.55,
+      "high": -0.15,
       "test": "mcnemar_exact",
-      "p": 0.03125,
+      "p": 0.015625,
       "a_only": 0,
-      "b_only": 6,
-      "p_holm": 0.0625,
-      "finding": false
+      "b_only": 7,
+      "p_holm": 0.03125,
+      "finding": true
     },
     {
       "a": "D4+R2",

@@ -153,7 +153,10 @@ result is reported as it is.
 - A run of `make eval-test` counts once it has written
   `results/test/metrics/contrasts.json`, the last file it writes. A launch
   that stops before that (a network error, a spending cap) is repeated and
-  resumes from the cache: the calls already made are not made again. Every
+  resumes from the cache: the calls already made are not made again. With
+  the judge rejected, the command is also launched again before the sheets
+  of section 9 are filled, as section 7 says for the attacker's replies cut
+  at the token limit: the run still counts once. Every
   launch adds a line to `data/test_access.log`. The command is launched on the
   reference machine, and it stops on a missing model, library or cache entry
   instead of scoring a text as if nothing had been found. A scoring defect
@@ -223,7 +226,18 @@ output counts as a miss and is counted separately for each configuration.
 A reply that the model cuts at the token limit is unparseable and is not
 written to the cache: it is asked again at the next launch, so the count, and
 with it the top-1 of a configuration, can differ between two launches by
-those texts. The scorecard shows the count beside the rows.
+those texts. A cut reply is always a miss, so it makes a configuration look
+more private than it is. For this reason the command is launched again, at
+most three more times, for as long as a reply of the attacker (linkage or
+attributes) is not parsed; a new launch makes only the calls that are not in
+the cache, and the results of a split are those of its last launch. On the
+test the three launches come before the one that completes the run, which
+asks once more the replies still cut. The rule reads the number of replies
+not parsed (`python -m omissis.eval.report --split <split> --not-parsed`)
+and no outcome; a complete reply that is not valid JSON is in the cache and
+is never asked again, so the count may stay above zero. The pilot is not
+launched again: it stays the record of the go of 21 Nov. The scorecard shows
+the count that is left.
 **Privacy score** of a configuration = 1 − top-1 accuracy at N = 25.
 **Limit to declare, and its control.** Seven bank texts are about a loan or a
 mortgage that the profile of their author does not hold (`docs/decisions.md`,
