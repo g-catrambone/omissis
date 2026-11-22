@@ -244,7 +244,7 @@ These steps need no result of the evaluation and touch different files.
     text. The failures of D3 are written to no results file: they are not
     counted. No model is called.
   - Done when: every example can be found again in the files it names.
-- [ ] **C2 · Results and error taxonomy** — after `make eval-test` — *Claimed by:* —
+- [x] **C2 · Results and error taxonomy** — after `make eval-test` — *Claimed by:* Giuseppe
   - Files: `results/dev/error_taxonomy.md` (new); `docs/cards.md` (the fields left
     for after the split).
   - Do: the taxonomy from `results/dev/error_examples.md`; every statement

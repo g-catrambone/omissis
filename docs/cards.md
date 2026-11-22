@@ -126,7 +126,7 @@ of the pin. Use of the service is governed by the Groq Services Agreement
   report (`docs/decisions.md`, 21 Nov).
 - **Revision.** The files of `data/dev/`, `data/test/` (checksums in
   `data/split.json`) and `data/profiles/` at the tag `v1.0`.
-  Split: after the split (texts in dev and in test).
+  Split: 20 texts in dev (13 bank, 7 HR) and 46 in test (27 bank, 19 HR).
 - **Licence.** Proposed: CC BY 4.0. Not decided (step C3 of `docs/TODO.md`).
 - **How we use it.** Every number of the evaluation is measured against its gold
   spans and gold fields; the profiles are the candidates of the linkage attack.
@@ -141,4 +141,7 @@ of the pin. Use of the service is governed by the Groq Services Agreement
   wrote it: it is kept and tagged, and a detector that checks the format can
   miss it. Texts of the same author are
   not independent, so intervals over texts overstate precision.
-  Numbers per split: after the split.
+  Numbers per split, annotated spans (`gold` in
+  `results/<split>/metrics/detection.json`): dev 297 (141 direct, 149
+  quasi-identifiers, 7 special category); test 666 (335 direct, 315
+  quasi-identifiers, 16 special category).
