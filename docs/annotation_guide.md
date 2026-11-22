@@ -2,8 +2,8 @@
 
 How to tag sensitive spans in the Italian texts. The policy is fixed in
 `docs/evaluation_protocol.md`, section 3; this guide applies it. The file
-format is in `docs/interfaces.md`, section 5. Draft written by an agent
-(block 1, revised in task 3.1); the edge cases are to be rewritten by the team.
+format is in `docs/interfaces.md`, section 5. Written by an agent and revised
+during the review of the texts: the cases settled there are in section 7.
 
 ## 1. Policy in one paragraph
 

@@ -61,12 +61,15 @@ comes from is named; no number is written here.
 ## 5. Demo (at most 90 seconds)
 
 - On screen: the Gradio page in replay mode (`make demo`), no network.
-- Do: pick one fixture; show the masked text as it is sent, with surrogates
-  highlighted; show the reply restored; scroll the disclosure list.
-- Say: what you see on the left is exactly what left the machine.
+- Do: pick one fixture and press *Protect*: the masked text appears, with
+  surrogates highlighted and the table of what was replaced. Nothing has left
+  the machine yet.
+- Say: this is the human check before an irreversible step: what you see is
+  exactly what will be sent.
+- Do: press *Send*: show the reply restored and scroll the table.
 - Do: on a bank fixture, pick the second example request (a total of the
-  amounts): the page does not send it and says why. This step needs no
-  recording.
+  amounts): *Protect* does not send it and says why. This is the failure we
+  show on purpose.
 - Fallback: a screen recording of the same steps, in case the laptop fails.
 
 ## 6. Conclusions

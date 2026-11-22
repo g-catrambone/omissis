@@ -397,7 +397,14 @@ calls and estimated spend per configuration.
   share ≥ 0).
 - Holm correction across the three primary contrasts; alpha 0.05. A primary
   contrast is stated as a finding only when its Holm-adjusted p is below 0.05;
-  the intervals describe its size.
+  the intervals describe its size. Where a contrast cannot be computed the
+  correction runs over the ones that exist: dev has no T1 since the judge was
+  rejected, so its two contrasts are corrected for two (contrast 1 on dev: Holm
+  p 0.031; for three it would be 0.047). The test has all three.
+- A bootstrap p of 0 means below 1 in 10,000, the resolution of the resamples;
+  the scorecard prints it as 0.000. The scorecard writes "(no variation)" for
+  the interval of an estimate with no variation, and the README adds the number
+  of texts.
 - With 46 texts intervals are wide. A difference that does not pass is stated
   as "not distinguishable with this sample". Negative results get the same
   space. An interval of zero width (0 or 46 of 46) is reported as "no
