@@ -2,10 +2,10 @@
   "text_id": "hr-0002",
   "config_name": "D4+R2",
   "run_id": "65b4d39c07a9",
-  "masked_text": "Oggetto: Segnalazione assenza per malattia - Agnese Lanzoni,\n\nmi permetto di contattarvi per comunicare la mia assenza dal lavoro a partire da oggi, 21 novembre 2026. Purtroppo, a causa di un acuto di [SALUTE_1], il mio medico curante mi ha prescritto un periodo di riposo obbligatorio di almeno tre giorni. Vi chiedo cortesemente di registrare questa assenza nei vostri sistemi gestionali per le date comprese tra il 21 novembre 2026 e il 14 novembre 2026.\n\nPer facilitare l'identificazione del mio fascicolo, vi fornisco i miei dati anagrafici e professionali. Sono Clelia Rinaldini, impiegata come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A., con matricola aziendale XV-19544. Resiedo a Biella e sono titolare di un conto corrente presso la Cassa di Risparmio di Montalfiore, [STRUTTURA_1], dove gestisco anche la mia carta di debito. Il mio codice fiscale è ZVSPFP32B56X949P e potete raggiungermi al numero 361 796 5855 per eventuali chiarimenti urgenti.\n\nVi prego di considerare questa email come formale richiesta di registrazione dell'assenza. Non è necessario che mi contattiate per ulteriori dettagli in questo momento, poiché mi concentrerò sul recupero della salute. Apprezzerò la vostra tempestività nell'aggiornare la mia posizione lavorativa. Resto a disposizione per inviare il certificato medico non appena disponibile, ma per ora vi chiedo solo di procedere con l'annotazione dell'assenza.\n\nCordiali saluti,\n\nClelia Rinaldini\nelettra.gardini@example.com\n",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - Clelia Rinaldini\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per comunicare la mia assenza dal lavoro a partire da oggi, 21 novembre 2026. Purtroppo, a causa di un acuto di [SALUTE_1], il mio medico curante mi ha prescritto un periodo di riposo obbligatorio di almeno tre giorni. Vi chiedo cortesemente di registrare questa assenza nei vostri sistemi gestionali per le date comprese tra il 21 novembre 2026 e il 14 novembre 2026.\n\nPer facilitare l'identificazione del mio fascicolo, vi fornisco i miei dati anagrafici e professionali. Sono Clelia Rinaldini, impiegata come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A., con matricola aziendale XV-19544. Resiedo a Biella e sono titolare di un conto corrente presso la Cassa di Risparmio di Montalfiore, [STRUTTURA_1], dove gestisco anche la mia carta di debito. Il mio codice fiscale è ZVSPFP32B56X949P e potete raggiungermi al numero 361 796 5855 per eventuali chiarimenti urgenti.\n\nVi prego di considerare questa email come formale richiesta di registrazione dell'assenza. Non è necessario che mi contattiate per ulteriori dettagli in questo momento, poiché mi concentrerò sul recupero della salute. Apprezzerò la vostra tempestività nell'aggiornare la mia posizione lavorativa. Resto a disposizione per inviare il certificato medico non appena disponibile, ma per ora vi chiedo solo di procedere con l'annotazione dell'assenza.\n\nCordiali saluti,\n\nClelia Rinaldini\nelettra.gardini@example.com\n",
   "disclosure": [
     {
-      "surrogate": "Agnese Lanzoni",
+      "surrogate": "Clelia Rinaldini",
       "type": "PERSONA",
       "class": "direct",
       "source": "D1",
@@ -24,13 +24,6 @@
       "class": "special",
       "source": "D3",
       "reason": "diagnosi di salute"
-    },
-    {
-      "surrogate": "Clelia Rinaldini",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
     },
     {
       "surrogate": "[RUOLO_1]",

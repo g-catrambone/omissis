@@ -2,10 +2,10 @@
   "text_id": "bank-0001",
   "config_name": "D4+R2",
   "run_id": "65b4d39c07a9",
-  "masked_text": "Oggetto: Richiesta sospensione rate prestito personale - Manfredi Gardini Banco di Roccalta,\n\nmi chiamo Gioele Salvadori e sono titolare del conto corrente con Agnese Fabbretti. Vi scrivo per richiedere la sospensione temporanea dei pagamenti del mio prestito personale, contratto presso la [STRUTTURA_1].\n\nAttualmente lavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A., ma a causa di un aggravamento della mia [SALUTE_1] sono costretto a fermarmi per un periodo di cura. Questa situazione mi impedisce di sostenere l'onere economico della rata mensile di € 978,00 prevista per il 27 dicembre 2026.\n\nVi chiedo pertanto di sospendere le rate fino al 14 marzo 2027, senza ulteriori aggravio di interessi se possibile. Il mio codice fiscale è SVPLLN52H54X878W e la matricola aziendale è TF-33651.\n\nResto a disposizione per fornire eventuali certificati medici o documentazione aggiuntiva. Potete contattarmi al numero 366 137 7472 o all'indirizzo priscilla.fiorucci@example.com.\n\nCordiali saluti,\n\nGioele Salvadori\n",
+  "masked_text": "Oggetto: Richiesta sospensione rate prestito personale - Gioele Salvadori\n\nGentile Banco di Roccalta,\n\nmi chiamo Gioele Salvadori e sono titolare del conto corrente con Agnese Fabbretti. Vi scrivo per richiedere la sospensione temporanea dei pagamenti del mio prestito personale, contratto presso la [STRUTTURA_1].\n\nAttualmente lavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A., ma a causa di un aggravamento della mia [SALUTE_1] sono costretto a fermarmi per un periodo di cura. Questa situazione mi impedisce di sostenere l'onere economico della rata mensile di € 978,00 prevista per il 27 dicembre 2026.\n\nVi chiedo pertanto di sospendere le rate fino al 14 marzo 2027, senza ulteriori aggravio di interessi se possibile. Il mio codice fiscale è SVPLLN52H54X878W e la matricola aziendale è TF-33651.\n\nResto a disposizione per fornire eventuali certificati medici o documentazione aggiuntiva. Potete contattarmi al numero 366 137 7472 o all'indirizzo priscilla.fiorucci@example.com.\n\nCordiali saluti,\n\nGioele Salvadori\n",
   "disclosure": [
     {
-      "surrogate": "Manfredi Gardini",
+      "surrogate": "Gioele Salvadori",
       "type": "PERSONA",
       "class": "direct",
       "source": "D1",
@@ -17,13 +17,6 @@
       "class": "quasi",
       "source": "D3",
       "reason": "nome di un istituto bancario"
-    },
-    {
-      "surrogate": "Gioele Salvadori",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
     },
     {
       "surrogate": "Agnese Fabbretti",

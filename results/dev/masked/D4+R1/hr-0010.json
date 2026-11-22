@@ -2,7 +2,7 @@
   "text_id": "hr-0010",
   "config_name": "D4+R1",
   "run_id": "933a73c866b3",
-  "masked_text": "Oggetto: Richiesta colloquio per lavoro da remoto - [PERSONA_1_M]Gentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono il [RUOLO_1] presso la sede di [CITTA_1]. Vi scrivo per richiedere formalmente un colloquio per discutere la possibilità di lavorare da remoto a partire dal [DATA_1].\n\nCome sapete, gestisco quotidianamente le forniture per i cantieri attivi in zona, e ritengo che la mia posizione mi consenta di mantenere la piena produttività anche da casa, senza impatti negativi sui tempi di consegna. Ho già predisposto un piano operativo dettagliato che illustrerò volentieri durante un breve incontro.\n\nPer facilitare l'identificazione della mia posizione interna, vi comunico la mia matricola aziendale [UTENTE_1]. Inoltre, per completezza amministrativa, il mio codice fiscale è [CF_1].\n\nNon chiedo altre informazioni in questa fase, ma desidero solo fissare un colloquio per discutere i dettagli logistici e le eventuali tutele contrattuali. Sarebbe ideale poter parlare entro il [DATA_2], così da poter organizzare la transizione in modo ordinato.\n\nResto a disposizione per qualsiasi chiarimento preliminare.\n\nCordiali saluti,\n\n[PERSONA_1_M]Responsabile Acquisti\n[AZIENDA_1]\n[PERSONA_2]: [TELEFONO_1]\nEmail: [EMAIL_1]\n",
+  "masked_text": "Oggetto: Richiesta colloquio per lavoro da remoto - [PERSONA_1_M]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono il [RUOLO_1] presso la sede di [CITTA_1]. Vi scrivo per richiedere formalmente un colloquio per discutere la possibilità di lavorare da remoto a partire dal [DATA_1].\n\nCome sapete, gestisco quotidianamente le forniture per i cantieri attivi in zona, e ritengo che la mia posizione mi consenta di mantenere la piena produttività anche da casa, senza impatti negativi sui tempi di consegna. Ho già predisposto un piano operativo dettagliato che illustrerò volentieri durante un breve incontro.\n\nPer facilitare l'identificazione della mia posizione interna, vi comunico la mia matricola aziendale [UTENTE_1]. Inoltre, per completezza amministrativa, il mio codice fiscale è [CF_1].\n\nNon chiedo altre informazioni in questa fase, ma desidero solo fissare un colloquio per discutere i dettagli logistici e le eventuali tutele contrattuali. Sarebbe ideale poter parlare entro il [DATA_2], così da poter organizzare la transizione in modo ordinato.\n\nResto a disposizione per qualsiasi chiarimento preliminare.\n\nCordiali saluti,\n\n[PERSONA_1_M]\nResponsabile Acquisti\n[AZIENDA_1]\nTel: [TELEFONO_1]\nEmail: [EMAIL_1]\n",
   "disclosure": [
     {
       "surrogate": "[PERSONA_1_M]",
@@ -59,13 +59,6 @@
       "class": "quasi",
       "source": "D3",
       "reason": "data di colloquio"
-    },
-    {
-      "surrogate": "[PERSONA_2]",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
     },
     {
       "surrogate": "[TELEFONO_1]",

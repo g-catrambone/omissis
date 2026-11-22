@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 39,
-      "end": 74,
-      "text": "Fabrizio Nicoletti\n\nGentile Ufficio",
+      "end": 57,
+      "text": "Fabrizio Nicoletti",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -76,11 +76,11 @@
     },
     {
       "start": 1362,
-      "end": 1390,
-      "text": "Fabrizio Nicoletti\nMatricola",
+      "end": 1380,
+      "text": "Fabrizio Nicoletti",
       "type": "PERSONA",
-      "confidence": 0.85,
-      "source": "D1",
+      "confidence": 0.8806093782186508,
+      "source": "D2",
       "reason": null
     },
     {
@@ -102,5 +102,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.1465
+  "seconds": 0.1602
 }

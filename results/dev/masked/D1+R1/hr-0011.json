@@ -2,7 +2,7 @@
   "text_id": "hr-0011",
   "config_name": "D1+R1",
   "run_id": "49f599e17121",
-  "masked_text": "Oggetto: Richiesta colloquio urgente - [PERSONA_1_M] del [CITTA_1].,\n\nmi chiamo [PERSONA_2_M], sono contabile e lavoro presso la sede di [CITTA_2]. Vi scrivo per segnalare una situazione di disagio che sto vivendo da alcune settimane. Dal 12 novembre 2026, il mio responsabile diretto ha iniziato a ignorare le mie comunicazioni e a assegnarmi compiti fuori dalla mia competenza, creando un clima di tensione insostenibile. Questa dinamica sta compromettendo la mia serenità e la mia capacità di lavorare con la solita efficienza.\n\nNon intendo entrare nel merito di ogni singolo episodio in questa sede, ma ritengo fondamentale affrontare la questione in modo formale e riservato. La mia richiesta è esclusivamente quella di fissare un incontro o un colloquio con un rappresentante dell'[AZIENDA_1] per discutere di quanto accaduto. Desidero che questo incontro avvenga entro il 20 novembre 2026, per poter chiarire la situazione e trovare una soluzione adeguata.\n\nResto a disposizione per concordare data e ora. Per qualsiasi necessità di contatto, potete raggiungermi al numero [TELEFONO_1] o tramite la mia email aziendale. Vi chiedo cortesemente di trattare questa segnalazione con la massima riservatezza, come previsto dalle procedure interne.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\n[PERSONA_3_M]: BR-77464\n[EMAIL_1]\n",
+  "masked_text": "Oggetto: Richiesta colloquio urgente - [PERSONA_1_M]\n\nGentile Ufficio del [CITTA_1].,\n\nmi chiamo [PERSONA_1_M], sono contabile e lavoro presso la sede di [CITTA_2]. Vi scrivo per segnalare una situazione di disagio che sto vivendo da alcune settimane. Dal 12 novembre 2026, il mio responsabile diretto ha iniziato a ignorare le mie comunicazioni e a assegnarmi compiti fuori dalla mia competenza, creando un clima di tensione insostenibile. Questa dinamica sta compromettendo la mia serenità e la mia capacità di lavorare con la solita efficienza.\n\nNon intendo entrare nel merito di ogni singolo episodio in questa sede, ma ritengo fondamentale affrontare la questione in modo formale e riservato. La mia richiesta è esclusivamente quella di fissare un incontro o un colloquio con un rappresentante dell'[AZIENDA_1] per discutere di quanto accaduto. Desidero che questo incontro avvenga entro il 20 novembre 2026, per poter chiarire la situazione e trovare una soluzione adeguata.\n\nResto a disposizione per concordare data e ora. Per qualsiasi necessità di contatto, potete raggiungermi al numero [TELEFONO_1] o tramite la mia email aziendale. Vi chiedo cortesemente di trattare questa segnalazione con la massima riservatezza, come previsto dalle procedure interne.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\n[PERSONA_1_M]\nMatricola: BR-77464\n[EMAIL_1]\n",
   "disclosure": [
     {
       "surrogate": "[PERSONA_1_M]",
@@ -15,13 +15,6 @@
       "surrogate": "[CITTA_1]",
       "type": "CITTA",
       "class": "quasi",
-      "source": "D1",
-      "reason": null
-    },
-    {
-      "surrogate": "[PERSONA_2_M]",
-      "type": "PERSONA",
-      "class": "direct",
       "source": "D1",
       "reason": null
     },
@@ -42,13 +35,6 @@
     {
       "surrogate": "[TELEFONO_1]",
       "type": "TELEFONO",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
-    },
-    {
-      "surrogate": "[PERSONA_3_M]",
-      "type": "PERSONA",
       "class": "direct",
       "source": "D1",
       "reason": null

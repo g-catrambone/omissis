@@ -59,14 +59,14 @@
     {
       "config": "D1+R1",
       "texts": 20,
-      "t3": 0.97,
-      "t3_ci_low": 0.9400000000000001,
+      "t3": 0.9800000000000001,
+      "t3_ci_low": 0.95,
       "t3_ci_high": 1.0,
       "t1": null,
       "t1_ci_low": null,
       "t1_ci_high": null,
-      "utility": 0.97,
-      "utility_ci_low": 0.9400000000000001,
+      "utility": 0.9800000000000001,
+      "utility_ci_low": 0.95,
       "utility_ci_high": 1.0,
       "t3_unparseable": 0,
       "judge_unparseable": 0
@@ -1141,19 +1141,19 @@
     {
       "text_id": "bank-0001",
       "config": "D1+R1",
-      "t3": 0.8,
+      "t3": 1.0,
       "t3_parsed": true,
       "t3_fields": {
         "intent": true,
         "requested_action": true,
         "amounts": true,
         "dates": true,
-        "deadline": false
+        "deadline": true
       },
       "t1": null,
       "scores": null,
       "judge_parsed": true,
-      "utility": 0.8
+      "utility": 1.0
     },
     {
       "text_id": "bank-0002",
@@ -1821,19 +1821,19 @@
     {
       "text_id": "bank-0001",
       "config": "D4+R1",
-      "t3": 1.0,
+      "t3": 0.8,
       "t3_parsed": true,
       "t3_fields": {
         "intent": true,
         "requested_action": true,
         "amounts": true,
-        "dates": true,
+        "dates": false,
         "deadline": true
       },
       "t1": null,
       "scores": null,
       "judge_parsed": true,
-      "utility": 1.0
+      "utility": 0.8
     },
     {
       "text_id": "bank-0002",
@@ -2076,19 +2076,19 @@
     {
       "text_id": "hr-0010",
       "config": "D4+R1",
-      "t3": 0.8,
+      "t3": 1.0,
       "t3_parsed": true,
       "t3_fields": {
         "intent": true,
         "requested_action": true,
         "amounts": true,
-        "dates": false,
+        "dates": true,
         "deadline": true
       },
       "t1": null,
       "scores": null,
       "judge_parsed": true,
-      "utility": 0.8
+      "utility": 1.0
     },
     {
       "text_id": "hr-0011",

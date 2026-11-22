@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 38,
-      "end": 87,
-      "text": "Raffaele Ferrarini\n\nGentile Ufficio del Personale",
+      "end": 56,
+      "text": "Raffaele Ferrarini",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -129,5 +129,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.146
+  "seconds": 0.1571
 }

@@ -2,7 +2,7 @@
   "text_id": "hr-0010",
   "config_name": "D4+R2",
   "run_id": "65b4d39c07a9",
-  "masked_text": "Oggetto: Richiesta colloquio per lavoro da remoto - Gualtiero UbaldiniGentile Ufficio del Personale di Autolinee Brentari S.r.l.,\n\nmi chiamo Gualtiero Ubaldini e sono il [RUOLO_1] presso la sede di Nuoro. Vi scrivo per richiedere formalmente un colloquio per discutere la possibilità di lavorare da remoto a partire dal 27 dicembre 2026.\n\nCome sapete, gestisco quotidianamente le forniture per i cantieri attivi in zona, e ritengo che la mia posizione mi consenta di mantenere la piena produttività anche da casa, senza impatti negativi sui tempi di consegna. Ho già predisposto un piano operativo dettagliato che illustrerò volentieri durante un breve incontro.\n\nPer facilitare l'identificazione della mia posizione interna, vi comunico la mia matricola aziendale ER-83927. Inoltre, per completezza amministrativa, il mio codice fiscale è NCZVDP98L45X824J.\n\nNon chiedo altre informazioni in questa fase, ma desidero solo fissare un colloquio per discutere i dettagli logistici e le eventuali tutele contrattuali. Sarebbe ideale poter parlare entro il 5 novembre 2026, così da poter organizzare la transizione in modo ordinato.\n\nResto a disposizione per qualsiasi chiarimento preliminare.\n\nCordiali saluti,\n\nGualtiero UbaldiniResponsabile Acquisti\nAutolinee Brentari S.r.l.\nOrsolini: 364 899 9970\nEmail: tancredi.querzoli@example.com\n",
+  "masked_text": "Oggetto: Richiesta colloquio per lavoro da remoto - Gualtiero Ubaldini\n\nGentile Ufficio del Personale di Autolinee Brentari S.r.l.,\n\nmi chiamo Gualtiero Ubaldini e sono il [RUOLO_1] presso la sede di Nuoro. Vi scrivo per richiedere formalmente un colloquio per discutere la possibilità di lavorare da remoto a partire dal 27 dicembre 2026.\n\nCome sapete, gestisco quotidianamente le forniture per i cantieri attivi in zona, e ritengo che la mia posizione mi consenta di mantenere la piena produttività anche da casa, senza impatti negativi sui tempi di consegna. Ho già predisposto un piano operativo dettagliato che illustrerò volentieri durante un breve incontro.\n\nPer facilitare l'identificazione della mia posizione interna, vi comunico la mia matricola aziendale ER-83927. Inoltre, per completezza amministrativa, il mio codice fiscale è NCZVDP98L45X824J.\n\nNon chiedo altre informazioni in questa fase, ma desidero solo fissare un colloquio per discutere i dettagli logistici e le eventuali tutele contrattuali. Sarebbe ideale poter parlare entro il 5 novembre 2026, così da poter organizzare la transizione in modo ordinato.\n\nResto a disposizione per qualsiasi chiarimento preliminare.\n\nCordiali saluti,\n\nGualtiero Ubaldini\nResponsabile Acquisti\nAutolinee Brentari S.r.l.\nTel: 364 899 9970\nEmail: tancredi.querzoli@example.com\n",
   "disclosure": [
     {
       "surrogate": "Gualtiero Ubaldini",
@@ -59,13 +59,6 @@
       "class": "quasi",
       "source": "D3",
       "reason": "data di colloquio"
-    },
-    {
-      "surrogate": "Orsolini",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
     },
     {
       "surrogate": "364 899 9970",

@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 45,
-      "end": 79,
-      "text": "Alessia Iacobelli\n\nGentile Ufficio",
+      "end": 62,
+      "text": "Alessia Iacobelli",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -129,5 +129,5 @@
       "reason": "nome dell'organizzazione dove lavora la persona"
     }
   ],
-  "seconds": 0.1429
+  "seconds": 0.1572
 }

@@ -4,12 +4,21 @@
   "spans": [
     {
       "start": 51,
-      "end": 96,
-      "text": "Federica Quattrocchi\n\nGentile Banca Altopiano",
+      "end": 71,
+      "text": "Federica Quattrocchi",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
       "reason": null
+    },
+    {
+      "start": 81,
+      "end": 96,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
     },
     {
       "start": 109,
@@ -121,11 +130,11 @@
     },
     {
       "start": 1023,
-      "end": 1053,
-      "text": "Federica Quattrocchi\nMatricola",
+      "end": 1043,
+      "text": "Federica Quattrocchi",
       "type": "PERSONA",
-      "confidence": 0.85,
-      "source": "D1",
+      "confidence": 0.9133745551109314,
+      "source": "D2",
       "reason": null
     },
     {
@@ -138,5 +147,5 @@
       "reason": "matricola aziendale"
     }
   ],
-  "seconds": 0.1433
+  "seconds": 0.1572
 }

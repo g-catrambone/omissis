@@ -2,7 +2,7 @@
   "text_id": "hr-0026",
   "config_name": "D4+R1",
   "run_id": "933a73c866b3",
-  "masked_text": "Oggetto: Richiesta permesso [SINDACATO_1] per [PERSONA_1_M],\n\nmi permetto di contattarvi per sottoporre alla Vostra cortese attenzione una richiesta formale di autorizzazione all'assenza dal servizio. Come sapete, ricopro la carica di componente della rappresentanza [SINDACATO_1] unitaria all'interno della nostra struttura, ruolo che mi impone di partecipare a riunioni organizzative e assembleari non rinviabili.\n\nIn qualità di [RUOLO_1] presso la [AZIENDA_1], con matricola aziendale [UTENTE_1], ho necessità di assentarmi dal mio posto di lavoro per partecipare a un incontro [SINDACATO_1] programmato per il [DATA_1]. L'evento si terrà presso la [STRUTTURA_1] a [CITTA_1] e durerà l'intera giornata lavorativa.\n\nVi chiedo pertanto di approvare questa richiesta di permesso [SINDACATO_1], garantendo la copertura delle mie mansioni per quella data. Per completezza amministrativa, vi comunico che il mio codice fiscale è [CF_1] e che posso essere raggiunto telefonicamente al numero [TELEFONO_1] per eventuali chiarimenti urgenti.\n\nResto in attesa di un Vostro cortese riscontro scritto, preferibilmente via email all'indirizzo [EMAIL_1], per poter organizzare al meglio le mie attività commerciali e i miei impegni personali, tra cui la gestione dei miei prodotti bancari presso la [AZIENDA_2].\n\nCordiali saluti,\n\n[PERSONA_2_M]\n",
+  "masked_text": "Oggetto: Richiesta permesso [SINDACATO_1] per [PERSONA_1_M]\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per sottoporre alla Vostra cortese attenzione una richiesta formale di autorizzazione all'assenza dal servizio. Come sapete, ricopro la carica di componente della rappresentanza [SINDACATO_1] unitaria all'interno della nostra struttura, ruolo che mi impone di partecipare a riunioni organizzative e assembleari non rinviabili.\n\nIn qualità di [RUOLO_1] presso la [AZIENDA_1], con matricola aziendale [UTENTE_1], ho necessità di assentarmi dal mio posto di lavoro per partecipare a un incontro [SINDACATO_1] programmato per il [DATA_1]. L'evento si terrà presso la [STRUTTURA_1] a [CITTA_1] e durerà l'intera giornata lavorativa.\n\nVi chiedo pertanto di approvare questa richiesta di permesso [SINDACATO_1], garantendo la copertura delle mie mansioni per quella data. Per completezza amministrativa, vi comunico che il mio codice fiscale è [CF_1] e che posso essere raggiunto telefonicamente al numero [TELEFONO_1] per eventuali chiarimenti urgenti.\n\nResto in attesa di un Vostro cortese riscontro scritto, preferibilmente via email all'indirizzo [EMAIL_1], per poter organizzare al meglio le mie attività commerciali e i miei impegni personali, tra cui la gestione dei miei prodotti bancari presso la [AZIENDA_2].\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
   "disclosure": [
     {
       "surrogate": "[SINDACATO_1]",
@@ -23,7 +23,7 @@
       "type": "RUOLO",
       "class": "quasi",
       "source": "D3",
-      "reason": null
+      "reason": "mestiere del mittente"
     },
     {
       "surrogate": "[AZIENDA_1]",
@@ -87,13 +87,6 @@
       "class": "quasi",
       "source": "D3",
       "reason": "istituto bancario menzionato"
-    },
-    {
-      "surrogate": "[PERSONA_2_M]",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
     }
   ]
 }

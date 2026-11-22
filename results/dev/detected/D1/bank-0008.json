@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 51,
-      "end": 96,
-      "text": "Federica Quattrocchi\n\nGentile Banca Altopiano",
+      "end": 71,
+      "text": "Federica Quattrocchi",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -76,13 +76,13 @@
     },
     {
       "start": 1023,
-      "end": 1053,
-      "text": "Federica Quattrocchi\nMatricola",
+      "end": 1043,
+      "text": "Federica Quattrocchi",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
       "reason": null
     }
   ],
-  "seconds": 0.0115
+  "seconds": 0.0123
 }

@@ -28,6 +28,8 @@ the file it comes from is named; no number is written here.
 - Misses: `LOC` marks any place, not only towns; no date label, so only numeric
   dates; nothing on quasi-identifiers like job or age, nor on health.
 - Say: the standard off-the-shelf choice, and the baseline of contrast 1.
+- Say: one correction to what it returns, found on dev: a span that goes over a
+  line break keeps its first line only.
 
 ## 4. D2 — a ready-made PII classifier
 

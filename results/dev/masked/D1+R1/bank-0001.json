@@ -2,7 +2,7 @@
   "text_id": "bank-0001",
   "config_name": "D1+R1",
   "run_id": "49f599e17121",
-  "masked_text": "Oggetto: Richiesta sospensione rate prestito personale - [PERSONA_1_M] [AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_2_M] e sono titolare del conto corrente con [PERSONA_3]. Vi scrivo per richiedere la sospensione temporanea dei pagamenti del mio prestito personale, contratto presso la filiale di [CITTA_1].\n\nAttualmente lavoro come elettricista presso la [AZIENDA_3], ma a causa di un aggravamento della mia asma bronchiale sono costretto a fermarmi per un periodo di cura. Questa situazione mi impedisce di sostenere l'onere economico della rata mensile di € 450,00 prevista per il 15 dicembre 2026.\n\nVi chiedo pertanto di sospendere le rate fino al 30 marzo 2027, senza ulteriori aggravio di interessi se possibile. Il mio codice fiscale è BMDCST55B21X401A e la matricola aziendale è KK-50663.\n\nResto a disposizione per fornire eventuali certificati medici o documentazione aggiuntiva. Potete contattarmi al numero 305 331 7289 o all'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_2_M]\n",
+  "masked_text": "Oggetto: Richiesta sospensione rate prestito personale - [PERSONA_1_M]\n\nGentile [AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con [PERSONA_2]. Vi scrivo per richiedere la sospensione temporanea dei pagamenti del mio prestito personale, contratto presso la filiale di [CITTA_1].\n\nAttualmente lavoro come elettricista presso la [AZIENDA_3], ma a causa di un aggravamento della mia asma bronchiale sono costretto a fermarmi per un periodo di cura. Questa situazione mi impedisce di sostenere l'onere economico della rata mensile di € 450,00 prevista per il 15 dicembre 2026.\n\nVi chiedo pertanto di sospendere le rate fino al 30 marzo 2027, senza ulteriori aggravio di interessi se possibile. Il mio codice fiscale è BMDCST55B21X401A e la matricola aziendale è KK-50663.\n\nResto a disposizione per fornire eventuali certificati medici o documentazione aggiuntiva. Potete contattarmi al numero 305 331 7289 o all'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
   "disclosure": [
     {
       "surrogate": "[PERSONA_1_M]",
@@ -26,14 +26,7 @@
       "reason": null
     },
     {
-      "surrogate": "[PERSONA_2_M]",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
-    },
-    {
-      "surrogate": "[PERSONA_3]",
+      "surrogate": "[PERSONA_2]",
       "type": "PERSONA",
       "class": "direct",
       "source": "D1",

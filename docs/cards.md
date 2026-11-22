@@ -106,7 +106,9 @@ of the pin. Use of the service is governed by the Groq Services Agreement
     does not cover the model.
 - **How we use it.** Detector D1, as it ships, with language, model and phone
   region set to Italian; Presidio labels are mapped to our types
-  (`src/omissis/detect/presidio.py`).
+  (`src/omissis/detect/presidio.py`). One correction to its output: a span that
+  goes over a line break keeps its first line only (`docs/decisions.md`, 22 Nov
+  2026).
 - **Limits for us.** The spaCy model is non-commercial and share-alike. It is
   trained on UD Italian ISDT and WikiNER, not on correspondence. Its `LOC` label
   marks any place, not only towns, and it has no date label (Presidio finds

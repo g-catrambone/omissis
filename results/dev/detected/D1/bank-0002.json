@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 49,
-      "end": 91,
-      "text": "Teresa Dellavalle\n\nGentile Banca Altopiano",
+      "end": 66,
+      "text": "Teresa Dellavalle",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -84,5 +84,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.0135
+  "seconds": 0.0137
 }

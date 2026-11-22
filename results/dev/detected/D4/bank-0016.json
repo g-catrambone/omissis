@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 49,
-      "end": 69,
-      "text": "Daniela Marchesini\n\n",
+      "end": 67,
+      "text": "Daniela Marchesini",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -147,5 +147,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.1451
+  "seconds": 0.1597
 }

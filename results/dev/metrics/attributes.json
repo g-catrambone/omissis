@@ -215,9 +215,9 @@
       "config": "D1+R1",
       "attribute": "employer",
       "texts": 20,
-      "accuracy": 0.25,
+      "accuracy": 0.3,
       "ci_low": 0.1,
-      "ci_high": 0.45,
+      "ci_high": 0.5,
       "invalid": 0,
       "majority_baseline": 0.6
     },
@@ -225,9 +225,9 @@
       "config": "D1+R1",
       "attribute": "age_bracket",
       "texts": 20,
-      "accuracy": 0.25,
-      "ci_low": 0.1,
-      "ci_high": 0.45,
+      "accuracy": 0.2,
+      "ci_low": 0.05,
+      "ci_high": 0.4,
       "invalid": 0,
       "majority_baseline": 0.55
     },
@@ -325,9 +325,9 @@
       "config": "D4+R1",
       "attribute": "role",
       "texts": 20,
-      "accuracy": 0.45,
-      "ci_low": 0.25,
-      "ci_high": 0.65,
+      "accuracy": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
       "invalid": 0,
       "majority_baseline": 0.3
     },
@@ -375,9 +375,9 @@
       "config": "D4+R2",
       "attribute": "city",
       "texts": 20,
-      "accuracy": 0.1,
-      "ci_low": 0.0,
-      "ci_high": 0.25,
+      "accuracy": 0.25,
+      "ci_low": 0.1,
+      "ci_high": 0.45,
       "invalid": 0,
       "majority_baseline": 0.3
     },
@@ -385,9 +385,9 @@
       "config": "D4+R2",
       "attribute": "role",
       "texts": 20,
-      "accuracy": 0.45,
-      "ci_low": 0.25,
-      "ci_high": 0.65,
+      "accuracy": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
       "invalid": 0,
       "majority_baseline": 0.3
     },
@@ -395,9 +395,9 @@
       "config": "D4+R2",
       "attribute": "employer",
       "texts": 20,
-      "accuracy": 0.1,
+      "accuracy": 0.15,
       "ci_low": 0.0,
-      "ci_high": 0.25,
+      "ci_high": 0.3,
       "invalid": 0,
       "majority_baseline": 0.6
     },
@@ -405,9 +405,9 @@
       "config": "D4+R2",
       "attribute": "age_bracket",
       "texts": 20,
-      "accuracy": 0.35,
-      "ci_low": 0.15,
-      "ci_high": 0.55,
+      "accuracy": 0.3,
+      "ci_low": 0.1,
+      "ci_high": 0.5,
       "invalid": 0,
       "majority_baseline": 0.55
     },
@@ -2180,7 +2180,7 @@
         "city": "Cremona",
         "role": "elettricista",
         "employer": "Cantieri Dorsano S.p.A.",
-        "age_bracket": "60+",
+        "age_bracket": "30-44",
         "gender": "M",
         "health": "present"
       },
@@ -2380,9 +2380,9 @@
       "text_id": "bank-0016",
       "config": "D1+R1",
       "answers": {
-        "city": "Cremona",
+        "city": "Pistoia",
         "role": "contabile",
-        "employer": "Cooperativa Edile Pietrafitta",
+        "employer": "Caseificio Montelupo S.r.l.",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "none"
@@ -2440,7 +2440,7 @@
       "answers": {
         "city": "Cremona",
         "role": "responsabile acquisti",
-        "employer": "Cantieri Dorsano S.p.A.",
+        "employer": "Cooperativa Edile Pietrafitta",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "none"
@@ -2457,7 +2457,7 @@
       "correct": {
         "city": true,
         "role": true,
-        "employer": false,
+        "employer": true,
         "age_bracket": false,
         "gender": true,
         "health": true
@@ -2585,7 +2585,7 @@
       "answers": {
         "city": "Cremona",
         "role": "responsabile acquisti",
-        "employer": "Trasporti Bellariva S.r.l.",
+        "employer": "Tessitura Valgrande S.r.l.",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "present"
@@ -2615,7 +2615,7 @@
         "city": "Cremona",
         "role": "responsabile acquisti",
         "employer": "Cantieri Dorsano S.p.A.",
-        "age_bracket": "30-44",
+        "age_bracket": "45-59",
         "gender": "M",
         "health": "none"
       },
@@ -2644,7 +2644,7 @@
         "city": "Cremona",
         "role": "contabile",
         "employer": "Tessitura Valgrande S.r.l.",
-        "age_bracket": "30-44",
+        "age_bracket": "<30",
         "gender": "M",
         "health": "none"
       },
@@ -2661,7 +2661,7 @@
         "city": false,
         "role": true,
         "employer": true,
-        "age_bracket": true,
+        "age_bracket": false,
         "gender": true,
         "health": true
       }
@@ -2670,7 +2670,7 @@
       "text_id": "hr-0016",
       "config": "D1+R1",
       "answers": {
-        "city": "Cremona",
+        "city": "Pistoia",
         "role": "responsabile acquisti",
         "employer": "Cantieri Dorsano S.p.A.",
         "age_bracket": "30-44",
@@ -3338,8 +3338,8 @@
       "config": "D4+R1",
       "answers": {
         "city": "Cremona",
-        "role": "autista",
-        "employer": "Trasporti Bellariva S.r.l.",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
         "age_bracket": "30-44",
         "gender": "M",
         "health": "present"
@@ -3367,8 +3367,8 @@
       "config": "D4+R1",
       "answers": {
         "city": "Cremona",
-        "role": "contabile",
-        "employer": "Tessitura Valgrande S.r.l.",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "present"
@@ -3384,7 +3384,7 @@
       "invalid": [],
       "correct": {
         "city": false,
-        "role": true,
+        "role": false,
         "employer": false,
         "age_bracket": false,
         "gender": true,
@@ -3455,7 +3455,7 @@
       "answers": {
         "city": "Cremona",
         "role": "elettricista",
-        "employer": "Cantieri Dorsano S.p.A.",
+        "employer": "Cooperativa Edile Pietrafitta",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "none"
@@ -3472,7 +3472,7 @@
       "correct": {
         "city": false,
         "role": false,
-        "employer": false,
+        "employer": true,
         "age_bracket": true,
         "gender": true,
         "health": true
@@ -3542,8 +3542,8 @@
       "answers": {
         "city": "Cremona",
         "role": "contabile",
-        "employer": "Tessitura Valgrande S.r.l.",
-        "age_bracket": "30-44",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
         "gender": "F",
         "health": "none"
       },
@@ -3599,8 +3599,8 @@
       "config": "D4+R1",
       "answers": {
         "city": "Cremona",
-        "role": "contabile",
-        "employer": "Cooperativa Edile Pietrafitta",
+        "role": "responsabile acquisti",
+        "employer": "Tessitura Valgrande S.r.l.",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "none"
@@ -3616,8 +3616,8 @@
       "invalid": [],
       "correct": {
         "city": true,
-        "role": false,
-        "employer": true,
+        "role": true,
+        "employer": false,
         "age_bracket": false,
         "gender": true,
         "health": true
@@ -3745,8 +3745,8 @@
       "answers": {
         "city": "Cremona",
         "role": "responsabile acquisti",
-        "employer": "Tessitura Valgrande S.r.l.",
-        "age_bracket": "30-44",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
         "gender": "F",
         "health": "present"
       },
@@ -3772,7 +3772,7 @@
       "text_id": "hr-0010",
       "config": "D4+R1",
       "answers": {
-        "city": "Cremona",
+        "city": "Pistoia",
         "role": "responsabile acquisti",
         "employer": "Cantieri Dorsano S.p.A.",
         "age_bracket": "30-44",
@@ -3832,7 +3832,7 @@
       "answers": {
         "city": "Cremona",
         "role": "responsabile acquisti",
-        "employer": "Cooperativa Edile Pietrafitta",
+        "employer": "Trasporti Bellariva S.r.l.",
         "age_bracket": "30-44",
         "gender": "M",
         "health": "present"
@@ -3889,7 +3889,7 @@
       "config": "D4+R1",
       "answers": {
         "city": "Cremona",
-        "role": "agente di commercio",
+        "role": "contabile",
         "employer": "Tessitura Valgrande S.r.l.",
         "age_bracket": "30-44",
         "gender": "M",
@@ -3906,7 +3906,7 @@
       "invalid": [],
       "correct": {
         "city": false,
-        "role": true,
+        "role": false,
         "employer": false,
         "age_bracket": false,
         "gender": true,
@@ -3946,8 +3946,8 @@
       "text_id": "bank-0002",
       "config": "D4+R2",
       "answers": {
-        "city": "Cremona",
-        "role": "contabile",
+        "city": "Novara",
+        "role": "progettista",
         "employer": "Cantieri Dorsano S.p.A.",
         "age_bracket": "30-44",
         "gender": "F",
@@ -3964,7 +3964,7 @@
       "invalid": [],
       "correct": {
         "city": false,
-        "role": true,
+        "role": false,
         "employer": false,
         "age_bracket": false,
         "gender": true,
@@ -3977,7 +3977,7 @@
       "answers": {
         "city": "Cremona",
         "role": "contabile",
-        "employer": "Cooperativa Edile Pietrafitta",
+        "employer": "Tessitura Valgrande S.r.l.",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "none"
@@ -3994,7 +3994,7 @@
       "correct": {
         "city": false,
         "role": false,
-        "employer": false,
+        "employer": true,
         "age_bracket": true,
         "gender": true,
         "health": true
@@ -4033,9 +4033,9 @@
       "text_id": "bank-0013",
       "config": "D4+R2",
       "answers": {
-        "city": "Novara",
+        "city": "Pistoia",
         "role": "custode",
-        "employer": "Cantieri Dorsano S.p.A.",
+        "employer": "Cooperativa Edile Pietrafitta",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "none"
@@ -4050,9 +4050,9 @@
       },
       "invalid": [],
       "correct": {
-        "city": false,
+        "city": true,
         "role": true,
-        "employer": false,
+        "employer": true,
         "age_bracket": true,
         "gender": true,
         "health": true
@@ -4294,9 +4294,9 @@
       "text_id": "hr-0002",
       "config": "D4+R2",
       "answers": {
-        "city": "Cremona",
+        "city": "Novara",
         "role": "contabile",
-        "employer": "Tessitura Valgrande S.r.l.",
+        "employer": "Cantieri Dorsano S.p.A.",
         "age_bracket": "30-44",
         "gender": "F",
         "health": "present"
@@ -4355,7 +4355,7 @@
         "city": "Cremona",
         "role": "responsabile acquisti",
         "employer": "Trasporti Bellariva S.r.l.",
-        "age_bracket": "<30",
+        "age_bracket": "30-44",
         "gender": "M",
         "health": "none"
       },
@@ -4372,7 +4372,7 @@
         "city": false,
         "role": true,
         "employer": false,
-        "age_bracket": true,
+        "age_bracket": false,
         "gender": true,
         "health": true
       }
@@ -4381,9 +4381,9 @@
       "text_id": "hr-0011",
       "config": "D4+R2",
       "answers": {
-        "city": "Cremona",
-        "role": "responsabile acquisti",
-        "employer": "Cooperativa Edile Pietrafitta",
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
         "age_bracket": "30-44",
         "gender": "M",
         "health": "none"
@@ -4398,8 +4398,8 @@
       },
       "invalid": [],
       "correct": {
-        "city": false,
-        "role": false,
+        "city": true,
+        "role": true,
         "employer": false,
         "age_bracket": true,
         "gender": true,
@@ -4410,7 +4410,7 @@
       "text_id": "hr-0016",
       "config": "D4+R2",
       "answers": {
-        "city": "Cremona",
+        "city": "Foggia",
         "role": "responsabile acquisti",
         "employer": "Cooperativa Edile Pietrafitta",
         "age_bracket": "30-44",
@@ -4439,8 +4439,8 @@
       "text_id": "hr-0020",
       "config": "D4+R2",
       "answers": {
-        "city": "Cremona",
-        "role": "contabile",
+        "city": "Novara",
+        "role": "progettista",
         "employer": "Cooperativa Edile Pietrafitta",
         "age_bracket": "60+",
         "gender": "M",
@@ -4456,7 +4456,7 @@
       },
       "invalid": [],
       "correct": {
-        "city": false,
+        "city": true,
         "role": false,
         "employer": true,
         "age_bracket": true,
@@ -4469,8 +4469,8 @@
       "config": "D4+R2",
       "answers": {
         "city": "Cremona",
-        "role": "agente di commercio",
-        "employer": "Cooperativa Edile Pietrafitta",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
         "age_bracket": "30-44",
         "gender": "M",
         "health": "none"
@@ -4486,8 +4486,8 @@
       "invalid": [],
       "correct": {
         "city": false,
-        "role": true,
-        "employer": true,
+        "role": false,
+        "employer": false,
         "age_bracket": false,
         "gender": true,
         "health": true

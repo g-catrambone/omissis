@@ -2,7 +2,7 @@
   "text_id": "bank-0010",
   "config_name": "D1+R1",
   "run_id": "49f599e17121",
-  "masked_text": "Oggetto: Contestazione addebiti non autorizzati carta di credito\n\n[AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con [CITTA_1]. Vi scrivo per contestare formalmente due addebiti presenti sul mio estratto conto che non riconosco in alcun modo.\n\nIl primo addebito, pari a € 1.200,50, è stato effettuato il 16 novembre 2026 presso un esercente a [CITTA_2]. Il secondo, di € 350,00, risale al 20 novembre 2026 e risulta avvenuto online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come autista presso la [AZIENDA_3] e la mia carta di credito, identificata dal codice [AZIENDA_4], è rimasta sempre in mio possesso. Non ho mai comunicato i dati della carta a terzi né ho ricevuto avvisi di sicurezza sospetti.\n\nVi chiedo pertanto di procedere immediatamente con lo storno delle somme indicate e il relativo rimborso sul mio conto corrente. Vi prego di considerare questa comunicazione come formale contestazione ai sensi della normativa vigente.\n\nResto in attesa di un vostro cortese riscontro entro 5 giorni lavorativi.\n\nCordiali saluti,\n\n[PERSONA_2_M]\n[TELEFONO_1]\nZLFNCT54D15X978K\n",
+  "masked_text": "Oggetto: Contestazione addebiti non autorizzati carta di credito\n\n[AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con [CITTA_1]. Vi scrivo per contestare formalmente due addebiti presenti sul mio estratto conto che non riconosco in alcun modo.\n\nIl primo addebito, pari a € 1.200,50, è stato effettuato il 16 novembre 2026 presso un esercente a [CITTA_2]. Il secondo, di € 350,00, risale al 20 novembre 2026 e risulta avvenuto online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come autista presso la [AZIENDA_3] e la mia carta di credito, identificata dal codice [AZIENDA_4], è rimasta sempre in mio possesso. Non ho mai comunicato i dati della carta a terzi né ho ricevuto avvisi di sicurezza sospetti.\n\nVi chiedo pertanto di procedere immediatamente con lo storno delle somme indicate e il relativo rimborso sul mio conto corrente. Vi prego di considerare questa comunicazione come formale contestazione ai sensi della normativa vigente.\n\nResto in attesa di un vostro cortese riscontro entro 5 giorni lavorativi.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n[EMAIL_1]\n[TELEFONO_1]\nZLFNCT54D15X978K\n",
   "disclosure": [
     {
       "surrogate": "[AZIENDA_1]",
@@ -54,8 +54,8 @@
       "reason": null
     },
     {
-      "surrogate": "[PERSONA_2_M]",
-      "type": "PERSONA",
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
       "class": "direct",
       "source": "D1",
       "reason": null

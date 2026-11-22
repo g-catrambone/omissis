@@ -5,6 +5,13 @@ organisations, plus Presidio's predefined pattern recognisers loaded for Italian
 English is the default language of every part of Presidio, so the language, the
 model and the phone region are set here explicitly. Nothing is tuned to our texts.
 
+One correction is made to what Presidio returns (docs/decisions.md, 22 Nov 2026).
+spaCy reads a line break as white space, so a name at the end of a line comes back
+joined to the words that open the next one ("Lidia Caprioli\\n\\nGentile Ufficio del
+Personale" as one person). A span that goes over a line break keeps its first line
+only. What followed the line break is no longer a span of D1: it stays masked only
+where another span covers it.
+
 Presidio label -> our type:
 
 | Presidio | Type | Found by |
@@ -36,6 +43,7 @@ use the unassigned letter X, so D1 does not find them.
 
 from __future__ import annotations
 
+import re
 from functools import lru_cache
 from importlib.util import find_spec
 from typing import Any
@@ -90,18 +98,41 @@ def _analyzer() -> Any:
     return AnalyzerEngine(nlp_engine=nlp_engine, registry=registry, supported_languages=["it"])
 
 
+def _first_line(text: str, start: int, end: int) -> tuple[int, int]:
+    """`start` and `end`, cut to the first line when the stretch goes over a line break.
+
+    The first line that holds a character, without the white space around it. A
+    stretch on one line is returned as it is.
+    """
+    found = text[start:end]
+    if "\n" not in found and "\r" not in found:
+        return start, end
+    for line in re.finditer(r"[^\r\n]+", found):
+        kept = line.group().strip()
+        if kept:
+            first = start + line.start() + line.group().index(kept)
+            return first, first + len(kept)
+    return start, start
+
+
 def find(text: str, config: RunConfig) -> list[Span]:
-    """Spans found by Presidio in `text`, possibly overlapping; `detect` merges them."""
+    """Spans found by Presidio in `text`, possibly overlapping; `detect` merges them.
+
+    No span goes over a line break: see the module docstring.
+    """
     results = _analyzer().analyze(text=text, language="it", entities=list(LABEL_TO_TYPE))
-    return [
-        Span(
-            r.start,
-            r.end,
-            text[r.start : r.end],
-            LABEL_TO_TYPE[r.entity_type],
-            min(1.0, max(0.0, float(r.score))),
-            SOURCE,
-        )
-        for r in results
-        if r.start < r.end
-    ]
+    spans = []
+    for r in results:
+        start, end = _first_line(text, r.start, r.end)
+        if start < end:
+            spans.append(
+                Span(
+                    start,
+                    end,
+                    text[start:end],
+                    LABEL_TO_TYPE[r.entity_type],
+                    min(1.0, max(0.0, float(r.score))),
+                    SOURCE,
+                )
+            )
+    return spans

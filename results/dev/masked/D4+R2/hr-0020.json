@@ -2,20 +2,13 @@
   "text_id": "hr-0020",
   "config_name": "D4+R2",
   "run_id": "65b4d39c07a9",
-  "masked_text": "Oggetto: Richiesta trasferimento sede Edmondo Marangoni,\n\nmi chiamo Zeno Cortesini e vi scrivo per formalizzare la mia richiesta di trasferimento presso la sede di Savona. Sono impiegato come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A. da diversi anni e la mia matricola aziendale è PJ-65764.\n\nHo deciso di fare questa richiesta perché desidero avvicinarmi alla mia famiglia, che risiede in quella zona. Ho 67 anni e penso che questo cambio di sede possa aiutarmi a gestire meglio la mia quotidianità. Attualmente risiedo a Imperia, dove ho anche la mia filiale bancaria presso la Cassa di Risparmio di Montalfiore.\n\nPer completezza, vi comunico che il mio codice fiscale è FCNMFG34S58X129D e potete contattarmi al numero 359 646 8069 o all'indirizzo achille.gardini@example.com. Ho un mutuo in corso e una carta di debito attiva, ma non credo che questi aspetti debbano influenzare la decisione sul trasferimento lavorativo.\n\nVi chiedo cortesemente di approvare la mia richiesta entro il 27 dicembre 2026, in modo da poter organizzare i tempi per il trasloco e la nuova sistemazione. Resto a disposizione per qualsiasi chiarimento in merito.\n\nCordiali saluti,\n\nZeno Cortesini\n",
+  "masked_text": "Oggetto: Richiesta trasferimento sede Zeno Cortesini\n\nGentile Ufficio del Personale,\n\nmi chiamo Zeno Cortesini e vi scrivo per formalizzare la mia richiesta di trasferimento presso la sede di Savona. Sono impiegato come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A. da diversi anni e la mia matricola aziendale è PJ-65764.\n\nHo deciso di fare questa richiesta perché desidero avvicinarmi alla mia famiglia, che risiede in quella zona. Ho 67 anni e penso che questo cambio di sede possa aiutarmi a gestire meglio la mia quotidianità. Attualmente risiedo a Imperia, dove ho anche la mia filiale bancaria presso la Cassa di Risparmio di Montalfiore.\n\nPer completezza, vi comunico che il mio codice fiscale è FCNMFG34S58X129D e potete contattarmi al numero 359 646 8069 o all'indirizzo achille.gardini@example.com. Ho un mutuo in corso e una carta di debito attiva, ma non credo che questi aspetti debbano influenzare la decisione sul trasferimento lavorativo.\n\nVi chiedo cortesemente di approvare la mia richiesta entro il 27 dicembre 2026, in modo da poter organizzare i tempi per il trasloco e la nuova sistemazione. Resto a disposizione per qualsiasi chiarimento in merito.\n\nCordiali saluti,\n\nZeno Cortesini\n",
   "disclosure": [
-    {
-      "surrogate": "Edmondo Marangoni",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
-    },
     {
       "surrogate": "Zeno Cortesini",
       "type": "PERSONA",
       "class": "direct",
-      "source": "D2",
+      "source": "D1",
       "reason": null
     },
     {
@@ -23,14 +16,14 @@
       "type": "CITTA",
       "class": "quasi",
       "source": "D3",
-      "reason": null
+      "reason": "città di destinazione del trasferimento"
     },
     {
       "surrogate": "[RUOLO_1]",
       "type": "RUOLO",
       "class": "quasi",
       "source": "D3",
-      "reason": null
+      "reason": "mestiere del mittente"
     },
     {
       "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
@@ -44,14 +37,14 @@
       "type": "UTENTE",
       "class": "direct",
       "source": "D3",
-      "reason": null
+      "reason": "matricola aziendale del mittente"
     },
     {
       "surrogate": "67 anni",
       "type": "ETA",
       "class": "quasi",
       "source": "D3",
-      "reason": null
+      "reason": "età del mittente"
     },
     {
       "surrogate": "Imperia",

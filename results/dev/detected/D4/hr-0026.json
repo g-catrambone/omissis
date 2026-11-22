@@ -13,8 +13,8 @@
     },
     {
       "start": 42,
-      "end": 90,
-      "text": "Tommaso Mantovani\n\nGentile Ufficio del Personale",
+      "end": 59,
+      "text": "Tommaso Mantovani",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -147,5 +147,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.1446
+  "seconds": 0.1601
 }

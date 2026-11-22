@@ -2,20 +2,20 @@
   "text_id": "bank-0008",
   "config_name": "D4+R2",
   "run_id": "65b4d39c07a9",
-  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - Ludovica Brunelleschi,\n\nmi chiamo Priscilla Montagnani e sono titolare del conto corrente con Tancredi Albertazzi. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, pari a € 297,00, è stato registrato il 21 novembre 2026 presso un esercente a Nuoro. Il secondo, di € 772,00, risale al 10 novembre 2026 e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come [RUOLO_1] presso Trafilerie Bonaccorsi S.p.A. e risiedo stabilmente a Nuoro. Ho già bloccato la carta tramite l'app, ma necessito di una verifica formale da parte vostra.\n\nVi chiedo cortesemente di aprire una pratica di indagine per verificare l'origine di questi movimenti. Per qualsiasi necessità, potete contattarmi al numero 381 755 8834 o all'indirizzo rebecca.camporesi@example.com.\n\nResto in attesa di un vostro riscontro.\n\nCordiali saluti,\nGinevra Guidotti: XV-19827\n",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - Priscilla Montagnani\n\nGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Priscilla Montagnani e sono titolare del conto corrente con Tancredi Albertazzi. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, pari a € 297,00, è stato registrato il 21 novembre 2026 presso un esercente a Nuoro. Il secondo, di € 772,00, risale al 10 novembre 2026 e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come [RUOLO_1] presso Trafilerie Bonaccorsi S.p.A. e risiedo stabilmente a Nuoro. Ho già bloccato la carta tramite l'app, ma necessito di una verifica formale da parte vostra.\n\nVi chiedo cortesemente di aprire una pratica di indagine per verificare l'origine di questi movimenti. Per qualsiasi necessità, potete contattarmi al numero 381 755 8834 o all'indirizzo rebecca.camporesi@example.com.\n\nResto in attesa di un vostro riscontro.\n\nCordiali saluti,\nPriscilla Montagnani\nMatricola: XV-19827\n",
   "disclosure": [
     {
-      "surrogate": "Ludovica Brunelleschi",
+      "surrogate": "Priscilla Montagnani",
       "type": "PERSONA",
       "class": "direct",
       "source": "D1",
       "reason": null
     },
     {
-      "surrogate": "Priscilla Montagnani",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D2",
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
       "reason": null
     },
     {
@@ -89,18 +89,11 @@
       "reason": null
     },
     {
-      "surrogate": "Ginevra Guidotti",
-      "type": "PERSONA",
-      "class": "direct",
-      "source": "D1",
-      "reason": null
-    },
-    {
       "surrogate": "XV-19827",
       "type": "UTENTE",
       "class": "direct",
       "source": "D3",
-      "reason": null
+      "reason": "matricola aziendale"
     }
   ]
 }

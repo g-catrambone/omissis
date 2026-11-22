@@ -437,10 +437,10 @@
       "level": "all",
       "name": "all",
       "gold": 297,
-      "predicted": 194,
-      "precision": 0.6134020618556701,
-      "recall": 0.4006734006734007,
-      "f1": 0.4847250509164969
+      "predicted": 195,
+      "precision": 0.7076923076923077,
+      "recall": 0.46464646464646464,
+      "f1": 0.5609756097560976
     },
     {
       "detector": "D1",
@@ -448,10 +448,10 @@
       "level": "class",
       "name": "direct",
       "gold": 141,
-      "predicted": 101,
-      "precision": 0.7821782178217822,
-      "recall": 0.5602836879432624,
-      "f1": 0.6528925619834711
+      "predicted": 102,
+      "precision": 0.9509803921568627,
+      "recall": 0.6879432624113475,
+      "f1": 0.7983539094650205
     },
     {
       "detector": "D1",
@@ -460,9 +460,9 @@
       "name": "quasi",
       "gold": 149,
       "predicted": 93,
-      "precision": 0.43010752688172044,
-      "recall": 0.2684563758389262,
-      "f1": 0.3305785123966942
+      "precision": 0.44086021505376344,
+      "recall": 0.2751677852348993,
+      "f1": 0.33884297520661155
     },
     {
       "detector": "D1",
@@ -482,9 +482,9 @@
       "name": "AZIENDA",
       "gold": 40,
       "predicted": 36,
-      "precision": 0.4166666666666667,
-      "recall": 0.375,
-      "f1": 0.3947368421052631
+      "precision": 0.4444444444444444,
+      "recall": 0.4,
+      "f1": 0.4210526315789474
     },
     {
       "detector": "D1",
@@ -536,10 +536,10 @@
       "level": "type",
       "name": "EMAIL",
       "gold": 20,
-      "predicted": 19,
+      "predicted": 20,
       "precision": 1.0,
-      "recall": 0.95,
-      "f1": 0.9743589743589743
+      "recall": 1.0,
+      "f1": 1.0
     },
     {
       "detector": "D1",
@@ -581,9 +581,9 @@
       "name": "PERSONA",
       "gold": 53,
       "predicted": 58,
-      "precision": 0.6206896551724138,
-      "recall": 0.6792452830188679,
-      "f1": 0.6486486486486486
+      "precision": 0.9137931034482759,
+      "recall": 1.0,
+      "f1": 0.9549549549549551
     },
     {
       "detector": "D1",
@@ -646,10 +646,10 @@
       "level": "all",
       "name": "all",
       "gold": 297,
-      "predicted": 194,
-      "precision": 0.8092783505154639,
-      "recall": 0.5286195286195287,
-      "f1": 0.6395112016293278
+      "predicted": 195,
+      "precision": 0.8102564102564103,
+      "recall": 0.531986531986532,
+      "f1": 0.6422764227642276
     },
     {
       "detector": "D1",
@@ -657,10 +657,10 @@
       "level": "class",
       "name": "direct",
       "gold": 141,
-      "predicted": 101,
-      "precision": 0.9900990099009901,
-      "recall": 0.7092198581560284,
-      "f1": 0.8264462809917354
+      "predicted": 102,
+      "precision": 0.9901960784313726,
+      "recall": 0.7163120567375887,
+      "f1": 0.831275720164609
     },
     {
       "detector": "D1",
@@ -745,7 +745,7 @@
       "level": "type",
       "name": "EMAIL",
       "gold": 20,
-      "predicted": 19,
+      "predicted": 20,
       "precision": 1.0,
       "recall": 1.0,
       "f1": 1.0
@@ -791,8 +791,8 @@
       "gold": 53,
       "predicted": 58,
       "precision": 0.9827586206896551,
-      "recall": 0.9811320754716981,
-      "f1": 0.9819446745072056
+      "recall": 1.0,
+      "f1": 0.9913043478260869
     },
     {
       "detector": "D1",
@@ -1751,10 +1751,10 @@
       "level": "all",
       "name": "all",
       "gold": 297,
-      "predicted": 295,
-      "precision": 0.847457627118644,
-      "recall": 0.8417508417508418,
-      "f1": 0.8445945945945947
+      "predicted": 297,
+      "precision": 0.9090909090909091,
+      "recall": 0.9090909090909091,
+      "f1": 0.9090909090909091
     },
     {
       "detector": "D4",
@@ -1763,9 +1763,9 @@
       "name": "direct",
       "gold": 141,
       "predicted": 139,
-      "precision": 0.8201438848920863,
-      "recall": 0.8085106382978723,
-      "f1": 0.8142857142857144
+      "precision": 0.9496402877697842,
+      "recall": 0.9361702127659575,
+      "f1": 0.942857142857143
     },
     {
       "detector": "D4",
@@ -1773,10 +1773,10 @@
       "level": "class",
       "name": "quasi",
       "gold": 149,
-      "predicted": 145,
-      "precision": 0.903448275862069,
-      "recall": 0.8791946308724832,
-      "f1": 0.891156462585034
+      "predicted": 147,
+      "precision": 0.9047619047619048,
+      "recall": 0.8926174496644296,
+      "f1": 0.8986486486486487
     },
     {
       "detector": "D4",
@@ -1795,10 +1795,10 @@
       "level": "type",
       "name": "AZIENDA",
       "gold": 40,
-      "predicted": 37,
-      "precision": 0.972972972972973,
-      "recall": 0.9,
-      "f1": 0.935064935064935
+      "predicted": 39,
+      "precision": 0.9743589743589743,
+      "recall": 0.95,
+      "f1": 0.9620253164556962
     },
     {
       "detector": "D4",
@@ -1861,10 +1861,10 @@
       "level": "type",
       "name": "EMAIL",
       "gold": 20,
-      "predicted": 19,
+      "predicted": 20,
       "precision": 1.0,
-      "recall": 0.95,
-      "f1": 0.9743589743589743
+      "recall": 1.0,
+      "f1": 1.0
     },
     {
       "detector": "D4",
@@ -1905,10 +1905,10 @@
       "level": "type",
       "name": "PERSONA",
       "gold": 53,
-      "predicted": 57,
-      "precision": 0.631578947368421,
-      "recall": 0.6792452830188679,
-      "f1": 0.6545454545454544
+      "predicted": 56,
+      "precision": 0.9464285714285714,
+      "recall": 1.0,
+      "f1": 0.9724770642201834
     },
     {
       "detector": "D4",
@@ -1982,10 +1982,10 @@
       "level": "all",
       "name": "all",
       "gold": 297,
-      "predicted": 295,
-      "precision": 0.9559322033898305,
-      "recall": 0.9494949494949495,
-      "f1": 0.9527027027027027
+      "predicted": 297,
+      "precision": 0.9595959595959596,
+      "recall": 0.9595959595959596,
+      "f1": 0.9595959595959596
     },
     {
       "detector": "D4",
@@ -1994,9 +1994,9 @@
       "name": "direct",
       "gold": 141,
       "predicted": 139,
-      "precision": 0.9928057553956835,
-      "recall": 0.9787234042553191,
-      "f1": 0.9857142857142858
+      "precision": 1.0,
+      "recall": 0.9858156028368794,
+      "f1": 0.9928571428571429
     },
     {
       "detector": "D4",
@@ -2004,10 +2004,10 @@
       "level": "class",
       "name": "quasi",
       "gold": 149,
-      "predicted": 145,
-      "precision": 0.9448275862068966,
-      "recall": 0.9194630872483222,
-      "f1": 0.9319727891156463
+      "predicted": 147,
+      "precision": 0.9455782312925171,
+      "recall": 0.9328859060402684,
+      "f1": 0.9391891891891893
     },
     {
       "detector": "D4",
@@ -2026,10 +2026,10 @@
       "level": "type",
       "name": "AZIENDA",
       "gold": 40,
-      "predicted": 37,
-      "precision": 0.972972972972973,
-      "recall": 0.9,
-      "f1": 0.935064935064935
+      "predicted": 39,
+      "precision": 0.9743589743589743,
+      "recall": 0.95,
+      "f1": 0.9620253164556962
     },
     {
       "detector": "D4",
@@ -2092,7 +2092,7 @@
       "level": "type",
       "name": "EMAIL",
       "gold": 20,
-      "predicted": 19,
+      "predicted": 20,
       "precision": 1.0,
       "recall": 1.0,
       "f1": 1.0
@@ -2136,10 +2136,10 @@
       "level": "type",
       "name": "PERSONA",
       "gold": 53,
-      "predicted": 57,
-      "precision": 0.9824561403508771,
-      "recall": 0.9811320754716981,
-      "f1": 0.9817936614969657
+      "predicted": 56,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
     },
     {
       "detector": "D4",
@@ -4223,10 +4223,10 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 2,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3,
+          "spurious": 1
         },
         "AZIENDA": {
           "matched_gold": 1,
@@ -4339,10 +4339,9 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 1,
@@ -4447,10 +4446,10 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 2,
-          "spurious": 3,
-          "matched_predicted": 1
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3,
+          "spurious": 1
         },
         "AZIENDA": {
           "matched_gold": 0,
@@ -4552,10 +4551,9 @@
           "matched_predicted": 1
         },
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 1,
-          "matched_predicted": 1,
-          "spurious": 1
+          "matched_gold": 2,
+          "missed": 0,
+          "matched_predicted": 2
         },
         "IBAN": {
           "matched_gold": 0,
@@ -4584,8 +4582,9 @@
           "missed": 1
         },
         "EMAIL": {
-          "matched_gold": 0,
-          "missed": 1
+          "matched_gold": 1,
+          "missed": 0,
+          "matched_predicted": 1
         },
         "TELEFONO": {
           "matched_gold": 1,
@@ -4605,8 +4604,8 @@
           "spurious": 2
         },
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 1,
+          "matched_gold": 2,
+          "missed": 0,
           "matched_predicted": 2
         },
         "IBAN": {
@@ -4637,7 +4636,8 @@
         },
         "EMAIL": {
           "matched_gold": 1,
-          "missed": 0
+          "missed": 0,
+          "matched_predicted": 1
         },
         "TELEFONO": {
           "matched_gold": 1,
@@ -4656,10 +4656,9 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 1,
@@ -4976,10 +4975,9 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 0,
@@ -5198,15 +5196,15 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
-          "matched_gold": 0,
-          "missed": 2,
-          "spurious": 2
+          "matched_gold": 1,
+          "missed": 1,
+          "spurious": 1,
+          "matched_predicted": 1
         },
         "CITTA": {
           "matched_gold": 2,
@@ -5621,10 +5619,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "DATA": {
           "matched_gold": 0,
@@ -5725,10 +5722,10 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 2,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3,
+          "spurious": 1
         },
         "AZIENDA": {
           "matched_gold": 0,
@@ -5828,10 +5825,10 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 2,
-          "spurious": 3,
-          "matched_predicted": 1
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3,
+          "spurious": 1
         },
         "AZIENDA": {
           "matched_gold": 0,
@@ -5921,10 +5918,9 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 2,
-          "spurious": 2,
-          "matched_predicted": 1
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 0,
@@ -6006,10 +6002,9 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 1,
@@ -6119,10 +6114,9 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "CITTA": {
           "matched_gold": 2,
@@ -6221,10 +6215,9 @@
       "leak": true,
       "exact": {
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 1
+          "matched_gold": 2,
+          "missed": 0,
+          "matched_predicted": 2
         },
         "SINDACATO": {
           "matched_gold": 0,
@@ -10464,10 +10457,10 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 2,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3,
+          "spurious": 1
         },
         "AZIENDA": {
           "matched_gold": 2,
@@ -10596,15 +10589,14 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
-          "matched_gold": 1,
-          "missed": 1,
-          "matched_predicted": 1
+          "matched_gold": 2,
+          "missed": 0,
+          "matched_predicted": 2
         },
         "CITTA": {
           "matched_gold": 1,
@@ -10662,9 +10654,9 @@
           "matched_predicted": 3
         },
         "AZIENDA": {
-          "matched_gold": 1,
-          "missed": 1,
-          "matched_predicted": 1
+          "matched_gold": 2,
+          "missed": 0,
+          "matched_predicted": 2
         },
         "CITTA": {
           "matched_gold": 1,
@@ -10722,15 +10714,15 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 2,
-          "spurious": 3,
-          "matched_predicted": 1
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3,
+          "spurious": 1
         },
         "AZIENDA": {
-          "matched_gold": 1,
-          "missed": 1,
-          "matched_predicted": 1
+          "matched_gold": 2,
+          "missed": 0,
+          "matched_predicted": 2
         },
         "IBAN": {
           "matched_gold": 0,
@@ -10779,9 +10771,9 @@
           "matched_predicted": 4
         },
         "AZIENDA": {
-          "matched_gold": 1,
-          "missed": 1,
-          "matched_predicted": 1
+          "matched_gold": 2,
+          "missed": 0,
+          "matched_predicted": 2
         },
         "IBAN": {
           "matched_gold": 1,
@@ -10835,10 +10827,9 @@
           "matched_predicted": 2
         },
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 1,
-          "matched_predicted": 1,
-          "spurious": 1
+          "matched_gold": 2,
+          "missed": 0,
+          "matched_predicted": 2
         },
         "IBAN": {
           "matched_gold": 1,
@@ -10870,8 +10861,9 @@
           "missed": 1
         },
         "EMAIL": {
-          "matched_gold": 0,
-          "missed": 1
+          "matched_gold": 1,
+          "missed": 0,
+          "matched_predicted": 1
         },
         "TELEFONO": {
           "matched_gold": 1,
@@ -10894,8 +10886,8 @@
           "matched_predicted": 2
         },
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 1,
+          "matched_gold": 2,
+          "missed": 0,
           "matched_predicted": 2
         },
         "IBAN": {
@@ -10929,7 +10921,8 @@
         },
         "EMAIL": {
           "matched_gold": 1,
-          "missed": 0
+          "missed": 0,
+          "matched_predicted": 1
         },
         "TELEFONO": {
           "matched_gold": 1,
@@ -10952,10 +10945,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 2,
@@ -11312,10 +11304,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 2,
@@ -11561,10 +11552,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 2,
@@ -12028,10 +12018,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "DATA": {
           "matched_gold": 2,
@@ -12144,10 +12133,10 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 2,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3,
+          "spurious": 1
         },
         "AZIENDA": {
           "matched_gold": 2,
@@ -12252,10 +12241,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 2,
-          "spurious": 3,
-          "matched_predicted": 1
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 2,
@@ -12302,8 +12290,7 @@
         "PERSONA": {
           "matched_gold": 3,
           "missed": 0,
-          "matched_predicted": 3,
-          "spurious": 1
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 2,
@@ -12353,10 +12340,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 2,
-          "spurious": 2,
-          "matched_predicted": 1
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 1,
@@ -12443,10 +12429,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "AZIENDA": {
           "matched_gold": 2,
@@ -12569,10 +12554,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 2,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 2
+          "matched_gold": 3,
+          "missed": 0,
+          "matched_predicted": 3
         },
         "CITTA": {
           "matched_gold": 2,
@@ -12679,10 +12663,9 @@
       "leak": false,
       "exact": {
         "PERSONA": {
-          "matched_gold": 1,
-          "missed": 1,
-          "spurious": 1,
-          "matched_predicted": 1
+          "matched_gold": 2,
+          "missed": 0,
+          "matched_predicted": 2
         },
         "SINDACATO": {
           "matched_gold": 0,

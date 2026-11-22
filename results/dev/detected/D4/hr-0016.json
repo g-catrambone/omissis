@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 44,
-      "end": 63,
-      "text": "Alberto Cavallari\n\n",
+      "end": 61,
+      "text": "Alberto Cavallari",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -138,5 +138,5 @@
       "reason": "nome dell'organizzazione del datore di lavoro"
     }
   ],
-  "seconds": 0.1464
+  "seconds": 0.1596
 }

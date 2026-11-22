@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 47,
-      "end": 68,
-      "text": "Carlotta Castellani\n\n",
+      "end": 66,
+      "text": "Carlotta Castellani",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -174,5 +174,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.1493
+  "seconds": 0.1636
 }

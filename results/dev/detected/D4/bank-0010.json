@@ -103,11 +103,20 @@
     },
     {
       "start": 1143,
-      "end": 1194,
-      "text": "Giacomo Passalacqua\ngiacomo.passalacqua@example.com",
+      "end": 1162,
+      "text": "Giacomo Passalacqua",
       "type": "PERSONA",
-      "confidence": 0.85,
-      "source": "D1",
+      "confidence": 0.9892550706863403,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1163,
+      "end": 1194,
+      "text": "giacomo.passalacqua@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
       "reason": null
     },
     {
@@ -129,5 +138,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.1447
+  "seconds": 0.1607
 }

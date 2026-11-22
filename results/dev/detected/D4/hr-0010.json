@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 52,
-      "end": 71,
-      "text": "Sergio Bertolucci\n\n",
+      "end": 69,
+      "text": "Sergio Bertolucci",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -85,11 +85,11 @@
     },
     {
       "start": 1221,
-      "end": 1239,
-      "text": "Sergio Bertolucci\n",
+      "end": 1238,
+      "text": "Sergio Bertolucci",
       "type": "PERSONA",
-      "confidence": 0.85,
-      "source": "D1",
+      "confidence": 0.852219395339489,
+      "source": "D2",
       "reason": null
     },
     {
@@ -100,15 +100,6 @@
       "confidence": 0.8,
       "source": "D3",
       "reason": "nome dell'organizzazione"
-    },
-    {
-      "start": 1285,
-      "end": 1288,
-      "text": "Tel",
-      "type": "PERSONA",
-      "confidence": 0.85,
-      "source": "D1",
-      "reason": null
     },
     {
       "start": 1290,
@@ -129,5 +120,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.1452
+  "seconds": 0.159
 }

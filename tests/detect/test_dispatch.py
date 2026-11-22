@@ -1,6 +1,7 @@
 """The dispatch table of `detect` and `supported_detectors` (task 4.0)."""
 
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
 
@@ -101,3 +102,39 @@ def test_library_that_fails_to_import_at_run_time_is_a_config_error(monkeypatch)
     fake(monkeypatch, DetectorId.D1, raising(error))
     with pytest.raises(ConfigError, match=r"D1.*presidio_analyzer\.nlp_engine"):
         detect(TEXT, DetectorId.D1, CONFIG)
+
+
+# --- The D1 adapter without Presidio: what it does to a span that goes over a line break.
+
+LETTER = "Oggetto: ferie - Lidia Caprioli\n\nGentile Ufficio,\n\nSaluti,\n Lidia Caprioli \nN. 12"
+NAME = "Lidia Caprioli"
+
+
+def d1_spans(monkeypatch, start, end):
+    """What the adapter makes of one person that Presidio found from `start` to `end`."""
+    result = SimpleNamespace(start=start, end=end, entity_type="PERSON", score=0.85)
+    engine = SimpleNamespace(analyze=lambda **_: [result])
+    monkeypatch.setattr(detection.presidio, "_analyzer", lambda: engine)
+    return [(s.start, s.text) for s in detection.presidio.find(LETTER, CONFIG)]
+
+
+def test_d1_span_over_a_line_break_keeps_its_first_line(monkeypatch):
+    first = LETTER.index(NAME)
+    # The name at the end of the subject, two line breaks and the greeting, as one person.
+    assert d1_spans(monkeypatch, first, LETTER.index(",")) == [(first, NAME)]
+
+
+def test_d1_first_line_is_the_first_that_holds_a_character(monkeypatch):
+    second = LETTER.rindex(NAME)
+    # From the line break before the signature to the end: the name, without its spaces.
+    assert d1_spans(monkeypatch, second - 2, len(LETTER)) == [(second, NAME)]
+
+
+def test_d1_span_on_one_line_is_left_as_it_is(monkeypatch):
+    second = LETTER.rindex(NAME)
+    assert d1_spans(monkeypatch, second - 1, second + len(NAME) + 1) == [(second - 1, f" {NAME} ")]
+
+
+def test_d1_span_of_line_breaks_only_is_dropped(monkeypatch):
+    first = LETTER.index("\n")
+    assert d1_spans(monkeypatch, first, first + 2) == []

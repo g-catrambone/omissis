@@ -4,8 +4,8 @@
   "spans": [
     {
       "start": 57,
-      "end": 84,
-      "text": "Nicola Scarpellini\n\nGentile",
+      "end": 75,
+      "text": "Nicola Scarpellini",
       "type": "PERSONA",
       "confidence": 0.85,
       "source": "D1",
@@ -84,5 +84,5 @@
       "reason": null
     }
   ],
-  "seconds": 0.0112
+  "seconds": 0.0114
 }
