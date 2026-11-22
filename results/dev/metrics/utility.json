@@ -32,12 +32,12 @@
       "t3": 0.97,
       "t3_ci_low": 0.9400000000000001,
       "t3_ci_high": 1.0,
-      "t1": 0.6124999999999999,
-      "t1_ci_low": 0.5416666666666666,
-      "t1_ci_high": 0.6833333333333333,
-      "utility": 0.7912500000000001,
-      "utility_ci_low": 0.7495833333333334,
-      "utility_ci_high": 0.8333333333333333,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.97,
+      "utility_ci_low": 0.9400000000000001,
+      "utility_ci_high": 1.0,
       "t3_unparseable": 0,
       "judge_unparseable": 0
     },
@@ -47,12 +47,12 @@
       "t3": 0.8900000000000002,
       "t3_ci_low": 0.8400000000000001,
       "t3_ci_high": 0.9400000000000001,
-      "t1": 0.4583333333333335,
-      "t1_ci_low": 0.39583333333333326,
-      "t1_ci_high": 0.525,
-      "utility": 0.6741666666666668,
-      "utility_ci_low": 0.6433333333333333,
-      "utility_ci_high": 0.7041666666666667,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.8900000000000002,
+      "utility_ci_low": 0.8400000000000001,
+      "utility_ci_high": 0.9400000000000001,
       "t3_unparseable": 0,
       "judge_unparseable": 0
     },
@@ -62,12 +62,12 @@
       "t3": 0.97,
       "t3_ci_low": 0.9400000000000001,
       "t3_ci_high": 1.0,
-      "t1": 0.4666666666666667,
-      "t1_ci_low": 0.39999999999999997,
-      "t1_ci_high": 0.5375000000000001,
-      "utility": 0.7183333333333334,
-      "utility_ci_low": 0.6870833333333333,
-      "utility_ci_high": 0.7520937499999999,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.97,
+      "utility_ci_low": 0.9400000000000001,
+      "utility_ci_high": 1.0,
       "t3_unparseable": 0,
       "judge_unparseable": 0
     },
@@ -77,12 +77,12 @@
       "t3": 0.9800000000000001,
       "t3_ci_low": 0.95,
       "t3_ci_high": 1.0,
-      "t1": 0.6375000000000001,
-      "t1_ci_low": 0.575,
-      "t1_ci_high": 0.6958333333333334,
-      "utility": 0.8087499999999999,
-      "utility_ci_low": 0.7745833333333332,
-      "utility_ci_high": 0.8416666666666666,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.9800000000000001,
+      "utility_ci_low": 0.95,
+      "utility_ci_high": 1.0,
       "t3_unparseable": 0,
       "judge_unparseable": 0
     },
@@ -92,12 +92,12 @@
       "t3": 0.93,
       "t3_ci_low": 0.8800000000000001,
       "t3_ci_high": 0.9800000000000001,
-      "t1": 0.4083333333333334,
-      "t1_ci_low": 0.3458333333333333,
-      "t1_ci_high": 0.475,
-      "utility": 0.6691666666666667,
-      "utility_ci_low": 0.6312500000000001,
-      "utility_ci_high": 0.7083333333333334,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.93,
+      "utility_ci_low": 0.8800000000000001,
+      "utility_ci_high": 0.9800000000000001,
       "t3_unparseable": 0,
       "judge_unparseable": 0
     },
@@ -107,12 +107,12 @@
       "t3": 0.9800000000000001,
       "t3_ci_low": 0.95,
       "t3_ci_high": 1.0,
-      "t1": 0.4624999999999999,
-      "t1_ci_low": 0.38333333333333336,
-      "t1_ci_high": 0.5416666666666667,
-      "utility": 0.7212500000000002,
-      "utility_ci_low": 0.68,
-      "utility_ci_high": 0.7629166666666667,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.9800000000000001,
+      "utility_ci_low": 0.95,
+      "utility_ci_high": 1.0,
       "t3_unparseable": 0,
       "judge_unparseable": 0
     }
@@ -470,14 +470,10 @@
         "dates": true,
         "deadline": false
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6083333333333334
+      "utility": 0.8
     },
     {
       "text_id": "bank-0002",
@@ -491,14 +487,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0008",
@@ -512,14 +504,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.8333333333333334,
-      "scores": {
-        "correctness": 5,
-        "completeness": 3,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.9166666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0010",
@@ -533,14 +521,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 2,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "bank-0013",
@@ -554,14 +538,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.75,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.875
+      "utility": 1.0
     },
     {
       "text_id": "bank-0014",
@@ -575,14 +555,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7333333333333334
+      "utility": 0.8
     },
     {
       "text_id": "bank-0015",
@@ -596,14 +572,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.65
+      "utility": 0.8
     },
     {
       "text_id": "bank-0016",
@@ -617,14 +589,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0024",
@@ -638,14 +606,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "bank-0032",
@@ -659,14 +623,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0034",
@@ -680,14 +640,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0035",
@@ -701,14 +657,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 2,
-        "completeness": 4,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0040",
@@ -722,14 +674,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "hr-0002",
@@ -743,14 +691,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.8333333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 5,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.9166666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0003",
@@ -764,14 +708,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "hr-0010",
@@ -785,14 +725,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.8333333333333334,
-      "scores": {
-        "correctness": 4,
-        "completeness": 4,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.9166666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0011",
@@ -806,14 +742,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "hr-0016",
@@ -827,14 +759,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 5,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "hr-0020",
@@ -848,14 +776,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0026",
@@ -869,14 +793,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.9166666666666666,
-      "scores": {
-        "correctness": 4,
-        "completeness": 5,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.9583333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0001",
@@ -890,14 +810,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.525
+      "utility": 0.8
     },
     {
       "text_id": "bank-0002",
@@ -911,14 +827,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0008",
@@ -932,14 +844,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 5,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0010",
@@ -953,14 +861,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 3,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0013",
@@ -974,14 +878,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 3,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0014",
@@ -995,14 +895,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.5916666666666667
+      "utility": 0.6
     },
     {
       "text_id": "bank-0015",
@@ -1016,14 +912,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.75,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.775
+      "utility": 0.8
     },
     {
       "text_id": "bank-0016",
@@ -1037,14 +929,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 3,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0024",
@@ -1058,14 +946,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0032",
@@ -1079,14 +963,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.525
+      "utility": 0.8
     },
     {
       "text_id": "bank-0034",
@@ -1100,14 +980,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "bank-0035",
@@ -1121,14 +997,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7333333333333334
+      "utility": 0.8
     },
     {
       "text_id": "bank-0040",
@@ -1142,14 +1014,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "hr-0002",
@@ -1163,14 +1031,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.65
+      "utility": 0.8
     },
     {
       "text_id": "hr-0003",
@@ -1184,14 +1048,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7333333333333334
+      "utility": 0.8
     },
     {
       "text_id": "hr-0010",
@@ -1205,14 +1065,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6083333333333334
+      "utility": 0.8
     },
     {
       "text_id": "hr-0011",
@@ -1226,14 +1082,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6916666666666667
+      "utility": 0.8
     },
     {
       "text_id": "hr-0016",
@@ -1247,14 +1099,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "hr-0020",
@@ -1268,14 +1116,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "hr-0026",
@@ -1289,14 +1133,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6916666666666667
+      "utility": 0.8
     },
     {
       "text_id": "bank-0001",
@@ -1310,14 +1150,10 @@
         "dates": true,
         "deadline": false
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6083333333333334
+      "utility": 0.8
     },
     {
       "text_id": "bank-0002",
@@ -1331,14 +1167,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "bank-0008",
@@ -1352,14 +1184,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0010",
@@ -1373,14 +1201,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0013",
@@ -1394,14 +1218,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0014",
@@ -1415,14 +1235,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.65
+      "utility": 0.8
     },
     {
       "text_id": "bank-0015",
@@ -1436,14 +1252,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.9166666666666666,
-      "scores": {
-        "correctness": 4,
-        "completeness": 5,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8583333333333334
+      "utility": 0.8
     },
     {
       "text_id": "bank-0016",
@@ -1457,14 +1269,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "bank-0024",
@@ -1478,14 +1286,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.75,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.875
+      "utility": 1.0
     },
     {
       "text_id": "bank-0032",
@@ -1499,14 +1303,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0034",
@@ -1520,14 +1320,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "bank-0035",
@@ -1541,14 +1337,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 2,
-        "completeness": 4,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "bank-0040",
@@ -1562,14 +1354,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "hr-0002",
@@ -1583,14 +1371,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "hr-0003",
@@ -1604,14 +1388,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "hr-0010",
@@ -1625,14 +1405,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0011",
@@ -1646,14 +1422,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.625
+      "utility": 1.0
     },
     {
       "text_id": "hr-0016",
@@ -1667,14 +1439,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "hr-0020",
@@ -1688,14 +1456,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "hr-0026",
@@ -1709,14 +1473,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0001",
@@ -1730,14 +1490,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "bank-0002",
@@ -1751,14 +1507,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0008",
@@ -1772,14 +1524,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0010",
@@ -1793,14 +1541,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0013",
@@ -1814,14 +1558,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.9166666666666666,
-      "scores": {
-        "correctness": 5,
-        "completeness": 4,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.9583333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0014",
@@ -1835,14 +1575,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7333333333333334
+      "utility": 0.8
     },
     {
       "text_id": "bank-0015",
@@ -1856,14 +1592,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6916666666666667
+      "utility": 0.8
     },
     {
       "text_id": "bank-0016",
@@ -1877,14 +1609,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.625
+      "utility": 1.0
     },
     {
       "text_id": "bank-0024",
@@ -1898,14 +1626,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.75,
-      "scores": {
-        "correctness": 5,
-        "completeness": 4,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.875
+      "utility": 1.0
     },
     {
       "text_id": "bank-0032",
@@ -1919,14 +1643,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0034",
@@ -1940,14 +1660,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 2,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0035",
@@ -1961,14 +1677,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0040",
@@ -1982,14 +1694,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "hr-0002",
@@ -2003,14 +1711,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.8333333333333334,
-      "scores": {
-        "correctness": 5,
-        "completeness": 5,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.9166666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0003",
@@ -2024,14 +1728,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0010",
@@ -2045,14 +1745,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.75,
-      "scores": {
-        "correctness": 4,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.875
+      "utility": 1.0
     },
     {
       "text_id": "hr-0011",
@@ -2066,14 +1762,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 2,
-        "completeness": 4,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "hr-0016",
@@ -2087,14 +1779,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.8333333333333334,
-      "scores": {
-        "correctness": 4,
-        "completeness": 4,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.9166666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0020",
@@ -2108,14 +1796,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 4,
-        "completeness": 2,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0026",
@@ -2129,14 +1813,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0001",
@@ -2150,14 +1830,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.625
+      "utility": 1.0
     },
     {
       "text_id": "bank-0002",
@@ -2171,14 +1847,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.16666666666666666,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 1
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.5833333333333334
+      "utility": 1.0
     },
     {
       "text_id": "bank-0008",
@@ -2192,14 +1864,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "bank-0010",
@@ -2213,14 +1881,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0013",
@@ -2234,14 +1898,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.625
+      "utility": 1.0
     },
     {
       "text_id": "bank-0014",
@@ -2255,14 +1915,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.55
+      "utility": 0.6
     },
     {
       "text_id": "bank-0015",
@@ -2276,14 +1932,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.65
+      "utility": 0.8
     },
     {
       "text_id": "bank-0016",
@@ -2297,14 +1949,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "bank-0024",
@@ -2318,14 +1966,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0032",
@@ -2339,14 +1983,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.5666666666666667
+      "utility": 0.8
     },
     {
       "text_id": "bank-0034",
@@ -2360,14 +2000,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0035",
@@ -2381,14 +2017,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0040",
@@ -2402,14 +2034,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "hr-0002",
@@ -2423,14 +2051,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0003",
@@ -2444,14 +2068,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.625
+      "utility": 1.0
     },
     {
       "text_id": "hr-0010",
@@ -2465,14 +2085,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.525
+      "utility": 0.8
     },
     {
       "text_id": "hr-0011",
@@ -2486,14 +2102,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.5666666666666667
+      "utility": 0.8
     },
     {
       "text_id": "hr-0016",
@@ -2507,14 +2119,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.8333333333333333
+      "utility": 1.0
     },
     {
       "text_id": "hr-0020",
@@ -2528,14 +2136,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "hr-0026",
@@ -2549,14 +2153,10 @@
         "dates": false,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 5,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6916666666666667
+      "utility": 0.8
     },
     {
       "text_id": "bank-0001",
@@ -2570,14 +2170,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.6666666666666666
+      "utility": 1.0
     },
     {
       "text_id": "bank-0002",
@@ -2591,14 +2187,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 2,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0008",
@@ -2612,14 +2204,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "bank-0010",
@@ -2633,14 +2221,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.16666666666666666,
-      "scores": {
-        "correctness": 1,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.5833333333333334
+      "utility": 1.0
     },
     {
       "text_id": "bank-0013",
@@ -2654,14 +2238,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "bank-0014",
@@ -2675,14 +2255,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.3333333333333333,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.5666666666666667
+      "utility": 0.8
     },
     {
       "text_id": "bank-0015",
@@ -2696,14 +2272,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.6666666666666666,
-      "scores": {
-        "correctness": 2,
-        "completeness": 4,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7333333333333334
+      "utility": 0.8
     },
     {
       "text_id": "bank-0016",
@@ -2717,14 +2289,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "bank-0024",
@@ -2738,14 +2306,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 4,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0032",
@@ -2759,14 +2323,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 4,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0034",
@@ -2780,14 +2340,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "bank-0035",
@@ -2801,14 +2357,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.9166666666666666,
-      "scores": {
-        "correctness": 4,
-        "completeness": 5,
-        "italian": 5
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.9583333333333333
+      "utility": 1.0
     },
     {
       "text_id": "bank-0040",
@@ -2822,14 +2374,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 2,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     },
     {
       "text_id": "hr-0002",
@@ -2843,14 +2391,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 2,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0003",
@@ -2864,14 +2408,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.16666666666666666,
-      "scores": {
-        "correctness": 1,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.5833333333333334
+      "utility": 1.0
     },
     {
       "text_id": "hr-0010",
@@ -2885,14 +2425,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5833333333333334,
-      "scores": {
-        "correctness": 2,
-        "completeness": 4,
-        "italian": 4
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7916666666666667
+      "utility": 1.0
     },
     {
       "text_id": "hr-0011",
@@ -2906,14 +2442,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.16666666666666666,
-      "scores": {
-        "correctness": 1,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.5833333333333334
+      "utility": 1.0
     },
     {
       "text_id": "hr-0016",
@@ -2927,14 +2459,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.5,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 3
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.75
+      "utility": 1.0
     },
     {
       "text_id": "hr-0020",
@@ -2948,14 +2476,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.25,
-      "scores": {
-        "correctness": 2,
-        "completeness": 2,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.625
+      "utility": 1.0
     },
     {
       "text_id": "hr-0026",
@@ -2969,14 +2493,10 @@
         "dates": true,
         "deadline": true
       },
-      "t1": 0.4166666666666667,
-      "scores": {
-        "correctness": 3,
-        "completeness": 3,
-        "italian": 2
-      },
+      "t1": null,
+      "scores": null,
       "judge_parsed": true,
-      "utility": 0.7083333333333334
+      "utility": 1.0
     }
   ]
 }

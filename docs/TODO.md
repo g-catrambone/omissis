@@ -85,21 +85,21 @@ weights, Ollama running with `gpt-oss:20b` for D3 (`brew services start ollama`)
 
 ## 2. Evaluation on dev (Giuseppe)
 
-- [ ] **Human — read the prompts** before the first `make eval-dev`: attacks
+- [x] **Human — read the prompts** before the first `make eval-dev`: attacks
   (`attacks.LINKAGE_PROMPT`, `ATTRIBUTES_PROMPT`), T3 (`utility.T3_TASK`), judge
   (`judge.PROMPT`). The pilot already used the attack prompts: a change makes its
   calls again, and after `make eval-dev` a change means running it again.
-- [ ] **Human — models.** `cloud`, `attacker` and `judge` are one hosted model
+- [x] **Human — models.** `cloud`, `attacker` and `judge` are one hosted model
   (`configs/models.yaml`): one daily allowance of the free tier, and a judge that
   is the judged model, which the protocol asks to declare. Re-pin before the first
   `make eval-dev` or not at all: a pin changes every run id.
-- [ ] **Human — `make eval-dev`**, launched by Giuseppe's agent on his go: the
+- [x] **Human — `make eval-dev`**, launched by Giuseppe's agent on his go: the
   seven configurations, 820 calls. It prints the number of calls and waits for
   `y`; a run that stops resumes from the cache. Then
   `uv run python -m omissis.eval.detection time --split dev` for the latency
   table, then `make reproduce`, so that the scorecard holds it. Commit
   `results/cache/` and `results/dev/`.
-- [ ] **Human — judge validation** (protocol, section 9): a subagent rates 40
+- [x] **Human — judge validation** (protocol, section 9): a subagent rates 40
   items blind; Giuseppe approves the sheet before `accept` is run.
 
   ```

@@ -1,0 +1,162 @@
+{
+  "item-001": {
+    "text_id": "hr-0020",
+    "config": "R2"
+  },
+  "item-002": {
+    "text_id": "bank-0001",
+    "config": "R1"
+  },
+  "item-003": {
+    "text_id": "bank-0034",
+    "config": "R2"
+  },
+  "item-004": {
+    "text_id": "bank-0010",
+    "config": "R1"
+  },
+  "item-005": {
+    "text_id": "bank-0008",
+    "config": "R2"
+  },
+  "item-006": {
+    "text_id": "hr-0016",
+    "config": "R2"
+  },
+  "item-007": {
+    "text_id": "bank-0035",
+    "config": "R2"
+  },
+  "item-008": {
+    "text_id": "bank-0016",
+    "config": "R1"
+  },
+  "item-009": {
+    "text_id": "bank-0015",
+    "config": "R2"
+  },
+  "item-010": {
+    "text_id": "bank-0001",
+    "config": "R2"
+  },
+  "item-011": {
+    "text_id": "bank-0032",
+    "config": "R2"
+  },
+  "item-012": {
+    "text_id": "bank-0016",
+    "config": "R2"
+  },
+  "item-013": {
+    "text_id": "bank-0013",
+    "config": "R1"
+  },
+  "item-014": {
+    "text_id": "hr-0016",
+    "config": "R1"
+  },
+  "item-015": {
+    "text_id": "hr-0010",
+    "config": "R2"
+  },
+  "item-016": {
+    "text_id": "hr-0026",
+    "config": "R2"
+  },
+  "item-017": {
+    "text_id": "bank-0024",
+    "config": "R1"
+  },
+  "item-018": {
+    "text_id": "hr-0003",
+    "config": "R2"
+  },
+  "item-019": {
+    "text_id": "bank-0014",
+    "config": "R2"
+  },
+  "item-020": {
+    "text_id": "hr-0026",
+    "config": "R1"
+  },
+  "item-021": {
+    "text_id": "bank-0040",
+    "config": "R1"
+  },
+  "item-022": {
+    "text_id": "hr-0011",
+    "config": "R2"
+  },
+  "item-023": {
+    "text_id": "bank-0002",
+    "config": "R1"
+  },
+  "item-024": {
+    "text_id": "hr-0020",
+    "config": "R1"
+  },
+  "item-025": {
+    "text_id": "bank-0024",
+    "config": "R2"
+  },
+  "item-026": {
+    "text_id": "bank-0014",
+    "config": "R1"
+  },
+  "item-027": {
+    "text_id": "hr-0002",
+    "config": "R2"
+  },
+  "item-028": {
+    "text_id": "bank-0034",
+    "config": "R1"
+  },
+  "item-029": {
+    "text_id": "bank-0013",
+    "config": "R2"
+  },
+  "item-030": {
+    "text_id": "bank-0032",
+    "config": "R1"
+  },
+  "item-031": {
+    "text_id": "hr-0003",
+    "config": "R1"
+  },
+  "item-032": {
+    "text_id": "hr-0011",
+    "config": "R1"
+  },
+  "item-033": {
+    "text_id": "bank-0015",
+    "config": "R1"
+  },
+  "item-034": {
+    "text_id": "bank-0010",
+    "config": "R2"
+  },
+  "item-035": {
+    "text_id": "bank-0035",
+    "config": "R1"
+  },
+  "item-036": {
+    "text_id": "bank-0008",
+    "config": "R1"
+  },
+  "item-037": {
+    "text_id": "bank-0040",
+    "config": "R2"
+  },
+  "item-038": {
+    "text_id": "bank-0002",
+    "config": "R2"
+  },
+  "item-039": {
+    "text_id": "hr-0010",
+    "config": "R1"
+  },
+  "item-040": {
+    "text_id": "hr-0002",
+    "config": "R1"
+  }
+}

@@ -1,0 +1,777 @@
+{
+  "split": "dev",
+  "seed": 20261111,
+  "generated_from": [
+    "b07665f0c252",
+    "18bdbd066964",
+    "77adfea872ee"
+  ],
+  "accepted": false,
+  "rule": "kappa >= 0.6 or within one point >= 0.85",
+  "raters": 1,
+  "items": 40,
+  "rows": [
+    {
+      "criterion": "all",
+      "n": 120,
+      "kappa": 0.37254901960784315,
+      "within_one": 0.75,
+      "judge_distribution": {
+        "1": 1,
+        "2": 46,
+        "3": 43,
+        "4": 21,
+        "5": 9
+      },
+      "consensus_distribution": {
+        "1": 1,
+        "2": 21,
+        "3": 26,
+        "4": 46,
+        "5": 26
+      }
+    },
+    {
+      "criterion": "correctness",
+      "n": 40,
+      "kappa": 0.5323741007194245,
+      "within_one": 0.9,
+      "judge_distribution": {
+        "1": 1,
+        "2": 16,
+        "3": 18,
+        "4": 3,
+        "5": 2
+      },
+      "consensus_distribution": {
+        "1": 1,
+        "2": 10,
+        "3": 16,
+        "4": 6,
+        "5": 7
+      }
+    },
+    {
+      "criterion": "completeness",
+      "n": 40,
+      "kappa": 0.15551839464882955,
+      "within_one": 0.5,
+      "judge_distribution": {
+        "1": 0,
+        "2": 13,
+        "3": 19,
+        "4": 7,
+        "5": 1
+      },
+      "consensus_distribution": {
+        "1": 0,
+        "2": 0,
+        "3": 3,
+        "4": 21,
+        "5": 16
+      }
+    },
+    {
+      "criterion": "italian",
+      "n": 40,
+      "kappa": 0.5100222717149221,
+      "within_one": 0.85,
+      "judge_distribution": {
+        "1": 0,
+        "2": 17,
+        "3": 6,
+        "4": 11,
+        "5": 6
+      },
+      "consensus_distribution": {
+        "1": 0,
+        "2": 11,
+        "3": 7,
+        "4": 19,
+        "5": 3
+      }
+    }
+  ],
+  "per_text": [
+    {
+      "item": "item-001",
+      "text_id": "hr-0020",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 3,
+        "italian": 5
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 4,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-002",
+      "text_id": "bank-0001",
+      "config": "R1",
+      "judge": {
+        "correctness": 2,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 4,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-003",
+      "text_id": "bank-0034",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 4,
+        "italian": 5
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-004",
+      "text_id": "bank-0010",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 5,
+          "completeness": 4,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-005",
+      "text_id": "bank-0008",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 4,
+          "italian": 3
+        }
+      ]
+    },
+    {
+      "item": "item-006",
+      "text_id": "hr-0016",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 3,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-007",
+      "text_id": "bank-0035",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 3,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 4,
+          "italian": 5
+        }
+      ]
+    },
+    {
+      "item": "item-008",
+      "text_id": "bank-0016",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 4,
+          "italian": 3
+        }
+      ]
+    },
+    {
+      "item": "item-009",
+      "text_id": "bank-0015",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 4,
+        "italian": 5
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-010",
+      "text_id": "bank-0001",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 3,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 3,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-011",
+      "text_id": "bank-0032",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 4,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-012",
+      "text_id": "bank-0016",
+      "config": "R2",
+      "judge": {
+        "correctness": 5,
+        "completeness": 3,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 5,
+          "completeness": 5,
+          "italian": 3
+        }
+      ]
+    },
+    {
+      "item": "item-013",
+      "text_id": "bank-0013",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 4,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-014",
+      "text_id": "hr-0016",
+      "config": "R1",
+      "judge": {
+        "correctness": 4,
+        "completeness": 3,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 5,
+          "completeness": 4,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-015",
+      "text_id": "hr-0010",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 4,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 4,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-016",
+      "text_id": "hr-0026",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 5,
+        "italian": 5
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-017",
+      "text_id": "bank-0024",
+      "config": "R1",
+      "judge": {
+        "correctness": 2,
+        "completeness": 2,
+        "italian": 3
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 3,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-018",
+      "text_id": "hr-0003",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 5,
+          "completeness": 4,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-019",
+      "text_id": "bank-0014",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 3,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 4,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-020",
+      "text_id": "hr-0026",
+      "config": "R1",
+      "judge": {
+        "correctness": 4,
+        "completeness": 3,
+        "italian": 3
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-021",
+      "text_id": "bank-0040",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 3,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 5,
+          "italian": 3
+        }
+      ]
+    },
+    {
+      "item": "item-022",
+      "text_id": "hr-0011",
+      "config": "R2",
+      "judge": {
+        "correctness": 1,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 4,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-023",
+      "text_id": "bank-0002",
+      "config": "R1",
+      "judge": {
+        "correctness": 2,
+        "completeness": 3,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 4,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-024",
+      "text_id": "hr-0020",
+      "config": "R1",
+      "judge": {
+        "correctness": 2,
+        "completeness": 2,
+        "italian": 3
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 4,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-025",
+      "text_id": "bank-0024",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 3,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 4,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-026",
+      "text_id": "bank-0014",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 3,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 4,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-027",
+      "text_id": "hr-0002",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 3,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 1,
+          "completeness": 3,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-028",
+      "text_id": "bank-0034",
+      "config": "R1",
+      "judge": {
+        "correctness": 2,
+        "completeness": 3,
+        "italian": 3
+      },
+      "raters": [
+        {
+          "correctness": 4,
+          "completeness": 4,
+          "italian": 3
+        }
+      ]
+    },
+    {
+      "item": "item-029",
+      "text_id": "bank-0013",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 2,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 4,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-030",
+      "text_id": "bank-0032",
+      "config": "R1",
+      "judge": {
+        "correctness": 2,
+        "completeness": 2,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 2,
+          "completeness": 4,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-031",
+      "text_id": "hr-0003",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 4,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-032",
+      "text_id": "hr-0011",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 3,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-033",
+      "text_id": "bank-0015",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 4,
+        "italian": 5
+      },
+      "raters": [
+        {
+          "correctness": 4,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-034",
+      "text_id": "bank-0010",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 2,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 3
+        }
+      ]
+    },
+    {
+      "item": "item-035",
+      "text_id": "bank-0035",
+      "config": "R1",
+      "judge": {
+        "correctness": 3,
+        "completeness": 4,
+        "italian": 4
+      },
+      "raters": [
+        {
+          "correctness": 4,
+          "completeness": 4,
+          "italian": 5
+        }
+      ]
+    },
+    {
+      "item": "item-036",
+      "text_id": "bank-0008",
+      "config": "R1",
+      "judge": {
+        "correctness": 5,
+        "completeness": 3,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 5,
+          "completeness": 4,
+          "italian": 2
+        }
+      ]
+    },
+    {
+      "item": "item-037",
+      "text_id": "bank-0040",
+      "config": "R2",
+      "judge": {
+        "correctness": 2,
+        "completeness": 3,
+        "italian": 3
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 4
+        }
+      ]
+    },
+    {
+      "item": "item-038",
+      "text_id": "bank-0002",
+      "config": "R2",
+      "judge": {
+        "correctness": 3,
+        "completeness": 4,
+        "italian": 5
+      },
+      "raters": [
+        {
+          "correctness": 3,
+          "completeness": 5,
+          "italian": 5
+        }
+      ]
+    },
+    {
+      "item": "item-039",
+      "text_id": "hr-0010",
+      "config": "R1",
+      "judge": {
+        "correctness": 2,
+        "completeness": 3,
+        "italian": 3
+      },
+      "raters": [
+        {
+          "correctness": 5,
+          "completeness": 4,
+          "italian": 3
+        }
+      ]
+    },
+    {
+      "item": "item-040",
+      "text_id": "hr-0002",
+      "config": "R1",
+      "judge": {
+        "correctness": 4,
+        "completeness": 3,
+        "italian": 2
+      },
+      "raters": [
+        {
+          "correctness": 5,
+          "completeness": 4,
+          "italian": 2
+        }
+      ]
+    }
+  ]
+}

@@ -21,37 +21,37 @@
       "config": "REF-oracle-direct",
       "cloud": 40,
       "attacker": 60,
-      "judge": 20
+      "judge": 0
     },
     {
       "config": "REF-oracle",
       "cloud": 40,
       "attacker": 60,
-      "judge": 20
+      "judge": 0
     },
     {
       "config": "D1+R1",
       "cloud": 40,
       "attacker": 60,
-      "judge": 20
+      "judge": 0
     },
     {
       "config": "D2+R1",
       "cloud": 40,
       "attacker": 60,
-      "judge": 20
+      "judge": 0
     },
     {
       "config": "D4+R1",
       "cloud": 40,
       "attacker": 60,
-      "judge": 20
+      "judge": 0
     },
     {
       "config": "D4+R2",
       "cloud": 40,
       "attacker": 60,
-      "judge": 20
+      "judge": 0
     }
   ],
   "per_text": [],
