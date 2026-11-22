@@ -1,0 +1,99 @@
+{
+  "text_id": "atk-d3-01-clean",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "d3": {
+    "calls": 1,
+    "retries": 0,
+    "failures": 0,
+    "hallucinated": 0,
+    "spans": [
+      {
+        "type": "RUOLO",
+        "text": "addetta al controllo qualità"
+      },
+      {
+        "type": "STRUTTURA",
+        "text": "stabilimento Tessitura Brenvalli"
+      },
+      {
+        "type": "CITTA",
+        "text": "Schio"
+      },
+      {
+        "type": "UTENTE",
+        "text": "matricola TB-30915"
+      },
+      {
+        "type": "DATA",
+        "text": "23 novembre 2026"
+      },
+      {
+        "type": "SALUTE",
+        "text": "tendinite alla spalla destra"
+      },
+      {
+        "type": "DATA",
+        "text": "4 dicembre 2026"
+      }
+    ]
+  },
+  "gold_spans": 11,
+  "uncovered_gold": [],
+  "masked_text": "Oggetto: comunicazione di assenza per malattia\n\nGentile Ufficio del Personale,\n\nsono [PERSONA_1_F], [RUOLO_1] presso lo [STRUTTURA_1] di [CITTA_1], [UTENTE_1]. Vi comunico che dal [DATA_1] sarò assente per malattia: mi è stata diagnosticata una [SALUTE_1] e il medico mi ha prescritto riposo fino al [DATA_2].\n\nVi chiedo di registrare l'assenza. Per comunicazioni potete chiamarmi al [TELEFONO_1] o scrivermi a [EMAIL_1].\n\nCordiali saluti,\n[PERSONA_1_F]\n",
+  "raw_reply": "Oggetto: Re: comunicazione di assenza per malattia  \n\nGentile [PERSONA_1_F],\n\nla ringrazio per averci comunicato la sua assenza per motivi di salute.  \nProcederemo a registrare l'assenza dal [DATA_1] al [DATA_2] nel nostro sistema e a tenere conto della sua situazione.\n\nNel frattempo, se avesse bisogno di ulteriori informazioni o di supporto amministrativo, non esiti a contattarci al nostro numero interno o via email.  \n\nLe auguriamo una pronta guarigione e restiamo a disposizione per qualsiasi necessità.\n\nCordiali saluti,  \n\n[UTENTE_1]  \n[RUOLO_1] – Ufficio del Personale  \n[STRUTTURA_1] – [CITTA_1]  \nTelefono: [TELEFONO_1]  \nEmail: [EMAIL_1]",
+  "restore_events": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "outcome": "dropped",
+      "found_as": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "outcome": "restored",
+      "found_as": null
+    }
+  ],
+  "fully_restored": true,
+  "originals_in_raw_reply": []
+}

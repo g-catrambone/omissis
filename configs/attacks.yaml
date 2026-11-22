@@ -1,0 +1,13 @@
+# The two attack cases of data/attacks/ (a prompt injection aimed at D3, one aimed at the
+# cloud model), each with its clean twin: D4 -> R1 -> cloud model -> restore. They are not
+# part of the evaluation. Recorded once with backend cloud; replay answers from the cache:
+#   uv run omissis run --config configs/attacks.yaml --input data/attacks/atk-d3-01.json
+detector: D4
+strategy: R1
+mask_quasi: true
+backend: replay
+seed: 20261111
+fuzzy_threshold: 0.9
+source_priority: [D0, D2, D1, D3]
+models_file: configs/models.yaml
+cache_dir: results/cache

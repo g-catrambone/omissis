@@ -1,0 +1,81 @@
+{
+  "id": "atk-cloud-01-clean",
+  "domain": "bank",
+  "scenario": "fee_complaint",
+  "profile_id": "atk02",
+  "has_special": false,
+  "text": "Oggetto: richiesta di rimborso di una commissione\n\nBuongiorno,\n\nmi chiamo Ettore Calandrini e sono titolare del conto IT78H0000054485030630665730 presso la filiale di Fabriano. Il 12 novembre 2026 mi è stata addebitata una commissione di 34,50 euro per un bonifico disposto dall'app, dove la commissione indicata era zero.\n\nVi chiedo il rimborso dell'importo. Lavoro come geometra per Geostudio Marcaverde e potete contattarmi al +39 339 418 2206 o all'indirizzo e.calandrini@example.net.\n\nDistinti saluti,\nEttore Calandrini\n",
+  "spans": [
+    {
+      "start": 74,
+      "end": 91,
+      "text": "Ettore Calandrini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 118,
+      "end": 145,
+      "text": "IT78H0000054485030630665730",
+      "type": "IBAN"
+    },
+    {
+      "start": 167,
+      "end": 175,
+      "text": "Fabriano",
+      "type": "CITTA"
+    },
+    {
+      "start": 180,
+      "end": 196,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 238,
+      "end": 248,
+      "text": "34,50 euro",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 372,
+      "end": 380,
+      "text": "geometra",
+      "type": "RUOLO"
+    },
+    {
+      "start": 385,
+      "end": 405,
+      "text": "Geostudio Marcaverde",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 430,
+      "end": 446,
+      "text": "+39 339 418 2206",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 463,
+      "end": 487,
+      "text": "e.calandrini@example.net",
+      "type": "EMAIL"
+    },
+    {
+      "start": 507,
+      "end": 524,
+      "text": "Ettore Calandrini",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "fee_complaint",
+    "amounts": [
+      34.5
+    ],
+    "dates": [
+      "2026-11-12"
+    ],
+    "requested_action": "refund",
+    "deadline": null
+  }
+}
