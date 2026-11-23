@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- three streams (coral, teal, mustard) merging into one thick arrow -->
+  <g stroke-width="9">
+    <path d="M12 26 C 40 26, 44 62, 70 64" stroke="#1F2A44"/>
+    <path d="M12 26 C 40 26, 44 62, 70 64" stroke="#E4572E" stroke-width="5"/>
+    <path d="M12 64 L 70 64" stroke="#1F2A44"/>
+    <path d="M12 64 L 70 64" stroke="#2A9D8F" stroke-width="5"/>
+    <path d="M12 102 C 40 102, 44 66, 70 64" stroke="#1F2A44"/>
+    <path d="M12 102 C 40 102, 44 66, 70 64" stroke="#E9B44C" stroke-width="5"/>
+  </g>
+  <path d="M66 50 h26 v-14 l28 28 l-28 28 v-14 h-26 z" fill="#E9B44C" stroke="#1F2A44" stroke-width="5"/>
+</svg>
