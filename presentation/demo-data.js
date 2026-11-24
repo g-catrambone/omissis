@@ -70,6 +70,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "€ 320,00",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D0",
@@ -77,6 +78,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_1]",
+       "value": "IT89Y0000025613651127989360",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -84,6 +86,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_2]",
+       "value": "IT77V0000094829785481207069",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -91,6 +94,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CF_1]",
+       "value": "CPRLDI84S52X537Z",
        "type": "CF",
        "cls": "direct",
        "source": "D0",
@@ -98,6 +102,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "347 215 8890",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -105,6 +110,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "lidia.caprioli@example.com",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -203,6 +209,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "€ 772,00",
+       "value": "€ 320,00",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D0",
@@ -210,6 +217,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT81O0000010618943216096700",
+       "value": "IT89Y0000025613651127989360",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -217,6 +225,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT30G0000096742150185432543",
+       "value": "IT77V0000094829785481207069",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -224,6 +233,7 @@ window.DEMO = {
       },
       {
        "surrogate": "ZMRFNL15S45X523C",
+       "value": "CPRLDI84S52X537Z",
        "type": "CF",
        "cls": "direct",
        "source": "D0",
@@ -231,6 +241,7 @@ window.DEMO = {
       },
       {
        "surrogate": "353 104 8748",
+       "value": "347 215 8890",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -238,6 +249,7 @@ window.DEMO = {
       },
       {
        "surrogate": "ersilia.camporesi@example.com",
+       "value": "lidia.caprioli@example.com",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -352,6 +364,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "Gentile Banca Corvalli",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D1",
@@ -359,6 +372,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_1_F]",
+       "value": "Lidia Caprioli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -366,6 +380,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Bergamo",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -373,6 +388,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_1]",
+       "value": "IT89Y0000025613651127989360",
        "type": "IBAN",
        "cls": "direct",
        "source": "D1",
@@ -380,6 +396,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_2]",
+       "value": "IT77V0000094829785481207069",
        "type": "IBAN",
        "cls": "direct",
        "source": "D1",
@@ -387,6 +404,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "347 215 8890",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -394,6 +412,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "lidia.caprioli@example.com",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D1",
@@ -513,6 +532,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Banca Monteforte",
+       "value": "Gentile Banca Corvalli",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D1",
@@ -520,6 +540,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Mafalda Marangoni",
+       "value": "Lidia Caprioli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -527,6 +548,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Vercelli",
+       "value": "Bergamo",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -534,6 +556,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT81O0000010618943216096700",
+       "value": "IT89Y0000025613651127989360",
        "type": "IBAN",
        "cls": "direct",
        "source": "D1",
@@ -541,6 +564,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT30G0000096742150185432543",
+       "value": "IT77V0000094829785481207069",
        "type": "IBAN",
        "cls": "direct",
        "source": "D1",
@@ -548,6 +572,7 @@ window.DEMO = {
       },
       {
        "surrogate": "353 104 8748",
+       "value": "347 215 8890",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -555,6 +580,7 @@ window.DEMO = {
       },
       {
        "surrogate": "ersilia.camporesi@example.com",
+       "value": "lidia.caprioli@example.com",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D1",
@@ -650,6 +676,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[PERSONA_1_F]",
+       "value": "Lidia Caprioli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -657,6 +684,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Bergamo",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -664,6 +692,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DOCUMENTO_1]",
+       "value": "CPRLDI84S52X",
        "type": "DOCUMENTO",
        "cls": "direct",
        "source": "D2",
@@ -671,6 +700,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "lidia.caprioli",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D2",
@@ -751,6 +781,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Mafalda Marangoni",
+       "value": "Lidia Caprioli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -758,6 +789,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Vercelli",
+       "value": "Bergamo",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -765,6 +797,7 @@ window.DEMO = {
       },
       {
        "surrogate": "PUYIML12M79L",
+       "value": "CPRLDI84S52X",
        "type": "DOCUMENTO",
        "cls": "direct",
        "source": "D2",
@@ -772,6 +805,7 @@ window.DEMO = {
       },
       {
        "surrogate": "lapo.nardelli@example.com",
+       "value": "lidia.caprioli",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D2",
@@ -868,6 +902,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "Banca Corvalli",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -875,6 +910,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Bergamo",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -882,6 +918,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "1 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -889,6 +926,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "impiegata amministrativa",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -896,6 +934,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_2]",
+       "value": "Ortelli Logistica",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -903,6 +942,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "€ 320,00",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -910,6 +950,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "20 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -1021,6 +1062,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Credito Cooperativo Valdarda",
+       "value": "Banca Corvalli",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -1028,6 +1070,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Vercelli",
+       "value": "Bergamo",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -1035,6 +1078,7 @@ window.DEMO = {
       },
       {
        "surrogate": "10 dicembre 2026",
+       "value": "1 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -1042,6 +1086,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "impiegata amministrativa",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -1049,6 +1094,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Molino Capecchi S.r.l.",
+       "value": "Ortelli Logistica",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -1056,6 +1102,7 @@ window.DEMO = {
       },
       {
        "surrogate": "€ 772,00",
+       "value": "€ 320,00",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -1063,6 +1110,7 @@ window.DEMO = {
       },
       {
        "surrogate": "5 novembre 2026",
+       "value": "20 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -1230,6 +1278,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "Banca Corvalli",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -1237,6 +1286,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_1_F]",
+       "value": "Lidia Caprioli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -1244,6 +1294,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Bergamo",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -1251,6 +1302,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "1 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -1258,6 +1310,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "impiegata amministrativa",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -1265,6 +1318,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_2]",
+       "value": "Ortelli Logistica",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -1272,6 +1326,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "€ 320,00",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -1279,6 +1334,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_1]",
+       "value": "IT89Y0000025613651127989360",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -1286,6 +1342,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_2]",
+       "value": "IT77V0000094829785481207069",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -1293,6 +1350,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CF_1]",
+       "value": "CPRLDI84S52X537Z",
        "type": "CF",
        "cls": "direct",
        "source": "D0",
@@ -1300,6 +1358,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "20 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -1307,6 +1366,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "347 215 8890",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -1314,6 +1374,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "lidia.caprioli@example.com",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -1511,6 +1572,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Credito Cooperativo Valdarda",
+       "value": "Banca Corvalli",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -1518,6 +1580,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Mafalda Marangoni",
+       "value": "Lidia Caprioli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -1525,6 +1588,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Vercelli",
+       "value": "Bergamo",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -1532,6 +1596,7 @@ window.DEMO = {
       },
       {
        "surrogate": "10 dicembre 2026",
+       "value": "1 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -1539,6 +1604,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "impiegata amministrativa",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -1546,6 +1612,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Molino Capecchi S.r.l.",
+       "value": "Ortelli Logistica",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -1553,6 +1620,7 @@ window.DEMO = {
       },
       {
        "surrogate": "€ 772,00",
+       "value": "€ 320,00",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -1560,6 +1628,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT81O0000010618943216096700",
+       "value": "IT89Y0000025613651127989360",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -1567,6 +1636,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT30G0000096742150185432543",
+       "value": "IT77V0000094829785481207069",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -1574,6 +1644,7 @@ window.DEMO = {
       },
       {
        "surrogate": "ZMRFNL15S45X523C",
+       "value": "CPRLDI84S52X537Z",
        "type": "CF",
        "cls": "direct",
        "source": "D0",
@@ -1581,6 +1652,7 @@ window.DEMO = {
       },
       {
        "surrogate": "5 novembre 2026",
+       "value": "20 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -1588,6 +1660,7 @@ window.DEMO = {
       },
       {
        "surrogate": "353 104 8748",
+       "value": "347 215 8890",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -1595,6 +1668,7 @@ window.DEMO = {
       },
       {
        "surrogate": "ersilia.camporesi@example.com",
+       "value": "lidia.caprioli@example.com",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -1743,6 +1817,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[IBAN_1]",
+       "value": "IT87L0000085047953541165689",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -1750,6 +1825,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "89,90 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D0",
@@ -1757,6 +1833,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_2]",
+       "value": "245,00 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D0",
@@ -1764,6 +1841,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "b.ferraguti@example.net",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -1771,6 +1849,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "+39 328 664 1027",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -1856,6 +1935,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "IT13O0000021305665919329463",
+       "value": "IT87L0000085047953541165689",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -1863,6 +1943,7 @@ window.DEMO = {
       },
       {
        "surrogate": "82,90 euro",
+       "value": "89,90 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D0",
@@ -1870,6 +1951,7 @@ window.DEMO = {
       },
       {
        "surrogate": "225,00 euro",
+       "value": "245,00 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D0",
@@ -1877,6 +1959,7 @@ window.DEMO = {
       },
       {
        "surrogate": "manfredi.dalmasso@example.com",
+       "value": "b.ferraguti@example.net",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -1884,6 +1967,7 @@ window.DEMO = {
       },
       {
        "surrogate": "+39 320 262 6271",
+       "value": "+39 328 664 1027",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -2001,6 +2085,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[CITTA_1]",
+       "value": "Buongiorno",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -2008,6 +2093,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_1_M]",
+       "value": "Bruno Ferraguti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -2015,6 +2101,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_1]",
+       "value": "IT87L0000085047953541165689",
        "type": "IBAN",
        "cls": "direct",
        "source": "D1",
@@ -2022,6 +2109,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Cagliari",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -2029,6 +2117,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_2]",
+       "value": "Sardelec Impianti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -2036,6 +2125,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "b.ferraguti@example.net",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D1",
@@ -2043,6 +2133,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "+39 328 664 1027",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -2050,6 +2141,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_3]",
+       "value": "Oristano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -2182,6 +2274,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Rovigo",
+       "value": "Buongiorno",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -2189,6 +2282,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Leandro Zambelli",
+       "value": "Bruno Ferraguti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -2196,6 +2290,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT13O0000021305665919329463",
+       "value": "IT87L0000085047953541165689",
        "type": "IBAN",
        "cls": "direct",
        "source": "D1",
@@ -2203,6 +2298,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Savona",
+       "value": "Cagliari",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -2210,6 +2306,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Saverio Montagnani",
+       "value": "Sardelec Impianti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -2217,6 +2314,7 @@ window.DEMO = {
       },
       {
        "surrogate": "manfredi.dalmasso@example.com",
+       "value": "b.ferraguti@example.net",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D1",
@@ -2224,6 +2322,7 @@ window.DEMO = {
       },
       {
        "surrogate": "+39 320 262 6271",
+       "value": "+39 328 664 1027",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -2231,6 +2330,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Biella",
+       "value": "Oristano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -2347,6 +2447,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[PERSONA_1_M]",
+       "value": "Bruno Ferraguti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -2354,6 +2455,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Cagliari",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -2361,6 +2463,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[INDIRIZZO_1]",
+       "value": "Sardelec",
        "type": "INDIRIZZO",
        "cls": "direct",
        "source": "D2",
@@ -2368,6 +2471,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "b.ferragut",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D2",
@@ -2375,6 +2479,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "+39 328 664 1027",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D2",
@@ -2382,6 +2487,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Oristano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -2488,6 +2594,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Leandro Zambelli",
+       "value": "Bruno Ferraguti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -2495,6 +2602,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rovigo",
+       "value": "Cagliari",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -2502,6 +2610,7 @@ window.DEMO = {
       },
       {
        "surrogate": "via delle Querce 14",
+       "value": "Sardelec",
        "type": "INDIRIZZO",
        "cls": "direct",
        "source": "D2",
@@ -2509,6 +2618,7 @@ window.DEMO = {
       },
       {
        "surrogate": "rachele.fiorucci@example.com",
+       "value": "b.ferragut",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D2",
@@ -2516,6 +2626,7 @@ window.DEMO = {
       },
       {
        "surrogate": "+39 320 262 6271",
+       "value": "+39 328 664 1027",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D2",
@@ -2523,6 +2634,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Biella",
+       "value": "Oristano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -2645,6 +2757,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "89,90 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -2652,6 +2765,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "3 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -2659,6 +2773,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_2]",
+       "value": "245,00 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -2666,6 +2781,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "5 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -2673,6 +2789,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Cagliari",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -2680,6 +2797,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "tecnico manutentore",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -2687,6 +2805,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "Sardelec Impianti",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -2694,6 +2813,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[ETA_1]",
+       "value": "52 anni",
        "type": "ETA",
        "cls": "quasi",
        "source": "D3",
@@ -2701,6 +2821,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "filiale di Oristano",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -2843,6 +2964,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "82,90 euro",
+       "value": "89,90 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -2850,6 +2972,7 @@ window.DEMO = {
       },
       {
        "surrogate": "21 novembre 2026",
+       "value": "3 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -2857,6 +2980,7 @@ window.DEMO = {
       },
       {
        "surrogate": "225,00 euro",
+       "value": "245,00 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -2864,6 +2988,7 @@ window.DEMO = {
       },
       {
        "surrogate": "9 novembre 2026",
+       "value": "5 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -2871,6 +2996,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rovigo",
+       "value": "Cagliari",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -2878,6 +3004,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "tecnico manutentore",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -2885,6 +3012,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+       "value": "Sardelec Impianti",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -2892,6 +3020,7 @@ window.DEMO = {
       },
       {
        "surrogate": "57 anni",
+       "value": "52 anni",
        "type": "ETA",
        "cls": "quasi",
        "source": "D3",
@@ -2899,6 +3028,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "filiale di Oristano",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -3076,6 +3206,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[PERSONA_1_M]",
+       "value": "Bruno Ferraguti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -3083,6 +3214,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_1]",
+       "value": "IT87L0000085047953541165689",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -3090,6 +3222,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "89,90 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -3097,6 +3230,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "3 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -3104,6 +3238,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_2]",
+       "value": "245,00 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -3111,6 +3246,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "5 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -3118,6 +3254,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Cagliari",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -3125,6 +3262,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "tecnico manutentore",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -3132,6 +3270,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_2]",
+       "value": "Sardelec Impianti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -3139,6 +3278,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "b.ferraguti@example.net",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -3146,6 +3286,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "+39 328 664 1027",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D2",
@@ -3153,6 +3294,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[ETA_1]",
+       "value": "52 anni",
        "type": "ETA",
        "cls": "quasi",
        "source": "D3",
@@ -3160,6 +3302,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "filiale di Oristano",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -3357,6 +3500,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Leandro Zambelli",
+       "value": "Bruno Ferraguti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -3364,6 +3508,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT13O0000021305665919329463",
+       "value": "IT87L0000085047953541165689",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -3371,6 +3516,7 @@ window.DEMO = {
       },
       {
        "surrogate": "82,90 euro",
+       "value": "89,90 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -3378,6 +3524,7 @@ window.DEMO = {
       },
       {
        "surrogate": "21 novembre 2026",
+       "value": "3 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -3385,6 +3532,7 @@ window.DEMO = {
       },
       {
        "surrogate": "225,00 euro",
+       "value": "245,00 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -3392,6 +3540,7 @@ window.DEMO = {
       },
       {
        "surrogate": "9 novembre 2026",
+       "value": "5 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -3399,6 +3548,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rovigo",
+       "value": "Cagliari",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -3406,6 +3556,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "tecnico manutentore",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -3413,6 +3564,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Saverio Montagnani",
+       "value": "Sardelec Impianti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -3420,6 +3572,7 @@ window.DEMO = {
       },
       {
        "surrogate": "manfredi.dalmasso@example.com",
+       "value": "b.ferraguti@example.net",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -3427,6 +3580,7 @@ window.DEMO = {
       },
       {
        "surrogate": "+39 320 262 6271",
+       "value": "+39 328 664 1027",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D2",
@@ -3434,6 +3588,7 @@ window.DEMO = {
       },
       {
        "surrogate": "57 anni",
+       "value": "52 anni",
        "type": "ETA",
        "cls": "quasi",
        "source": "D3",
@@ -3441,6 +3596,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "filiale di Oristano",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -3583,6 +3739,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[CF_1]",
+       "value": "ZNCMRT61B54X212O",
        "type": "CF",
        "cls": "direct",
        "source": "D0",
@@ -3590,6 +3747,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "12.400 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D0",
@@ -3597,6 +3755,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_1]",
+       "value": "IT56M0000020580414008222453",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -3604,6 +3763,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "0422 518 207",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -3676,6 +3836,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "PDTSZP62M13X644O",
+       "value": "ZNCMRT61B54X212O",
        "type": "CF",
        "cls": "direct",
        "source": "D0",
@@ -3683,6 +3844,7 @@ window.DEMO = {
       },
       {
        "surrogate": "98.937 euro",
+       "value": "12.400 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D0",
@@ -3690,6 +3852,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT12I0000070505262103716231",
+       "value": "IT56M0000020580414008222453",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -3697,6 +3860,7 @@ window.DEMO = {
       },
       {
        "surrogate": "0805 976 702",
+       "value": "0422 518 207",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -3817,6 +3981,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[CITTA_1]",
+       "value": "Spettabile",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -3824,6 +3989,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_1]",
+       "value": "Credito Valdorsa",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -3831,6 +3997,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_2_F]",
+       "value": "Marta Zanchetti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -3838,6 +4005,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "14/02/1961",
        "type": "DATA",
        "cls": "quasi",
        "source": "D1",
@@ -3845,6 +4013,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_3]",
+       "value": "ZNCMRT61B54X212O",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -3852,6 +4021,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Treviso",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -3859,6 +4029,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_3]",
+       "value": "Padova",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -3866,6 +4037,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_4]",
+       "value": "IBAN IT56M0000020580414008222453",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -3873,6 +4045,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "0422 518 207",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -4023,6 +4196,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Arezzo",
+       "value": "Spettabile",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -4030,6 +4204,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Flavia Marangoni",
+       "value": "Credito Valdorsa",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -4037,6 +4212,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Berenice Guidotti",
+       "value": "Marta Zanchetti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -4044,6 +4220,7 @@ window.DEMO = {
       },
       {
        "surrogate": "08/02/1961",
+       "value": "14/02/1961",
        "type": "DATA",
        "cls": "quasi",
        "source": "D1",
@@ -4051,6 +4228,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Albertazzi",
+       "value": "ZNCMRT61B54X212O",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -4058,6 +4236,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rieti",
+       "value": "Treviso",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -4065,6 +4244,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Biella",
+       "value": "Padova",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -4072,6 +4252,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Crotone",
+       "value": "IBAN IT56M0000020580414008222453",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -4079,6 +4260,7 @@ window.DEMO = {
       },
       {
        "surrogate": "0805 976 702",
+       "value": "0422 518 207",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -4192,6 +4374,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[PERSONA_1]",
+       "value": "Zanchetti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -4199,6 +4382,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_NASCITA_1]",
+       "value": "14/02/1961",
        "type": "DATA_NASCITA",
        "cls": "direct",
        "source": "D2",
@@ -4206,6 +4390,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CONTO_1]",
+       "value": "000041227385",
        "type": "CONTO",
        "cls": "direct",
        "source": "D2",
@@ -4213,6 +4398,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Treviso",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -4220,6 +4406,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Padova",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -4313,6 +4500,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Vannucci",
+       "value": "Zanchetti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -4320,6 +4508,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_NASCITA_1]",
+       "value": "14/02/1961",
        "type": "DATA_NASCITA",
        "cls": "direct",
        "source": "D2",
@@ -4327,6 +4516,7 @@ window.DEMO = {
       },
       {
        "surrogate": "376692133275",
+       "value": "000041227385",
        "type": "CONTO",
        "cls": "direct",
        "source": "D2",
@@ -4334,6 +4524,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rieti",
+       "value": "Treviso",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -4341,6 +4532,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Biella",
+       "value": "Padova",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -4466,6 +4658,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "Credito Valdorsa",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -4473,6 +4666,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[UTENTE_1]",
+       "value": "conto corrente n. 000041227385",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D3",
@@ -4480,6 +4674,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "filiale",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -4487,6 +4682,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Treviso",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -4494,6 +4690,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "1 gennaio 2027",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -4501,6 +4698,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "insegnante di scuola primaria",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -4508,6 +4706,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Padova",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -4515,6 +4714,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "12.400 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -4522,6 +4722,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "31 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -4677,6 +4878,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Cassa Rurale Valfiorita",
+       "value": "Credito Valdorsa",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -4684,6 +4886,7 @@ window.DEMO = {
       },
       {
        "surrogate": "kmslu miijhyed l. 015529480227",
+       "value": "conto corrente n. 000041227385",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D3",
@@ -4691,6 +4894,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "filiale",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -4698,6 +4902,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rieti",
+       "value": "Treviso",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -4705,6 +4910,7 @@ window.DEMO = {
       },
       {
        "surrogate": "3 gennaio 2027",
+       "value": "1 gennaio 2027",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -4712,6 +4918,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "insegnante di scuola primaria",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -4719,6 +4926,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Biella",
+       "value": "Padova",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -4726,6 +4934,7 @@ window.DEMO = {
       },
       {
        "surrogate": "98.937 euro",
+       "value": "12.400 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -4733,6 +4942,7 @@ window.DEMO = {
       },
       {
        "surrogate": "14 dicembre 2026",
+       "value": "31 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -4926,6 +5136,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[PERSONA_1]",
+       "value": "Credito Valdorsa",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -4933,6 +5144,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_2_F]",
+       "value": "Marta Zanchetti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -4940,6 +5152,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_NASCITA_1]",
+       "value": "14/02/1961",
        "type": "DATA_NASCITA",
        "cls": "direct",
        "source": "D2",
@@ -4947,6 +5160,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CF_1]",
+       "value": "ZNCMRT61B54X212O",
        "type": "CF",
        "cls": "direct",
        "source": "D0",
@@ -4954,6 +5168,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[UTENTE_1]",
+       "value": "conto corrente n. 000041227385",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D3",
@@ -4961,6 +5176,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "filiale",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -4968,6 +5184,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Treviso",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -4975,6 +5192,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "1 gennaio 2027",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -4982,6 +5200,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "insegnante di scuola primaria",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -4989,6 +5208,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Padova",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -4996,6 +5216,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IMPORTO_1]",
+       "value": "12.400 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -5003,6 +5224,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[IBAN_1]",
+       "value": "IT56M0000020580414008222453",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -5010,6 +5232,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "31 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -5017,6 +5240,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "0422 518 207",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -5240,6 +5464,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Flavia Marangoni",
+       "value": "Credito Valdorsa",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -5247,6 +5472,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Berenice Guidotti",
+       "value": "Marta Zanchetti",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -5254,6 +5480,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_NASCITA_1]",
+       "value": "14/02/1961",
        "type": "DATA_NASCITA",
        "cls": "direct",
        "source": "D2",
@@ -5261,6 +5488,7 @@ window.DEMO = {
       },
       {
        "surrogate": "PDTSZP62M13X644O",
+       "value": "ZNCMRT61B54X212O",
        "type": "CF",
        "cls": "direct",
        "source": "D0",
@@ -5268,6 +5496,7 @@ window.DEMO = {
       },
       {
        "surrogate": "kmslu miijhyed l. 015529480227",
+       "value": "conto corrente n. 000041227385",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D3",
@@ -5275,6 +5504,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "filiale",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -5282,6 +5512,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rieti",
+       "value": "Treviso",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -5289,6 +5520,7 @@ window.DEMO = {
       },
       {
        "surrogate": "3 gennaio 2027",
+       "value": "1 gennaio 2027",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -5296,6 +5528,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "insegnante di scuola primaria",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -5303,6 +5536,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Biella",
+       "value": "Padova",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -5310,6 +5544,7 @@ window.DEMO = {
       },
       {
        "surrogate": "98.937 euro",
+       "value": "12.400 euro",
        "type": "IMPORTO",
        "cls": "quasi",
        "source": "D3",
@@ -5317,6 +5552,7 @@ window.DEMO = {
       },
       {
        "surrogate": "IT12I0000070505262103716231",
+       "value": "IT56M0000020580414008222453",
        "type": "IBAN",
        "cls": "direct",
        "source": "D0",
@@ -5324,6 +5560,7 @@ window.DEMO = {
       },
       {
        "surrogate": "14 dicembre 2026",
+       "value": "31 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -5331,6 +5568,7 @@ window.DEMO = {
       },
       {
        "surrogate": "0805 976 702",
+       "value": "0422 518 207",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -5465,6 +5703,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "081 512 3348",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -5472,6 +5711,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "davide.sorrentino@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -5518,6 +5758,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "024 489 9877",
+       "value": "081 512 3348",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -5525,6 +5766,7 @@ window.DEMO = {
       },
       {
        "surrogate": "selene.brunelleschi@example.com",
+       "value": "davide.sorrentino@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -5619,6 +5861,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[PERSONA_1_M]",
+       "value": "Davide Sorrentino",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -5626,6 +5869,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Nola",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -5633,6 +5877,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "NL-20417",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D1",
@@ -5640,6 +5885,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_2]",
+       "value": "INPS",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D1",
@@ -5647,6 +5893,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Pomigliano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -5654,6 +5901,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "081 512 3348",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -5661,6 +5909,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "davide.sorrentino@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D1",
@@ -5780,6 +6029,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Corrado Ubaldini",
+       "value": "Davide Sorrentino",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -5787,6 +6037,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Teramo",
+       "value": "Nola",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -5794,6 +6045,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Vetreria Castagnoli S.r.l.",
+       "value": "NL-20417",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D1",
@@ -5801,6 +6053,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Fabbrica Tessile Morandotti S.p.A.",
+       "value": "INPS",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D1",
@@ -5808,6 +6061,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Isernia",
+       "value": "Pomigliano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -5815,6 +6069,7 @@ window.DEMO = {
       },
       {
        "surrogate": "024 489 9877",
+       "value": "081 512 3348",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -5822,6 +6077,7 @@ window.DEMO = {
       },
       {
        "surrogate": "selene.brunelleschi@example.com",
+       "value": "davide.sorrentino@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D1",
@@ -5925,6 +6181,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[PERSONA_1_M]",
+       "value": "Davide Sorrentino",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -5932,6 +6189,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Nola",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -5939,6 +6197,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Pomigliano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -5946,6 +6205,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "davide",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D2",
@@ -5953,6 +6213,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[UTENTE_1]",
+       "value": "sor",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D2",
@@ -6046,6 +6307,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Corrado Ubaldini",
+       "value": "Davide Sorrentino",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -6053,6 +6315,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Teramo",
+       "value": "Nola",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -6060,6 +6323,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Isernia",
+       "value": "Pomigliano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -6067,6 +6331,7 @@ window.DEMO = {
       },
       {
        "surrogate": "oreste.orsolini@example.com",
+       "value": "davide",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D2",
@@ -6074,6 +6339,7 @@ window.DEMO = {
       },
       {
        "surrogate": "axy",
+       "value": "sor",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D2",
@@ -6223,6 +6489,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[SALUTE_1]",
+       "value": "malattia",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6230,6 +6497,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "magazziniere",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -6237,6 +6505,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Nola",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -6244,6 +6513,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[UTENTE_1]",
+       "value": "matricola NL-20417",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D3",
@@ -6251,6 +6521,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "16 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -6258,6 +6529,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[SALUTE_2]",
+       "value": "ernia del disco lombare",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6265,6 +6537,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "5 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -6272,6 +6545,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "INPS",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -6279,6 +6553,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[SALUTE_3]",
+       "value": "fisioterapia",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6286,6 +6561,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Pomigliano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -6293,6 +6569,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_2]",
+       "value": "capoturno",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -6300,6 +6577,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "reparto spedizioni",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -6484,6 +6762,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[SALUTE_1]",
+       "value": "malattia",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6491,6 +6770,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "magazziniere",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -6498,6 +6778,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Teramo",
+       "value": "Nola",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -6505,6 +6786,7 @@ window.DEMO = {
       },
       {
        "surrogate": "vnzhtrpvu AP-64069",
+       "value": "matricola NL-20417",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D3",
@@ -6512,6 +6794,7 @@ window.DEMO = {
       },
       {
        "surrogate": "28 novembre 2026",
+       "value": "16 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -6519,6 +6802,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[SALUTE_2]",
+       "value": "ernia del disco lombare",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6526,6 +6810,7 @@ window.DEMO = {
       },
       {
        "surrogate": "6 dicembre 2026",
+       "value": "5 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -6533,6 +6818,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Fabbrica Tessile Morandotti S.p.A.",
+       "value": "INPS",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -6540,6 +6826,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[SALUTE_3]",
+       "value": "fisioterapia",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6547,6 +6834,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Isernia",
+       "value": "Pomigliano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -6554,6 +6842,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_2]",
+       "value": "capoturno",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -6561,6 +6850,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "reparto spedizioni",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -6782,6 +7072,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[SALUTE_1]",
+       "value": "malattia",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6789,6 +7080,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_1_M]",
+       "value": "Davide Sorrentino",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -6796,6 +7088,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "magazziniere",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -6803,6 +7096,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Nola",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -6810,6 +7104,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[UTENTE_1]",
+       "value": "matricola NL-20417",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D3",
@@ -6817,6 +7112,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "16 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -6824,6 +7120,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[SALUTE_2]",
+       "value": "ernia del disco lombare",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6831,6 +7128,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "5 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -6838,6 +7136,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "INPS",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -6845,6 +7144,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[SALUTE_3]",
+       "value": "fisioterapia",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -6852,6 +7152,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Pomigliano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -6859,6 +7160,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_2]",
+       "value": "capoturno",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -6866,6 +7168,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "reparto spedizioni",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -6873,6 +7176,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "081 512 3348",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -6880,6 +7184,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "davide.sorrentino@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -7111,6 +7416,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[SALUTE_1]",
+       "value": "malattia",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -7118,6 +7424,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Corrado Ubaldini",
+       "value": "Davide Sorrentino",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -7125,6 +7432,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "magazziniere",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -7132,6 +7440,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Teramo",
+       "value": "Nola",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -7139,6 +7448,7 @@ window.DEMO = {
       },
       {
        "surrogate": "vnzhtrpvu AP-64069",
+       "value": "matricola NL-20417",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D3",
@@ -7146,6 +7456,7 @@ window.DEMO = {
       },
       {
        "surrogate": "28 novembre 2026",
+       "value": "16 novembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -7153,6 +7464,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[SALUTE_2]",
+       "value": "ernia del disco lombare",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -7160,6 +7472,7 @@ window.DEMO = {
       },
       {
        "surrogate": "6 dicembre 2026",
+       "value": "5 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -7167,6 +7480,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Fabbrica Tessile Morandotti S.p.A.",
+       "value": "INPS",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -7174,6 +7488,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[SALUTE_3]",
+       "value": "fisioterapia",
        "type": "SALUTE",
        "cls": "special",
        "source": "D3",
@@ -7181,6 +7496,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Isernia",
+       "value": "Pomigliano",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -7188,6 +7504,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_2]",
+       "value": "capoturno",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -7195,6 +7512,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "reparto spedizioni",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -7202,6 +7520,7 @@ window.DEMO = {
       },
       {
        "surrogate": "024 489 9877",
+       "value": "081 512 3348",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -7209,6 +7528,7 @@ window.DEMO = {
       },
       {
        "surrogate": "selene.brunelleschi@example.com",
+       "value": "davide.sorrentino@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -7344,6 +7664,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "333 908 1176",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -7351,6 +7672,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "alessio.mondini@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -7407,6 +7729,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "339 778 6313",
+       "value": "333 908 1176",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -7414,6 +7737,7 @@ window.DEMO = {
       },
       {
        "surrogate": "clelia.querzoli@example.com",
+       "value": "alessio.mondini@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -7532,6 +7856,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[CITTA_1]",
+       "value": "Bologna",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -7539,6 +7864,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_1_F]",
+       "value": "Paola Ricciardelli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -7546,6 +7872,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_2_M]",
+       "value": "Alessio Mondini",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -7553,6 +7880,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "Meridiana Servizi S.p",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D1",
@@ -7560,6 +7888,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Rimini",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -7567,6 +7896,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_3]",
+       "value": "Ospedale Maggiore",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -7574,6 +7904,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "333 908 1176",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -7581,6 +7912,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "alessio.mondini@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D1",
@@ -7729,6 +8061,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Vercelli",
+       "value": "Bologna",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -7736,6 +8069,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Olimpia Pagliarini",
+       "value": "Paola Ricciardelli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -7743,6 +8077,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Gualtiero Salvadori",
+       "value": "Alessio Mondini",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -7750,6 +8085,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Gruppo Lucarelli Servizi S.r.l.",
+       "value": "Meridiana Servizi S.p",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D1",
@@ -7757,6 +8093,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rieti",
+       "value": "Rimini",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -7764,6 +8101,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Pordenone",
+       "value": "Ospedale Maggiore",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D1",
@@ -7771,6 +8109,7 @@ window.DEMO = {
       },
       {
        "surrogate": "339 778 6313",
+       "value": "333 908 1176",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D1",
@@ -7778,6 +8117,7 @@ window.DEMO = {
       },
       {
        "surrogate": "clelia.querzoli@example.com",
+       "value": "alessio.mondini@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D1",
@@ -7878,6 +8218,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[PERSONA_1_M]",
+       "value": "Alessio Mondini",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -7885,6 +8226,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_1]",
+       "value": "Rimini",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -7892,6 +8234,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Bologna",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -7899,6 +8242,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[UTENTE_1]",
+       "value": "mondini",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D2",
@@ -7979,6 +8323,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Gualtiero Salvadori",
+       "value": "Alessio Mondini",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -7986,6 +8331,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rieti",
+       "value": "Rimini",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -7993,6 +8339,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Vercelli",
+       "value": "Bologna",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D2",
@@ -8000,6 +8347,7 @@ window.DEMO = {
       },
       {
        "surrogate": "cloilfi",
+       "value": "mondini",
        "type": "UTENTE",
        "cls": "direct",
        "source": "D2",
@@ -8104,6 +8452,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[CITTA_1]",
+       "value": "Bologna",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -8111,6 +8460,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "analista contabile",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -8118,6 +8468,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "Meridiana Servizi S.p.A.",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -8125,6 +8476,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Rimini",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -8132,6 +8484,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "1 marzo 2027",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -8139,6 +8492,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "Ospedale Maggiore di Bologna",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -8146,6 +8500,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "15 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -8285,6 +8640,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Vercelli",
+       "value": "Bologna",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -8292,6 +8648,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "analista contabile",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -8299,6 +8656,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Consorzio Agrario Terrenove",
+       "value": "Meridiana Servizi S.p.A.",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -8306,6 +8664,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rieti",
+       "value": "Rimini",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -8313,6 +8672,7 @@ window.DEMO = {
       },
       {
        "surrogate": "27 marzo 2027",
+       "value": "1 marzo 2027",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -8320,6 +8680,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "Ospedale Maggiore di Bologna",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -8327,6 +8688,7 @@ window.DEMO = {
       },
       {
        "surrogate": "27 dicembre 2026",
+       "value": "15 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -8486,6 +8848,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "[CITTA_1]",
+       "value": "Bologna",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -8493,6 +8856,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_1_F]",
+       "value": "Paola Ricciardelli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -8500,6 +8864,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[PERSONA_2_M]",
+       "value": "Alessio Mondini",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -8507,6 +8872,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "analista contabile",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -8514,6 +8880,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[AZIENDA_1]",
+       "value": "Meridiana Servizi S.p.A.",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -8521,6 +8888,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[CITTA_2]",
+       "value": "Rimini",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -8528,6 +8896,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_1]",
+       "value": "1 marzo 2027",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -8535,6 +8904,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "Ospedale Maggiore di Bologna",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -8542,6 +8912,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[DATA_2]",
+       "value": "15 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -8549,6 +8920,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[TELEFONO_1]",
+       "value": "333 908 1176",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -8556,6 +8928,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[EMAIL_1]",
+       "value": "alessio.mondini@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",
@@ -8740,6 +9113,7 @@ window.DEMO = {
      "disclosure": [
       {
        "surrogate": "Vercelli",
+       "value": "Bologna",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -8747,6 +9121,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Olimpia Pagliarini",
+       "value": "Paola Ricciardelli",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D1",
@@ -8754,6 +9129,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Gualtiero Salvadori",
+       "value": "Alessio Mondini",
        "type": "PERSONA",
        "cls": "direct",
        "source": "D2",
@@ -8761,6 +9137,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[RUOLO_1]",
+       "value": "analista contabile",
        "type": "RUOLO",
        "cls": "quasi",
        "source": "D3",
@@ -8768,6 +9145,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Consorzio Agrario Terrenove",
+       "value": "Meridiana Servizi S.p.A.",
        "type": "AZIENDA",
        "cls": "quasi",
        "source": "D3",
@@ -8775,6 +9153,7 @@ window.DEMO = {
       },
       {
        "surrogate": "Rieti",
+       "value": "Rimini",
        "type": "CITTA",
        "cls": "quasi",
        "source": "D3",
@@ -8782,6 +9161,7 @@ window.DEMO = {
       },
       {
        "surrogate": "27 marzo 2027",
+       "value": "1 marzo 2027",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -8789,6 +9169,7 @@ window.DEMO = {
       },
       {
        "surrogate": "[STRUTTURA_1]",
+       "value": "Ospedale Maggiore di Bologna",
        "type": "STRUTTURA",
        "cls": "quasi",
        "source": "D3",
@@ -8796,6 +9177,7 @@ window.DEMO = {
       },
       {
        "surrogate": "27 dicembre 2026",
+       "value": "15 dicembre 2026",
        "type": "DATA",
        "cls": "quasi",
        "source": "D3",
@@ -8803,6 +9185,7 @@ window.DEMO = {
       },
       {
        "surrogate": "339 778 6313",
+       "value": "333 908 1176",
        "type": "TELEFONO",
        "cls": "direct",
        "source": "D0",
@@ -8810,6 +9193,7 @@ window.DEMO = {
       },
       {
        "surrogate": "clelia.querzoli@example.com",
+       "value": "alessio.mondini@example.org",
        "type": "EMAIL",
        "cls": "direct",
        "source": "D0",

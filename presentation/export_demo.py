@@ -20,7 +20,7 @@ from omissis.cli import DEFAULT_TASK
 from omissis.detect import supported_detectors
 from omissis.eval.datasets import load_texts
 from omissis.feasibility import check_text
-from omissis.pipeline import protect_send_restore
+from omissis.pipeline import mask, protect_send_restore
 
 ROOT = Path.cwd()
 OUT = ROOT / "presentation" / "demo-data.js"
@@ -51,6 +51,10 @@ def main() -> int:
                 try:
                     m = _masked(record.text, config)
                     r = protect_send_restore(record.text, DEFAULT_TASK, config)
+                    # the same masking again, to show each surrogate next to its value
+                    # (synthetic fixtures only: every value is already in the text)
+                    _, vault = mask(record.text, config)
+                    values = {e.surrogate: e.original for e in vault}
                 except CacheMissError as exc:
                     print(f"{record.id} {key}: cache miss ({exc})", file=sys.stderr)
                     continue
@@ -60,6 +64,7 @@ def main() -> int:
                     "disclosure": [
                         {
                             "surrogate": d.surrogate,
+                            "value": values.get(d.surrogate, ""),
                             "type": d.type.value,
                             "cls": d.cls.value,
                             "source": d.source,

@@ -1,8 +1,8 @@
 /* Charts of the deck. Every number is copied from results/test/metrics/ (scorecard of
    22 Nov 2026); the file each comes from is named next to it. */
 (function () {
-  const NAVY = '#1F2A44', CORAL = '#E4572E', TEAL = '#2A9D8F', MUSTARD = '#E9B44C', MUTED = '#5C6478';
-  const GRID = 'rgba(31, 42, 68, 0.12)';
+  const NAVY = '#26272B', CORAL = '#D84366', TEAL = '#3560A0', MUSTARD = '#977FD4', MUTED = '#66676D';
+  const GRID = 'rgba(38, 39, 43, 0.12)';
   const exporting = window.location.search.includes('export');
 
   Chart.defaults.font.family = 'Inter, Helvetica, Arial, sans-serif';
@@ -58,7 +58,7 @@
           if (at) {
             // label placed in data coordinates, joined to its point by a leader line
             const lx = chart.scales.x.getPixelForValue(at.x), ly = chart.scales.y.getPixelForValue(at.y);
-            ctx.strokeStyle = 'rgba(31, 42, 68, 0.45)'; ctx.lineWidth = 1.2;
+            ctx.strokeStyle = 'rgba(38, 39, 43, 0.45)'; ctx.lineWidth = 1.2;
             ctx.beginPath(); ctx.moveTo(el.x, el.y); ctx.lineTo(lx - 4, ly - 5); ctx.stroke();
             ctx.textAlign = 'left'; ctx.fillText(lab, lx, ly);
             return;
@@ -166,7 +166,7 @@
             const x = scales.x.getPixelForValue(0.04);
             ctx.save(); ctx.strokeStyle = CORAL; ctx.lineWidth = 2.5; ctx.setLineDash([7, 6]);
             ctx.beginPath(); ctx.moveTo(x, chartArea.top); ctx.lineTo(x, chartArea.bottom); ctx.stroke();
-            ctx.setLineDash([]); ctx.fillStyle = '#B8401D'; ctx.font = '600 14px Inter, sans-serif';
+            ctx.setLineDash([]); ctx.fillStyle = '#A8304F'; ctx.font = '600 14px Inter, sans-serif';
             ctx.fillText('chance 0.04', x + 6, chartArea.top - 8); ctx.restore();
           },
         }],
