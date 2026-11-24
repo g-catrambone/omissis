@@ -1,0 +1,488 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Omissis: pseudonymise before you prompt (proposal)</title>
+  <!-- Proposal: the deck of presentation/ reordered into the course structure
+       (Introduction ~3, Related work ~3, Methodology ~7, Results ~5, Conclusion ~2 min),
+       speaker and time budget of every slide in its speaker notes. -->
+  <link rel="stylesheet" href="vendor/reset.css">
+  <link rel="stylesheet" href="vendor/reveal.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="proposal.css">
+  <script src="vendor/chart.umd.js"></script>
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+
+      <!-- ===================== 01 · INTRODUCTION ===================== -->
+      <section id="title" class="cover">
+        <div class="cover-panel">
+          <p class="kicker">AI Frontiers: Large Language Models<br>LUISS · Fall 2026</p>
+          <h1>Omissis</h1>
+          <p class="lede">A local layer that pseudonymises Italian text before it reaches a cloud LLM, puts the real values back in the reply, and measures what that costs in privacy and in answer quality.</p>
+          <p class="names">Giuseppe · Andrea · Mattia</p>
+        </div>
+        <div class="fig cover-art"><img class="illus" src="img/hero.png" alt="A letter whose lines are partly covered by blank tags, sent along a dashed arc to a cloud."></div>
+        <aside class="notes">
+          [0:20 · Giuseppe] Omissis is Latin for "things left out". It sits between you and a cloud model: it hides who you are before the text leaves your machine, and puts the real values back in the answer. The tool is half of the project; the other half, the contribution, is the measurement of what that hiding costs.
+        </aside>
+      </section>
+
+      <section id="problem">
+        <p class="who">Part 1</p>
+        <h2>A draft reply from a cloud model costs you every identifier in the email</h2>
+        <div class="content" style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 36px; align-items: center;">
+          <div class="card">
+            <p class="letter">mi chiamo <mark class="direct">Bruno Ferraguti</mark> e sono titolare di una carta di debito collegata al conto <mark class="direct">IT87L0000085047953541165689</mark>. […] ho trovato due addebiti che non ho mai autorizzato: <mark class="quasi">89,90 euro</mark> il <mark class="quasi">3 novembre 2026</mark> […] In quei giorni ero a <mark class="quasi">Cagliari</mark> per lavoro […] Lavoro come <mark class="quasi">tecnico manutentore</mark> per <mark class="quasi">Sardelec Impianti</mark> […] scrivermi a <mark class="direct">b.ferraguti@example.net</mark> o di chiamarmi al <mark class="direct">+39 328 664 1027</mark>.</p>
+            <p class="tiny" style="margin-top: 10px;">Fixture <code>fx-bank-02</code>: every person, account and company in this talk is synthetic.</p>
+          </div>
+          <div style="display: grid; grid-template-rows: 1fr auto; gap: 14px; height: 100%; min-height: 0;">
+            <div class="fig"><img class="illus" src="img/exposed.png" alt="A letter sliding into a cloud that has a large eye."></div>
+            <div>
+              <p class="text-lg" style="margin-bottom: 10px;">People paste mail like this into a chatbot to get a reply drafted. The provider, a third party, reads every line.</p>
+              <p style="display: flex; gap: 8px; flex-wrap: wrap;"><span class="chip direct">direct identifier</span><span class="chip quasi">quasi-identifier</span><span class="chip special">special category</span></p>
+            </div>
+          </div>
+        </div>
+        <aside class="notes">
+          [0:50 · Giuseppe] One of our five demo emails: a customer disputing two card payments. Raspberry marks direct identifiers: the name, the IBAN, the email, the phone. Violet marks quasi-identifiers: harmless alone, but the amount, the date, the town, the job and the employer narrow the writer down. People paste exactly this into a chatbot to get a polite reply drafted. We want the reply without handing over who the writer is.
+        </aside>
+      </section>
+
+      <section id="clues">
+        <p class="who">Part 1</p>
+        <h2>Hiding the name and the IBAN is not enough: the details still point to one person</h2>
+        <div class="content" style="display: grid; grid-template-columns: 1fr 1.1fr; gap: 36px; align-items: center;">
+          <div class="fig" style="height: 100%;"><img class="illus" src="img/clues.png" alt="A briefcase, a map pin, an office building and a birthday cake, with lines converging on one person."></div>
+          <div style="display: flex; flex-direction: column; gap: 14px;">
+            <div class="row" style="grid-template-columns: 210px 1fr;"><p class="k ink-coral">Direct</p><p class="v">Names one person on its own: name, IBAN, codice fiscale, phone, email, user code. <strong>Always masked.</strong></p></div>
+            <div class="row" style="grid-template-columns: 210px 1fr;"><p class="k ink-mustard">Quasi</p><p class="v">Job, employer, town, age, amounts, dates. Masked by a switch: on in every configuration with a detector.</p></div>
+            <div class="row" style="grid-template-columns: 210px 1fr;"><p class="k ink-teal">Special category</p><p class="v">Health, union membership: GDPR art. 9 data. <strong>Always masked.</strong></p></div>
+            <div class="stat" style="margin-top: 8px;"><p class="num">0.98</p><p class="lbl">of test texts still linked to their author when only the direct identifiers and special categories are masked (<code>REF-oracle-direct</code>, 25 candidates)</p></div>
+          </div>
+        </div>
+        <aside class="notes">
+          [0:50 · Giuseppe] Masking policy is per class. Direct identifiers and special categories are always masked. Quasi-identifiers are the interesting part: each one is harmless, together they single a person out. The number at the bottom is from our test split: mask the direct identifiers and the special categories perfectly, from the annotation, and the attacker still names the author first 98 times out of 100 among 25 candidates. That is why we measure linkage, not just recall.
+        </aside>
+      </section>
+
+      <section id="question">
+        <p class="who">Part 1</p>
+        <h2>The question: what does hiding cost, and what does it still leave?</h2>
+        <div class="content" style="display: grid; grid-template-columns: 1.25fr 1fr; gap: 48px; align-items: center;">
+          <p class="question">When Italian text is pseudonymised on this machine before it reaches a cloud LLM, <em>how much can an attacker still re-identify</em>, and <em>what does the reply lose</em>?</p>
+          <div class="did">
+            <div><b>We built</b><p>Omissis: a local layer that detects, replaces, sends and restores.</p></div>
+            <div><b>We measured</b><p>Seven configurations on 66 synthetic emails: an attacker LLM, answer quality, restoration.</p></div>
+            <div><b>We committed</b><p>Three contrasts declared before any result; the test split evaluated once.</p></div>
+          </div>
+        </div>
+        <p class="footnote">Pseudonymised, not anonymised: what we measure is a re-identification risk.</p>
+        <aside class="notes">
+          [1:00 · Giuseppe] This is the question of the project. Not "can we hide the IBAN", which is easy, but: after hiding, can a model still tell who wrote the text, and is the reply still useful? We built the tool to be able to ask it, and the contribution is the measurement. We fixed the comparisons before looking at any result, and evaluated the test split once.
+        </aside>
+      </section>
+
+      <!-- ===================== 02 · RELATED WORK ===================== -->
+      <section id="rw-tools">
+        <p class="who">Part 2</p>
+        <h2>Masking a prompt and putting the values back is not new</h2>
+        <div class="content tools4">
+          <div class="tile">
+            <img class="icon" src="img/icon-ner.png" alt="">
+            <h3>Microsoft Presidio</h3>
+            <p class="tsub">Detects and anonymises personal data with patterns and a named-entity model; documents a de-anonymise operator.</p>
+            <p class="ours">Our detector D1</p>
+          </div>
+          <div class="tile">
+            <img class="icon" src="img/icon-classifier.png" alt="">
+            <h3>Ready-made PII classifiers</h3>
+            <p class="tsub">One token classifier from a model hub, used as it ships, with a fixed label set (piiranha).</p>
+            <p class="ours">Our detector D2</p>
+          </div>
+          <div class="tile">
+            <img class="icon" src="img/icon-vault.png" alt="">
+            <h3>LLM Guard</h3>
+            <p class="tsub">Protect AI: an Anonymize scanner and a vault on the input, a Deanonymize scanner on the output. Now archived.</p>
+            <p class="ours none">Same loop</p>
+          </div>
+          <div class="tile">
+            <img class="icon" src="img/icon-restore.png" alt="">
+            <h3>LangChain reversible anonymizer</h3>
+            <p class="tsub">The experimental <code>PresidioReversibleAnonymizer</code> keeps a mapping and applies it back to the model's output.</p>
+            <p class="ours none">Same loop</p>
+          </div>
+        </div>
+        <div class="gapbar">
+          <span class="gl">None of them reports</span>
+          <span><b>how much the masked text still reveals</b>: job, town and employer together</span>
+          <span><b>what masking costs the reply</b> the user needs</span>
+        </div>
+        <aside class="notes">
+          [1:30 · Giuseppe] The loop of masking, sending and restoring already exists. Presidio detects and anonymises personal data and documents a de-anonymise operator; it is our detector D1. Ready-made PII classifiers from model hubs are our detector D2. LLM Guard, now archived, pairs an anonymise scanner and a vault with a de-anonymise scanner, and LangChain's experimental reversible anonymizer keeps a mapping and applies it back. So we did not invent the loop, and we reuse two of these tools inside it. What none of them tells you is how much the masked text still reveals, and what masking costs the reply. That is what we add.
+        </aside>
+      </section>
+
+      <section id="rw-research">
+        <p class="who">Part 2</p>
+        <h2>Research: models infer who wrote a text, so anonymisation needs a measured risk</h2>
+        <div class="content" style="padding-top: 16px;">
+          <div class="refs">
+            <div class="rr head"><p>Work</p><p>What it shows</p><p>What we take, or do differently</p></div>
+            <div class="rr"><p class="rc">Staab et al.<span>Beyond Memorization: Violating Privacy via Inference with LLMs (arXiv 2310.07298)</span></p><p class="rs">LLMs infer location, income and sex from ordinary Reddit text.</p><p class="ru">Our attribute attack asks the same question, with closed answer lists.</p></div>
+            <div class="rr"><p class="rc">Staab et al.<span>Language Models are Advanced Anonymizers (ICLR 2025)</span></p><p class="rs">An adversary LLM guides what is rewritten.</p><p class="ru">Here the adversary only measures.</p></div>
+            <div class="rr"><p class="rc">Pilán et al.; Lison et al.<span>Text Anonymization Benchmark (Comp. Linguistics 2022); Anonymisation Models for Text Data (ACL 2021)</span></p><p class="rs">1,268 English court cases scored for privacy and utility; disclosure risk beyond sequence labelling.</p><p class="ru">Privacy and utility side by side; our data are Italian, synthetic and much smaller.</p></div>
+          </div>
+          <div class="lawbar">
+            <span class="gl">The law</span>
+            <span>GDPR art. 4(5) defines pseudonymisation; EDPB Guidelines 01/2025 (public consultation); CJEU C-413/23 P, <i>EDPS v SRB</i>. <b>We make no legal claim: we measure a risk.</b></span>
+          </div>
+        </div>
+        <p class="footnote">Full references and links: <code>README.md</code>, section <i>Related work</i>.</p>
+        <aside class="notes">
+          [1:30 · Giuseppe] Three lines of research. First, Staab and colleagues showed that LLMs infer personal attributes, location, income, sex, from ordinary text; our attribute attack asks the same question with closed lists. Second, the same group used an adversary model to guide what to rewrite; we use the adversary only to measure. Third, the text-anonymisation benchmark TAB and the work of Lison and colleagues argue that anonymisation must be scored for disclosure risk and utility together, not only by labelling accuracy; we follow that, on Italian synthetic data, much smaller. On the legal side: the GDPR defines pseudonymisation, the EDPB has draft guidelines, and the Court of Justice held in 2025 that pseudonymised data are not personal data in every case and for every recipient. We make no legal claim: we measure a risk. Hand over to Mattia.
+        </aside>
+      </section>
+
+      <!-- ===================== 03 · METHODOLOGY ===================== -->
+      <section id="architecture">
+        <p class="who">Part 3</p>
+        <h2>Six stages: only the masked text crosses to the cloud</h2>
+        <div class="content" style="justify-content: center; padding-top: 10px;">
+          <div class="pipe" style="margin-top: 26px;">
+            <div class="zone" style="left: 0; width: 49.5%; border-color: var(--teal);"><span class="zl ink-teal">this machine</span></div>
+            <div class="zone" style="left: 50.5%; width: 16%; border-color: var(--coral);"><span class="zl ink-coral">cloud</span></div>
+            <div class="zone" style="left: 67.5%; width: 32.5%; border-color: var(--teal);"><span class="zl ink-teal">this machine</span></div>
+            <div class="stage"><div class="icon-wrap"><img class="icon" src="img/icon-detect.png" alt=""></div><h3>Detect</h3><p>Five detectors, from rules to a local LLM; one overlap rule merges them.</p></div>
+            <div class="stage"><div class="icon-wrap"><img class="icon" src="img/icon-resolve.png" alt=""></div><h3>Resolve</h3><p>Mentions of one person become one entity, with grammatical gender.</p></div>
+            <div class="stage"><div class="icon-wrap"><img class="icon" src="img/icon-replace.png" alt=""></div><h3>Replace</h3><p>R1 typed placeholders or R2 realistic fakes, kept in an in-memory vault.</p></div>
+            <div class="stage cloud"><div class="icon-wrap"><img class="icon" src="img/icon-send.png" alt=""></div><h3>Send</h3><p>One function for every LLM call; cached, temperature 0.</p></div>
+            <div class="stage"><div class="icon-wrap"><img class="icon" src="img/icon-restore.png" alt=""></div><h3>Restore</h3><p>Exact, normalised, then fuzzy matching. Never a guess.</p></div>
+            <div class="stage"><div class="icon-wrap"><img class="icon" src="img/icon-vault.png" alt=""></div><h3>Report</h3><p>The reply with real values, plus what was replaced and what could not be put back.</p></div>
+          </div>
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 46px;">
+            <div class="card"><p class="small"><strong>R1</strong> &nbsp;<code>mi chiamo [PERSONA_1_M], conto [IBAN_1]</code></p></div>
+            <div class="card"><p class="small"><strong>R2</strong> &nbsp;<code>mi chiamo Leandro Zambelli, conto IT13O0000…</code> <span class="tiny">(a bank code no bank has)</span></p></div>
+          </div>
+        </div>
+        <aside class="notes">
+          [1:00 · Mattia] One row, six stages. Detect finds sensitive spans with one of five detectors. Resolve groups the mentions of the same person into one entity and infers grammatical gender from rules. Replace swaps each entity for a placeholder, R1, or a realistic fake, R2, and records the mapping in a vault that lives in memory only. Send is the only step that talks to the cloud, and every model call in the project goes through one cached function. Restore puts the real values back: exact match, then normalised, then fuzzy; what it cannot place it reports, it never guesses. Everything except the cloud call runs on the user's machine, including the local LLM used by D3.
+        </aside>
+      </section>
+
+      <section id="choices">
+        <p class="who">Part 3</p>
+        <h2>Five design choices, each with its reason</h2>
+        <div class="content pillars">
+          <div class="pillar"><p class="pn">01</p><h3>Three classes of span</h3><p>Masking is decided per class; two references isolate what hiding quasi-identifiers buys.</p></div>
+          <div class="pillar"><p class="pn">02</p><h3>Text, not offsets</h3><p>The local LLM returns span text, found by string search: a span it invents is dropped.</p></div>
+          <div class="pillar"><p class="pn">03</p><h3><code>[PERSONA_1_F]</code></h3><p>Gender keeps Italian agreement right. Its cost is measured: the attacker reads gender.</p></div>
+          <div class="pillar"><p class="pn">04</p><h3>Never guess</h3><p>A token restoration cannot resolve is reported to the user, never filled in.</p></div>
+          <div class="pillar"><p class="pn">05</p><h3>Refuse the impossible</h3><p>A sum of masked amounts is stopped before sending: no number, or a wrong one.</p></div>
+        </div>
+        <p class="footnote">The text is pseudonymised, not anonymised: what we measure is its re-identification risk.</p>
+        <aside class="notes">
+          [1:00 · Mattia] Five choices that shaped the system. The three classes let us separate what masking quasi-identifiers buys. The local LLM never gives offsets, because models are bad at counting characters; it gives text, we find it, and an invented span simply cannot be placed. Placeholders carry gender so that Italian agreement stays right, and we pay for it: the attacker reads gender from them. Restoration never guesses. And a request that masking makes impossible, like adding up masked amounts, is refused rather than answered wrong; that check is a heuristic and we did not evaluate it.
+        </aside>
+      </section>
+
+      <section id="detectors">
+        <p class="who">Part 3</p>
+        <h2>Five detectors, from cheap and predictable to slow and general</h2>
+        <div class="content" style="padding-top: 16px;">
+          <div class="lane"><img class="icon" src="img/icon-rules.png" alt=""><div><h3>D0 · Rules</h3><p>IBAN, codice fiscale, P. IVA, phone, email, amounts next to a currency; most with a checksum.</p></div><p class="text-muted">Misses everything without a shape: names, towns, employers, health.</p></div>
+          <div class="lane"><img class="icon" src="img/icon-ner.png" alt=""><div><h3>D1 · Presidio + spaCy <span class="tiny">it_core_news_lg</span></h3><p>Names, places, organisations; Italian pattern recognisers.</p></div><p class="text-muted">No date label beyond numeric dates; no job, age or health.</p></div>
+          <div class="lane"><img class="icon" src="img/icon-classifier.png" alt=""><div><h3>D2 · PII classifier <span class="tiny">piiranha, as shipped</span></h3><p>Names, emails, phones, tax and account numbers.</p></div><p class="text-muted">Only one quasi label (town); often covers part of an email. Non-commercial licence.</p></div>
+          <div class="lane"><img class="icon" src="img/icon-llm.png" alt=""><div><h3>D3 · Local LLM <span class="tiny">gpt-oss:20b on this machine</span></h3><p>Job, employer, town, age, health, union, user codes; JSON with a reason.</p></div><p class="text-muted">Slowest; two invalid replies mean no spans for that text.</p></div>
+          <div class="lane"><img class="icon" src="img/icon-hybrid.png" alt=""><div><h3>D4 · Hybrid</h3><p>Direct identifiers from D0, D1, D2; everything else from D3. No new logic.</p></div><p class="text-muted">Inherits D1's type errors: a company masked as a person.</p></div>
+        </div>
+        <aside class="notes">
+          [1:00 · Mattia] The five detectors. D0 is regular expressions with checksums: exact, and blind to anything without a shape. D1 is Presidio with the Italian spaCy model, the standard off-the-shelf choice and the baseline of our first contrast. D2 is a ready-made multilingual PII classifier used as it ships; its licence is non-commercial. D3 is a local LLM, gpt-oss 20B through Ollama on the laptop, so the unmasked text never leaves the machine; it returns span text, type and a reason. D4 is composition only: direct identifiers from the first three, the rest from D3. D1 was added to D4 after the pilot, where D2 alone missed person names.
+        </aside>
+      </section>
+
+      <section id="demo">
+        <p class="who">Part 3</p>
+        <h2 style="font-size: 23pt;">Demo: what leaves the machine, and what comes back</h2>
+        <div class="demo"></div>
+        <span class="fragment custom step" data-fragment-index="0"></span>
+        <span class="fragment custom step" data-fragment-index="1"></span>
+        <span class="fragment custom step" data-fragment-index="2"></span>
+        <aside class="notes">
+          [2:00 · Mattia] Recorded runs of the real pipeline, replayed from the committed cache: nothing is called live. Start on Card dispute, D4, Placeholders. Step 1, detect and mask: the email appears with what D4 found, coloured by class; then each value flips into its placeholder while the vault on the right fills in. Nothing has left the machine. Note Sardelec Impianti in the vault as PERSONA_2: D4 inherits that type error from Presidio; the value is still hidden. Click, step 2: the reply as the cloud model wrote it, with placeholders only. Click, step 3: the placeholders flip back to the real values on this machine; the log lists every outcome. Switch to Fakes to show R2. Step 4: "compute the total of the amounts" is refused, because the amounts are masked; switch to D1 and it goes through, because D1 masks no amounts. Keep it to two minutes; skip Closure if late. Hand over to Andrea.
+        </aside>
+      </section>
+
+      <section id="eval-design">
+        <p class="who">Part 3</p>
+        <h2>How we measured: 66 synthetic emails, seven configurations, three kinds of measure</h2>
+        <div class="content flow3">
+          <div>
+            <p class="fnum">66</p>
+            <p class="flbl">Synthetic emails</p>
+            <div class="split"><span class="dev" style="flex: 20;">20 dev</span><span class="test" style="flex: 46;">46 test</span></div>
+            <p class="fnote">Bank and HR emails about invented people in look-alike cohorts. Test evaluated once, after the freeze.</p>
+          </div>
+          <p class="farrow">→</p>
+          <div>
+            <p class="fnum">7</p>
+            <p class="flbl">Configurations</p>
+            <p class="fgrp">References, no detector</p>
+            <div class="pills"><span class="pill ref">REF-none</span><span class="pill ref">REF-oracle-direct</span><span class="pill ref">REF-oracle</span></div>
+            <p class="fgrp">With a detector</p>
+            <div class="pills"><span class="pill">D1+R1</span><span class="pill">D2+R1</span><span class="pill">D4+R1</span><span class="pill">D4+R2</span></div>
+          </div>
+          <p class="farrow">→</p>
+          <div>
+            <p class="fnum">3</p>
+            <p class="flbl">Kinds of measure</p>
+            <div class="mrow coral"><b>Privacy</b><span>an attacker names the author among 25</span></div>
+            <div class="mrow teal"><b>Utility</b><span>extraction (T3) and drafted reply (T1)</span></div>
+            <div class="mrow mustard"><b>Restoration</b><span>share of replies fully restored</span></div>
+          </div>
+        </div>
+        <aside class="notes">
+          [1:00 · Andrea] Read it left to right. Data: every person is invented; profiles come in cohorts that share job, town or employer, so the attacker has look-alike candidates to confuse. 66 bank and HR emails, split once into 20 dev and 46 test; the test split was evaluated once, after the protocol was frozen. Configurations: three references that bound the space, nothing masked, gold direct and special spans masked, every gold span masked; then four with a detector. Measures: privacy is an attacker LLM that must name the author among 25 candidates; utility is structured extraction against gold, T3, and the drafted reply, T1; restoration is the share of replies fully restored.
+        </aside>
+      </section>
+
+      <section id="attack">
+        <p class="who">Part 3</p>
+        <h2>Privacy is measured by an attacker that must name the author</h2>
+        <div class="content" style="display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; align-items: center;">
+          <div class="fig" style="height: 100%;"><img class="illus" src="img/lineup.png" alt="A row of candidate cards, one highlighted under a magnifying glass."></div>
+          <div>
+            <div class="kpis">
+              <div class="kpi"><p class="big">25</p><p class="lbl">candidate profiles, the author among them</p></div>
+              <div class="kpi"><p class="big">1<span class="of">/25</span></p><p class="lbl">chance of picking the author: 0.04</p></div>
+            </div>
+            <ol class="steps" style="margin-top: 20px;">
+              <li>The attacker LLM reads the masked text and ranks the candidates.</li>
+              <li><strong>Linkage top-1</strong>: share of texts where its first pick is the author.</li>
+              <li>A second attack guesses city, role, employer, age, gender and health.</li>
+            </ol>
+            <p class="formula">Privacy score = 1 − linkage top-1</p>
+          </div>
+        </div>
+        <p class="footnote">Three contrasts declared before any result, Holm-corrected at α = 0.05.</p>
+        <aside class="notes">
+          [1:00 · Andrea] The privacy measure is a re-identification attack. An attacker model sees the masked text and 25 candidate profiles, one of them the author, and must rank them. Linkage top-1 is how often its first choice is right; by chance that is 4 percent. Privacy score is one minus that. A second attack guesses six attributes from closed lists. The three comparisons we test were declared before any result, with a Holm correction for multiple testing.
+        </aside>
+      </section>
+
+      <!-- ===================== 04 · RESULTS ===================== -->
+      <section id="detection" style="display: flex; flex-direction: column; height: 100%;">
+        <p class="who">Part 4</p>
+        <h2>Only the hybrid covers all three classes: 2 test texts of 46 leak a direct identifier</h2>
+        <div style="flex: 1; display: grid; grid-template-columns: 2.3fr 1fr; gap: 28px; min-height: 0; padding-top: 18px;">
+          <div style="position: relative; min-height: 0; min-width: 0;"><canvas data-chart="chart-detect"></canvas></div>
+          <div style="display: flex; flex-direction: column; justify-content: center; gap: 22px;">
+            <div class="stat"><p class="num">0.99</p><p class="lbl">D4 recall on direct identifiers; precision 0.97 overall</p></div>
+            <div class="stat teal"><p class="num">0.04</p><p class="lbl">D4 leak rate: texts with a direct identifier not fully covered <span class="num-tab">[0.00, 0.11]</span></p></div>
+            <div class="stat mustard"><p class="num">0.87</p><p class="lbl">D1 leak rate <span class="num-tab">[0.76, 0.96]</span>: Presidio alone leaks in most texts</p></div>
+          </div>
+        </div>
+        <p class="footnote">Test split, 46 texts, 666 annotated spans; recall under overlap matching. <code>results/test/metrics/detection.json</code></p>
+        <aside class="notes">
+          [0:50 · Andrea] Recall by class on the 46 held-out texts. Rules, Presidio and the classifier each catch part of the direct identifiers and almost nothing else. The local LLM is the mirror image: 97 percent of quasi-identifiers, 88 percent of special categories. Only the hybrid covers all three. Leak rate is the share of texts where at least one direct identifier is not fully covered: 4 percent for D4, 87 percent for Presidio alone.
+        </aside>
+      </section>
+
+      <section id="linkage" style="display: flex; flex-direction: column; height: 100%;">
+        <p class="who">Part 4</p>
+        <h2>Masking lowers linkage, and leaves it far above chance</h2>
+        <div style="flex: 1; display: grid; grid-template-columns: 2.1fr 1fr; gap: 30px; min-height: 0; padding-top: 18px;">
+          <div style="position: relative; min-height: 0; min-width: 0;"><canvas data-chart="chart-linkage"></canvas></div>
+          <div style="display: flex; flex-direction: column; justify-content: center; gap: 18px;">
+            <p class="small">Leave the quasi-identifiers visible and the author is named almost every time: <code>D1+R1</code> <strong class="num-tab">0.93</strong>, <code>D2+R1</code> <strong class="num-tab">1.00</strong>.</p>
+            <p class="small">Mask everything the annotation marks and the attacker still names half the authors: <code>REF-oracle</code> <strong class="num-tab">0.50</strong>.</p>
+            <p class="aside">What is left (topic, product, tone, cohort) still points to a person. Pseudonymisation lowers the risk; it does not remove it.</p>
+          </div>
+        </div>
+        <p class="footnote">Test split, 46 texts; bars are 95% intervals (paired bootstrap over texts). <code>results/test/metrics/linkage.json</code></p>
+        <aside class="notes">
+          [1:10 · Andrea] Linkage top-1 with 25 candidates, lower is better, dashed line is chance at 0.04. With nothing masked the attacker is right every time. Masking only what Presidio or the classifier find barely moves it: 0.93 and 1.00, because they leave job, town and employer in clear. The hybrid brings it to 0.59 with placeholders and 0.41 with fakes. Even the oracle, masking every annotated span, stays at 0.50, more than ten times chance. Without the five loan texts whose content contradicts the author's profile, the hybrid is at 0.63 and 0.44: a control, not a test.
+        </aside>
+      </section>
+
+      <section id="plane" style="display: flex; flex-direction: column; height: 100%;">
+        <p class="who">Part 4</p>
+        <h2>The hybrid buys privacy with a small loss in extraction quality</h2>
+        <div style="flex: 1; display: grid; grid-template-columns: 2.4fr 1fr; gap: 28px; min-height: 0; padding-top: 16px;">
+          <div style="position: relative; min-height: 0; min-width: 0;"><canvas data-chart="chart-plane"></canvas></div>
+          <div style="display: flex; flex-direction: column; justify-content: center; gap: 16px;">
+            <p class="small">Read from <code>REF-none</code>, top left: useful and exposed. The detector configurations without D3 stay in that corner.</p>
+            <p class="small"><span class="ink-coral">D4+R1</span> and <span class="ink-teal">D4+R2</span> move right, next to <code>REF-oracle</code>, at a T3 cost of a few points.</p>
+            <p class="aside">y is T3 for every configuration: the judge for T1 failed its validation (see Limits).</p>
+          </div>
+        </div>
+        <p class="footnote">Squares: references; circles: configurations with a detector. 95% intervals on both axes. <code>results/test/metrics/linkage.json</code>, <code>utility.json</code></p>
+        <aside class="notes">
+          [1:00 · Andrea] The privacy–utility plane. Privacy score to the right, T3 extraction quality up. D1 and D2 with placeholders sit next to unmasked: useful, and exposed. D4 moves right, into the region of the oracle, at a cost of a few points of T3: 0.90 with placeholders, 0.95 with fakes, against 0.97 unmasked. D4 with fakes is not a declared contrast against D4 with placeholders; the estimates are side by side. And R2 is not measured as a decoy, because its fake names match no candidate.
+        </aside>
+      </section>
+
+      <section id="contrasts">
+        <p class="who">Part 4</p>
+        <h2>Two of the three pre-declared contrasts are findings</h2>
+        <div class="content" style="padding-top: 18px;">
+          <div class="ctr">
+            <div><p class="cq">Does the hybrid lower linkage?</p><p class="cm">linkage top-1 · lower is more private</p></div>
+            <div class="cv"><span class="a">0.93</span><span class="arr">→</span><span class="b teal">0.59</span>
+              <p class="cw"><code>D1+R1</code> → <code>D4+R1</code></p></div>
+            <div class="db"><div class="track"><span class="seg" style="left: 59%; width: 34%;"></span>
+              <span class="dot" style="left: 93%;"></span><span class="dot teal" style="left: 59%;"></span></div>
+              <div class="scale"><span>0</span><span>1</span></div>
+              <p class="ci">Δ −0.35 [−0.52, −0.17] · Holm p &lt; 0.001</p></div>
+            <div class="cvd"><span class="verdict yes">finding</span></div>
+          </div>
+          <div class="ctr">
+            <div><p class="cq">What does masking cost in utility?</p><p class="cm">utility, T3 + T1 · higher is better</p></div>
+            <div class="cv"><span class="a">0.98</span><span class="arr">→</span><span class="b coral">0.76</span>
+              <p class="cw"><code>REF-none</code> → <code>D4+R1</code></p></div>
+            <div class="db"><div class="track"><span class="seg" style="left: 76%; width: 22%;"></span>
+              <span class="dot" style="left: 98%;"></span><span class="dot coral" style="left: 76%;"></span></div>
+              <div class="scale"><span>0</span><span>1</span></div>
+              <p class="ci">Δ −0.22 [−0.25, −0.20] · Holm p &lt; 0.001</p><p class="cn">T1 of <code>REF-none</code> is 1 by definition: the size of the gap, not a proven loss.</p></div>
+            <div class="cvd"><span class="verdict gap">gap, by construction</span></div>
+          </div>
+          <div class="ctr">
+            <div><p class="cq">Do fakes restore better than placeholders?</p><p class="cm">share of replies fully restored</p></div>
+            <div class="cv"><span class="a">0.74</span><span class="arr">→</span><span class="b mute">0.72</span>
+              <p class="cw"><code>D4+R1</code> → <code>D4+R2</code></p></div>
+            <div class="db"><div class="track"><span class="seg" style="left: 72%; width: 2%;"></span>
+              <span class="dot" style="left: 74%;"></span><span class="dot mute" style="left: 72%;"></span></div>
+              <div class="scale"><span>0</span><span>1</span></div>
+              <p class="ci">Δ −0.02 [−0.17, 0.13] · Holm p 1.000</p></div>
+            <div class="cvd"><span class="verdict no">not distinguishable</span></div>
+          </div>
+        </div>
+        <p class="footnote">Test split, 46 texts; exact McNemar for paired proportions, paired bootstrap for utility. <code>results/test/metrics/contrasts.json</code></p>
+        <aside class="notes">
+          [1:10 · Andrea] The three comparisons we committed to before seeing any result. One: the hybrid against Presidio on linkage. A finding: 0.93 to 0.59, Holm p below 0.001. Two: the hybrid against unmasked on utility. The gap is 0.22 and significant, but read it carefully: the reply score of the unmasked configuration is 1 by definition, because it is the judge's reference, so the contrast measures the size of the gap. Three: fakes against placeholders on full restoration: 0.72 against 0.74, not distinguishable with 46 texts. A negative result gets the same space.
+        </aside>
+      </section>
+
+      <section id="failures">
+        <p class="who">Part 4</p>
+        <h2>What did not work: the model, more than the masking</h2>
+        <div class="content ktiles">
+          <div class="kt"><p class="big mono">[TELEFONO_2]</p><p class="kw">Made-up placeholders</p><p class="ln">A value the model never had. Reported, never guessed; on dev the only cause of a reply not fully restored.</p></div>
+          <div class="kt"><p class="big">15<span class="of">/20</span></p><p class="kw">Values given to the wrong party</p><p class="ln"><code>D4+R1</code> replies on dev (2 of 20 with R2): the customer's name where the bank's belongs.</p></div>
+          <div class="kt"><p class="big">16<span class="of">/20</span></p><p class="kw">R2 fakes left in the text</p><p class="ln">R2 replies on dev: the model rewrites a fake (“€ 82,90” for “82,90 euro”) and it is not recognised.</p></div>
+          <div class="kt"><p class="big">0.96–1.00</p><p class="kw">Gender and health still guessed</p><p class="ln">Attacker accuracy on test texts: placeholders show gender on purpose; the topic shows health.</p></div>
+        </div>
+        <p class="footnote">Counts from the AI reading of the 20 dev replies, approved by one member: <code>results/dev/error_taxonomy.md</code>. Attributes: <code>results/test/metrics/attributes.json</code></p>
+        <aside class="notes">
+          [0:50 · Andrea] What went wrong is mostly the cloud model, not the masking. It sometimes writes a placeholder of its own for a value it does not have; we report it, and on dev that is the only reason a reply is not fully restored. It gives a value to the wrong party: 15 of 20 dev replies with placeholders. With fakes it rewrites the fake value, so it stays in the text: R2's restoration rate is an upper bound. And no configuration hides gender or health. Hand over to Mattia.
+        </aside>
+      </section>
+
+      <!-- ===================== 05 · CONCLUSION ===================== -->
+      <section id="limits">
+        <p class="who">Part 5</p>
+        <h2>Limits: what these numbers do not tell you</h2>
+        <div class="content ltiles compact">
+          <div class="lt"><p class="kw">Synthetic data</p><p class="ln">Written by one model: more regular than real mail.</p></div>
+          <div class="lt"><p class="kw">No human annotator</p><p class="ln">An AI agent reviewed the gold and rated the judge's items; one member approved its reports.</p></div>
+          <div class="lt"><p class="kw">The judge was rejected <span class="fig-num">κ 0.37</span></p><p class="ln">0.6 was needed: T1 exists for <code>D4+R1</code> only, rated by one member.</p></div>
+          <div class="lt"><p class="kw">One hosted model</p><p class="ln">The cloud model, the attacker and the judge; no external data, no linking across texts.</p></div>
+          <div class="lt"><p class="kw">Optimistic intervals</p><p class="ln">Texts by the same author are not independent.</p></div>
+          <div class="lt"><p class="kw">Pseudonymisation, not anonymisation</p><p class="ln">We measure re-identification risk, not legal anonymity.</p></div>
+        </div>
+        <aside class="notes">
+          [0:50 · Mattia] What these numbers do not say. Synthetic data, written by one model. No human annotated or rated since 21 November: an AI agent did, and one member approved its reports. The judge for drafted replies failed its validation, kappa 0.37 against 0.6, so the reply score exists only for the hybrid. One attacker, no outside data. Texts by the same author are not independent, so our intervals are optimistic. And this is pseudonymisation, never an anonymous text.
+        </aside>
+      </section>
+
+      <section id="takeaway">
+        <p class="who">Part 5</p>
+        <h2>Masking the obvious is cheap and buys almost nothing; masking the context is what lowers linkage</h2>
+        <div class="content" style="display: grid; grid-template-columns: 1.75fr 1fr; gap: 30px; align-items: center;">
+          <div>
+            <div class="bigcmp">
+              <div><p class="big">93–100%</p><p class="lbl">of texts still linked to their author with off-the-shelf detectors</p></div>
+              <p class="arr">→</p>
+              <div><p class="big teal">59%</p><p class="lbl">with a local LLM for the context: a finding</p></div>
+            </div>
+            <div class="takes">
+              <p><b>The price</b> a few points of extraction quality, and replies to check: made-up placeholders, values swapped between parties.</p>
+              <p><b>Next</b> derived values computed locally, a second human annotator, real consented data.</p>
+            </div>
+            <p class="questions">Questions?</p>
+          </div>
+          <div class="fig" style="height: 100%;"><img class="illus" src="img/closing.png" alt="A shield in front of a partly covered letter, beside a balanced scale."></div>
+        </div>
+        <aside class="notes">
+          [1:10 · Mattia] Three things to take home. Off-the-shelf redaction of names and codes leaves the writer identifiable almost every time. Masking the context with a local LLM cuts linkage to 59 percent, which is our main finding, and still far above chance. The price is a few points of extraction quality and replies a user must read before sending. What we would do next: compute derived values like totals locally, add a second human annotator, and test on real mail given with consent. Thank you; happy to take questions.
+        </aside>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="vendor/reveal.js"></script>
+  <script src="vendor/notes.js"></script>
+  <script src="demo-data.js"></script>
+  <script src="demo.js"></script>
+  <script src="charts.js"></script>
+  <script>
+    /* the five parts of the course structure (speakers and minutes are in the speaker notes) */
+    const PARTS = { 1: 'Introduction', 2: 'Related work', 3: 'Methodology', 4: 'Results', 5: 'Conclusion' };
+
+    /* a missing illustration shows a dashed placeholder instead of a broken image */
+    document.querySelectorAll('img.illus, img.icon').forEach((img) => {
+      const fail = () => {
+        const box = document.createElement('div');
+        box.className = (img.classList.contains('icon') ? 'icon-slot' : 'fig') + ' missing';
+        box.style.cssText = img.classList.contains('icon') ? 'width:64px;height:64px;' : 'width:100%;height:100%;min-height:120px;';
+        box.textContent = img.getAttribute('src').replace('img/', '');
+        img.replaceWith(box);
+      };
+      if (img.complete && img.naturalWidth === 0) fail(); else img.addEventListener('error', fail);
+    });
+
+    // running header: "Part 3" becomes the part number, its label and the slide number,
+    // on one ruled line across the top
+    (function () {
+      const all = [...document.querySelectorAll('.reveal .slides > section')];
+      const pad = (n) => String(n).padStart(2, '0');
+      all.forEach((sec, i) => {
+        const who = sec.querySelector(':scope > .who');
+        if (!who) return;
+        const t = who.textContent.trim();
+        let m, num, label;
+        if ((m = t.match(/^Part (\d+)$/)) && PARTS[m[1]]) { num = pad(m[1]); label = PARTS[m[1]]; }
+        else { num = '→'; label = t; }
+        who.innerHTML = `<span class="pn">${num}</span><span class="pl">${label}</span><span class="sn">${pad(i + 1)} / ${all.length}</span>`;
+      });
+    })();
+    // reveal centres the scaled slide at 50%/50%, which often lands on a half pixel and
+    // softens all text; nudge it so the slide's corner sits on a whole pixel
+    function snapSlides() {
+      const s = document.querySelector('.reveal .slides');
+      s.style.left = '50%'; s.style.top = '50%';
+      const r = s.getBoundingClientRect(), cs = getComputedStyle(s);
+      s.style.left = (parseFloat(cs.left) + Math.round(r.x) - r.x) + 'px';
+      s.style.top = (parseFloat(cs.top) + Math.round(r.y) - r.y) + 'px';
+    }
+    // reveal writes left/top back to 50% on every layout: snap again whenever it does
+    Reveal.on('ready', () => {
+      const s = document.querySelector('.reveal .slides');
+      new MutationObserver(() => { if (s.style.top === '50%') snapSlides(); })
+        .observe(s, { attributes: true, attributeFilter: ['style'] });
+      snapSlides();
+    });
+    Reveal.initialize({
+      width: 1280, height: 720, margin: 0,
+      controls: true, progress: true, slideNumber: false, hash: true,
+      transition: 'slide', center: false,
+      plugins: [RevealNotes],
+    }).then(() => { OmissisDemo.init(); });
+    OmissisCharts.init();
+  </script>
+</body>
+</html>
