@@ -1,4 +1,4 @@
-/* Charts of the deck. Every number is copied from results/test/metrics/ (scorecard of
+/* Charts of the deck (copy of presentation/charts.js; one interval end corrected to 0.544). Every number is copied from results/test/metrics/ (scorecard of
    22 Nov 2026); the file each comes from is named next to it. */
 (function () {
   const NAVY = '#26272B', CORAL = '#D84366', TEAL = '#3560A0', MUSTARD = '#977FD4', MUTED = '#66676D';
@@ -140,7 +140,7 @@
       const L = [
         ['REF-none', 1.0, 1.0, 1.0, NAVY], ['D2+R1', 1.0, 1.0, 1.0, MUSTARD], ['REF-oracle-direct', 0.978, 0.935, 1.0, NAVY],
         ['D1+R1', 0.935, 0.848, 1.0, MUSTARD], ['D4+R1', 0.587, 0.435, 0.739, CORAL], ['REF-oracle', 0.5, 0.348, 0.652, NAVY],
-        ['D4+R2', 0.413, 0.283, 0.543, TEAL],
+        ['D4+R2', 0.413, 0.283, 0.544, TEAL],
       ];
       return new Chart(ctx, {
         type: 'bar',

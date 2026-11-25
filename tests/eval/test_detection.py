@@ -1,4 +1,4 @@
-"""Detection metrics and latency (task 3.9): hand-computed toy cases, fake detectors."""
+"""Detection metrics and latency: hand-computed toy cases, fake detectors."""
 
 import json
 import shutil

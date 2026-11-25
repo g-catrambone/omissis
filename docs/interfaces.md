@@ -3,7 +3,7 @@
 How the parts of the project connect. This document is the contract: the code in
 `src/omissis/contracts.py` and the boundary functions must match it exactly.
 A change of behaviour changes this document in the same commit and gets a row
-in `docs/decisions.md` (CLAUDE.md, rule 5).
+in `docs/decisions.md`.
 
 Sections: 1 data contracts · 2 placeholder grammar · 3 boundary functions ·
 4 configuration · 5 file formats · 6 who calls what.

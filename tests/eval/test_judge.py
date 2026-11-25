@@ -1,4 +1,4 @@
-"""The judge and its validation (task 3.7), with a fake provider."""
+"""The judge and its validation, with a fake provider."""
 
 import csv
 import json

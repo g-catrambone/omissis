@@ -1,6 +1,6 @@
 # Error examples on dev
 
-Step C1 of `docs/process/TODO.md`. The 20 dev texts, results of 22 Nov 2026 (after the fix of
+The 20 dev texts, results of 22 Nov 2026 (after the fix of
 the D1 span, `docs/decisions.md`). No model was called to write this file.
 
 ## 1. Restored replies: the counts of the inspection

@@ -293,7 +293,7 @@ def test_page_says_that_d3_and_d4_read_the_whole_text_before_it_is_masked(setup)
     assert "anonym" not in header.lower()
 
 
-# --- the request and its feasibility check (step B5) ---------------------------------------
+# --- the request and its feasibility check -------------------------------------------------
 
 SUM = "Calcola il totale degli importi indicati"
 

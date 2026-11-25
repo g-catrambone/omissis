@@ -1,6 +1,6 @@
 # Error taxonomy on dev
 
-Step C2 of `docs/process/TODO.md`; protocol, section 13: categorised dev examples of missed
+Protocol, section 13: categorised dev examples of missed
 identifiers, failed restorations, derived values and successful attacks. The 20 dev
 texts, results of 22 Nov 2026. Built from `results/dev/error_examples.md`, the
 `per_text` lists of `results/dev/metrics/` and `results/dev/masked/`. No model was
