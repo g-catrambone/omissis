@@ -47,3 +47,16 @@
 .reveal .slides section > .content.ltiles.compact { gap: 18px 26px; padding: 22px 0 34px 0; }
 .reveal .ltiles.compact .lt .kw { font-size: 17pt; }
 .reveal .ltiles.compact .lt .ln { font-size: 14pt; }
+
+/* limits: how a user would run it (the professor's question), a dark band under the tiles */
+.reveal .usebar {
+  display: grid; grid-template-columns: auto 1fr 1fr 1fr; gap: 24px; align-items: start;
+  background: var(--text-color); border-radius: 6px; padding: 10px 20px; margin-bottom: 4px;
+}
+.reveal .usebar .gl { font-size: 11pt; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #F2B3C2; line-height: 1.35; align-self: center; }
+.reveal .usebar .ub { border-left: 3px solid var(--muted-color); padding-left: 11px; }
+.reveal .usebar .ub.ok { border-color: #6F98D8; }  /* cobalt, lightened to show on the dark band */
+.reveal .usebar .ub.open { border-color: var(--mustard, #E0B23A); }
+.reveal .usebar .ub.no { border-color: var(--coral); }
+.reveal .usebar .ub b { display: block; font-size: 13pt; color: #fff; margin-bottom: 1px; }
+.reveal .usebar .ub span { display: block; font-size: 11.5pt; line-height: 1.3; color: #D9D8D4; }

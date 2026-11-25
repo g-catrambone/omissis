@@ -393,8 +393,15 @@
           <div class="lt"><p class="kw">Optimistic intervals</p><p class="ln">Texts by the same author are not independent.</p></div>
           <div class="lt"><p class="kw">Pseudonymisation, not anonymisation</p><p class="ln">We measure re-identification risk, not legal anonymity.</p></div>
         </div>
+        <div class="usebar">
+          <span class="gl">How a user<br>gets it</span>
+          <div class="ub ok"><b>Apps on an API: yes</b><span>The app calls Omissis first; users install nothing. The case we built.</span></div>
+          <div class="ub open"><b>Coding agents: in principle</b><span>A local proxy fits, but every turn resends the whole session: too slow.</span></div>
+          <div class="ub no"><b>Chat apps: no clean hook</b><span>Text goes straight from the browser; only a fragile extension could catch it.</span></div>
+        </div>
         <aside class="notes">
-          [0:50 · Mattia] What these numbers do not say. Synthetic data, written by one model. No human annotated or rated since 21 November: an AI agent did, and one member approved its reports. The judge for drafted replies failed its validation, kappa 0.37 against 0.6, so the reply score exists only for the hybrid. One attacker, no outside data. Texts by the same author are not independent, so our intervals are optimistic. And this is pseudonymisation, never an anonymous text.
+          [1:20 · Mattia] What these numbers do not say. Synthetic data, written by one model. No human annotated or rated since 21 November: an AI agent did, and one member approved its reports. The judge for drafted replies failed its validation, kappa 0.37 against 0.6, so the reply score exists only for the hybrid. One attacker, no outside data. Texts by the same author are not independent, so our intervals are optimistic. And this is pseudonymisation, never an anonymous text.
+          Last, the question we were asked: how would someone actually use it? What matters is whether the user's software lets you choose where its requests go. An application that calls a model through an API, say a bank's assistant for its staff, does: the company adds Omissis before the call and restores the reply, and the end user installs nothing. That is the case we built and measured, one message and one reply. Coding agents like Claude Code or Codex also talk to an API, and both let you point them at a local proxy, so in principle the same layer fits. In practice every request resends the whole session, mostly code rather than Italian mail; running a local LLM over it on every turn is too slow, and the vault has to last the whole session, which we did not build. Consumer chat apps like ChatGPT or Claude.ai are the hard case: the text goes from the browser straight to the vendor, with no setting to redirect it. The only hook is a browser extension that rewrites the text box and the reply on the page: fragile, and attachments go around it. Our app cannot stand in by copy and paste either: it sends the text itself, and its vault is erased, so a reply pasted back could not be restored.
         </aside>
       </section>
 
