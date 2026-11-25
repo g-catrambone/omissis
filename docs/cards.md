@@ -3,8 +3,7 @@
 One entry per model role of `configs/models.yaml`, one for what D1 runs on, one for
 the dataset. Model ids and revisions are copied from `configs/models.yaml`, which
 prevails if the two ever differ. Every licence was read at the link given, on
-19 Nov 2026, except where an entry says it was not read; **Human:** Giuseppe
-confirms them.
+19 Nov 2026, except where an entry says it was not read.
 
 ## Hosted models (GroqCloud)
 

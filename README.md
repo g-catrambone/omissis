@@ -278,7 +278,8 @@ What else the numbers show, with no test run on it:
   span masked (`REF-oracle`) the attacker still names the author of 0.50 of the
   texts, against 0.04 by chance; `D4+R1` is at 0.59.
 - **The configurations that leave quasi-identifiers in clear are linked almost
-  always.** `REF-oracle-direct`, which masks the direct identifiers alone, is at
+  always.** `REF-oracle-direct`, which masks the direct identifiers and the special
+  categories, is at
   0.98; `D1+R1` is at 0.93 and `D2+R1` at 1.00, against 1.00 with nothing masked.
 - **`D4+R2` and `D4+R1`** stand at 0.41 and 0.59 on linkage and at 0.95 and 0.90 on
   T3. This is not a declared contrast: the estimates are side by side, and R2 is
@@ -390,8 +391,6 @@ answer the first case. Both change what was evaluated, so they are future work.
   - Nothing in the code forces the role `d3` to a local model: a models file
     that points it to a hosted service sends the original text there. The app
     says so on its page.
-  - Other limits are listed in `docs/process/handoff/block-2.md` (section 4) and
-    `docs/process/handoff/block-3.md` (section 5).
 
 ## How it uses the course
 
@@ -420,16 +419,15 @@ answer the first case. Both change what was evaluated, so they are future work.
 | `docs/interfaces.md`, `docs/evaluation_protocol.md` | The two specifications: contracts and file formats; data, metrics and statistics |
 | `docs/cards.md`, `docs/annotation_guide.md` | Model and data cards; how the gold spans are tagged |
 | `docs/decisions.md`, `docs/ai_use.md` | The log of the decisions and the register of AI use |
-| `docs/slides/` | Drafts of the presentation |
-| `docs/process/`, `CLAUDE.md`, `.claude/` | How the team worked with coding agents: the shared instructions, the personal files, the hand-over notes of the code and the closing list. Nothing here is needed to run the project |
+| `presentation/` | The slides: open `index.html` in a browser, everything it loads is in the folder |
 
 ## Team
 
 | Member | Main contributions | Presents |
 |---|---|---|
-| Giuseppe Catrambone | Project proposal; the two specifications; the foundation (contracts, configuration, vault, backend types); review and correction of every part before its merge; the local provider of D3; the feasibility check; review and approval of the data; the evaluation runs on dev and test; results and closing | Problem, existing tools, architecture, demo, conclusions |
-| Mattia Sebastiani | First implementation of the pipeline (D0 rules, span merging, R1 placeholders, restoration, backends, command line, fixtures), of the detectors D1 to D4, of the Gradio app and of the evaluation code; the profiles and the 66 texts; the first pilot run | The five detectors |
-| Andrea Saracino | `make reproduce`; the model and data cards; the first README; the slide drafts | Evaluation design, results, limits |
+| Giuseppe Catrambone | Project proposal; the two specifications; the foundation (contracts, configuration, vault, backend types); review and correction of every part before its merge; the local provider of D3; the feasibility check; review and approval of the data; the evaluation runs on dev and test; results and closing | Introduction, related work |
+| Mattia Sebastiani | First implementation of the pipeline (D0 rules, span merging, R1 placeholders, restoration, backends, command line, fixtures), of the detectors D1 to D4, of the Gradio app and of the evaluation code; the profiles and the 66 texts; the first pilot run; the slides and the recorded demo in them | Architecture, design choices, the five detectors, demo, limits, conclusions |
+| Andrea Saracino | `make reproduce`; the model and data cards; the first README; the slides in the course structure; the clean-clone check and the offline `make` targets | Evaluation design, results, what did not work |
 
 The scope, the name of the project, the evaluation protocol and the design
 decisions of the first week were taken by the three together
