@@ -77,7 +77,7 @@ The type labels are the ASCII values of `SpanType` in `src/omissis/contracts.py`
   one exception to the rule above.
 - **Every mention is tagged**, including repeats and the signature.
 
-## 4. Edge cases (to be rewritten by the team in their own words)
+## 4. Edge cases
 
 1. **Durations are not dates.** `venti giorni`, `da cinque anni`: not tagged.
    A year alone (`dal 2019`) is tagged `DATA` only if it locates an event in
