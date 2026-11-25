@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0026",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 28,
+      "end": 37,
+      "text": "sindacale",
+      "type": "SINDACATO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "partecipazione a riunioni sindacali"
+    },
+    {
+      "start": 298,
+      "end": 307,
+      "text": "sindacale",
+      "type": "SINDACATO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "partecipazione a riunioni sindacali"
+    },
+    {
+      "start": 458,
+      "end": 477,
+      "text": "agente di commercio",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 488,
+      "end": 517,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione in cui lavora"
+    },
+    {
+      "start": 543,
+      "end": 551,
+      "text": "JE-94575",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 634,
+      "end": 643,
+      "text": "sindacale",
+      "type": "SINDACATO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "partecipazione a riunioni sindacali"
+    },
+    {
+      "start": 663,
+      "end": 679,
+      "text": "16 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data dell'incontro sindacale"
+    },
+    {
+      "start": 709,
+      "end": 722,
+      "text": "sede centrale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede dell'incontro"
+    },
+    {
+      "start": 725,
+      "end": 731,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo dell'incontro sindacale"
+    },
+    {
+      "start": 833,
+      "end": 842,
+      "text": "sindacale",
+      "type": "SINDACATO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "partecipazione a riunioni sindacali"
+    },
+    {
+      "start": 1368,
+      "end": 1383,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "istituto bancario menzionato"
+    }
+  ],
+  "seconds": 0.001
+}

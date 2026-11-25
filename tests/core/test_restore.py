@@ -1,4 +1,4 @@
-"""Restore of R1 placeholders: exact and normalised steps (block 1), fuzzy step (task 2.6)."""
+"""Restore of R1 placeholders: exact and normalised steps, fuzzy step."""
 
 import pytest
 
@@ -133,7 +133,7 @@ def test_threshold_out_of_range_is_rejected():
         restore("x", Vault(), 1.5)
 
 
-# --- task 2.6: escapes, hyphens, fuzzy step, final scan -------------------------------
+# --- escapes, hyphens, fuzzy step, final scan -------------------------------
 
 
 @pytest.mark.parametrize(

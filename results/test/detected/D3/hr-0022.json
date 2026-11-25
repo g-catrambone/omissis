@@ -1,0 +1,97 @@
+{
+  "text_id": "hr-0022",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "start": 103,
+      "end": 129,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "start": 195,
+      "end": 203,
+      "text": "WJ-93942",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 217,
+      "end": 229,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 240,
+      "end": 255,
+      "text": "sede di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica dell'azienda"
+    },
+    {
+      "start": 348,
+      "end": 363,
+      "text": "sede di Palermo",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di destinazione del trasferimento"
+    },
+    {
+      "start": 730,
+      "end": 740,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "retribuzione mensile indicata"
+    },
+    {
+      "start": 1062,
+      "end": 1077,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
+    },
+    {
+      "start": 1079,
+      "end": 1097,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "filiale bancaria specifica"
+    },
+    {
+      "start": 1240,
+      "end": 1256,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui la richiesta deve essere presa in considerazione"
+    }
+  ],
+  "seconds": 0.0017
+}

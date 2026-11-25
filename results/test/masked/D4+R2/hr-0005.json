@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0005",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta approvazione assenza per malattia - Elettra Fiorucci\n\nGentile Ufficio del Personale di Edilnova Tarsia S.r.l.,\n\nmi chiamo Elettra Fiorucci e sono la [RUOLO_1] presso la [STRUTTURA_1] di Sondrio. Vi scrivo per comunicare la mia assenza dal lavoro a partire dal 21 novembre 2026 fino al 18 novembre 2026.\n\nLa causa dell'assenza è legata a una [SALUTE_1] in cura che richiede un periodo di riposo e terapie specifiche, come certificato dal mio medico curante. Ho già provveduto a trasmettere la documentazione medica necessaria tramite la piattaforma aziendale, ma vi chiedo cortesemente di procedere con l'approvazione formale della richiesta per garantire la corretta gestione della mia posizione in busta paga.\n\nPer facilitare le verifiche, riporto i miei dati anagrafici e di contatto: la mia matricola aziendale è QL-46180, il codice fiscale è VPVCFV68B06X668Q e sono raggiungibile al numero 384 914 0705 o all'indirizzo ottavia.tedeschini@example.com.\n\nVi prego di considerare questa comunicazione come formale richiesta di autorizzazione all'assenza. Resto a disposizione per eventuali chiarimenti, pur nella consapevolezza che in questo periodo di convalescenza la mia disponibilità sarà limitata.\n\nCordiali saluti,\n\nElettra Fiorucci\n",
+  "disclosure": [
+    {
+      "surrogate": "Elettra Fiorucci",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "Edilnova Tarsia S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda datore di lavoro"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere della persona che scrive"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "[STRUTTURA_1] dell'azienda"
+    },
+    {
+      "surrogate": "Sondrio",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città dove si trova la [STRUTTURA_1]"
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio assenza"
+    },
+    {
+      "surrogate": "18 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di fine assenza"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi di malattia"
+    },
+    {
+      "surrogate": "QL-46180",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "VPVCFV68B06X668Q",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "384 914 0705",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ottavia.tedeschini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0025",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta permesso sindacale per Mafalda Zambelli\n\nGentile [STRUTTURA_1] di Dorigatti Alimentari S.p.A.,\n\nmi chiamo Mafalda Zambelli e lavoro come [RUOLO_1] presso la [STRUTTURA_2]. Vi scrivo per richiedere formalmente l'approvazione di un permesso sindacale. In qualità di [RUOLO_2], devo partecipare a un incontro urgente con la segreteria regionale previsto per il 1 novembre 2026.\n\nL'assenza durerà l'intera giornata lavorativa, dalle ore 08:30 alle ore 17:00. Vi chiedo cortesemente di autorizzare questa assenza, che è prevista dal contratto collettivo nazionale di lavoro per le attività sindacali. Per completezza amministrativa, vi comunico che la mia matricola aziendale è GO-58968 e il mio codice fiscale è FGFLBF87E59X411M.\n\nResto a disposizione per qualsiasi chiarimento in merito a questa richiesta. Vi prego di confermare la ricezione e l'approvazione entro il 21 novembre 2026, così da poter organizzare al meglio le attività contabili della settimana.\n\nCordiali saluti,\n\nMafalda Zambelli\ngioele.salvadori@example.com\n306 275 4379\n",
+  "disclosure": [
+    {
+      "surrogate": "Mafalda Zambelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Dorigatti Alimentari S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "surrogate": "[STRUTTURA_2]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_2]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "ruolo specifico di chi scrive"
+    },
+    {
+      "surrogate": "1 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data dell'incontro"
+    },
+    {
+      "surrogate": "GO-58968",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "FGFLBF87E59X411M",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "surrogate": "gioele.salvadori@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "306 275 4379",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0019",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta trasferimento sede [CITTA_1] - [PERSONA_1_M]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono un [RUOLO_1] presso la vostra azienda. Vi scrivo per formalizzare la mia richiesta di trasferimento alla sede di [CITTA_1], che desidero avvenga a partire dal [DATA_1].\n\nLa motivazione principale è legata a esigenze familiari che richiedono la mia presenza in quella zona. Attualmente risiedo a [CITTA_2], ma la nuova sede mi permetterebbe di gestire meglio le mie responsabilità personali senza compromettere la mia dedizione al lavoro. Ho sempre svolto il mio incarico con costanza e rispetto delle regole aziendali, come dimostra la mia [UTENTE_1].\n\nPer completezza amministrativa, vi comunico che il mio codice fiscale è [CF_1] e che posso essere contattato al numero [TELEFONO_1] o tramite l'indirizzo [EMAIL_1]. Ho anche verificato che il mio conto corrente presso [AZIENDA_2], [STRUTTURA_1], è attivo e pronto per eventuali addebiti o accrediti legati alla nuova sede.\n\nVi chiedo cortesemente di valutare positivamente questa istanza e di comunicarmi le eventuali procedure burocratiche da seguire. Resto a disposizione per qualsiasi chiarimento o documentazione aggiuntiva necessaria per completare la pratica.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora l'autore"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere dell'autore"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio del trasferimento"
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di residenza attuale"
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo interno dell'azienda"
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    }
+  ]
+}

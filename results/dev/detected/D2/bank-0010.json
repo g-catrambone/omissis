@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0010",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 115,
+      "end": 134,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.9902778069178263,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 423,
+      "end": 429,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.9990674555301666,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1143,
+      "end": 1162,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA",
+      "confidence": 0.9892550706863403,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1163,
+      "end": 1166,
+      "text": "gia",
+      "type": "EMAIL",
+      "confidence": 0.6447568535804749,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1166,
+      "end": 1182,
+      "text": "como.passalacqua",
+      "type": "UTENTE",
+      "confidence": 0.7445546984672546,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1445
+}

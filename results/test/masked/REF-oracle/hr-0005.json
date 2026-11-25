@@ -1,0 +1,85 @@
+{
+  "text_id": "hr-0005",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta approvazione assenza per malattia - [PERSONA_1_F]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono la [RUOLO_1] presso la sede di [CITTA_1]. Vi scrivo per comunicare la mia assenza dal lavoro a partire dal [DATA_1] fino al [DATA_2].\n\nLa causa dell'assenza è legata a una [SALUTE_1] in cura che richiede un periodo di riposo e terapie specifiche, come certificato dal mio medico curante. Ho già provveduto a trasmettere la documentazione medica necessaria tramite la piattaforma aziendale, ma vi chiedo cortesemente di procedere con l'approvazione formale della richiesta per garantire la corretta gestione della mia posizione in busta paga.\n\nPer facilitare le verifiche, riporto i miei dati anagrafici e di contatto: la mia matricola aziendale è [UTENTE_1], il codice fiscale è [CF_1] e sono raggiungibile al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nVi prego di considerare questa comunicazione come formale richiesta di autorizzazione all'assenza. Resto a disposizione per eventuali chiarimenti, pur nella consapevolezza che in questo periodo di convalescenza la mia disponibilità sarà limitata.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

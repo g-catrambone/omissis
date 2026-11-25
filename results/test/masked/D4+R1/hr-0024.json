@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0024",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta registrazione assenza sindacale - [PERSONA_1_F]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono [RUOLO_1] presso la sede di [CITTA_1]. Vi scrivo per comunicare la mia assenza dal lavoro per motivi sindacali. In qualità di [SINDACATO_1] di reparto, devo partecipare a un incontro urgente con la rappresentanza aziendale per discutere le condizioni contrattuali del prossimo triennio.\n\nL'assenza è prevista per il giorno [DATA_1]. Vi chiedo cortesemente di registrare questa giornata come permesso sindacale retribuito, così da garantire la corretta gestione della mia presenza in busta paga. Per facilitare le operazioni amministrative, allego alla presente la documentazione firmata dalla segreteria sindacale.\n\nI miei dati anagrafici e di contatto restano invariati: la mia matricola aziendale è [UTENTE_1], il codice fiscale è [CF_1] e posso essere raggiunta al numero [TELEFONO_1] o all'indirizzo [EMAIL_1]. Ricordo che la mia banca di riferimento è la [AZIENDA_2], [STRUTTURA_1], dove ho attivo un deposito titoli e una carta di credito.\n\nConfido nella Vostra sollecita presa in carico della richiesta per evitare disagi nella contabilità aziendale. Resto a disposizione per eventuali chiarimenti.\n\nCordiali saluti,\n\n[PERSONA_1_F]\nContabile\n[AZIENDA_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda del mittente"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città indicata come sede"
+    },
+    {
+      "surrogate": "[SINDACATO_1]",
+      "type": "SINDACATO",
+      "class": "special",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di assenza indicata"
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    }
+  ]
+}

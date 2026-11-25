@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0009",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 104,
+      "end": 119,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9787729829549789,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 446,
+      "end": 453,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9991189539432526,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 983,
+      "end": 989,
+      "text": "dario.",
+      "type": "EMAIL",
+      "confidence": 0.7932233413060507,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 989,
+      "end": 993,
+      "text": "alto",
+      "type": "UTENTE",
+      "confidence": 0.5514259338378906,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 993,
+      "end": 998,
+      "text": "belli",
+      "type": "EMAIL",
+      "confidence": 0.5387215614318848,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1031,
+      "end": 1046,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9927060008049011,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1345
+}

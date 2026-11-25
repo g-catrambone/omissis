@@ -1,22 +1,25 @@
-"""Review assignment, double annotation and agreement (task 3.5; protocol, section 3).
+"""Review assignment, double annotation and agreement (protocol, section 3).
 
     python -m omissis.eval.review assign       write data/pool/REVIEWERS.md
     python -m omissis.eval.review export       write data/annotation/<text_id>.txt
     python -m omissis.eval.review agreement    write results/dev/metrics/agreement.json
 
-One member does the human work (docs/decisions.md, 18 Nov): `assign` gives the 66
+One member answers for the review (docs/decisions.md, 18 Nov; since 21 Nov his AI agent
+does it and he approves it on a written report): `assign` gives the 66
 planned texts to the names of `MEMBERS`, in turn by seed, and picks the 13 texts of the
 blind annotation among those that are not pilot texts, in proportion to the two
 domains.
 
 `export` writes those 13 as plain text, with no tag: the annotator adds
 `[[TYPE|text]]` tags without having seen the tags of the generator and saves
-`data/annotation/<text_id>.<initials>.txt`.
+`data/annotation/<text_id>.<initials>.txt` (`AI` in place of the initials when the
+annotator is the agent).
 
 `agreement` compares each annotated copy with the tags of the generator, so it runs
 before those 13 texts are reviewed: span F1 under exact and overlap matching, and
 Cohen's kappa on the class of the spans paired by character overlap whatever their
-class. It measures one human against the generator, not two humans.
+class. It measures one annotator against the generator: since 21 Nov an AI annotator,
+so two models and no human.
 """
 
 from __future__ import annotations
@@ -71,6 +74,11 @@ def reviewers_md(table: dict[str, dict[str, str]]) -> str:
         "last column are first annotated from plain text, with no tag visible, and",
         "`python -m omissis.eval.review agreement` is run before any of them is reviewed",
         "(`docs/evaluation_protocol.md`, section 3).",
+        "",
+        "Since 21 Nov the review and the blind annotation are done by the AI agent of the",
+        "member named here, who approves them on its report: his initials in `reviewed_by`",
+        "record the approval, and the annotated copies are `<text_id>.AI.txt`",
+        "(`docs/decisions.md`).",
         "",
         "| Text | Reviewer | Blind annotation first |",
         "|---|---|---|",

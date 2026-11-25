@@ -1,0 +1,46 @@
+{
+  "split": "dev",
+  "seed": 20261111,
+  "generated_from": [
+    "b07665f0c252",
+    "d1aa840154d6",
+    "18bdbd066964",
+    "49f599e17121",
+    "bd5400e9b707",
+    "933a73c866b3",
+    "65b4d39c07a9"
+  ],
+  "rows": [
+    {
+      "a": "D4+R1",
+      "b": "D1+R1",
+      "metric": "linkage_top1_n25",
+      "texts": 20,
+      "difference": -0.35,
+      "low": -0.55,
+      "high": -0.15,
+      "test": "mcnemar_exact",
+      "p": 0.015625,
+      "a_only": 0,
+      "b_only": 7,
+      "p_holm": 0.03125,
+      "finding": true
+    },
+    {
+      "a": "D4+R2",
+      "b": "D4+R1",
+      "metric": "full_restoration",
+      "texts": 20,
+      "difference": -0.1,
+      "low": -0.35,
+      "high": 0.15,
+      "test": "mcnemar_exact",
+      "p": 0.6875,
+      "a_only": 2,
+      "b_only": 4,
+      "p_holm": 0.6875,
+      "finding": false
+    }
+  ],
+  "per_text": []
+}

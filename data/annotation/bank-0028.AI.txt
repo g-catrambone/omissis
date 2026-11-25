@@ -1,0 +1,14 @@
+Oggetto: Richiesta chiusura conto e trasferimento fondi - [[PERSONA|Ilaria Tagliaferri]]
+
+Gentile [[AZIENDA|Banca Popolare di Rocciaviva]],
+
+mi chiamo [[PERSONA|Ilaria Tagliaferri]] e sono titolare del conto corrente con IBAN [[IBAN|IT60K0000002707830380370892]]. Vi scrivo per richiedere la chiusura definitiva del rapporto contrattuale e il trasferimento delle somme residue.
+
+Attualmente lavoro come [[RUOLO|autista]] presso [[AZIENDA|Cantieri Dorsano S.p.A.]] a [[CITTA|Viterbo]], ma per motivi personali ho deciso di recedere dal contratto. Desidero che l'intero saldo disponibile, pari a [[IMPORTO|€ 1.200,50]], venga trasferito sul conto di mia scelta entro il [[DATA|15 dicembre 2026]].
+
+Vi prego di procedere anche alla disattivazione della carta di credito associata al conto. Per qualsiasi necessità, potete contattarmi al numero [[TELEFONO|315 250 0573]] o all'indirizzo [[EMAIL|ilaria.tagliaferri@example.com]]. Il mio codice fiscale è [[CF|PRCBVV34A20X065L]] e la matricola aziendale è [[UTENTE|TZ-58390]].
+
+Resto in attesa di una vostra cortese conferma scritta entro il [[DATA|10 dicembre 2026]] per verificare che l'operazione sia stata correttamente avviata. Grazie per la collaborazione.
+
+Cordiali saluti,
+[[PERSONA|Ilaria Tagliaferri]]

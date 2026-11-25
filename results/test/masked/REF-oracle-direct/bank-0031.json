@@ -1,0 +1,50 @@
+{
+  "text_id": "bank-0031",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Reclamo spese conto corrente e richiesta colloquio\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1]. Scrivo per segnalare la mia forte contrarietà alle commissioni di gestione e alle spese di incasso addebitate sul mio conto negli ultimi mesi. In particolare, ho notato un addebito di € 45,00 a titolo di \"servizio di gestione\" e un altro di € 12,50 per l'incasso di un assegno, operazioni che ritengo non concordate né giustificate dal contratto sottoscritto.\n\nLavoro come responsabile acquisti presso Caseificio Montelupo S.r.l. a Viterbo, e la gestione del mio conto è legata anche a un prestito personale attivo. La situazione economica attuale non mi consente di sostenere costi aggiuntivi non previsti. Il mio codice fiscale è [CF_1] e la matricola aziendale è [UTENTE_1].\n\nNon desidero procedere con una semplice contestazione scritta, ma ritengo fondamentale un confronto diretto per chiarire la situazione e valutare le opzioni disponibili. Vi chiedo pertanto di fissare un incontro o un colloquio presso la filiale di Viterbo entro il 15 dicembre 2026. Sono disponibile a contattarvi al numero [TELEFONO_1] o via email all'indirizzo [EMAIL_1] per concordare data e ora.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

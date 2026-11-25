@@ -1,4 +1,4 @@
-"""Overlap resolution for detected spans (block 1).
+"""Overlap resolution for detected spans.
 
 Rule (docs/interfaces.md, `detect`): when two spans overlap, the longer span wins,
 then the one with higher confidence, then the one whose source comes earlier in

@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0006",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 109,
+      "end": 126,
+      "text": "Alessia Iacobelli",
+      "type": "PERSONA",
+      "confidence": 0.6630695581436157,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 219,
+      "end": 226,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.993731677532196,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1114,
+      "end": 1117,
+      "text": "836",
+      "type": "TELEFONO",
+      "confidence": 0.512536346912384,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1134,
+      "end": 1151,
+      "text": "alessia.iacobelli",
+      "type": "EMAIL",
+      "confidence": 0.9010455211003622,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1326,
+      "end": 1329,
+      "text": "Ale",
+      "type": "PERSONA",
+      "confidence": 0.5703551769256592,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1334,
+      "end": 1343,
+      "text": "Iacobelli",
+      "type": "PERSONA",
+      "confidence": 0.9806166688601176,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1332
+}

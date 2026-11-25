@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0015",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 63,
+      "end": 80,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 124,
+      "end": 141,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 185,
+      "end": 214,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 471,
+      "end": 478,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 672,
+      "end": 687,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 700,
+      "end": 707,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 920,
+      "end": 949,
+      "text": "roberta.uccellini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1086,
+      "end": 1094,
+      "text": "NT-86613",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1119,
+      "end": 1142,
+      "text": "GTTPBB45P16X906A. Resto",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1194,
+      "end": 1206,
+      "text": "319 776 5806",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1331,
+      "end": 1348,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0118
+}

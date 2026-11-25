@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0004",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta rimodulazione mutuo - Mafalda Petruzzelli\n\nGentile Banco di Roccalta,\n\nmi chiamo Mafalda Petruzzelli e sono titolare del conto corrente con IBAN IT36V0000007913100557931428 presso la [STRUTTURA_1]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mutuo ipotecario relativo alla mia prima casa, contratto in essere da diversi anni.\n\nAttualmente lavoro come [RUOLO_1] presso la società Officine Grafiche Baldeschi S.r.l., dove sono impiegata con la njfplqcgn hqvvxydwg WN-74528. A causa di una temporanea riduzione del mio reddito disponibile, dovuta a circostanze lavorative non dipendenti dalla mia volontà, mi trovo in difficoltà nel sostenere l'attuale rata mensile di € 5.199,50.\n\nVi chiedo pertanto di valutare la possibilità di allungare la durata del mutuo o di applicare un tasso variabile più favorevole, al fine di ridurre l'onere mensile. Il mio codice fiscale è PPNNVR13L18X066U e sono raggiungibile al numero 359 478 1043 o all'indirizzo mafalda.brunelleschi@example.com.\n\nSpero che possiate prendere in considerazione la mia richiesta entro il 27 dicembre 2026, così da poter pianificare il mio budget familiare per il prossimo trimestre. Resto a disposizione per fornire eventuali documentazione aggiuntiva necessaria per la valutazione della pratica.\n\nCordiali saluti,\n\nMafalda Petruzzelli\n",
+  "disclosure": [
+    {
+      "surrogate": "Mafalda Petruzzelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "IT36V0000007913100557931428",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Officine Grafiche Baldeschi S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "surrogate": "njfplqcgn hqvvxydwg WN-74528",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    },
+    {
+      "surrogate": "€ 5.199,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo della rata mensile"
+    },
+    {
+      "surrogate": "PPNNVR13L18X066U",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "359 478 1043",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "mafalda.brunelleschi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui la richiesta deve essere presa in considerazione"
+    }
+  ]
+}

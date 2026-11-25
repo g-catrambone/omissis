@@ -1,0 +1,70 @@
+{
+  "text_id": "hr-0009",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 37,
+      "end": 54,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 89,
+      "end": 115,
+      "text": "Caseificio Montelupo S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 129,
+      "end": 146,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 285,
+      "end": 291,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1113,
+      "end": 1130,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1131,
+      "end": 1160,
+      "text": "alberto.cavallari@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1161,
+      "end": 1173,
+      "text": "383 955 2751",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0107
+}

@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0024",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 126,
+      "end": 144,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.6576017737388611,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 187,
+      "end": 193,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.9914248585700989,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1092,
+      "end": 1110,
+      "text": "umberto.giacomelli",
+      "type": "EMAIL",
+      "confidence": 0.8706791571208409,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1384,
+      "end": 1394,
+      "text": "Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.9802409013112386,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1449
+}

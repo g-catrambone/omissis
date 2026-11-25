@@ -1,0 +1,50 @@
+{
+  "text_id": "bank-0007",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - [PERSONA_1_M]\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, di importo pari a € 145,00, è stato registrato il 12 novembre 2026 presso un esercente a Cremona. Il secondo, di € 89,50, risale al 15 novembre 2026 e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come autista presso Farmacie Riunite Altavilla S.p.A. e la mia matricola aziendale è [UTENTE_1]. Per facilitare le verifiche, il mio codice fiscale è [CF_1] e posso essere contattato al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nVi chiedo cortesemente di aprire una pratica di verifica o un'indagine formale per accertare la natura di questi movimenti e bloccare eventuali ulteriori utilizzi fraudolenti della carta. Resto in attesa di un vostro riscontro in merito all'avvio delle procedure di controllo.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

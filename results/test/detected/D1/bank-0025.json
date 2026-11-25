@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0025",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 66,
+      "end": 85,
+      "text": "Massimo Evangelisti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 125,
+      "end": 144,
+      "text": "Massimo Evangelisti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 189,
+      "end": 216,
+      "text": "IT57E0000097728495291902297",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 417,
+      "end": 424,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 469,
+      "end": 498,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 769,
+      "end": 785,
+      "text": "SGTPNL13S51X806Z",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 893,
+      "end": 905,
+      "text": "329 001 5516",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 922,
+      "end": 953,
+      "text": "massimo.evangelisti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1154,
+      "end": 1173,
+      "text": "Massimo Evangelisti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0111
+}

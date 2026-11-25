@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0037",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta documenti per conto di Tancredi Salvadori\n\nGentile Cassa Rurale Valfiorita,\n\nmi chiamo Greta Montagnani e scrivo per richiedere le informazioni necessarie per procedere con la successione del conto corrente intestato a mio padre, Tancredi Salvadori, deceduto il 16 marzo 2026.\n\nSono la sua erede e ho bisogno di sapere quali documenti specifici devo presentare alla [STRUTTURA_1] per sbloccare le operazioni sul conto. In particolare, desidero ricevere copia dell'estratto conto aggiornato al momento del decesso e l'elenco dei prodotti attivi, tra cui la carta di debito e il prestito personale in corso.\n\nPer facilitare la verifica della mia identità, allego copia del mio documento d'identità e fornisco i miei dati anagrafici: codice fiscale TDZMPZ61L10X503P, telefono 353 016 7917 e email elettra.bellandi@example.com. L'IBAN del conto del defunto era IT15E0000045085079455006456.\n\nLavoro come [RUOLO_1] presso Edilnova Tarsia S.r.l. e la mia matricola aziendale è MG-99648. Vi chiedo cortesemente di inviarmi la documentazione richiesta entro il 10 novembre 2026, in quanto devo gestire alcune scadenze fiscali relative all'eredità.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\nGreta Montagnani\n",
+  "disclosure": [
+    {
+      "surrogate": "Tancredi Salvadori",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa Rurale Valfiorita",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "surrogate": "Greta Montagnani",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "16 marzo 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di morte del padre"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede specifica di un istituto bancario"
+    },
+    {
+      "surrogate": "TDZMPZ61L10X503P",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "353 016 7917",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "elettra.bellandi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "IT15E0000045085079455006456",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere della richiedente"
+    },
+    {
+      "surrogate": "Edilnova Tarsia S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la richiedente"
+    },
+    {
+      "surrogate": "MG-99648",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale della richiedente"
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    }
+  ]
+}

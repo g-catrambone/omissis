@@ -1,0 +1,151 @@
+{
+  "text_id": "hr-0022",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 38,
+      "end": 68,
+      "text": "Palermo - Federica Quattrocchi",
+      "type": "INDIRIZZO",
+      "confidence": 0.7527632057666779,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 103,
+      "end": 129,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "start": 142,
+      "end": 162,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 195,
+      "end": 203,
+      "text": "WJ-93942",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 217,
+      "end": 229,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 240,
+      "end": 255,
+      "text": "sede di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica dell'azienda"
+    },
+    {
+      "start": 348,
+      "end": 363,
+      "text": "sede di Palermo",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di destinazione del trasferimento"
+    },
+    {
+      "start": 730,
+      "end": 740,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "retribuzione mensile indicata"
+    },
+    {
+      "start": 899,
+      "end": 915,
+      "text": "PLTSVN21H14X456Y",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 952,
+      "end": 964,
+      "text": "358 044 0921",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 987,
+      "end": 1019,
+      "text": "federica.quattrocchi@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1062,
+      "end": 1077,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
+    },
+    {
+      "start": 1079,
+      "end": 1097,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "filiale bancaria specifica"
+    },
+    {
+      "start": 1108,
+      "end": 1135,
+      "text": "IT06R0000052125840795083093",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1240,
+      "end": 1256,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui la richiesta deve essere presa in considerazione"
+    },
+    {
+      "start": 1407,
+      "end": 1427,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1504
+}

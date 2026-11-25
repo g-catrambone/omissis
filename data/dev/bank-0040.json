@@ -1,0 +1,94 @@
+{
+  "id": "bank-0040",
+  "domain": "bank",
+  "scenario": "inheritance_unblock",
+  "profile_id": "p04",
+  "has_special": false,
+  "text": "Oggetto: Richiesta sblocco conto corrente defunto\n\nGentile Cassa Rurale di Montevago,\n\nmi chiamo Fabrizio Nicoletti e scrivo per richiedere l’apertura della successione e lo sblocco delle somme presenti sul conto corrente intestato a mio padre, deceduto il 12 marzo 2026. Sono l’unico erede e ho già depositato in filiale la dichiarazione di successione e il certificato di morte.\n\nIl conto in questione, identificato dall’IBAN IT11E0000023582267657498114, risulta attualmente bloccato. Vi chiedo cortesemente di procedere con la liberazione dei fondi o, in alternativa, di trasferire l’intero saldo disponibile, pari a circa € 4.500,00, sul mio conto corrente presso la stessa filiale.\n\nPer facilitare le verifiche, comunico che il mio codice fiscale è RZGFNN66L14X204C e che sono raggiungibile al numero 369 461 1173 o all’indirizzo fabrizio.nicoletti@example.com. Lavoro come contabile presso Tessitura Valgrande S.r.l. a Trapani, dove risiedo stabilmente.\n\nVi prego di considerare questa richiesta urgente, poiché ho necessità di coprire alcune spese funerarie residue e tasse pendenti. Resto a disposizione per fornire eventuali documenti aggiuntivi, come la copia del documento d’identità o la procura, se necessaria.\n\nIn attesa di un vostro cortese riscontro, porgo distinti saluti.\n\nFabrizio Nicoletti\n",
+  "spans": [
+    {
+      "start": 59,
+      "end": 84,
+      "text": "Cassa Rurale di Montevago",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 97,
+      "end": 115,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 257,
+      "end": 270,
+      "text": "12 marzo 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 428,
+      "end": 455,
+      "text": "IT11E0000023582267657498114",
+      "type": "IBAN"
+    },
+    {
+      "start": 626,
+      "end": 636,
+      "text": "€ 4.500,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 754,
+      "end": 770,
+      "text": "RZGFNN66L14X204C",
+      "type": "CF"
+    },
+    {
+      "start": 806,
+      "end": 818,
+      "text": "369 461 1173",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 835,
+      "end": 865,
+      "text": "fabrizio.nicoletti@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 879,
+      "end": 888,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 896,
+      "end": 922,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 925,
+      "end": 932,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 1291,
+      "end": 1309,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "inheritance_unblock",
+    "amounts": [
+      4500.0
+    ],
+    "dates": [
+      "2026-03-12"
+    ],
+    "requested_action": "release_funds",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0034",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 174,
+      "end": 201,
+      "text": "IT50N0000061021618288042279",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 597,
+      "end": 604,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 792,
+      "end": 799,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1145,
+      "end": 1157,
+      "text": "349 318 3143",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1158,
+      "end": 1188,
+      "text": "sabrina.lorenzetti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1189,
+      "end": 1205,
+      "text": "RNMPVP96S08X914J",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

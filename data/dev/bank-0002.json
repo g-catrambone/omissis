@@ -1,0 +1,113 @@
+{
+  "id": "bank-0002",
+  "domain": "bank",
+  "scenario": "mortgage_suspension",
+  "profile_id": "p11",
+  "has_special": true,
+  "text": "Oggetto: Richiesta rimodulazione finanziamento - Teresa Dellavalle\n\nGentile Banca Altopiano,\n\nmi chiamo Teresa Dellavalle e sono cliente della Vostra filiale di Pistoia. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mio finanziamento in essere.\n\nAttualmente lavoro come contabile presso la Cooperativa Edile Pietrafitta, ma da alcune settimane sto affrontando una fase critica legata alla mia emicrania cronica, che mi ha costretta a ridurre drasticamente la mia attività lavorativa e, di conseguenza, il mio reddito mensile. Questa situazione temporanea mi rende difficile sostenere l'attuale rata di € 450,00 prevista per il 15 dicembre 2026.\n\nNon chiedo la sospensione totale, ma una rinegoziazione delle rate per un periodo di sei mesi, in modo da alleggerire il carico economico immediato. I miei dati anagrafici sono: codice fiscale DTPBGT37E51X984X e matricola aziendale UL-67995. Per eventuali verifiche, potete contattarmi al numero 300 108 4408 o tramite l'indirizzo teresa.dellavalle@example.com.\n\nConfido nella Vostra comprensione e Vi chiedo di valutare la fattibilità di questa modifica entro il 30 novembre 2026, così da poter pianificare il budget familiare con maggiore serenità. Resto a disposizione per fornire documentazione medica o certificati del datore di lavoro se necessari.\n\nCordiali saluti,\n\nTeresa Dellavalle\n",
+  "spans": [
+    {
+      "start": 49,
+      "end": 66,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA"
+    },
+    {
+      "start": 76,
+      "end": 91,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 104,
+      "end": 121,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA"
+    },
+    {
+      "start": 161,
+      "end": 168,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 296,
+      "end": 305,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 316,
+      "end": 345,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 419,
+      "end": 436,
+      "text": "emicrania cronica",
+      "type": "SALUTE"
+    },
+    {
+      "start": 628,
+      "end": 636,
+      "text": "€ 450,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 653,
+      "end": 669,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 865,
+      "end": 881,
+      "text": "DTPBGT37E51X984X",
+      "type": "CF"
+    },
+    {
+      "start": 904,
+      "end": 912,
+      "text": "UL-67995",
+      "type": "UTENTE"
+    },
+    {
+      "start": 968,
+      "end": 980,
+      "text": "300 108 4408",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1003,
+      "end": 1032,
+      "text": "teresa.dellavalle@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1136,
+      "end": 1152,
+      "text": "30 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1346,
+      "end": 1363,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "mortgage_suspension",
+    "amounts": [
+      450.0
+    ],
+    "dates": [
+      "2026-12-15",
+      "2026-11-30"
+    ],
+    "requested_action": "reschedule_payment",
+    "deadline": "2026-11-30"
+  },
+  "reviewed_by": "GC"
+}

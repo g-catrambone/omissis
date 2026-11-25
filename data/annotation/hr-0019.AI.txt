@@ -1,0 +1,15 @@
+Oggetto: Richiesta trasferimento sede [[CITTA|Palermo]] - [[PERSONA|Dario Altobelli]]
+
+Gentile Ufficio del Personale di [[AZIENDA|Cantieri Dorsano S.p.A.]],
+
+mi chiamo [[PERSONA|Dario Altobelli]] e sono un [[RUOLO|custode]] presso la vostra azienda. Vi scrivo per formalizzare la mia richiesta di trasferimento alla sede di [[CITTA|Palermo]], che desidero avvenga a partire dal [[DATA|15 gennaio 2027]].
+
+La motivazione principale è legata a esigenze familiari che richiedono la mia presenza in quella zona. Attualmente risiedo a [[CITTA|Trapani]], ma la nuova sede mi permetterebbe di gestire meglio le mie responsabilità personali senza compromettere la mia dedizione al lavoro. Ho sempre svolto il mio incarico con costanza e rispetto delle regole aziendali, come dimostra la mia matricola [[UTENTE|GZ-20484]].
+
+Per completezza amministrativa, vi comunico che il mio codice fiscale è [[CF|LSMNRC73H03X830X]] e che posso essere contattato al numero [[TELEFONO|399 299 3390]] o tramite l'indirizzo [[EMAIL|dario.altobelli@example.com]]. Ho anche verificato che il mio conto corrente presso [[AZIENDA|Banca Altopiano]], filiale di [[CITTA|Trapani]], è attivo e pronto per eventuali addebiti o accrediti legati alla nuova sede.
+
+Vi chiedo cortesemente di valutare positivamente questa istanza e di comunicarmi le eventuali procedure burocratiche da seguire. Resto a disposizione per qualsiasi chiarimento o documentazione aggiuntiva necessaria per completare la pratica.
+
+Cordiali saluti,
+
+[[PERSONA|Dario Altobelli]]

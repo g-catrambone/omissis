@@ -1,0 +1,29 @@
+{
+  "text_id": "hr-0011",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta colloquio urgente - Fabrizio [PERSONA_1_M]\n\nGentile Ufficio del Personale di Tessitura Valgrande S.r.l.,\n\nmi chiamo [PERSONA_1_M], sono contabile e lavoro presso la sede di [CITTA_1]. Vi scrivo per segnalare una situazione di disagio che sto vivendo da alcune settimane. Dal 12 novembre 2026, il mio responsabile diretto ha iniziato a ignorare le mie comunicazioni e a assegnarmi compiti fuori dalla mia competenza, creando un clima di tensione insostenibile. Questa dinamica sta compromettendo la mia serenità e la mia capacità di lavorare con la solita efficienza.\n\nNon intendo entrare nel merito di ogni singolo episodio in questa sede, ma ritengo fondamentale affrontare la questione in modo formale e riservato. La mia richiesta è esclusivamente quella di fissare un incontro o un colloquio con un rappresentante dell'HR per discutere di quanto accaduto. Desidero che questo incontro avvenga entro il 20 novembre 2026, per poter chiarire la situazione e trovare una soluzione adeguata.\n\nResto a disposizione per concordare data e ora. Per qualsiasi necessità di contatto, potete raggiungermi al numero 369 461 1173 o tramite la mia email aziendale. Vi chiedo cortesemente di trattare questa segnalazione con la massima riservatezza, come previsto dalle procedure interne.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\n[PERSONA_1_M]\nMatricola: BR-77464\nfabrizio.[UTENTE_1]@example.com\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "text_id": "hr-0008",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta lavoro da remoto per [PERSONA_1_F]\n\nGentile Ufficio del Personale,\n\nmi chiamo [PERSONA_1_F] e sono contabile presso la Cooperativa Edile Pietrafitta. Vi scrivo per richiedere formalmente l'approvazione del lavoro da remoto a partire dal 15 novembre 2026.\n\nQuesta necessità nasce da una condizione di [SALUTE_1] che rende difficile la permanenza prolungata in ambienti con luci intense e rumori tipici dell'ufficio. Lavorando da casa, potrei gestire meglio i sintomi e mantenere la mia produttività.\n\nPer i vostri archivi, la mia matricola aziendale è [UTENTE_1]. Ricordo che la mia banca di riferimento è la Banca Altopiano, filiale di Pistoia, dove gestisco la mia carta di credito e il deposito titoli. Il mio codice fiscale è [CF_1] e posso essere raggiunta al telefono [TELEFONO_1] o via email all'indirizzo [EMAIL_1].\n\nVi chiedo cortesemente di valutare positivamente questa richiesta, che mi permetterebbe di continuare a svolgere le mie mansioni con la stessa dedizione di sempre. Resto a disposizione per qualsiasi chiarimento in merito.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

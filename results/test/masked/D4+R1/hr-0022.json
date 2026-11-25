@@ -1,0 +1,113 @@
+{
+  "text_id": "hr-0022",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta trasferimento sede [INDIRIZZO_1]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono dipendente con matricola [UTENTE_1]. Lavoro come [RUOLO_1] presso la [STRUTTURA_1] da diversi anni. Con la presente, desidero formalmente richiedere il mio trasferimento alla [STRUTTURA_2], chiedendo cortesemente l'approvazione della pratica.\n\nQuesta decisione è motivata da esigenze familiari e logistiche che rendono difficile la permanenza nella sede attuale. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a gestire la logistica del trasloco a mie spese. Il mio contratto prevede una retribuzione netta mensile di circa [IMPORTO_1], che spero venga mantenuta invariata anche nella nuova sede.\n\nPer completezza, allego alla presente la mia documentazione anagrafica. Il mio codice fiscale è [CF_1] e posso essere contattata al numero [TELEFONO_1] o tramite l'indirizzo [EMAIL_1]. Ho anche un conto corrente attivo presso [AZIENDA_2], [STRUTTURA_3], con IBAN [IBAN_1], dove vengono accreditati gli stipendi.\n\nChiedo che la richiesta venga presa in considerazione entro il [DATA_1], in modo da poter pianificare il trasferimento entro la fine dell'anno. Resto a disposizione per eventuali colloqui o chiarimenti.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[INDIRIZZO_1]",
+      "type": "INDIRIZZO",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_2]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "retribuzione mensile indicata"
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_3]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui la richiesta deve essere presa in considerazione"
+    }
+  ]
+}

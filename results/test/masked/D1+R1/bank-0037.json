@@ -1,0 +1,64 @@
+{
+  "text_id": "bank-0037",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta documenti per conto di [PERSONA_1_M]\n\nGentile Cassa Rurale di Montevago,\n\nmi chiamo [PERSONA_2_F] e scrivo per richiedere le informazioni necessarie per procedere con la successione del conto corrente intestato a mio padre, [PERSONA_1_M], deceduto il 12 marzo 2026.\n\nSono la sua erede e ho bisogno di sapere quali documenti specifici devo presentare alla filiale di [CITTA_1] per sbloccare le operazioni sul conto. In particolare, desidero ricevere copia dell'estratto conto aggiornato al momento del decesso e l'elenco dei prodotti attivi, tra cui la carta di debito e il prestito personale in corso.\n\nPer facilitare la verifica della mia identità, allego copia del mio documento d'identità e fornisco i miei dati anagrafici: codice fiscale DGGMRD49A57X058K, telefono [TELEFONO_1] e email [EMAIL_1]. L'[AZIENDA_1] del conto del defunto era [IBAN_1].\n\nLavoro come contabile presso [CITTA_2]. e la mia matricola aziendale è WE-48493. Vi chiedo cortesemente di inviarmi la documentazione richiesta entro il 15 novembre 2026, in quanto devo gestire alcune scadenze fiscali relative all'eredità.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_2_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

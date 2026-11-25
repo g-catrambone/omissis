@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0016",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Aggiornamento IBAN per addebito mutuo - [PERSONA_1_F]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono cliente della vostra [STRUTTURA_1] di [CITTA_1]. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per il corretto funzionamento degli addebiti automatici legati al mio mutuo per la prima casa.\n\nAttualmente, l'addebito mensile di [IMPORTO_1] viene effettuato sul conto corrente che sto per disattivare. Per evitare interruzioni nei pagamenti a partire dal prossimo ciclo, vi chiedo di aggiornare i vostri sistemi con il nuovo IBAN: [IBAN_1].\n\nPer facilitare l'identificazione del mio fascicolo, vi fornisco il mio codice fiscale [CF_1] e la matricola aziendale [UTENTE_1] che utilizzo come riferimento interno presso [AZIENDA_2], dove lavoro come [RUOLO_1].\n\nVi prego di confermare la ricezione di questa richiesta e l'effettivo aggiornamento dei dati entro il [DATA_1], in modo che l'addebito previsto per il [DATA_2] venga eseguito correttamente sul nuovo conto. Resto a disposizione per eventuali chiarimenti al numero [TELEFONO_1] o tramite la mia email [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della [STRUTTURA_1]"
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo mensile del mutuo"
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale dell'autore"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora l'autore"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione dell'autore"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza richiesta di aggiornamento"
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data prevista di addebito"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

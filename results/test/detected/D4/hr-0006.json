@@ -1,0 +1,133 @@
+{
+  "text_id": "hr-0006",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 38,
+      "end": 56,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 100,
+      "end": 118,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 129,
+      "end": 142,
+      "text": "centralinista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "start": 153,
+      "end": 182,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 305,
+      "end": 312,
+      "text": "65 anni",
+      "type": "ETA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "età del richiedente"
+    },
+    {
+      "start": 325,
+      "end": 331,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza"
+    },
+    {
+      "start": 578,
+      "end": 594,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio lavoro da remoto"
+    },
+    {
+      "start": 766,
+      "end": 774,
+      "text": "WT-40350",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 801,
+      "end": 817,
+      "text": "PGBVSC45B42X564O",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 888,
+      "end": 900,
+      "text": "357 736 0613",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 923,
+      "end": 953,
+      "text": "raffaele.ferrarini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1001,
+      "end": 1016,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca di riferimento"
+    },
+    {
+      "start": 1018,
+      "end": 1035,
+      "text": "filiale di Novara",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della banca"
+    },
+    {
+      "start": 1358,
+      "end": 1376,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.9911072969436645,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1505
+}

@@ -1,0 +1,98 @@
+{
+  "id": "hr-0008",
+  "domain": "hr",
+  "scenario": "remote_work_request",
+  "profile_id": "p11",
+  "has_special": true,
+  "text": "Oggetto: Richiesta lavoro da remoto per Teresa Dellavalle\n\nGentile Ufficio del Personale,\n\nmi chiamo Teresa Dellavalle e sono contabile presso la Cooperativa Edile Pietrafitta. Vi scrivo per richiedere formalmente l'approvazione del lavoro da remoto a partire dal 15 novembre 2026.\n\nQuesta necessità nasce da una condizione di emicrania cronica che rende difficile la permanenza prolungata in ambienti con luci intense e rumori tipici dell'ufficio. Lavorando da casa, potrei gestire meglio i sintomi e mantenere la mia produttività.\n\nPer i vostri archivi, la mia matricola aziendale è UL-67995. Ricordo che la mia banca di riferimento è la Banca Altopiano, filiale di Pistoia, dove gestisco la mia carta di credito e il deposito titoli. Il mio codice fiscale è DTPBGT37E51X984X e posso essere raggiunta al telefono 300 108 4408 o via email all'indirizzo teresa.dellavalle@example.com.\n\nVi chiedo cortesemente di valutare positivamente questa richiesta, che mi permetterebbe di continuare a svolgere le mie mansioni con la stessa dedizione di sempre. Resto a disposizione per qualsiasi chiarimento in merito.\n\nCordiali saluti,\n\nTeresa Dellavalle\n",
+  "spans": [
+    {
+      "start": 40,
+      "end": 57,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA"
+    },
+    {
+      "start": 101,
+      "end": 118,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA"
+    },
+    {
+      "start": 126,
+      "end": 135,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 146,
+      "end": 175,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 264,
+      "end": 280,
+      "text": "15 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 327,
+      "end": 344,
+      "text": "emicrania cronica",
+      "type": "SALUTE"
+    },
+    {
+      "start": 585,
+      "end": 593,
+      "text": "UL-67995",
+      "type": "UTENTE"
+    },
+    {
+      "start": 640,
+      "end": 655,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 668,
+      "end": 675,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 761,
+      "end": 777,
+      "text": "DTPBGT37E51X984X",
+      "type": "CF"
+    },
+    {
+      "start": 815,
+      "end": 827,
+      "text": "300 108 4408",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 854,
+      "end": 883,
+      "text": "teresa.dellavalle@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1127,
+      "end": 1144,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "remote_work_request",
+    "amounts": [],
+    "dates": [
+      "2026-11-15"
+    ],
+    "requested_action": "approve_request",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

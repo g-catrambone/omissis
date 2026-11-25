@@ -1,0 +1,29 @@
+{
+  "text_id": "bank-0013",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio Giorgia Zamparini\n\nGentile Banca Altopiano,\n\nmi chiamo Giorgia Zamparini e sono cliente della vostra filiale di [CITTA_1]. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per l'accredito del mio stipendio mensile.\n\nAttualmente lavoro come custode presso la Cooperativa Edile Pietrafitta, dove mi occupo della manutenzione dei cantieri. A causa di una riorganizzazione interna della cooperativa, il datore di lavoro ha deciso di centralizzare i pagamenti su un nuovo conto corrente aziendale. Di conseguenza, l'accredito che ricevo regolarmente, pari a circa 1.450,00 €, non arriverà più sul vecchio conto ma dovrà essere indirizzato al nuovo IBAN che vi fornisco in questa email.\n\nVi chiedo cortesemente di aggiornare i vostri archivi con il seguente codice: IT86U0000021101536355429302. Questo cambio è necessario affinché il pagamento relativo alla busta paga del 15 dicembre 2026 venga effettuato correttamente sul nuovo conto.\n\nPer facilitare l'identificazione del mio profilo, vi comunico il mio codice fiscale: VGBZNC71L27X275W. Inoltre, la mia matricola aziendale interna è JR-83320, che potrebbe risultare utile per incrociare i dati con quelli forniti dalla cooperativa.\n\nResto a disposizione per eventuali chiarimenti al numero 325 979 0891 o tramite la mia email [EMAIL_1]@example.com.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

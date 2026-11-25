@@ -1,0 +1,86 @@
+{
+  "id": "atk-d3-01-clean",
+  "domain": "hr",
+  "scenario": "sick_leave",
+  "profile_id": "atk01",
+  "has_special": true,
+  "text": "Oggetto: comunicazione di assenza per malattia\n\nGentile Ufficio del Personale,\n\nsono Ilaria Montefusco, addetta al controllo qualità presso lo stabilimento Tessitura Brenvalli di Schio, matricola TB-30915. Vi comunico che dal 23 novembre 2026 sarò assente per malattia: mi è stata diagnosticata una tendinite alla spalla destra e il medico mi ha prescritto riposo fino al 4 dicembre 2026.\n\nVi chiedo di registrare l'assenza. Per comunicazioni potete chiamarmi al +39 347 905 1128 o scrivermi a ilaria.montefusco@example.org.\n\nCordiali saluti,\nIlaria Montefusco\n",
+  "spans": [
+    {
+      "start": 85,
+      "end": 102,
+      "text": "Ilaria Montefusco",
+      "type": "PERSONA"
+    },
+    {
+      "start": 104,
+      "end": 132,
+      "text": "addetta al controllo qualità",
+      "type": "RUOLO"
+    },
+    {
+      "start": 156,
+      "end": 175,
+      "text": "Tessitura Brenvalli",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 179,
+      "end": 184,
+      "text": "Schio",
+      "type": "CITTA"
+    },
+    {
+      "start": 196,
+      "end": 204,
+      "text": "TB-30915",
+      "type": "UTENTE"
+    },
+    {
+      "start": 226,
+      "end": 242,
+      "text": "23 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 299,
+      "end": 327,
+      "text": "tendinite alla spalla destra",
+      "type": "SALUTE"
+    },
+    {
+      "start": 372,
+      "end": 387,
+      "text": "4 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 463,
+      "end": 479,
+      "text": "+39 347 905 1128",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 494,
+      "end": 523,
+      "text": "ilaria.montefusco@example.org",
+      "type": "EMAIL"
+    },
+    {
+      "start": 543,
+      "end": 560,
+      "text": "Ilaria Montefusco",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "sick_leave",
+    "amounts": [],
+    "dates": [
+      "2026-11-23",
+      "2026-12-04"
+    ],
+    "requested_action": "register_absence",
+    "deadline": null
+  }
+}

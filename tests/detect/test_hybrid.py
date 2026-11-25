@@ -1,4 +1,4 @@
-"""D4 hybrid (task 4.4), with fake detectors."""
+"""D4 hybrid, with fake detectors."""
 
 from pathlib import Path
 

@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0015",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 88,
+      "end": 103,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 164,
+      "end": 171,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della banca"
+    },
+    {
+      "start": 175,
+      "end": 182,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 348,
+      "end": 358,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ammontare dello stipendio"
+    },
+    {
+      "start": 508,
+      "end": 524,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di validità del nuovo IBAN"
+    },
+    {
+      "start": 659,
+      "end": 667,
+      "text": "BJ-27692",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 691,
+      "end": 720,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 751,
+      "end": 772,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "posizione lavorativa"
+    }
+  ],
+  "seconds": 0.0011
+}

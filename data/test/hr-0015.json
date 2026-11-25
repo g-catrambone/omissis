@@ -1,0 +1,112 @@
+{
+  "id": "hr-0015",
+  "domain": "hr",
+  "scenario": "medical_reimbursement",
+  "profile_id": "p29",
+  "has_special": true,
+  "text": "Oggetto: Richiesta documentazione per rimborso spese mediche - Roberta Uccellini\n\nGentile Ufficio del Personale,\n\nmi chiamo Roberta Uccellini e sono dipendente come contabile presso la Cooperativa Edile Pietrafitta. Vi scrivo per richiedere la documentazione necessaria per procedere con il rimborso delle spese mediche sostenute di recente.\n\nCome sapete, seguo un percorso di cura per ipertensione arteriosa e ho effettuato una visita specialistica presso l'ospedale di Pistoia il 12 marzo 2027. Ho sostenuto un costo totale di € 150,00 per la prestazione medica e gli esami del sangue correlati.\n\nPer poter presentare la domanda di rimborso al mio istituto bancario, la Banca Altopiano, filiale di Pistoia, ho bisogno che mi vengano inviati la ricevuta fiscale dettagliata e il certificato medico attestante la diagnosi e le cure effettuate. Vi prego di trasmettermi questi documenti in formato digitale all'indirizzo roberta.uccellini@example.com oppure di indicarmi dove posso ritirarli in sede.\n\nPer facilitare la ricerca dei miei fascicoli, vi comunico la mia matricola aziendale NT-86613 e il mio codice fiscale GTTPBB45P16X906A. Resto a disposizione per qualsiasi chiarimento al numero 319 776 5806.\n\nVi ringrazio anticipatamente per la collaborazione e per la tempestività nella gestione della pratica.\n\nCordiali saluti,\n\nRoberta Uccellini\n",
+  "spans": [
+    {
+      "start": 63,
+      "end": 80,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 124,
+      "end": 141,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 165,
+      "end": 174,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 185,
+      "end": 214,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 386,
+      "end": 408,
+      "text": "ipertensione arteriosa",
+      "type": "SALUTE"
+    },
+    {
+      "start": 471,
+      "end": 478,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 482,
+      "end": 495,
+      "text": "12 marzo 2027",
+      "type": "DATA"
+    },
+    {
+      "start": 529,
+      "end": 537,
+      "text": "€ 150,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 672,
+      "end": 687,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 700,
+      "end": 707,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 920,
+      "end": 949,
+      "text": "roberta.uccellini@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1086,
+      "end": 1094,
+      "text": "NT-86613",
+      "type": "UTENTE"
+    },
+    {
+      "start": 1119,
+      "end": 1135,
+      "text": "GTTPBB45P16X906A",
+      "type": "CF"
+    },
+    {
+      "start": 1194,
+      "end": 1206,
+      "text": "319 776 5806",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1331,
+      "end": 1348,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "medical_reimbursement",
+    "amounts": [
+      150.0
+    ],
+    "dates": [
+      "2027-03-12"
+    ],
+    "requested_action": "send_information",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

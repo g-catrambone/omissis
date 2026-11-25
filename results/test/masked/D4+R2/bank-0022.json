@@ -1,0 +1,85 @@
+{
+  "text_id": "bank-0022",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta informazioni estinzione anticipata finanziamento - Gioele Fabbretti\n\nGentile Banco di Roccalta,\n\nmi chiamo Gioele Fabbretti e sono un cliente della vostra [STRUTTURA_1]. Lavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A. e desidero richiedere informazioni dettagliate relative all'estinzione anticipata del mio finanziamento in corso.\n\nHo bisogno di ricevere copia del piano di ammortamento aggiornato e della scheda di calcolo delle penali per il saldo e stralcio. In particolare, mi interessa sapere quale sarebbe l'importo esatto da versare per chiudere il contratto entro il 27 marzo 2027, considerando che il saldo residuo attuale è di circa € 29.792,00.\n\nVi chiedo cortesemente di inviarmi tutta la documentazione necessaria all'indirizzo email nevio.vannucci@example.com o, in alternativa, di indicarmi le modalità per ritirarla in filiale. Per facilitare la ricerca della mia pratica, vi comunico che il mio codice fiscale è ZRNNZS23R28X253J e la matricola aziendale associata al contratto è GU-52213.\n\nResto in attesa di un vostro cortese riscontro per poter organizzare il pagamento in tempi brevi. Grazie per la collaborazione.\n\nCordiali saluti,\n\nGioele Fabbretti\nTel: 322 600 8291\n",
+  "disclosure": [
+    {
+      "surrogate": "Gioele Fabbretti",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "surrogate": "27 marzo 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza"
+    },
+    {
+      "surrogate": "€ 29.792,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "surrogate": "nevio.vannucci@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ZRNNZS23R28X253J",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "GU-52213",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice cliente/matricola"
+    },
+    {
+      "surrogate": "322 600 8291",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

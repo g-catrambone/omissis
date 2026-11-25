@@ -1,0 +1,120 @@
+{
+  "id": "bank-0008",
+  "domain": "bank",
+  "scenario": "card_dispute",
+  "profile_id": "p08",
+  "has_special": false,
+  "text": "Oggetto: Contestazione addebiti non riconosciuti - Federica Quattrocchi\n\nGentile Banca Altopiano,\n\nmi chiamo Federica Quattrocchi e sono titolare del conto corrente con IBAN IT06R0000052125840795083093. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, pari a € 145,00, è stato registrato il 12 novembre 2026 presso un esercente a Trapani. Il secondo, di € 320,00, risale al 15 novembre 2026 e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come elettricista presso Tessitura Valgrande S.r.l. e risiedo stabilmente a Trapani. Ho già bloccato la carta tramite l'app, ma necessito di una verifica formale da parte vostra.\n\nVi chiedo cortesemente di aprire una pratica di indagine per verificare l'origine di questi movimenti. Per qualsiasi necessità, potete contattarmi al numero 358 044 0921 o all'indirizzo federica.quattrocchi@example.com.\n\nResto in attesa di un vostro riscontro.\n\nCordiali saluti,\nFederica Quattrocchi\nMatricola: WJ-93942\n",
+  "spans": [
+    {
+      "start": 51,
+      "end": 71,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA"
+    },
+    {
+      "start": 81,
+      "end": 96,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 109,
+      "end": 129,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA"
+    },
+    {
+      "start": 174,
+      "end": 201,
+      "text": "IT06R0000052125840795083093",
+      "type": "IBAN"
+    },
+    {
+      "start": 342,
+      "end": 350,
+      "text": "€ 145,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 374,
+      "end": 390,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 413,
+      "end": 420,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 437,
+      "end": 445,
+      "text": "€ 320,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 457,
+      "end": 473,
+      "text": "15 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 569,
+      "end": 581,
+      "text": "elettricista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 589,
+      "end": 615,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 640,
+      "end": 647,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 901,
+      "end": 913,
+      "text": "358 044 0921",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 930,
+      "end": 962,
+      "text": "federica.quattrocchi@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1023,
+      "end": 1043,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1055,
+      "end": 1063,
+      "text": "WJ-93942",
+      "type": "UTENTE"
+    }
+  ],
+  "gold": {
+    "intent": "card_dispute",
+    "amounts": [
+      145.0,
+      320.0
+    ],
+    "dates": [
+      "2026-11-12",
+      "2026-11-15"
+    ],
+    "requested_action": "open_investigation",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

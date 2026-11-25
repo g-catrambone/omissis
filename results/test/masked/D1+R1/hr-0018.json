@@ -1,0 +1,57 @@
+{
+  "text_id": "hr-0018",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta documentazione per rimborso spese mediche - [PERSONA_1_F]\n\nGentile Ufficio del Personale di [CITTA_1].,\n\nmi chiamo [PERSONA_1_F] e sono la responsabile acquisti presso la vostra sede di [CITTA_2]. Vi scrivo per richiedere l'invio della documentazione necessaria per procedere con il rimborso delle spese mediche sostenute di recente.\n\nCome sapete, sto affrontando un periodo di depressione in cura che mi ha costretta a sottopormi a diverse visite specialistiche e a terapie farmacologiche. Ho già effettuato i pagamenti diretti e necessito ora dei moduli ufficiali o delle istruzioni dettagliate per presentare la domanda di rimborso entro i termini previsti dal contratto collettivo.\n\nPer facilitare la ricerca della mia posizione anagrafica e contrattuale, vi fornisco i seguenti dati: la mia matricola aziendale è EZ-85669 e il mio codice fiscale è [PERSONA_2] L'importo totale delle spese che intendo rimborsare ammonta a € 1.200,50, relativo a prestazioni effettuate tra il 16 novembre 2026 e il 10 dicembre 2026.\n\nVi chiedo cortesemente di inviarmi via email, all'indirizzo [EMAIL_1], i moduli compilabili o le specifiche istruzioni operative. Non è necessario che contattiate telefonicamente la mia banca, [AZIENDA_1], per questo adempimento burocratico, ma resto a disposizione per eventuali chiarimenti tramite il mio recapito [TELEFONO_1] se doveste avere dubbi sulla correttezza dei documenti allegati alla mia richiesta.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

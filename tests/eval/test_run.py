@@ -1,4 +1,4 @@
-"""The evaluation runner and the report (task 3.10), with fake providers and detectors."""
+"""The evaluation runner and the report, with fake providers and detectors."""
 
 import csv
 import json

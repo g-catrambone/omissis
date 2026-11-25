@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0020",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 57,
+      "end": 75,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 85,
+      "end": 99,
+      "text": "Banca Popolare",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 103,
+      "end": 113,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 126,
+      "end": 144,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 184,
+      "end": 216,
+      "text": "IBAN IT60K0000002707830380370892",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 238,
+      "end": 245,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 405,
+      "end": 421,
+      "text": "Cantieri Dorsano",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1198,
+      "end": 1210,
+      "text": "315 250 0573",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1234,
+      "end": 1264,
+      "text": "ilaria.tagliaferri@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1359,
+      "end": 1377,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1378,
+      "end": 1394,
+      "text": "PRCBVV34A20X065L",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0136
+}

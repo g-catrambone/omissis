@@ -1,0 +1,34 @@
+{
+  "text_id": "hr-0026",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 725,
+      "end": 731,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.9990687668323517,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1193,
+      "end": 1210,
+      "text": "tommaso.mantovani",
+      "type": "EMAIL",
+      "confidence": 0.9752572079499563,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1404,
+      "end": 1421,
+      "text": "Tommaso Mantovani",
+      "type": "PERSONA",
+      "confidence": 0.8295761466026306,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1436
+}

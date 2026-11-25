@@ -1,0 +1,99 @@
+{
+  "id": "hr-0005",
+  "domain": "hr",
+  "scenario": "sick_leave",
+  "profile_id": "p21",
+  "has_special": true,
+  "text": "Oggetto: Richiesta approvazione assenza per malattia - Beatrice Pontiggia\n\nGentile Ufficio del Personale di Caseificio Montelupo S.r.l.,\n\nmi chiamo Beatrice Pontiggia e sono la responsabile acquisti presso la sede di Foggia. Vi scrivo per comunicare la mia assenza dal lavoro a partire dal 12 novembre 2026 fino al 19 novembre 2026.\n\nLa causa dell'assenza è legata a una depressione in cura che richiede un periodo di riposo e terapie specifiche, come certificato dal mio medico curante. Ho già provveduto a trasmettere la documentazione medica necessaria tramite la piattaforma aziendale, ma vi chiedo cortesemente di procedere con l'approvazione formale della richiesta per garantire la corretta gestione della mia posizione in busta paga.\n\nPer facilitare le verifiche, riporto i miei dati anagrafici e di contatto: la mia matricola aziendale è EZ-85669, il codice fiscale è ZLBRVN07D06X885L e sono raggiungibile al numero 367 789 1628 o all'indirizzo beatrice.pontiggia@example.com.\n\nVi prego di considerare questa comunicazione come formale richiesta di autorizzazione all'assenza. Resto a disposizione per eventuali chiarimenti, pur nella consapevolezza che in questo periodo di convalescenza la mia disponibilità sarà limitata.\n\nCordiali saluti,\n\nBeatrice Pontiggia\n",
+  "spans": [
+    {
+      "start": 55,
+      "end": 73,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA"
+    },
+    {
+      "start": 108,
+      "end": 135,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 148,
+      "end": 166,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA"
+    },
+    {
+      "start": 177,
+      "end": 198,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 217,
+      "end": 223,
+      "text": "Foggia",
+      "type": "CITTA"
+    },
+    {
+      "start": 290,
+      "end": 306,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 315,
+      "end": 331,
+      "text": "19 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 371,
+      "end": 382,
+      "text": "depressione",
+      "type": "SALUTE"
+    },
+    {
+      "start": 847,
+      "end": 855,
+      "text": "EZ-85669",
+      "type": "UTENTE"
+    },
+    {
+      "start": 877,
+      "end": 893,
+      "text": "ZLBRVN07D06X885L",
+      "type": "CF"
+    },
+    {
+      "start": 925,
+      "end": 937,
+      "text": "367 789 1628",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 954,
+      "end": 984,
+      "text": "beatrice.pontiggia@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1253,
+      "end": 1271,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "sick_leave",
+    "amounts": [],
+    "dates": [
+      "2026-11-12",
+      "2026-11-19"
+    ],
+    "requested_action": "approve_request",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

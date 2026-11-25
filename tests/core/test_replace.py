@@ -1,4 +1,4 @@
-"""R1 placeholders (block 1)."""
+"""R1 placeholders."""
 
 import pytest
 

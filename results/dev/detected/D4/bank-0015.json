@@ -1,0 +1,133 @@
+{
+  "text_id": "bank-0015",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 88,
+      "end": 103,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 116,
+      "end": 135,
+      "text": "Carlotta Castellani",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 164,
+      "end": 171,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede della banca"
+    },
+    {
+      "start": 175,
+      "end": 182,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 348,
+      "end": 358,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ammontare dello stipendio"
+    },
+    {
+      "start": 456,
+      "end": 483,
+      "text": "IT68Y0000068744192844878269",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 508,
+      "end": 524,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di validità del nuovo IBAN"
+    },
+    {
+      "start": 617,
+      "end": 633,
+      "text": "LVNRFL34A53X567N",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 659,
+      "end": 667,
+      "text": "BJ-27692",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 691,
+      "end": 720,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 751,
+      "end": 772,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "posizione lavorativa"
+    },
+    {
+      "start": 932,
+      "end": 963,
+      "text": "carlotta.castellani@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1185,
+      "end": 1197,
+      "text": "366 375 4002",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1305,
+      "end": 1324,
+      "text": "Carlotta Castellani",
+      "type": "PERSONA",
+      "confidence": 0.8827212572097778,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1593
+}

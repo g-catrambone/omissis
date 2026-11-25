@@ -1,0 +1,64 @@
+{
+  "text_id": "bank-0004",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta rimodulazione mutuo - [PERSONA_1_F]\n\nGentile [AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con [AZIENDA_3] presso la filiale di [CITTA_1]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mutuo ipotecario relativo alla mia prima casa, contratto in essere da diversi anni.\n\nAttualmente lavoro come contabile presso la società [AZIENDA_4]., dove sono impiegata con la matricola aziendale TE-24747. A causa di una temporanea riduzione del mio reddito disponibile, dovuta a circostanze lavorative non dipendenti dalla mia volontà, mi trovo in difficoltà nel sostenere l'attuale rata mensile di € 1.200,50.\n\nVi chiedo pertanto di valutare la possibilità di allungare la durata del mutuo o di applicare un tasso variabile più favorevole, al fine di ridurre l'onere mensile. Il mio codice fiscale è [CITTA_2] e sono raggiungibile al numero 308 057 6591 o all'indirizzo [EMAIL_1].\n\nSpero che possiate prendere in considerazione la mia richiesta entro il 15 dicembre 2026, così da poter pianificare il mio budget familiare per il prossimo trimestre. Resto a disposizione per fornire eventuali documentazione aggiuntiva necessaria per la valutazione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_3]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_4]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

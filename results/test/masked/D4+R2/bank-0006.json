@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0006",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta rimodulazione mutuo - Ersilia Cortesini\n\nGentile Banco di Roccalta,\n\nmi chiamo Ersilia Cortesini e sono titolare del conto corrente con IBAN IT31A000082978482223406184 presso la [STRUTTURA_1]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mutuo ipotecario per la prima casa, contratto in essere da diversi anni.\n\nAttualmente lavoro come [RUOLO_1] presso Edilnova Tarsia S.r.l., dove ho la matricola aziendale JP-32832. Purtroppo, a causa di una recente diagnosi di [SALUTE_1], ho dovuto modificare drasticamente la mia alimentazione e i miei ritmi di vita, il che ha comportato un aumento delle spese sanitarie e una temporanea riduzione della mia capacità di gestione finanziaria mensile.\n\nLa rata attuale di € 5.199,50 si è rivelata onerosa rispetto al mio reddito attuale. Vi chiedo pertanto di valutare la possibilità di allungare la durata del mutuo o di applicare un tasso variabile più favorevole, al fine di ridurre l'importo mensile. Desidero che la nuova rata non superi i € 468,00.\n\nVi prego di contattarmi al numero 326 414 7360 o all'indirizzo berenice.marangoni@example.com per concordare i dettagli. Il mio codice fiscale è Vannucci\n\nResto in attesa di un vostro cortese riscontro entro il 27 dicembre 2026.\n\nCordiali saluti,\nErsilia Cortesini\n",
+  "disclosure": [
+    {
+      "surrogate": "Ersilia Cortesini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "Edilnova Tarsia S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "JP-32832",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi medica"
+    },
+    {
+      "surrogate": "€ 5.199,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "rata attuale del mutuo"
+    },
+    {
+      "surrogate": "€ 468,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "rata desiderata"
+    },
+    {
+      "surrogate": "326 414 7360",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "berenice.marangoni@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Vannucci",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    }
+  ]
+}

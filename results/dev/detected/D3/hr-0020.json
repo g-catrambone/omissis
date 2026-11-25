@@ -1,0 +1,79 @@
+{
+  "text_id": "hr-0020",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 200,
+      "end": 206,
+      "text": "Milano",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "start": 228,
+      "end": 241,
+      "text": "centralinista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 252,
+      "end": 281,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 329,
+      "end": 337,
+      "text": "WT-40350",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 453,
+      "end": 460,
+      "text": "65 anni",
+      "type": "ETA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "età del mittente"
+    },
+    {
+      "start": 570,
+      "end": 576,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di residenza attuale"
+    },
+    {
+      "start": 626,
+      "end": 641,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca con filiale"
+    },
+    {
+      "start": 1019,
+      "end": 1035,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui richiede l'approvazione"
+    }
+  ],
+  "seconds": 0.001
+}

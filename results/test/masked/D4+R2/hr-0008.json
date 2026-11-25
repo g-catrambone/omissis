@@ -1,0 +1,78 @@
+{
+  "text_id": "hr-0008",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta lavoro da remoto per Lavinia Salvadori\n\nGentile Ufficio del Personale,\n\nmi chiamo Lavinia Salvadori e sono contabile presso la Lavorazioni Meccaniche Sbrana S.p.A.. Vi scrivo per richiedere formalmente l'approvazione del lavoro da remoto a partire dal 10 novembre 2026.\n\nQuesta necessità nasce da una condizione di [SALUTE_1] che rende difficile la permanenza prolungata in ambienti con luci intense e rumori tipici dell'ufficio. Lavorando da casa, potrei gestire meglio i sintomi e mantenere la mia produttività.\n\nPer i vostri archivi, la mia matricola aziendale è KB-14379. Ricordo che la mia banca di riferimento è la Cassa di Risparmio di Montalfiore, filiale di Biella, dove gestisco la mia carta di credito e il deposito titoli. Il mio codice fiscale è VBTCLN08P19X178X e posso essere raggiunta al telefono 386 354 0226 o via email all'indirizzo greta.cortesini@example.com.\n\nVi chiedo cortesemente di valutare positivamente questa richiesta, che mi permetterebbe di continuare a svolgere le mie mansioni con la stessa dedizione di sempre. Resto a disposizione per qualsiasi chiarimento in merito.\n\nCordiali saluti,\n\nLavinia Salvadori\n",
+  "disclosure": [
+    {
+      "surrogate": "Lavinia Salvadori",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora la persona"
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio lavoro da remoto"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "condizione di salute che giustifica il lavoro da remoto"
+    },
+    {
+      "surrogate": "KB-14379",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Biella",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città della filiale bancaria"
+    },
+    {
+      "surrogate": "VBTCLN08P19X178X",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "386 354 0226",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "greta.cortesini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

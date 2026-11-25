@@ -1,0 +1,52 @@
+{
+  "text_id": "hr-0007",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 142,
+      "end": 150,
+      "text": "Leonardo",
+      "type": "PERSONA",
+      "confidence": 0.656775027513504,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 228,
+      "end": 235,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9982581436634064,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 462,
+      "end": 469,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9131055176258087,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1023,
+      "end": 1042,
+      "text": "leonardo.lombardini",
+      "type": "EMAIL",
+      "confidence": 0.9288084904352824,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1349,
+      "end": 1359,
+      "text": "Lombardini",
+      "type": "PERSONA",
+      "confidence": 0.8917305767536163,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1333
+}

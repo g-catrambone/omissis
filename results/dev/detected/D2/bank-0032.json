@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0032",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 104,
+      "end": 122,
+      "text": "Carlotta Castellan",
+      "type": "PERSONA",
+      "confidence": 0.7249472290277481,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 163,
+      "end": 170,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.9973556697368622,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1118,
+      "end": 1125,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.9962002038955688,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1421,
+      "end": 1440,
+      "text": "Carlotta Castellani",
+      "type": "PERSONA",
+      "confidence": 0.8250132083892823,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1525,
+      "end": 1528,
+      "text": "car",
+      "type": "EMAIL",
+      "confidence": 0.7701323628425598,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1445
+}

@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0015",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio e richiesta documentazione\n\nGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Agnese Querzoli e sono cliente della Vostra [STRUTTURA_1] di Nuoro. Le scrivo per comunicare un aggiornamento importante relativo ai miei dati bancari. A partire dal prossimo mese, l'accredito del mio stipendio, che ammonta a circa 1.275,00 €, dovrà essere effettuato sul nuovo conto corrente intestato a me.\n\nIl nuovo IBAN da utilizzare è IT81Q0000053309819693493091, valido a decorrere dal 10 novembre 2026. Per facilitare l'aggiornamento nei Vostri sistemi, Le fornisco anche il mio codice fiscale RCLCRR72A63X522N e la matricola aziendale GU-32895 che utilizzo presso la Lavorazioni Meccaniche Sbrana S.p.A., dove ricopro la posizione di [RUOLO_1].\n\nHo bisogno di una conferma scritta che l'operazione sia stata registrata correttamente. Inoltre, Le chiedo cortesemente di inviarmi via email, all'indirizzo rachele.salvadori@example.com, una copia del contratto di conto corrente aggiornato e l'estratto conto relativo all'ultimo accredito effettuato sul vecchio conto, per i miei archivi personali.\n\nResto a disposizione per qualsiasi chiarimento al numero 376 942 5749. La ringrazio per la collaborazione e per la tempestività nella gestione della pratica.\n\nCordiali saluti,\n\nAgnese Querzoli\n",
+  "disclosure": [
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "Agnese Querzoli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della [STRUTTURA_1]"
+    },
+    {
+      "surrogate": "1.275,00 €",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "ammontare dello stipendio"
+    },
+    {
+      "surrogate": "IT81Q0000053309819693493091",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di validità del nuovo IBAN"
+    },
+    {
+      "surrogate": "RCLCRR72A63X522N",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "GU-32895",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "posizione lavorativa"
+    },
+    {
+      "surrogate": "rachele.salvadori@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "376 942 5749",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

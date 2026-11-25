@@ -1,0 +1,4497 @@
+{
+  "split": "dev",
+  "seed": 20261111,
+  "generated_from": [
+    "b07665f0c252",
+    "d1aa840154d6",
+    "18bdbd066964",
+    "49f599e17121",
+    "bd5400e9b707",
+    "933a73c866b3",
+    "65b4d39c07a9"
+  ],
+  "rows": [
+    {
+      "config": "REF-none",
+      "attribute": "city",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "REF-none",
+      "attribute": "role",
+      "texts": 20,
+      "accuracy": 0.95,
+      "ci_low": 0.85,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "REF-none",
+      "attribute": "employer",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.6
+    },
+    {
+      "config": "REF-none",
+      "attribute": "age_bracket",
+      "texts": 20,
+      "accuracy": 0.35,
+      "ci_low": 0.15,
+      "ci_high": 0.55,
+      "invalid": 0,
+      "majority_baseline": 0.55
+    },
+    {
+      "config": "REF-none",
+      "attribute": "gender",
+      "texts": 20,
+      "accuracy": 0.9,
+      "ci_low": 0.75,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.5
+    },
+    {
+      "config": "REF-none",
+      "attribute": "health",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.75
+    },
+    {
+      "config": "REF-oracle-direct",
+      "attribute": "city",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "REF-oracle-direct",
+      "attribute": "role",
+      "texts": 20,
+      "accuracy": 0.95,
+      "ci_low": 0.85,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "REF-oracle-direct",
+      "attribute": "employer",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.6
+    },
+    {
+      "config": "REF-oracle-direct",
+      "attribute": "age_bracket",
+      "texts": 20,
+      "accuracy": 0.3,
+      "ci_low": 0.1,
+      "ci_high": 0.5,
+      "invalid": 0,
+      "majority_baseline": 0.55
+    },
+    {
+      "config": "REF-oracle-direct",
+      "attribute": "gender",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.5
+    },
+    {
+      "config": "REF-oracle-direct",
+      "attribute": "health",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.75
+    },
+    {
+      "config": "REF-oracle",
+      "attribute": "city",
+      "texts": 20,
+      "accuracy": 0.15,
+      "ci_low": 0.0,
+      "ci_high": 0.3,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "REF-oracle",
+      "attribute": "role",
+      "texts": 20,
+      "accuracy": 0.3,
+      "ci_low": 0.1,
+      "ci_high": 0.5,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "REF-oracle",
+      "attribute": "employer",
+      "texts": 20,
+      "accuracy": 0.25,
+      "ci_low": 0.1,
+      "ci_high": 0.45,
+      "invalid": 0,
+      "majority_baseline": 0.6
+    },
+    {
+      "config": "REF-oracle",
+      "attribute": "age_bracket",
+      "texts": 20,
+      "accuracy": 0.2,
+      "ci_low": 0.05,
+      "ci_high": 0.4,
+      "invalid": 0,
+      "majority_baseline": 0.55
+    },
+    {
+      "config": "REF-oracle",
+      "attribute": "gender",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.5
+    },
+    {
+      "config": "REF-oracle",
+      "attribute": "health",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.75
+    },
+    {
+      "config": "D1+R1",
+      "attribute": "city",
+      "texts": 20,
+      "accuracy": 0.15,
+      "ci_low": 0.0,
+      "ci_high": 0.3,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "D1+R1",
+      "attribute": "role",
+      "texts": 20,
+      "accuracy": 0.95,
+      "ci_low": 0.85,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "D1+R1",
+      "attribute": "employer",
+      "texts": 20,
+      "accuracy": 0.3,
+      "ci_low": 0.1,
+      "ci_high": 0.5,
+      "invalid": 0,
+      "majority_baseline": 0.6
+    },
+    {
+      "config": "D1+R1",
+      "attribute": "age_bracket",
+      "texts": 20,
+      "accuracy": 0.2,
+      "ci_low": 0.05,
+      "ci_high": 0.4,
+      "invalid": 0,
+      "majority_baseline": 0.55
+    },
+    {
+      "config": "D1+R1",
+      "attribute": "gender",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.5
+    },
+    {
+      "config": "D1+R1",
+      "attribute": "health",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.75
+    },
+    {
+      "config": "D2+R1",
+      "attribute": "city",
+      "texts": 20,
+      "accuracy": 0.15,
+      "ci_low": 0.0,
+      "ci_high": 0.3,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "D2+R1",
+      "attribute": "role",
+      "texts": 20,
+      "accuracy": 0.95,
+      "ci_low": 0.85,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "D2+R1",
+      "attribute": "employer",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.6
+    },
+    {
+      "config": "D2+R1",
+      "attribute": "age_bracket",
+      "texts": 20,
+      "accuracy": 0.35,
+      "ci_low": 0.15,
+      "ci_high": 0.55,
+      "invalid": 0,
+      "majority_baseline": 0.55
+    },
+    {
+      "config": "D2+R1",
+      "attribute": "gender",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.5
+    },
+    {
+      "config": "D2+R1",
+      "attribute": "health",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.75
+    },
+    {
+      "config": "D4+R1",
+      "attribute": "city",
+      "texts": 20,
+      "accuracy": 0.15,
+      "ci_low": 0.0,
+      "ci_high": 0.3,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "D4+R1",
+      "attribute": "role",
+      "texts": 20,
+      "accuracy": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "D4+R1",
+      "attribute": "employer",
+      "texts": 20,
+      "accuracy": 0.3,
+      "ci_low": 0.1,
+      "ci_high": 0.5,
+      "invalid": 0,
+      "majority_baseline": 0.6
+    },
+    {
+      "config": "D4+R1",
+      "attribute": "age_bracket",
+      "texts": 20,
+      "accuracy": 0.2,
+      "ci_low": 0.05,
+      "ci_high": 0.4,
+      "invalid": 0,
+      "majority_baseline": 0.55
+    },
+    {
+      "config": "D4+R1",
+      "attribute": "gender",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.5
+    },
+    {
+      "config": "D4+R1",
+      "attribute": "health",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.75
+    },
+    {
+      "config": "D4+R2",
+      "attribute": "city",
+      "texts": 20,
+      "accuracy": 0.25,
+      "ci_low": 0.1,
+      "ci_high": 0.45,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "D4+R2",
+      "attribute": "role",
+      "texts": 20,
+      "accuracy": 0.4,
+      "ci_low": 0.2,
+      "ci_high": 0.6,
+      "invalid": 0,
+      "majority_baseline": 0.3
+    },
+    {
+      "config": "D4+R2",
+      "attribute": "employer",
+      "texts": 20,
+      "accuracy": 0.15,
+      "ci_low": 0.0,
+      "ci_high": 0.3,
+      "invalid": 0,
+      "majority_baseline": 0.6
+    },
+    {
+      "config": "D4+R2",
+      "attribute": "age_bracket",
+      "texts": 20,
+      "accuracy": 0.3,
+      "ci_low": 0.1,
+      "ci_high": 0.5,
+      "invalid": 0,
+      "majority_baseline": 0.55
+    },
+    {
+      "config": "D4+R2",
+      "attribute": "gender",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.5
+    },
+    {
+      "config": "D4+R2",
+      "attribute": "health",
+      "texts": 20,
+      "accuracy": 1.0,
+      "ci_low": 1.0,
+      "ci_high": 1.0,
+      "invalid": 0,
+      "majority_baseline": 0.75
+    }
+  ],
+  "per_text": [
+    {
+      "text_id": "bank-0001",
+      "config": "REF-none",
+      "answers": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "REF-none",
+      "answers": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "REF-none",
+      "answers": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "REF-none",
+      "answers": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "REF-none",
+      "answers": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "REF-none",
+      "answers": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "REF-none",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "REF-none",
+      "answers": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "REF-none",
+      "answers": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": false,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "REF-none",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "REF-none",
+      "answers": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "REF-none",
+      "answers": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "REF-none",
+      "answers": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "REF-none",
+      "answers": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "REF-none",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": false,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "REF-none",
+      "answers": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "REF-none",
+      "answers": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "REF-none",
+      "answers": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "REF-none",
+      "answers": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "REF-none",
+      "answers": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "REF-oracle-direct",
+      "answers": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Pistoia",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "REF-oracle",
+      "answers": {
+        "city": "Pistoia",
+        "role": "agente di commercio",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "elettricista",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "elettricista",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "autista",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "autista",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Pistoia",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "centralinista",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "D1+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "agente di commercio",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "D2+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Pistoia",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "D4+R1",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Novara",
+        "role": "progettista",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "elettricista",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "custode",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Novara",
+        "role": "contabile",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "<30",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "autista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "elettricista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Viterbo",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Novara",
+        "role": "contabile",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Pistoia",
+        "role": "contabile",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Foggia",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "F",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "45-59",
+        "gender": "F",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "<30",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Trasporti Bellariva S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Trapani",
+        "role": "contabile",
+        "employer": "Tessitura Valgrande S.r.l.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": true,
+        "employer": false,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Foggia",
+        "role": "responsabile acquisti",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "present"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "responsabile acquisti",
+        "employer": "Caseificio Montelupo S.r.l.",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "present"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": true,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Novara",
+        "role": "progettista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Novara",
+        "role": "centralinista",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "60+",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": true,
+        "role": false,
+        "employer": true,
+        "age_bracket": true,
+        "gender": true,
+        "health": true
+      }
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "D4+R2",
+      "answers": {
+        "city": "Cremona",
+        "role": "responsabile acquisti",
+        "employer": "Cantieri Dorsano S.p.A.",
+        "age_bracket": "30-44",
+        "gender": "M",
+        "health": "none"
+      },
+      "truth": {
+        "city": "Foggia",
+        "role": "agente di commercio",
+        "employer": "Cooperativa Edile Pietrafitta",
+        "age_bracket": "45-59",
+        "gender": "M",
+        "health": "none"
+      },
+      "invalid": [],
+      "correct": {
+        "city": false,
+        "role": false,
+        "employer": false,
+        "age_bracket": false,
+        "gender": true,
+        "health": true
+      }
+    }
+  ]
+}

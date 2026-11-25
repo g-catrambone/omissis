@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0038",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 79,
+      "end": 107,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 294,
+      "end": 307,
+      "text": "12 marzo 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data del decesso"
+    },
+    {
+      "start": 341,
+      "end": 347,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 506,
+      "end": 517,
+      "text": "€ 15.400,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "saldo del conto al momento del decesso"
+    },
+    {
+      "start": 547,
+      "end": 580,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "start": 612,
+      "end": 620,
+      "text": "HX-96212",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 821,
+      "end": 827,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    }
+  ],
+  "seconds": 0.0015
+}

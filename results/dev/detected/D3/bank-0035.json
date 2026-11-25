@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0035",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 73,
+      "end": 90,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario destinatario"
+    },
+    {
+      "start": 159,
+      "end": 166,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale bancaria"
+    },
+    {
+      "start": 296,
+      "end": 317,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "posizione lavorativa del mittente"
+    },
+    {
+      "start": 325,
+      "end": 352,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "azienda per cui lavora la persona"
+    },
+    {
+      "start": 496,
+      "end": 512,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di un addebito"
+    },
+    {
+      "start": 546,
+      "end": 553,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "start": 751,
+      "end": 767,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di un altro addebito"
+    },
+    {
+      "start": 803,
+      "end": 810,
+      "text": "€ 12,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "start": 1325,
+      "end": 1341,
+      "text": "30 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza per risposta"
+    },
+    {
+      "start": 1474,
+      "end": 1482,
+      "text": "PM-09581",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo del cliente"
+    }
+  ],
+  "seconds": 0.0012
+}

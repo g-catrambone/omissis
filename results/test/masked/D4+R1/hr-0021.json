@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0021",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta trasferimento sede [CITTA_1] - [PERSONA_1_F]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono impiegata come [RUOLO_1] presso la [STRUTTURA_1]. Con la presente, desidero formalmente richiedere il mio trasferimento alla [STRUTTURA_2], chiedendo cortesemente l'approvazione della mia domanda.\n\nLa motivazione principale è legata a esigenze familiari che richiedono una maggiore vicinanza ai miei cari, rendendo la permanenza a [CITTA_2] sempre più difficile da gestire. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a trasferirmi entro il [DATA_1].\n\nPer facilitare le pratiche amministrative, allego i miei dati anagrafici: codice fiscale [CF_1] e [UTENTE_1]. Ricordo che il mio conto corrente è intestato presso [STRUTTURA_3], e che la mia carta di credito è attiva.\n\nConfido in una risposta positiva entro il [DATA_2], così da poter organizzare i tempi del trasloco senza intoppi. Resto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o via email all'indirizzo [EMAIL_1].\n\nGrazie per l'attenzione e per la collaborazione.\n\nCordiali saluti,\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione per cui lavora la persona"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere della persona"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_2]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui si intende trasferirsi"
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    },
+    {
+      "surrogate": "[STRUTTURA_3]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui si attende risposta"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

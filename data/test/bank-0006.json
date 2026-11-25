@@ -1,0 +1,119 @@
+{
+  "id": "bank-0006",
+  "domain": "bank",
+  "scenario": "mortgage_suspension",
+  "profile_id": "p23",
+  "has_special": true,
+  "text": "Oggetto: Richiesta rimodulazione mutuo - Alessia Iacobelli\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Alessia Iacobelli e sono titolare del conto corrente con IBAN IT31A000082978482223406184 presso la filiale di Cremona. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mutuo ipotecario per la prima casa, contratto in essere da diversi anni.\n\nAttualmente lavoro come responsabile acquisti presso Caseificio Montelupo S.r.l., dove ho la matricola aziendale YT-67363. Purtroppo, a causa di una recente diagnosi di celiachia, ho dovuto modificare drasticamente la mia alimentazione e i miei ritmi di vita, il che ha comportato un aumento delle spese sanitarie e una temporanea riduzione della mia capacità di gestione finanziaria mensile.\n\nLa rata attuale di € 1.200,50 si è rivelata onerosa rispetto al mio reddito attuale. Vi chiedo pertanto di valutare la possibilità di allungare la durata del mutuo o di applicare un tasso variabile più favorevole, al fine di ridurre l'importo mensile. Desidero che la nuova rata non superi i € 950,00.\n\nVi prego di contattarmi al numero 372 448 9836 o all'indirizzo alessia.iacobelli@example.com per concordare i dettagli. Il mio codice fiscale è RPSVNZ96D27X748J.\n\nResto in attesa di un vostro cortese riscontro entro il 15 dicembre 2026.\n\nCordiali saluti,\nAlessia Iacobelli\n",
+  "spans": [
+    {
+      "start": 41,
+      "end": 58,
+      "text": "Alessia Iacobelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 68,
+      "end": 96,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 109,
+      "end": 126,
+      "text": "Alessia Iacobelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 171,
+      "end": 197,
+      "text": "IT31A000082978482223406184",
+      "type": "IBAN"
+    },
+    {
+      "start": 219,
+      "end": 226,
+      "text": "Cremona",
+      "type": "CITTA"
+    },
+    {
+      "start": 398,
+      "end": 419,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 427,
+      "end": 454,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 487,
+      "end": 495,
+      "text": "YT-67363",
+      "type": "UTENTE"
+    },
+    {
+      "start": 543,
+      "end": 552,
+      "text": "celiachia",
+      "type": "SALUTE"
+    },
+    {
+      "start": 787,
+      "end": 797,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 1060,
+      "end": 1068,
+      "text": "€ 950,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 1105,
+      "end": 1117,
+      "text": "372 448 9836",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1134,
+      "end": 1163,
+      "text": "alessia.iacobelli@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1215,
+      "end": 1231,
+      "text": "RPSVNZ96D27X748J",
+      "type": "CF"
+    },
+    {
+      "start": 1290,
+      "end": 1306,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1326,
+      "end": 1343,
+      "text": "Alessia Iacobelli",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "mortgage_suspension",
+    "amounts": [
+      1200.5,
+      950.0
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "reschedule_payment",
+    "deadline": "2026-12-15"
+  },
+  "reviewed_by": "GC"
+}

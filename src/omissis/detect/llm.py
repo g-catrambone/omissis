@@ -1,4 +1,4 @@
-"""D3: an LLM that finds quasi-identifiers and special categories (task 4.3).
+"""D3: an LLM that finds quasi-identifiers and special categories.
 
 It also looks for one direct identifier, UTENTE (employee number, customer code, user
 name): it has no fixed shape, so no rule and no ready-made model finds it. On the
@@ -38,10 +38,10 @@ logger = logging.getLogger(__name__)
 
 SOURCE = DetectorId.D3.value
 CONFIDENCE = 0.8
-# Room for the model's reasoning and for the list: without a limit a hosted reasoning
+# Room for the model's reasoning and for the list: without a limit the local reasoning
 # model stops before it has answered.
 MAX_TOKENS = 4096
-# At its default effort the pinned model (openai/gpt-oss-20b) loops in its reasoning on
+# At its default effort the local model (gpt-oss:20b, role d3) loops in its reasoning on
 # this task and spends every token without answering; at low effort it answers.
 REASONING = {"reasoning_effort": "low"}
 TYPES = (

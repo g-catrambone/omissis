@@ -1,4 +1,4 @@
-"""D2 ready-made classifier (task 4.2).
+"""D2 ready-made classifier.
 
 The grouping and the stitching of windows are tested on hand-written tokens. The
 tests on the real model run only where the dependency group `detect` is installed,

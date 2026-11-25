@@ -1,0 +1,29 @@
+{
+  "text_id": "bank-0005",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta sospensione rate finanziamento - Cesare [PERSONA_1_M]\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN IT21G0000049496757180948574 presso la filiale di [CITTA_1]. Vi scrivo per richiedere la sospensione temporanea dei pagamenti relativi al finanziamento in essere.\n\nAttualmente lavoro come contabile presso Tessitura Valgrande S.r.l., dove ho la matricola aziendale UJ-61496. A causa di una temporanea difficoltà economica legata alla gestione aziendale, non sono in grado di sostenere l'onere della rata mensile di € 1.200,50 prevista per il prossimo mese.\n\nChiedo pertanto di sospendere le rate a partire dal 15 novembre 2026 fino al 31 gennaio 2027. Non chiedo la rimodulazione del piano, ma esclusivamente la pausa nei pagamenti per il periodo indicato. Il mio codice fiscale è GTVNTV11E14X258I e sono raggiungibile al telefono 363 896 3303 o via email all'indirizzo [EMAIL_1]@example.com.\n\nResto in attesa di un vostro cortese riscontro per confermare l'accettazione della richiesta e le eventuali condizioni applicabili.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

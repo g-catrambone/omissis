@@ -1,0 +1,2502 @@
+{
+  "split": "dev",
+  "seed": 20261111,
+  "generated_from": [
+    "b07665f0c252",
+    "d1aa840154d6",
+    "18bdbd066964",
+    "49f599e17121",
+    "bd5400e9b707",
+    "933a73c866b3",
+    "65b4d39c07a9"
+  ],
+  "rows": [
+    {
+      "config": "REF-none",
+      "texts": 20,
+      "t3": 0.9800000000000001,
+      "t3_ci_low": 0.95,
+      "t3_ci_high": 1.0,
+      "t1": 1.0,
+      "t1_ci_low": 1.0,
+      "t1_ci_high": 1.0,
+      "utility": 0.99,
+      "utility_ci_low": 0.975,
+      "utility_ci_high": 1.0,
+      "t3_unparseable": 0,
+      "judge_unparseable": 0
+    },
+    {
+      "config": "REF-oracle-direct",
+      "texts": 20,
+      "t3": 0.97,
+      "t3_ci_low": 0.9400000000000001,
+      "t3_ci_high": 1.0,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.97,
+      "utility_ci_low": 0.9400000000000001,
+      "utility_ci_high": 1.0,
+      "t3_unparseable": 0,
+      "judge_unparseable": 0
+    },
+    {
+      "config": "REF-oracle",
+      "texts": 20,
+      "t3": 0.8900000000000002,
+      "t3_ci_low": 0.8400000000000001,
+      "t3_ci_high": 0.9400000000000001,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.8900000000000002,
+      "utility_ci_low": 0.8400000000000001,
+      "utility_ci_high": 0.9400000000000001,
+      "t3_unparseable": 0,
+      "judge_unparseable": 0
+    },
+    {
+      "config": "D1+R1",
+      "texts": 20,
+      "t3": 0.9800000000000001,
+      "t3_ci_low": 0.95,
+      "t3_ci_high": 1.0,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.9800000000000001,
+      "utility_ci_low": 0.95,
+      "utility_ci_high": 1.0,
+      "t3_unparseable": 0,
+      "judge_unparseable": 0
+    },
+    {
+      "config": "D2+R1",
+      "texts": 20,
+      "t3": 0.9800000000000001,
+      "t3_ci_low": 0.95,
+      "t3_ci_high": 1.0,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.9800000000000001,
+      "utility_ci_low": 0.95,
+      "utility_ci_high": 1.0,
+      "t3_unparseable": 0,
+      "judge_unparseable": 0
+    },
+    {
+      "config": "D4+R1",
+      "texts": 20,
+      "t3": 0.93,
+      "t3_ci_low": 0.8800000000000001,
+      "t3_ci_high": 0.9800000000000001,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.93,
+      "utility_ci_low": 0.8800000000000001,
+      "utility_ci_high": 0.9800000000000001,
+      "t3_unparseable": 0,
+      "judge_unparseable": 0
+    },
+    {
+      "config": "D4+R2",
+      "texts": 20,
+      "t3": 0.9800000000000001,
+      "t3_ci_low": 0.95,
+      "t3_ci_high": 1.0,
+      "t1": null,
+      "t1_ci_low": null,
+      "t1_ci_high": null,
+      "utility": 0.9800000000000001,
+      "utility_ci_low": 0.95,
+      "utility_ci_high": 1.0,
+      "t3_unparseable": 0,
+      "judge_unparseable": 0
+    }
+  ],
+  "per_text": [
+    {
+      "text_id": "bank-0001",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "REF-none",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.9
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "REF-none",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.9
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "REF-none",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": 1.0,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "REF-oracle-direct",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": false
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "REF-oracle-direct",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "REF-oracle-direct",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "REF-oracle-direct",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "REF-oracle",
+      "t3": 0.6,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.6
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "REF-oracle",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "REF-oracle",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "D1+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "D1+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "D1+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "D2+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "D2+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "D2+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "D4+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "D4+R1",
+      "t3": 0.6,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.6
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "D4+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "D4+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "D4+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "D4+R1",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "D4+R1",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": false,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0001",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0002",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0008",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0010",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0013",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0014",
+      "config": "D4+R2",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0015",
+      "config": "D4+R2",
+      "t3": 0.8,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": false,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 0.8
+    },
+    {
+      "text_id": "bank-0016",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0024",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0032",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0034",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0035",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "bank-0040",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0002",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0003",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0010",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0011",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0016",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0020",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    },
+    {
+      "text_id": "hr-0026",
+      "config": "D4+R2",
+      "t3": 1.0,
+      "t3_parsed": true,
+      "t3_fields": {
+        "intent": true,
+        "requested_action": true,
+        "amounts": true,
+        "dates": true,
+        "deadline": true
+      },
+      "t1": null,
+      "scores": null,
+      "judge_parsed": true,
+      "utility": 1.0
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "text_id": "hr-0012",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 101,
+      "end": 119,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 157,
+      "end": 186,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 189,
+      "end": 196,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 746,
+      "end": 758,
+      "text": "349 318 3143",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 785,
+      "end": 815,
+      "text": "sabrina.lorenzetti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 874,
+      "end": 891,
+      "text": "RNMPVP96S08X914J.",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1068,
+      "end": 1086,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0105
+}

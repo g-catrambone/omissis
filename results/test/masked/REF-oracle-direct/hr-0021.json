@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0021",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta trasferimento sede Palermo - [PERSONA_1_F]\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo [PERSONA_1_F] e sono impiegata come contabile presso la sede di Trapani. Con la presente, desidero formalmente richiedere il mio trasferimento alla sede di Palermo, chiedendo cortesemente l'approvazione della mia domanda.\n\nLa motivazione principale è legata a esigenze familiari che richiedono una maggiore vicinanza ai miei cari, rendendo la permanenza a Trapani sempre più difficile da gestire. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a trasferirmi entro il 15 gennaio 2027.\n\nPer facilitare le pratiche amministrative, allego i miei dati anagrafici: codice fiscale [CF_1] e matricola aziendale [UTENTE_1]. Ricordo che il mio conto corrente è intestato presso Credito Tirrenico, filiale di Trapani, e che la mia carta di credito è attiva.\n\nConfido in una risposta positiva entro il 30 novembre 2026, così da poter organizzare i tempi del trasloco senza intoppi. Resto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o via email all'indirizzo [EMAIL_1].\n\nGrazie per l'attenzione e per la collaborazione.\n\nCordiali saluti,\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

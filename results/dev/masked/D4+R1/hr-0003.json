@@ -1,0 +1,85 @@
+{
+  "text_id": "hr-0003",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - [PERSONA_1_F]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e vi scrivo per comunicare la mia assenza dal lavoro a partire da oggi, [DATA_1]. Purtroppo ho contratto un'[SALUTE_1], aggravata dalla mia condizione di [SALUTE_2], che mi impedisce di svolgere le mie mansioni di [RUOLO_1] presso la sede di [CITTA_1].\n\nVi chiedo cortesemente di registrare questa assenza nel sistema aziendale. Per facilitare le operazioni amministrative, vi fornisco i miei dati identificativi: la mia matricola è [UTENTE_1] e il mio codice fiscale è [PERSONA_2] a disposizione per qualsiasi ulteriore chiarimento tramite il mio recapito telefonico [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nPreciso che non sono in grado di lavorare da remoto per le prossime 48 ore. Vi invierò il certificato medico non appena disponibile, come da prassi aziendale. Vi ringrazio per la comprensione e per la gestione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\nResponsabile Acquisti\n[AZIENDA_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora la persona"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio assenza"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi di malattia"
+    },
+    {
+      "surrogate": "[SALUTE_2]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "condizione medica specifica"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere specifico della persona"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo di lavoro indicato"
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

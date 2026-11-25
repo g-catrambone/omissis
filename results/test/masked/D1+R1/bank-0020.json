@@ -1,0 +1,71 @@
+{
+  "text_id": "bank-0020",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta estinzione anticipata finanziamento - [PERSONA_1_F]\n\nGentile [AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con [CITTA_1] presso la filiale di [CITTA_2]. Vi scrivo per richiedere formalmente la chiusura anticipata del finanziamento in essere, che ho contratto per esigenze personali.\n\nLavoro come autista presso [CITTA_3] S.p.A. e, a causa di un cambio di residenza e di una riorganizzazione dei miei impegni lavorativi, non sono più in grado di sostenere le rate mensili previste dal piano di ammortamento. Desidero pertanto estinguere il debito residuo, che ammonta a € 12.500,00, per porre fine al rapporto contrattuale.\n\nVi chiedo di inviarmi, entro e non oltre il 15 dicembre 2026, le istruzioni dettagliate per il pagamento dell'importo totale, comprensivo di eventuali interessi di mora o penali previste dal contratto per l'estinzione anticipata. Una volta effettuato il bonifico, vi prego di confermare la chiusura definitiva della pratica e la cessazione di ogni addebito automatico sulla mia carta di credito collegata al conto.\n\nResto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o tramite la mia email [EMAIL_1]. Vi ringrazio per la collaborazione e attendo un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[PERSONA_2]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

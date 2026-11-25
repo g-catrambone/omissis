@@ -1,4 +1,4 @@
-"""D4: the hybrid detector (task 4.4). Composition only, no detection logic.
+"""D4: the hybrid detector. Composition only, no detection logic.
 
 Direct identifiers come from D0, D1 and D2; quasi-identifiers, special categories and
 the one direct type D3 is asked for (`llm.TYPES`: UTENTE) come from D3. A span outside

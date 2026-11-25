@@ -3,7 +3,7 @@
 How the parts of the project connect. This document is the contract: the code in
 `src/omissis/contracts.py` and the boundary functions must match it exactly.
 A change of behaviour changes this document in the same commit and gets a row
-in `docs/decisions.md` (CLAUDE.md, rule 5).
+in `docs/decisions.md`.
 
 Sections: 1 data contracts · 2 placeholder grammar · 3 boundary functions ·
 4 configuration · 5 file formats · 6 who calls what.
@@ -115,9 +115,10 @@ model is loaded and none is called. Callers use it instead of probing
 mentions merge when one contains the other's surname or is its first name
 alone; a surname includes its particles (`De Luca`) and a title written inside
 the span is ignored. They stay separate when both carry first names and these
-differ, or when titles or first names give them different genders; the same
-name words are one person, in any order, and the entity keeps the order that
-starts with a first name of the lists. Mentions with a first name are grouped
+differ, or when titles or first names give them different genders. A name
+written surname first is the same person ("Ferri Marco", "De Luca Rosa"); the
+same words in another order are not ("Rosa De Luca", "Luca De Rosa"). The entity
+keeps the order that starts with a first name of the lists. Mentions with a first name are grouped
 first; a surname or a first name alone then joins the first person it is
 compatible with. Other types merge on normalised equality (case and
 whitespace). Gender from titles first (Sig./Sig.ra, Dott./Dott.ssa), then from
@@ -179,7 +180,9 @@ generator.
 A provider turns one request into text and does no caching. `backends`
 registers `groq` (the hosted models) and `local` (a model served on this
 machine, which D3 uses: the text it reads is not pseudonymised yet and never
-leaves the machine). Registering a name twice raises `ValueError`. A provider that cannot run on this machine (key,
+leaves the machine). The provider `local` opens its connection with no proxy,
+whatever `http_proxy` says: the text goes to the address of this machine that was
+checked, and nowhere else. Registering a name twice raises `ValueError`. A provider that cannot run on this machine (key,
 library or weights missing) raises `ConfigError`.
 
 **Built-in provider `echo`** — registered by `backends` itself. It returns
@@ -308,6 +311,7 @@ omissis batch --config <run config .yaml> --input-dir <dir of text records> [--t
 omissis mask  --eval-config configs/eval.yaml [--names A,B,...] --input-dir <dir of text records> --output results/<split>/masked [--backend cloud|replay]
 ```
 
+`run` and `batch` refuse an empty text before any call, with status 2.
 `run` prints the masked text, the raw and the restored reply, the disclosure
 report and the restoration events. `batch` prints one JSON line per record
 with the whole result. Both outputs contain the restored reply, which holds
@@ -339,10 +343,15 @@ hold their original values by design. A text a user gives to `omissis run`,
 `omissis batch` or the app is written nowhere except the LLM cache of the
 configuration in use (`cache_dir`): the prompt that was sent, which is the
 masked text with whatever the detector missed in clear, and, with D3 or D4,
-the detector's own prompt, which is the whole text. Such a run uses a
-`cache_dir` under the gitignored `results/scratch/`: `omissis run` refuses a
-plain-text input when the cache is under `results/` outside
-`results/scratch/`. The restored reply is never saved. `<split>` below is
+the detector's own prompt, which is the whole text. The request (`--task`, the
+field *Request* of the app) is sent as written before the masked text: it is
+never masked, and it is in that cached prompt. Such a run uses a `cache_dir`
+under the gitignored `results/scratch/`. A cache is committed when it lies
+under this repository's `results/`, outside `results/scratch/`, whatever the
+current directory: with a committed cache `omissis run`, `omissis batch` and
+`omissis mask` accept only the `.json` records under `data/`, which are
+synthetic, and refuse a plain text or a record from anywhere else, also one that
+a link inside `data/` points to. The restored reply is never saved. `<split>` below is
 `pilot`, `dev` or `test`.
 
 **Text with gold** — `data/{fixtures,pool,dev,test}/<text_id>.json`
@@ -444,6 +453,15 @@ configuration (or detector) with everything the rows are computed from:
 detection the counts of matched, missed and spurious spans per class and
 type, for the attributes the true value; no text. The rows can be rebuilt
 from `per_text` and `seed` alone.
+`linkage` holds two more keys, written by `make reproduce`: `control_excluded`,
+the ids of the texts of the split that the control of the protocol, section 7,
+leaves out (the seven ids are a constant of `eval/report.py`), and
+`control_rows`, the rows computed without them; both are empty when the split
+holds none of the seven.
+In `utility`, the field `utility` of a row or of a text whose `t1` is null holds
+T3 alone: it is not the utility score of the protocol, section 8, and no table
+reports it. In the files of `results/<split>/detected/` the field `seconds` is a
+measured time: it differs at every run, the spans do not.
 
 **Figures and tables** — `results/<split>/figures/privacy_utility.png`,
 `results/<split>/scorecard.md`; on dev only, `results/dev/error_examples.md`
@@ -457,11 +475,19 @@ and `results/dev/error_taxonomy.md`.
   masking: an ordinary request is handled as before. With a cue, it masks the text
   with `pipeline.mask`, erases that vault, and returns the masked types that block
   the request, each with its number of entities: amounts, dates, ages and dates of
-  birth. It returns an empty dict when nothing blocks, and never a value of the text. Only then, and only
-  when nothing blocks, they run the text through `pipeline.protect_send_restore`. A
-  blocked request is not sent: the app shows the reason, `omissis run` prints one
-  line on standard error and exits with status 2. `omissis batch`, `omissis mask`
-  and the evaluation never call the check.
+  birth. It returns an empty dict when nothing blocks, and never a value of the
+  text. A blocked request is not sent: the app shows the reason, `omissis run`
+  prints one line on standard error and exits with status 2. When nothing
+  blocks, `omissis run` runs the text through `pipeline.protect_send_restore`.
+  `omissis batch`, `omissis mask` and the evaluation never call the check.
+- The app works in two steps, so that the user sees what is sent before it is
+  sent. *Protect* asks the check and, when nothing blocks, masks the text with
+  `pipeline.mask`, erases that vault and shows the masked text: it makes no call
+  to the role `cloud`. *Send* is refused unless the text, the detector, the
+  strategy, the backend and the request are the ones that were previewed; it
+  masks the text again and, only when the result is the previewed text, runs it
+  through `pipeline.protect_send_restore`. The page is in English; the examples
+  and the requests are Italian, as the texts are.
 - The app also calls `supported_detectors` for its detector selector and
   `omissis.eval.datasets` to load its examples.
 - The evaluation calls `omissis.eval.datasets`, `pipeline.mask`,
@@ -471,7 +497,13 @@ and `results/dev/error_taxonomy.md`.
   `supported_detectors()` lists; `config` is any `RunConfig` read from `configs/eval.yaml`,
   from which `detect` takes the backend, the models file and the cache.
 - D3 calls `backends.complete` with role `d3`, which is pinned to the provider
-  `local`.
+  `local`. The pin is in `configs/models.yaml`: no code forces it, and a models
+  file that points `d3` to a hosted provider sends the original text there.
+- Two commands protect results that are committed. `python -m
+  omissis.eval.detection run|time --split test` is refused, with status 2, once
+  `results/test/metrics/contrasts.json` exists, as the runner is. `python -m
+  omissis.eval.judge sheets` refuses to write where `key.json` already exists:
+  the sheets of a validation are written once.
 - Nothing outside `backends/` and the registered providers imports an LLM
   provider SDK or an LLM runtime. The libraries of D1 and D2 (Presidio, spaCy,
   `transformers`) are imported inside `src/omissis/detect/` only.

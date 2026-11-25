@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0039",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 42,
+      "end": 59,
+      "text": "Giulia Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 97,
+      "end": 114,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 139,
+      "end": 146,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 180,
+      "end": 205,
+      "text": "Tessitura Valgrande S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 314,
+      "end": 331,
+      "text": "Giulia Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 388,
+      "end": 420,
+      "text": "IBAN IT21G0000049496757180948574",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 731,
+      "end": 760,
+      "text": "cesare.sartorelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1039,
+      "end": 1051,
+      "text": "363 896 3303",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1147,
+      "end": 1164,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.012
+}

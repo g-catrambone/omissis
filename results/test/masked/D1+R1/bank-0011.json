@@ -1,0 +1,78 @@
+{
+  "text_id": "bank-0011",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Contestazione addebiti non autorizzati conto [IBAN_1]\n\nGentile Banca Popolare di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente in oggetto presso la filiale di [CITTA_1]. Vi scrivo per contestare formalmente due addebiti che non riconosco e che sono apparsi sul mio estratto conto.\n\nIl primo addebito, di € 1.200,50, è stato effettuato il 16 novembre 2026 presso un esercente a [CITTA_2]. Il secondo, di € 350,00, risale al 20 novembre 2026 e riguarda un acquisto online che non ho mai effettuato. Non ho autorizzato queste transazioni e la mia carta era in mio possesso.\n\nVi chiedo pertanto di procedere immediatamente allo storno di entrambe le somme, per un totale di € 1.550,50, e di rimborsare l'importo sul mio conto corrente. Vi prego di considerare questa richiesta urgente, dato che gestisco anche un prestito personale con la vostra banca e non desidero che questa situazione influisca sulla mia affidabilità creditizia.\n\nResto a disposizione per fornire eventuali documenti aggiuntivi, ma la mia richiesta si limita esclusivamente al rimborso delle somme indebitamente prelevate.\n\nCordiali saluti,\n\n[PERSONA_1_M]\nresponsabile acquisti presso [AZIENDA_2].\n[CITTA_3]: [TELEFONO_1]\nEmail: [EMAIL_1]\nMatricola: JY-00410\n[AZIENDA_3]: FMZGCF93D55X913J\n",
+  "disclosure": [
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_3]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

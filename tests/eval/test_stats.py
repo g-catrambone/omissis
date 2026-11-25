@@ -1,4 +1,4 @@
-"""Statistics (task 3.8): hand-computed and textbook values."""
+"""Statistics: hand-computed and textbook values."""
 
 import pytest
 

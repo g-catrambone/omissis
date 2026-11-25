@@ -1,0 +1,85 @@
+{
+  "text_id": "bank-0020",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta estinzione anticipata finanziamento - Marianna Gardini\n\nGentile Banco di Roccalta,\n\nmi chiamo Marianna Gardini e sono titolare del conto corrente con IBAN IT86O0000099394348391849041 presso la [STRUTTURA_1]. Vi scrivo per richiedere formalmente la chiusura anticipata del finanziamento in essere, che ho contratto per esigenze personali.\n\nLavoro come [RUOLO_1] presso Autolinee Brentari S.r.l. e, a causa di un cambio di residenza e di una riorganizzazione dei miei impegni lavorativi, non sono più in grado di sostenere le rate mensili previste dal piano di ammortamento. Desidero pertanto estinguere il debito residuo, che ammonta a € 29.792,00, per porre fine al rapporto contrattuale.\n\nVi chiedo di inviarmi, entro e non oltre il 27 dicembre 2026, le istruzioni dettagliate per il pagamento dell'importo totale, comprensivo di eventuali interessi di mora o penali previste dal contratto per l'estinzione anticipata. Una volta effettuato il bonifico, vi prego di confermare la chiusura definitiva della pratica e la cessazione di ogni addebito automatico sulla mia carta di credito collegata al conto.\n\nResto a disposizione per qualsiasi chiarimento al numero 320 128 7634 o tramite la mia email selene.fabbretti@example.com. Vi ringrazio per la collaborazione e attendo un vostro cortese riscontro.\n\nCordiali saluti,\n\nMarianna Gardini\nFRFLVR25A50X732Q\n",
+  "disclosure": [
+    {
+      "surrogate": "Marianna Gardini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "surrogate": "IT86O0000099394348391849041",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede specifica di un istituto bancario"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un'azienda di costruzioni"
+    },
+    {
+      "surrogate": "€ 29.792,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "surrogate": "320 128 7634",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "selene.fabbretti@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "FRFLVR25A50X732Q",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

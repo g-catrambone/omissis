@@ -1,0 +1,8790 @@
+{
+  "split": "test",
+  "seed": 20261111,
+  "generated_from": [
+    "b07665f0c252",
+    "d1aa840154d6",
+    "18bdbd066964",
+    "49f599e17121",
+    "bd5400e9b707",
+    "933a73c866b3",
+    "65b4d39c07a9"
+  ],
+  "rows": [
+    {
+      "config": "REF-none",
+      "n": 10,
+      "texts": 46,
+      "top1": 1.0,
+      "top1_ci_low": 1.0,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "REF-none",
+      "n": 25,
+      "texts": 46,
+      "top1": 1.0,
+      "top1_ci_low": 1.0,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "texts": 46,
+      "top1": 0.9782608695652174,
+      "top1_ci_low": 0.9347826086956522,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "texts": 46,
+      "top1": 0.9782608695652174,
+      "top1_ci_low": 0.9347826086956522,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "REF-oracle",
+      "n": 10,
+      "texts": 46,
+      "top1": 0.7608695652173914,
+      "top1_ci_low": 0.6304347826086957,
+      "top1_ci_high": 0.8695652173913043,
+      "top3": 0.9347826086956522,
+      "top3_ci_low": 0.8478260869565217,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "REF-oracle",
+      "n": 25,
+      "texts": 46,
+      "top1": 0.5,
+      "top1_ci_low": 0.34782608695652173,
+      "top1_ci_high": 0.6521739130434783,
+      "top3": 0.717391304347826,
+      "top3_ci_low": 0.5869565217391305,
+      "top3_ci_high": 0.8478260869565217,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "D1+R1",
+      "n": 10,
+      "texts": 46,
+      "top1": 0.9782608695652174,
+      "top1_ci_low": 0.9347826086956522,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "D1+R1",
+      "n": 25,
+      "texts": 46,
+      "top1": 0.9347826086956522,
+      "top1_ci_low": 0.8478260869565217,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "D2+R1",
+      "n": 10,
+      "texts": 46,
+      "top1": 0.9782608695652174,
+      "top1_ci_low": 0.9347826086956522,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "D2+R1",
+      "n": 25,
+      "texts": 46,
+      "top1": 1.0,
+      "top1_ci_low": 1.0,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "D4+R1",
+      "n": 10,
+      "texts": 46,
+      "top1": 0.6956521739130435,
+      "top1_ci_low": 0.5652173913043478,
+      "top1_ci_high": 0.8260869565217391,
+      "top3": 0.9347826086956522,
+      "top3_ci_low": 0.8478260869565217,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "D4+R1",
+      "n": 25,
+      "texts": 46,
+      "top1": 0.5869565217391305,
+      "top1_ci_low": 0.43478260869565216,
+      "top1_ci_high": 0.7391304347826086,
+      "top3": 0.8478260869565217,
+      "top3_ci_low": 0.7391304347826086,
+      "top3_ci_high": 0.9347826086956522,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "D4+R2",
+      "n": 10,
+      "texts": 46,
+      "top1": 0.6739130434782609,
+      "top1_ci_low": 0.5434782608695652,
+      "top1_ci_high": 0.8043478260869565,
+      "top3": 0.9130434782608695,
+      "top3_ci_low": 0.8260869565217391,
+      "top3_ci_high": 0.9782608695652174,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "D4+R2",
+      "n": 25,
+      "texts": 46,
+      "top1": 0.41304347826086957,
+      "top1_ci_low": 0.2826086956521739,
+      "top1_ci_high": 0.5440217391304268,
+      "top3": 0.6739130434782609,
+      "top3_ci_low": 0.5434782608695652,
+      "top3_ci_high": 0.8043478260869565,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    }
+  ],
+  "per_text": [
+    {
+      "text_id": "bank-0003",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p09",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p24",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p17",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p22",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p28",
+        "p29",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p04",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p09",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p24",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p19",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p04",
+        "p10",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p20",
+        "p14",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p26",
+        "p30",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p17",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p24",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p19",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p07",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p22",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p05",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p04",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p16",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p08",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p08",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p27",
+        "p30",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p24",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p25",
+        "p22",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p30",
+        "p27",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p14",
+        "p12",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p29",
+        "p11",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p18",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p25",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p01",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p08",
+        "p10",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p15",
+        "p02",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-none",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p05",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p02",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p08",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p24",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p17",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p22",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p28",
+        "p29",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p04",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p06",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p24",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p24",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p05",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p20",
+        "p27",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p14",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p26",
+        "p28",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p19",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p24",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p19",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p08",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p10",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p02",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p04",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p16",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p06",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p30",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p24",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p14",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p11",
+        "p28",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p30",
+        "p27",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p14",
+        "p20",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p10",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p25",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p10",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p08",
+        "p10",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p15",
+        "p26",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-none",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p16",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p24",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p20",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p23",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p28",
+        "p29",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p04",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p09",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p21",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p19",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p04",
+        "p10",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p20",
+        "p14",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p26",
+        "p27",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p19",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p23",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p19",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p02",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p25",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p04",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p04",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p06",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p27",
+        "p26",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p08",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p25",
+        "p24",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p30",
+        "p27",
+        "p28"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p14",
+        "p12",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p18",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p25",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p08",
+        "p29",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p15",
+        "p12",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p03",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p16",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p21",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p19",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p25",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p28",
+        "p29",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p30",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p06",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p22",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p19",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p10",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p20",
+        "p14",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p14",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p26",
+        "p27",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p19",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p24",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p19",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p16",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p25",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p06",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p26",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p22",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p14",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p11",
+        "p28",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p30",
+        "p13",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p14",
+        "p20",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p28",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p05",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p08",
+        "p30",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p15",
+        "p26",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p26",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p05",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p06",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p01",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p07",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p04",
+        "p16",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p25",
+        "p24",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p29",
+        "p28",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p02",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p24",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p21",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p08",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p26",
+        "p10",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p20",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p15",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p26",
+        "p27",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p27",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p03",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p28",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p02",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p25",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p29",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p17",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p27",
+        "p26",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p11",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p13",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p25",
+        "p24",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p30",
+        "p27",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p20",
+        "p09",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p14",
+        "p15",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p28"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p26",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p08",
+        "p29",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p15",
+        "p12",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p03",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-oracle",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p10",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p27",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p08",
+        "p23",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p01",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p26",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p05",
+        "p28"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p29",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p06",
+        "p24",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p05",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p08",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p06",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p27",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p15",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p26",
+        "p24",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p19",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p23",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p17",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p05",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p20",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p02",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p11",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p22",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p11",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p07",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p25",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p29",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p01",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p11",
+        "p21",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p18",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p20",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p07",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p29",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p25",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p29",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p25",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p03",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p11",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p15",
+        "p26",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p13",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "REF-oracle",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p15",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p16",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p05",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p15",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p22",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p19",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p25",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p28",
+        "p09",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p03",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p24",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p23",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p17",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p04",
+        "p10",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p20",
+        "p14",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p26",
+        "p27",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p20",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p24",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p28",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p16",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p25",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p02",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p05",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p02",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p17",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p27",
+        "p26",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p22",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p27",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p25",
+        "p24",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p30",
+        "p08",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p14",
+        "p15",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p29",
+        "p11",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p18",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p08",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p15",
+        "p02",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D1+R1",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p10",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p20",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p02",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p15",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p21",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p20",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p25",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p28",
+        "p09",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p30",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p06",
+        "p25",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p23",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p18",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p10",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p20",
+        "p19",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p14",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p26",
+        "p24",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p19",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p03",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p18",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p09",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p18",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p25",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p02",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p03",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p17",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p09",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p27",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p07",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p22",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p14",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p11",
+        "p05",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p30",
+        "p07",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p14",
+        "p20",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p03",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p20",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p13",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p18",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p08",
+        "p30",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p15",
+        "p26",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p05",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D1+R1",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p18",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p09",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p22",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p17",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p25",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p28",
+        "p29",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p04",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p13",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p23",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p19",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p04",
+        "p10",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p20",
+        "p19",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p26",
+        "p30",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p17",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p23",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p19",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p08",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p02",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p24",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p05",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p04",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p02",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p27",
+        "p26",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p25",
+        "p24",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p30",
+        "p08",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p14",
+        "p12",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p29",
+        "p11",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p18",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p02",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p08",
+        "p07",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p15",
+        "p02",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D2+R1",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p05",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p18",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p24",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p17",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p25",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p28",
+        "p29",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p04",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p06",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p23",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p19",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p10",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p20",
+        "p14",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p14",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p26",
+        "p22",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p19",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p23",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p19",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p16",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p05",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p04",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p16",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p08",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p30",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p22",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p14",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p11",
+        "p30",
+        "p28"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p30",
+        "p27",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p14",
+        "p20",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p28",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p18",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p25",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p18",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p08",
+        "p07",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p15",
+        "p26",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p01",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D2+R1",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p15",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p26",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p10",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p23",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p20",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p04",
+        "p16",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p25",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p29",
+        "p12",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p01",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p24",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p23",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p08",
+        "p23",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p04",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p20",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p24",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p26",
+        "p30",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p14",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p03",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p17",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p02",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p25",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p03",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p29",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p17",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p27",
+        "p26",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p01",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p08",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p09",
+        "p07",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p25",
+        "p24",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p30",
+        "p27",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p14",
+        "p12",
+        "p28"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p16",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p07",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p02",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p08",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p15",
+        "p27",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p05",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D4+R1",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p03",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p19",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p08",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p24",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p01",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p16",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p05",
+        "p28"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p05",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p06",
+        "p24",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p05",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p05",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p10",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p25",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p15",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p26",
+        "p24",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p16",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p23",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p20",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p09",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p05",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p25",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p02",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p11",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p05",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p17",
+        "p18",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p09",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p25",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p29",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p10",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p15",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p11",
+        "p05",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p24",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p18",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p09",
+        "p07",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p19",
+        "p20",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p29",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p19",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p11",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p02",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p11",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p15",
+        "p26",
+        "p12"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p11",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D4+R1",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p15",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p16",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p15",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p01",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p17",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p16",
+        "p04",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p05",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p28",
+        "p29",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p03",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p10",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p22",
+        "p21",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p17",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p02",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p24",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p24",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p26",
+        "p30",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p20",
+        "p16",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p11",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p17",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p10",
+        "p07",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p17",
+        "p01",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p24",
+        "p25",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p05",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p01",
+        "p02",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p05",
+        "p29",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p18",
+        "p17",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p10",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p27",
+        "p26",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p23",
+        "p21",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p12",
+        "p14",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p07",
+        "p09",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p11",
+        "p29",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p25",
+        "p21",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p30",
+        "p08",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p14",
+        "p20",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p14",
+        "p12",
+        "p15"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p30",
+        "p11",
+        "p29"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p19",
+        "p20",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p21",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p06",
+        "p10",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p03",
+        "p02",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p29",
+        "p08",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p15",
+        "p02",
+        "p27"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p01",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D4+R2",
+      "n": 10,
+      "ranking": [
+        "p02",
+        "p03",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0003",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p19",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0004",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p23",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0005",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p15",
+        "p06",
+        "p07"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0006",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p01",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0007",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p23",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0009",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p16",
+        "p17",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0011",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p22",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0012",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p29",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0017",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p30",
+        "p08"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0018",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p16",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0019",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p22",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0020",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p02",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0021",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p03",
+        "p29",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0022",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p20",
+        "p14",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0023",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p01",
+        "p06"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0025",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p26",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0026",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p04",
+        "p10",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0027",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p22",
+        "p29",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0028",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p17",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0029",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p30",
+        "p22"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0030",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p02",
+        "p17"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0031",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p24",
+        "p27",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0033",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p01",
+        "p03",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0036",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p03",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0037",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p30",
+        "p18"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "bank-0038",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p18",
+        "p17",
+        "p16"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "bank-0039",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p10",
+        "p04",
+        "p20"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0001",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p11",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0004",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p27",
+        "p25",
+        "p26"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0005",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p29",
+        "p21",
+        "p23"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0006",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p12",
+        "p05",
+        "p30"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0007",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p07",
+        "p15",
+        "p09"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0008",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p11",
+        "p05",
+        "p02"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0009",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p22",
+        "p13"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0012",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p13",
+        "p11",
+        "p03"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0013",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p20",
+        "p19",
+        "p14"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0014",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p14",
+        "p20",
+        "p25"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0015",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p23",
+        "p30",
+        "p21"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0017",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p01",
+        "p04"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0018",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p25",
+        "p21",
+        "p19"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0019",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p04",
+        "p10"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0021",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p21",
+        "p17",
+        "p11"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0022",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p05",
+        "p29",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": false,
+      "top3": false
+    },
+    {
+      "text_id": "hr-0023",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p15",
+        "p02",
+        "p24"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0024",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p11",
+        "p05"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    },
+    {
+      "text_id": "hr-0025",
+      "config": "D4+R2",
+      "n": 25,
+      "ranking": [
+        "p02",
+        "p15",
+        "p01"
+      ],
+      "parsed": true,
+      "top1": true,
+      "top3": true
+    }
+  ],
+  "control_excluded": [
+    "bank-0003",
+    "bank-0005",
+    "bank-0020",
+    "bank-0021",
+    "bank-0022"
+  ],
+  "control_rows": [
+    {
+      "config": "REF-none",
+      "n": 10,
+      "texts": 41,
+      "top1": 1.0,
+      "top1_ci_low": 1.0,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "REF-none",
+      "n": 25,
+      "texts": 41,
+      "top1": 1.0,
+      "top1_ci_low": 1.0,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "REF-oracle-direct",
+      "n": 10,
+      "texts": 41,
+      "top1": 0.975609756097561,
+      "top1_ci_low": 0.926829268292683,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "REF-oracle-direct",
+      "n": 25,
+      "texts": 41,
+      "top1": 0.975609756097561,
+      "top1_ci_low": 0.926829268292683,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "REF-oracle",
+      "n": 10,
+      "texts": 41,
+      "top1": 0.8048780487804879,
+      "top1_ci_low": 0.6829268292682927,
+      "top1_ci_high": 0.926829268292683,
+      "top3": 0.9512195121951219,
+      "top3_ci_low": 0.8780487804878049,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "REF-oracle",
+      "n": 25,
+      "texts": 41,
+      "top1": 0.5609756097560976,
+      "top1_ci_low": 0.4146341463414634,
+      "top1_ci_high": 0.7073170731707317,
+      "top3": 0.7804878048780488,
+      "top3_ci_low": 0.6585365853658537,
+      "top3_ci_high": 0.9024390243902439,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "D1+R1",
+      "n": 10,
+      "texts": 41,
+      "top1": 0.975609756097561,
+      "top1_ci_low": 0.926829268292683,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "D1+R1",
+      "n": 25,
+      "texts": 41,
+      "top1": 0.9512195121951219,
+      "top1_ci_low": 0.8780487804878049,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "D2+R1",
+      "n": 10,
+      "texts": 41,
+      "top1": 0.975609756097561,
+      "top1_ci_low": 0.926829268292683,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "D2+R1",
+      "n": 25,
+      "texts": 41,
+      "top1": 1.0,
+      "top1_ci_low": 1.0,
+      "top1_ci_high": 1.0,
+      "top3": 1.0,
+      "top3_ci_low": 1.0,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "D4+R1",
+      "n": 10,
+      "texts": 41,
+      "top1": 0.7560975609756098,
+      "top1_ci_low": 0.6097560975609756,
+      "top1_ci_high": 0.8780487804878049,
+      "top3": 0.926829268292683,
+      "top3_ci_low": 0.8292682926829268,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "D4+R1",
+      "n": 25,
+      "texts": 41,
+      "top1": 0.6341463414634146,
+      "top1_ci_low": 0.4878048780487805,
+      "top1_ci_high": 0.7804878048780488,
+      "top3": 0.9024390243902439,
+      "top3_ci_low": 0.8048780487804879,
+      "top3_ci_high": 0.975609756097561,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    },
+    {
+      "config": "D4+R2",
+      "n": 10,
+      "texts": 41,
+      "top1": 0.7073170731707317,
+      "top1_ci_low": 0.5609756097560976,
+      "top1_ci_high": 0.8292682926829268,
+      "top3": 0.926829268292683,
+      "top3_ci_low": 0.8292682926829268,
+      "top3_ci_high": 1.0,
+      "unparseable": 0,
+      "chance_top1": 0.1,
+      "chance_top3": 0.3
+    },
+    {
+      "config": "D4+R2",
+      "n": 25,
+      "texts": 41,
+      "top1": 0.43902439024390244,
+      "top1_ci_low": 0.2926829268292683,
+      "top1_ci_high": 0.5853658536585366,
+      "top3": 0.7073170731707317,
+      "top3_ci_low": 0.5609756097560976,
+      "top3_ci_high": 0.8292682926829268,
+      "unparseable": 0,
+      "chance_top1": 0.04,
+      "chance_top3": 0.12
+    }
+  ]
+}

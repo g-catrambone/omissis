@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0040",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 428,
+      "end": 455,
+      "text": "IT11E0000023582267657498114",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 626,
+      "end": 636,
+      "text": "€ 4.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 754,
+      "end": 770,
+      "text": "RZGFNN66L14X204C",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 806,
+      "end": 818,
+      "text": "369 461 1173",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 835,
+      "end": 865,
+      "text": "fabrizio.nicoletti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0005",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta sospensione rate finanziamento - [PERSONA_1_M]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1] presso la filiale di [CITTA_1]. Vi scrivo per richiedere la sospensione temporanea dei pagamenti relativi al finanziamento in essere.\n\nAttualmente lavoro come [RUOLO_1] presso [AZIENDA_2], dove ho la matricola aziendale [UTENTE_1]. A causa di una temporanea difficoltà economica legata alla gestione aziendale, non sono in grado di sostenere l'onere della rata mensile di [IMPORTO_1] prevista per il prossimo mese.\n\nChiedo pertanto di sospendere le rate a partire dal [DATA_1] fino al [DATA_2]. Non chiedo la rimodulazione del piano, ma esclusivamente la pausa nei pagamenti per il periodo indicato. Il mio codice fiscale è [CF_1] e sono raggiungibile al telefono [TELEFONO_1] o via email all'indirizzo [EMAIL_1].\n\nResto in attesa di un vostro cortese riscontro per confermare l'accettazione della richiesta e le eventuali condizioni applicabili.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

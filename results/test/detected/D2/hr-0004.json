@@ -1,0 +1,52 @@
+{
+  "text_id": "hr-0004",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 52,
+      "end": 63,
+      "text": "Scarpellini",
+      "type": "PERSONA",
+      "confidence": 0.5604762136936188,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 580,
+      "end": 587,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9993127882480621,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 805,
+      "end": 812,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9949761033058167,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1131,
+      "end": 1149,
+      "text": "nicola.scarpellini",
+      "type": "EMAIL",
+      "confidence": 0.925348162651062,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1373,
+      "end": 1391,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA",
+      "confidence": 0.9415923953056335,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1342
+}

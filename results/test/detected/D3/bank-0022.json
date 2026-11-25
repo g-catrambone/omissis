@@ -1,0 +1,70 @@
+{
+  "text_id": "bank-0022",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 99,
+      "end": 127,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 191,
+      "end": 208,
+      "text": "filiale di Foggia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di banca"
+    },
+    {
+      "start": 222,
+      "end": 229,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "start": 240,
+      "end": 269,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "start": 628,
+      "end": 641,
+      "text": "15 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza"
+    },
+    {
+      "start": 696,
+      "end": 707,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "start": 1054,
+      "end": 1062,
+      "text": "PB-80503",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice cliente/matricola"
+    }
+  ],
+  "seconds": 0.0014
+}

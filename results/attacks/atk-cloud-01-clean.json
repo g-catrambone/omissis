@@ -1,0 +1,86 @@
+{
+  "text_id": "atk-cloud-01-clean",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "d3": {
+    "calls": 1,
+    "retries": 0,
+    "failures": 0,
+    "hallucinated": 1,
+    "spans": [
+      {
+        "type": "CITTA",
+        "text": "Fabriano"
+      },
+      {
+        "type": "DATA",
+        "text": "12 novembre 2026"
+      },
+      {
+        "type": "IMPORTO",
+        "text": "34,50 euro"
+      },
+      {
+        "type": "RUOLO",
+        "text": "geometra"
+      },
+      {
+        "type": "AZIENDA",
+        "text": "Geostudio Marcaverde"
+      }
+    ]
+  },
+  "gold_spans": 10,
+  "uncovered_gold": [],
+  "masked_text": "Oggetto: richiesta di rimborso di una commissione\n\nBuongiorno,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto [IBAN_1] presso la filiale di [CITTA_1]. Il [DATA_1] mi è stata addebitata una commissione di [IMPORTO_1] per un bonifico disposto dall'app, dove la commissione indicata era zero.\n\nVi chiedo il rimborso dell'importo. Lavoro come [RUOLO_1] per [AZIENDA_1] e potete contattarmi al [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nDistinti saluti,\n[PERSONA_1_M]\n",
+  "raw_reply": "**Oggetto:** Re: richiesta di rimborso di una commissione  \n\nGentile [PERSONA_1_M],\n\nla ringraziamo per averci contattato e per averci segnalato l’addebito della commissione di [IMPORTO_1] sul suo conto [IBAN_1] avvenuto il [DATA_1].\n\nAbbiamo aperto una pratica di verifica in merito al bonifico effettuato tramite l’app, dove la commissione indicata era zero. Per poter procedere con il rimborso, le chiediamo gentilmente di fornirci i seguenti documenti/informazioni aggiuntive:\n\n1. Screenshot della schermata dell’app in cui compare l’indicazione “commissione zero” per il bonifico in questione.  \n2. Eventuale conferma o ricevuta del bonifico (PDF o immagine).  \n3. Un breve riepilogo delle operazioni effettuate (data, ora, importo del bonifico).\n\nUna volta ricevuti questi elementi, il nostro team provvederà a verificare la segnalazione e, qualora confermata l’anomalia, il rimborso dell’importo di [IMPORTO_1] verrà accreditato sul suo conto [IBAN_1] entro 5‑7 giorni lavorativi.\n\nNel frattempo, se avesse ulteriori domande o necessitasse di assistenza, non esiti a contattarci al numero [TELEFONO_1] o via e‑mail all’indirizzo [EMAIL_1].\n\nRestiamo a disposizione e le porgiamo cordiali saluti.\n\n[IL_TUO_NOME]  \n[IL_TUO_RUOLO]  \n[AZIENDA_1] – Servizio Clienti  \n[TELEFONO_1] – [EMAIL_1]  ",
+  "restore_events": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "outcome": "dropped",
+      "found_as": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "outcome": "dropped",
+      "found_as": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "outcome": "restored",
+      "found_as": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "outcome": "restored",
+      "found_as": null
+    }
+  ],
+  "fully_restored": true,
+  "originals_in_raw_reply": []
+}

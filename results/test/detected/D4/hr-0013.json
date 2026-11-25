@@ -1,0 +1,124 @@
+{
+  "text_id": "hr-0013",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 54,
+      "end": 69,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9430283755064011,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 104,
+      "end": 127,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora il mittente"
+    },
+    {
+      "start": 140,
+      "end": 155,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9888267368078232,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 167,
+      "end": 175,
+      "text": "GZ-20484",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 191,
+      "end": 198,
+      "text": "custode",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 209,
+      "end": 224,
+      "text": "sede di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di lavoro del mittente"
+    },
+    {
+      "start": 331,
+      "end": 347,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio della vessazione"
+    },
+    {
+      "start": 1033,
+      "end": 1045,
+      "text": "399 299 3390",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1052,
+      "end": 1079,
+      "text": "dario.altobelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1108,
+      "end": 1123,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca"
+    },
+    {
+      "start": 1125,
+      "end": 1143,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "filiale bancaria del mittente"
+    },
+    {
+      "start": 1168,
+      "end": 1200,
+      "text": "IBAN IT41G0000015737119260922015",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1287,
+      "end": 1302,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.9893907308578491,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1496
+}

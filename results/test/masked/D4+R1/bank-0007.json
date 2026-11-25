@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0007",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - [PERSONA_1_M]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, di importo pari a € 145,00, è stato registrato il [DATA_1] presso un esercente a [CITTA_1]. Il secondo, di € 89,50, risale al [DATA_2] e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come [RUOLO_1] presso [AZIENDA_2] e la mia matricola aziendale è [UTENTE_1]. Per facilitare le verifiche, il mio codice fiscale è [CF_1] e posso essere contattato al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nVi chiedo cortesemente di aprire una pratica di verifica o un'indagine formale per accertare la natura di questi movimenti e bloccare eventuali ulteriori utilizzi fraudolenti della carta. Resto in attesa di un vostro riscontro in merito all'avvio delle procedure di controllo.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data della prima transazione"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo dell'addebito"
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data della seconda transazione"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "datore di lavoro del mittente"
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

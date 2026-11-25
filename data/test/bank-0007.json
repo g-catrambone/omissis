@@ -1,0 +1,120 @@
+{
+  "id": "bank-0007",
+  "domain": "bank",
+  "scenario": "card_dispute",
+  "profile_id": "p16",
+  "has_special": false,
+  "text": "Oggetto: Contestazione addebiti non riconosciuti - Emanuele Agostinelli\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Emanuele Agostinelli e sono titolare del conto corrente con IBAN IT25L0000032615142863898422. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, di importo pari a € 145,00, è stato registrato il 12 novembre 2026 presso un esercente a Cremona. Il secondo, di € 89,50, risale al 15 novembre 2026 e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come autista presso Farmacie Riunite Altavilla S.p.A. e la mia matricola aziendale è YB-22250. Per facilitare le verifiche, il mio codice fiscale è MPMSLS77B67X322T e posso essere contattato al numero 337 642 7680 o all'indirizzo emanuele.agostinelli@example.com.\n\nVi chiedo cortesemente di aprire una pratica di verifica o un'indagine formale per accertare la natura di questi movimenti e bloccare eventuali ulteriori utilizzi fraudolenti della carta. Resto in attesa di un vostro riscontro in merito all'avvio delle procedure di controllo.\n\nCordiali saluti,\n\nEmanuele Agostinelli\n",
+  "spans": [
+    {
+      "start": 51,
+      "end": 71,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 81,
+      "end": 109,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 122,
+      "end": 142,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 187,
+      "end": 214,
+      "text": "IT25L0000032615142863898422",
+      "type": "IBAN"
+    },
+    {
+      "start": 366,
+      "end": 374,
+      "text": "€ 145,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 398,
+      "end": 414,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 437,
+      "end": 444,
+      "text": "Cremona",
+      "type": "CITTA"
+    },
+    {
+      "start": 461,
+      "end": 468,
+      "text": "€ 89,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 480,
+      "end": 496,
+      "text": "15 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 592,
+      "end": 599,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 607,
+      "end": 640,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 672,
+      "end": 680,
+      "text": "YB-22250",
+      "type": "UTENTE"
+    },
+    {
+      "start": 735,
+      "end": 751,
+      "text": "MPMSLS77B67X322T",
+      "type": "CF"
+    },
+    {
+      "start": 788,
+      "end": 800,
+      "text": "337 642 7680",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 817,
+      "end": 849,
+      "text": "emanuele.agostinelli@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1148,
+      "end": 1168,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "card_dispute",
+    "amounts": [
+      145.0,
+      89.5
+    ],
+    "dates": [
+      "2026-11-12",
+      "2026-11-15"
+    ],
+    "requested_action": "open_investigation",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

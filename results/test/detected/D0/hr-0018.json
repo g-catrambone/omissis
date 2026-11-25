@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0018",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 896,
+      "end": 912,
+      "text": "ZLBRVN07D06X885L",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 976,
+      "end": 986,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1130,
+      "end": 1160,
+      "text": "beatrice.pontiggia@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1411,
+      "end": 1423,
+      "text": "367 789 1628",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

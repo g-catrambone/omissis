@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0016",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta rimborso spese mediche - [PERSONA_1_M]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M], matricola [UTENTE_1], e vi scrivo per richiedere il rimborso di una somma relativa a spese sanitarie sostenute di recente. Come sapete, sono responsabile acquisti presso la vostra sede di [CITTA_1].\n\nNel mese di dicembre 2026 ho dovuto sottopormi a un [SALUTE_1] con riabilitazione, procedura che ha comportato costi non coperti integralmente dal piano sanitario aziendale. Ho già provveduto a trasmettere la documentazione fiscale necessaria tramite la mia email personale [EMAIL_1].\n\nVi chiedo cortesemente di procedere con lo storno o il rimborso dell'importo di [IMPORTO_1] direttamente sul mio conto corrente presso Banca Altopiano, [STRUTTURA_1]. Per facilitare l'operazione, vi fornisco il mio IBAN: [IBAN_1].\n\nResto a disposizione per eventuali chiarimenti al numero [TELEFONO_1]. Vi prego di considerare questa richiesta urgente, poiché ho già sostenuto l'anticipo personale e necessito di un riscontro entro il [DATA_1] per chiudere la mia contabilità familiare del periodo.\n\nGrazie per la collaborazione e per la tempestività che potrete riservare alla pratica.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n[RUOLO_1]\n[AZIENDA_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione del datore di lavoro"
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo del dipendente"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di riferimento"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi o procedura medica"
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro richiesta"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere preciso del mittente"
+    }
+  ]
+}

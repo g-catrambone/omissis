@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0015",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio e richiesta documentazione\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono cliente della Vostra filiale di [CITTA_1]. Le scrivo per comunicare un aggiornamento importante relativo ai miei dati bancari. A partire dal prossimo mese, l'accredito del mio stipendio, che ammonta a circa [IMPORTO_1], dovrà essere effettuato sul nuovo conto corrente intestato a me.\n\nIl nuovo IBAN da utilizzare è [IBAN_1], valido a decorrere dal [DATA_1]. Per facilitare l'aggiornamento nei Vostri sistemi, Le fornisco anche il mio codice fiscale [CF_1] e la matricola aziendale [UTENTE_1] che utilizzo presso la [AZIENDA_2], dove ricopro la posizione di [RUOLO_1].\n\nHo bisogno di una conferma scritta che l'operazione sia stata registrata correttamente. Inoltre, Le chiedo cortesemente di inviarmi via email, all'indirizzo [EMAIL_1], una copia del contratto di conto corrente aggiornato e l'estratto conto relativo all'ultimo accredito effettuato sul vecchio conto, per i miei archivi personali.\n\nResto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1]. La ringrazio per la collaborazione e per la tempestività nella gestione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

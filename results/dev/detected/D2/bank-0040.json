@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0040",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 97,
+      "end": 115,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.9634667485952377,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 835,
+      "end": 844,
+      "text": "fabrizio.",
+      "type": "EMAIL",
+      "confidence": 0.4935176471869151,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 844,
+      "end": 853,
+      "text": "nicoletti",
+      "type": "UTENTE",
+      "confidence": 0.6695899069309235,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 925,
+      "end": 932,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9994157552719116,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1291,
+      "end": 1309,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.9706844687461853,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1469
+}

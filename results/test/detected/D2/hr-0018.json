@@ -1,0 +1,52 @@
+{
+  "text_id": "hr-0018",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 63,
+      "end": 81,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.8490532994270324,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 156,
+      "end": 174,
+      "text": "Beatrice Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.9809615731239318,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 232,
+      "end": 238,
+      "text": "Foggia",
+      "type": "CITTA",
+      "confidence": 0.9975472390651703,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1130,
+      "end": 1148,
+      "text": "beatrice.pontiggia",
+      "type": "EMAIL",
+      "confidence": 0.9341244002183279,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1584,
+      "end": 1593,
+      "text": "Pontiggia",
+      "type": "PERSONA",
+      "confidence": 0.9268507560094198,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1897
+}

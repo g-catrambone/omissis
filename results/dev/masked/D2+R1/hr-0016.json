@@ -1,0 +1,29 @@
+{
+  "text_id": "hr-0016",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta rimborso spese mediche - Alberto Cavallari\n\nGentile Ufficio del Personale di Caseificio Montelupo S.r.l.,\n\nmi chiamo [PERSONA_1_M], matricola QA-72135, e vi scrivo per richiedere il rimborso di una somma relativa a spese sanitarie sostenute di recente. Come sapete, sono responsabile acquisti presso la vostra sede di [CITTA_1].\n\nNel mese di dicembre 2026 ho dovuto sottopormi a un intervento al ginocchio con riabilitazione, procedura che ha comportato costi non coperti integralmente dal piano sanitario aziendale. Ho già provveduto a trasmettere la documentazione fiscale necessaria tramite la mia email personale [EMAIL_1]ari@example.com.\n\nVi chiedo cortesemente di procedere con lo storno o il rimborso dell'importo di € 1.200,50 direttamente sul mio conto corrente presso Banca Altopiano, filiale di [CITTA_1]. Per facilitare l'operazione, vi fornisco il mio IBAN: IT53B0000048484553185927342.\n\nResto a disposizione per eventuali chiarimenti al numero 383 955 2751. Vi prego di considerare questa richiesta urgente, poiché ho già sostenuto l'anticipo personale e necessito di un riscontro entro il 15 gennaio 2027 per chiudere la mia contabilità familiare del periodo.\n\nGrazie per la collaborazione e per la tempestività che potrete riservare alla pratica.\n\nCordiali saluti,\n\nAlberto Cavallari\nResponsabile Acquisti\nCaseificio Montelupo S.r.l.\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

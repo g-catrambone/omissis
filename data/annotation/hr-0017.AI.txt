@@ -1,0 +1,15 @@
+Oggetto: Richiesta documentazione per rimborso spese mediche - [[PERSONA|Pietro Franceschini]]
+
+Gentile Ufficio del Personale di [[AZIENDA|Cantieri Dorsano S.p.A.]],
+
+mi chiamo [[PERSONA|Pietro Franceschini]], matricola [[UTENTE|DT-68827]], e lavoro come [[RUOLO|autista]] presso la sede di [[CITTA|Cremona]]. Vi scrivo per richiedere la documentazione necessaria per procedere con il rimborso delle spese mediche sostenute a causa della mia [[SALUTE|artrite reumatoide]].
+
+Ho effettuato una visita specialistica il [[DATA|12 gennaio 2027]] presso l'ospedale locale, sostenendo un costo di [[IMPORTO|€ 450,00]]. Per poter presentare la richiesta di rimborso alla mia banca, [[AZIENDA|Banca Popolare di Rocciaviva]], filiale di [[CITTA|Cremona]], ho bisogno che mi vengano inviati i moduli ufficiali e le istruzioni dettagliate per la compilazione.
+
+Vi prego di inviarmi tali documenti alla mia email [[EMAIL|pietro.franceschini@example.com]] o, in alternativa, di indicarmi dove posso ritirarli fisicamente. Per qualsiasi necessità di verifica, potete contattarmi al numero [[TELEFONO|321 343 3899]]. Il mio codice fiscale è [[CF|PTNCTL45T52X669Q]] e l'IBAN per eventuali rimborsi diretti è [[IBAN|IT75I0000051990227457633088]].
+
+Resto in attesa di un vostro cortese riscontro per poter completare la pratica entro il [[DATA|30 gennaio 2027]].
+
+Cordiali saluti,
+
+[[PERSONA|Pietro Franceschini]]

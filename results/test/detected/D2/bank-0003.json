@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0003",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 178,
+      "end": 185,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.9956502914428711,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1158,
+      "end": 1165,
+      "text": "pietro.",
+      "type": "EMAIL",
+      "confidence": 0.7472998897234598,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1165,
+      "end": 1172,
+      "text": "frances",
+      "type": "UTENTE",
+      "confidence": 0.4981285035610199,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1172,
+      "end": 1177,
+      "text": "chini",
+      "type": "EMAIL",
+      "confidence": 0.5050798058509827,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1305,
+      "end": 1324,
+      "text": "Pietro Franceschini",
+      "type": "PERSONA",
+      "confidence": 0.903703436255455,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1299
+}

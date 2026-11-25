@@ -1,0 +1,113 @@
+{
+  "text_id": "bank-0031",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Reclamo spese conto corrente e richiesta colloquio\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente con [PERSONA_2]. Scrivo per segnalare la mia forte contrarietà alle commissioni di gestione e alle spese di incasso addebitate sul mio conto negli ultimi mesi. In particolare, ho notato un addebito di [IMPORTO_1] a titolo di \"servizio di gestione\" e un altro di [IMPORTO_2] per l'incasso di un assegno, operazioni che ritengo non concordate né giustificate dal contratto sottoscritto.\n\n[PERSONA_3] come [RUOLO_1] presso [AZIENDA_2] a [CITTA_1], e la gestione del mio conto è legata anche a un prestito personale attivo. La situazione economica attuale non mi consente di sostenere costi aggiuntivi non previsti. Il mio codice fiscale è [CF_1] e la [UTENTE_1].\n\nNon desidero procedere con una semplice contestazione scritta, ma ritengo fondamentale un confronto diretto per chiarire la situazione e valutare le opzioni disponibili. Vi chiedo pertanto di fissare un incontro o un colloquio presso la [STRUTTURA_1] entro il [DATA_1]. Sono disponibile a contattarvi al numero [TELEFONO_1] o via email all'indirizzo [EMAIL_1] per concordare data e ora.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "surrogate": "[IMPORTO_2]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "surrogate": "[PERSONA_3]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "ruolo professionale"
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città menzionata"
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di incontro"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

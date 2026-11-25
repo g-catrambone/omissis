@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0011",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 39,
+      "end": 57,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 92,
+      "end": 118,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda"
+    },
+    {
+      "start": 131,
+      "end": 149,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.9376530200242996,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 156,
+      "end": 165,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 193,
+      "end": 200,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della sede"
+    },
+    {
+      "start": 293,
+      "end": 309,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio problema"
+    },
+    {
+      "start": 924,
+      "end": 940,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data limite richiesta"
+    },
+    {
+      "start": 1125,
+      "end": 1137,
+      "text": "369 461 1173",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1362,
+      "end": 1380,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.8806093782186508,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1392,
+      "end": 1400,
+      "text": "BR-77464",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 1401,
+      "end": 1431,
+      "text": "fabrizio.nicoletti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1602
+}

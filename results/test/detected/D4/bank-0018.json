@@ -1,0 +1,133 @@
+{
+  "text_id": "bank-0018",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 54,
+      "end": 71,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 81,
+      "end": 96,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 109,
+      "end": 126,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.930327045917511,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 174,
+      "end": 192,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "start": 332,
+      "end": 353,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "posizione lavorativa specifica"
+    },
+    {
+      "start": 361,
+      "end": 384,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda"
+    },
+    {
+      "start": 744,
+      "end": 771,
+      "text": "IT60V0000031640797290937456",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 826,
+      "end": 842,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di pagamento prevista"
+    },
+    {
+      "start": 931,
+      "end": 941,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo mensile indicato"
+    },
+    {
+      "start": 1104,
+      "end": 1120,
+      "text": "SRBLMT93H55X288J",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1202,
+      "end": 1214,
+      "text": "329 892 3519",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1241,
+      "end": 1270,
+      "text": "sergio.bertolucci@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1374,
+      "end": 1390,
+      "text": "10 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 1451,
+      "end": 1468,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.8666895553469658,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1504
+}

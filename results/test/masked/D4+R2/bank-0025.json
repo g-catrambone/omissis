@@ -1,0 +1,78 @@
+{
+  "text_id": "bank-0025",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta chiusura conto corrente e prodotti collegati - Vittore Fiorucci\n\nGentile Credito Tirrenico,\n\nmi chiamo Vittore Fiorucci e sono titolare del conto corrente con IBAN IT10J0000008509547055896969. Con la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale, inclusa la dismissione del deposito titoli e la estinzione del prestito personale in corso.\n\nSono residente a Biella e lavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A.. Per motivi professionali e personali, ho deciso di trasferire la mia gestione finanziaria altrove. Vi prego di procedere con le operazioni necessarie per saldare eventuali residui e chiudere tutte le posizioni aperte entro il 27 dicembre 2026.\n\nIl mio codice fiscale è DVLVDN59H07X373R e la mia matricola aziendale è AQ-76387. Per qualsiasi comunicazione urgente, potete contattarmi al numero 393 406 1924 o all'indirizzo ersilia.lanzoni@example.com.\n\nVi chiedo di inviarmi la conferma scritta della chiusura e del saldo finale entro la data indicata. Resto a disposizione per firmare eventuali documenti necessari alla procedura.\n\nCordiali saluti,\n\nVittore Fiorucci\n",
+  "disclosure": [
+    {
+      "surrogate": "Vittore Fiorucci",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "IT10J0000008509547055896969",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Biella",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo di residenza del mittente"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora il mittente"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "surrogate": "DVLVDN59H07X373R",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "AQ-76387",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "393 406 1924",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ersilia.lanzoni@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0019",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta trasferimento sede Benevento - Ruggero Lanzoni\n\nGentile Ufficio del Personale di Autolinee Brentari S.r.l.,\n\nmi chiamo Ruggero Lanzoni e sono un [RUOLO_1] presso la vostra azienda. Vi scrivo per formalizzare la mia richiesta di trasferimento alla sede di Benevento, che desidero avvenga a partire dal 19 gennaio 2027.\n\nLa motivazione principale è legata a esigenze familiari che richiedono la mia presenza in quella zona. Attualmente risiedo a Nuoro, ma la nuova sede mi permetterebbe di gestire meglio le mie responsabilità personali senza compromettere la mia dedizione al lavoro. Ho sempre svolto il mio incarico con costanza e rispetto delle regole aziendali, come dimostra la mia kbidahiqi EU-06640.\n\nPer completezza amministrativa, vi comunico che il mio codice fiscale è NLPNZN09C57X428R e che posso essere contattato al numero 396 108 0114 o tramite l'indirizzo mafalda.dalmasso@example.com. Ho anche verificato che il mio conto corrente presso Cassa di Risparmio di Montalfiore, [STRUTTURA_1], è attivo e pronto per eventuali addebiti o accrediti legati alla nuova sede.\n\nVi chiedo cortesemente di valutare positivamente questa istanza e di comunicarmi le eventuali procedure burocratiche da seguire. Resto a disposizione per qualsiasi chiarimento o documentazione aggiuntiva necessaria per completare la pratica.\n\nCordiali saluti,\n\nRuggero Lanzoni\n",
+  "disclosure": [
+    {
+      "surrogate": "Benevento",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "surrogate": "Ruggero Lanzoni",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora l'autore"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere dell'autore"
+    },
+    {
+      "surrogate": "19 gennaio 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio del trasferimento"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di residenza attuale"
+    },
+    {
+      "surrogate": "kbidahiqi EU-06640",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo interno dell'azienda"
+    },
+    {
+      "surrogate": "NLPNZN09C57X428R",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "396 108 0114",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "mafalda.dalmasso@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    }
+  ]
+}

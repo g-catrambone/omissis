@@ -1,0 +1,118 @@
+{
+  "id": "bank-0038",
+  "domain": "bank",
+  "scenario": "inheritance_unblock",
+  "profile_id": "p17",
+  "has_special": false,
+  "text": "Oggetto: Richiesta documenti per conto corrente di Giuseppe Valsecchi\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Laura Valsecchi e scrivo per richiedere le informazioni necessarie per procedere con la successione del conto corrente intestato a mio padre, Giuseppe Valsecchi, deceduto il 12 marzo 2026.\n\nSono l'unica erede e risiedo a Novara. Per facilitare le operazioni, vi comunico che il conto in questione ha l'IBAN IT82I0000091996603120574215 e che il saldo al momento del decesso era di circa € 15.400,00.\n\nLavoro come autista presso Farmacie Riunite Altavilla S.p.A. e la mia matricola aziendale è HX-96212. Il mio codice fiscale è DDDGBF81A26X698C.\n\nVi chiedo cortesemente di inviarmi via email, all'indirizzo laura.valsecchi@example.com, l'elenco dei documenti ufficiali richiesti dalla vostra filiale di Novara per sbloccare il conto e procedere con il trasferimento dei fondi. Non ho bisogno di altre comunicazioni al momento, solo la lista dei requisiti documentali.\n\nResto a disposizione per qualsiasi chiarimento al numero 337 584 2415.\n\nCordiali saluti,\n\nLaura Valsecchi\n",
+  "spans": [
+    {
+      "start": 51,
+      "end": 69,
+      "text": "Giuseppe Valsecchi",
+      "type": "PERSONA"
+    },
+    {
+      "start": 79,
+      "end": 107,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 120,
+      "end": 135,
+      "text": "Laura Valsecchi",
+      "type": "PERSONA"
+    },
+    {
+      "start": 262,
+      "end": 280,
+      "text": "Giuseppe Valsecchi",
+      "type": "PERSONA"
+    },
+    {
+      "start": 294,
+      "end": 307,
+      "text": "12 marzo 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 341,
+      "end": 347,
+      "text": "Novara",
+      "type": "CITTA"
+    },
+    {
+      "start": 427,
+      "end": 454,
+      "text": "IT82I0000091996603120574215",
+      "type": "IBAN"
+    },
+    {
+      "start": 506,
+      "end": 517,
+      "text": "€ 15.400,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 532,
+      "end": 539,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 547,
+      "end": 580,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 612,
+      "end": 620,
+      "text": "HX-96212",
+      "type": "UTENTE"
+    },
+    {
+      "start": 646,
+      "end": 662,
+      "text": "DDDGBF81A26X698C",
+      "type": "CF"
+    },
+    {
+      "start": 725,
+      "end": 752,
+      "text": "laura.valsecchi@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 821,
+      "end": 827,
+      "text": "Novara",
+      "type": "CITTA"
+    },
+    {
+      "start": 1044,
+      "end": 1056,
+      "text": "337 584 2415",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1077,
+      "end": 1092,
+      "text": "Laura Valsecchi",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "inheritance_unblock",
+    "amounts": [
+      15400.0
+    ],
+    "dates": [
+      "2026-03-12"
+    ],
+    "requested_action": "send_information",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

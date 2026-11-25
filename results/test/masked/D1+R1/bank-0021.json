@@ -1,0 +1,50 @@
+{
+  "text_id": "bank-0021",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta informazioni estinzione anticipata finanziamento - [PERSONA_1_M]\n\nGentile Cassa Rurale di Montevago,\n\nmi chiamo [PERSONA_1_M] e sono titolare del conto corrente associato all'[CITTA_1]. Vi scrivo per richiedere informazioni dettagliate relative all'estinzione anticipata del finanziamento in essere, contratto presso la filiale di [CITTA_2].\n\nAttualmente lavoro come contabile presso la [CITTA_3]., dove mi occupo della gestione amministrativa. Ho preso in considerazione la possibilità di saldare il debito residuo entro il 15 marzo 2027, poiché ho ottenuto un bonus straordinario che mi consente di coprire l'importo di € 12.500,00 senza intaccare la liquidità operativa del conto.\n\nVi chiedo cortesemente di inviarmi, tramite la mia email [EMAIL_1], il piano di ammortamento aggiornato e la simulazione delle penali o interessi passivi che dovrebbero essere applicati in caso di chiusura anticipata alla data indicata. È fondamentale per me avere questi documenti scritti per poter pianificare il trasferimento dei fondi con precisione.\n\nPer qualsiasi necessità di verifica, potete contattarmi al numero [TELEFONO_1] o fare riferimento al mio codice fiscale RZGFNN66L14X204C. Resto in attesa di un vostro cortese riscontro per procedere con la valutazione finale.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

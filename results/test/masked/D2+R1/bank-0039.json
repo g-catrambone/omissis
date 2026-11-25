@@ -1,0 +1,29 @@
+{
+  "text_id": "bank-0039",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta documenti per conto di Giulia Sartorelli\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_M], ho 47 anni e risiedo a [CITTA_1]. Lavoro come contabile presso la Tessitura Valgrande S.r.l., dove la mia matricola interna è UJ-61496.\n\nVi scrivo in merito al conto corrente intestato a mia sorella, Giulia [PERSONA_1_M], deceduta il 12 marzo 2026. Il conto, identificato dall'IBAN IT21G0000049496757180948574, era collegato a un deposito titoli. Al momento del decesso, il saldo del conto corrente era di circa € 1.200,50, mentre il portafoglio titoli aveva un valore stimato di € 5.400,00.\n\nEssendo io l'unico erede, ho bisogno di procedere con la successione. Vi chiedo cortesemente di inviarmi, tramite la mia email [EMAIL_1]@example.com, la documentazione necessaria per lo sblocco e la liquidazione del conto. In particolare, mi servirebbero i moduli per la dichiarazione di successione e l'elenco dei titoli detenuti alla data del decesso.\n\nIl mio codice fiscale è GTVNTV11E14X258I e sono raggiungibile al numero 363 896 3303 per eventuali chiarimenti.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

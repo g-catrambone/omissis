@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0017",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta documentazione per rimborso spese mediche - [PERSONA_1_M]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M], matricola [UTENTE_1], e lavoro come [RUOLO_1] presso la sede di [CITTA_1]. Vi scrivo per richiedere la documentazione necessaria per procedere con il rimborso delle spese mediche sostenute a causa della mia [SALUTE_1].\n\nHo effettuato una visita specialistica il [DATA_1] presso l'ospedale locale, sostenendo un costo di [IMPORTO_1]. Per poter presentare la richiesta di rimborso alla mia banca, [AZIENDA_2], filiale di [CITTA_1], ho bisogno che mi vengano inviati i moduli ufficiali e le istruzioni dettagliate per la compilazione.\n\nVi prego di inviarmi tali documenti alla mia email [EMAIL_1] o, in alternativa, di indicarmi dove posso ritirarli fisicamente. Per qualsiasi necessità di verifica, potete contattarmi al numero [TELEFONO_1]. Il mio codice fiscale è [CF_1] e l'IBAN per eventuali rimborsi diretti è [IBAN_1].\n\nResto in attesa di un vostro cortese riscontro per poter completare la pratica entro il [DATA_2].\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

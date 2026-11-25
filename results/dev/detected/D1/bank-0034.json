@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0034",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 65,
+      "end": 98,
+      "text": "Gentile Cassa Rurale di Montevago",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 111,
+      "end": 129,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 169,
+      "end": 201,
+      "text": "IBAN IT50N0000061021618288042279",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 394,
+      "end": 423,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 426,
+      "end": 433,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1028,
+      "end": 1056,
+      "text": "Arbitro Bancario Finanziario",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1126,
+      "end": 1144,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1145,
+      "end": 1157,
+      "text": "349 318 3143",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1158,
+      "end": 1188,
+      "text": "sabrina.lorenzetti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1189,
+      "end": 1205,
+      "text": "RNMPVP96S08X914J",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0126
+}

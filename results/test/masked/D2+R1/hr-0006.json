@@ -1,0 +1,29 @@
+{
+  "text_id": "hr-0006",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta lavoro da remoto - [PERSONA_1_M] Ferrarini\n\nGentile Ufficio del Personale,\n\nmi chiamo [PERSONA_1_M] e sono un centralinista presso la Cooperativa Edile Pietrafitta. Vi scrivo per sottoporre alla Vostra cortese attenzione una richiesta formale di autorizzazione al lavoro da remoto.\n\nHo 65 anni e risiedo a [CITTA_1]. Da diversi anni gestisco le comunicazioni telefoniche dell'azienda con dedizione, mantenendo un rapporto costante con i colleghi e i fornitori. Per motivi organizzativi personali, desidererei poter svolgere le mie mansioni da casa a partire dal 15 novembre 2026.\n\nSono pienamente attrezzato con la connessione internet necessaria e dispongo di un ambiente silenzioso adatto alla gestione delle chiamate. La mia matricola aziendale è WT-40350 e il mio codice fiscale è PGBVSC45B42X564O. Per eventuali verifiche amministrative, potete contattarmi al numero 357 736 0613 o tramite l'indirizzo [EMAIL_1]@example.com.\n\nRicordo che la mia banca di riferimento è la Banca Altopiano, filiale di [CITTA_1], dove ho un mutuo per la prima casa e una carta di debito attiva. Non chiedo modifiche al contratto, ma solo l'approvazione di questa modalità operativa per il periodo indicato.\n\nResto in attesa di un Vostro cortese riscontro entro il 20 novembre 2026 per poter organizzare i dettagli tecnici con l'IT.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

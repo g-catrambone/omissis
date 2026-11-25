@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0024",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 98,
+      "end": 113,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 176,
+      "end": 193,
+      "text": "filiale di Novara",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca"
+    },
+    {
+      "start": 332,
+      "end": 339,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 350,
+      "end": 379,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 424,
+      "end": 452,
+      "text": "matricola aziendale TE-06202",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    },
+    {
+      "start": 590,
+      "end": 603,
+      "text": "15 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza del finanziamento"
+    },
+    {
+      "start": 723,
+      "end": 734,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo residuo del capitale"
+    },
+    {
+      "start": 1197,
+      "end": 1213,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza richiesta di risposta"
+    }
+  ],
+  "seconds": 0.0011
+}

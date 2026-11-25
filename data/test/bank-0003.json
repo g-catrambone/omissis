@@ -1,0 +1,119 @@
+{
+  "id": "bank-0003",
+  "domain": "bank",
+  "scenario": "mortgage_suspension",
+  "profile_id": "p19",
+  "has_special": true,
+  "text": "Oggetto: Richiesta rimodulazione finanziamento - Pietro Franceschini\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Pietro Franceschini e sono cliente della Vostra filiale di Cremona. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mio finanziamento in corso.\n\nAttualmente lavoro come autista presso Cantieri Dorsano S.p.A., ma da alcune settimane sto affrontando una fase acuta di artrite reumatoide che mi ha costretto a ridurre drasticamente le mie ore lavorative. Questa situazione ha inciso negativamente sul mio reddito mensile, rendendo difficile sostenere l'attuale rata di € 450,00 prevista per il 15 dicembre 2026.\n\nNon chiedo la sospensione del debito, ma una rinegoziazione delle condizioni per allungare la durata del prestito e abbassare l'importo mensile. Sarebbe fondamentale per me poter contare su una rata più sostenibile, ad esempio di € 300,00, a partire dal prossimo mese.\n\nPer facilitare le Vostre verifiche, Vi fornisco i miei dati identificativi: codice fiscale PTNCTL45T52X669Q, IBAN IT75I0000051990227457633088 e matricola aziendale DT-68827. Sono reperibile al numero 321 343 3899 o tramite l'indirizzo pietro.franceschini@example.com.\n\nResto in attesa di un Vostro cortese riscontro per concordare i dettagli della nuova proposta.\n\nCordiali saluti,\nPietro Franceschini\n",
+  "spans": [
+    {
+      "start": 49,
+      "end": 68,
+      "text": "Pietro Franceschini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 78,
+      "end": 106,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 119,
+      "end": 138,
+      "text": "Pietro Franceschini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 178,
+      "end": 185,
+      "text": "Cremona",
+      "type": "CITTA"
+    },
+    {
+      "start": 312,
+      "end": 319,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 327,
+      "end": 350,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 409,
+      "end": 427,
+      "text": "artrite reumatoide",
+      "type": "SALUTE"
+    },
+    {
+      "start": 609,
+      "end": 617,
+      "text": "€ 450,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 634,
+      "end": 650,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 883,
+      "end": 891,
+      "text": "€ 300,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 1014,
+      "end": 1030,
+      "text": "PTNCTL45T52X669Q",
+      "type": "CF"
+    },
+    {
+      "start": 1037,
+      "end": 1064,
+      "text": "IT75I0000051990227457633088",
+      "type": "IBAN"
+    },
+    {
+      "start": 1087,
+      "end": 1095,
+      "text": "DT-68827",
+      "type": "UTENTE"
+    },
+    {
+      "start": 1123,
+      "end": 1135,
+      "text": "321 343 3899",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1158,
+      "end": 1189,
+      "text": "pietro.franceschini@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1305,
+      "end": 1324,
+      "text": "Pietro Franceschini",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "mortgage_suspension",
+    "amounts": [
+      450.0,
+      300.0
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "reschedule_payment",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0023",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta estinzione anticipata mutuo - Zeno Cortesini\n\nGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Zeno Cortesini e sono un cliente della vostra [STRUTTURA_1] di Imperia. Vi scrivo per richiedere informazioni dettagliate relative all'estinzione anticipata del mutuo ipotecario che ho in corso per l'acquisto della mia prima casa.\n\nSono un [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A. e, avendo raggiunto l'età di 67 anni, sto valutando la possibilità di saldare il debito residuo per alleggerire le mie spese mensili. Il mio codice fiscale è FCNMFG34S58X129D e l'IBAN del conto corrente collegato al mutuo è IT81J0000066960214176723871.\n\nVi chiedo cortesemente di inviarmi, tramite la mia email achille.gardini@example.com, il prospetto aggiornato con l'[IMPORTO_1] del capitale residuo, comprensivo di eventuali interessi maturati fino alla data odierna. In particolare, mi interessa sapere se ci sono penali per l'estinzione anticipata e quali documenti sono necessari per procedere con il pagamento unico.\n\nSpero di poter ricevere una risposta entro il 27 dicembre 2026, in modo da poter organizzare il trasferimento dei fondi in tempo utile. Resto a disposizione per qualsiasi chiarimento al numero 359 646 8069.\n\nCordiali saluti,\n\nZeno Cortesini\n",
+  "disclosure": [
+    {
+      "surrogate": "Zeno Cortesini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede bancaria"
+    },
+    {
+      "surrogate": "Imperia",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città della [STRUTTURA_1]"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda"
+    },
+    {
+      "surrogate": "67 anni",
+      "type": "ETA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "età del mittente"
+    },
+    {
+      "surrogate": "FCNMFG34S58X129D",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "IT81J0000066960214176723871",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "achille.gardini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro richiesta"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "surrogate": "359 646 8069",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

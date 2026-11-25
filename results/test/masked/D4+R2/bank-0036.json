@@ -1,0 +1,113 @@
+{
+  "text_id": "bank-0036",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta documenti per conto corrente di Saverio Nardelli\n\nGentile Banco di Roccalta,\n\nmi chiamo Mafalda Petruzzelli e scrivo per richiedere le informazioni necessarie per procedere con la successione del conto corrente intestato a mio padre, deceduto il 11 gennaio 2026. Sono la sua erede universale e necessito della documentazione ufficiale per sbloccare le operazioni sul conto.\n\nIl conto in questione è identificato dall'IBAN IT36V0000007913100557931428 e presenta un saldo residuo di circa € 4.572,00. Per facilitare la verifica della mia identità e del mio diritto di eredità, allego copia del mio documento d'identità e del [SALUTE_1]. Il mio codice fiscale è Gardini\n\nLavoro come [RUOLO_1] presso Officine Grafiche Baldeschi S.r.l. a Nuoro, dove risiedo. Vi chiedo cortesemente di inviarmi via email, all'indirizzo mafalda.brunelleschi@example.com, l'elenco completo dei documenti richiesti dalla [STRUTTURA_1] per completare la pratica di successione.\n\nResto a disposizione per eventuali chiarimenti al numero 359 478 1043. Vi prego di considerare questa richiesta urgente, poiché ho bisogno di accedere ai fondi per coprire le spese funerarie e le tasse dovute entro il 14 giugno 2026.\n\nCordiali saluti,\n\nMafalda Petruzzelli\n",
+  "disclosure": [
+    {
+      "surrogate": "Saverio Nardelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "surrogate": "Mafalda Petruzzelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "11 gennaio 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "IT36V0000007913100557931428",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "saldo residuo di circa € 4.572,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Gardini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Officine Grafiche Baldeschi S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di una città"
+    },
+    {
+      "surrogate": "mafalda.brunelleschi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "surrogate": "359 478 1043",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "14 giugno 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza di pagamento"
+    }
+  ]
+}

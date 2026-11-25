@@ -1,0 +1,111 @@
+{
+  "id": "hr-0001",
+  "domain": "hr",
+  "scenario": "sick_leave",
+  "profile_id": "p07",
+  "has_special": true,
+  "text": "Oggetto: Segnalazione assenza per malattia - Leonardo Lombardini\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo Leonardo Lombardini e vi scrivo per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Sono un elettricista impiegato presso la sede di Trapani e la mia matricola aziendale è UK-83144.\n\nPurtroppo, a causa di un peggioramento del mio diabete di tipo 2, non sono in grado di svolgere le mie mansioni in sicurezza. Il mio medico curante mi ha prescritto un periodo di riposo di almeno tre giorni, quindi prevedo di rientrare in servizio il 15 novembre 2026. Vi chiedo cortesemente di registrare questa assenza nei vostri sistemi.\n\nPer facilitare le eventuali verifiche amministrative, vi fornisco i miei dati anagrafici: il mio codice fiscale è LPVFZP94B15X164T e posso essere contattato al numero 377 465 1124 o all'indirizzo leonardo.lombardini@example.com. Ricordo che la mia carta di debito è emessa da Banca Altopiano, filiale di Trapani, e che ho un deposito titoli attivo presso la stessa istituzione.\n\nNon necessito di ulteriori chiarimenti in questo momento, mi limito a richiedere la presa in carico della mia situazione. Resto a disposizione per inviare il certificato medico non appena disponibile.\n\nCordiali saluti,\n\nLeonardo Lombardini\n",
+  "spans": [
+    {
+      "start": 45,
+      "end": 64,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 99,
+      "end": 122,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 135,
+      "end": 154,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 227,
+      "end": 243,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 253,
+      "end": 265,
+      "text": "elettricista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 294,
+      "end": 301,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 333,
+      "end": 341,
+      "text": "UK-83144",
+      "type": "UTENTE"
+    },
+    {
+      "start": 391,
+      "end": 408,
+      "text": "diabete di tipo 2",
+      "type": "SALUTE"
+    },
+    {
+      "start": 595,
+      "end": 611,
+      "text": "15 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 800,
+      "end": 816,
+      "text": "LPVFZP94B15X164T",
+      "type": "CF"
+    },
+    {
+      "start": 853,
+      "end": 865,
+      "text": "377 465 1124",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 882,
+      "end": 913,
+      "text": "leonardo.lombardini@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 962,
+      "end": 977,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 990,
+      "end": 997,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 1285,
+      "end": 1304,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "sick_leave",
+    "amounts": [],
+    "dates": [
+      "2026-11-12",
+      "2026-11-15"
+    ],
+    "requested_action": "register_absence",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

@@ -1,0 +1,50 @@
+{
+  "text_id": "hr-0019",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta trasferimento sede [CITTA_1] - [PERSONA_1_M]\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo [PERSONA_1_M] e sono un custode presso la vostra azienda. Vi scrivo per formalizzare la mia richiesta di trasferimento alla sede di [CITTA_1], che desidero avvenga a partire dal 15 gennaio 2027.\n\nLa motivazione principale è legata a esigenze familiari che richiedono la mia presenza in quella zona. Attualmente risiedo a [CITTA_2], ma la nuova sede mi permetterebbe di gestire meglio le mie responsabilità personali senza compromettere la mia dedizione al lavoro. Ho sempre svolto il mio incarico con costanza e rispetto delle regole aziendali, come dimostra la mia matricola GZ-20484.\n\nPer completezza amministrativa, vi comunico che il mio codice fiscale è LSMNRC73H03X830X e che posso essere contattato al numero [TELEFONO_1] o tramite l'indirizzo [EMAIL_1]. Ho anche verificato che il mio conto corrente presso [AZIENDA_1], filiale di [CITTA_2], è attivo e pronto per eventuali addebiti o accrediti legati alla nuova sede.\n\nVi chiedo cortesemente di valutare positivamente questa istanza e di comunicarmi le eventuali procedure burocratiche da seguire. Resto a disposizione per qualsiasi chiarimento o documentazione aggiuntiva necessaria per completare la pratica.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

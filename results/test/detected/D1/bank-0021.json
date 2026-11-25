@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0021",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 70,
+      "end": 88,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 136,
+      "end": 154,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 204,
+      "end": 235,
+      "text": "IBAN IT11E000023582267657498114",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 382,
+      "end": 389,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 436,
+      "end": 461,
+      "text": "Tessitura Valgrande S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 807,
+      "end": 837,
+      "text": "fabrizio.nicoletti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1193,
+      "end": 1205,
+      "text": "369 461 1173",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1372,
+      "end": 1390,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0126
+}

@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0037",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 42,
+      "end": 61,
+      "text": "Giuseppe Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 109,
+      "end": 125,
+      "text": "Elena Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 252,
+      "end": 271,
+      "text": "Giuseppe Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 400,
+      "end": 407,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 801,
+      "end": 813,
+      "text": "397 280 0598",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 822,
+      "end": 850,
+      "text": "elena.occhipinti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 854,
+      "end": 858,
+      "text": "IBAN",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 885,
+      "end": 912,
+      "text": "IT15I0000054310853969019400",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 944,
+      "end": 970,
+      "text": "Caseificio Montelupo S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1240,
+      "end": 1256,
+      "text": "Elena Occhipinti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0122
+}

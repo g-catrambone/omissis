@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0019",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 118,
+      "end": 134,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.6720189899206161,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 327,
+      "end": 334,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.9974642992019653,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1193,
+      "end": 1209,
+      "text": "michela.rampazzo",
+      "type": "EMAIL",
+      "confidence": 0.8762032091617584,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1242,
+      "end": 1258,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.910958930850029,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1322
+}

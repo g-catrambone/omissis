@@ -1,0 +1,16 @@
+Oggetto: Richiesta informazioni estinzione anticipata finanziamento - [[PERSONA|Giacomo Passalacqua]]
+
+Gentile [[AZIENDA|Banca Popolare di Rocciaviva]],
+
+mi chiamo [[PERSONA|Giacomo Passalacqua]] e sono un cliente della vostra filiale di [[CITTA|Foggia]]. Lavoro come [[RUOLO|autista]] presso la [[AZIENDA|Cooperativa Edile Pietrafitta]] e desidero richiedere informazioni dettagliate relative all'estinzione anticipata del mio finanziamento in corso.
+
+Ho bisogno di ricevere copia del piano di ammortamento aggiornato e della scheda di calcolo delle penali per il saldo e stralcio. In particolare, mi interessa sapere quale sarebbe l'importo esatto da versare per chiudere il contratto entro il [[DATA|15 marzo 2027]], considerando che il saldo residuo attuale è di circa [[IMPORTO|€ 12.500,00]].
+
+Vi chiedo cortesemente di inviarmi tutta la documentazione necessaria all'indirizzo email [[EMAIL|giacomo.passalacqua@example.com]] o, in alternativa, di indicarmi le modalità per ritirarla in filiale. Per facilitare la ricerca della mia pratica, vi comunico che il mio codice fiscale è [[CF|ZLFNCT54D15X978K]] e la matricola aziendale associata al contratto è [[UTENTE|PB-80503]].
+
+Resto in attesa di un vostro cortese riscontro per poter organizzare il pagamento in tempi brevi. Grazie per la collaborazione.
+
+Cordiali saluti,
+
+[[PERSONA|Giacomo Passalacqua]]
+Tel: [[TELEFONO|350 286 0569]]

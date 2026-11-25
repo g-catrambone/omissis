@@ -1,0 +1,97 @@
+{
+  "text_id": "hr-0019",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 48,
+      "end": 63,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 134,
+      "end": 149,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 268,
+      "end": 275,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 455,
+      "end": 462,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 848,
+      "end": 860,
+      "text": "399 299 3390",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 883,
+      "end": 910,
+      "text": "dario.altobelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 965,
+      "end": 980,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 993,
+      "end": 1000,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1341,
+      "end": 1356,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0118
+}

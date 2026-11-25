@@ -1,0 +1,130 @@
+{
+  "id": "hr-0016",
+  "domain": "hr",
+  "scenario": "medical_reimbursement",
+  "profile_id": "p25",
+  "has_special": true,
+  "text": "Oggetto: Richiesta rimborso spese mediche - Alberto Cavallari\n\nGentile Ufficio del Personale di Caseificio Montelupo S.r.l.,\n\nmi chiamo Alberto Cavallari, matricola QA-72135, e vi scrivo per richiedere il rimborso di una somma relativa a spese sanitarie sostenute di recente. Come sapete, sono responsabile acquisti presso la vostra sede di Novara.\n\nNel mese di dicembre 2026 ho dovuto sottopormi a un intervento al ginocchio con riabilitazione, procedura che ha comportato costi non coperti integralmente dal piano sanitario aziendale. Ho già provveduto a trasmettere la documentazione fiscale necessaria tramite la mia email personale alberto.cavallari@example.com.\n\nVi chiedo cortesemente di procedere con lo storno o il rimborso dell'importo di € 1.200,50 direttamente sul mio conto corrente presso Banca Altopiano, filiale di Novara. Per facilitare l'operazione, vi fornisco il mio IBAN: IT53B0000048484553185927342.\n\nResto a disposizione per eventuali chiarimenti al numero 383 955 2751. Vi prego di considerare questa richiesta urgente, poiché ho già sostenuto l'anticipo personale e necessito di un riscontro entro il 15 gennaio 2027 per chiudere la mia contabilità familiare del periodo.\n\nGrazie per la collaborazione e per la tempestività che potrete riservare alla pratica.\n\nCordiali saluti,\n\nAlberto Cavallari\nResponsabile Acquisti\nCaseificio Montelupo S.r.l.\n",
+  "spans": [
+    {
+      "start": 44,
+      "end": 61,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA"
+    },
+    {
+      "start": 96,
+      "end": 123,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 136,
+      "end": 153,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA"
+    },
+    {
+      "start": 165,
+      "end": 173,
+      "text": "QA-72135",
+      "type": "UTENTE"
+    },
+    {
+      "start": 294,
+      "end": 315,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 341,
+      "end": 347,
+      "text": "Novara",
+      "type": "CITTA"
+    },
+    {
+      "start": 362,
+      "end": 375,
+      "text": "dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 402,
+      "end": 444,
+      "text": "intervento al ginocchio con riabilitazione",
+      "type": "SALUTE"
+    },
+    {
+      "start": 637,
+      "end": 666,
+      "text": "alberto.cavallari@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 749,
+      "end": 759,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 803,
+      "end": 818,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 831,
+      "end": 837,
+      "text": "Novara",
+      "type": "CITTA"
+    },
+    {
+      "start": 893,
+      "end": 920,
+      "text": "IT53B0000048484553185927342",
+      "type": "IBAN"
+    },
+    {
+      "start": 980,
+      "end": 992,
+      "text": "383 955 2751",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1126,
+      "end": 1141,
+      "text": "15 gennaio 2027",
+      "type": "DATA"
+    },
+    {
+      "start": 1304,
+      "end": 1321,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1322,
+      "end": 1343,
+      "text": "Responsabile Acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 1344,
+      "end": 1371,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA"
+    }
+  ],
+  "gold": {
+    "intent": "medical_reimbursement",
+    "amounts": [
+      1200.5
+    ],
+    "dates": [
+      "2027-01-15"
+    ],
+    "requested_action": "refund",
+    "deadline": "2027-01-15"
+  },
+  "reviewed_by": "GC"
+}

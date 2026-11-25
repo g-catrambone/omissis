@@ -1,0 +1,100 @@
+{
+  "id": "bank-0026",
+  "domain": "bank",
+  "scenario": "account_closure",
+  "profile_id": "p16",
+  "has_special": false,
+  "text": "Oggetto: Richiesta chiusura conto corrente Emanuele Agostinelli\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Emanuele Agostinelli e sono titolare del conto corrente con IBAN IT25L0000032615142863898422. Con la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale e di tutti i servizi collegati, inclusa la carta di debito associata.\n\nHo deciso di procedere con questa operazione perché sto trasferendo la mia residenza e la mia attività lavorativa in un'altra zona, rendendo scomoda la gestione della filiale di Cremona. Attualmente lavoro come autista presso Farmacie Riunite Altavilla S.p.A., ma i miei spostamenti quotidiani non mi permettono più di recarmi facilmente presso i vostri sportelli per le operazioni ordinarie.\n\nVi prego di procedere con le operazioni di chiusura entro il 15 dicembre 2026. Al momento della richiesta, sul conto è presente un saldo di € 450,00, che vi chiedo di trasferire sul mio nuovo conto presso un'altra istituzione bancaria, i cui dati vi comunicherò separatamente via PEC o tramite raccomandata. Vi fornisco il mio codice fiscale MPMSLS77B67X322T per le verifiche di rito.\n\nResto a disposizione per qualsiasi ulteriore adempimento necessario per completare la procedura.\n\nCordiali saluti,\n\nEmanuele Agostinelli\n337 642 7680\nemanuele.agostinelli@example.com\n",
+  "spans": [
+    {
+      "start": 43,
+      "end": 63,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 73,
+      "end": 101,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 114,
+      "end": 134,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 179,
+      "end": 206,
+      "text": "IT25L0000032615142863898422",
+      "type": "IBAN"
+    },
+    {
+      "start": 545,
+      "end": 552,
+      "text": "Cremona",
+      "type": "CITTA"
+    },
+    {
+      "start": 578,
+      "end": 585,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 593,
+      "end": 626,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 822,
+      "end": 838,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 901,
+      "end": 909,
+      "text": "€ 450,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 1103,
+      "end": 1119,
+      "text": "MPMSLS77B67X322T",
+      "type": "CF"
+    },
+    {
+      "start": 1263,
+      "end": 1283,
+      "text": "Emanuele Agostinelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1284,
+      "end": 1296,
+      "text": "337 642 7680",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1297,
+      "end": 1329,
+      "text": "emanuele.agostinelli@example.com",
+      "type": "EMAIL"
+    }
+  ],
+  "gold": {
+    "intent": "account_closure",
+    "amounts": [
+      450.0
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "close_account",
+    "deadline": "2026-12-15"
+  },
+  "reviewed_by": "GC"
+}

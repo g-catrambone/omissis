@@ -1,0 +1,61 @@
+{
+  "text_id": "hr-0012",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 49,
+      "end": 57,
+      "text": "YO-92505",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 134,
+      "end": 146,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere della persona"
+    },
+    {
+      "start": 157,
+      "end": 186,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione in cui lavora la persona"
+    },
+    {
+      "start": 189,
+      "end": 196,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di lavoro"
+    },
+    {
+      "start": 659,
+      "end": 675,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di incontro richiesta"
+    },
+    {
+      "start": 706,
+      "end": 714,
+      "text": "YO-92505",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    }
+  ],
+  "seconds": 0.0015
+}

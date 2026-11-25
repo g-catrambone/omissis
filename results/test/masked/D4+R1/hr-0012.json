@@ -1,0 +1,71 @@
+{
+  "text_id": "hr-0012",
+  "config_name": "D4+R1",
+  "run_id": "933a73c866b3",
+  "masked_text": "Oggetto: Richiesta colloquio urgente - Matricola [UTENTE_1]\n\nGentile Ufficio del Personale,\n\nmi chiamo [PERSONA_1_F] e lavoro come [RUOLO_1] presso la [AZIENDA_1] a [CITTA_1]. Vi scrivo per segnalare una situazione di disagio che si protrae da diverse settimane. Da quando ho assunto la responsabilità dei cantieri in centro, subisco continue pressioni e commenti denigratori da parte di un collega, che minano la mia serenità e la mia capacità di lavorare in sicurezza.\n\nHo bisogno di un confronto formale per esporre i fatti e cercare una soluzione. Vi chiedo cortesemente di fissare un incontro o un colloquio privato con me entro il [DATA_1]. La mia matricola aziendale è [UTENTE_1] e potete contattarmi al numero [TELEFONO_1] o via email all'indirizzo [EMAIL_1].\n\nPer completezza, vi informo che il mio codice fiscale è [CF_1]. Non chiedo altre azioni in questa fase, ma solo la possibilità di parlare faccia a faccia. Resto in attesa di un vostro riscontro per concordare data e ora.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere della persona"
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione in cui lavora la persona"
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo di lavoro"
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di incontro richiesta"
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-"""Rows, scorecard and chart from the per-text outcomes (task 3.10; protocol, 10 to 13).
+"""Rows, scorecard and chart from the per-text outcomes (protocol, 10 to 13).
 
 Every estimate, interval and test is a function of the `per_text` lists and of the
 seed stored in the metrics files. `rebuild(split)` recomputes the rows of every file
@@ -6,6 +6,9 @@ from them, then writes the scorecard and the chart: no model, no detector, no te
 It is the command `make reproduce` calls.
 
     python -m omissis.eval.report --split dev
+
+With `--not-parsed` it writes nothing and prints how many replies of the attacker
+were not parsed: what the protocol, section 7, reads before a split is launched again.
 """
 
 from __future__ import annotations
@@ -26,6 +29,12 @@ CONTRASTS = (
     ("D4+R1", "D1+R1", "linkage_top1_n25"),
     ("D4+R1", "REF-none", "utility"),
     ("D4+R2", "D4+R1", "full_restoration"),
+)
+# The texts about a loan or a mortgage whose author holds neither in the profile: the
+# product list of the candidates points away from the author (docs/decisions.md, 21 Nov;
+# protocol, section 7). The linkage rows are computed a second time without them.
+LOAN_MISMATCH = frozenset(
+    {"bank-0002", "bank-0003", "bank-0005", "bank-0020", "bank-0021", "bank-0022", "bank-0024"}
 )
 
 
@@ -128,6 +137,42 @@ def contrast_rows(
 # --- files -------------------------------------------------------------------------
 
 
+def linkage_control(per_text: list[dict[str, Any]], seed: int) -> dict[str, Any]:
+    """The linkage rows without the texts of `LOAN_MISMATCH`, and which texts were left out.
+
+    No row when the split holds none of them: the rows would repeat those of every text.
+    """
+    left_out = sorted(LOAN_MISMATCH & {r["text_id"] for r in per_text})
+    kept = [r for r in per_text if r["text_id"] not in LOAN_MISMATCH]
+    rows = attacks.linkage_rows(kept, seed) if left_out else []
+    return {"control_excluded": left_out, "control_rows": rows}
+
+
+def control_table(linkage: dict[str, Any]) -> list[str]:
+    """The control rows as a table of the scorecard: top-1 at N = 25 beside that of all texts."""
+    control = [r for r in linkage.get("control_rows", []) if r["n"] == 25]
+    if not control:
+        return []
+    full = {r["config"]: r for r in linkage["rows"] if r["n"] == 25}
+    lines = [
+        "## Linkage without the loan texts that contradict the profile",
+        "",
+        f"{len(linkage['control_excluded'])} texts left out: they are about a loan or a mortgage "
+        "that the profile of the author",
+        "does not hold, so the products of the candidates point away from the author (protocol,",
+        "section 7). A control, not a contrast: no test is run on these rows.",
+        "",
+        "| Configuration | texts | top-1 N=25 | top-1 N=25, all texts |",
+        "|---|---|---|---|",
+    ]
+    for r in control:
+        without = _fmt(r["top1"], r["top1_ci_low"], r["top1_ci_high"])
+        lines.append(
+            f"| `{r['config']}` | {r['texts']} | {without} | {_fmt(full[r['config']]['top1'])} |"
+        )
+    return [*lines, ""]
+
+
 def read(folder: Path, name: str) -> dict[str, Any] | None:
     path = folder / f"{name}.json"
     return json.loads(path.read_text(encoding="utf-8")) if path.exists() else None
@@ -162,11 +207,15 @@ def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str | No
         lines += [
             f"{texts} texts. Estimates with 95% intervals (paired bootstrap over texts).",
             "Privacy score = 1 − linkage top-1 at N = 25.",
+            "Not parsed: the replies of the linkage attack that could not be read, at N = 10 and",
+            "at N = 25. Each is counted as a miss; a reply cut at the token limit is one, and it",
+            "is asked again at the next launch (protocol, section 7).",
+            "Utility = mean of T3 and T1: none where T1 is not reported.",
             "",
-            "| Configuration | top-1 N=10 | top-3 N=10 | top-1 N=25 | top-3 N=25 | "
+            "| Configuration | top-1 N=10 | top-3 N=10 | top-1 N=25 | top-3 N=25 | not parsed | "
             + " | ".join(attacks.ATTRIBUTES)
             + " | T3 | T1 | utility | full restoration |",
-            "|---|" + "---|" * (8 + len(attacks.ATTRIBUTES)),
+            "|---|" + "---|" * (9 + len(attacks.ATTRIBUTES)),
         ]
         for name in names:
             link = {r["n"]: r for r in linkage["rows"] if r["config"] == name}
@@ -178,14 +227,19 @@ def scorecard(split: str, metrics: dict[str, dict[str, Any] | None]) -> str | No
                 _fmt(link[10]["top3"]),
                 _fmt(link[25]["top1"], link[25]["top1_ci_low"], link[25]["top1_ci_high"]),
                 _fmt(link[25]["top3"]),
+                f"{link[10]['unparseable']}, {link[25]['unparseable']}",
                 *(_fmt(attr[a]["accuracy"]) for a in attacks.ATTRIBUTES),
-                _fmt(util["t3"]),
+                _fmt(util["t3"], util["t3_ci_low"], util["t3_ci_high"]),
                 _fmt(util["t1"]),
-                _fmt(util["utility"], util["utility_ci_low"], util["utility_ci_high"]),
+                # T3 alone is not the utility score: the cell stays empty without a T1.
+                "—"
+                if util["t1"] is None
+                else _fmt(util["utility"], util["utility_ci_low"], util["utility_ci_high"]),
                 _fmt(rest["full_restoration"], rest["ci_low"], rest["ci_high"]),
             ]
             lines.append(f"| `{name}` | " + " | ".join(cells) + " |")
         lines += ["", "Chance: top-1 0.10 at N = 10 and 0.04 at N = 25; top-3 0.30 and 0.12.", ""]
+        lines += control_table(linkage)
     if metrics["detection"]:
         rows = metrics["detection"]["rows"]
         latency = {r["detector"]: r for r in (metrics["latency"] or {}).get("rows", [])}
@@ -247,18 +301,34 @@ def chart_metric(rows: list[dict[str, Any]]) -> str:
     return "t3" if any(row["t1"] is None for row in rows) else "utility"
 
 
-def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
-    """Privacy against utility, one point per configuration. False without matplotlib."""
+MARKERS = "os^DvPX"  # one per configuration: the chart is read without colour too
+
+
+def _pyplot():
+    """`matplotlib.pyplot` on the Agg backend, or None when matplotlib is not installed."""
     try:
         import matplotlib
 
         matplotlib.use("Agg")
         import matplotlib.pyplot as plt
     except ImportError:
-        return False
+        return None
+    return plt
+
+
+def draw(metrics: dict[str, dict[str, Any] | None]):
+    """The chart as a figure, or None without matplotlib.
+
+    Privacy against utility, one point per configuration. The names are in a legend:
+    written beside the points they cover each other where the configurations are close.
+    """
+    plt = _pyplot()
+    if plt is None:
+        return None
     linkage, utility = metrics["linkage"], metrics["utility"]
     figure, axes = plt.subplots(figsize=(7, 5))
     metric = chart_metric(utility["rows"])
+    drawn = 0
     for row in utility["rows"]:
         if row[metric] is None:
             continue
@@ -269,19 +339,30 @@ def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
             y,
             xerr=[[x - (1 - link["top1_ci_high"])], [(1 - link["top1_ci_low"]) - x]],
             yerr=[[y - row[f"{metric}_ci_low"]], [row[f"{metric}_ci_high"] - y]],
-            fmt="o",
+            fmt=MARKERS[drawn % len(MARKERS)],
             capsize=3,
+            label=row["config"],
         )
-        axes.annotate(row["config"], (x, y), textcoords="offset points", xytext=(6, 6))
+        drawn += 1
     axes.axvline(1 - 1 / 25, linestyle="--", color="grey")
     axes.annotate("chance", (1 - 1 / 25, 0.02), rotation=90, color="grey", ha="right")
     axes.set_xlabel("Privacy score (1 − linkage top-1, N = 25)")
     axes.set_ylabel("Utility score" if metric == "utility" else "T3 score (judge rejected)")
     axes.set_xlim(-0.05, 1.05)
     axes.set_ylim(0, 1.05)
+    if drawn:
+        axes.legend(title="Configuration", loc="lower left")
+    return figure
+
+
+def chart(metrics: dict[str, dict[str, Any] | None], path: Path) -> bool:
+    """Write the chart of `draw` to `path`. False without matplotlib."""
+    figure = draw(metrics)
+    if figure is None:
+        return False
     path.parent.mkdir(parents=True, exist_ok=True)
     figure.savefig(path, dpi=150, bbox_inches="tight")
-    plt.close(figure)
+    _pyplot().close(figure)
     return True
 
 
@@ -300,6 +381,8 @@ def rebuild(split: str, results: Path = RESULTS) -> dict[str, dict[str, Any] | N
         data = read(folder, name)
         if data is not None:
             data["rows"] = build(data["per_text"], data["seed"])
+            if name == "linkage":
+                data |= linkage_control(data["per_text"], data["seed"])
             write(folder, name, data)
         metrics[name] = data
     contrasts = read(folder, "contrasts")
@@ -321,10 +404,43 @@ def rebuild(split: str, results: Path = RESULTS) -> dict[str, dict[str, Any] | N
     return metrics
 
 
+def not_parsed(split: str, results: Path = RESULTS) -> dict[str, int]:
+    """The replies of the attacker that were not parsed, by attack; no outcome is read.
+
+    A linkage reply with no ranking; an attribute reply with no valid answer at all. A
+    reply cut at the token limit is one of them, and only that one is asked again
+    (protocol, section 7).
+    """
+    folder = results / split / "metrics"
+    linkage, attributes = read(folder, "linkage"), read(folder, "attributes")
+    if linkage is None or attributes is None:
+        raise FileNotFoundError(f"{folder}: no linkage.json or no attributes.json yet")
+    return {
+        "linkage": sum(not r["parsed"] for r in linkage["per_text"]),
+        "attributes": sum(
+            len(r["invalid"]) == len(attacks.ATTRIBUTES) for r in attributes["per_text"]
+        ),
+    }
+
+
 def main(argv: list[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="python -m omissis.eval.report")
     parser.add_argument("--split", required=True)
+    parser.add_argument(
+        "--not-parsed", action="store_true", help="print the count and write nothing"
+    )
     args = parser.parse_args(argv)
+    if args.not_parsed:
+        try:
+            count = not_parsed(args.split)
+        except FileNotFoundError as exc:
+            print(exc, file=sys.stderr)
+            return 2
+        print(
+            f"{args.split}: replies of the attacker not parsed: "
+            f"linkage {count['linkage']}, attributes {count['attributes']}"
+        )
+        return 0
     metrics = rebuild(args.split)
     if scorecard(args.split, metrics) is None:
         print(f"{args.split}: no scorecard row, no scorecard written")

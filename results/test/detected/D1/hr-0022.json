@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0022",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 38,
+      "end": 68,
+      "text": "Palermo - Federica Quattrocchi",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 90,
+      "end": 128,
+      "text": "Personale di Tessitura Valgrande S.r.l",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 142,
+      "end": 162,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 248,
+      "end": 255,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 356,
+      "end": 363,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 952,
+      "end": 964,
+      "text": "358 044 0921",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 987,
+      "end": 1019,
+      "text": "federica.quattrocchi@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1062,
+      "end": 1077,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1090,
+      "end": 1097,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1103,
+      "end": 1135,
+      "text": "IBAN IT06R0000052125840795083093",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1407,
+      "end": 1427,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0122
+}

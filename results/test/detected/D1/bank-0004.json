@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0004",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 41,
+      "end": 59,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 69,
+      "end": 83,
+      "text": "Banca Popolare",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 87,
+      "end": 97,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 110,
+      "end": 128,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 168,
+      "end": 200,
+      "text": "IBAN IT83X0000066473362061629314",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 222,
+      "end": 229,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 440,
+      "end": 465,
+      "text": "Trasporti Bellariva S.r.l",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 921,
+      "end": 937,
+      "text": "NDLMTZ55P62X312Q",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 998,
+      "end": 1028,
+      "text": "daniela.marchesini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1331,
+      "end": 1349,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0131
+}

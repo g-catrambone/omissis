@@ -1,0 +1,15 @@
+Oggetto: Richiesta trasferimento sede [[CITTA|Palermo]] - [[PERSONA|Federica Quattrocchi]]
+
+Gentile Ufficio del Personale di [[AZIENDA|Tessitura Valgrande S.r.l.]],
+
+mi chiamo [[PERSONA|Federica Quattrocchi]] e sono dipendente con matricola [[UTENTE|WJ-93942]]. Lavoro come [[RUOLO|elettricista]] presso la sede di [[CITTA|Trapani]] da diversi anni. Con la presente, desidero formalmente richiedere il mio trasferimento alla sede di [[CITTA|Palermo]], chiedendo cortesemente l'approvazione della pratica.
+
+Questa decisione è motivata da esigenze familiari e logistiche che rendono difficile la permanenza nella sede attuale. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a gestire la logistica del trasloco a mie spese. Il mio contratto prevede una retribuzione netta mensile di circa [[IMPORTO|1.850,00 €]], che spero venga mantenuta invariata anche nella nuova sede.
+
+Per completezza, allego alla presente la mia documentazione anagrafica. Il mio codice fiscale è [[CF|PLTSVN21H14X456Y]] e posso essere contattata al numero [[TELEFONO|358 044 0921]] o tramite l'indirizzo [[EMAIL|federica.quattrocchi@example.com]]. Ho anche un conto corrente attivo presso [[AZIENDA|Banca Altopiano]], filiale di [[CITTA|Trapani]], con IBAN [[IBAN|IT06R0000052125840795083093]], dove vengono accreditati gli stipendi.
+
+Chiedo che la richiesta venga presa in considerazione entro il [[DATA|15 dicembre 2026]], in modo da poter pianificare il trasferimento entro la fine dell'anno. Resto a disposizione per eventuali colloqui o chiarimenti.
+
+Cordiali saluti,
+
+[[PERSONA|Federica Quattrocchi]]

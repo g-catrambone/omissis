@@ -1,0 +1,133 @@
+{
+  "text_id": "bank-0021",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 70,
+      "end": 88,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 98,
+      "end": 110,
+      "text": "Cassa Rurale",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di istituto bancario"
+    },
+    {
+      "start": 114,
+      "end": 123,
+      "text": "Montevago",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località menzionata"
+    },
+    {
+      "start": 136,
+      "end": 154,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.9923695772886276,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 371,
+      "end": 378,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di un istituto"
+    },
+    {
+      "start": 382,
+      "end": 389,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 416,
+      "end": 425,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 436,
+      "end": 455,
+      "text": "Tessitura Valgrande",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda di lavoro"
+    },
+    {
+      "start": 590,
+      "end": 603,
+      "text": "15 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza menzionata"
+    },
+    {
+      "start": 687,
+      "end": 698,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "start": 807,
+      "end": 837,
+      "text": "fabrizio.nicoletti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1193,
+      "end": 1205,
+      "text": "369 461 1173",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1247,
+      "end": 1263,
+      "text": "RZGFNN66L14X204C",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1372,
+      "end": 1390,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA",
+      "confidence": 0.9779427498579025,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1484
+}

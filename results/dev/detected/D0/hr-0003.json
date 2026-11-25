@@ -1,0 +1,34 @@
+{
+  "text_id": "hr-0003",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 657,
+      "end": 673,
+      "text": "RPSVNZ96D27X748J",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 767,
+      "end": 779,
+      "text": "372 448 9836",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 796,
+      "end": 825,
+      "text": "alessia.iacobelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0001
+}

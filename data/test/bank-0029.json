@@ -1,0 +1,106 @@
+{
+  "id": "bank-0029",
+  "domain": "bank",
+  "scenario": "account_closure",
+  "profile_id": "p10",
+  "has_special": false,
+  "text": "Oggetto: Richiesta chiusura conto corrente e deposito titoli - Cesare Sartorelli\n\nGentile Banca Altopiano,\n\nmi chiamo Cesare Sartorelli e sono titolare del conto corrente con IBAN IT21G0000049496757180948574 presso la filiale di Trapani.\n\nCon la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale, sia per il conto corrente che per il deposito titoli associato. Ho deciso di recedere dal servizio per motivi personali e professionali, non avendo più necessità di gestire la mia liquidità presso la vostra istituzione.\n\nVi prego di procedere con le operazioni di chiusura entro il 15 dicembre 2026. Vi comunico che sul conto è attualmente presente un saldo di € 1.200,50, che desidero venga trasferito sul mio nuovo conto presso un'altra banca, oppure restituito tramite bonifico all'IBAN che vi comunicherò separatamente.\n\nPer facilitare le procedure amministrative, allego copia del mio documento d'identità e vi fornisco il mio codice fiscale GTVNTV11E14X258I. Sono un contabile presso Tessitura Valgrande S.r.l. e risiedo stabilmente a Trapani.\n\nResto a disposizione per qualsiasi chiarimento al numero 363 896 3303 o all'indirizzo cesare.sartorelli@example.com.\n\nCordiali saluti,\n\nCesare Sartorelli\n",
+  "spans": [
+    {
+      "start": 63,
+      "end": 80,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 90,
+      "end": 105,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 118,
+      "end": 135,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA"
+    },
+    {
+      "start": 180,
+      "end": 207,
+      "text": "IT21G0000049496757180948574",
+      "type": "IBAN"
+    },
+    {
+      "start": 229,
+      "end": 236,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 610,
+      "end": 626,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 689,
+      "end": 699,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 975,
+      "end": 991,
+      "text": "GTVNTV11E14X258I",
+      "type": "CF"
+    },
+    {
+      "start": 1001,
+      "end": 1010,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 1018,
+      "end": 1044,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 1069,
+      "end": 1076,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 1136,
+      "end": 1148,
+      "text": "363 896 3303",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1165,
+      "end": 1194,
+      "text": "cesare.sartorelli@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1215,
+      "end": 1232,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "account_closure",
+    "amounts": [
+      1200.5
+    ],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "close_account",
+    "deadline": "2026-12-15"
+  },
+  "reviewed_by": "GC"
+}

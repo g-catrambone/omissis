@@ -1,0 +1,50 @@
+{
+  "text_id": "bank-0014",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio e richiesta documentazione\n\nGentile Credito Tirrenico,\n\nmi chiamo [PERSONA_1_M] e sono un cliente della Vostra filiale di Pistoia. Vi scrivo per comunicarVi che, a partire dal prossimo mese, il mio datore di lavoro, la Cooperativa Edile Pietrafitta, ha richiesto di variare le coordinate bancarie per l'accredito dello stipendio.\n\nPertanto, Vi comunico il mio nuovo IBAN: [IBAN_1], valido a decorrere dal 15 dicembre 2026.\n\nInoltre, in quanto titolare di un deposito titoli e di un prestito personale in corso, avrei bisogno di ricevere una copia aggiornata del contratto di finanziamento e dell'estratto conto relativo al mese di novembre. Potreste inviarmi questi documenti in formato PDF all'indirizzo [EMAIL_1]?\n\nPer facilitare le Vostre verifiche, Vi fornisco il mio codice fiscale [CF_1] e la matricola aziendale [UTENTE_1] che utilizzo per le comunicazioni con l'ufficio amministrazione. Resto a disposizione per qualsiasi ulteriore chiarimento al numero [TELEFONO_1].\n\nVi ringrazio per la collaborazione e porgo cordiali saluti.\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

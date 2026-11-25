@@ -1,0 +1,117 @@
+{
+  "id": "hr-0002",
+  "domain": "hr",
+  "scenario": "sick_leave",
+  "profile_id": "p29",
+  "has_special": true,
+  "text": "Oggetto: Segnalazione assenza per malattia - Roberta Uccellini\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Purtroppo, a causa di un acuto di ipertensione arteriosa, il mio medico curante mi ha prescritto un periodo di riposo obbligatorio di almeno tre giorni. Vi chiedo cortesemente di registrare questa assenza nei vostri sistemi gestionali per le date comprese tra il 12 novembre 2026 e il 14 novembre 2026.\n\nPer facilitare l'identificazione del mio fascicolo, vi fornisco i miei dati anagrafici e professionali. Sono Roberta Uccellini, impiegata come contabile presso la Cooperativa Edile Pietrafitta, con matricola aziendale NT-86613. Resiedo a Pistoia e sono titolare di un conto corrente presso la Banca Altopiano, filiale di Pistoia, dove gestisco anche la mia carta di debito. Il mio codice fiscale è GTTPBB45P16X906A e potete raggiungermi al numero 319 776 5806 per eventuali chiarimenti urgenti.\n\nVi prego di considerare questa email come formale richiesta di registrazione dell'assenza. Non è necessario che mi contattiate per ulteriori dettagli in questo momento, poiché mi concentrerò sul recupero della salute. Apprezzerò la vostra tempestività nell'aggiornare la mia posizione lavorativa. Resto a disposizione per inviare il certificato medico non appena disponibile, ma per ora vi chiedo solo di procedere con l'annotazione dell'assenza.\n\nCordiali saluti,\n\nRoberta Uccellini\nroberta.uccellini@example.com\n",
+  "spans": [
+    {
+      "start": 45,
+      "end": 62,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 183,
+      "end": 199,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 235,
+      "end": 257,
+      "text": "ipertensione arteriosa",
+      "type": "SALUTE"
+    },
+    {
+      "start": 464,
+      "end": 480,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 486,
+      "end": 502,
+      "text": "14 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 614,
+      "end": 631,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 648,
+      "end": 657,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 668,
+      "end": 697,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 723,
+      "end": 731,
+      "text": "NT-86613",
+      "type": "UTENTE"
+    },
+    {
+      "start": 743,
+      "end": 750,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 798,
+      "end": 813,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 826,
+      "end": 833,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 903,
+      "end": 919,
+      "text": "GTTPBB45P16X906A",
+      "type": "CF"
+    },
+    {
+      "start": 952,
+      "end": 964,
+      "text": "319 776 5806",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1467,
+      "end": 1484,
+      "text": "Roberta Uccellini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1485,
+      "end": 1514,
+      "text": "roberta.uccellini@example.com",
+      "type": "EMAIL"
+    }
+  ],
+  "gold": {
+    "intent": "sick_leave",
+    "amounts": [],
+    "dates": [
+      "2026-11-12",
+      "2026-11-14"
+    ],
+    "requested_action": "register_absence",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

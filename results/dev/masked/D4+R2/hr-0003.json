@@ -1,0 +1,85 @@
+{
+  "text_id": "hr-0003",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Segnalazione assenza per malattia - Ersilia Cortesini\n\nGentile Ufficio del Personale di Edilnova Tarsia S.r.l.,\n\nmi chiamo Ersilia Cortesini e vi scrivo per comunicare la mia assenza dal lavoro a partire da oggi, 21 novembre 2026. Purtroppo ho contratto un'[SALUTE_1], aggravata dalla mia condizione di [SALUTE_2], che mi impedisce di svolgere le mie mansioni di [RUOLO_1] presso la sede di Nuoro.\n\nVi chiedo cortesemente di registrare questa assenza nel sistema aziendale. Per facilitare le operazioni amministrative, vi fornisco i miei dati identificativi: la mia matricola è JP-32832 e il mio codice fiscale è Agnese Albertazzi a disposizione per qualsiasi ulteriore chiarimento tramite il mio recapito telefonico 326 414 7360 o all'indirizzo berenice.marangoni@example.com.\n\nPreciso che non sono in grado di lavorare da remoto per le prossime 48 ore. Vi invierò il certificato medico non appena disponibile, come da prassi aziendale. Vi ringrazio per la comprensione e per la gestione della pratica.\n\nCordiali saluti,\n\nErsilia Cortesini\nResponsabile Acquisti\nEdilnova Tarsia S.r.l.\n",
+  "disclosure": [
+    {
+      "surrogate": "Ersilia Cortesini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Edilnova Tarsia S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora la persona"
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio assenza"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi di malattia"
+    },
+    {
+      "surrogate": "[SALUTE_2]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "condizione medica specifica"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere specifico della persona"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo di lavoro indicato"
+    },
+    {
+      "surrogate": "JP-32832",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "Agnese Albertazzi",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "326 414 7360",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "berenice.marangoni@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

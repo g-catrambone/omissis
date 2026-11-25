@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0014",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 169,
+      "end": 176,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di lavoro"
+    },
+    {
+      "start": 180,
+      "end": 187,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 256,
+      "end": 272,
+      "text": "datore di lavoro",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ruolo della persona che impiega"
+    },
+    {
+      "start": 277,
+      "end": 306,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda datore di lavoro"
+    },
+    {
+      "start": 482,
+      "end": 498,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di decorrenza del nuovo IBAN"
+    },
+    {
+      "start": 708,
+      "end": 716,
+      "text": "novembre",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mese di riferimento per l'estratto conto"
+    },
+    {
+      "start": 871,
+      "end": 902,
+      "text": "codice fiscale SGTPNL13S51X806Z",
+      "type": "BIOMETRICO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "identificativo personale"
+    },
+    {
+      "start": 908,
+      "end": 936,
+      "text": "matricola aziendale SM-08022",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    }
+  ],
+  "seconds": 0.0011
+}

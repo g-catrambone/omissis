@@ -1,0 +1,15 @@
+Oggetto: Richiesta approvazione assenza per malattia - [[PERSONA|Beatrice Pontiggia]]
+
+Gentile Ufficio del Personale di [[AZIENDA|Caseificio Montelupo S.r.l.]],
+
+mi chiamo [[PERSONA|Beatrice Pontiggia]] e sono la [[RUOLO|responsabile acquisti]] presso la sede di [[CITTA|Foggia]]. Vi scrivo per comunicare la mia assenza dal lavoro a partire dal [[DATA|12 novembre 2026]] fino al [[DATA|19 novembre 2026]].
+
+La causa dell'assenza è legata a una [[SALUTE|depressione]] in cura che richiede un periodo di riposo e terapie specifiche, come certificato dal mio medico curante. Ho già provveduto a trasmettere la documentazione medica necessaria tramite la piattaforma aziendale, ma vi chiedo cortesemente di procedere con l'approvazione formale della richiesta per garantire la corretta gestione della mia posizione in busta paga.
+
+Per facilitare le verifiche, riporto i miei dati anagrafici e di contatto: la mia matricola aziendale è [[UTENTE|EZ-85669]], il codice fiscale è [[CF|ZLBRVN07D06X885L]] e sono raggiungibile al numero [[TELEFONO|367 789 1628]] o all'indirizzo [[EMAIL|beatrice.pontiggia@example.com]].
+
+Vi prego di considerare questa comunicazione come formale richiesta di autorizzazione all'assenza. Resto a disposizione per eventuali chiarimenti, pur nella consapevolezza che in questo periodo di convalescenza la mia disponibilità sarà limitata.
+
+Cordiali saluti,
+
+[[PERSONA|Beatrice Pontiggia]]

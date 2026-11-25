@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0008",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 62,
+      "end": 66,
+      "text": "attr",
+      "type": "PERSONA",
+      "confidence": 0.6324086785316467,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 109,
+      "end": 129,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.8725653489430746,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 413,
+      "end": 420,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9995699226856232,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 640,
+      "end": 647,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9993098676204681,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 930,
+      "end": 950,
+      "text": "federica.quattrocchi",
+      "type": "EMAIL",
+      "confidence": 0.9579513430595398,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1023,
+      "end": 1043,
+      "text": "Federica Quattrocchi",
+      "type": "PERSONA",
+      "confidence": 0.9133745551109314,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1442
+}

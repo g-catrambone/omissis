@@ -1,0 +1,140 @@
+{
+  "id": "bank-0032",
+  "domain": "bank",
+  "scenario": "fee_complaint",
+  "profile_id": "p13",
+  "has_special": false,
+  "text": "Oggetto: Reclamo spese e richiesta colloquio - Carlotta Castellani\n\nGentile Banca Altopiano,\n\nmi chiamo Carlotta Castellani e sono cliente della vostra filiale di Cremona. Vi scrivo in merito a delle commissioni che ritengo ingiustificate, addebitate sul mio conto corrente e sulla mia carta di credito.\n\nNello specifico, ho notato che il 15 novembre 2026 è stato trattenuto un importo di € 45,00 per gestione conto, mentre il 20 novembre 2026 ho subito un addebito di € 12,50 per utilizzo carta all'estero, servizio che non ho mai attivato esplicitamente. Inoltre, sul deposito titoli gestito presso di voi, compaiono spese di custodia titoli pari a € 80,00 per il trimestre, cifra che non corrisponde a quanto previsto dal contratto sottoscritto nel 2024.\n\nQuesti addebiti, sommati, superano i € 137,50 in pochi giorni, una situazione che trovo inaccettabile data la mia lunga fedeltà alla banca. Non intendo procedere con una semplice contestazione scritta, ma desidero comprendere le motivazioni alla base di tali costi.\n\nPertanto, vi chiedo cortesemente di fissare un incontro o un colloquio presso la filiale di Cremona per discutere la questione di persona. Sono disponibile a fornire tutti i documenti necessari, inclusi il mio codice fiscale LVNRFL34A53X567N e la matricola aziendale BJ-27692 per eventuali verifiche interne.\n\nResto in attesa di un vostro riscontro per concordare data e ora.\n\nCordiali saluti,\n\nCarlotta Castellani\nresponsabile acquisti presso Cooperativa Edile Pietrafitta\nTel: 366 375 4002\nEmail: carlotta.castellani@example.com\n",
+  "spans": [
+    {
+      "start": 47,
+      "end": 66,
+      "text": "Carlotta Castellani",
+      "type": "PERSONA"
+    },
+    {
+      "start": 76,
+      "end": 91,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 104,
+      "end": 123,
+      "text": "Carlotta Castellani",
+      "type": "PERSONA"
+    },
+    {
+      "start": 163,
+      "end": 170,
+      "text": "Cremona",
+      "type": "CITTA"
+    },
+    {
+      "start": 339,
+      "end": 355,
+      "text": "15 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 389,
+      "end": 396,
+      "text": "€ 45,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 427,
+      "end": 443,
+      "text": "20 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 469,
+      "end": 476,
+      "text": "€ 12,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 651,
+      "end": 658,
+      "text": "€ 80,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 752,
+      "end": 756,
+      "text": "2024",
+      "type": "DATA"
+    },
+    {
+      "start": 796,
+      "end": 804,
+      "text": "€ 137,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 1118,
+      "end": 1125,
+      "text": "Cremona",
+      "type": "CITTA"
+    },
+    {
+      "start": 1251,
+      "end": 1267,
+      "text": "LVNRFL34A53X567N",
+      "type": "CF"
+    },
+    {
+      "start": 1293,
+      "end": 1301,
+      "text": "BJ-27692",
+      "type": "UTENTE"
+    },
+    {
+      "start": 1421,
+      "end": 1440,
+      "text": "Carlotta Castellani",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1441,
+      "end": 1462,
+      "text": "responsabile acquisti",
+      "type": "RUOLO"
+    },
+    {
+      "start": 1470,
+      "end": 1499,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 1505,
+      "end": 1517,
+      "text": "366 375 4002",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1525,
+      "end": 1556,
+      "text": "carlotta.castellani@example.com",
+      "type": "EMAIL"
+    }
+  ],
+  "gold": {
+    "intent": "fee_complaint",
+    "amounts": [
+      45.0,
+      12.5,
+      80.0,
+      137.5
+    ],
+    "dates": [
+      "2026-11-15",
+      "2026-11-20"
+    ],
+    "requested_action": "schedule_meeting",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

@@ -3,8 +3,7 @@
 One entry per model role of `configs/models.yaml`, one for what D1 runs on, one for
 the dataset. Model ids and revisions are copied from `configs/models.yaml`, which
 prevails if the two ever differ. Every licence was read at the link given, on
-19 Nov 2026, except where an entry says it was not read; **Human:** Giuseppe
-confirms them.
+19 Nov 2026, except where an entry says it was not read.
 
 ## Hosted models (GroqCloud)
 
@@ -106,7 +105,9 @@ of the pin. Use of the service is governed by the Groq Services Agreement
     does not cover the model.
 - **How we use it.** Detector D1, as it ships, with language, model and phone
   region set to Italian; Presidio labels are mapped to our types
-  (`src/omissis/detect/presidio.py`).
+  (`src/omissis/detect/presidio.py`). One correction to its output: a span that
+  goes over a line break keeps its first line only (`docs/decisions.md`, 22 Nov
+  2026).
 - **Limits for us.** The spaCy model is non-commercial and share-alike. It is
   trained on UD Italian ISDT and WikiNER, not on correspondence. Its `LOC` label
   marks any place, not only towns, and it has no date label (Presidio finds
@@ -119,16 +120,30 @@ of the pin. Use of the service is governed by the Groq Services Agreement
   taxonomy in `src/omissis/contracts.py`, plus 30 invented profiles in 6 cohorts
   (`data/profiles/`).
 - **Where it comes from.** Written for this project by the `generator` model from
-  the profiles and one fixed prompt; tagged by the generator; each text to be
-  reviewed by one team member (`data/pool/REVIEWERS.md`).
+  the profiles and one fixed prompt; tagged by the generator; each text is
+  reviewed by an AI agent (Claude Opus 5.5), and one team member approves its
+  report (`docs/decisions.md`, 21 Nov).
 - **Revision.** The files of `data/dev/`, `data/test/` (checksums in
   `data/split.json`) and `data/profiles/` at the tag `v1.0`.
-  Split: after the split (texts in dev and in test).
-- **Licence.** Proposed: CC BY 4.0. Not decided (step C3 of `docs/TODO.md`).
+  Split: 20 texts in dev (13 bank, 7 HR) and 46 in test (27 bank, 19 HR).
+- **Licence.** CC BY 4.0 (`LICENSE`; `docs/decisions.md`, 22 Nov 2026).
 - **How we use it.** Every number of the evaluation is measured against its gold
   spans and gold fields; the profiles are the candidates of the linkage attack.
+  Four more synthetic texts, in `data/attacks/`, are the two attack cases and
+  their clean twins: they are not part of the evaluation
+  (`results/attacks/attacks.md`).
 - **Limits for us.** Every person and value is invented; identifiers use codes
   that are never issued (bank code `00000`, place code `X…`). Texts written by a
-  model are more regular than real mail. One reviewer per text, and texts of the
-  same author are not independent, so intervals over texts overstate precision.
-  Numbers per split: after the split.
+  model are more regular than real mail. No human reviewed the texts one by one: an AI
+  agent did, and one member approved its report. Seven bank texts are about a
+  loan or a mortgage that the profile of their author does not hold, and no
+  text states the monthly instalment of its profile: the linkage attack is
+  reported also without those seven. Two texts (`bank-0006`, `bank-0021`) hold
+  an IBAN one character short of the 27 of an Italian IBAN, as the generator
+  wrote it: it is kept and tagged, and a detector that checks the format can
+  miss it. Texts of the same author are
+  not independent, so intervals over texts overstate precision.
+  Numbers per split, annotated spans (`gold` in
+  `results/<split>/metrics/detection.json`): dev 297 (141 direct, 149
+  quasi-identifiers, 7 special category); test 666 (335 direct, 315
+  quasi-identifiers, 16 special category).

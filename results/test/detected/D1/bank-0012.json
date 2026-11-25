@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0012",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 51,
+      "end": 68,
+      "text": "Giorgia Zamparini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 106,
+      "end": 123,
+      "text": "Giorgia Zamparini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 163,
+      "end": 170,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 534,
+      "end": 563,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 712,
+      "end": 724,
+      "text": "325 979 0891",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 733,
+      "end": 762,
+      "text": "giorgia.zamparini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 771,
+      "end": 775,
+      "text": "IBAN",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 778,
+      "end": 805,
+      "text": "IT86U0000021101536355429302",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1099,
+      "end": 1116,
+      "text": "Giorgia Zamparini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0118
+}

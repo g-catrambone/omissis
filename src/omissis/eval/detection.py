@@ -1,4 +1,4 @@
-"""Detection metrics and latency (task 3.9; protocol, sections 6 and 11).
+"""Detection metrics and latency (protocol, sections 6 and 11).
 
 `run(split, config)` runs every detector that can run on this machine over the texts
 of a split, writes what each found to `results/<split>/detected/<detector>/`, then
@@ -42,6 +42,7 @@ from omissis.eval.stats import bootstrap_ci
 
 EVAL_CONFIG = Path("configs/eval.yaml")
 RESULTS = Path("results")
+HELD_OUT = "test"  # as in eval/run.py: evaluated once
 MATCHINGS = ("exact", "overlap")
 NO_LEAK_RATE = (DetectorId.D3.value,)  # D3 does not look for direct identifiers
 
@@ -308,9 +309,12 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--split", required=True)
     parser.add_argument("--backend", choices=["cloud", "replay"])
     args = parser.parse_args(argv)
+    if args.split == HELD_OUT and (RESULTS / args.split / "metrics" / "contrasts.json").exists():
+        print(f"{args.split} was already evaluated: a second run is refused.", file=sys.stderr)
+        return 2
     overrides = {"backend": args.backend} if args.backend else None
     config = next(iter(load_eval_configs(EVAL_CONFIG, overrides).values()))
-    path = (run if args.command == "run" else time_detectors)(args.split, config)
+    path = (run if args.command == "run" else time_detectors)(args.split, config, results=RESULTS)
     print(f"written {path}")
     return 0
 

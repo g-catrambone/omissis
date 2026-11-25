@@ -1,4 +1,4 @@
-"""D0: regular expressions plus checksum validation (block 1).
+"""D0: regular expressions plus checksum validation.
 
 One function per type, each returning spans with source `D0`:
 

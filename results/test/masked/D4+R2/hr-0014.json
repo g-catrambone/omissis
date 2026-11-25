@@ -1,0 +1,71 @@
+{
+  "text_id": "hr-0014",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta colloquio urgente - Gualtiero Guidotti\n\nGentile Ufficio del Personale,\n\nmi chiamo Gualtiero Guidotti, sono un [RUOLO_1] di 63 anni residente a Imperia. Lavoro presso la Lavorazioni Meccaniche Sbrana S.p.A. da diversi anni, con matricola aziendale OO-52970.\n\nVi scrivo per segnalare una situazione di forte disagio e vessazione che sto subendo da parte di un collega e del mio responsabile diretto. Da quando ho iniziato a lavorare su un nuovo cantiere, il 21 novembre 2026, ho subito ripetute umiliazioni verbali e pressioni indebite per superare i limiti di orario previsti dal contratto. Questa condotta ha creato un ambiente di lavoro ostile che mi impedisce di svolgere le mie mansioni in serenità.\n\nNon intendo entrare nel dettaglio di ogni episodio in questa sede, ma ritengo fondamentale affrontare la questione in modo formale e riservato. La mia unica richiesta è quella di fissare un incontro o un colloquio con un rappresentante dell'ufficio risorse umane per esporre la mia posizione e cercare una soluzione.\n\nSono disponibile a fornire eventuali documentazione o testimonianze se necessario, ma preferisco discutere di persona. Vi chiedo cortesemente di contattarmi al numero 334 923 3736 o all'indirizzo agnese.brunelleschi@example.com per concordare una data entro la prossima settimana.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\nGualtiero Guidotti\nAutista\nLavorazioni Meccaniche Sbrana S.p.A.\nImperia\n",
+  "disclosure": [
+    {
+      "surrogate": "Gualtiero Guidotti",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "surrogate": "63 anni",
+      "type": "ETA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "età del mittente"
+    },
+    {
+      "surrogate": "Imperia",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di residenza"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "surrogate": "OO-52970",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio del nuovo cantiere"
+    },
+    {
+      "surrogate": "334 923 3736",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "agnese.brunelleschi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

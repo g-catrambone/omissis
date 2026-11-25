@@ -1,0 +1,57 @@
+{
+  "text_id": "bank-0039",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta documenti per conto di [PERSONA_1_F]\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_2_M], ho 47 anni e risiedo a Trapani. Lavoro come contabile presso la Tessitura Valgrande S.r.l., dove la mia matricola interna è [UTENTE_1].\n\nVi scrivo in merito al conto corrente intestato a mia sorella, [PERSONA_1_F], deceduta il 12 marzo 2026. Il conto, identificato dall'IBAN [IBAN_1], era collegato a un deposito titoli. Al momento del decesso, il saldo del conto corrente era di circa € 1.200,50, mentre il portafoglio titoli aveva un valore stimato di € 5.400,00.\n\nEssendo io l'unico erede, ho bisogno di procedere con la successione. Vi chiedo cortesemente di inviarmi, tramite la mia email [EMAIL_1], la documentazione necessaria per lo sblocco e la liquidazione del conto. In particolare, mi servirebbero i moduli per la dichiarazione di successione e l'elenco dei titoli detenuti alla data del decesso.\n\nIl mio codice fiscale è [CF_1] e sono raggiungibile al numero [TELEFONO_1] per eventuali chiarimenti.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\n[PERSONA_2_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "text_id": "bank-0035",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Reclamo per addebiti non autorizzati su conto corrente\n\nGentile Credito Cooperativo Valdarda,\n\nmi chiamo Ersilia Tedeschini e sono cliente della Vostra filiale di Teramo. Vi scrivo per segnalare una grave anomalia riscontrata sul mio estratto conto relativo al mese di novembre 2026.\n\nIn qualità di [RUOLO_1] presso Edilnova Tarsia S.r.l., gestisco quotidianamente i flussi finanziari aziendali, motivo per cui noto immediatamente qualsiasi discrepanza. Ho verificato che il giorno 21 novembre 2026 è stato addebitato un importo di € 17,00 a titolo di \"commissione gestione deposito titoli\". Tale servizio non è mai stato richiesto né attivato da me, né risulta presente nel contratto sottoscritto presso la filiale.\n\nInoltre, il giorno 5 novembre 2026 ho subito un ulteriore addebito di € 60,50 per \"invio estratto conto cartaceo\", servizio che avevo disattivato telefonicamente il 15 ottobre 2026 tramite il Vostro servizio clienti.\n\nChiedo pertanto il rimborso immediato della somma totale di € 57,50 e la stornatura delle relative voci dal mio conto corrente, identificato dall'IBAN IT94W0000021385386806219845.\n\nVi prego di considerare questa richiesta urgente, dato che tali addebiti incidono negativamente sulla mia liquidità mensile. Resto in attesa di un Vostro riscontro scritto entro e non oltre il 19 novembre 2026 per confermare l'avvenuta rettifica.\n\nCordiali saluti,\n\nErsilia Tedeschini\nludovica.albertazzi@example.com\n392 698 3940\nSGLGDZ45A08X490G\nST-50968\n",
+  "disclosure": [
+    {
+      "surrogate": "Credito Cooperativo Valdarda",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario destinatario"
+    },
+    {
+      "surrogate": "Ersilia Tedeschini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Teramo",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della filiale bancaria"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "posizione lavorativa del mittente"
+    },
+    {
+      "surrogate": "Edilnova Tarsia S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "azienda per cui lavora la persona"
+    },
+    {
+      "surrogate": "21 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di un addebito"
+    },
+    {
+      "surrogate": "€ 17,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "surrogate": "5 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di un altro addebito"
+    },
+    {
+      "surrogate": "€ 60,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "surrogate": "IT94W0000021385386806219845",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "19 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza per risposta"
+    },
+    {
+      "surrogate": "ludovica.albertazzi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "392 698 3940",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "SGLGDZ45A08X490G",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ST-50968",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo del cliente"
+    }
+  ]
+}

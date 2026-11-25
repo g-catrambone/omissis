@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0002",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 49,
+      "end": 61,
+      "text": "Teresa Della",
+      "type": "PERSONA",
+      "confidence": 0.6436665654182434,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 104,
+      "end": 121,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.9684987783432006,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 161,
+      "end": 168,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9979118406772614,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1003,
+      "end": 1010,
+      "text": "teresa.",
+      "type": "EMAIL",
+      "confidence": 0.8039275705814362,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1015,
+      "end": 1020,
+      "text": "valle",
+      "type": "EMAIL",
+      "confidence": 0.46617716550827026,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1346,
+      "end": 1363,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.9430376648902893,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1452
+}

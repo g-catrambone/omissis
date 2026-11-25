@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0028",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - [PERSONA_1_F]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per comunicare la chiusura definitiva del rapporto contrattuale e per richiedere il trasferimento delle somme residue.\n\nAttualmente lavoro come [RUOLO_1] presso [AZIENDA_2] a [CITTA_1], ma per motivi personali ho deciso di recedere dal contratto. Desidero che l'intero saldo disponibile, pari a [IMPORTO_1], venga trasferito sul conto di mia scelta entro il [DATA_1].\n\nVi prego di procedere anche alla disattivazione della carta di credito associata al conto. Per qualsiasi necessità, potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1]. Il mio codice fiscale è [CF_1] e la matricola aziendale è [UTENTE_1].\n\nResto in attesa di una vostra cortese conferma scritta entro il [DATA_2] per verificare che l'operazione sia stata correttamente avviata. Grazie per la collaborazione.\n\nCordiali saluti,\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

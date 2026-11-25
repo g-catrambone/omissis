@@ -1,0 +1,85 @@
+{
+  "text_id": "bank-0003",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta rimodulazione finanziamento - [PERSONA_1_M]\n\nGentile [AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_M] e sono cliente della [CITTA_1] filiale di [CITTA_2]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mio finanziamento in corso.\n\nAttualmente lavoro come autista presso [CITTA_3] S.p.A., ma da alcune settimane sto affrontando una fase acuta di artrite reumatoide che mi ha costretto a ridurre drasticamente le mie ore lavorative. Questa situazione ha inciso negativamente sul mio reddito mensile, rendendo difficile sostenere l'attuale rata di € 450,00 prevista per il 15 dicembre 2026.\n\nNon chiedo la sospensione del debito, ma una rinegoziazione delle condizioni per allungare la durata del prestito e abbassare l'importo mensile. Sarebbe fondamentale per me poter contare su una rata più sostenibile, ad esempio di € 300,00, a partire dal prossimo mese.\n\nPer facilitare le Vostre verifiche, Vi fornisco i miei dati identificativi: codice fiscale PTNCTL45T52X669Q, IBAN [IBAN_1] e matricola aziendale DT-68827. Sono reperibile al numero [TELEFONO_1] o tramite l'indirizzo [EMAIL_1].\n\nResto in attesa di un [AZIENDA_3] cortese riscontro per concordare i dettagli della nuova proposta.\n\n[PERSONA_2] saluti,\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_3]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

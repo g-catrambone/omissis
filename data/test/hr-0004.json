@@ -1,0 +1,106 @@
+{
+  "id": "hr-0004",
+  "domain": "hr",
+  "scenario": "sick_leave",
+  "profile_id": "p27",
+  "has_special": true,
+  "text": "Oggetto: Segnalazione assenza per malattia - Nicola Scarpellini\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per comunicare la mia assenza dal lavoro a partire da oggi, 12 novembre 2026. Purtroppo, a causa di un acuto di asma bronchiale, non sono in grado di svolgere le mie mansioni di elettricista presso la Cooperativa Edile Pietrafitta.\n\nVi chiedo cortesemente di registrare questa assenza nei vostri sistemi. Per facilitare l'identificazione del mio fascicolo, vi fornisco la mia matricola aziendale KK-50663 e il mio codice fiscale BMDCST55B21X401A. Resido a Pistoia e sono solitamente reperibile al numero 305 331 7289 per eventuali chiarimenti, anche se al momento preferisco riposare.\n\nRicordo che ho un prestito personale attivo presso la Banca Popolare di Rocciaviva, filiale di Pistoia, con un importo residuo di circa € 1.200,50, ma questo dettaglio è solo a titolo informativo e non richiede azioni da parte vostra in questa fase. La mia priorità è recuperare le forze per tornare al più presto operativo.\n\nVi prego di confermare la ricezione di questa comunicazione tramite una risposta all'indirizzo nicola.scarpellini@example.com. Non è necessaria alcuna altra documentazione in questo momento, salvo che non venga richiesta successivamente dal medico curante.\n\nGrazie per la comprensione e per la gestione della pratica.\n\nCordiali saluti,\n\nNicola Scarpellini\n",
+  "spans": [
+    {
+      "start": 45,
+      "end": 63,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 184,
+      "end": 200,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 236,
+      "end": 251,
+      "text": "asma bronchiale",
+      "type": "SALUTE"
+    },
+    {
+      "start": 302,
+      "end": 314,
+      "text": "elettricista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 325,
+      "end": 354,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 520,
+      "end": 528,
+      "text": "KK-50663",
+      "type": "UTENTE"
+    },
+    {
+      "start": 553,
+      "end": 569,
+      "text": "BMDCST55B21X401A",
+      "type": "CF"
+    },
+    {
+      "start": 580,
+      "end": 587,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 628,
+      "end": 640,
+      "text": "305 331 7289",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 764,
+      "end": 792,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 805,
+      "end": 812,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 846,
+      "end": 856,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 1131,
+      "end": 1161,
+      "text": "nicola.scarpellini@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1373,
+      "end": 1391,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "sick_leave",
+    "amounts": [
+      1200.5
+    ],
+    "dates": [
+      "2026-11-12"
+    ],
+    "requested_action": "register_absence",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

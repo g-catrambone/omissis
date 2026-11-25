@@ -1,0 +1,50 @@
+{
+  "text_id": "hr-0025",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta permesso sindacale per Noemi [PERSONA_1_F]\n\nGentile Ufficio del Personale di Farmacie Riunite Altavilla S.p.A.,\n\nmi chiamo [PERSONA_1_F] e lavoro come contabile presso la sede di [CITTA_1]. Vi scrivo per richiedere formalmente l'approvazione di un permesso sindacale. In qualità di delegato sindacale di reparto, devo partecipare a un incontro urgente con la segreteria regionale previsto per il 14 novembre 2026.\n\nL'assenza durerà l'intera giornata lavorativa, dalle ore 08:30 alle ore 17:00. Vi chiedo cortesemente di autorizzare questa assenza, che è prevista dal contratto collettivo nazionale di lavoro per le attività sindacali. Per completezza amministrativa, vi comunico che la mia matricola aziendale è WT-01641 e il mio codice fiscale è GLPBMV68M53X619A.\n\nResto a disposizione per qualsiasi chiarimento in merito a questa richiesta. Vi prego di confermare la ricezione e l'approvazione entro il 12 novembre 2026, così da poter organizzare al meglio le attività contabili della settimana.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[EMAIL_1][UTENTE_1].[UTENTE_2]@example.com\n[TELEFONO_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_2]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

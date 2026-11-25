@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0016",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta rimborso spese mediche - Achille Pagliarini\n\nGentile Ufficio del Personale di Edilnova Tarsia S.r.l.,\n\nmi chiamo Achille Pagliarini, matricola OM-84295, e vi scrivo per richiedere il rimborso di una somma relativa a spese sanitarie sostenute di recente. Come sapete, sono responsabile acquisti presso la vostra sede di Imperia.\n\nNel mese di dicembre 2026 ho dovuto sottopormi a un [SALUTE_1] con riabilitazione, procedura che ha comportato costi non coperti integralmente dal piano sanitario aziendale. Ho già provveduto a trasmettere la documentazione fiscale necessaria tramite la mia email personale berenice.rinaldini@example.com.\n\nVi chiedo cortesemente di procedere con lo storno o il rimborso dell'importo di € 5.199,50 direttamente sul mio conto corrente presso Banca Altopiano, [STRUTTURA_1]. Per facilitare l'operazione, vi fornisco il mio IBAN: IT58V0000012714499381154585.\n\nResto a disposizione per eventuali chiarimenti al numero 374 077 7444. Vi prego di considerare questa richiesta urgente, poiché ho già sostenuto l'anticipo personale e necessito di un riscontro entro il 19 gennaio 2027 per chiudere la mia contabilità familiare del periodo.\n\nGrazie per la collaborazione e per la tempestività che potrete riservare alla pratica.\n\nCordiali saluti,\n\nAchille Pagliarini\n[RUOLO_1]\nEdilnova Tarsia S.r.l.\n",
+  "disclosure": [
+    {
+      "surrogate": "Achille Pagliarini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Edilnova Tarsia S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione del datore di lavoro"
+    },
+    {
+      "surrogate": "OM-84295",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo del dipendente"
+    },
+    {
+      "surrogate": "Imperia",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di riferimento"
+    },
+    {
+      "surrogate": "[SALUTE_1]",
+      "type": "SALUTE",
+      "class": "special",
+      "source": "D3",
+      "reason": "diagnosi o procedura medica"
+    },
+    {
+      "surrogate": "berenice.rinaldini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "€ 5.199,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro richiesta"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "surrogate": "IT58V0000012714499381154585",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "374 077 7444",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "19 gennaio 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere preciso del mittente"
+    }
+  ]
+}

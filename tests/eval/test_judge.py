@@ -1,4 +1,4 @@
-"""The judge and its validation (task 3.7), with a fake provider."""
+"""The judge and its validation, with a fake provider."""
 
 import csv
 import json
@@ -214,6 +214,52 @@ def test_validation_file_has_the_format_of_a_metrics_file_and_can_be_rebuilt():
         [{row["item"]: row["raters"][n] for row in data["per_text"]} for n in range(2)],
     )
     assert again["kappa"] == data["rows"][0]["kappa"] and again["accepted"] is data["accepted"]
+
+
+def test_sheets_command_replays_unless_asked_to_call_the_model(monkeypatch, tmp_path):
+    # The R2 items come from a configuration the runner never runs: their replies are
+    # made once with `--backend cloud`; without the option nothing calls a model.
+    from types import SimpleNamespace
+
+    monkeypatch.chdir(tmp_path)
+    seen = []
+    config = SimpleNamespace(seed=7)
+
+    def configs(path, overrides=None):
+        seen.append(overrides)
+        return {"REF-none": config}
+
+    monkeypatch.setattr(judge, "load_eval_configs", configs)
+    monkeypatch.setattr(judge, "validation_configs", lambda configs: {"R1": config, "R2": config})
+    monkeypatch.setattr(judge, "load_texts", lambda path: [SimpleNamespace(id="t1", text="x")])
+    monkeypatch.setattr(judge, "t1_reply", lambda record, config: "reply")
+    folder = tmp_path / "results" / "dev" / "judge_validation"
+    assert judge.main(["sheets", "--split", "dev", "--raters", "AI"]) == 0
+    (folder / "key.json").unlink()  # a second run is refused while the key is there
+    assert judge.main(["sheets", "--split", "dev", "--raters", "AI", "--backend", "cloud"]) == 0
+    assert seen == [{"backend": "replay"}, {"backend": "cloud"}]
+    folder = tmp_path / "results" / "dev" / "judge_validation"
+    assert (folder / "sheet_AI.csv").exists() and (folder / "key.json").exists()
+
+
+def test_sheets_command_refuses_to_overwrite_sheets_that_exist(monkeypatch, tmp_path, capsys):
+    # Running `sheets` again would blank the approved, committed sheet.
+    monkeypatch.chdir(tmp_path)
+    folder = tmp_path / "results" / "dev" / "judge_validation"
+    folder.mkdir(parents=True)
+    (folder / "key.json").write_text("{}", encoding="utf-8")
+    (folder / "sheet_AI.csv").write_text("approved", encoding="utf-8")
+
+    def not_reached(*args, **kwargs):
+        raise AssertionError("nothing may be read or built")
+
+    monkeypatch.setattr(judge, "load_eval_configs", not_reached)
+    monkeypatch.setattr(judge, "load_texts", not_reached)
+    assert judge.main(["sheets", "--split", "dev", "--raters", "AI"]) == 2
+    err = capsys.readouterr().err
+    assert err.count("\n") == 1 and "refused" in err
+    assert (folder / "sheet_AI.csv").read_text(encoding="utf-8") == "approved"
+    assert (folder / "key.json").read_text(encoding="utf-8") == "{}"
 
 
 def test_accept_command_writes_the_validation_file(monkeypatch, tmp_path):

@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0006",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 38,
+      "end": 56,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 100,
+      "end": 118,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 153,
+      "end": 182,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 214,
+      "end": 220,
+      "text": "Vostra",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 325,
+      "end": 331,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 888,
+      "end": 900,
+      "text": "357 736 0613",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 923,
+      "end": 953,
+      "text": "raffaele.ferrarini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1001,
+      "end": 1016,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1029,
+      "end": 1035,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1335,
+      "end": 1337,
+      "text": "IT",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1358,
+      "end": 1376,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0131
+}

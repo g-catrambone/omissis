@@ -1,0 +1,97 @@
+{
+  "text_id": "bank-0024",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 70,
+      "end": 88,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 126,
+      "end": 144,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 187,
+      "end": 193,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 350,
+      "end": 379,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 931,
+      "end": 947,
+      "text": "NFBRVS81E49X157N",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 952,
+      "end": 956,
+      "text": "IBAN",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 988,
+      "end": 1015,
+      "text": "IT10R0000095033716670090270",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1051,
+      "end": 1063,
+      "text": "340 996 3902",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1092,
+      "end": 1122,
+      "text": "umberto.giacomelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1376,
+      "end": 1394,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.014
+}

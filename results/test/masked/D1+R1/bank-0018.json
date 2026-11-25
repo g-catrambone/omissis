@@ -1,0 +1,57 @@
+{
+  "text_id": "bank-0018",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio - [PERSONA_1_M]\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_M] e sono titolare di un conto corrente presso la filiale di [CITTA_1]. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per l'accredito del mio stipendio mensile.\n\nAttualmente lavoro come responsabile acquisti presso [CITTA_2] S.p.A., dove mi occupo della gestione degli approvvigionamenti. A causa di una riorganizzazione interna dei flussi di cassa aziendale, il mio datore di lavoro ha deciso di centralizzare gli accrediti su un nuovo conto dedicato. Di conseguenza, vi chiedo cortesemente di aggiornare i dati registrati sul mio profilo, sostituendo il vecchio [AZIENDA_1] con quello che segue: [IBAN_1].\n\nL'accredito del prossimo stipendio, previsto per il 15 novembre 2026, dovrà essere effettuato sul nuovo conto. L'importo medio mensile che ricevo è di circa 1.850,00 €, ma vi prego di considerare l'importo effettivo indicato nella busta paga. Per facilitare l'identificazione del mio fascicolo, vi fornisco il mio codice fiscale: SRBLMT93H55X288J.\n\nResto a disposizione per eventuali verifiche tramite il mio numero di telefono [TELEFONO_1] o via email all'indirizzo [EMAIL_1]. Vi chiedo di confermare la ricezione di questa richiesta e l'avvenuto aggiornamento dei dati entro il 10 novembre 2026, così da evitare ritardi nell'accredito.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

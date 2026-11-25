@@ -1,0 +1,50 @@
+{
+  "text_id": "bank-0019",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Richiesta estinzione anticipata prestito personale - [PERSONA_1_F]\n\nGentile Credito Tirrenico,\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per richiedere formalmente la chiusura anticipata del mio prestito personale, contratto presso la filiale di Viterbo.\n\nAttualmente lavoro come responsabile acquisti presso Caseificio Montelupo S.r.l., ma ho deciso di rivedere la mia situazione finanziaria per ridurre i costi a lungo termine. Il prestito in questione, acceso in data 15 marzo 2024, prevede una rata mensile di € 450,00.\n\nVi chiedo di procedere con l'estinzione totale del debito residuo, che al momento ammonta a € 12.500,00, e di inviarmi la relativa quietanza di pagamento. Desidero che l'operazione venga eseguita entro il 30 novembre 2026, così da poter pianificare il trasferimento delle somme necessarie dal mio deposito titoli.\n\nVi prego di confermare la ricezione di questa richiesta e di indicarmi le eventuali penali o interessi di mora applicabili per la chiusura anticipata, come previsto dal contratto. Resto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o tramite l'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[CF_1]\n[UTENTE_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

@@ -34,6 +34,12 @@ from omissis.eval.datasets import TextRecord, load_text, load_texts
 from omissis.feasibility import check_text
 from omissis.pipeline import mask, protect_send_restore
 
+ROOT = Path(__file__).resolve().parents[2]  # this repository: results/ and data/ live here
+DESCRIPTION = (
+    "Pseudonymise an Italian text before it goes to a cloud model and restore the reply: "
+    "`run` for one text, `batch` for a folder of texts, `mask` to write the masked texts "
+    "of the named configurations."
+)
 DEFAULT_TASK = "Scrivi una bozza di risposta a questa email."
 
 
@@ -44,26 +50,49 @@ def _gold(record: TextRecord, config: RunConfig) -> tuple[Span, ...] | None:
 
 def _read_input(path: Path, config: RunConfig) -> tuple[str, tuple[Span, ...] | None]:
     """The text of a JSON text record (with its gold spans for GOLD), or of any other file."""
+    if path.suffix != ".json" and config.detector == GOLD_DETECTOR:
+        raise ConfigError(f"detector GOLD needs a text record (.json) with spans, got {path}")
+    _require_synthetic(path, config)
     if path.suffix == ".json":
         record = load_text(path)
         return record.text, _gold(record, config)
-    if config.detector == GOLD_DETECTOR:
-        raise ConfigError(f"detector GOLD needs a text record (.json) with spans, got {path}")
-    if _is_committed(config.cache_dir):
-        # A plain text is never an evaluation record: it may be a real letter, and the
-        # cache keeps the prompt that is sent.
-        raise ConfigError(
-            f"{path} is not a text record and the cache {config.cache_dir} is committed: "
-            "use a configuration whose cache_dir is under results/scratch/"
-        )
     return path.read_text(encoding="utf-8"), None
 
 
 def _is_committed(cache_dir: Path) -> bool:
-    """True for a folder under `results/` that is not under the gitignored `results/scratch/`."""
-    cache, results = Path(cache_dir).resolve(), Path("results").resolve()
+    """True for a folder under this repository's `results/` that is not under the
+    gitignored `results/scratch/`, whatever the current directory."""
+    cache, results = Path(cache_dir).resolve(), (ROOT / "results").resolve()
     above = (cache, *cache.parents)
     return results in above and results / "scratch" not in above
+
+
+def _require_synthetic(path: Path, config: RunConfig) -> None:
+    """A committed cache keeps the prompts that are sent: it may only receive a text that is
+    synthetic, that is a `.json` record under this repository's `data/` (fixtures and
+    evaluation records). A plain text, or a record from anywhere else, may be a real letter."""
+    if not _is_committed(config.cache_dir):
+        return
+    data, where = (ROOT / "data").resolve(), Path(path).resolve()
+    if (path.suffix == ".json" or path.is_dir()) and (where == data or data in where.parents):
+        return
+    raise ConfigError(
+        f"{path} is not a record under {data} and the cache {config.cache_dir} is committed: "
+        "use a configuration whose cache_dir is under results/scratch/"
+    )
+
+
+def _require_synthetic_folder(folder: Path, config: RunConfig) -> None:
+    """The same rule for a folder and for each record in it: a link inside `data/` that
+    points elsewhere is a record from elsewhere."""
+    _require_synthetic(folder, config)
+    for path in sorted(Path(folder).glob("*.json")):
+        _require_synthetic(path, config)
+
+
+def _require_text(text: str, where: Path | str) -> None:
+    if not text.strip():
+        raise ValueError(f"{where} holds an empty text: nothing to protect")
 
 
 def _records(folder: Path) -> list[TextRecord]:
@@ -107,6 +136,8 @@ def _mask_batch(args: argparse.Namespace, overrides: dict | None) -> None:
     unknown = [name for name in names if name not in configs]
     if unknown:
         raise ConfigError(f"{args.eval_config}: no configuration named {unknown}")
+    for name in names:  # D3 and D4 send the whole text to the role `d3`, and the cache keeps it
+        _require_synthetic_folder(args.input_dir, configs[name])
     write_masked(_records(args.input_dir), {name: configs[name] for name in names}, args.output)
 
 
@@ -139,7 +170,7 @@ def write_masked(records: list[TextRecord], configs: dict[str, RunConfig], outpu
 
 
 def main(argv: list[str] | None = None) -> int:
-    parser = argparse.ArgumentParser(prog="omissis", description=__doc__.splitlines()[0])
+    parser = argparse.ArgumentParser(prog="omissis", description=DESCRIPTION)
     commands = parser.add_subparsers(dest="command", required=True)
     for name, help_text in [("run", "protect one text"), ("batch", "protect a folder of texts")]:
         sub = commands.add_parser(name, help=help_text)
@@ -170,6 +201,7 @@ def main(argv: list[str] | None = None) -> int:
         config = load_config(args.config, overrides)
         if args.command == "run":
             text, gold = _read_input(args.input, config)
+            _require_text(text, args.input)
             blocked = check_text(text, args.task, config, gold)
             if blocked:
                 kinds = ", ".join(f"{kind.value}: {count}" for kind, count in blocked.items())
@@ -180,7 +212,11 @@ def main(argv: list[str] | None = None) -> int:
                 )
             _print_result(protect_send_restore(text, args.task, config, gold))
         else:
-            for record in _records(args.input_dir):
+            _require_synthetic_folder(args.input_dir, config)
+            records = _records(args.input_dir)
+            for record in records:
+                _require_text(record.text, record.id)
+            for record in records:
                 result = protect_send_restore(record.text, args.task, config, _gold(record, config))
                 line = {"text_id": record.id, **_as_dict(result)}
                 print(json.dumps(line, ensure_ascii=False))

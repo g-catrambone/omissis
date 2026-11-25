@@ -1,0 +1,542 @@
+{
+  "split": "dev",
+  "seed": 20261111,
+  "generated_from": [
+    "b07665f0c252"
+  ],
+  "machine": "Mac.lan",
+  "rows": [
+    {
+      "detector": "D0",
+      "texts": 20,
+      "p50": 0.00014341699898068327,
+      "p95": 0.00016802324998934636
+    },
+    {
+      "detector": "D1",
+      "texts": 20,
+      "p50": 0.012167770500127517,
+      "p95": 0.01477797325096617
+    },
+    {
+      "detector": "D2",
+      "texts": 20,
+      "p50": 0.13146470800074894,
+      "p95": 0.13648168714980785
+    },
+    {
+      "detector": "D3",
+      "texts": 20,
+      "p50": 24.998988000499594,
+      "p95": 56.77112834195141
+    },
+    {
+      "detector": "D4",
+      "texts": 20,
+      "p50": 36.987677083499875,
+      "p95": 54.0183192124995
+    }
+  ],
+  "per_text": [
+    {
+      "text_id": "bank-0001",
+      "detector": "D0",
+      "seconds": 0.00017004199980874546
+    },
+    {
+      "text_id": "bank-0002",
+      "detector": "D0",
+      "seconds": 0.0001536250001663575
+    },
+    {
+      "text_id": "bank-0008",
+      "detector": "D0",
+      "seconds": 0.0001277089995710412
+    },
+    {
+      "text_id": "bank-0010",
+      "detector": "D0",
+      "seconds": 0.00014575000022887252
+    },
+    {
+      "text_id": "bank-0013",
+      "detector": "D0",
+      "seconds": 0.0001551669993204996
+    },
+    {
+      "text_id": "bank-0014",
+      "detector": "D0",
+      "seconds": 0.00011262500083830673
+    },
+    {
+      "text_id": "bank-0015",
+      "detector": "D0",
+      "seconds": 0.00014525000005960464
+    },
+    {
+      "text_id": "bank-0016",
+      "detector": "D0",
+      "seconds": 0.00013454200052365195
+    },
+    {
+      "text_id": "bank-0024",
+      "detector": "D0",
+      "seconds": 0.00014970799929869827
+    },
+    {
+      "text_id": "bank-0032",
+      "detector": "D0",
+      "seconds": 0.00016574999972363003
+    },
+    {
+      "text_id": "bank-0034",
+      "detector": "D0",
+      "seconds": 0.00014412499876925722
+    },
+    {
+      "text_id": "bank-0035",
+      "detector": "D0",
+      "seconds": 0.00016791699999885168
+    },
+    {
+      "text_id": "bank-0040",
+      "detector": "D0",
+      "seconds": 0.00014333399849419948
+    },
+    {
+      "text_id": "hr-0002",
+      "detector": "D0",
+      "seconds": 0.0001324580007349141
+    },
+    {
+      "text_id": "hr-0003",
+      "detector": "D0",
+      "seconds": 0.00010495800052012783
+    },
+    {
+      "text_id": "hr-0010",
+      "detector": "D0",
+      "seconds": 0.00011474999882921111
+    },
+    {
+      "text_id": "hr-0011",
+      "detector": "D0",
+      "seconds": 0.00011787499897764064
+    },
+    {
+      "text_id": "hr-0016",
+      "detector": "D0",
+      "seconds": 0.00014349999946716707
+    },
+    {
+      "text_id": "hr-0020",
+      "detector": "D0",
+      "seconds": 0.00010666700109140947
+    },
+    {
+      "text_id": "hr-0026",
+      "detector": "D0",
+      "seconds": 0.00011912499940081034
+    },
+    {
+      "text_id": "bank-0001",
+      "detector": "D1",
+      "seconds": 0.020141791999776615
+    },
+    {
+      "text_id": "bank-0002",
+      "detector": "D1",
+      "seconds": 0.01272462499946414
+    },
+    {
+      "text_id": "bank-0008",
+      "detector": "D1",
+      "seconds": 0.011069165999288089
+    },
+    {
+      "text_id": "bank-0010",
+      "detector": "D1",
+      "seconds": 0.011862749999636435
+    },
+    {
+      "text_id": "bank-0013",
+      "detector": "D1",
+      "seconds": 0.012827333001041552
+    },
+    {
+      "text_id": "bank-0014",
+      "detector": "D1",
+      "seconds": 0.010795249998409417
+    },
+    {
+      "text_id": "bank-0015",
+      "detector": "D1",
+      "seconds": 0.011805291000200668
+    },
+    {
+      "text_id": "bank-0016",
+      "detector": "D1",
+      "seconds": 0.01110174999848823
+    },
+    {
+      "text_id": "bank-0024",
+      "detector": "D1",
+      "seconds": 0.012265082999874721
+    },
+    {
+      "text_id": "bank-0032",
+      "detector": "D1",
+      "seconds": 0.014495667001028778
+    },
+    {
+      "text_id": "bank-0034",
+      "detector": "D1",
+      "seconds": 0.011273958998572198
+    },
+    {
+      "text_id": "bank-0035",
+      "detector": "D1",
+      "seconds": 0.013336291998712113
+    },
+    {
+      "text_id": "bank-0040",
+      "detector": "D1",
+      "seconds": 0.012072790999809513
+    },
+    {
+      "text_id": "hr-0002",
+      "detector": "D1",
+      "seconds": 0.013626374999148538
+    },
+    {
+      "text_id": "hr-0003",
+      "detector": "D1",
+      "seconds": 0.010178124999583815
+    },
+    {
+      "text_id": "hr-0010",
+      "detector": "D1",
+      "seconds": 0.012269417000425165
+    },
+    {
+      "text_id": "hr-0011",
+      "detector": "D1",
+      "seconds": 0.012806624999939231
+    },
+    {
+      "text_id": "hr-0016",
+      "detector": "D1",
+      "seconds": 0.012039582999932463
+    },
+    {
+      "text_id": "hr-0020",
+      "detector": "D1",
+      "seconds": 0.01132879199940362
+    },
+    {
+      "text_id": "hr-0026",
+      "detector": "D1",
+      "seconds": 0.012262750000445521
+    },
+    {
+      "text_id": "bank-0001",
+      "detector": "D2",
+      "seconds": 0.13640508299977228
+    },
+    {
+      "text_id": "bank-0002",
+      "detector": "D2",
+      "seconds": 0.1326359169997886
+    },
+    {
+      "text_id": "bank-0008",
+      "detector": "D2",
+      "seconds": 0.1316200420005771
+    },
+    {
+      "text_id": "bank-0010",
+      "detector": "D2",
+      "seconds": 0.13160695800070243
+    },
+    {
+      "text_id": "bank-0013",
+      "detector": "D2",
+      "seconds": 0.1313882079994073
+    },
+    {
+      "text_id": "bank-0014",
+      "detector": "D2",
+      "seconds": 0.13133720900077606
+    },
+    {
+      "text_id": "bank-0015",
+      "detector": "D2",
+      "seconds": 0.13154279199989105
+    },
+    {
+      "text_id": "bank-0016",
+      "detector": "D2",
+      "seconds": 0.1314017500008049
+    },
+    {
+      "text_id": "bank-0024",
+      "detector": "D2",
+      "seconds": 0.13196841700118966
+    },
+    {
+      "text_id": "bank-0032",
+      "detector": "D2",
+      "seconds": 0.13167704199986474
+    },
+    {
+      "text_id": "bank-0034",
+      "detector": "D2",
+      "seconds": 0.13122929200108047
+    },
+    {
+      "text_id": "bank-0035",
+      "detector": "D2",
+      "seconds": 0.131527666000693
+    },
+    {
+      "text_id": "bank-0040",
+      "detector": "D2",
+      "seconds": 0.13123554099911416
+    },
+    {
+      "text_id": "hr-0002",
+      "detector": "D2",
+      "seconds": 0.1313886249990901
+    },
+    {
+      "text_id": "hr-0003",
+      "detector": "D2",
+      "seconds": 0.1308821660004469
+    },
+    {
+      "text_id": "hr-0010",
+      "detector": "D2",
+      "seconds": 0.1311310000000958
+    },
+    {
+      "text_id": "hr-0011",
+      "detector": "D2",
+      "seconds": 0.13198404200011282
+    },
+    {
+      "text_id": "hr-0016",
+      "detector": "D2",
+      "seconds": 0.13140008299887995
+    },
+    {
+      "text_id": "hr-0020",
+      "detector": "D2",
+      "seconds": 0.13105383299989626
+    },
+    {
+      "text_id": "hr-0026",
+      "detector": "D2",
+      "seconds": 0.13793716600048356
+    },
+    {
+      "text_id": "bank-0001",
+      "detector": "D3",
+      "seconds": 27.823791749999145
+    },
+    {
+      "text_id": "bank-0002",
+      "detector": "D3",
+      "seconds": 35.271590459000436
+    },
+    {
+      "text_id": "bank-0008",
+      "detector": "D3",
+      "seconds": 28.536878500000967
+    },
+    {
+      "text_id": "bank-0010",
+      "detector": "D3",
+      "seconds": 38.95012233300076
+    },
+    {
+      "text_id": "bank-0013",
+      "detector": "D3",
+      "seconds": 61.02356441600023
+    },
+    {
+      "text_id": "bank-0014",
+      "detector": "D3",
+      "seconds": 51.880901749998884
+    },
+    {
+      "text_id": "bank-0015",
+      "detector": "D3",
+      "seconds": 21.941765542000212
+    },
+    {
+      "text_id": "bank-0016",
+      "detector": "D3",
+      "seconds": 25.966406833998917
+    },
+    {
+      "text_id": "bank-0024",
+      "detector": "D3",
+      "seconds": 16.3687461669997
+    },
+    {
+      "text_id": "bank-0032",
+      "detector": "D3",
+      "seconds": 37.84445779099951
+    },
+    {
+      "text_id": "bank-0034",
+      "detector": "D3",
+      "seconds": 48.56543962499927
+    },
+    {
+      "text_id": "bank-0035",
+      "detector": "D3",
+      "seconds": 19.808585708000464
+    },
+    {
+      "text_id": "bank-0040",
+      "detector": "D3",
+      "seconds": 23.58306575000097
+    },
+    {
+      "text_id": "hr-0002",
+      "detector": "D3",
+      "seconds": 24.03156916700027
+    },
+    {
+      "text_id": "hr-0003",
+      "detector": "D3",
+      "seconds": 16.753286041999672
+    },
+    {
+      "text_id": "hr-0010",
+      "detector": "D3",
+      "seconds": 19.862646499999755
+    },
+    {
+      "text_id": "hr-0011",
+      "detector": "D3",
+      "seconds": 16.77601329100071
+    },
+    {
+      "text_id": "hr-0016",
+      "detector": "D3",
+      "seconds": 56.54731591700147
+    },
+    {
+      "text_id": "hr-0020",
+      "detector": "D3",
+      "seconds": 20.456927208000707
+    },
+    {
+      "text_id": "hr-0026",
+      "detector": "D3",
+      "seconds": 21.7215062080013
+    },
+    {
+      "text_id": "bank-0001",
+      "detector": "D4",
+      "seconds": 42.00308049999876
+    },
+    {
+      "text_id": "bank-0002",
+      "detector": "D4",
+      "seconds": 41.960424584000066
+    },
+    {
+      "text_id": "bank-0008",
+      "detector": "D4",
+      "seconds": 28.358870207999644
+    },
+    {
+      "text_id": "bank-0010",
+      "detector": "D4",
+      "seconds": 34.851309958001366
+    },
+    {
+      "text_id": "bank-0013",
+      "detector": "D4",
+      "seconds": 38.860338750000665
+    },
+    {
+      "text_id": "bank-0014",
+      "detector": "D4",
+      "seconds": 39.20547774999977
+    },
+    {
+      "text_id": "bank-0015",
+      "detector": "D4",
+      "seconds": 19.14038716700088
+    },
+    {
+      "text_id": "bank-0016",
+      "detector": "D4",
+      "seconds": 42.84170699999959
+    },
+    {
+      "text_id": "bank-0024",
+      "detector": "D4",
+      "seconds": 24.677631000000474
+    },
+    {
+      "text_id": "bank-0032",
+      "detector": "D4",
+      "seconds": 50.418747708999945
+    },
+    {
+      "text_id": "bank-0034",
+      "detector": "D4",
+      "seconds": 47.440651875000185
+    },
+    {
+      "text_id": "bank-0035",
+      "detector": "D4",
+      "seconds": 36.35212479199981
+    },
+    {
+      "text_id": "bank-0040",
+      "detector": "D4",
+      "seconds": 34.36200649999955
+    },
+    {
+      "text_id": "hr-0002",
+      "detector": "D4",
+      "seconds": 37.62322937499994
+    },
+    {
+      "text_id": "hr-0003",
+      "detector": "D4",
+      "seconds": 22.154560375000074
+    },
+    {
+      "text_id": "hr-0010",
+      "detector": "D4",
+      "seconds": 24.406482166999922
+    },
+    {
+      "text_id": "hr-0011",
+      "detector": "D4",
+      "seconds": 20.422569165999448
+    },
+    {
+      "text_id": "hr-0016",
+      "detector": "D4",
+      "seconds": 64.05308062499898
+    },
+    {
+      "text_id": "hr-0020",
+      "detector": "D4",
+      "seconds": 20.63441416599926
+    },
+    {
+      "text_id": "hr-0026",
+      "detector": "D4",
+      "seconds": 53.49017387499953
+    }
+  ]
+}

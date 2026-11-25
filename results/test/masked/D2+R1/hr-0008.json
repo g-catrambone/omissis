@@ -1,0 +1,36 @@
+{
+  "text_id": "hr-0008",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta lavoro da remoto per Teresa [PERSONA_1]valle\n\nGentile Ufficio del Personale,\n\nmi chiamo [PERSONA_2_F] e sono contabile presso la Cooperativa Edile Pietrafitta. Vi scrivo per richiedere formalmente l'approvazione del lavoro da remoto a partire dal 15 novembre 2026.\n\nQuesta necessità nasce da una condizione di emicrania cronica che rende difficile la permanenza prolungata in ambienti con luci intense e rumori tipici dell'ufficio. Lavorando da casa, potrei gestire meglio i sintomi e mantenere la mia produttività.\n\nPer i vostri archivi, la mia matricola aziendale è UL-67995. Ricordo che la mia banca di riferimento è la Banca Altopiano, filiale di [CITTA_1], dove gestisco la mia carta di credito e il deposito titoli. Il mio codice fiscale è DTPBGT37E51X984X e posso essere raggiunta al telefono 300 108 4408 o via email all'indirizzo [EMAIL_1]@example.com.\n\nVi chiedo cortesemente di valutare positivamente questa richiesta, che mi permetterebbe di continuare a svolgere le mie mansioni con la stessa dedizione di sempre. Resto a disposizione per qualsiasi chiarimento in merito.\n\nCordiali saluti,\n\n[PERSONA_2_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

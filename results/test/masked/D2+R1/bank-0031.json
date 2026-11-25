@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0031",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Reclamo spese conto corrente e richiesta colloquio\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1]zo [PERSONA_2] e sono titolare del conto corrente con IBAN IT81G0000009964197915045590. Scrivo per segnalare la mia forte contrarietà alle commissioni di gestione e alle spese di incasso addebitate sul mio conto negli ultimi mesi. In particolare, ho notato un addebito di € 45,00 a titolo di \"servizio di gestione\" e un altro di € 12,50 per l'incasso di un assegno, operazioni che ritengo non concordate né giustificate dal contratto sottoscritto.\n\nLavoro come responsabile acquisti presso Caseificio Montelupo S.r.l. a [CITTA_1], e la gestione del mio conto è legata anche a un prestito personale attivo. La situazione economica attuale non mi consente di sostenere costi aggiuntivi non previsti. Il mio codice fiscale è [DOCUMENTO_1]55X913J e la matricola aziendale è JY-00410.\n\nNon desidero procedere con una semplice contestazione scritta, ma ritengo fondamentale un confronto diretto per chiarire la situazione e valutare le opzioni disponibili. Vi chiedo pertanto di fissare un incontro o un colloquio presso la filiale di [CITTA_1] entro il 15 dicembre 2026. Sono disponibile a contattarvi al numero 371 808 5550 o via email all'indirizzo [EMAIL_1]@example.com per concordare data e ora.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\n[PERSONA_1]zo [PERSONA_2]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[DOCUMENTO_1]",
+      "type": "DOCUMENTO",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

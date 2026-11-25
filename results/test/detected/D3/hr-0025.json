@@ -1,0 +1,79 @@
+{
+  "text_id": "hr-0025",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 65,
+      "end": 86,
+      "text": "Ufficio del Personale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di gestione del personale"
+    },
+    {
+      "start": 90,
+      "end": 123,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda del datore di lavoro"
+    },
+    {
+      "start": 164,
+      "end": 173,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "start": 184,
+      "end": 199,
+      "text": "sede di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede precisa dell'azienda"
+    },
+    {
+      "start": 293,
+      "end": 322,
+      "text": "delegato sindacale di reparto",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ruolo specifico di chi scrive"
+    },
+    {
+      "start": 407,
+      "end": 423,
+      "text": "14 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data dell'incontro"
+    },
+    {
+      "start": 723,
+      "end": 731,
+      "text": "WT-01641",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 916,
+      "end": 932,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    }
+  ],
+  "seconds": 0.0017
+}

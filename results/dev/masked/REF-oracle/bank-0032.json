@@ -1,0 +1,120 @@
+{
+  "text_id": "bank-0032",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Reclamo spese e richiesta colloquio - [PERSONA_1_F]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono cliente della vostra filiale di [CITTA_1]. Vi scrivo in merito a delle commissioni che ritengo ingiustificate, addebitate sul mio conto corrente e sulla mia carta di credito.\n\nNello specifico, ho notato che il [DATA_1] è stato trattenuto un importo di [IMPORTO_1] per gestione conto, mentre il [DATA_2] ho subito un addebito di [IMPORTO_2] per utilizzo carta all'estero, servizio che non ho mai attivato esplicitamente. Inoltre, sul deposito titoli gestito presso di voi, compaiono spese di custodia titoli pari a [IMPORTO_3] per il trimestre, cifra che non corrisponde a quanto previsto dal contratto sottoscritto nel [DATA_3].\n\nQuesti addebiti, sommati, superano i [IMPORTO_4] in pochi giorni, una situazione che trovo inaccettabile data la mia lunga fedeltà alla banca. Non intendo procedere con una semplice contestazione scritta, ma desidero comprendere le motivazioni alla base di tali costi.\n\nPertanto, vi chiedo cortesemente di fissare un incontro o un colloquio presso la filiale di [CITTA_1] per discutere la questione di persona. Sono disponibile a fornire tutti i documenti necessari, inclusi il mio codice fiscale [CF_1] e la matricola aziendale [UTENTE_1] per eventuali verifiche interne.\n\nResto in attesa di un vostro riscontro per concordare data e ora.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n[RUOLO_1] presso [AZIENDA_2]\nTel: [TELEFONO_1]\nEmail: [EMAIL_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_2]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_3]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_3]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_4]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

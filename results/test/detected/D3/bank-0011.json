@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0011",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 91,
+      "end": 119,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 208,
+      "end": 226,
+      "text": "filiale di Viterbo",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria"
+    },
+    {
+      "start": 362,
+      "end": 372,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "start": 396,
+      "end": 412,
+      "text": "16 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data transazione"
+    },
+    {
+      "start": 435,
+      "end": 439,
+      "text": "Roma",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di transazione"
+    },
+    {
+      "start": 456,
+      "end": 464,
+      "text": "€ 350,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma addebitata"
+    },
+    {
+      "start": 476,
+      "end": 492,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data transazione"
+    },
+    {
+      "start": 723,
+      "end": 733,
+      "text": "€ 1.550,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "totale richiesto"
+    },
+    {
+      "start": 1182,
+      "end": 1203,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "ruolo professionale"
+    },
+    {
+      "start": 1211,
+      "end": 1238,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "azienda di lavoro"
+    },
+    {
+      "start": 1307,
+      "end": 1315,
+      "text": "JY-00410",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    }
+  ],
+  "seconds": 0.0013
+}

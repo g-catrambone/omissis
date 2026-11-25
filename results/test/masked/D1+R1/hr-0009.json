@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0009",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta smart working per [PERSONA_1_M]\n\nGentile Ufficio del Personale di [CITTA_1].,\n\nmi chiamo [PERSONA_1_M], matricola QA-72135, e vi scrivo per richiedere l'autorizzazione al lavoro da remoto. Come sapete, sono responsabile acquisti e risiedo a [CITTA_2].\n\nRecentemente ho dovuto sottopormi a un intervento chirurgico al ginocchio, seguito da un percorso di riabilitazione che richiede tempi di recupero specifici. Per gestire al meglio questa fase di riabilitazione post-operatoria e ridurre gli spostamenti quotidiani, che risultano al momento dolorosi e faticosi, chiedo di poter svolgere le mie attività lavorative da casa.\n\nLa mia posizione mi consente di gestire le trattative con i fornitori e la pianificazione degli ordini anche a distanza, garantendo la stessa efficienza operativa. Ho già predisposto la postazione domestica con connessione stabile.\n\nVi chiedo cortesemente di valutare positivamente questa richiesta, che intendo far partire dal 15 dicembre 2026. Resto a disposizione per qualsiasi chiarimento in merito alle modalità operative.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n[EMAIL_1]\n[TELEFONO_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

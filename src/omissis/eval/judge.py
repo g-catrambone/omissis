@@ -1,4 +1,4 @@
-"""The judge of the reply drafts and its validation (task 3.7; protocol, section 9).
+"""The judge of the reply drafts and its validation (protocol, section 9).
 
 The `judge` model sees the original email, the `REF-none` reply as reference and the
 reply under evaluation after restoration, never the configuration. It gives three
@@ -12,8 +12,12 @@ order and nothing that tells the configuration; the key that ties an item to its
 text and configuration is a separate file, which the raters do not open. `accept`
 compares the judge with the consensus of the raters and writes the outcome.
 
-    python -m omissis.eval.judge sheets --split dev --raters GC
+    python -m omissis.eval.judge sheets --split dev --raters GC --backend cloud
     python -m omissis.eval.judge accept --split dev
+
+The R2 items come from a configuration that the runner never runs, so `sheets` makes
+their replies: the first time it needs `--backend cloud` (one call to the `cloud` model
+per text); without the option it replays and calls nothing.
 """
 
 from __future__ import annotations
@@ -281,13 +285,21 @@ def _folder(split: str) -> Path:
 
 
 def _sheets(args: argparse.Namespace) -> int:
-    configs = load_eval_configs(EVAL_CONFIG, {"backend": "replay"})
+    folder = _folder(args.split)
+    if (folder / "key.json").exists():
+        print(
+            f"{folder} already holds the rating sheets: a second run is refused. "
+            "Move the folder away to make them again.",
+            file=sys.stderr,
+        )
+        return 2
+    configs = load_eval_configs(EVAL_CONFIG, {"backend": args.backend or "replay"})
     rated = validation_configs(configs)
     records = load_texts(Path("data") / args.split)
     seed = configs["REF-none"].seed
     items, key = build_items(records, rated, configs["REF-none"], seed)
-    write_sheets(items, key, _folder(args.split), args.raters)
-    print(f"{len(items)} items written for {', '.join(args.raters)} in {_folder(args.split)}")
+    write_sheets(items, key, folder, args.raters)
+    print(f"{len(items)} items written for {', '.join(args.raters)} in {folder}")
     return 0
 
 
@@ -324,6 +336,7 @@ def main(argv: list[str] | None = None) -> int:
     sub = commands.add_parser("sheets", help="write the empty rating sheets")
     sub.add_argument("--split", required=True)
     sub.add_argument("--raters", nargs="+", required=True, help="initials of the raters")
+    sub.add_argument("--backend", choices=["cloud", "replay"], help="replay when not given")
     sub.set_defaults(run=_sheets)
     sub = commands.add_parser("accept", help="compare the judge with the filled sheets")
     sub.add_argument("--split", required=True)

@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0005",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 59,
+      "end": 69,
+      "text": "Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.7520590821901957,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 107,
+      "end": 124,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.9022810459136963,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 218,
+      "end": 225,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9949286878108978,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 935,
+      "end": 952,
+      "text": "cesare.sartorelli",
+      "type": "EMAIL",
+      "confidence": 0.9623900552590688,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1118,
+      "end": 1135,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.9866869926452637,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1299
+}

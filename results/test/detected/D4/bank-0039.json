@@ -1,0 +1,160 @@
+{
+  "text_id": "bank-0039",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 42,
+      "end": 59,
+      "text": "Giulia Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 69,
+      "end": 84,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 97,
+      "end": 114,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.9960922479629517,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 119,
+      "end": 126,
+      "text": "47 anni",
+      "type": "ETA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "età del mittente"
+    },
+    {
+      "start": 139,
+      "end": 146,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza"
+    },
+    {
+      "start": 160,
+      "end": 169,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 180,
+      "end": 206,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "azienda dove lavora il mittente"
+    },
+    {
+      "start": 240,
+      "end": 248,
+      "text": "UJ-61496",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola interna del mittente"
+    },
+    {
+      "start": 314,
+      "end": 331,
+      "text": "Giulia Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 345,
+      "end": 358,
+      "text": "12 marzo 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data del decesso"
+    },
+    {
+      "start": 393,
+      "end": 420,
+      "text": "IT21G0000049496757180948574",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 523,
+      "end": 533,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "saldo del conto corrente"
+    },
+    {
+      "start": 591,
+      "end": 601,
+      "text": "€ 5.400,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "valore stimato dei titoli"
+    },
+    {
+      "start": 731,
+      "end": 760,
+      "text": "cesare.sartorelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 991,
+      "end": 1007,
+      "text": "GTVNTV11E14X258I",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1039,
+      "end": 1051,
+      "text": "363 896 3303",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1147,
+      "end": 1164,
+      "text": "Cesare Sartorelli",
+      "type": "PERSONA",
+      "confidence": 0.9447261691093445,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1493
+}

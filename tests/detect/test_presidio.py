@@ -1,4 +1,4 @@
-"""D1 Presidio (task 4.1). Skipped where the dependency group `detect` is not installed."""
+"""D1 Presidio. Skipped where the dependency group `detect` is not installed."""
 
 from pathlib import Path
 
@@ -50,6 +50,17 @@ def test_italian_phone_iban_and_email_are_found():
         (SpanType.IBAN, "IT89Y0000025613651127989360"),
         (SpanType.EMAIL, "lidia.caprioli@example.com"),
     } <= found(text)
+
+
+def test_name_at_the_end_of_a_line_does_not_take_the_next_line():
+    # spaCy joins the name to the greeting two lines below: the span keeps its first line.
+    text = (
+        "Oggetto: Richiesta ferie - Lidia Caprioli\n\nGentile Ufficio del Personale,\n\n"
+        "vi scrivo per chiedere tre giorni di ferie."
+    )
+    spans = detect(text, DetectorId.D1, CONFIG)
+    assert (SpanType.PERSONA, "Lidia Caprioli") in {(s.type, s.text) for s in spans}
+    assert not any("\n" in s.text for s in spans)
 
 
 def test_synthetic_fiscal_code_with_place_code_x_is_a_known_miss():

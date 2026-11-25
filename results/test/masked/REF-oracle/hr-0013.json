@@ -1,0 +1,78 @@
+{
+  "text_id": "hr-0013",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Segnalazione fatti e richiesta di indagine - [PERSONA_1_M]\n\nGentile Ufficio del Personale di [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M], matricola [UTENTE_1], e lavoro come [RUOLO_1] presso la sede di [CITTA_1]. Vi scrivo per segnalare una situazione di vessazione che sto subendo da parte di un collega, iniziata il [DATA_1].\n\nDa quella data, il mio turno di notte viene sistematicamente modificato senza preavviso, costringendomi a gestire turni di 14 ore consecutive. Inoltre, mi viene negato l'accesso agli strumenti di lavoro necessari per le mie mansioni, con il pretesto di \"mancanza di autorizzazioni\" mai comunicate formalmente. Questa condotta sta compromettendo la mia capacità di svolgere il lavoro in sicurezza e dignità.\n\nNon chiedo soluzioni immediate o sanzioni specifiche, ma vi prego di aprire una pratica di verifica formale per accertare i fatti. Desidero che venga indagata la regolarità delle assegnazioni di turno e delle autorizzazioni operative.\n\nPer i contatti, potete raggiungermi al [TELEFONO_1] o via [EMAIL_1]. I miei dati bancari presso [AZIENDA_2], filiale di [CITTA_1], restano invariati, con IBAN [IBAN_1].\n\nResto in attesa di un riscontro scritto sull'avvio dell'indagine.\n\nCordiali saluti,\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

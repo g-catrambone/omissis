@@ -1,0 +1,910 @@
+{
+  "split": "pool",
+  "seed": 20261111,
+  "generated_from": [],
+  "rows": [
+    {
+      "matching": "exact",
+      "f1": 0.9947368421052631,
+      "matched": 189,
+      "first": 190,
+      "second": 190
+    },
+    {
+      "matching": "overlap",
+      "f1": 1.0,
+      "matched": 190,
+      "first": 190,
+      "second": 190
+    },
+    {
+      "metric": "kappa_class",
+      "pairs": 190,
+      "kappa": 1.0
+    }
+  ],
+  "per_text": [
+    {
+      "text_id": "bank-0003",
+      "first": 16,
+      "second": 16,
+      "matched_exact": 16,
+      "matched_overlap": 16,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "special",
+          "special"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "bank-0007",
+      "first": 16,
+      "second": 16,
+      "matched_exact": 16,
+      "matched_overlap": 16,
+      "class_pairs": [
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "bank-0009",
+      "first": 15,
+      "second": 15,
+      "matched_exact": 15,
+      "matched_overlap": 15,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "bank-0019",
+      "first": 16,
+      "second": 16,
+      "matched_exact": 16,
+      "matched_overlap": 16,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "bank-0022",
+      "first": 13,
+      "second": 13,
+      "matched_exact": 13,
+      "matched_overlap": 13,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "bank-0026",
+      "first": 13,
+      "second": 13,
+      "matched_exact": 13,
+      "matched_overlap": 13,
+      "class_pairs": [
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "bank-0028",
+      "first": 15,
+      "second": 15,
+      "matched_exact": 15,
+      "matched_overlap": 15,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "bank-0030",
+      "first": 13,
+      "second": 13,
+      "matched_exact": 13,
+      "matched_overlap": 13,
+      "class_pairs": [
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "hr-0005",
+      "first": 13,
+      "second": 13,
+      "matched_exact": 12,
+      "matched_overlap": 13,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "special",
+          "special"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "hr-0012",
+      "first": 11,
+      "second": 11,
+      "matched_exact": 11,
+      "matched_overlap": 11,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "hr-0017",
+      "first": 17,
+      "second": 17,
+      "matched_exact": 17,
+      "matched_overlap": 17,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "special",
+          "special"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "hr-0019",
+      "first": 15,
+      "second": 15,
+      "matched_exact": 15,
+      "matched_overlap": 15,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    },
+    {
+      "text_id": "hr-0022",
+      "first": 17,
+      "second": 17,
+      "matched_exact": 17,
+      "matched_overlap": 17,
+      "class_pairs": [
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "direct",
+          "direct"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ],
+        [
+          "quasi",
+          "quasi"
+        ]
+      ]
+    }
+  ],
+  "classes": [
+    "direct",
+    "quasi",
+    "special"
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0001",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 85,
+      "end": 113,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 331,
+      "end": 349,
+      "text": "filiale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di un istituto bancario"
+    },
+    {
+      "start": 376,
+      "end": 388,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 399,
+      "end": 428,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda di cui lavora il mittente"
+    },
+    {
+      "start": 470,
+      "end": 485,
+      "text": "asma bronchiale",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica del mittente"
+    },
+    {
+      "start": 620,
+      "end": 628,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della rata del prestito"
+    },
+    {
+      "start": 645,
+      "end": 661,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "start": 713,
+      "end": 726,
+      "text": "30 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di sospensione richiesta"
+    },
+    {
+      "start": 848,
+      "end": 856,
+      "text": "KK-50663",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    }
+  ],
+  "seconds": 0.0013
+}

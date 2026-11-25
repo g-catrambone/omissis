@@ -1,0 +1,124 @@
+{
+  "text_id": "bank-0033",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 69,
+      "end": 86,
+      "text": "Credito Tirrenico",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 99,
+      "end": 115,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 160,
+      "end": 187,
+      "text": "IT80W0000088426714490849799",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 353,
+      "end": 360,
+      "text": "€ 45,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "start": 646,
+      "end": 655,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 663,
+      "end": 686,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "start": 689,
+      "end": 696,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località menzionata"
+    },
+    {
+      "start": 1003,
+      "end": 1021,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica"
+    },
+    {
+      "start": 1091,
+      "end": 1103,
+      "text": "305 998 4727",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1127,
+      "end": 1155,
+      "text": "valeria.donadoni@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1231,
+      "end": 1247,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 1305,
+      "end": 1321,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1322,
+      "end": 1330,
+      "text": "MK-84592",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice badge o identificativo"
+    }
+  ],
+  "seconds": 0.1489
+}

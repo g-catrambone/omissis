@@ -1,0 +1,86 @@
+{
+  "id": "hr-0023",
+  "domain": "hr",
+  "scenario": "union_leave",
+  "profile_id": "p15",
+  "has_special": true,
+  "text": "Oggetto: Richiesta registrazione assenza sindacale - Tommaso Mantovani\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per formalizzare la richiesta di registrazione di un'assenza per motivi sindacali. Come sapete, ricopro il ruolo di agente di commercio presso la Cooperativa Edile Pietrafitta e sono componente della rappresentanza sindacale unitaria.\n\nNella giornata di 12 novembre 2026 ho dovuto assentarmi dal lavoro per partecipare a un incontro urgente con i verti sindacali regionali. L'assenza ha riguardato l'intera giornata lavorativa, dalle ore 8:00 alle ore 17:00. Vi chiedo cortesemente di annotare tale periodo come permesso sindacale retribuito, in conformità con il contratto collettivo applicato.\n\nPer facilitare le vostre verifiche amministrative, vi fornisco i miei dati anagrafici e di contatto. La mia matricola aziendale è JE-94575. Il mio codice fiscale è FRLPZT57B05X430E. Per eventuali chiarimenti, potete raggiungermi al numero 393 719 3080 o tramite la mia email aziendale tommaso.mantovani@example.com.\n\nRicordo che la mia sede operativa principale si trova a Foggia, dove svolgo la maggior parte delle mie attività commerciali. Non ho altre richieste specifiche al momento, mi limito a chiedere la corretta registrazione dell'evento per evitare eventuali addebiti ingiustificati sulla mia busta paga del mese corrente.\n\nResto a disposizione per fornire eventuali documentazione aggiuntiva se necessaria per la chiusura della pratica.\n\nCordiali saluti,\n\nTommaso Mantovani\n",
+  "spans": [
+    {
+      "start": 53,
+      "end": 70,
+      "text": "Tommaso Mantovani",
+      "type": "PERSONA"
+    },
+    {
+      "start": 247,
+      "end": 266,
+      "text": "agente di commercio",
+      "type": "RUOLO"
+    },
+    {
+      "start": 277,
+      "end": 306,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 314,
+      "end": 364,
+      "text": "componente della rappresentanza sindacale unitaria",
+      "type": "SINDACATO"
+    },
+    {
+      "start": 385,
+      "end": 401,
+      "text": "12 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 858,
+      "end": 866,
+      "text": "JE-94575",
+      "type": "UTENTE"
+    },
+    {
+      "start": 892,
+      "end": 908,
+      "text": "FRLPZT57B05X430E",
+      "type": "CF"
+    },
+    {
+      "start": 967,
+      "end": 979,
+      "text": "393 719 3080",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1013,
+      "end": 1042,
+      "text": "tommaso.mantovani@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1101,
+      "end": 1107,
+      "text": "Foggia",
+      "type": "CITTA"
+    },
+    {
+      "start": 1495,
+      "end": 1512,
+      "text": "Tommaso Mantovani",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "union_leave",
+    "amounts": [],
+    "dates": [
+      "2026-11-12"
+    ],
+    "requested_action": "register_absence",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

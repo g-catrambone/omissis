@@ -1,0 +1,15 @@
+Oggetto: Contestazione addebiti non riconosciuti - [[PERSONA|Emanuele Agostinelli]]
+
+Gentile [[AZIENDA|Banca Popolare di Rocciaviva]],
+
+mi chiamo [[PERSONA|Emanuele Agostinelli]] e sono titolare del conto corrente con IBAN [[IBAN|IT25L0000032615142863898422]]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.
+
+Il primo movimento, di importo pari a [[IMPORTO|€ 145,00]], è stato registrato il [[DATA|12 novembre 2026]] presso un esercente a [[CITTA|Cremona]]. Il secondo, di [[IMPORTO|€ 89,50]], risale al [[DATA|15 novembre 2026]] e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.
+
+Lavoro come [[RUOLO|autista]] presso [[AZIENDA|Farmacie Riunite Altavilla S.p.A.]] e la mia matricola aziendale è [[UTENTE|YB-22250]]. Per facilitare le verifiche, il mio codice fiscale è [[CF|MPMSLS77B67X322T]] e posso essere contattato al numero [[TELEFONO|337 642 7680]] o all'indirizzo [[EMAIL|emanuele.agostinelli@example.com]].
+
+Vi chiedo cortesemente di aprire una pratica di verifica o un'indagine formale per accertare la natura di questi movimenti e bloccare eventuali ulteriori utilizzi fraudolenti della carta. Resto in attesa di un vostro riscontro in merito all'avvio delle procedure di controllo.
+
+Cordiali saluti,
+
+[[PERSONA|Emanuele Agostinelli]]

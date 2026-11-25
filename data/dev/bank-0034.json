@@ -1,0 +1,120 @@
+{
+  "id": "bank-0034",
+  "domain": "bank",
+  "scenario": "fee_complaint",
+  "profile_id": "p30",
+  "has_special": false,
+  "text": "Oggetto: Reclamo per addebiti non autorizzati su conto corrente\n\nGentile Cassa Rurale di Montevago,\n\nmi chiamo Sabrina Lorenzetti e sono titolare del conto corrente con IBAN IT50N0000061021618288042279. Vi scrivo per segnalare la presenza di commissioni di gestione e spese di bollettino che non risultano autorizzate né previste dal contratto sottoscritto.\n\nLavoro come elettricista presso la Cooperativa Edile Pietrafitta a Pistoia, e gestisco il mio deposito titoli tramite la vostra filiale locale. Ho notato che dal 15 novembre 2026 al 20 novembre 2026 sono stati addebitati complessivamente € 45,00 per servizi che non ho mai richiesto esplicitamente.\n\nTali addebiti sono errati e non corrispondono ai servizi effettivamente fruiti. Chiedo pertanto il rimborso immediato della somma di € 45,00 sul mio conto corrente.\n\nVi prego di considerare questa richiesta urgente e di procedere con la stornatura degli importi entro e non oltre il 30 novembre 2026. In caso di mancata risoluzione, mi vedrò costretta a rivolgermi all'Arbitro Bancario Finanziario.\n\nResto in attesa di un vostro cortese riscontro.\n\nCordiali saluti,\n\nSabrina Lorenzetti\n349 318 3143\nsabrina.lorenzetti@example.com\nRNMPVP96S08X914J\nYO-92505\n",
+  "spans": [
+    {
+      "start": 73,
+      "end": 98,
+      "text": "Cassa Rurale di Montevago",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 111,
+      "end": 129,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 174,
+      "end": 201,
+      "text": "IT50N0000061021618288042279",
+      "type": "IBAN"
+    },
+    {
+      "start": 371,
+      "end": 383,
+      "text": "elettricista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 394,
+      "end": 423,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 426,
+      "end": 433,
+      "text": "Pistoia",
+      "type": "CITTA"
+    },
+    {
+      "start": 521,
+      "end": 537,
+      "text": "15 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 541,
+      "end": 557,
+      "text": "20 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 597,
+      "end": 604,
+      "text": "€ 45,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 792,
+      "end": 799,
+      "text": "€ 45,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 942,
+      "end": 958,
+      "text": "30 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 1126,
+      "end": 1144,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1145,
+      "end": 1157,
+      "text": "349 318 3143",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1158,
+      "end": 1188,
+      "text": "sabrina.lorenzetti@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1189,
+      "end": 1205,
+      "text": "RNMPVP96S08X914J",
+      "type": "CF"
+    },
+    {
+      "start": 1206,
+      "end": 1214,
+      "text": "YO-92505",
+      "type": "UTENTE"
+    }
+  ],
+  "gold": {
+    "intent": "fee_complaint",
+    "amounts": [
+      45.0
+    ],
+    "dates": [
+      "2026-11-15",
+      "2026-11-20",
+      "2026-11-30"
+    ],
+    "requested_action": "refund",
+    "deadline": "2026-11-30"
+  },
+  "reviewed_by": "GC"
+}

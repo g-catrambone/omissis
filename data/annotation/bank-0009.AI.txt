@@ -1,0 +1,15 @@
+Oggetto: Contestazione addebiti non autorizzati su carta di debito
+
+Gentile [[AZIENDA|Banca Altopiano]],
+
+mi chiamo [[PERSONA|Dario Altobelli]] e sono titolare di una carta di debito collegata al conto corrente con IBAN [[IBAN|IT41G0000015737119260922015]]. Vi scrivo per contestare formalmente due addebiti che non riconosco e che sono apparsi sul mio estratto conto.
+
+Il primo addebito, pari a [[IMPORTO|€ 150,00]], è stato effettuato il [[DATA|12 novembre 2026]] presso un esercizio commerciale a [[CITTA|Trapani]]. Il secondo, di [[IMPORTO|€ 85,50]], risale al [[DATA|15 novembre 2026]] e risulta avvenuto online. Non ho effettuato né autorizzato queste transazioni.
+
+Lavoro come [[RUOLO|custode]] presso [[AZIENDA|Cantieri Dorsano S.p.A.]] e la mia matricola aziendale è [[UTENTE|GZ-20484]]. Vi chiedo pertanto di procedere immediatamente allo storno di entrambe le somme, per un totale di [[IMPORTO|€ 235,50]], e di bloccare la carta per evitare ulteriori movimenti sospetti.
+
+Resto in attesa di un vostro riscontro urgente. Per qualsiasi necessità potete contattarmi al numero [[TELEFONO|399 299 3390]] o all'indirizzo [[EMAIL|dario.altobelli@example.com]].
+
+Cordiali saluti,
+
+[[PERSONA|Dario Altobelli]]

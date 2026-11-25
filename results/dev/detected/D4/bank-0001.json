@@ -1,0 +1,151 @@
+{
+  "text_id": "bank-0001",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 57,
+      "end": 75,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 85,
+      "end": 113,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 126,
+      "end": 144,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 184,
+      "end": 216,
+      "text": "IBAN IT98T0000058217280776763333",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 331,
+      "end": 349,
+      "text": "filiale di Pistoia",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di un istituto bancario"
+    },
+    {
+      "start": 376,
+      "end": 388,
+      "text": "elettricista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 399,
+      "end": 428,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda di cui lavora il mittente"
+    },
+    {
+      "start": 470,
+      "end": 485,
+      "text": "asma bronchiale",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica del mittente"
+    },
+    {
+      "start": 620,
+      "end": 628,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della rata del prestito"
+    },
+    {
+      "start": 645,
+      "end": 661,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "start": 713,
+      "end": 726,
+      "text": "30 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di sospensione richiesta"
+    },
+    {
+      "start": 804,
+      "end": 820,
+      "text": "BMDCST55B21X401A",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 848,
+      "end": 856,
+      "text": "KK-50663",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "start": 979,
+      "end": 991,
+      "text": "305 331 7289",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1008,
+      "end": 1038,
+      "text": "nicola.scarpellini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1059,
+      "end": 1077,
+      "text": "Nicola Scarpellini",
+      "type": "PERSONA",
+      "confidence": 0.8978368639945984,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1591
+}

@@ -1,0 +1,113 @@
+{
+  "text_id": "hr-0022",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta trasferimento sede via delle Rose 95\n\nGentile Ufficio del Personale di Trafilerie Bonaccorsi S.p.A.,\n\nmi chiamo Priscilla Montagnani e sono dipendente con matricola XV-19827. Lavoro come [RUOLO_1] presso la [STRUTTURA_1] da diversi anni. Con la presente, desidero formalmente richiedere il mio trasferimento alla [STRUTTURA_2], chiedendo cortesemente l'approvazione della pratica.\n\nQuesta decisione è motivata da esigenze familiari e logistiche che rendono difficile la permanenza nella sede attuale. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a gestire la logistica del trasloco a mie spese. Il mio contratto prevede una retribuzione netta mensile di circa 1.275,00 €, che spero venga mantenuta invariata anche nella nuova sede.\n\nPer completezza, allego alla presente la mia documentazione anagrafica. Il mio codice fiscale è GRRBVP75H20X547J e posso essere contattata al numero 381 755 8834 o tramite l'indirizzo rebecca.camporesi@example.com. Ho anche un conto corrente attivo presso Cassa di Risparmio di Montalfiore, [STRUTTURA_3], con IBAN IT55L0000079747132634964948, dove vengono accreditati gli stipendi.\n\nChiedo che la richiesta venga presa in considerazione entro il 27 dicembre 2026, in modo da poter pianificare il trasferimento entro la fine dell'anno. Resto a disposizione per eventuali colloqui o chiarimenti.\n\nCordiali saluti,\n\nPriscilla Montagnani\n",
+  "disclosure": [
+    {
+      "surrogate": "via delle Rose 95",
+      "type": "INDIRIZZO",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "Trafilerie Bonaccorsi S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora la persona"
+    },
+    {
+      "surrogate": "Priscilla Montagnani",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "XV-19827",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale del mittente"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_2]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "1.275,00 €",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "retribuzione mensile indicata"
+    },
+    {
+      "surrogate": "GRRBVP75H20X547J",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "381 755 8834",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "rebecca.camporesi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_3]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "IT55L0000079747132634964948",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui la richiesta deve essere presa in considerazione"
+    }
+  ]
+}

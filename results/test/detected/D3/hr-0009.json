@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0009",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 64,
+      "end": 85,
+      "text": "Ufficio del Personale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede o struttura interna dell'azienda"
+    },
+    {
+      "start": 89,
+      "end": 116,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora il mittente"
+    },
+    {
+      "start": 148,
+      "end": 166,
+      "text": "matricola QA-72135",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo del dipendente"
+    },
+    {
+      "start": 251,
+      "end": 272,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "descrizione del ruolo del mittente"
+    },
+    {
+      "start": 285,
+      "end": 291,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza del mittente"
+    },
+    {
+      "start": 333,
+      "end": 367,
+      "text": "intervento chirurgico al ginocchio",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "descrizione di un intervento medico"
+    },
+    {
+      "start": 395,
+      "end": 409,
+      "text": "riabilitazione",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "descrizione di un percorso terapeutico"
+    },
+    {
+      "start": 489,
+      "end": 503,
+      "text": "riabilitazione",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "descrizione di un percorso terapeutico"
+    },
+    {
+      "start": 994,
+      "end": 1010,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio prevista per il lavoro da remoto"
+    }
+  ],
+  "seconds": 0.0015
+}

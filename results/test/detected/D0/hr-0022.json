@@ -1,0 +1,52 @@
+{
+  "text_id": "hr-0022",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 730,
+      "end": 740,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 899,
+      "end": 915,
+      "text": "PLTSVN21H14X456Y",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 952,
+      "end": 964,
+      "text": "358 044 0921",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 987,
+      "end": 1019,
+      "text": "federica.quattrocchi@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1108,
+      "end": 1135,
+      "text": "IT06R0000052125840795083093",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0002
+}

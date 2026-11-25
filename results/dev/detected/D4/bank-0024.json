@@ -1,0 +1,142 @@
+{
+  "text_id": "bank-0024",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 70,
+      "end": 88,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 98,
+      "end": 113,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 126,
+      "end": 144,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 176,
+      "end": 193,
+      "text": "filiale di Novara",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca"
+    },
+    {
+      "start": 332,
+      "end": 339,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 350,
+      "end": 379,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 424,
+      "end": 452,
+      "text": "matricola aziendale TE-06202",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    },
+    {
+      "start": 590,
+      "end": 603,
+      "text": "15 marzo 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza del finanziamento"
+    },
+    {
+      "start": 723,
+      "end": 734,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo residuo del capitale"
+    },
+    {
+      "start": 931,
+      "end": 947,
+      "text": "NFBRVS81E49X157N",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 988,
+      "end": 1015,
+      "text": "IT10R0000095033716670090270",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1051,
+      "end": 1063,
+      "text": "340 996 3902",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1092,
+      "end": 1122,
+      "text": "umberto.giacomelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1197,
+      "end": 1213,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza richiesta di risposta"
+    },
+    {
+      "start": 1376,
+      "end": 1394,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1603
+}

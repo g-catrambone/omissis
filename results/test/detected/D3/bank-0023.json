@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0023",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 77,
+      "end": 92,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 155,
+      "end": 162,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria"
+    },
+    {
+      "start": 166,
+      "end": 172,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della filiale"
+    },
+    {
+      "start": 342,
+      "end": 355,
+      "text": "centralinista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 366,
+      "end": 395,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda"
+    },
+    {
+      "start": 425,
+      "end": 432,
+      "text": "65 anni",
+      "type": "ETA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "età del mittente"
+    },
+    {
+      "start": 769,
+      "end": 783,
+      "text": "importo esatto",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro richiesta"
+    },
+    {
+      "start": 1074,
+      "end": 1090,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    }
+  ],
+  "seconds": 0.0014
+}

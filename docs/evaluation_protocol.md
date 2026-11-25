@@ -100,11 +100,14 @@ result is reported as it is.
   quasi-identifier "should" be masked: that is `mask_quasi`. A span is the
   shortest stretch that carries the information (the name without the title,
   the amount with its currency, the date without the weekday).
-- **Review.** Every text is reviewed by one human; since 18 Nov one member
-  reviews all 66 (`docs/decisions.md`). Checklist: reads like real
+- **Review.** Since 21 Nov every text is reviewed by Giuseppe's AI agent (a
+  subagent on Claude Opus 5.5 that reads the tagged text), and Giuseppe approves
+  the review on the agent's written report (`docs/decisions.md`); before, one
+  member was to review all 66. Checklist: reads like real
   correspondence; nothing real; every span tagged with the right type and
-  boundaries; gold fields correct; text requirements of section 2 met. The
-  reviewer's initials go in the file's `reviewed_by` field. A text without
+  boundaries; gold fields correct; text requirements of section 2 met.
+  `reviewed_by` carries Giuseppe's initials: they record his approval of the
+  report, not a reading of each text by him. A text without
   `reviewed_by` cannot enter the split.
 - **How the review is done.** The reviewer edits the files in `data/pool/`;
   `data/pool/REVIEWERS.md` lists the texts. The review is done on tagged text,
@@ -116,6 +119,10 @@ result is reported as it is.
   with no tags visible: `python -m omissis.eval.review export` writes
   `data/annotation/<text_id>.txt` (plain text) and the annotator saves
   `data/annotation/<text_id>.<initials>.txt` with `[[TYPE|text]]` tags added.
+  Since 21 Nov the annotator is a subagent of Giuseppe's AI agent (Claude Opus
+  5.5) that sees the raw text and the annotation guide only and shares no
+  context with the reviewer; its files carry the label `AI` in place of the
+  initials, and Giuseppe approves them on the agent's report.
   This is done, and `python -m omissis.eval.review agreement` is run, before
   any of the 13 is reviewed: the command refuses a text that has
   `reviewed_by`. Report span-level F1 between the annotator and the tags of
@@ -123,9 +130,12 @@ result is reported as it is.
   class over spans paired by character overlap whatever their class (the
   overlap match of section 6 requires the same class and would make kappa 1 by
   construction). Agreement is computed on the pool, before the split.
-- **Limit to declare.** The agreement is between one human and the generator,
-  not between two humans, and the gold is the work of one reviewer: nothing
-  measures how far a second person would annotate the same way.
+- **Limit to declare.** No human annotated or reviewed the texts one by one. The
+  agreement is between two models, an AI annotator and the generator: it does
+  not measure how far a person would agree with either. The gold is reviewed by
+  an LLM, and D3 and D4 are LLM detectors too (another model): the detection
+  numbers may favour them. Nothing measures how far a person would annotate the
+  same way.
 - **Adjudication.** The review settles the disagreements: the reviewed tags
   are the gold. A disagreement that shows an unclear rule gets one line in
   `docs/annotation_guide.md`.
@@ -143,7 +153,10 @@ result is reported as it is.
 - A run of `make eval-test` counts once it has written
   `results/test/metrics/contrasts.json`, the last file it writes. A launch
   that stops before that (a network error, a spending cap) is repeated and
-  resumes from the cache: the calls already made are not made again. Every
+  resumes from the cache: the calls already made are not made again. With
+  the judge rejected, the command is also launched again before the sheets
+  of section 9 are filled, as section 7 says for the attacker's replies cut
+  at the token limit: the run still counts once. Every
   launch adds a line to `data/test_access.log`. The command is launched on the
   reference machine, and it stops on a missing model, library or cache entry
   instead of scoring a text as if nothing had been found. A scoring defect
@@ -210,7 +223,31 @@ its category). Output: JSON with the three
 most likely candidates in order. Metrics: top-1 and top-3 accuracy, for
 N = 10 and N = 25. The prompt asks for a ranking in every case; unparseable
 output counts as a miss and is counted separately for each configuration.
+A reply that the model cuts at the token limit is unparseable and is not
+written to the cache: it is asked again at the next launch, so the count, and
+with it the top-1 of a configuration, can differ between two launches by
+those texts. A cut reply is always a miss, so it makes a configuration look
+more private than it is. For this reason the command is launched again, at
+most three more times, for as long as a reply of the attacker (linkage or
+attributes) is not parsed; a new launch makes only the calls that are not in
+the cache, and the results of a split are those of its last launch. On the
+test the three launches come before the one that completes the run, which
+asks once more the replies still cut. The rule reads the number of replies
+not parsed (`python -m omissis.eval.report --split <split> --not-parsed`)
+and no outcome; a complete reply that is not valid JSON is in the cache and
+is never asked again, so the count may stay above zero. The pilot is not
+launched again: it stays the record of the go of 21 Nov. The scorecard shows
+the count that is left.
 **Privacy score** of a configuration = 1 − top-1 accuracy at N = 25.
+**Limit to declare, and its control.** Seven bank texts are about a loan or a
+mortgage that the profile of their author does not hold (`docs/decisions.md`,
+21 Nov): the plan gives a scenario to an author without reading the products
+of the profile. The candidate list shows the products, so on these texts it
+points away from the author under every configuration, and the privacy score
+of a masked configuration is too high by what they add. The monthly
+instalment of a profile is never the one a text states. The linkage rows are
+computed a second time without the seven texts: a control, reported beside
+the rows on all texts, with no test and no contrast.
 
 **Attribute inference.** Input: masked text only. Output: JSON with one value
 per attribute, chosen from a closed list given in the prompt: the attacker
@@ -275,20 +312,25 @@ configuration = mean over texts. Always reported with its two components.
   leftover placeholders or broken tokens). Output: JSON with three integers
   and a one-sentence justification. An unparseable reply scores 1 on each
   criterion and is counted for each configuration.
-- **Validation.** One member rates 40 dev items blind: the 20 dev
+- **Validation.** Since 21 Nov a subagent of Giuseppe's AI agent (Claude Opus
+  5.5) rates 40 dev items blind, and Giuseppe approves its sheet before the
+  judge is compared with it; before, one member was to rate them. The items:
+  the 20 dev
   texts masked from gold spans (`mask_quasi` true) with R1 and with R2
   (`REF-oracle`, and `REF-oracle` with `strategy` overridden to `R2`: this
   second configuration has no name, is not in `configs/eval.yaml` and is not
-  reported), order shuffled, strategy hidden. No detector is needed. The
+  reported: the runner never makes its replies, so `judge sheets --backend
+  cloud` makes them, 20 calls to the `cloud` model, when the sheets are
+  written), order shuffled, strategy hidden. No detector is needed. The
   rater sees exactly what the judge sees and fills
-  `results/dev/judge_validation/sheet_<initials>.csv` without opening
+  `results/dev/judge_validation/sheet_AI.csv` without opening
   `key.json` or the scores of the judge. The outcome (accepted or rejected,
   with the numbers) goes in `docs/decisions.md`.
 - **Limit to declare.** The judge is validated on replies produced from
   gold-span masking, not on replies from the detector configurations, and
-  against one rater (decided on 18 Nov): the agreement between humans is not
-  measured.
-  Human consensus = the scores of the rater; with more than one sheet, the
+  against the ratings of a model, not of a person (decided on 21 Nov): no
+  human rated the replies.
+  Consensus = the scores of the rater; with more than one sheet, the
   mean of the raters per criterion. The judge is
   accepted if quadratic-weighted kappa between judge and rounded consensus is
   at least 0.6, **or** at least 85% of judge scores are within one point of
@@ -298,8 +340,9 @@ configuration = mean over texts. Always reported with its two components.
   sheets are compared and is validated once. With consensus concentrated on 4
   and 5 the validation shows the absence of gross disagreement, not fine
   discrimination: declared.
-- **Fallback.** If rejected, the same rater scores T1 on the 46 test
-  replies of `D4+R1`, blind, with the `REF-none` reply as reference, exactly
+- **Fallback.** If rejected, Giuseppe scores T1 on the 46 test
+  replies of `D4+R1` (the agent may not read the test texts: `CLAUDE.md`,
+  rule 2), blind, with the `REF-none` reply as reference, exactly
   as the judge would (46 items, consensus as above). Contrast 2
   uses these human scores for `D4+R1`. The other configurations report T3
   alone; the chart uses T3 on the y axis for every configuration; the judge's
@@ -325,7 +368,13 @@ Computed on the T1 replies of each configuration.
 - `wrong_mapping` is assigned by comparing the restored reply with gold:
   a gold value appears where a different entity's value belongs. Counted on
   dev by manual inspection of up to 20 replies per strategy, reported as a
-  count with examples, not as a rate.
+  count with examples, not as a rate. The sentence is applied as it is
+  written, and each occurrence is reported with its cause: the model gave the
+  value to the wrong party, or the substitute held a wrong value. The
+  inspection is made by Giuseppe's AI agent (two subagents on Claude Opus 5.5
+  that share no context, one per strategy; every finding carries a quotation
+  that is checked in the text), and Giuseppe approves the counts on the
+  agent's written report (`docs/decisions.md`, 22 Nov).
 - Values the model derives from masked values (computed amounts, shifted
   dates) cannot be restored: collected as examples for the error taxonomy.
 
@@ -348,7 +397,14 @@ calls and estimated spend per configuration.
   share ≥ 0).
 - Holm correction across the three primary contrasts; alpha 0.05. A primary
   contrast is stated as a finding only when its Holm-adjusted p is below 0.05;
-  the intervals describe its size.
+  the intervals describe its size. Where a contrast cannot be computed the
+  correction runs over the ones that exist: dev has no T1 since the judge was
+  rejected, so its two contrasts are corrected for two (contrast 1 on dev: Holm
+  p 0.031; for three it would be 0.047). The test has all three.
+- A bootstrap p of 0 means below 1 in 10,000, the resolution of the resamples;
+  the scorecard prints it as 0.000. The scorecard writes "(no variation)" for
+  the interval of an estimate with no variation, and the README adds the number
+  of texts.
 - With 46 texts intervals are wide. A difference that does not pass is stated
   as "not distinguishable with this sample". Negative results get the same
   space. An interval of zero width (0 or 46 of 46) is reported as "no
@@ -361,9 +417,12 @@ calls and estimated spend per configuration.
 - **Chart**: x = privacy score, y = utility score, one point per
   configuration of section 5 with 95% intervals on both axes, chance marked.
 - **Scorecard**: one row per configuration; columns: linkage top-1 and top-3
-  at N = 10 and 25, attribute accuracy, T3, T1, utility, full-restoration
-  rate. A second table has one row per detector D0 to D4: recall by class,
-  leak rate, latency.
+  at N = 10 and 25, the linkage replies not parsed at each N, attribute
+  accuracy, T3, T1, utility, full-restoration rate. The utility cell is empty
+  where T1 is not reported: T3 alone is not the utility score of section 8.
+  Below it, the control of section 7: linkage top-1 at N = 25 without
+  the seven loan texts, beside the value on all texts. A second table has
+  one row per detector D0 to D4: recall by class, leak rate, latency.
 - **Error taxonomy**: categorised dev examples of missed identifiers, failed
   restorations, derived values and successful attacks.
 - Every number on a slide comes from a file in `results/<split>/metrics/`

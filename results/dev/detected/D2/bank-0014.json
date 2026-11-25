@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0014",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 118,
+      "end": 137,
+      "text": "Massimo Evangelisti",
+      "type": "PERSONA",
+      "confidence": 0.998568668961525,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 180,
+      "end": 187,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9970687925815582,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 782,
+      "end": 801,
+      "text": "massimo.evangelisti",
+      "type": "EMAIL",
+      "confidence": 0.7784636974334717,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1145,
+      "end": 1164,
+      "text": "Massimo Evangelisti",
+      "type": "PERSONA",
+      "confidence": 0.9516164660453796,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.147
+}

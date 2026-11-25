@@ -1,0 +1,36 @@
+{
+  "text_id": "hr-0015",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta documentazione per rimborso spese mediche - Roberta Uccellini\n\nGentile Ufficio del Personale,\n\nmi chiamo [PERSONA_1]a [PERSONA_2] e sono dipendente come contabile presso la Cooperativa Edile Pietrafitta. Vi scrivo per richiedere la documentazione necessaria per procedere con il rimborso delle spese mediche sostenute di recente.\n\nCome sapete, seguo un percorso di cura per ipertensione arteriosa e ho effettuato una visita specialistica presso l'ospedale di [CITTA_1] il 12 marzo 2027. Ho sostenuto un costo totale di € 150,00 per la prestazione medica e gli esami del sangue correlati.\n\nPer poter presentare la domanda di rimborso al mio istituto bancario, la Banca Altopiano, filiale di [CITTA_1], ho bisogno che mi vengano inviati la ricevuta fiscale dettagliata e il certificato medico attestante la diagnosi e le cure effettuate. Vi prego di trasmettermi questi documenti in formato digitale all'indirizzo [EMAIL_1]@example.com oppure di indicarmi dove posso ritirarli in sede.\n\nPer facilitare la ricerca dei miei fascicoli, vi comunico la mia matricola aziendale NT-86613 e il mio codice fiscale GTTPBB45P16X906A. Resto a disposizione per qualsiasi chiarimento al numero 319 776 5806.\n\nVi ringrazio anticipatamente per la collaborazione e per la tempestività nella gestione della pratica.\n\nCordiali saluti,\n\nRoberta [PERSONA_2]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

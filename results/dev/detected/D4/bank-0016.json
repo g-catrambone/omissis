@@ -1,0 +1,151 @@
+{
+  "text_id": "bank-0016",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 49,
+      "end": 67,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 77,
+      "end": 105,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 118,
+      "end": 136,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 165,
+      "end": 172,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca"
+    },
+    {
+      "start": 176,
+      "end": 183,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 386,
+      "end": 394,
+      "text": "€ 850,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo mensile del mutuo"
+    },
+    {
+      "start": 585,
+      "end": 612,
+      "text": "IT83X0000066473362061629314",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 701,
+      "end": 717,
+      "text": "NDLMTZ55P62X312Q",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 743,
+      "end": 751,
+      "text": "TE-24747",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale dell'autore"
+    },
+    {
+      "start": 797,
+      "end": 823,
+      "text": "Trasporti Bellariva S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora l'autore"
+    },
+    {
+      "start": 842,
+      "end": 851,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione dell'autore"
+    },
+    {
+      "start": 956,
+      "end": 972,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza richiesta di aggiornamento"
+    },
+    {
+      "start": 1013,
+      "end": 1029,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data prevista di addebito"
+    },
+    {
+      "start": 1133,
+      "end": 1145,
+      "text": "308 057 6591",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1169,
+      "end": 1199,
+      "text": "daniela.marchesini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1220,
+      "end": 1238,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.8822244256734848,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1597
+}

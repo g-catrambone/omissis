@@ -49,6 +49,12 @@ def _url() -> str:
     return url
 
 
+def _opener() -> urllib.request.OpenerDirector:
+    """An opener that never uses a proxy: `urlopen` would honour `http_proxy`, and the
+    text that this provider sends, not pseudonymised yet, would leave this machine."""
+    return urllib.request.build_opener(urllib.request.ProxyHandler({}))
+
+
 def local_provider(model: ModelSpec, request: LLMRequest) -> str:
     """Send `request` to the model `model.id` of the local server and return its reply."""
     from omissis.backends import TruncatedReplyError  # defined before this module is imported
@@ -67,7 +73,7 @@ def local_provider(model: ModelSpec, request: LLMRequest) -> str:
     )
     # The errors below carry a status or a type, never the content: it could quote the text.
     try:
-        with urllib.request.urlopen(http_request, timeout=TIMEOUT_SECONDS) as response:
+        with _opener().open(http_request, timeout=TIMEOUT_SECONDS) as response:
             reply = json.loads(response.read().decode("utf-8"))
     except urllib.error.HTTPError as exc:
         if exc.code == 404:

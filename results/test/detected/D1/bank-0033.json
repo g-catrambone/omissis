@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0033",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 61,
+      "end": 86,
+      "text": "Gentile Credito Tirrenico",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 99,
+      "end": 115,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 160,
+      "end": 187,
+      "text": "IT80W0000088426714490849799",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 663,
+      "end": 679,
+      "text": "Cantieri Dorsano",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 689,
+      "end": 696,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1014,
+      "end": 1021,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1127,
+      "end": 1155,
+      "text": "valeria.donadoni@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1305,
+      "end": 1321,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0125
+}

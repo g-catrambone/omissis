@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0021",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "INDIRIZZO",
+      "confidence": 0.4858688414096832,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 48,
+      "end": 64,
+      "text": "Valeria Donadoni",
+      "type": "INDIRIZZO",
+      "confidence": 0.5625880882143974,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 135,
+      "end": 151,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA",
+      "confidence": 0.9705740064382553,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 202,
+      "end": 209,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9957821667194366,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 294,
+      "end": 301,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.9643631279468536,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 494,
+      "end": 501,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9987841844558716,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 875,
+      "end": 882,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.9965514838695526,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1143,
+      "end": 1159,
+      "text": "valeria.donadoni",
+      "type": "EMAIL",
+      "confidence": 0.7244409918785095,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1241,
+      "end": 1257,
+      "text": "Valeria Donadoni",
+      "type": "PERSONA",
+      "confidence": 0.9754015654325485,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1339
+}

@@ -1,0 +1,151 @@
+{
+  "text_id": "bank-0002",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 49,
+      "end": 66,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 76,
+      "end": 91,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 104,
+      "end": 121,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.9684987783432006,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 150,
+      "end": 157,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di una banca"
+    },
+    {
+      "start": 161,
+      "end": 168,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della filiale"
+    },
+    {
+      "start": 296,
+      "end": 305,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 316,
+      "end": 345,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda cooperativa"
+    },
+    {
+      "start": 419,
+      "end": 436,
+      "text": "emicrania cronica",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi medica menzionata"
+    },
+    {
+      "start": 628,
+      "end": 636,
+      "text": "€ 450,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo della rata di finanziamento"
+    },
+    {
+      "start": 653,
+      "end": 669,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza della rata"
+    },
+    {
+      "start": 865,
+      "end": 881,
+      "text": "DTPBGT37E51X984X",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 884,
+      "end": 912,
+      "text": "matricola aziendale UL-67995",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo del mittente"
+    },
+    {
+      "start": 968,
+      "end": 980,
+      "text": "300 108 4408",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1003,
+      "end": 1032,
+      "text": "teresa.dellavalle@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1136,
+      "end": 1152,
+      "text": "30 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui richiede la modifica"
+    },
+    {
+      "start": 1346,
+      "end": 1363,
+      "text": "Teresa Dellavalle",
+      "type": "PERSONA",
+      "confidence": 0.9430376648902893,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1596
+}

@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0035",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 103,
+      "end": 109,
+      "text": "Michel",
+      "type": "PERSONA",
+      "confidence": 0.526613175868988,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 111,
+      "end": 119,
+      "text": "Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.8549759387969971,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 159,
+      "end": 166,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.9944108128547668,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1398,
+      "end": 1414,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.82680644094944,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1415,
+      "end": 1423,
+      "text": "michela.",
+      "type": "EMAIL",
+      "confidence": 0.6059646680951118,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1423,
+      "end": 1431,
+      "text": "rampazzo",
+      "type": "UTENTE",
+      "confidence": 0.7560823559761047,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1826
+}

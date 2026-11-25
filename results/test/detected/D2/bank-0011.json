@@ -1,0 +1,52 @@
+{
+  "text_id": "bank-0011",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 132,
+      "end": 151,
+      "text": "Vincenzo Gasparotto",
+      "type": "PERSONA",
+      "confidence": 0.8676016330718994,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 219,
+      "end": 226,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.9896314144134521,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1162,
+      "end": 1181,
+      "text": "Vincenzo Gasparotto",
+      "type": "PERSONA",
+      "confidence": 0.9695813417434692,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1264,
+      "end": 1272,
+      "text": "vincenzo",
+      "type": "EMAIL",
+      "confidence": 0.6955607235431671,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1273,
+      "end": 1274,
+      "text": "g",
+      "type": "UTENTE",
+      "confidence": 0.38515880703926086,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.133
+}

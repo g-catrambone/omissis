@@ -1,0 +1,71 @@
+{
+  "text_id": "hr-0012",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta colloquio urgente - Matricola KQ-83243\n\nGentile Ufficio del Personale,\n\nmi chiamo Nicole Pagliarini e lavoro come [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A. a Biella. Vi scrivo per segnalare una situazione di disagio che si protrae da diverse settimane. Da quando ho assunto la responsabilità dei cantieri in centro, subisco continue pressioni e commenti denigratori da parte di un collega, che minano la mia serenità e la mia capacità di lavorare in sicurezza.\n\nHo bisogno di un confronto formale per esporre i fatti e cercare una soluzione. Vi chiedo cortesemente di fissare un incontro o un colloquio privato con me entro il 27 dicembre 2026. La mia matricola aziendale è KQ-83243 e potete contattarmi al numero 306 129 2713 o via email all'indirizzo flavia.fabbretti@example.com.\n\nPer completezza, vi informo che il mio codice fiscale è NMSFMR99P60X052C. Non chiedo altre azioni in questa fase, ma solo la possibilità di parlare faccia a faccia. Resto in attesa di un vostro riscontro per concordare data e ora.\n\nCordiali saluti,\n\nNicole Pagliarini\n",
+  "disclosure": [
+    {
+      "surrogate": "KQ-83243",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "Nicole Pagliarini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere della persona"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione in cui lavora la persona"
+    },
+    {
+      "surrogate": "Biella",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo di lavoro"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di incontro richiesta"
+    },
+    {
+      "surrogate": "306 129 2713",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "flavia.fabbretti@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "NMSFMR99P60X052C",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

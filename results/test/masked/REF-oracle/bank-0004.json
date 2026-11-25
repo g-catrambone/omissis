@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0004",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta rimodulazione mutuo - [PERSONA_1_F]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN [IBAN_1] presso la filiale di [CITTA_1]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mutuo ipotecario relativo alla mia prima casa, contratto in essere da diversi anni.\n\nAttualmente lavoro come [RUOLO_1] presso la società [AZIENDA_2], dove sono impiegata con la matricola aziendale [UTENTE_1]. A causa di una temporanea riduzione del mio reddito disponibile, dovuta a circostanze lavorative non dipendenti dalla mia volontà, mi trovo in difficoltà nel sostenere l'attuale rata mensile di [IMPORTO_1].\n\nVi chiedo pertanto di valutare la possibilità di allungare la durata del mutuo o di applicare un tasso variabile più favorevole, al fine di ridurre l'onere mensile. Il mio codice fiscale è [CF_1] e sono raggiungibile al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nSpero che possiate prendere in considerazione la mia richiesta entro il [DATA_1], così da poter pianificare il mio budget familiare per il prossimo trimestre. Resto a disposizione per fornire eventuali documentazione aggiuntiva necessaria per la valutazione della pratica.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

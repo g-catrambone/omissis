@@ -1,0 +1,124 @@
+{
+  "text_id": "hr-0010",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 52,
+      "end": 69,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 104,
+      "end": 127,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione"
+    },
+    {
+      "start": 140,
+      "end": 157,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.9859907746315002,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 168,
+      "end": 189,
+      "text": "responsabile acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 208,
+      "end": 215,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della sede"
+    },
+    {
+      "start": 332,
+      "end": 348,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio remoto"
+    },
+    {
+      "start": 777,
+      "end": 785,
+      "text": "ET-65468",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 852,
+      "end": 868,
+      "text": "SRBLMT93H55X288J",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1064,
+      "end": 1080,
+      "text": "20 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di colloquio"
+    },
+    {
+      "start": 1221,
+      "end": 1238,
+      "text": "Sergio Bertolucci",
+      "type": "PERSONA",
+      "confidence": 0.852219395339489,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1261,
+      "end": 1284,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione"
+    },
+    {
+      "start": 1290,
+      "end": 1302,
+      "text": "329 892 3519",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1310,
+      "end": 1339,
+      "text": "sergio.bertolucci@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.159
+}

@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0024",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 53,
+      "end": 66,
+      "text": "Noemi Boscolo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 147,
+      "end": 160,
+      "text": "Noemi Boscolo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 196,
+      "end": 203,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 910,
+      "end": 926,
+      "text": "GLPBMV68M53X619A",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 962,
+      "end": 974,
+      "text": "316 881 0196",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 991,
+      "end": 1016,
+      "text": "noemi.boscolo@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1063,
+      "end": 1077,
+      "text": "Banca Popolare",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1081,
+      "end": 1091,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1104,
+      "end": 1111,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1350,
+      "end": 1363,
+      "text": "Noemi Boscolo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1374,
+      "end": 1400,
+      "text": "Farmacie Riunite Altavilla",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0123
+}

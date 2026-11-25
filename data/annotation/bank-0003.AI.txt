@@ -1,0 +1,16 @@
+Oggetto: Richiesta rimodulazione finanziamento - [[PERSONA|Pietro Franceschini]]
+
+Gentile [[AZIENDA|Banca Popolare di Rocciaviva]],
+
+mi chiamo [[PERSONA|Pietro Franceschini]] e sono cliente della Vostra filiale di [[CITTA|Cremona]]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mio finanziamento in corso.
+
+Attualmente lavoro come [[RUOLO|autista]] presso [[AZIENDA|Cantieri Dorsano S.p.A.]], ma da alcune settimane sto affrontando una fase acuta di [[SALUTE|artrite reumatoide]] che mi ha costretto a ridurre drasticamente le mie ore lavorative. Questa situazione ha inciso negativamente sul mio reddito mensile, rendendo difficile sostenere l'attuale rata di [[IMPORTO|€ 450,00]] prevista per il [[DATA|15 dicembre 2026]].
+
+Non chiedo la sospensione del debito, ma una rinegoziazione delle condizioni per allungare la durata del prestito e abbassare l'importo mensile. Sarebbe fondamentale per me poter contare su una rata più sostenibile, ad esempio di [[IMPORTO|€ 300,00]], a partire dal prossimo mese.
+
+Per facilitare le Vostre verifiche, Vi fornisco i miei dati identificativi: codice fiscale [[CF|PTNCTL45T52X669Q]], IBAN [[IBAN|IT75I0000051990227457633088]] e matricola aziendale [[UTENTE|DT-68827]]. Sono reperibile al numero [[TELEFONO|321 343 3899]] o tramite l'indirizzo [[EMAIL|pietro.franceschini@example.com]].
+
+Resto in attesa di un Vostro cortese riscontro per concordare i dettagli della nuova proposta.
+
+Cordiali saluti,
+[[PERSONA|Pietro Franceschini]]

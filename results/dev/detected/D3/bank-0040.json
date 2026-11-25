@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0040",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 59,
+      "end": 84,
+      "text": "Cassa Rurale di Montevago",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "organizzazione bancaria"
+    },
+    {
+      "start": 257,
+      "end": 270,
+      "text": "12 marzo 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di morte del padre"
+    },
+    {
+      "start": 626,
+      "end": 636,
+      "text": "€ 4.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma da sbloccare"
+    },
+    {
+      "start": 879,
+      "end": 888,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 896,
+      "end": 922,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "azienda dove lavora il mittente"
+    },
+    {
+      "start": 925,
+      "end": 932,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "luogo di residenza del mittente"
+    }
+  ],
+  "seconds": 0.0011
+}

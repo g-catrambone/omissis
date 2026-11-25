@@ -1,0 +1,34 @@
+{
+  "text_id": "hr-0012",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 746,
+      "end": 758,
+      "text": "349 318 3143",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 785,
+      "end": 815,
+      "text": "sabrina.lorenzetti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 874,
+      "end": 890,
+      "text": "RNMPVP96S08X914J",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0001
+}

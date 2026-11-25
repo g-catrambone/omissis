@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0017",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio - Greta Montagnani\n\nGentile Banca Monteforte di Vercelli,\n\nmi chiamo Greta Montagnani e sono cliente della vostra filiale di Nuoro. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per l'accredito del mio stipendio.\n\nAttualmente lavoro come [RUOLO_1] presso la Brenzoni Trasporti S.p.A. S.r.l. e, a partire dal 27 dicembre 2026, il mio datore di lavoro effettuerà i bonifici su un nuovo conto corrente. Vi chiedo pertanto di aggiornare i vostri archivi sostituendo il vecchio IBAN con il seguente: IT15E0000045085079455006456.\n\nQuesta modifica è fondamentale per garantire la corretta ricezione delle mie retribuzioni mensili, che ammontano a circa 1.275,00 €. Vi prego di confermare la ricezione di questa richiesta e l'avvenuta registrazione del nuovo codice entro il 11 dicembre 2026, in modo da evitare ritardi o errori nell'accredito del primo mese con le nuove coordinate.\n\nPer vostra comodità, riporto i miei dati anagrafici e di contatto: codice fiscale TDZMPZ61L10X503P, telefono 353 016 7917 e email elettra.bellandi@example.com. La mia matricola aziendale interna è MG-99648, che potrebbe essere utile per le verifiche interne.\n\nResto a disposizione per eventuali chiarimenti o per fornire documentazione aggiuntiva se necessaria. Grazie per la vostra collaborazione e per la rapidità con cui gestite questa pratica.\n\nCordiali saluti,\n\nGreta Montagnani\n",
+  "disclosure": [
+    {
+      "surrogate": "Greta Montagnani",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banca Monteforte",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "Vercelli",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della banca"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città della filiale"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Brenzoni Trasporti S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio del nuovo conto"
+    },
+    {
+      "surrogate": "IT15E0000045085079455006456",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "1.275,00 €",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo mensile dello stipendio"
+    },
+    {
+      "surrogate": "11 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "scadenza per la registrazione del nuovo IBAN"
+    },
+    {
+      "surrogate": "TDZMPZ61L10X503P",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "353 016 7917",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "elettra.bellandi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "MG-99648",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale interna"
+    }
+  ]
+}

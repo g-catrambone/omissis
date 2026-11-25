@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0034",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 426,
+      "end": 433,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9299386441707611,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1126,
+      "end": 1144,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.7161292831103007,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1158,
+      "end": 1161,
+      "text": "sab",
+      "type": "EMAIL",
+      "confidence": 0.38270747661590576,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1161,
+      "end": 1176,
+      "text": "rina.lorenzetti",
+      "type": "UTENTE",
+      "confidence": 0.7251120626926422,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1496
+}

@@ -1,0 +1,142 @@
+{
+  "text_id": "bank-0023",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 49,
+      "end": 67,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 77,
+      "end": 92,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 105,
+      "end": 123,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.9550535559654236,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 155,
+      "end": 162,
+      "text": "filiale",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria"
+    },
+    {
+      "start": 166,
+      "end": 172,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della filiale"
+    },
+    {
+      "start": 342,
+      "end": 355,
+      "text": "centralinista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "start": 366,
+      "end": 395,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda"
+    },
+    {
+      "start": 425,
+      "end": 432,
+      "text": "65 anni",
+      "type": "ETA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "età del mittente"
+    },
+    {
+      "start": 554,
+      "end": 570,
+      "text": "PGBVSC45B42X564O",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 620,
+      "end": 647,
+      "text": "IT42B0000028200268376451697",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 707,
+      "end": 737,
+      "text": "raffaele.ferrarini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 769,
+      "end": 783,
+      "text": "importo esatto",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro richiesta"
+    },
+    {
+      "start": 1074,
+      "end": 1090,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 1221,
+      "end": 1233,
+      "text": "357 736 0613",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1254,
+      "end": 1272,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.9941264033317566,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1493
+}

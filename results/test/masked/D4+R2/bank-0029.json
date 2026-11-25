@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0029",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta chiusura conto corrente e deposito titoli - Baldassarre Zambelli\n\nGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Baldassarre Zambelli e sono titolare del conto corrente con IBAN IT65C0000012452006266978742 presso la [STRUTTURA_1].\n\nCon la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale, sia per il conto corrente che per il deposito titoli associato. Ho deciso di recedere dal servizio per motivi personali e professionali, non avendo più necessità di gestire la mia liquidità presso la vostra istituzione.\n\nVi prego di procedere con le operazioni di chiusura entro il 27 dicembre 2026. Vi comunico che sul conto è attualmente presente un saldo di € 5.199,50, che desidero venga trasferito sul mio nuovo conto presso un'altra banca, oppure restituito tramite bonifico all'IBAN che vi comunicherò separatamente.\n\nPer facilitare le procedure amministrative, allego copia del mio documento d'identità e vi fornisco il mio [BIOMETRICO_1]. Sono un [RUOLO_1] presso Trafilerie Bonaccorsi S.p.A. e risiedo stabilmente a Nuoro.\n\nResto a disposizione per qualsiasi chiarimento al numero 376 970 8567 o all'indirizzo nevio.brunelleschi@example.com.\n\nCordiali saluti,\n\nBaldassarre Zambelli\n",
+  "disclosure": [
+    {
+      "surrogate": "Baldassarre Zambelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "surrogate": "IT65C0000012452006266978742",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di chiusura richiesta"
+    },
+    {
+      "surrogate": "€ 5.199,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro sul conto"
+    },
+    {
+      "surrogate": "[BIOMETRICO_1]",
+      "type": "BIOMETRICO",
+      "class": "special",
+      "source": "D3",
+      "reason": "identificativo personale"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Trafilerie Bonaccorsi S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "376 970 8567",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "nevio.brunelleschi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

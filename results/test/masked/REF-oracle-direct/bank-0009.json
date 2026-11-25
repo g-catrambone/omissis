@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0009",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Contestazione addebiti non autorizzati su carta di debito\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_M] e sono titolare di una carta di debito collegata al conto corrente con IBAN [IBAN_1]. Vi scrivo per contestare formalmente due addebiti che non riconosco e che sono apparsi sul mio estratto conto.\n\nIl primo addebito, pari a € 150,00, è stato effettuato il 12 novembre 2026 presso un esercizio commerciale a Trapani. Il secondo, di € 85,50, risale al 15 novembre 2026 e risulta avvenuto online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come custode presso Cantieri Dorsano S.p.A. e la mia matricola aziendale è [UTENTE_1]. Vi chiedo pertanto di procedere immediatamente allo storno di entrambe le somme, per un totale di € 235,50, e di bloccare la carta per evitare ulteriori movimenti sospetti.\n\nResto in attesa di un vostro riscontro urgente. Per qualsiasi necessità potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

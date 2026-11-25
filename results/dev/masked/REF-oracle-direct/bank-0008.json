@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0008",
+  "config_name": "REF-oracle-direct",
+  "run_id": "d1aa840154d6",
+  "masked_text": "Oggetto: Contestazione addebiti non riconosciuti - [PERSONA_1_F]\n\nGentile Banca Altopiano,\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN [IBAN_1]. Vi scrivo per segnalare la presenza di due addebiti sulla mia carta di debito che non riconosco in alcun modo.\n\nIl primo movimento, pari a € 145,00, è stato registrato il 12 novembre 2026 presso un esercente a Trapani. Il secondo, di € 320,00, risale al 15 novembre 2026 e risulta effettuato online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come elettricista presso Tessitura Valgrande S.r.l. e risiedo stabilmente a Trapani. Ho già bloccato la carta tramite l'app, ma necessito di una verifica formale da parte vostra.\n\nVi chiedo cortesemente di aprire una pratica di indagine per verificare l'origine di questi movimenti. Per qualsiasi necessità, potete contattarmi al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nResto in attesa di un vostro riscontro.\n\nCordiali saluti,\n[PERSONA_1_F]\nMatricola: [UTENTE_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

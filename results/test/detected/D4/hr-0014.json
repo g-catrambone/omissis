@@ -1,0 +1,124 @@
+{
+  "text_id": "hr-0014",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 39,
+      "end": 57,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 101,
+      "end": 119,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 129,
+      "end": 136,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere di chi scrive"
+    },
+    {
+      "start": 140,
+      "end": 147,
+      "text": "58 anni",
+      "type": "ETA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "età del mittente"
+    },
+    {
+      "start": 160,
+      "end": 166,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di residenza"
+    },
+    {
+      "start": 185,
+      "end": 214,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "start": 256,
+      "end": 264,
+      "text": "TE-06202",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 465,
+      "end": 481,
+      "text": "12 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio del nuovo cantiere"
+    },
+    {
+      "start": 1198,
+      "end": 1210,
+      "text": "340 996 3902",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1227,
+      "end": 1257,
+      "text": "umberto.giacomelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1379,
+      "end": 1397,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.9194584846496582,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1406,
+      "end": 1435,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "datore di lavoro"
+    },
+    {
+      "start": 1436,
+      "end": 1442,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di residenza"
+    }
+  ],
+  "seconds": 0.1511
+}

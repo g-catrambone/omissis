@@ -1,0 +1,106 @@
+{
+  "text_id": "bank-0005",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta sospensione rate finanziamento - Baldassarre Zambelli\n\nGentile Cassa di Risparmio di Montalfiore,\n\nmi chiamo Baldassarre Zambelli e sono titolare del conto corrente con IBAN IT65C0000012452006266978742 presso la [STRUTTURA_1] di Nuoro. Vi scrivo per richiedere la sospensione temporanea dei pagamenti relativi al finanziamento in essere.\n\nAttualmente lavoro come [RUOLO_1] presso Trafilerie Bonaccorsi S.p.A., dove ho la matricola aziendale VV-51707. A causa di una temporanea difficoltà economica legata alla gestione aziendale, non sono in grado di sostenere l'onere della rata mensile di € 5.199,50 prevista per il prossimo mese.\n\nChiedo pertanto di sospendere le rate a partire dal 10 novembre 2026 fino al 20 gennaio 2027. Non chiedo la rimodulazione del piano, ma esclusivamente la pausa nei pagamenti per il periodo indicato. Il mio codice fiscale è RCBBFL54B25X786A e sono raggiungibile al telefono 376 970 8567 o via email all'indirizzo nevio.brunelleschi@example.com.\n\nResto in attesa di un vostro cortese riscontro per confermare l'accettazione della richiesta e le eventuali condizioni applicabili.\n\nCordiali saluti,\n\nBaldassarre Zambelli\n",
+  "disclosure": [
+    {
+      "surrogate": "Baldassarre Zambelli",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "surrogate": "IT65C0000012452006266978742",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "località della [STRUTTURA_1]"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "surrogate": "Trafilerie Bonaccorsi S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di un'azienda"
+    },
+    {
+      "surrogate": "VV-51707",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "€ 5.199,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "importo della rata mensile"
+    },
+    {
+      "surrogate": "10 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di inizio sospensione"
+    },
+    {
+      "surrogate": "20 gennaio 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di fine sospensione"
+    },
+    {
+      "surrogate": "RCBBFL54B25X786A",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "376 970 8567",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "nevio.brunelleschi@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

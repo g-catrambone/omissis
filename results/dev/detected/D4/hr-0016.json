@@ -1,0 +1,142 @@
+{
+  "text_id": "hr-0016",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 44,
+      "end": 61,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 96,
+      "end": 123,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione del datore di lavoro"
+    },
+    {
+      "start": 136,
+      "end": 153,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 165,
+      "end": 173,
+      "text": "QA-72135",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo del dipendente"
+    },
+    {
+      "start": 341,
+      "end": 347,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di riferimento"
+    },
+    {
+      "start": 402,
+      "end": 425,
+      "text": "intervento al ginocchio",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "diagnosi o procedura medica"
+    },
+    {
+      "start": 637,
+      "end": 666,
+      "text": "alberto.cavallari@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 749,
+      "end": 759,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro richiesta"
+    },
+    {
+      "start": 820,
+      "end": 837,
+      "text": "filiale di Novara",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "start": 893,
+      "end": 920,
+      "text": "IT53B0000048484553185927342",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 980,
+      "end": 992,
+      "text": "383 955 2751",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1126,
+      "end": 1141,
+      "text": "15 gennaio 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di scadenza richiesta"
+    },
+    {
+      "start": 1304,
+      "end": 1321,
+      "text": "Alberto Cavallari",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1322,
+      "end": 1343,
+      "text": "Responsabile Acquisti",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere preciso del mittente"
+    },
+    {
+      "start": 1344,
+      "end": 1371,
+      "text": "Caseificio Montelupo S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione del datore di lavoro"
+    }
+  ],
+  "seconds": 0.1596
+}

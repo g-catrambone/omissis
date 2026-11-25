@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0006",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta rimodulazione mutuo - Alessia Iacobelli\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con IBAN IT31A000082978482223406184 presso la filiale di [CITTA_1]. Vi scrivo per richiedere la rimodulazione del piano di ammortamento del mutuo ipotecario per la prima casa, contratto in essere da diversi anni.\n\nAttualmente lavoro come responsabile acquisti presso Caseificio Montelupo S.r.l., dove ho la matricola aziendale YT-67363. Purtroppo, a causa di una recente diagnosi di celiachia, ho dovuto modificare drasticamente la mia alimentazione e i miei ritmi di vita, il che ha comportato un aumento delle spese sanitarie e una temporanea riduzione della mia capacità di gestione finanziaria mensile.\n\nLa rata attuale di € 1.200,50 si è rivelata onerosa rispetto al mio reddito attuale. Vi chiedo pertanto di valutare la possibilità di allungare la durata del mutuo o di applicare un tasso variabile più favorevole, al fine di ridurre l'importo mensile. Desidero che la nuova rata non superi i € 950,00.\n\nVi prego di contattarmi al numero 372 448 9[TELEFONO_1] o all'indirizzo [EMAIL_1]@example.com per concordare i dettagli. Il mio codice fiscale è RPSVNZ96D27X748J.\n\nResto in attesa di un vostro cortese riscontro entro il 15 dicembre 2026.\n\nCordiali saluti,\n[PERSONA_2]ssia [PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

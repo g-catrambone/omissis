@@ -1,0 +1,61 @@
+{
+  "text_id": "bank-0030",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 83,
+      "end": 111,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di banca"
+    },
+    {
+      "start": 233,
+      "end": 239,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della filiale"
+    },
+    {
+      "start": 423,
+      "end": 430,
+      "text": "autista",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere di Laura"
+    },
+    {
+      "start": 438,
+      "end": 471,
+      "text": "Farmacie Riunite Altavilla S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 673,
+      "end": 683,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma da trasferire"
+    },
+    {
+      "start": 840,
+      "end": 856,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui trasferire l'importo"
+    }
+  ],
+  "seconds": 0.0014
+}

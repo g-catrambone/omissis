@@ -1,0 +1,79 @@
+{
+  "text_id": "bank-0009",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 68,
+      "end": 91,
+      "text": "Gentile Banca Altopiano",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 104,
+      "end": 119,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 191,
+      "end": 223,
+      "text": "IBAN IT41G0000015737119260922015",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 446,
+      "end": 453,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 614,
+      "end": 630,
+      "text": "Cantieri Dorsano",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 954,
+      "end": 966,
+      "text": "399 299 3390",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 983,
+      "end": 1010,
+      "text": "dario.altobelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1031,
+      "end": 1046,
+      "text": "Dario Altobelli",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0112
+}

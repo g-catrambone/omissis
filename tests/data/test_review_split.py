@@ -1,4 +1,4 @@
-"""Review assignment, agreement and the split (task 3.5), all in a temporary folder."""
+"""Review assignment, agreement and the split, all in a temporary folder."""
 
 import hashlib
 import json

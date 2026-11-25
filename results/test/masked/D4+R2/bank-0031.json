@@ -1,0 +1,113 @@
+{
+  "text_id": "bank-0031",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Reclamo spese conto corrente e richiesta colloquio\n\nGentile Banco di Roccalta,\n\nmi chiamo Leandro Vannucci e sono titolare del conto corrente con Corrado Gardini. Scrivo per segnalare la mia forte contrarietà alle commissioni di gestione e alle spese di incasso addebitate sul mio conto negli ultimi mesi. In particolare, ho notato un addebito di € 17,00 a titolo di \"servizio di gestione\" e un altro di € 60,50 per l'incasso di un assegno, operazioni che ritengo non concordate né giustificate dal contratto sottoscritto.\n\nRinaldini come [RUOLO_1] presso Edilnova Tarsia S.r.l. a Teramo, e la gestione del mio conto è legata anche a un prestito personale attivo. La situazione economica attuale non mi consente di sostenere costi aggiuntivi non previsti. Il mio codice fiscale è NRTDMZ83A62X205Q e la qbruqntvj uevcfgmsf l JW-77351.\n\nNon desidero procedere con una semplice contestazione scritta, ma ritengo fondamentale un confronto diretto per chiarire la situazione e valutare le opzioni disponibili. Vi chiedo pertanto di fissare un incontro o un colloquio presso la [STRUTTURA_1] entro il 27 dicembre 2026. Sono disponibile a contattarvi al numero 340 093 0346 o via email all'indirizzo lavinia.guidotti@example.com per concordare data e ora.\n\nIn attesa di un vostro cortese riscontro, porgo cordiali saluti.\n\nLeandro Vannucci\n",
+  "disclosure": [
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Leandro Vannucci",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Corrado Gardini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "€ 17,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "surrogate": "€ 60,50",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "somma di denaro"
+    },
+    {
+      "surrogate": "Rinaldini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "ruolo professionale"
+    },
+    {
+      "surrogate": "Edilnova Tarsia S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome di azienda"
+    },
+    {
+      "surrogate": "Teramo",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città menzionata"
+    },
+    {
+      "surrogate": "NRTDMZ83A62X205Q",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "qbruqntvj uevcfgmsf l JW-77351",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di incontro"
+    },
+    {
+      "surrogate": "340 093 0346",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "lavinia.guidotti@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

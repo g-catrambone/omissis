@@ -1,0 +1,106 @@
+{
+  "text_id": "hr-0021",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta trasferimento sede Benevento - Ludovica Montagnani\n\nGentile Ufficio del Personale di Autolinee Brentari S.r.l.,\n\nmi chiamo Ludovica Montagnani e sono impiegata come [RUOLO_1] presso la [STRUTTURA_1]. Con la presente, desidero formalmente richiedere il mio trasferimento alla [STRUTTURA_2], chiedendo cortesemente l'approvazione della mia domanda.\n\nLa motivazione principale è legata a esigenze familiari che richiedono una maggiore vicinanza ai miei cari, rendendo la permanenza a Nuoro sempre più difficile da gestire. Ho già verificato la disponibilità di alloggi nella nuova città e sono pronta a trasferirmi entro il 19 gennaio 2027.\n\nPer facilitare le pratiche amministrative, allego i miei dati anagrafici: codice fiscale LPZBGV61A27X690H e wldfcngtx kdhbxoqov PA-16098. Ricordo che il mio conto corrente è intestato presso [STRUTTURA_3], e che la mia carta di credito è attiva.\n\nConfido in una risposta positiva entro il 19 novembre 2026, così da poter organizzare i tempi del trasloco senza intoppi. Resto a disposizione per qualsiasi chiarimento al numero 376 446 0565 o via email all'indirizzo selene.marangoni@example.com.\n\nGrazie per l'attenzione e per la collaborazione.\n\nCordiali saluti,\nLudovica Montagnani\n",
+  "disclosure": [
+    {
+      "surrogate": "Benevento",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "surrogate": "Ludovica Montagnani",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Autolinee Brentari S.r.l.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione per cui lavora la persona"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere della persona"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "[STRUTTURA_2]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "19 gennaio 2027",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui si intende trasferirsi"
+    },
+    {
+      "surrogate": "LPZBGV61A27X690H",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "wldfcngtx kdhbxoqov PA-16098",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    },
+    {
+      "surrogate": "[STRUTTURA_3]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "19 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data entro cui si attende risposta"
+    },
+    {
+      "surrogate": "376 446 0565",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "selene.marangoni@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

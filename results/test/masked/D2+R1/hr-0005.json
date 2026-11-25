@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0005",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta approvazione assenza per malattia - [PERSONA_1_F]\n\nGentile Ufficio del Personale di Caseificio Montelupo S.r.l.,\n\nmi chiamo [PERSONA_1_F] e sono la responsabile acquisti presso la sede di [CITTA_1]. Vi scrivo per comunicare la mia assenza dal lavoro a partire dal 12 novembre 2026 fino al 19 novembre 2026.\n\nLa causa dell'assenza è legata a una depressione in cura che richiede un periodo di riposo e terapie specifiche, come certificato dal mio medico curante. Ho già provveduto a trasmettere la documentazione medica necessaria tramite la piattaforma aziendale, ma vi chiedo cortesemente di procedere con l'approvazione formale della richiesta per garantire la corretta gestione della mia posizione in busta paga.\n\nPer facilitare le verifiche, riporto i miei dati anagrafici e di contatto: la mia matricola aziendale è EZ-85669, il codice fiscale è ZLBRVN07D06X885L e sono raggiungibile al numero 367 789 1628 o all'indirizzo [EMAIL_1][UTENTE_1][EMAIL_2]@example.com.\n\nVi prego di considerare questa comunicazione come formale richiesta di autorizzazione all'assenza. Resto a disposizione per eventuali chiarimenti, pur nella consapevolezza che in questo periodo di convalescenza la mia disponibilità sarà limitata.\n\nCordiali saluti,\n\n[PERSONA_1_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[UTENTE_1]",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_2]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

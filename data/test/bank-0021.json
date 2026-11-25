@@ -1,0 +1,100 @@
+{
+  "id": "bank-0021",
+  "domain": "bank",
+  "scenario": "loan_early_repayment",
+  "profile_id": "p04",
+  "has_special": false,
+  "text": "Oggetto: Richiesta informazioni estinzione anticipata finanziamento - Fabrizio Nicoletti\n\nGentile Cassa Rurale di Montevago,\n\nmi chiamo Fabrizio Nicoletti e sono titolare del conto corrente associato all'IBAN IT11E000023582267657498114. Vi scrivo per richiedere informazioni dettagliate relative all'estinzione anticipata del finanziamento in essere, contratto presso la filiale di Trapani.\n\nAttualmente lavoro come contabile presso la Tessitura Valgrande S.r.l., dove mi occupo della gestione amministrativa. Ho preso in considerazione la possibilità di saldare il debito residuo entro il 15 marzo 2027, poiché ho ottenuto un bonus straordinario che mi consente di coprire l'importo di € 12.500,00 senza intaccare la liquidità operativa del conto.\n\nVi chiedo cortesemente di inviarmi, tramite la mia email fabrizio.nicoletti@example.com, il piano di ammortamento aggiornato e la simulazione delle penali o interessi passivi che dovrebbero essere applicati in caso di chiusura anticipata alla data indicata. È fondamentale per me avere questi documenti scritti per poter pianificare il trasferimento dei fondi con precisione.\n\nPer qualsiasi necessità di verifica, potete contattarmi al numero 369 461 1173 o fare riferimento al mio codice fiscale RZGFNN66L14X204C. Resto in attesa di un vostro cortese riscontro per procedere con la valutazione finale.\n\nCordiali saluti,\n\nFabrizio Nicoletti\n",
+  "spans": [
+    {
+      "start": 70,
+      "end": 88,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 98,
+      "end": 123,
+      "text": "Cassa Rurale di Montevago",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 136,
+      "end": 154,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA"
+    },
+    {
+      "start": 209,
+      "end": 235,
+      "text": "IT11E000023582267657498114",
+      "type": "IBAN"
+    },
+    {
+      "start": 382,
+      "end": 389,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 416,
+      "end": 425,
+      "text": "contabile",
+      "type": "RUOLO"
+    },
+    {
+      "start": 436,
+      "end": 462,
+      "text": "Tessitura Valgrande S.r.l.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 590,
+      "end": 603,
+      "text": "15 marzo 2027",
+      "type": "DATA"
+    },
+    {
+      "start": 687,
+      "end": 698,
+      "text": "€ 12.500,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 807,
+      "end": 837,
+      "text": "fabrizio.nicoletti@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1193,
+      "end": 1205,
+      "text": "369 461 1173",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1247,
+      "end": 1263,
+      "text": "RZGFNN66L14X204C",
+      "type": "CF"
+    },
+    {
+      "start": 1372,
+      "end": 1390,
+      "text": "Fabrizio Nicoletti",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "loan_early_repayment",
+    "amounts": [
+      12500.0
+    ],
+    "dates": [
+      "2027-03-15"
+    ],
+    "requested_action": "send_information",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}

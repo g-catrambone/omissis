@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0015",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 116,
+      "end": 135,
+      "text": "Carlotta Castellani",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 157,
+      "end": 163,
+      "text": "Vostra",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 175,
+      "end": 182,
+      "text": "Cremona",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 435,
+      "end": 439,
+      "text": "IBAN",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 456,
+      "end": 483,
+      "text": "IT68Y0000068744192844878269",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 691,
+      "end": 720,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 932,
+      "end": 963,
+      "text": "carlotta.castellani@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1185,
+      "end": 1197,
+      "text": "366 375 4002",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1305,
+      "end": 1324,
+      "text": "Carlotta Castellani",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0139
+}

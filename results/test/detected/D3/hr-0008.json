@@ -1,0 +1,61 @@
+{
+  "text_id": "hr-0008",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 146,
+      "end": 175,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione dove lavora la persona"
+    },
+    {
+      "start": 264,
+      "end": 280,
+      "text": "15 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio lavoro da remoto"
+    },
+    {
+      "start": 327,
+      "end": 344,
+      "text": "emicrania cronica",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "condizione di salute che giustifica il lavoro da remoto"
+    },
+    {
+      "start": 585,
+      "end": 593,
+      "text": "UL-67995",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "start": 640,
+      "end": 655,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca di riferimento"
+    },
+    {
+      "start": 668,
+      "end": 675,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della filiale bancaria"
+    }
+  ],
+  "seconds": 0.0015
+}

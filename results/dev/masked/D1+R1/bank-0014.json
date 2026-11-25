@@ -1,0 +1,71 @@
+{
+  "text_id": "bank-0014",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio e richiesta documentazione\n\n[CITTA_1],\n\nmi chiamo [PERSONA_1_M] e sono un cliente della [CITTA_2] filiale di [CITTA_3]. Vi scrivo per comunicarVi che, a partire dal prossimo mese, il mio datore di lavoro, la [AZIENDA_1], ha richiesto di variare le coordinate bancarie per l'accredito dello stipendio.\n\nPertanto, Vi comunico il mio nuovo [CITTA_4]: [IBAN_1], valido a decorrere dal 15 dicembre 2026.\n\nInoltre, in quanto titolare di un deposito titoli e di un prestito personale in corso, avrei bisogno di ricevere una copia aggiornata del contratto di finanziamento e dell'estratto conto relativo al mese di novembre. Potreste inviarmi questi documenti in formato PDF all'indirizzo [EMAIL_1]?\n\nPer facilitare le Vostre verifiche, Vi fornisco il mio codice fiscale SGTPNL13S51X806Z e la matricola aziendale SM-08022 che utilizzo per le comunicazioni con l'ufficio amministrazione. Resto a disposizione per qualsiasi ulteriore chiarimento al numero [TELEFONO_1].\n\nVi ringrazio per la collaborazione e porgo cordiali saluti.\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_3]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_4]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

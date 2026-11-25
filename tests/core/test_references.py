@@ -1,4 +1,4 @@
-"""Gold spans, the detectors GOLD and NONE, named configurations, `omissis mask` (task 2.2)."""
+"""Gold spans, the detectors GOLD and NONE, named configurations, `omissis mask`."""
 
 import json
 from pathlib import Path
@@ -383,6 +383,8 @@ def test_plain_text_is_refused_when_the_cache_is_the_committed_one(
     data["cache_dir"] = "results/cache"
     path.write_text(yaml.safe_dump(data), encoding="utf-8")
     monkeypatch.chdir(tmp_path)
+    # The committed cache is the one of the repository, whatever the current directory.
+    monkeypatch.setattr(cli, "ROOT", tmp_path)
     assert cli.main(["run", "--config", str(path), "--input", str(letter)]) == 2
     assert "results/scratch" in capsys.readouterr().err
     assert not (tmp_path / "results").exists()

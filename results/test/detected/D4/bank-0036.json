@@ -1,0 +1,151 @@
+{
+  "text_id": "bank-0036",
+  "detector": "D4",
+  "spans": [
+    {
+      "start": 51,
+      "end": 70,
+      "text": "Giuseppe Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 80,
+      "end": 108,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un istituto bancario"
+    },
+    {
+      "start": 121,
+      "end": 139,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 278,
+      "end": 293,
+      "text": "12 gennaio 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di morte del padre"
+    },
+    {
+      "start": 454,
+      "end": 481,
+      "text": "IT83X0000066473362061629314",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 496,
+      "end": 529,
+      "text": "saldo residuo di circa € 4.500,00",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "somma di denaro indicata"
+    },
+    {
+      "start": 655,
+      "end": 675,
+      "text": "certificato di morte",
+      "type": "SALUTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "documento relativo alla morte"
+    },
+    {
+      "start": 701,
+      "end": 718,
+      "text": "NDLMTZ55P62X312Q.",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 732,
+      "end": 741,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 749,
+      "end": 775,
+      "text": "Trasporti Bellariva S.r.l.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di un'azienda di trasporti"
+    },
+    {
+      "start": 778,
+      "end": 785,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome di una città"
+    },
+    {
+      "start": 861,
+      "end": 891,
+      "text": "daniela.marchesini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 941,
+      "end": 959,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede bancaria specifica"
+    },
+    {
+      "start": 1060,
+      "end": 1072,
+      "text": "308 057 6591",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 1221,
+      "end": 1235,
+      "text": "30 giugno 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza di pagamento"
+    },
+    {
+      "start": 1256,
+      "end": 1274,
+      "text": "Daniela Marchesini",
+      "type": "PERSONA",
+      "confidence": 0.8869486004114151,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1484
+}

@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0027",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 58,
+      "end": 74,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 114,
+      "end": 130,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 175,
+      "end": 202,
+      "text": "IT35P0000045198541598847685",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 224,
+      "end": 231,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 453,
+      "end": 479,
+      "text": "Caseificio Montelupo S.r.l",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1036,
+      "end": 1048,
+      "text": "391 565 6198",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1065,
+      "end": 1093,
+      "text": "michela.rampazzo@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1178,
+      "end": 1186,
+      "text": "PM-09581",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1322,
+      "end": 1338,
+      "text": "Michela Rampazzo",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0131
+}

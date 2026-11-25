@@ -1,0 +1,17 @@
+Oggetto: Richiesta chiusura conto corrente [[PERSONA|Emanuele Agostinelli]]
+
+Gentile [[AZIENDA|Banca Popolare di Rocciaviva]],
+
+mi chiamo [[PERSONA|Emanuele Agostinelli]] e sono titolare del conto corrente con IBAN [[IBAN|IT25L0000032615142863898422]]. Con la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale e di tutti i servizi collegati, inclusa la carta di debito associata.
+
+Ho deciso di procedere con questa operazione perché sto trasferendo la mia residenza e la mia attività lavorativa in un'altra zona, rendendo scomoda la gestione della filiale di [[CITTA|Cremona]]. Attualmente lavoro come [[RUOLO|autista]] presso [[AZIENDA|Farmacie Riunite Altavilla S.p.A.]], ma i miei spostamenti quotidiani non mi permettono più di recarmi facilmente presso i vostri sportelli per le operazioni ordinarie.
+
+Vi prego di procedere con le operazioni di chiusura entro il [[DATA|15 dicembre 2026]]. Al momento della richiesta, sul conto è presente un saldo di [[IMPORTO|€ 450,00]], che vi chiedo di trasferire sul mio nuovo conto presso un'altra istituzione bancaria, i cui dati vi comunicherò separatamente via PEC o tramite raccomandata. Vi fornisco il mio codice fiscale [[CF|MPMSLS77B67X322T]] per le verifiche di rito.
+
+Resto a disposizione per qualsiasi ulteriore adempimento necessario per completare la procedura.
+
+Cordiali saluti,
+
+[[PERSONA|Emanuele Agostinelli]]
+[[TELEFONO|337 642 7680]]
+[[EMAIL|emanuele.agostinelli@example.com]]

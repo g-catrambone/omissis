@@ -1,0 +1,115 @@
+{
+  "text_id": "bank-0028",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 58,
+      "end": 76,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 86,
+      "end": 100,
+      "text": "Banca Popolare",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 104,
+      "end": 114,
+      "text": "Rocciaviva",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 127,
+      "end": 145,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 185,
+      "end": 217,
+      "text": "IBAN IT60K0000002707830380370892",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 388,
+      "end": 404,
+      "text": "Cantieri Dorsano",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 414,
+      "end": 421,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 758,
+      "end": 770,
+      "text": "315 250 0573",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 787,
+      "end": 817,
+      "text": "ilaria.tagliaferri@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 843,
+      "end": 859,
+      "text": "PRCBVV34A20X065L",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 887,
+      "end": 895,
+      "text": "TZ-58390",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1092,
+      "end": 1110,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.011
+}

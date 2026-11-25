@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0028",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 127,
+      "end": 133,
+      "text": "Ilaria",
+      "type": "PERSONA",
+      "confidence": 0.7331800758838654,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 414,
+      "end": 421,
+      "text": "Viterbo",
+      "type": "CITTA",
+      "confidence": 0.9991626441478729,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 787,
+      "end": 805,
+      "text": "ilaria.tagliaferri",
+      "type": "EMAIL",
+      "confidence": 0.731650996208191,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1092,
+      "end": 1110,
+      "text": "Ilaria Tagliaferri",
+      "type": "PERSONA",
+      "confidence": 0.7196636497974396,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1331
+}

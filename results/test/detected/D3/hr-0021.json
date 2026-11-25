@@ -1,0 +1,97 @@
+{
+  "text_id": "hr-0021",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "start": 99,
+      "end": 122,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'organizzazione per cui lavora la persona"
+    },
+    {
+      "start": 174,
+      "end": 183,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere della persona"
+    },
+    {
+      "start": 194,
+      "end": 209,
+      "text": "sede di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di lavoro attuale"
+    },
+    {
+      "start": 286,
+      "end": 301,
+      "text": "sede di Palermo",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede di lavoro desiderata"
+    },
+    {
+      "start": 494,
+      "end": 501,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di origine e sede attuale"
+    },
+    {
+      "start": 636,
+      "end": 651,
+      "text": "15 gennaio 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui si intende trasferirsi"
+    },
+    {
+      "start": 762,
+      "end": 790,
+      "text": "matricola aziendale MK-84592",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo interno"
+    },
+    {
+      "start": 845,
+      "end": 882,
+      "text": "Credito Tirrenico, filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "filiale bancaria di riferimento"
+    },
+    {
+      "start": 967,
+      "end": 983,
+      "text": "30 novembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data entro cui si attende risposta"
+    }
+  ],
+  "seconds": 0.0017
+}

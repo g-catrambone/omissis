@@ -1,0 +1,34 @@
+{
+  "text_id": "hr-0019",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 791,
+      "end": 807,
+      "text": "LSMNRC73H03X830X",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 848,
+      "end": 860,
+      "text": "399 299 3390",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 883,
+      "end": 910,
+      "text": "dario.altobelli@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0001
+}

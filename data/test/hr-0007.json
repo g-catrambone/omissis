@@ -1,0 +1,104 @@
+{
+  "id": "hr-0007",
+  "domain": "hr",
+  "scenario": "remote_work_request",
+  "profile_id": "p07",
+  "has_special": true,
+  "text": "Oggetto: Richiesta colloquio per lavoro da remoto - Leonardo Lombardini\n\nGentile Ufficio del Personale di Cantieri Dorsano S.p.A.,\n\nmi chiamo Leonardo Lombardini, matricola UK-83144, e lavoro come elettricista presso la sede di Trapani. Vi scrivo per richiedere formalmente la possibilità di fissare un incontro o un colloquio per discutere la fattibilità di un regime di lavoro da remoto parziale.\n\nCome sapete, gestisco la mia contabilità presso la filiale di Trapani di Banca Altopiano, dove ho attivo un deposito titoli e una carta di debito. Recentemente, a causa della diagnosi di diabete di tipo 2, i miei medici mi hanno sconsigliato spostamenti frequenti e stressanti, rendendo difficile la presenza quotidiana in cantiere.\n\nSarebbe fondamentale per me poter organizzare questa conversazione entro il 15 dicembre 2026, in modo da poter pianificare eventuali turni alternativi per il periodo successivo. Il mio codice fiscale è LPVFZP94B15X164T e sono raggiungibile al numero 377 465 1124 o via email all'indirizzo leonardo.lombardini@example.com.\n\nConfido nella vostra comprensione e nella disponibilità a valutare questa richiesta, che mi permetterebbe di mantenere un buon equilibrio tra salute e produttività lavorativa. Resto in attesa di un vostro cortese riscontro per concordare data e ora del colloquio.\n\nCordiali saluti,\n\nLeonardo Lombardini\n",
+  "spans": [
+    {
+      "start": 52,
+      "end": 71,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 106,
+      "end": 129,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 142,
+      "end": 161,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA"
+    },
+    {
+      "start": 173,
+      "end": 181,
+      "text": "UK-83144",
+      "type": "UTENTE"
+    },
+    {
+      "start": 197,
+      "end": 209,
+      "text": "elettricista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 228,
+      "end": 235,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 462,
+      "end": 469,
+      "text": "Trapani",
+      "type": "CITTA"
+    },
+    {
+      "start": 473,
+      "end": 488,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 587,
+      "end": 604,
+      "text": "diabete di tipo 2",
+      "type": "SALUTE"
+    },
+    {
+      "start": 810,
+      "end": 826,
+      "text": "15 dicembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 936,
+      "end": 952,
+      "text": "LPVFZP94B15X164T",
+      "type": "CF"
+    },
+    {
+      "start": 984,
+      "end": 996,
+      "text": "377 465 1124",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1023,
+      "end": 1054,
+      "text": "leonardo.lombardini@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1340,
+      "end": 1359,
+      "text": "Leonardo Lombardini",
+      "type": "PERSONA"
+    }
+  ],
+  "gold": {
+    "intent": "remote_work_request",
+    "amounts": [],
+    "dates": [
+      "2026-12-15"
+    ],
+    "requested_action": "schedule_meeting",
+    "deadline": "2026-12-15"
+  },
+  "reviewed_by": "GC"
+}

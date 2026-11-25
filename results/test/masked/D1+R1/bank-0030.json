@@ -1,0 +1,64 @@
+{
+  "text_id": "bank-0030",
+  "config_name": "D1+R1",
+  "run_id": "49f599e17121",
+  "masked_text": "Oggetto: Richiesta chiusura conto e trasferimento fondi - [PERSONA_1_F]\n\nGentile [AZIENDA_1] di [AZIENDA_2],\n\nmi chiamo [PERSONA_1_F] e sono titolare del conto corrente con [CITTA_1] presso la filiale di [CITTA_2]. Vi scrivo per comunicare la mia volontà di chiudere definitivamente il rapporto contrattuale, chiedendo esclusivamente il trasferimento delle somme residue.\n\nAttualmente lavoro come autista presso [AZIENDA_3] S.p.A., dove sono impiegata da diversi anni. A causa di un cambio di residenza e di esigenze organizzative personali, non intendo più mantenere attivo questo conto. Sul saldo attuale risultano presenti circa € 1.200,50, che desidero trasferire integralmente sul mio nuovo conto presso un'altra istituzione bancaria.\n\nVi prego di trasferire l'intero importo indicato entro il 15 dicembre 2026 sul conto che comunicherò successivamente tramite PEC o raccomandata. Vi chiedo cortesemente di disattivare anche la carta di debito associata al conto per evitare eventuali addebiti futuri.\n\nResto a disposizione per qualsiasi chiarimento al numero [TELEFONO_1] o all'indirizzo [EMAIL_1].\n\nCordiali saluti,\n\n[PERSONA_1_F]\nDDDGBF81A26X698C\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_2]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_3]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    }
+  ]
+}

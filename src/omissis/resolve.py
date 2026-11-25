@@ -1,4 +1,4 @@
-"""Entity resolution: group span mentions into entities, rules only (task 2.3).
+"""Entity resolution: group span mentions into entities, rules only.
 
 People. A mention is read as name words, after removing a title written inside the
 span ("Sig.", "Dott.ssa", "Avv."); the last word is taken as the surname, together

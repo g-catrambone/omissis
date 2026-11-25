@@ -1,0 +1,88 @@
+{
+  "text_id": "hr-0019",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 38,
+      "end": 45,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "start": 98,
+      "end": 121,
+      "text": "Cantieri Dorsano S.p.A.",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora l'autore"
+    },
+    {
+      "start": 160,
+      "end": 167,
+      "text": "custode",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "mestiere dell'autore"
+    },
+    {
+      "start": 268,
+      "end": 275,
+      "text": "Palermo",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di destinazione del trasferimento"
+    },
+    {
+      "start": 312,
+      "end": 327,
+      "text": "15 gennaio 2027",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio del trasferimento"
+    },
+    {
+      "start": 455,
+      "end": 462,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città di residenza attuale"
+    },
+    {
+      "start": 698,
+      "end": 716,
+      "text": "matricola GZ-20484",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "codice identificativo interno dell'azienda"
+    },
+    {
+      "start": 965,
+      "end": 980,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome della banca del conto corrente"
+    },
+    {
+      "start": 982,
+      "end": 1000,
+      "text": "filiale di Trapani",
+      "type": "STRUTTURA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "sede specifica della banca"
+    }
+  ],
+  "seconds": 0.0016
+}

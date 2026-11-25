@@ -1,0 +1,29 @@
+{
+  "text_id": "bank-0038",
+  "config_name": "D2+R1",
+  "run_id": "bd5400e9b707",
+  "masked_text": "Oggetto: Richiesta documenti per conto corrente di Giuseppe Valsecchi\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Laura Valsecchi e scrivo per richiedere le informazioni necessarie per procedere con la successione del conto corrente intestato a mio padre, Giuseppe [PERSONA_1], deceduto il 12 marzo 2026.\n\nSono l'unica erede e risiedo a [CITTA_1]. Per facilitare le operazioni, vi comunico che il conto in questione ha l'IBAN IT82I0000091996603120574215 e che il saldo al momento del decesso era di circa € 15.400,00.\n\nLavoro come autista presso Farmacie Riunite Altavilla S.p.A. e la mia matricola aziendale è HX-96212. Il mio codice fiscale è DDDGBF81A26X698C.\n\nVi chiedo cortesemente di inviarmi via email, all'indirizzo [EMAIL_1]@example.com, l'elenco dei documenti ufficiali richiesti dalla vostra filiale di [CITTA_1] per sbloccare il conto e procedere con il trasferimento dei fondi. Non ho bisogno di altre comunicazioni al momento, solo la lista dei requisiti documentali.\n\nResto a disposizione per qualsiasi chiarimento al numero 337 584 2415.\n\nCordiali saluti,\n\nLaura [PERSONA_1]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D2",
+      "reason": null
+    }
+  ]
+}

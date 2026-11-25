@@ -1,0 +1,70 @@
+{
+  "text_id": "hr-0002",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 53,
+      "end": 62,
+      "text": "Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.6661035617192587,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 614,
+      "end": 620,
+      "text": "Robert",
+      "type": "PERSONA",
+      "confidence": 0.7843204736709595,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 622,
+      "end": 631,
+      "text": "Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.9596665898958842,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 743,
+      "end": 750,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9992950856685638,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 826,
+      "end": 833,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9960072040557861,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1475,
+      "end": 1484,
+      "text": "Uccellini",
+      "type": "PERSONA",
+      "confidence": 0.9332862297693888,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1485,
+      "end": 1502,
+      "text": "roberta.uccellini",
+      "type": "EMAIL",
+      "confidence": 0.643406887849172,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1454
+}

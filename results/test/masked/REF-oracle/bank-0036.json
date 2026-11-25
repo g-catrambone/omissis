@@ -1,0 +1,99 @@
+{
+  "text_id": "bank-0036",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Richiesta documenti per conto corrente di [PERSONA_1_M]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_2_F] e scrivo per richiedere le informazioni necessarie per procedere con la successione del conto corrente intestato a mio padre, deceduto il [DATA_1]. Sono la sua erede universale e necessito della documentazione ufficiale per sbloccare le operazioni sul conto.\n\nIl conto in questione è identificato dall'IBAN [IBAN_1] e presenta un saldo residuo di circa [IMPORTO_1]. Per facilitare la verifica della mia identità e del mio diritto di eredità, allego copia del mio documento d'identità e del certificato di morte. Il mio codice fiscale è [CF_1].\n\nLavoro come [RUOLO_1] presso [AZIENDA_2] a [CITTA_1], dove risiedo. Vi chiedo cortesemente di inviarmi via email, all'indirizzo [EMAIL_1], l'elenco completo dei documenti richiesti dalla filiale di [CITTA_1] per completare la pratica di successione.\n\nResto a disposizione per eventuali chiarimenti al numero [TELEFONO_1]. Vi prego di considerare questa richiesta urgente, poiché ho bisogno di accedere ai fondi per coprire le spese funerarie e le tasse dovute entro il [DATA_2].\n\nCordiali saluti,\n\n[PERSONA_2_F]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[PERSONA_2_F]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

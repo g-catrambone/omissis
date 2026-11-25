@@ -1,0 +1,52 @@
+{
+  "text_id": "hr-0014",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 47,
+      "end": 57,
+      "text": "Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.6814974943796793,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 101,
+      "end": 119,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.8304264903068542,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 160,
+      "end": 166,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.9993587136268616,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1227,
+      "end": 1245,
+      "text": "umberto.giacomelli",
+      "type": "EMAIL",
+      "confidence": 0.9119678565434047,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1379,
+      "end": 1397,
+      "text": "Umberto Giacomelli",
+      "type": "PERSONA",
+      "confidence": 0.9194584846496582,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1336
+}

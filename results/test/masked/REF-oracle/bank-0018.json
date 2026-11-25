@@ -1,0 +1,92 @@
+{
+  "text_id": "bank-0018",
+  "config_name": "REF-oracle",
+  "run_id": "18bdbd066964",
+  "masked_text": "Oggetto: Aggiornamento IBAN per accredito stipendio - [PERSONA_1_M]\n\nGentile [AZIENDA_1],\n\nmi chiamo [PERSONA_1_M] e sono titolare di un conto corrente presso la filiale di [CITTA_1]. Vi scrivo per comunicarvi un cambio di coordinate bancarie necessario per l'accredito del mio stipendio mensile.\n\nAttualmente lavoro come [RUOLO_1] presso [AZIENDA_2], dove mi occupo della gestione degli approvvigionamenti. A causa di una riorganizzazione interna dei flussi di cassa aziendale, il mio datore di lavoro ha deciso di centralizzare gli accrediti su un nuovo conto dedicato. Di conseguenza, vi chiedo cortesemente di aggiornare i dati registrati sul mio profilo, sostituendo il vecchio IBAN con quello che segue: [IBAN_1].\n\nL'accredito del prossimo stipendio, previsto per il [DATA_1], dovrà essere effettuato sul nuovo conto. L'importo medio mensile che ricevo è di circa [IMPORTO_1], ma vi prego di considerare l'importo effettivo indicato nella busta paga. Per facilitare l'identificazione del mio fascicolo, vi fornisco il mio codice fiscale: [CF_1].\n\nResto a disposizione per eventuali verifiche tramite il mio numero di telefono [TELEFONO_1] o via email all'indirizzo [EMAIL_1]. Vi chiedo di confermare la ricezione di questa richiesta e l'avvenuto aggiornamento dei dati entro il [DATA_2], così da evitare ritardi nell'accredito.\n\nCordiali saluti,\n\n[PERSONA_1_M]\n",
+  "disclosure": [
+    {
+      "surrogate": "[PERSONA_1_M]",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_1]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CITTA_1]",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[AZIENDA_2]",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IBAN_1]",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_1]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[IMPORTO_1]",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[CF_1]",
+      "type": "CF",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[TELEFONO_1]",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[EMAIL_1]",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "GOLD",
+      "reason": null
+    },
+    {
+      "surrogate": "[DATA_2]",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "GOLD",
+      "reason": null
+    }
+  ]
+}

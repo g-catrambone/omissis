@@ -1,0 +1,43 @@
+{
+  "text_id": "bank-0025",
+  "detector": "D0",
+  "spans": [
+    {
+      "start": 189,
+      "end": 216,
+      "text": "IT57E0000097728495291902297",
+      "type": "IBAN",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 769,
+      "end": 785,
+      "text": "SGTPNL13S51X806Z",
+      "type": "CF",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 893,
+      "end": 905,
+      "text": "329 001 5516",
+      "type": "TELEFONO",
+      "confidence": 0.9,
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "start": 922,
+      "end": 953,
+      "text": "massimo.evangelisti@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D0",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0001
+}

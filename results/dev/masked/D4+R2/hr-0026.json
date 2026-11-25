@@ -1,0 +1,92 @@
+{
+  "text_id": "hr-0026",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta permesso [SINDACATO_1] per Baldassarre Pagliarini\n\nGentile Ufficio del Personale,\n\nmi permetto di contattarvi per sottoporre alla Vostra cortese attenzione una richiesta formale di autorizzazione all'assenza dal servizio. Come sapete, ricopro la carica di componente della rappresentanza [SINDACATO_1] unitaria all'interno della nostra struttura, ruolo che mi impone di partecipare a riunioni organizzative e assembleari non rinviabili.\n\nIn qualità di [RUOLO_1] presso la Lavorazioni Meccaniche Sbrana S.p.A., con matricola aziendale MK-72380, ho necessità di assentarmi dal mio posto di lavoro per partecipare a un incontro [SINDACATO_1] programmato per il 28 novembre 2026. L'evento si terrà presso la [STRUTTURA_1] a Sondrio e durerà l'intera giornata lavorativa.\n\nVi chiedo pertanto di approvare questa richiesta di permesso [SINDACATO_1], garantendo la copertura delle mie mansioni per quella data. Per completezza amministrativa, vi comunico che il mio codice fiscale è TMZBGT33P07X102M e che posso essere raggiunto telefonicamente al numero 346 643 3236 per eventuali chiarimenti urgenti.\n\nResto in attesa di un Vostro cortese riscontro scritto, preferibilmente via email all'indirizzo ubaldo.dalmasso@example.com, per poter organizzare al meglio le mie attività commerciali e i miei impegni personali, tra cui la gestione dei miei prodotti bancari presso la Cassa di Risparmio di Montalfiore.\n\nCordiali saluti,\n\nBaldassarre Pagliarini\n",
+  "disclosure": [
+    {
+      "surrogate": "[SINDACATO_1]",
+      "type": "SINDACATO",
+      "class": "special",
+      "source": "D3",
+      "reason": "partecipazione a riunioni sindacali"
+    },
+    {
+      "surrogate": "Baldassarre Pagliarini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "Lavorazioni Meccaniche Sbrana S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'organizzazione in cui lavora"
+    },
+    {
+      "surrogate": "MK-72380",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "matricola aziendale"
+    },
+    {
+      "surrogate": "28 novembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data dell'incontro [SINDACATO_1]"
+    },
+    {
+      "surrogate": "[STRUTTURA_1]",
+      "type": "STRUTTURA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "Sondrio",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "luogo dell'incontro [SINDACATO_1]"
+    },
+    {
+      "surrogate": "TMZBGT33P07X102M",
+      "type": "CF",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "346 643 3236",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ubaldo.dalmasso@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Cassa di Risparmio di Montalfiore",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "istituto bancario menzionato"
+    }
+  ]
+}

@@ -1,0 +1,88 @@
+{
+  "text_id": "bank-0017",
+  "detector": "D3",
+  "spans": [
+    {
+      "start": 80,
+      "end": 92,
+      "text": "Cassa Rurale",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'istituto bancario"
+    },
+    {
+      "start": 96,
+      "end": 105,
+      "text": "Montevago",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "località della banca"
+    },
+    {
+      "start": 174,
+      "end": 181,
+      "text": "Trapani",
+      "type": "CITTA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "città della filiale"
+    },
+    {
+      "start": 313,
+      "end": 322,
+      "text": "contabile",
+      "type": "RUOLO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "professione del mittente"
+    },
+    {
+      "start": 333,
+      "end": 353,
+      "text": "Caseificio Montelupo",
+      "type": "AZIENDA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora"
+    },
+    {
+      "start": 378,
+      "end": 394,
+      "text": "15 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "data di inizio del nuovo conto"
+    },
+    {
+      "start": 716,
+      "end": 726,
+      "text": "1.850,00 €",
+      "type": "IMPORTO",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "importo mensile dello stipendio"
+    },
+    {
+      "start": 837,
+      "end": 853,
+      "text": "10 dicembre 2026",
+      "type": "DATA",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "scadenza per la registrazione del nuovo IBAN"
+    },
+    {
+      "start": 1144,
+      "end": 1152,
+      "text": "WE-48493",
+      "type": "UTENTE",
+      "confidence": 0.8,
+      "source": "D3",
+      "reason": "matricola aziendale interna"
+    }
+  ],
+  "seconds": 0.0015
+}

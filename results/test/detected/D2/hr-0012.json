@@ -1,0 +1,43 @@
+{
+  "text_id": "hr-0012",
+  "detector": "D2",
+  "spans": [
+    {
+      "start": 101,
+      "end": 119,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.9788106232881546,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 189,
+      "end": 196,
+      "text": "Pistoia",
+      "type": "CITTA",
+      "confidence": 0.9625836610794067,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 785,
+      "end": 803,
+      "text": "sabrina.lorenzetti",
+      "type": "EMAIL",
+      "confidence": 0.8398932119210561,
+      "source": "D2",
+      "reason": null
+    },
+    {
+      "start": 1068,
+      "end": 1086,
+      "text": "Sabrina Lorenzetti",
+      "type": "PERSONA",
+      "confidence": 0.8154851794242859,
+      "source": "D2",
+      "reason": null
+    }
+  ],
+  "seconds": 0.1331
+}

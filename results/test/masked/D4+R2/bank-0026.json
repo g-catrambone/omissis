@@ -1,0 +1,85 @@
+{
+  "text_id": "bank-0026",
+  "config_name": "D4+R2",
+  "run_id": "65b4d39c07a9",
+  "masked_text": "Oggetto: Richiesta chiusura conto corrente Ubaldo Gardini\n\nGentile Banco di Roccalta,\n\nmi chiamo Ubaldo Gardini e sono titolare del conto corrente con IBAN IT82U0000025099619806583851. Con la presente, vi chiedo formalmente la chiusura definitiva del rapporto contrattuale e di tutti i servizi collegati, inclusa la carta di debito associata.\n\nHo deciso di procedere con questa operazione perché sto trasferendo la mia residenza e la mia attività lavorativa in un'altra zona, rendendo scomoda la gestione della filiale di Nuoro. Attualmente lavoro come [RUOLO_1] presso Dorigatti Alimentari S.p.A., ma i miei spostamenti quotidiani non mi permettono più di recarmi facilmente presso i vostri sportelli per le operazioni ordinarie.\n\nVi prego di procedere con le operazioni di chiusura entro il 27 dicembre 2026. Al momento della richiesta, sul conto è presente un saldo di € 978,00, che vi chiedo di trasferire sul mio nuovo conto presso un'altra istituzione bancaria, i cui dati vi comunicherò separatamente via PEC o tramite raccomandata. Vi fornisco il mio egvuce kqoprda FOGDEO48D50S801X per le verifiche di rito.\n\nResto a disposizione per qualsiasi ulteriore adempimento necessario per completare la procedura.\n\nCordiali saluti,\n\nUbaldo Gardini\n318 894 6162\nottavio.ubaldini@example.com\n",
+  "disclosure": [
+    {
+      "surrogate": "Ubaldo Gardini",
+      "type": "PERSONA",
+      "class": "direct",
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "surrogate": "Banco di Roccalta",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": null
+    },
+    {
+      "surrogate": "IT82U0000025099619806583851",
+      "type": "IBAN",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "Nuoro",
+      "type": "CITTA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "città della filiale bancaria"
+    },
+    {
+      "surrogate": "[RUOLO_1]",
+      "type": "RUOLO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "mestiere del mittente"
+    },
+    {
+      "surrogate": "Dorigatti Alimentari S.p.A.",
+      "type": "AZIENDA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "nome dell'azienda dove lavora il mittente"
+    },
+    {
+      "surrogate": "27 dicembre 2026",
+      "type": "DATA",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "data di chiusura richiesta"
+    },
+    {
+      "surrogate": "€ 978,00",
+      "type": "IMPORTO",
+      "class": "quasi",
+      "source": "D3",
+      "reason": "saldo presente sul conto"
+    },
+    {
+      "surrogate": "egvuce kqoprda FOGDEO48D50S801X",
+      "type": "UTENTE",
+      "class": "direct",
+      "source": "D3",
+      "reason": "identificativo personale del mittente"
+    },
+    {
+      "surrogate": "318 894 6162",
+      "type": "TELEFONO",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    },
+    {
+      "surrogate": "ottavio.ubaldini@example.com",
+      "type": "EMAIL",
+      "class": "direct",
+      "source": "D0",
+      "reason": null
+    }
+  ]
+}

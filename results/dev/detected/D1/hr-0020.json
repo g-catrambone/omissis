@@ -1,0 +1,97 @@
+{
+  "text_id": "hr-0020",
+  "detector": "D1",
+  "spans": [
+    {
+      "start": 38,
+      "end": 56,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 100,
+      "end": 118,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 200,
+      "end": 206,
+      "text": "Milano",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 252,
+      "end": 281,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 570,
+      "end": 576,
+      "text": "Novara",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 626,
+      "end": 641,
+      "text": "Banca Altopiano",
+      "type": "AZIENDA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 701,
+      "end": 717,
+      "text": "PGBVSC45B42X564O",
+      "type": "CITTA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 749,
+      "end": 761,
+      "text": "357 736 0613",
+      "type": "TELEFONO",
+      "confidence": 0.4,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 778,
+      "end": 808,
+      "text": "raffaele.ferrarini@example.com",
+      "type": "EMAIL",
+      "confidence": 1.0,
+      "source": "D1",
+      "reason": null
+    },
+    {
+      "start": 1192,
+      "end": 1210,
+      "text": "Raffaele Ferrarini",
+      "type": "PERSONA",
+      "confidence": 0.85,
+      "source": "D1",
+      "reason": null
+    }
+  ],
+  "seconds": 0.0118
+}

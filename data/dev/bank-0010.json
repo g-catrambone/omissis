@@ -1,0 +1,114 @@
+{
+  "id": "bank-0010",
+  "domain": "bank",
+  "scenario": "card_dispute",
+  "profile_id": "p20",
+  "has_special": false,
+  "text": "Oggetto: Contestazione addebiti non autorizzati carta di credito\n\nGentile Banca Popolare di Rocciaviva,\n\nmi chiamo Giacomo Passalacqua e sono titolare del conto corrente con IBAN IT57J0000013140124244953600. Vi scrivo per contestare formalmente due addebiti presenti sul mio estratto conto che non riconosco in alcun modo.\n\nIl primo addebito, pari a € 1.200,50, è stato effettuato il 16 novembre 2026 presso un esercente a Foggia. Il secondo, di € 350,00, risale al 20 novembre 2026 e risulta avvenuto online. Non ho effettuato né autorizzato queste transazioni.\n\nLavoro come autista presso la Cooperativa Edile Pietrafitta e la mia carta di credito, identificata dal codice PB-80503, è rimasta sempre in mio possesso. Non ho mai comunicato i dati della carta a terzi né ho ricevuto avvisi di sicurezza sospetti.\n\nVi chiedo pertanto di procedere immediatamente con lo storno delle somme indicate e il relativo rimborso sul mio conto corrente. Vi prego di considerare questa comunicazione come formale contestazione ai sensi della normativa vigente.\n\nResto in attesa di un vostro cortese riscontro entro 5 giorni lavorativi.\n\nCordiali saluti,\n\nGiacomo Passalacqua\ngiacomo.passalacqua@example.com\n350 286 0569\nZLFNCT54D15X978K\n",
+  "spans": [
+    {
+      "start": 74,
+      "end": 102,
+      "text": "Banca Popolare di Rocciaviva",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 115,
+      "end": 134,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA"
+    },
+    {
+      "start": 179,
+      "end": 206,
+      "text": "IT57J0000013140124244953600",
+      "type": "IBAN"
+    },
+    {
+      "start": 350,
+      "end": 360,
+      "text": "€ 1.200,50",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 384,
+      "end": 400,
+      "text": "16 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 423,
+      "end": 429,
+      "text": "Foggia",
+      "type": "CITTA"
+    },
+    {
+      "start": 446,
+      "end": 454,
+      "text": "€ 350,00",
+      "type": "IMPORTO"
+    },
+    {
+      "start": 466,
+      "end": 482,
+      "text": "20 novembre 2026",
+      "type": "DATA"
+    },
+    {
+      "start": 576,
+      "end": 583,
+      "text": "autista",
+      "type": "RUOLO"
+    },
+    {
+      "start": 594,
+      "end": 623,
+      "text": "Cooperativa Edile Pietrafitta",
+      "type": "AZIENDA"
+    },
+    {
+      "start": 675,
+      "end": 683,
+      "text": "PB-80503",
+      "type": "CONTO"
+    },
+    {
+      "start": 1143,
+      "end": 1162,
+      "text": "Giacomo Passalacqua",
+      "type": "PERSONA"
+    },
+    {
+      "start": 1163,
+      "end": 1194,
+      "text": "giacomo.passalacqua@example.com",
+      "type": "EMAIL"
+    },
+    {
+      "start": 1195,
+      "end": 1207,
+      "text": "350 286 0569",
+      "type": "TELEFONO"
+    },
+    {
+      "start": 1208,
+      "end": 1224,
+      "text": "ZLFNCT54D15X978K",
+      "type": "CF"
+    }
+  ],
+  "gold": {
+    "intent": "card_dispute",
+    "amounts": [
+      1200.5,
+      350.0
+    ],
+    "dates": [
+      "2026-11-16",
+      "2026-11-20"
+    ],
+    "requested_action": "refund",
+    "deadline": null
+  },
+  "reviewed_by": "GC"
+}
