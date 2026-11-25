@@ -1,35 +1,46 @@
 .PHONY: setup test lint format demo split eval-dev eval-test reproduce
 
+# Every target but setup runs uv offline: `uv run --locked` alone wants the network
+# to check the lock (the direct-URL source it-core-news-lg). The environment is
+# synced again, with the network, only when .venv is missing or uv.lock or
+# pyproject.toml is newer than the last `make setup`.
+RUN = uv run --locked --offline
+SYNCED = .venv/.synced
+
 setup:
 	uv python install 3.11
 	uv sync --locked
+	touch $(SYNCED)
 
-test:
-	uv run --locked pytest
+$(SYNCED): uv.lock pyproject.toml
+	$(MAKE) setup
 
-lint:
-	uv run --locked ruff check .
-	uv run --locked ruff format --check .
+test: $(SYNCED)
+	$(RUN) pytest
 
-format:
-	uv run --locked ruff format .
+lint: $(SYNCED)
+	$(RUN) ruff check .
+	$(RUN) ruff format --check .
 
-demo:
-	uv run --locked python -m omissis.app
+format: $(SYNCED)
+	$(RUN) ruff format .
 
-split:
-	uv run --locked python -m omissis.eval.split
+demo: $(SYNCED)
+	$(RUN) python -m omissis.app
 
-eval-dev:
-	uv run --locked --env-file .env python -m omissis.eval.run --split dev
+split: $(SYNCED)
+	$(RUN) python -m omissis.eval.split
 
-eval-test:
-	uv run --locked --env-file .env python -m omissis.eval.run --split test
+eval-dev: $(SYNCED)
+	$(RUN) --env-file .env python -m omissis.eval.run --split dev
 
-reproduce:
+eval-test: $(SYNCED)
+	$(RUN) --env-file .env python -m omissis.eval.run --split test
+
+reproduce: $(SYNCED)
 	@for split in pilot dev test; do \
 		if [ -d results/$$split/metrics ]; then \
-			uv run --locked python -m omissis.eval.report --split $$split || exit 1; \
+			$(RUN) python -m omissis.eval.report --split $$split || exit 1; \
 		else \
 			echo "skipped $$split: no results/$$split/metrics/"; \
 		fi; \
