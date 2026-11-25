@@ -77,6 +77,10 @@ make lint               # ruff check and format check
 cp .env.example .env    # then write your GroqCloud key in GROQ_API_KEY
 ```
 
+`make setup` needs the network. After it, every other `make` target runs `uv`
+offline; a target runs `make setup` first when `.venv` is missing or `uv.lock` or
+`pyproject.toml` has changed since.
+
 Only the commands that call a hosted model need the key in `.env`, and they read
 it through `uv run --env-file .env ...`. The detectors D1 to D4 need two more
 things, which `make setup` and CI do not install:
